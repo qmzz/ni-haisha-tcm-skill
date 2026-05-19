@@ -15,53 +15,19 @@
 - 📊 **数据文件** — 症状→方剂映射、概念关系图谱
 - 🖥️ **CLI 工具** — 命令行诊断、查询工具
 
-## 📁 项目结构
-
-```
-ni-haisha/
-├── SKILL.md                    # Skill 定义和使用说明
-├── cli.py                      # CLI 入口工具
-├── internal/                   # 核心模块
-│   ├── diagnosis_engine.py     # 诊断引擎（50+ 方剂）
-│   └── formula_recommender.py  # 方剂推荐器
-├── data/                       # 数据文件
-│   ├── symptom_formula.json    # 症状→方剂映射
-│   ├── concept_graph.json      # 概念关系图谱
-│   └── learning_paths.json     # 学习路径
-├── knowledge/                  # 知识库
-│   ├── herbs/                  # 药材（416 味）
-│   ├── acupoints/              # 穴位（412 个）
-│   ├── formulas/               # 方剂（114首）
-│   ├── concepts/               # 概念（45 个）
-│   ├── diagnosis/              # 诊断知识（45 篇）
-│   └── cases/                  # 医案（51篇）
-├── prompts/                    # 提示词模板
-├── scripts/                    # 批量处理脚本
-└── docs/                       # 文档
-```
-
 ## 🚀 快速开始
 
-### 方式一：作为 OpenClaw Skill 使用
-
-将整个目录复制到 OpenClaw skills 目录：
-
-```bash
-cp -r ni-haisha ~/.openclaw/workspace/skills/
-```
-
-### 方式二：Python API 使用
+### 方式一：Python API 使用
 
 ```python
 from internal.diagnosis_engine import DiagnosisEngine
 
 engine = DiagnosisEngine()
 result = engine.analyze(["发热", "恶寒", "无汗", "脉浮紧"])
-print(f"推荐方剂：{result['formula']['name']}")
-# 输出：推荐方剂：麻黄汤
+print(result)
 ```
 
-### 方式三：CLI 使用
+### 方式二：CLI 使用
 
 ```bash
 # 智能诊断
@@ -73,11 +39,15 @@ python3 cli.py formula 桂枝汤
 # 查询药材
 python3 cli.py herb 麻黄
 
-# 查询穴位
-python3 cli.py acupoint 合谷
-
 # 查看统计
 python3 cli.py stats
+```
+
+### 方式三：作为 OpenClaw Skill 使用
+
+```bash
+# 复制到 OpenClaw skills 目录
+cp -r . ~/.openclaw/workspace/skills/ni-haisha
 ```
 
 ## 📊 知识库统计
@@ -86,7 +56,7 @@ python3 cli.py stats
 |------|------|------------|
 | 药材 | 416 味 | 48 味完整 |
 | 穴位 | 412 个 | 127 个完整 |
-| 方剂 | 114首 | 113 首有讲解 |
+| 方剂 | 114 首 | 113 首有讲解 |
 | 医案 | 51 篇 | 100% |
 | 概念 | 45 个 | 100% |
 | 诊断 | 45 篇 | 100% |
@@ -100,33 +70,47 @@ python3 cli.py stats
 - **覆盖方剂**：50+ 首（伤寒论 + 金匮要略）
 - **症状映射**：55 个常见症状 → 对应方剂
 
-### 测试示例
+## 📁 项目结构
 
-| 输入症状 | 预期方剂 | 诊断结果 |
-|----------|----------|----------|
-| 发热,恶寒,汗出,脉浮缓 | 桂枝汤 | ✅ 正确 |
-| 发热,恶寒,无汗,脉浮紧 | 麻黄汤 | ✅ 正确 |
-| 大热,大汗,大渴,脉洪大 | 白虎汤 | ✅ 正确 |
-| 往来寒热,胸胁苦满,口苦 | 小柴胡汤 | ✅ 正确 |
-| 四肢厥冷,下利清谷,脉微细 | 四逆汤 | ✅ 正确 |
-| 消渴,气上撞心,心中疼热 | 乌梅丸 | ✅ 正确 |
+```
+ni-haisha/
+├── SKILL.md                    # Skill 定义
+├── cli.py                      # CLI 入口
+├── internal/                   # 核心模块
+│   ├── diagnosis_engine.py     # 诊断引擎（50+ 方剂）
+│   └── formula_recommender.py  # 方剂推荐器
+├── data/                       # 数据文件
+│   ├── symptom_formula.json    # 症状→方剂映射
+│   ├── concept_graph.json      # 概念关系图谱
+│   └── learning_paths.json     # 学习路径
+├── knowledge/                  # 知识库
+│   ├── herbs/                  # 药材（416 味）
+│   ├── acupoints/              # 穴位（412 个）
+│   ├── formulas/               # 方剂（114 首）
+│   ├── concepts/               # 概念（45 个）
+│   ├── diagnosis/              # 诊断知识（45 篇）
+│   └── cases/                  # 医案（51 篇）
+├── prompts/                    # 提示词模板
+├── scripts/                    # 批量处理脚本
+└── docs/                       # 文档
+```
 
 ## 📖 知识来源
 
 本 Skill 知识蒸馏自倪海厦人纪系列：
 
-| 资料 | 内容 | 备注 |
+| 资料 | 内容 | 页数 |
 |------|------|------|
-| 伤寒论 | 六经辨证、113 经方 | 核心内容 |
-| 金匮要略 | 杂病治疗方剂 | 部分整理 |
-| 黄帝内经 | 中医基础理论 | 概念基础 |
-| 神农本草经 | 中药学基础 | 药材知识 |
-| 针灸篇 | 针灸理论与实务 | 穴位知识 |
-| 汉唐中医方剂 | 方剂讲解 | 临床经验 |
+| 伤寒论 | 六经辨证、113 经方 | 198 页 |
+| 金匮要略 | 杂病治疗方剂 | 492 页 |
+| 黄帝内经 | 中医基础理论 | 308 页 |
+| 神农本草经 | 中药学基础 | 339 页 |
+| 针灸篇 | 针灸理论与实务 | 216 页 |
+| 汉唐中医方剂 | 方剂讲解 | 235 页 |
 
 ## ⚠️ 免责声明
 
-本 Skill 提供的信息仅供参考，**不能替代专业中医师的诊断和治疗**。如有健康问题，请咨询合格的中医师。
+本 Skill 提供的信息仅供参考，不能替代专业中医师的诊断和治疗。如有健康问题，请咨询合格的中医师。
 
 - 本 Skill 基于倪海厦教学资料构建
 - 方剂剂量仅供参考，实际应用需因人而异
@@ -135,37 +119,16 @@ python3 cli.py stats
 
 ## 🤝 贡献
 
-欢迎贡献！请遵循以下步骤：
-
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
-
-### 贡献方向
-
-- 补全剩余 285 个穴位的详细信息
-- 补全剩余 368 味非核心药材
-- 整理金匮要略方剂
-- 添加更多医案
-- 改进诊断引擎算法
-- 优化数据结构
+欢迎贡献！请查看 [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 📄 许可证
 
-MIT License - 详见 [LICENSE](LICENSE) 文件
+[MIT License](LICENSE)
 
 ## 🙏 致谢
 
 - 倪海厦 — 人纪系列教学资料
 - 张仲景 — 《伤寒论》《金匮要略》
-- OpenClaw — Skill 架构
-
-## 📞 联系
-
-- GitHub Issues: 提交问题
-- Discussion: 讨论交流
 
 ---
 
