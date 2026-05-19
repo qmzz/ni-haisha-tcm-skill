@@ -1,0 +1,417 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-05-19",
+  "source": "倪海厦人纪系列",
+  "description": "伤寒论六经辨证症状-方剂映射",
+  "symptoms": {
+    "发热": {
+      "category": "全身",
+      "formulas": [
+        {"name": "桂枝汤", "pattern": "太阳中风", "compatibility": "primary", "note": "发热恶风汗出脉浮缓"},
+        {"name": "麻黄汤", "pattern": "太阳伤寒", "compatibility": "primary", "note": "发热恶寒无汗脉浮紧"},
+        {"name": "白虎汤", "pattern": "阳明经证", "compatibility": "primary", "note": "大热大汗大渴脉洪大"},
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "secondary", "note": "发热与恶寒交替出现"}
+      ]
+    },
+    "恶寒": {
+      "category": "全身",
+      "formulas": [
+        {"name": "桂枝汤", "pattern": "太阳中风", "compatibility": "primary", "note": "发热恶风有汗"},
+        {"name": "麻黄汤", "pattern": "太阳伤寒", "compatibility": "primary", "note": "发热恶寒无汗脉浮紧"},
+        {"name": "四逆汤", "pattern": "少阴寒化", "compatibility": "secondary", "note": "无热恶寒肢冷脉微细"}
+      ]
+    },
+    "汗出": {
+      "category": "全身",
+      "formulas": [
+        {"name": "桂枝汤", "pattern": "太阳中风", "compatibility": "primary", "note": "发热恶风汗出脉浮缓"},
+        {"name": "白虎汤", "pattern": "阳明经证", "compatibility": "primary", "note": "大热大汗大渴脉洪大"},
+        {"name": "桂枝加附子汤", "pattern": "阳虚漏汗", "compatibility": "secondary", "note": "汗出不止恶风"}
+      ]
+    },
+    "无汗": {
+      "category": "全身",
+      "formulas": [
+        {"name": "麻黄汤", "pattern": "太阳伤寒", "compatibility": "primary", "note": "发热恶寒无汗脉浮紧"},
+        {"name": "大青龙汤", "pattern": "太阳伤寒兼里热", "compatibility": "primary", "note": "发热恶寒无汗烦躁"},
+        {"name": "小青龙汤", "pattern": "外寒内饮", "compatibility": "secondary", "note": "无汗咳喘痰多清稀"}
+      ]
+    },
+    "头痛": {
+      "category": "头面",
+      "formulas": [
+        {"name": "桂枝汤", "pattern": "太阳中风", "compatibility": "primary", "note": "头痛发热恶风汗出"},
+        {"name": "麻黄汤", "pattern": "太阳伤寒", "compatibility": "primary", "note": "头痛身痛恶寒无汗"},
+        {"name": "葛根汤", "pattern": "太阳兼经输不利", "compatibility": "primary", "note": "头痛项背强几几"},
+        {"name": "吴茱萸汤", "pattern": "厥阴头痛", "compatibility": "primary", "note": "巅顶干呕吐涎沫"}
+      ]
+    },
+    "项强": {
+      "category": "头面",
+      "formulas": [
+        {"name": "桂枝加葛根汤", "pattern": "太阳兼经输不利", "compatibility": "primary", "note": "项背强几几有汗"},
+        {"name": "葛根汤", "pattern": "太阳兼经输不利", "compatibility": "primary", "note": "项背强几几无汗"},
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "secondary", "note": "项强伴往来寒热"}
+      ]
+    },
+    "口苦": {
+      "category": "头面",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "口苦咽干目眩往来寒热"}
+      ]
+    },
+    "咽干": {
+      "category": "头面",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "口苦咽干目眩"},
+        {"name": "黄连阿胶汤", "pattern": "少阴热化", "compatibility": "secondary", "note": "心烦不得卧口燥咽干"}
+      ]
+    },
+    "目眩": {
+      "category": "头面",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "口苦咽干目眩"}
+      ]
+    },
+    "耳聋": {
+      "category": "头面",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "往来寒热胸胁苦满耳聋"}
+      ]
+    },
+    "鼻鸣干呕": {
+      "category": "头面",
+      "formulas": [
+        {"name": "桂枝汤", "pattern": "太阳中风", "compatibility": "primary", "note": "鼻鸣干呕发热恶风"}
+      ]
+    },
+    "口渴": {
+      "category": "头面",
+      "formulas": [
+        {"name": "白虎汤", "pattern": "阳明经证", "compatibility": "primary", "note": "大渴大汗脉洪大"},
+        {"name": "五苓散", "pattern": "蓄水证", "compatibility": "primary", "note": "渴而小便不利"}
+      ]
+    },
+    "烦躁": {
+      "category": "全身",
+      "formulas": [
+        {"name": "大青龙汤", "pattern": "太阳伤寒兼里热", "compatibility": "primary", "note": "发热恶寒无汗烦躁"},
+        {"name": "栀子豉汤", "pattern": "热扰胸膈", "compatibility": "primary", "note": "虚烦不得眠心中懊憹"},
+        {"name": "黄连阿胶汤", "pattern": "少阴热化", "compatibility": "secondary", "note": "心烦不得卧"}
+      ]
+    },
+    "往来寒热": {
+      "category": "全身",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "往来寒热胸胁苦满"},
+        {"name": "大柴胡汤", "pattern": "少阳兼阳明", "compatibility": "primary", "note": "往来寒热心下急郁郁微烦"}
+      ]
+    },
+    "胸胁苦满": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "胸胁苦满默默不欲饮食"},
+        {"name": "大柴胡汤", "pattern": "少阳兼阳明", "compatibility": "primary", "note": "胸胁苦满心下急"},
+        {"name": "柴胡桂枝干姜汤", "pattern": "少阳兼水饮", "compatibility": "secondary", "note": "胸胁满微结"}
+      ]
+    },
+    "默默不欲饮食": {
+      "category": "消化",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "默默不欲饮食心烦喜呕"}
+      ]
+    },
+    "心烦喜呕": {
+      "category": "消化",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "心烦喜呕胸胁苦满"},
+        {"name": "半夏泻心汤", "pattern": "痞证", "compatibility": "secondary", "note": "心下痞满呕吐肠鸣"}
+      ]
+    },
+    "大热": {
+      "category": "全身",
+      "formulas": [
+        {"name": "白虎汤", "pattern": "阳明经证", "compatibility": "primary", "note": "大热大汗大渴脉洪大"}
+      ]
+    },
+    "大汗": {
+      "category": "全身",
+      "formulas": [
+        {"name": "白虎汤", "pattern": "阳明经证", "compatibility": "primary", "note": "大热大汗大渴脉洪大"},
+        {"name": "桂枝汤", "pattern": "太阳中风", "compatibility": "secondary", "note": "汗出恶风发热"}
+      ]
+    },
+    "大渴": {
+      "category": "头面",
+      "formulas": [
+        {"name": "白虎汤", "pattern": "阳明经证", "compatibility": "primary", "note": "大热大汗大渴脉洪大"},
+        {"name": "白虎加人参汤", "pattern": "阳明热盛气津两伤", "compatibility": "primary", "note": "大热大汗大渴脉洪大而芤"}
+      ]
+    },
+    "潮热": {
+      "category": "全身",
+      "formulas": [
+        {"name": "大承气汤", "pattern": "阳明腑实", "compatibility": "primary", "note": "潮热谵语腹满痛便秘"},
+        {"name": "调胃承气汤", "pattern": "阳明腑实轻证", "compatibility": "primary", "note": "蒸蒸发热心烦腹胀满"}
+      ]
+    },
+    "谵语": {
+      "category": "神志",
+      "formulas": [
+        {"name": "大承气汤", "pattern": "阳明腑实", "compatibility": "primary", "note": "潮热谵语腹满痛便秘"},
+        {"name": "小承气汤", "pattern": "阳明腑实轻证", "compatibility": "secondary", "note": "谵语发潮热脉滑而疾"}
+      ]
+    },
+    "腹满痛": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "大承气汤", "pattern": "阳明腑实", "compatibility": "primary", "note": "腹满痛拒按便秘潮热"},
+        {"name": "小承气汤", "pattern": "阳明腑实轻证", "compatibility": "primary", "note": "腹胀满谵语"},
+        {"name": "厚朴三物汤", "pattern": "气滞腹满", "compatibility": "secondary", "note": "腹胀满痛"}
+      ]
+    },
+    "便秘": {
+      "category": "消化",
+      "formulas": [
+        {"name": "大承气汤", "pattern": "阳明腑实", "compatibility": "primary", "note": "大便硬腹满痛拒按"},
+        {"name": "小承气汤", "pattern": "阳明腑实轻证", "compatibility": "primary", "note": "大便硬腹胀满"},
+        {"name": "调胃承气汤", "pattern": "阳明腑实轻证", "compatibility": "primary", "note": "大便不通心烦"},
+        {"name": "麻子仁丸", "pattern": "脾约便秘", "compatibility": "secondary", "note": "大便硬小便数"}
+      ]
+    },
+    "腹满而吐": {
+      "category": "消化",
+      "formulas": [
+        {"name": "理中汤", "pattern": "太阴脾寒", "compatibility": "primary", "note": "腹满而吐食不下自利"},
+        {"name": "附子理中丸", "pattern": "太阴虚寒重证", "compatibility": "secondary", "note": "腹痛剧烈畏寒肢冷"}
+      ]
+    },
+    "食不下": {
+      "category": "消化",
+      "formulas": [
+        {"name": "理中汤", "pattern": "太阴脾寒", "compatibility": "primary", "note": "腹满而吐食不下"}
+      ]
+    },
+    "自利": {
+      "category": "消化",
+      "formulas": [
+        {"name": "理中汤", "pattern": "太阴脾寒", "compatibility": "primary", "note": "自利益甚腹满时痛"},
+        {"name": "四逆汤", "pattern": "少阴寒化", "compatibility": "primary", "note": "下利清谷四肢厥冷"},
+        {"name": "葛根芩连汤", "pattern": "热利", "compatibility": "secondary", "note": "下利臭秽肛门灼热"}
+      ]
+    },
+    "时腹自痛": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "理中汤", "pattern": "太阴脾寒", "compatibility": "primary", "note": "时腹自痛喜温喜按"}
+      ]
+    },
+    "脉微细": {
+      "category": "全身",
+      "formulas": [
+        {"name": "四逆汤", "pattern": "少阴寒化", "compatibility": "primary", "note": "脉微细但欲寐四肢厥冷"},
+        {"name": "通脉四逆汤", "pattern": "少阴寒化重证", "compatibility": "primary", "note": "下利清谷脉微欲绝"}
+      ]
+    },
+    "但欲寐": {
+      "category": "神志",
+      "formulas": [
+        {"name": "四逆汤", "pattern": "少阴寒化", "compatibility": "primary", "note": "但欲寐四肢厥冷脉微细"}
+      ]
+    },
+    "四肢厥冷": {
+      "category": "全身",
+      "formulas": [
+        {"name": "四逆汤", "pattern": "少阴寒化", "compatibility": "primary", "note": "四肢厥冷脉微细但欲寐"},
+        {"name": "当归四逆汤", "pattern": "血虚寒厥", "compatibility": "primary", "note": "手足厥寒脉细欲绝"},
+        {"name": "四逆散", "pattern": "阳郁厥逆", "compatibility": "secondary", "note": "四肢厥冷但身热"}
+      ]
+    },
+    "下利清谷": {
+      "category": "消化",
+      "formulas": [
+        {"name": "四逆汤", "pattern": "少阴寒化", "compatibility": "primary", "note": "下利清谷四肢厥冷脉微细"},
+        {"name": "通脉四逆汤", "pattern": "少阴寒化重证", "compatibility": "primary", "note": "下利清谷脉微欲绝身反不恶寒"}
+      ]
+    },
+    "消渴": {
+      "category": "全身",
+      "formulas": [
+        {"name": "乌梅丸", "pattern": "厥阴寒热错杂", "compatibility": "primary", "note": "消渴气上撞心心中疼热"},
+        {"name": "白虎加人参汤", "pattern": "阳明热盛", "compatibility": "secondary", "note": "大渴引饮"}
+      ]
+    },
+    "气上撞心": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "乌梅丸", "pattern": "厥阴寒热错杂", "compatibility": "primary", "note": "气上撞心心中疼热"}
+      ]
+    },
+    "心中疼热": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "乌梅丸", "pattern": "厥阴寒热错杂", "compatibility": "primary", "note": "心中疼热消渴气上撞心"}
+      ]
+    },
+    "饥而不欲食": {
+      "category": "消化",
+      "formulas": [
+        {"name": "乌梅丸", "pattern": "厥阴寒热错杂", "compatibility": "primary", "note": "饥而不欲食食则吐蛔"}
+      ]
+    },
+    "食则吐蛔": {
+      "category": "消化",
+      "formulas": [
+        {"name": "乌梅丸", "pattern": "厥阴蛔厥", "compatibility": "primary", "note": "蛔厥者其人当吐蛔"}
+      ]
+    },
+    "咳喘": {
+      "category": "呼吸",
+      "formulas": [
+        {"name": "麻黄汤", "pattern": "太阳伤寒", "compatibility": "primary", "note": "恶寒发热无汗而喘"},
+        {"name": "小青龙汤", "pattern": "外寒内饮", "compatibility": "primary", "note": "咳喘痰多清稀"},
+        {"name": "麻杏甘石汤", "pattern": "肺热咳喘", "compatibility": "primary", "note": "咳逆气急甚至鼻扇"},
+        {"name": "桂枝加厚朴杏子汤", "pattern": "太阳中风兼喘", "compatibility": "secondary", "note": "咳喘有汗恶风"}
+      ]
+    },
+    "心悸": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "桂枝甘草汤", "pattern": "心阳虚", "compatibility": "primary", "note": "心下悸欲得按"},
+        {"name": "炙甘草汤", "pattern": "气阴两虚", "compatibility": "primary", "note": "心动悸脉结代"},
+        {"name": "小建中汤", "pattern": "中焦虚寒", "compatibility": "secondary", "note": "腹中急悸而烦"}
+      ]
+    },
+    "胸痹": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "瓜蒌薤白白酒汤", "pattern": "胸阳不振", "compatibility": "primary", "note": "胸背痛短气"},
+        {"name": "瓜蒌薤白半夏汤", "pattern": "胸阳不振痰浊", "compatibility": "primary", "note": "胸痹不得卧心痛彻背"}
+      ]
+    },
+    "腹痛": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "小建中汤", "pattern": "中焦虚寒", "compatibility": "primary", "note": "腹中急痛喜温喜按"},
+        {"name": "理中汤", "pattern": "太阴脾寒", "compatibility": "primary", "note": "腹痛喜温喜按自利"},
+        {"name": "大承气汤", "pattern": "阳明腑实", "compatibility": "primary", "note": "腹痛拒按便秘"},
+        {"name": "芍药甘草汤", "pattern": "筋脉拘急", "compatibility": "secondary", "note": "腹挛急疼痛"}
+      ]
+    },
+    "呕吐": {
+      "category": "消化",
+      "formulas": [
+        {"name": "小柴胡汤", "pattern": "少阳证", "compatibility": "primary", "note": "心烦喜呕"},
+        {"name": "半夏泻心汤", "pattern": "痞证", "compatibility": "primary", "note": "呕吐心下痞"},
+        {"name": "吴茱萸汤", "pattern": "肝寒犯胃", "compatibility": "primary", "note": "干呕吐涎沫头痛"},
+        {"name": "大柴胡汤", "pattern": "少阳兼阳明", "compatibility": "secondary", "note": "呕吐不止心下急"}
+      ]
+    },
+    "泄泻": {
+      "category": "消化",
+      "formulas": [
+        {"name": "理中汤", "pattern": "太阴脾寒", "compatibility": "primary", "note": "腹泻清稀腹痛喜温"},
+        {"name": "四逆汤", "pattern": "少阴寒化", "compatibility": "primary", "note": "下利清谷四肢厥冷"},
+        {"name": "葛根芩连汤", "pattern": "热利", "compatibility": "primary", "note": "下利臭秽肛门灼热"}
+      ]
+    },
+    "腰痛": {
+      "category": "全身",
+      "formulas": [
+        {"name": "肾气丸", "pattern": "肾阳虚", "compatibility": "primary", "note": "腰痛脚软小便不利"},
+        {"name": "真武汤", "pattern": "阳虚水泛", "compatibility": "secondary", "note": "腰痛四肢沉重"}
+      ]
+    },
+    "水肿": {
+      "category": "全身",
+      "formulas": [
+        {"name": "真武汤", "pattern": "阳虚水泛", "compatibility": "primary", "note": "小便不利四肢沉重疼痛"},
+        {"name": "五苓散", "pattern": "蓄水证", "compatibility": "primary", "note": "小便不利微热消渴"},
+        {"name": "越婢汤", "pattern": "风水", "compatibility": "primary", "note": "一身悉肿恶风"}
+      ]
+    },
+    "黄疸": {
+      "category": "全身",
+      "formulas": [
+        {"name": "茵陈蒿汤", "pattern": "阳黄", "compatibility": "primary", "note": "面目发黄如橘色"},
+        {"name": "茵陈五苓散", "pattern": "湿重于热", "compatibility": "secondary", "note": "黄疸小便不利"}
+      ]
+    },
+    "失眠": {
+      "category": "神志",
+      "formulas": [
+        {"name": "黄连阿胶汤", "pattern": "少阴热化", "compatibility": "primary", "note": "心中烦不得卧"},
+        {"name": "酸枣仁汤", "pattern": "虚劳虚烦", "compatibility": "primary", "note": "虚烦不眠心悸盗汗"},
+        {"name": "栀子豉汤", "pattern": "热扰胸膈", "compatibility": "secondary", "note": "虚烦不得眠"}
+      ]
+    },
+    "痛经": {
+      "category": "妇科",
+      "formulas": [
+        {"name": "温经汤", "pattern": "虚寒瘀血", "compatibility": "primary", "note": "月经不调久不受孕"},
+        {"name": "当归四逆汤", "pattern": "血虚寒厥", "compatibility": "secondary", "note": "手足厥寒经行腹痛"}
+      ]
+    },
+    "月经不调": {
+      "category": "妇科",
+      "formulas": [
+        {"name": "温经汤", "pattern": "虚寒瘀血", "compatibility": "primary", "note": "月经不调久不受孕"},
+        {"name": "四物汤", "pattern": "血虚", "compatibility": "primary", "note": "面色萎黄月经量少"}
+      ]
+    },
+    "血证": {
+      "category": "全身",
+      "formulas": [
+        {"name": "黄土汤", "pattern": "脾不统血", "compatibility": "primary", "note": "大便下血先便后血"},
+        {"name": "胶艾汤", "pattern": "冲任不固", "compatibility": "primary", "note": "漏下血崩"}
+      ]
+    },
+    "痹证": {
+      "category": "全身",
+      "formulas": [
+        {"name": "甘草附子汤", "pattern": "风湿相搏", "compatibility": "primary", "note": "骨节疼烦掣痛不得屈伸"},
+        {"name": "薏苡附子散", "pattern": "寒湿痹痛", "compatibility": "secondary", "note": "胸痹缓急"}
+      ]
+    },
+    "梅核气": {
+      "category": "咽喉",
+      "formulas": [
+        {"name": "半夏厚朴汤", "pattern": "气滞痰凝", "compatibility": "primary", "note": "咽中如有炙脔"}
+      ]
+    },
+    "癫痫": {
+      "category": "神志",
+      "formulas": [
+        {"name": "柴胡加龙骨牡蛎汤", "pattern": "少阳兼烦惊", "compatibility": "primary", "note": "胸满烦惊小便不利"},
+        {"name": "风引汤", "pattern": "热痫", "compatibility": "secondary", "note": "癫痫抽搐"}
+      ]
+    },
+    "痰饮": {
+      "category": "全身",
+      "formulas": [
+        {"name": "苓桂术甘汤", "pattern": "中阳不足痰饮", "compatibility": "primary", "note": "胸胁支满目眩心悸"},
+        {"name": "小青龙汤", "pattern": "外寒内饮", "compatibility": "primary", "note": "咳喘痰多清稀"}
+      ]
+    },
+    "痞证": {
+      "category": "胸腹",
+      "formulas": [
+        {"name": "半夏泻心汤", "pattern": "寒热错杂痞", "compatibility": "primary", "note": "心下痞但满不痛"},
+        {"name": "大黄黄连泻心汤", "pattern": "热痞", "compatibility": "primary", "note": "心下痞按之濡"}
+      ]
+    },
+    "蓄血证": {
+      "category": "全身",
+      "formulas": [
+        {"name": "桃核承气汤", "pattern": "下焦蓄血", "compatibility": "primary", "note": "少腹急结其人如狂"},
+        {"name": "抵当汤", "pattern": "蓄血重证", "compatibility": "primary", "note": "少腹硬满其人发狂"}
+      ]
+    },
+    "奔豚": {
+      "category": "全身",
+      "formulas": [
+        {"name": "桂枝加桂汤", "pattern": "奔豚气", "compatibility": "primary", "note": "气从少腹上冲胸咽"}
+      ]
+    }
+  }
+}

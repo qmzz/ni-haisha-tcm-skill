@@ -1,0 +1,270 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-04-11",
+  "source": "倪海厦人纪系列",
+  "paths": [
+    {
+      "id": "intro",
+      "name": "中医入门",
+      "description": "零基础学习中医基础理论",
+      "duration": "2 小时",
+      "level": "入门",
+      "modules": [
+        {
+          "id": "intro-1",
+          "title": "阴阳五行",
+          "duration": "30 分钟",
+          "topics": ["阴阳概念", "阴阳特性", "五行生克", "阴阳与五行"],
+          "knowledge_files": [
+            "knowledge/concepts/yinyang.md"
+          ]
+        },
+        {
+          "id": "intro-2",
+          "title": "脏腑经络",
+          "duration": "30 分钟",
+          "topics": ["五脏功能", "六腑功能", "十二经络", "气血津液"],
+          "knowledge_files": []
+        },
+        {
+          "id": "intro-3",
+          "title": "望闻问切",
+          "duration": "30 分钟",
+          "topics": ["望诊", "闻诊", "问诊", "切诊"],
+          "knowledge_files": []
+        },
+        {
+          "id": "intro-4",
+          "title": "六经辨证",
+          "duration": "30 分钟",
+          "topics": ["太阳病", "阳明病", "少阳病", "太阴病", "少阴病", "厥阴病"],
+          "knowledge_files": [
+            "knowledge/concepts/liujing.md"
+          ]
+        }
+      ],
+      "assessment": {
+        "type": "quiz",
+        "questions": 10,
+        "passing_score": 60
+      }
+    },
+    {
+      "id": "diagnosis",
+      "name": "诊断基础",
+      "description": "学习中医诊断方法",
+      "duration": "4 小时",
+      "level": "基础",
+      "prerequisites": ["intro"],
+      "modules": [
+        {
+          "id": "diag-1",
+          "title": "八纲辨证",
+          "duration": "1 小时",
+          "topics": ["阴阳辨证", "表里辨证", "寒热辨证", "虚实辨证"],
+          "knowledge_files": []
+        },
+        {
+          "id": "diag-2",
+          "title": "六经辨证详解",
+          "duration": "1.5 小时",
+          "topics": [
+            "太阳病辨证",
+            "阳明病辨证",
+            "少阳病辨证",
+            "太阴病辨证",
+            "少阴病辨证",
+            "厥阴病辨证"
+          ],
+          "knowledge_files": [
+            "knowledge/concepts/liujing.md"
+          ]
+        },
+        {
+          "id": "diag-3",
+          "title": "脏腑辨证",
+          "duration": "1 小时",
+          "topics": ["肝病辨证", "心病辨证", "脾病辨证", "肺病辨证", "肾病辨证"],
+          "knowledge_files": []
+        },
+        {
+          "id": "diag-4",
+          "title": "脉诊基础",
+          "duration": "30 分钟",
+          "topics": ["浮脉", "沉脉", "迟脉", "数脉", "虚脉", "实脉"],
+          "knowledge_files": []
+        }
+      ],
+      "assessment": {
+        "type": "case_study",
+        "cases": 5,
+        "passing_score": 70
+      }
+    },
+    {
+      "id": "formulas",
+      "name": "经方应用",
+      "description": "学习伤寒论经方应用",
+      "duration": "8 小时",
+      "level": "进阶",
+      "prerequisites": ["diagnosis"],
+      "modules": [
+        {
+          "id": "form-1",
+          "title": "太阳病方剂",
+          "duration": "2 小时",
+          "topics": [
+            "桂枝汤类方",
+            "麻黄汤类方",
+            "葛根汤类方",
+            "大青龙汤",
+            "小青龙汤"
+          ],
+          "knowledge_files": [
+            "knowledge/formulas/guizhi_tang.md",
+            "knowledge/formulas/mahuang_tang.md",
+            "knowledge/formulas/jingfang_index.md"
+          ]
+        },
+        {
+          "id": "form-2",
+          "title": "少阳病方剂",
+          "duration": "1.5 小时",
+          "topics": [
+            "小柴胡汤",
+            "大柴胡汤",
+            "柴胡桂枝汤",
+            "柴胡加龙骨牡蛎汤"
+          ],
+          "knowledge_files": [
+            "knowledge/formulas/xiaochaihu_tang.md"
+          ]
+        },
+        {
+          "id": "form-3",
+          "title": "阳明病方剂",
+          "duration": "1.5 小时",
+          "topics": [
+            "白虎汤",
+            "承气汤类",
+            "栀子豉汤"
+          ],
+          "knowledge_files": []
+        },
+        {
+          "id": "form-4",
+          "title": "三阴病方剂",
+          "duration": "2 小时",
+          "topics": [
+            "理中汤",
+            "四逆汤",
+            "黄连阿胶汤",
+            "乌梅丸"
+          ],
+          "knowledge_files": []
+        },
+        {
+          "id": "form-5",
+          "title": "金匮要略方剂",
+          "duration": "1 小时",
+          "topics": [
+            "肾气丸",
+            "小建中汤",
+            "半夏泻心汤"
+          ],
+          "knowledge_files": []
+        }
+      ],
+      "assessment": {
+        "type": "prescription",
+        "cases": 10,
+        "passing_score": 80
+      }
+    },
+    {
+      "id": "advanced",
+      "name": "临床进阶",
+      "description": "临床医案与实战",
+      "duration": "20 小时",
+      "level": "专业",
+      "prerequisites": ["formulas"],
+      "modules": [
+        {
+          "id": "adv-1",
+          "title": "感冒辨证论治",
+          "duration": "3 小时",
+          "topics": [
+            "风寒感冒",
+            "风热感冒",
+            "暑湿感冒",
+            "体虚感冒"
+          ],
+          "knowledge_files": [],
+          "case_studies": true
+        },
+        {
+          "id": "adv-2",
+          "title": "脾胃病辨证论治",
+          "duration": "4 小时",
+          "topics": [
+            "胃痛",
+            "腹痛",
+            "呕吐",
+            "泄泻",
+            "便秘"
+          ],
+          "knowledge_files": [],
+          "case_studies": true
+        },
+        {
+          "id": "adv-3",
+          "title": "肝胆病辨证论治",
+          "duration": "4 小时",
+          "topics": [
+            "胁痛",
+            "黄疸",
+            "眩晕",
+            "头痛"
+          ],
+          "knowledge_files": [],
+          "case_studies": true
+        },
+        {
+          "id": "adv-4",
+          "title": "肾病辨证论治",
+          "duration": "4 小时",
+          "topics": [
+            "水肿",
+            "淋证",
+            "腰痛",
+            "遗精"
+          ],
+          "knowledge_files": [],
+          "case_studies": true
+        },
+        {
+          "id": "adv-5",
+          "title": "医案研读",
+          "duration": "5 小时",
+          "topics": [
+            "倪海厦医案选读",
+            "伤寒论医案",
+            "金匮要略医案"
+          ],
+          "knowledge_files": [],
+          "case_studies": true
+        }
+      ],
+      "assessment": {
+        "type": "comprehensive",
+        "cases": 20,
+        "passing_score": 85
+      }
+    }
+  ],
+  "completion_tracking": {
+    "enable": true,
+    "certificate": true,
+    "progress_save": true
+  }
+}
