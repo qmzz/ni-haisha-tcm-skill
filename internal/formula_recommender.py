@@ -250,7 +250,7 @@ class FormulaRecommender:
     
     def recommend(self, symptoms: List[str], pattern: Optional[str] = None) -> Dict:
         """
-        推荐方剂
+        给出相关方剂参考
         
         Args:
             symptoms: 症状列表

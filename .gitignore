@@ -75,5 +75,9 @@ scripts/optimize_short_concepts.py
 internal/tests/
 internal/__pycache__/
 
+# Generated source indexes (rebuild with scripts/build_source_index.py)
+data/source_manifest.json
+data/source_pages.jsonl
+
 # Knowledge base - keep all files
 # (no exclusion rules for knowledge/)

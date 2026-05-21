@@ -2,11 +2,13 @@
 
 > *"治病必求于本，本于阴阳"* — 倪海厦
 
-基于倪海厦人纪系列（伤寒论、金匮要略、黄帝内经、神农本草经、针灸篇）构建的中医知识库与智能诊断系统。
+基于倪海厦人纪系列（伤寒论、金匮要略、黄帝内经、神农本草经、针灸篇）构建的中医知识库、辨证辅助与经方检索系统。
+
+> ⚠️ 本项目用于中医理论学习、资料检索和辨证思路参考，不能替代合格医师的面诊、诊断或治疗。项目内容必须尊重原始 PDF 提取数据，不能凭空扩写。
 
 ## ✨ 特性
 
-- 🩺 **智能诊断** — 基于六经辨证和八纲辨证，覆盖 50+ 方剂
+- 🩺 **辨证辅助** — 基于六经辨证和八纲辨证，覆盖 50+ 方剂；输出仅作学习参考
 - 📋 **医案库** — 51篇经典医案（伤寒/金匮/针灸/疑难杂症）
 - 💊 **方剂查询** — 113 首经方，含倪海厦讲解
 - 🌿 **药材库** — 416 味药材（48 味核心完整）
@@ -30,7 +32,7 @@ print(result)
 ### 方式二：CLI 使用
 
 ```bash
-# 智能诊断
+# 辨证辅助（学习参考）
 python3 cli.py diagnose "发热,恶寒,无汗,脉浮紧"
 
 # 查询方剂
@@ -41,6 +43,31 @@ python3 cli.py herb 麻黄
 
 # 查看统计
 python3 cli.py stats
+
+# 查看原始 JSON 来源清单
+python3 cli.py sources
+
+# 检索原始 PDF 提取文本，作为补全依据
+python3 cli.py source 桂枝汤
+
+# 查询方剂来源候选
+python3 cli.py formula-source 桂枝汤
+
+# 生成原始来源索引
+python3 scripts/build_source_index.py
+
+# 生成方剂来源候选索引
+python3 scripts/build_formula_sources.py
+
+# 生成方剂结构化索引
+python3 scripts/build_formula_index.py
+
+# 生成药材/穴位来源候选与结构化索引
+python3 scripts/build_herb_sources.py && python3 scripts/build_herb_index.py
+python3 scripts/build_acupoint_sources.py && python3 scripts/build_acupoint_index.py
+
+# 生成 P1 复核队列
+python3 scripts/build_review_queue.py
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用
@@ -63,7 +90,7 @@ cp -r . ~/.openclaw/workspace/skills/ni-haisha
 
 ## 🔧 诊断引擎
 
-基于六经辨证和八纲辨证的智能诊断系统：
+基于六经辨证和八纲辨证的辨证辅助系统：
 
 - **六经辨证**：太阳、阳明、少阳、太阴、少阴、厥阴
 - **八纲辨证**：阴阳、表里、寒热、虚实
@@ -97,7 +124,7 @@ ni-haisha/
 
 ## 📖 知识来源
 
-本 Skill 知识蒸馏自倪海厦人纪系列：
+本 Skill 知识蒸馏自倪海厦人纪系列与相关中医经典资料。当前工作区中的 `project/nihaixia/` 存放从 PDF 提取的结构化 JSON，是后续补全与校验的第一依据。详见 [原始数据使用原则](docs/source_data_policy.md)。
 
 | 资料 | 内容 | 页数 |
 |------|------|------|

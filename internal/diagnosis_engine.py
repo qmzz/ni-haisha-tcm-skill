@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-倪海厦中医诊断引擎（扩展版）
-基于六经辨证、八纲辨证、脏腑辨证的智能诊断系统
+倪海厦中医辨证辅助引擎（扩展版）
+基于六经辨证、八纲辨证、脏腑辨证提供学习参考
 覆盖 50+ 方剂
 
 知识来源：倪海厦人纪系列 - 伤寒论、金匮要略、黄帝内经
@@ -10,6 +10,11 @@
 import json
 from pathlib import Path
 from typing import List, Dict, Optional
+
+try:
+    from internal.safety_guard import DISCLAIMER, build_missing_questions, check_red_flags
+except ImportError:  # 兼容直接从 internal 目录运行的情况
+    from safety_guard import DISCLAIMER, build_missing_questions, check_red_flags
 
 
 class DiagnosisEngine:
@@ -198,17 +203,23 @@ class DiagnosisEngine:
         }
 
     def analyze(self, symptoms: List[str]) -> Dict:
-        """分析症状，返回辨证结果和推荐方剂"""
+        """分析症状，返回辨证辅助结果和相关方剂参考"""
+        safety_result = check_red_flags(symptoms)
+        missing_questions = build_missing_questions(symptoms)
+
         eight_principles_result = self._determine_eight_principles(symptoms)
         six_stage_result = self._match_six_stages(symptoms)
         formula_recommendation = self._recommend_formula(six_stage_result, symptoms)
         analysis = self._generate_analysis(symptoms, eight_principles_result, six_stage_result)
 
         return {
+            "disclaimer": DISCLAIMER,
+            "safety": safety_result,
             "symptoms": symptoms,
             "eight_principles": eight_principles_result,
             "six_stages": six_stage_result,
             "formula": formula_recommendation,
+            "missing_questions": missing_questions,
             "analysis": analysis
         }
 
@@ -226,12 +237,31 @@ class DiagnosisEngine:
         yin_score = han_score + xu_score
         yang_score = re_score + shi_score
 
+        text = " ".join(symptoms)
+
+        # 组合规则优先：避免把“发热”简单等同于热证。
+        if all(k in text for k in ["恶寒", "无汗"]) and ("脉浮紧" in text or "浮紧" in text):
+            han_re = "寒证"
+            han_re_note = "恶寒、无汗、脉浮紧同见，按表寒组合优先判断"
+        elif all(k in text for k in ["大热", "大汗", "口渴"]):
+            han_re = "热证"
+            han_re_note = "大热、大汗、口渴同见，按热证组合判断"
+        elif "恶寒" in text and re_score <= han_score + 1:
+            han_re = "寒证"
+            han_re_note = "恶寒权重优先，发热不单独作为热证依据"
+        else:
+            han_re = "寒证" if han_score > re_score else "热证"
+            han_re_note = "按寒热症状计分判断"
+
+        confidence = min(1.0, (max(biao_score, li_score) + max(han_score, re_score) + max(xu_score, shi_score)) / (max(len(symptoms), 1) * 3))
+
         return {
             "yin_yang": "阴证" if yin_score > yang_score else "阳证",
             "biao_li": "表证" if biao_score > li_score else "里证",
-            "han_re": "寒证" if han_score > re_score else "热证",
+            "han_re": han_re,
+            "han_re_note": han_re_note,
             "xu_shi": "虚证" if xu_score > shi_score else "实证",
-            "confidence": min(1.0, (max(biao_score, li_score) + max(han_score, re_score) + max(xu_score, shi_score)) / (len(symptoms) * 3))
+            "confidence": confidence
         }
 
     def _match_six_stages(self, symptoms: List[str]) -> Dict:
@@ -274,7 +304,7 @@ class DiagnosisEngine:
         return best_match or {"stage": "unknown", "name": "未明确", "description": "需要更多症状信息"}
 
     def _recommend_formula(self, six_stage_result: Dict, symptoms: List[str]) -> Dict:
-        """推荐方剂"""
+        """给出相关方剂参考"""
         if six_stage_result.get("subtype"):
             subtype = six_stage_result["subtype"]
             formula_name = subtype.get("formula", "未知")
