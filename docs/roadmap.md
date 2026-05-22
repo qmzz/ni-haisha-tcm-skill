@@ -59,6 +59,7 @@
 
 ## P8：发布后增强建议
 
+- [x] P8-A：知识库完整度审计，输出 `data/knowledge_completeness.jsonl` 与 `report/p8_knowledge_audit.md`。
 - [ ] CLI 打包与安装体验优化。
 - [ ] 对 no_source_found 条目继续小批量人工复核。
 - [ ] Agent 查询增加更完整的语义检索与多轮问诊状态机。
