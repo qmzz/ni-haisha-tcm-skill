@@ -11,6 +11,7 @@
   python3 cli.py concept 阴阳
   python3 cli.py case 001
   python3 cli.py source 桂枝汤
+  python3 cli.py fts-search 桂枝汤
   python3 cli.py formula-source 桂枝汤
   python3 cli.py herb-source 麻黄
   python3 cli.py acupoint-source 百会
@@ -30,6 +31,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from internal.diagnosis_engine import DiagnosisEngine
 from internal.source_corpus import SourceCorpus
 from internal.trace_service import TraceService
+from internal.fts_search import FtsSearch
 
 SKILL_DIR = Path(__file__).parent
 KNOWLEDGE_DIR = SKILL_DIR / "knowledge"
@@ -306,6 +308,78 @@ def _cli_option(name: str, default=None):
     return sys.argv[idx + 1]
 
 
+def review_next_show(as_json: bool = False):
+    """查看下一批未决复核条目"""
+    path = SKILL_DIR / "data" / "review_queue.jsonl"
+    decisions_path = SKILL_DIR / "data" / "review_decisions.jsonl"
+    items = []
+    decided = set()
+    if decisions_path.exists():
+        with decisions_path.open(encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    row = json.loads(line)
+                    decided.add((row.get("kind"), row.get("item_id")))
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            items = [json.loads(line) for line in f if line.strip()]
+    kind_filter = _cli_option("--kind")
+    status_filter = _cli_option("--status")
+    limit = int(_cli_option("--limit", 10))
+    filtered = []
+    for item in items:
+        if kind_filter and item.get("kind") != kind_filter:
+            continue
+        if status_filter and item.get("review_status") != status_filter:
+            continue
+        if (item.get("kind"), item.get("item_id")) in decided:
+            continue
+        filtered.append(item)
+    if as_json:
+        print(json.dumps({"count": len(filtered), "items": filtered[:limit]}, ensure_ascii=False, indent=2))
+        return
+    print(f"下一批复核条目：{len(filtered)}，展示 {min(limit, len(filtered))} 条")
+    for item in filtered[:limit]:
+        print(f"- {item.get('kind')} {item.get('item_id')} {item.get('name')} [{item.get('review_status')}] {item.get('reason')}")
+
+
+def review_export(as_json: bool = False):
+    """导出人工复核模板"""
+    path = SKILL_DIR / "data" / "review_queue.jsonl"
+    out_path = SKILL_DIR / "data" / "review_decisions.template.jsonl"
+    kind_filter = _cli_option("--kind")
+    status_filter = _cli_option("--status")
+    limit = int(_cli_option("--limit", 50))
+    rows = []
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for line in f:
+                item = json.loads(line)
+                if kind_filter and item.get("kind") != kind_filter:
+                    continue
+                if status_filter and item.get("review_status") != status_filter:
+                    continue
+                rows.append({
+                    "kind": item.get("kind"),
+                    "item_id": item.get("item_id"),
+                    "name": item.get("name"),
+                    "decision": "pending",
+                    "source_ref": None,
+                    "reviewer_note": item.get("reason"),
+                })
+                if len(rows) >= limit:
+                    break
+    with out_path.open("w", encoding="utf-8") as out:
+        for row in rows:
+            out.write(json.dumps(row, ensure_ascii=False) + "\n")
+    result = {"output": str(out_path), "count": len(rows)}
+    if as_json:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        print(f"wrote {out_path}")
+        print(f"items: {len(rows)}")
+
+
 def review_queue_show(as_json: bool = False):
     """查看 P1/P2/P3 复核队列，支持 kind/status/limit 过滤"""
     path = SKILL_DIR / "data" / "review_queue.jsonl"
@@ -340,6 +414,24 @@ def review_queue_show(as_json: bool = False):
     print(f"\n前 {limit} 条：")
     for item in items[:limit]:
         print(f"- {item.get('kind')} {item.get('item_id')} {item.get('name')} [{item.get('review_status')}] {item.get('reason')}")
+    print(f"\n{'='*60}")
+
+
+def fts_search(keyword: str, as_json: bool = False):
+    """SQLite FTS/LIKE 检索原始 JSON 来源"""
+    searcher = FtsSearch()
+    hits = searcher.search(keyword, limit=int(_cli_option("--limit", 10)))
+    result = {"available": searcher.available(), "keyword": keyword, "hits": hits}
+    if as_json:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+    print(f"\n{'='*60}")
+    print(f"🔎 SQLite 来源检索：{keyword}")
+    print(f"{'='*60}")
+    print(f"可用：{result['available']}，命中：{len(hits)}")
+    for i, hit in enumerate(hits, 1):
+        print(f"\n[{i}] {hit.get('source_file')} p.{hit.get('page_num')} mode={hit.get('search_mode')}")
+        print(hit.get("quote", "")[:300])
     print(f"\n{'='*60}")
 
 
@@ -446,12 +538,15 @@ def help():
   python3 cli.py stats                     统计信息
   python3 cli.py sources                   查看原始 JSON 来源清单
   python3 cli.py source <关键词>           检索原始 JSON 原文片段
+  python3 cli.py fts-search <关键词>       SQLite FTS/LIKE 来源检索
   python3 cli.py formula-source <方剂名>   查询方剂来源候选
   python3 cli.py herb-source <药材名>      查询药材来源候选
   python3 cli.py acupoint-source <穴位名>  查询穴位来源候选
   python3 cli.py trace <名称/ID>           统一来源追溯
   python3 cli.py verified-source <名称/ID> 查询 verified 来源
   python3 cli.py review-queue             查看来源复核队列
+  python3 cli.py review-next              查看下一批未决复核条目
+  python3 cli.py review-export            导出人工复核模板
   python3 cli.py help                      显示帮助
 
 示例：
@@ -461,6 +556,7 @@ def help():
   python3 cli.py acupoint 合谷
   python3 cli.py case 001
   python3 cli.py source 桂枝汤
+  python3 cli.py fts-search 桂枝汤
   python3 cli.py formula-source 桂枝汤
   python3 cli.py herb-source 麻黄
   python3 cli.py acupoint-source 百会
@@ -487,7 +583,8 @@ def main():
         "acupoint": lambda: acupoint_search(" ".join(sys.argv[2:])),
         "concept": lambda: concept_search(" ".join(sys.argv[2:])),
         "case": lambda: case_search(" ".join(sys.argv[2:])),
-        "source": lambda: source_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
+        "source": lambda: source_search(" ".join(arg for arg in sys.argv[2:] if arg not in ["--json", "--limit"] and not arg.isdigit()), as_json="--json" in sys.argv),
+        "fts-search": lambda: fts_search(" ".join(arg for arg in sys.argv[2:] if arg not in ["--json", "--limit"] and not arg.isdigit()), as_json="--json" in sys.argv),
         "sources": lambda: source_manifest(as_json="--json" in sys.argv),
         "formula-source": lambda: formula_source_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
         "herb-source": lambda: herb_source_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
@@ -495,6 +592,8 @@ def main():
         "trace": lambda: trace_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
         "verified-source": lambda: verified_source_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
         "review-queue": lambda: review_queue_show(as_json="--json" in sys.argv),
+        "review-next": lambda: review_next_show(as_json="--json" in sys.argv),
+        "review-export": lambda: review_export(as_json="--json" in sys.argv),
         "stats": stats,
         "help": help,
     }

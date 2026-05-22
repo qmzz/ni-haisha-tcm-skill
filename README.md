@@ -90,6 +90,13 @@ python3 scripts/build_formula_sources.py && python3 scripts/build_formula_index.
 python3 scripts/build_herb_sources.py && python3 scripts/build_herb_index.py
 python3 scripts/build_acupoint_sources.py && python3 scripts/build_acupoint_index.py
 python3 scripts/build_review_queue.py
+
+# P3 SQLite FTS、复核模板与质量报告
+python3 scripts/build_sqlite_fts.py
+python3 cli.py fts-search 桂枝汤 --limit 5
+python3 cli.py review-next --kind herb --status needs_review --limit 10
+python3 cli.py review-export --kind herb --status no_source_found --limit 50
+python3 scripts/build_quality_report.py
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用
