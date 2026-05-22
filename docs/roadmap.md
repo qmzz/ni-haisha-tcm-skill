@@ -52,7 +52,7 @@
 
 - [x] P3-A：review_queue 支持 kind/status/limit 过滤。
 - [x] P3-A：生成 `report/review_report.md` 审核报告。
-- [ ] P3-B：alias / 异名 / 繁简匹配，降低 no_source_found。
+- [x] P3-B：alias / 异名 / 繁简匹配，降低 no_source_found。
 - [ ] P3-C：SQLite FTS5 轻量全文检索。
 - [ ] P3-D：review decision 增量标记工作流。
 - [ ] P3-E：quality_report 质量看板。

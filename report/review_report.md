@@ -4,7 +4,7 @@
 
 ## 总览
 
-- 复核队列总数：**221**
+- 复核队列总数：**223**
 
 ### 按类型统计
 
@@ -12,14 +12,14 @@
 |------|------:|
 | acupoint | 73 |
 | formula | 4 |
-| herb | 144 |
+| herb | 146 |
 
 ### 按状态统计
 
 | status | count |
 |--------|------:|
-| needs_review | 33 |
-| no_source_found | 188 |
+| needs_review | 38 |
+| no_source_found | 185 |
 
 ### 类型 × 状态
 
@@ -28,8 +28,8 @@
 | acupoint | needs_review | 9 |
 | acupoint | no_source_found | 64 |
 | formula | needs_review | 4 |
-| herb | needs_review | 20 |
-| herb | no_source_found | 124 |
+| herb | needs_review | 25 |
+| herb | no_source_found | 121 |
 
 ## 优先处理建议
 
@@ -99,17 +99,22 @@
 
 | kind | id | name | status | reason |
 |------|----|------|--------|--------|
+| herb | baidoukou | 白豆蔻 | needs_review | 候选来源需人工复核 |
 | herb | baiguo | 白果 | needs_review | 候选来源需人工复核 |
 | herb | baihe | 百合 | needs_review | 候选来源需人工复核 |
 | herb | baihuasheshecao | 白花蛇舌草 | needs_review | 候选来源需人工复核 |
+| herb | baiji | 白及 | needs_review | 候选来源需人工复核 |
 | herb | banlangen | 板蓝根 | needs_review | 候选来源需人工复核 |
+| herb | biandou | 白扁豆 | needs_review | 候选来源需人工复核 |
 | herb | chenxiang | 沉香 | needs_review | 候选来源需人工复核 |
 | herb | dengxincao | 灯心草 | needs_review | 候选来源需人工复核 |
 | herb | ezhu | 莪术 | needs_review | 候选来源需人工复核 |
+| herb | fanxieye | 番泻叶 | needs_review | 候选来源需人工复核 |
 | herb | ganlan | 橄榄 | needs_review | 候选来源需人工复核 |
 | herb | haijinsha | 海金沙 | needs_review | 候选来源需人工复核 |
 | herb | heshouwu | 何首乌 | needs_review | 候选来源需人工复核 |
 | herb | jianghuang | 姜黄 | needs_review | 候选来源需人工复核 |
+| herb | jinyinhua | 金银花 | needs_review | 候选来源需人工复核 |
 | herb | lugen | 芦根 | needs_review | 候选来源需人工复核 |
 | herb | qumai | 瞿麦 | needs_review | 候选来源需人工复核 |
 | herb | walengzi | 瓦楞子 | needs_review | 候选来源需人工复核 |
@@ -128,9 +133,7 @@
 | herb | anxixiang | 安息香 | no_source_found | 未检索到来源候选 |
 | herb | aoshu | 糯稻根 | no_source_found | 未检索到来源候选 |
 | herb | aoshugen | 糯稻根须 | no_source_found | 未检索到来源候选 |
-| herb | baidoukou | 白豆蔻 | no_source_found | 未检索到来源候选 |
 | herb | banzhilian | 半枝莲 | no_source_found | 未检索到来源候选 |
-| herb | biandou | 白扁豆 | no_source_found | 未检索到来源候选 |
 | herb | biba | 荜澄茄 | no_source_found | 未检索到来源候选 |
 | herb | bibo | 荜茇 | no_source_found | 未检索到来源候选 |
 | herb | bichengqie | 荜澄茄 | no_source_found | 未检索到来源候选 |
@@ -148,9 +151,11 @@
 | herb | daodou | 刀豆 | no_source_found | 未检索到来源候选 |
 | herb | diercao | 地耳草 | no_source_found | 未检索到来源候选 |
 | herb | dijincao | 地锦草 | no_source_found | 未检索到来源候选 |
-| herb | fanxieye | 番泻叶 | no_source_found | 未检索到来源候选 |
 | herb | feizi | 榧子 | no_source_found | 未检索到来源候选 |
 | herb | foshou | 佛手 | no_source_found | 未检索到来源候选 |
 | herb | gijingcao | 谷精草 | no_source_found | 未检索到来源候选 |
 | herb | gouteng | 钩藤 | no_source_found | 未检索到来源候选 |
 | herb | guya | 谷芽 | no_source_found | 未检索到来源候选 |
+| herb | haifengteng | 海风藤 | no_source_found | 未检索到来源候选 |
+| herb | haifushi | 海浮石 | no_source_found | 未检索到来源候选 |
+| herb | haigeqiao | 海蛤壳 | no_source_found | 未检索到来源候选 |

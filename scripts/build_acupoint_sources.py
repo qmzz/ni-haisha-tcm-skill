@@ -15,6 +15,7 @@ from typing import Dict, List, Optional
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from internal.source_corpus import SourceCorpus
+from internal.alias_registry import keywords_for
 
 ROOT = Path(__file__).resolve().parents[1]
 ACUPOINT_DIR = ROOT / "knowledge" / "acupoints"
@@ -74,8 +75,22 @@ def build(limit_per_item: int = 5) -> List[Dict]:
         if "index" in path.name:
             continue
         item = parse_file(path)
-        hits = [h.to_dict() for h in corpus.search(item["name"], limit=80, context=120)]
-        hits.sort(key=lambda h: score_hit(item["name"], h), reverse=True)
+        hits = []
+        for keyword in keywords_for("acupoint", item["name"]):
+            for hit in corpus.search(keyword, limit=80, context=120):
+                record = hit.to_dict()
+                record["matched_keyword"] = keyword
+                hits.append(record)
+        seen = set()
+        deduped = []
+        for hit in hits:
+            key = (hit.get("source_file"), hit.get("page_num"), hit.get("char_start"), hit.get("matched_keyword"))
+            if key not in seen:
+                seen.add(key)
+                deduped.append(hit)
+        hits = deduped
+        hits.sort(key=lambda h: score_hit(h.get("matched_keyword") or item["name"], h), reverse=True)
+        item["searched_keywords"] = keywords_for("acupoint", item["name"])
         item["source_hits"] = hits[:limit_per_item]
         item["source_hit_count"] = len(hits)
         item["status"] = "candidate" if hits else "no_source_found"

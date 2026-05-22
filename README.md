@@ -84,6 +84,12 @@ python3 tools/tcm_tools.py tcm_diagnose_assist '{"symptoms":["发热","恶寒","
 # P3 review queue 筛选与报告
 python3 cli.py review-queue --kind herb --status no_source_found --limit 20
 python3 scripts/build_review_report.py
+
+# P3 alias/异名匹配后重建来源索引
+python3 scripts/build_formula_sources.py && python3 scripts/build_formula_index.py
+python3 scripts/build_herb_sources.py && python3 scripts/build_herb_index.py
+python3 scripts/build_acupoint_sources.py && python3 scripts/build_acupoint_index.py
+python3 scripts/build_review_queue.py
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用
