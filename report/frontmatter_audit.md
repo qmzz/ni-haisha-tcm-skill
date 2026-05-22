@@ -6,25 +6,25 @@
 
 | file | kind | missing | warnings |
 |------|------|---------|----------|
-| knowledge/formulas/baihu_renshen.md | formula | kind, trace_status |  |
+| knowledge/formulas/baihu_renshen.md | formula | kind |  |
 | knowledge/formulas/baihu_tang.md | formula | kind |  |
 | knowledge/formulas/baitouweng_jiaoai.md | formula | kind, trace_status |  |
 | knowledge/formulas/baitouweng_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/baizhu_fuzi.md | formula | kind, trace_status |  |
 | knowledge/formulas/banxia_houpo.md | formula | kind, trace_status |  |
 | knowledge/formulas/banxia_san.md | formula | kind, trace_status |  |
-| knowledge/formulas/banxia_xiexin.md | formula | kind, trace_status |  |
+| knowledge/formulas/banxia_xiexin.md | formula | kind |  |
 | knowledge/formulas/chaihu_guizhi.md | formula | kind, trace_status |  |
 | knowledge/formulas/chaihu_longgu.md | formula | kind, trace_status |  |
 | knowledge/formulas/dachaihu_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/dachengqi_tang.md | formula | kind |  |
 | knowledge/formulas/dahuang_gansui.md | formula | kind, trace_status |  |
 | knowledge/formulas/dahuang_huanglian.md | formula | kind, trace_status |  |
-| knowledge/formulas/dahuoluo_tang.md | formula | kind, trace_status |  |
+| knowledge/formulas/dahuoluo_tang.md | formula | kind |  |
 | knowledge/formulas/danggui_jianzhong.md | formula | kind, trace_status |  |
 | knowledge/formulas/danggui_shengjiang.md | formula | kind, trace_status |  |
 | knowledge/formulas/danggui_sini.md | formula | kind, trace_status |  |
-| knowledge/formulas/didang_tang.md | formula | kind, trace_status |  |
+| knowledge/formulas/didang_tang.md | formula | kind |  |
 | knowledge/formulas/fangji_fuling.md | formula | kind, trace_status |  |
 | knowledge/formulas/fangji_huangqi.md | formula | kind, trace_status |  |
 | knowledge/formulas/fuling_gancao.md | formula | kind, trace_status |  |
@@ -39,15 +39,15 @@
 | knowledge/formulas/gancao_mahuang.md | formula | kind, trace_status |  |
 | knowledge/formulas/gancao_xiexin.md | formula | kind, trace_status |  |
 | knowledge/formulas/ganjiang_fuzi.md | formula | kind, trace_status |  |
-| knowledge/formulas/getang.md | formula | kind, trace_status |  |
+| knowledge/formulas/getang.md | formula | kind |  |
 | knowledge/formulas/getang_banxia.md | formula | kind, trace_status |  |
 | knowledge/formulas/gualou_xiebai.md | formula | kind, trace_status |  |
 | knowledge/formulas/guizhi_dahuang.md | formula | kind, trace_status |  |
 | knowledge/formulas/guizhi_fuling.md | formula | kind, trace_status |  |
-| knowledge/formulas/guizhi_fuzi.md | formula | kind, trace_status |  |
+| knowledge/formulas/guizhi_fuzi.md | formula | kind |  |
 | knowledge/formulas/guizhi_gancao.md | formula | kind, trace_status |  |
-| knowledge/formulas/guizhi_houpuxingzi.md | formula | kind, trace_status |  |
-| knowledge/formulas/guizhi_jiagetang.md | formula | kind, trace_status |  |
+| knowledge/formulas/guizhi_houpuxingzi.md | formula | kind |  |
+| knowledge/formulas/guizhi_jiagetang.md | formula | kind |  |
 | knowledge/formulas/guizhi_qu_shaoyao.md | formula | kind, trace_status |  |
 | knowledge/formulas/guizhi_shaoyao.md | formula | kind, trace_status |  |
 | knowledge/formulas/guizhi_tang.md | formula | kind |  |
@@ -62,8 +62,8 @@
 | knowledge/formulas/jishibai_san.md | formula | kind, trace_status |  |
 | knowledge/formulas/juzhi_jiang.md | formula | kind, trace_status |  |
 | knowledge/formulas/kujiu_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/linggui_zhugan.md | formula | kind, trace_status |  |
-| knowledge/formulas/lizhong_tang.md | formula | kind, trace_status |  |
+| knowledge/formulas/linggui_zhugan.md | formula | kind |  |
+| knowledge/formulas/lizhong_tang.md | formula | kind |  |
 | knowledge/formulas/lizhong_wan.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_fuzi_gancao.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_fuzi_xixin.md | formula | kind, trace_status |  |
@@ -71,7 +71,7 @@
 | knowledge/formulas/mahuang_shengma.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_tang.md | formula | kind |  |
 | knowledge/formulas/maimendong_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/maxing_shigan.md | formula | kind, trace_status |  |
+| knowledge/formulas/maxing_shigan.md | formula | kind |  |
 | knowledge/formulas/muli_zexie.md | formula | kind, trace_status |  |
 | knowledge/formulas/neibu_danggui.md | formula | kind, trace_status |  |
 | knowledge/formulas/painong_san.md | formula | kind, trace_status |  |
@@ -86,21 +86,21 @@
 | knowledge/formulas/shenqi_wan.md | formula | kind, trace_status |  |
 | knowledge/formulas/shizao_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/sini_san.md | formula | kind, trace_status |  |
-| knowledge/formulas/sini_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/taohe_chengqi.md | formula | kind, trace_status |  |
+| knowledge/formulas/sini_tang.md | formula | kind |  |
+| knowledge/formulas/taohe_chengqi.md | formula | kind |  |
 | knowledge/formulas/taohua_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/tiaoweichengqi.md | formula | kind, trace_status |  |
+| knowledge/formulas/tiaoweichengqi.md | formula | kind |  |
 | knowledge/formulas/tingli_dazao.md | formula | kind, trace_status |  |
 | knowledge/formulas/tongmai_sini.md | formula | kind, trace_status |  |
 | knowledge/formulas/wangbuliuxing.md | formula | kind, trace_status |  |
 | knowledge/formulas/wenjing_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/wuling_san.md | formula | kind, trace_status |  |
+| knowledge/formulas/wuling_san.md | formula | kind |  |
 | knowledge/formulas/wumei_wan.md | formula | kind, trace_status |  |
 | knowledge/formulas/xiaochaihu_tang.md | formula | kind |  |
-| knowledge/formulas/xiaochengqi_tang.md | formula | kind, trace_status |  |
+| knowledge/formulas/xiaochengqi_tang.md | formula | kind |  |
 | knowledge/formulas/xiaoer_gan.md | formula | kind, trace_status |  |
 | knowledge/formulas/xiaojianzhong_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/xiaoqinglong_tang.md | formula | kind, trace_status |  |
+| knowledge/formulas/xiaoqinglong_tang.md | formula | kind |  |
 | knowledge/formulas/xiayu_xue.md | formula | kind, trace_status |  |
 | knowledge/formulas/xingzi_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/xuanfu_daihe.md | formula | kind, trace_status |  |
@@ -110,13 +110,13 @@
 | knowledge/formulas/yuebi_zhu.md | formula | kind, trace_status |  |
 | knowledge/formulas/zaojia_wan.md | formula | kind, trace_status |  |
 | knowledge/formulas/zeqi_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/zhenwu_tang.md | formula | kind, trace_status |  |
+| knowledge/formulas/zhenwu_tang.md | formula | kind |  |
 | knowledge/formulas/zhigancao_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/zhishi_shaoyao.md | formula | kind, trace_status |  |
 | knowledge/formulas/zhishi_zhizi.md | formula | kind, trace_status |  |
 | knowledge/formulas/zhizhu_san.md | formula | kind, trace_status |  |
-| knowledge/formulas/zhizi_chi.md | formula | kind, trace_status |  |
-| knowledge/formulas/zhuling_tang.md | formula | kind, trace_status |  |
+| knowledge/formulas/zhizi_chi.md | formula | kind |  |
+| knowledge/formulas/zhuling_tang.md | formula | kind |  |
 | knowledge/formulas/zhupi_dawan.md | formula | kind, trace_status |  |
 | knowledge/formulas/zhuye_shigao.md | formula | kind, trace_status |  |
 | knowledge/herbs/aidicha.md | herb | kind, trace_status |  |

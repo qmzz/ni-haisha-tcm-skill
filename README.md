@@ -109,6 +109,11 @@ python3 tools/tcm_tools.py tcm_review_stats '{}'
 python3 tools/tcm_tools.py tcm_search_sources_fts '{"query":"桂枝汤","limit":5}'
 python3 tools/tcm_tools.py tcm_compare_formulas '{"names":["桂枝汤","麻黄汤"]}'
 python3 scripts/check_frontmatter_schema.py
+
+# P5 核心方剂 verified 扩展
+python3 scripts/p5_seed_core_formula_decisions.py
+python3 scripts/build_verified_sources.py
+python3 scripts/apply_verified_frontmatter.py --apply
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

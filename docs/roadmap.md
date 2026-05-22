@@ -48,6 +48,14 @@
 - [x] OpenClaw 工具化：`tcm_safety_check`、`tcm_source_search`、`tcm_trace`、`tcm_formula_query`、`tcm_herb_query`、`tcm_acupoint_query`、`tcm_diagnose_assist`。
 - [x] verified frontmatter 试点回写：15 个 verified 条目。
 
+## P5：高价值知识条目精修与 verified 覆盖提升
+
+- [x] P5-A：核心方剂 verified 扩展首批 20 个。
+- [ ] P5-B：核心药材 verified 扩展。
+- [ ] P5-C：核心穴位 verified 扩展。
+- [ ] P5-D：精修条目 frontmatter / 正文结构标准化。
+- [ ] P5-E：质量、review、frontmatter 报告更新与发布说明。
+
 ## P4：知识治理成熟化
 
 - [x] P4-A：Review 决策闭环增强（review-import / review-apply / review-stats / review_progress）。
