@@ -141,6 +141,11 @@ python3 scripts/standardize_verified_frontmatter.py --apply
 python3 scripts/build_p6_no_source_report.py
 python3 scripts/build_p6_release_report.py
 # 报告：report/p6_no_source_report.md, report/p6_release_report.md
+
+# P7 no_source 与 alias 治理
+python3 scripts/p7_classify_no_source.py
+python3 scripts/p7_build_alias_review.py --apply-safe
+# 报告：report/p7_no_source_classification.md, report/p7_alias_review.md
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

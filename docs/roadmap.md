@@ -48,6 +48,15 @@
 - [x] OpenClaw 工具化：`tcm_safety_check`、`tcm_source_search`、`tcm_trace`、`tcm_formula_query`、`tcm_herb_query`、`tcm_acupoint_query`、`tcm_diagnose_assist`。
 - [x] verified frontmatter 试点回写：15 个 verified 条目。
 
+## P7：知识治理深水区与可用性产品化
+
+- [x] P7-A：no_source_found 分类治理，生成 `data/no_source_classification.jsonl` 与 `report/p7_no_source_classification.md`。
+- [x] P7-B：alias / synonym 治理增强，生成 `data/alias_review.jsonl` 与 `report/p7_alias_review.md`，safe_alias 可控应用。
+- [ ] P7-C：第三批 verified 精修。
+- [ ] P7-D：Agent 查询编排增强。
+- [ ] P7-E：CLI / 文档产品化。
+- [ ] P7-F：版本发布准备。
+
 ## P6：规模化精修与可用性增强
 
 - [x] P6-A：标准化扩展到全部 verified 条目（72 个），frontmatter missing_required 降至 867。
