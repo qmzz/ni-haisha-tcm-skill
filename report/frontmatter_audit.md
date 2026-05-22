@@ -137,15 +137,15 @@
 | knowledge/herbs/baijiezi.md | herb | kind, trace_status |  |
 | knowledge/herbs/baimaogen.md | herb | kind, trace_status |  |
 | knowledge/herbs/baiqian.md | herb | kind, trace_status |  |
-| knowledge/herbs/baishao.md | herb | kind, trace_status |  |
+| knowledge/herbs/baishao.md | herb | kind |  |
 | knowledge/herbs/baitouweng.md | herb | kind, trace_status |  |
 | knowledge/herbs/baixianpi.md | herb | kind, trace_status |  |
 | knowledge/herbs/baizhi.md | herb | kind, trace_status |  |
-| knowledge/herbs/baizhu.md | herb | kind, trace_status |  |
+| knowledge/herbs/baizhu.md | herb | kind |  |
 | knowledge/herbs/baiziren.md | herb | kind, trace_status |  |
 | knowledge/herbs/bajitian.md | herb | kind, trace_status |  |
 | knowledge/herbs/banlangen.md | herb | kind, trace_status |  |
-| knowledge/herbs/banxia.md | herb | kind, trace_status |  |
+| knowledge/herbs/banxia.md | herb | kind |  |
 | knowledge/herbs/banzhilian.md | herb | kind, trace_status |  |
 | knowledge/herbs/beimu.md | herb | kind, trace_status |  |
 | knowledge/herbs/beishashen.md | herb | kind, trace_status |  |
@@ -166,7 +166,7 @@
 | knowledge/herbs/caodoukou.md | herb | kind, trace_status |  |
 | knowledge/herbs/caoguo.md | herb | kind, trace_status |  |
 | knowledge/herbs/cebaiye.md | herb | kind, trace_status |  |
-| knowledge/herbs/chaihu.md | herb | kind, trace_status |  |
+| knowledge/herbs/chaihu.md | herb | kind |  |
 | knowledge/herbs/changshan.md | herb | kind, trace_status |  |
 | knowledge/herbs/changshanmiao.md | herb | kind, trace_status |  |
 | knowledge/herbs/chantui.md | herb | kind, trace_status |  |
@@ -196,7 +196,7 @@
 | knowledge/herbs/danshen.md | herb | kind, trace_status |  |
 | knowledge/herbs/daodou.md | herb | kind, trace_status |  |
 | knowledge/herbs/daqingye.md | herb | kind, trace_status |  |
-| knowledge/herbs/dazao.md | herb | kind, trace_status |  |
+| knowledge/herbs/dazao.md | herb | kind |  |
 | knowledge/herbs/dengxincao.md | herb | kind, trace_status |  |
 | knowledge/herbs/diercao.md | herb | kind, trace_status |  |
 | knowledge/herbs/difuzi.md | herb | kind, trace_status |  |
@@ -218,12 +218,12 @@
 | knowledge/herbs/fengfang.md | herb | kind, trace_status |  |
 | knowledge/herbs/fengmi.md | herb | kind, trace_status |  |
 | knowledge/herbs/foshou.md | herb | kind, trace_status |  |
-| knowledge/herbs/fuling.md | herb | kind, trace_status |  |
+| knowledge/herbs/fuling.md | herb | kind |  |
 | knowledge/herbs/fupenzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/fuxiaomai.md | herb | kind, trace_status |  |
-| knowledge/herbs/fuzi.md | herb | kind, trace_status |  |
+| knowledge/herbs/fuzi.md | herb | kind |  |
 | knowledge/herbs/gancao.md | herb | kind |  |
-| knowledge/herbs/ganjiang.md | herb | kind, trace_status |  |
+| knowledge/herbs/ganjiang.md | herb | kind |  |
 | knowledge/herbs/ganlan.md | herb | kind, trace_status |  |
 | knowledge/herbs/gansui.md | herb | kind, trace_status |  |
 | knowledge/herbs/gaoben.md | herb | kind, trace_status |  |
@@ -267,9 +267,9 @@
 | knowledge/herbs/huangbai.md | herb | kind, trace_status |  |
 | knowledge/herbs/huangbo.md | herb | kind, trace_status |  |
 | knowledge/herbs/huangjing.md | herb | kind, trace_status |  |
-| knowledge/herbs/huanglian.md | herb | kind, trace_status |  |
+| knowledge/herbs/huanglian.md | herb | kind |  |
 | knowledge/herbs/huangqi.md | herb | kind, trace_status |  |
-| knowledge/herbs/huangqin.md | herb | kind, trace_status |  |
+| knowledge/herbs/huangqin.md | herb | kind |  |
 | knowledge/herbs/huangyaozi.md | herb | kind, trace_status |  |
 | knowledge/herbs/huashi.md | herb | kind, trace_status |  |
 | knowledge/herbs/huazuirushi.md | herb | kind, trace_status |  |
@@ -314,7 +314,7 @@
 | knowledge/herbs/liujinu.md | herb | kind, trace_status |  |
 | knowledge/herbs/lizhihe.md | herb | kind, trace_status |  |
 | knowledge/herbs/longdancao.md | herb | kind, trace_status |  |
-| knowledge/herbs/longgu.md | herb | kind, trace_status |  |
+| knowledge/herbs/longgu.md | herb | kind |  |
 | knowledge/herbs/longyanrou.md | herb | kind, trace_status |  |
 | knowledge/herbs/lugen.md | herb | kind, trace_status |  |
 | knowledge/herbs/luhui.md | herb | kind, trace_status |  |
@@ -347,7 +347,7 @@
 | knowledge/herbs/mugua.md | herb | kind, trace_status |  |
 | knowledge/herbs/muhudie.md | herb | kind, trace_status |  |
 | knowledge/herbs/mujinpi.md | herb | kind, trace_status |  |
-| knowledge/herbs/muli.md | herb | kind, trace_status |  |
+| knowledge/herbs/muli.md | herb | kind |  |
 | knowledge/herbs/mutong.md | herb | kind, trace_status |  |
 | knowledge/herbs/muxiang.md | herb | kind, trace_status |  |
 | knowledge/herbs/nanguazi.md | herb | kind, trace_status |  |
@@ -378,7 +378,7 @@
 | knowledge/herbs/qishe.md | herb | kind, trace_status |  |
 | knowledge/herbs/quanxie.md | herb | kind, trace_status |  |
 | knowledge/herbs/qumai.md | herb | kind, trace_status |  |
-| knowledge/herbs/renshen.md | herb | kind, trace_status |  |
+| knowledge/herbs/renshen.md | herb | kind |  |
 | knowledge/herbs/roudoukou.md | herb | kind, trace_status |  |
 | knowledge/herbs/rougui.md | herb | kind, trace_status |  |
 | knowledge/herbs/rousuirong.md | herb | kind, trace_status |  |
@@ -402,7 +402,7 @@
 | knowledge/herbs/shayuanzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/shechuangzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/shegan.md | herb | kind, trace_status |  |
-| knowledge/herbs/shengjiang.md | herb | kind, trace_status |  |
+| knowledge/herbs/shengjiang.md | herb | kind |  |
 | knowledge/herbs/shengma.md | herb | kind, trace_status |  |
 | knowledge/herbs/shenjincao.md | herb | kind, trace_status |  |
 | knowledge/herbs/shenqu.md | herb | kind, trace_status |  |
@@ -464,11 +464,11 @@
 | knowledge/herbs/xiebai.md | herb | kind, trace_status |  |
 | knowledge/herbs/xiecao.md | herb | kind, trace_status |  |
 | knowledge/herbs/xihonghua.md | herb | kind, trace_status |  |
-| knowledge/herbs/xingren.md | herb | kind, trace_status |  |
+| knowledge/herbs/xingren.md | herb | kind |  |
 | knowledge/herbs/xinyi.md | herb | kind, trace_status |  |
 | knowledge/herbs/xionghuang.md | herb | kind, trace_status |  |
 | knowledge/herbs/xiqiancao.md | herb | kind, trace_status |  |
-| knowledge/herbs/xixin.md | herb | kind, trace_status |  |
+| knowledge/herbs/xixin.md | herb | kind |  |
 | knowledge/herbs/xiyangshen.md | herb | kind, trace_status |  |
 | knowledge/herbs/xuanfuhua.md | herb | kind, trace_status |  |
 | knowledge/herbs/xuanshen.md | herb | kind, trace_status |  |
@@ -508,7 +508,7 @@
 | knowledge/herbs/zaojiaoci.md | herb | kind, trace_status |  |
 | knowledge/herbs/zaoxintu.md | herb | kind, trace_status |  |
 | knowledge/herbs/zelan.md | herb | kind, trace_status |  |
-| knowledge/herbs/zezie.md | herb | kind, trace_status |  |
+| knowledge/herbs/zezie.md | herb | kind |  |
 | knowledge/herbs/zhangnao.md | herb | kind, trace_status |  |
 | knowledge/herbs/zhebeimu.md | herb | kind, trace_status |  |
 | knowledge/herbs/zhechong.md | herb | kind, trace_status |  |

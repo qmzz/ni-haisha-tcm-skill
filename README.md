@@ -114,6 +114,11 @@ python3 scripts/check_frontmatter_schema.py
 python3 scripts/p5_seed_core_formula_decisions.py
 python3 scripts/build_verified_sources.py
 python3 scripts/apply_verified_frontmatter.py --apply
+
+# P5 核心药材 verified 扩展
+python3 scripts/p5_seed_core_herb_decisions.py
+python3 scripts/build_verified_sources.py
+python3 scripts/apply_verified_frontmatter.py --apply
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用
