@@ -1,13 +1,11 @@
 # Frontmatter Audit
 
 - files: 939
-- missing_required: 929
+- missing_required: 867
 - warnings: 0
 
 | file | kind | missing | warnings |
 |------|------|---------|----------|
-| knowledge/formulas/baihu_renshen.md | formula | kind |  |
-| knowledge/formulas/baihu_tang.md | formula | kind |  |
 | knowledge/formulas/baitouweng_jiaoai.md | formula | kind, trace_status |  |
 | knowledge/formulas/baitouweng_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/baizhu_fuzi.md | formula | kind, trace_status |  |
@@ -16,14 +14,11 @@
 | knowledge/formulas/chaihu_guizhi.md | formula | kind, trace_status |  |
 | knowledge/formulas/chaihu_longgu.md | formula | kind, trace_status |  |
 | knowledge/formulas/dachaihu_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/dachengqi_tang.md | formula | kind |  |
 | knowledge/formulas/dahuang_gansui.md | formula | kind, trace_status |  |
 | knowledge/formulas/dahuang_huanglian.md | formula | kind, trace_status |  |
-| knowledge/formulas/dahuoluo_tang.md | formula | kind |  |
 | knowledge/formulas/danggui_jianzhong.md | formula | kind, trace_status |  |
 | knowledge/formulas/danggui_shengjiang.md | formula | kind, trace_status |  |
 | knowledge/formulas/danggui_sini.md | formula | kind, trace_status |  |
-| knowledge/formulas/didang_tang.md | formula | kind |  |
 | knowledge/formulas/fangji_fuling.md | formula | kind, trace_status |  |
 | knowledge/formulas/fangji_huangqi.md | formula | kind, trace_status |  |
 | knowledge/formulas/fuling_gancao.md | formula | kind, trace_status |  |
@@ -38,15 +33,11 @@
 | knowledge/formulas/gancao_mahuang.md | formula | kind, trace_status |  |
 | knowledge/formulas/gancao_xiexin.md | formula | kind, trace_status |  |
 | knowledge/formulas/ganjiang_fuzi.md | formula | kind, trace_status |  |
-| knowledge/formulas/getang.md | formula | kind |  |
 | knowledge/formulas/getang_banxia.md | formula | kind, trace_status |  |
 | knowledge/formulas/gualou_xiebai.md | formula | kind, trace_status |  |
 | knowledge/formulas/guizhi_dahuang.md | formula | kind, trace_status |  |
 | knowledge/formulas/guizhi_fuling.md | formula | kind, trace_status |  |
-| knowledge/formulas/guizhi_fuzi.md | formula | kind |  |
 | knowledge/formulas/guizhi_gancao.md | formula | kind, trace_status |  |
-| knowledge/formulas/guizhi_houpuxingzi.md | formula | kind |  |
-| knowledge/formulas/guizhi_jiagetang.md | formula | kind |  |
 | knowledge/formulas/guizhi_qu_shaoyao.md | formula | kind, trace_status |  |
 | knowledge/formulas/guizhi_shaoyao.md | formula | kind, trace_status |  |
 | knowledge/formulas/honglanhua_jiu.md | formula | kind, trace_status |  |
@@ -60,15 +51,12 @@
 | knowledge/formulas/jishibai_san.md | formula | kind, trace_status |  |
 | knowledge/formulas/juzhi_jiang.md | formula | kind, trace_status |  |
 | knowledge/formulas/kujiu_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/linggui_zhugan.md | formula | kind |  |
-| knowledge/formulas/lizhong_tang.md | formula | kind |  |
 | knowledge/formulas/lizhong_wan.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_fuzi_gancao.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_fuzi_xixin.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_lianqiao.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_shengma.md | formula | kind, trace_status |  |
 | knowledge/formulas/maimendong_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/maxing_shigan.md | formula | kind |  |
 | knowledge/formulas/muli_zexie.md | formula | kind, trace_status |  |
 | knowledge/formulas/neibu_danggui.md | formula | kind, trace_status |  |
 | knowledge/formulas/painong_san.md | formula | kind, trace_status |  |
@@ -83,19 +71,14 @@
 | knowledge/formulas/shenqi_wan.md | formula | kind, trace_status |  |
 | knowledge/formulas/shizao_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/sini_san.md | formula | kind, trace_status |  |
-| knowledge/formulas/sini_tang.md | formula | kind |  |
-| knowledge/formulas/taohe_chengqi.md | formula | kind |  |
 | knowledge/formulas/taohua_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/tiaoweichengqi.md | formula | kind |  |
 | knowledge/formulas/tingli_dazao.md | formula | kind, trace_status |  |
 | knowledge/formulas/tongmai_sini.md | formula | kind, trace_status |  |
 | knowledge/formulas/wangbuliuxing.md | formula | kind, trace_status |  |
 | knowledge/formulas/wenjing_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/wumei_wan.md | formula | kind, trace_status |  |
-| knowledge/formulas/xiaochengqi_tang.md | formula | kind |  |
 | knowledge/formulas/xiaoer_gan.md | formula | kind, trace_status |  |
 | knowledge/formulas/xiaojianzhong_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/xiaoqinglong_tang.md | formula | kind |  |
 | knowledge/formulas/xiayu_xue.md | formula | kind, trace_status |  |
 | knowledge/formulas/xingzi_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/xuanfu_daihe.md | formula | kind, trace_status |  |
@@ -105,13 +88,10 @@
 | knowledge/formulas/yuebi_zhu.md | formula | kind, trace_status |  |
 | knowledge/formulas/zaojia_wan.md | formula | kind, trace_status |  |
 | knowledge/formulas/zeqi_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/zhenwu_tang.md | formula | kind |  |
 | knowledge/formulas/zhigancao_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/zhishi_shaoyao.md | formula | kind, trace_status |  |
 | knowledge/formulas/zhishi_zhizi.md | formula | kind, trace_status |  |
 | knowledge/formulas/zhizhu_san.md | formula | kind, trace_status |  |
-| knowledge/formulas/zhizi_chi.md | formula | kind |  |
-| knowledge/formulas/zhuling_tang.md | formula | kind |  |
 | knowledge/formulas/zhupi_dawan.md | formula | kind, trace_status |  |
 | knowledge/formulas/zhuye_shigao.md | formula | kind, trace_status |  |
 | knowledge/herbs/aidicha.md | herb | kind, trace_status |  |
@@ -132,11 +112,9 @@
 | knowledge/herbs/baijiezi.md | herb | kind, trace_status |  |
 | knowledge/herbs/baimaogen.md | herb | kind, trace_status |  |
 | knowledge/herbs/baiqian.md | herb | kind, trace_status |  |
-| knowledge/herbs/baishao.md | herb | kind |  |
 | knowledge/herbs/baitouweng.md | herb | kind, trace_status |  |
 | knowledge/herbs/baixianpi.md | herb | kind, trace_status |  |
 | knowledge/herbs/baizhi.md | herb | kind, trace_status |  |
-| knowledge/herbs/baizhu.md | herb | kind |  |
 | knowledge/herbs/baiziren.md | herb | kind, trace_status |  |
 | knowledge/herbs/bajitian.md | herb | kind, trace_status |  |
 | knowledge/herbs/banlangen.md | herb | kind, trace_status |  |
@@ -160,7 +138,6 @@
 | knowledge/herbs/caodoukou.md | herb | kind, trace_status |  |
 | knowledge/herbs/caoguo.md | herb | kind, trace_status |  |
 | knowledge/herbs/cebaiye.md | herb | kind, trace_status |  |
-| knowledge/herbs/chaihu.md | herb | kind |  |
 | knowledge/herbs/changshan.md | herb | kind, trace_status |  |
 | knowledge/herbs/changshanmiao.md | herb | kind, trace_status |  |
 | knowledge/herbs/chantui.md | herb | kind, trace_status |  |
@@ -180,7 +157,6 @@
 | knowledge/herbs/ciweipi.md | herb | kind, trace_status |  |
 | knowledge/herbs/congbai.md | herb | kind, trace_status |  |
 | knowledge/herbs/dafupi.md | herb | kind, trace_status |  |
-| knowledge/herbs/dahuang.md | herb | kind |  |
 | knowledge/herbs/daidaihua.md | herb | kind, trace_status |  |
 | knowledge/herbs/daizheshi.md | herb | kind, trace_status |  |
 | knowledge/herbs/daji.md | herb | kind, trace_status |  |
@@ -190,7 +166,6 @@
 | knowledge/herbs/danshen.md | herb | kind, trace_status |  |
 | knowledge/herbs/daodou.md | herb | kind, trace_status |  |
 | knowledge/herbs/daqingye.md | herb | kind, trace_status |  |
-| knowledge/herbs/dazao.md | herb | kind |  |
 | knowledge/herbs/dengxincao.md | herb | kind, trace_status |  |
 | knowledge/herbs/diercao.md | herb | kind, trace_status |  |
 | knowledge/herbs/difuzi.md | herb | kind, trace_status |  |
@@ -212,10 +187,8 @@
 | knowledge/herbs/fengfang.md | herb | kind, trace_status |  |
 | knowledge/herbs/fengmi.md | herb | kind, trace_status |  |
 | knowledge/herbs/foshou.md | herb | kind, trace_status |  |
-| knowledge/herbs/fuling.md | herb | kind |  |
 | knowledge/herbs/fupenzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/fuxiaomai.md | herb | kind, trace_status |  |
-| knowledge/herbs/ganjiang.md | herb | kind |  |
 | knowledge/herbs/ganlan.md | herb | kind, trace_status |  |
 | knowledge/herbs/gansui.md | herb | kind, trace_status |  |
 | knowledge/herbs/gaoben.md | herb | kind, trace_status |  |
@@ -258,9 +231,7 @@
 | knowledge/herbs/huangbai.md | herb | kind, trace_status |  |
 | knowledge/herbs/huangbo.md | herb | kind, trace_status |  |
 | knowledge/herbs/huangjing.md | herb | kind, trace_status |  |
-| knowledge/herbs/huanglian.md | herb | kind |  |
 | knowledge/herbs/huangqi.md | herb | kind, trace_status |  |
-| knowledge/herbs/huangqin.md | herb | kind |  |
 | knowledge/herbs/huangyaozi.md | herb | kind, trace_status |  |
 | knowledge/herbs/huashi.md | herb | kind, trace_status |  |
 | knowledge/herbs/huazuirushi.md | herb | kind, trace_status |  |
@@ -305,7 +276,6 @@
 | knowledge/herbs/liujinu.md | herb | kind, trace_status |  |
 | knowledge/herbs/lizhihe.md | herb | kind, trace_status |  |
 | knowledge/herbs/longdancao.md | herb | kind, trace_status |  |
-| knowledge/herbs/longgu.md | herb | kind |  |
 | knowledge/herbs/longyanrou.md | herb | kind, trace_status |  |
 | knowledge/herbs/lugen.md | herb | kind, trace_status |  |
 | knowledge/herbs/luhui.md | herb | kind, trace_status |  |
@@ -337,7 +307,6 @@
 | knowledge/herbs/mugua.md | herb | kind, trace_status |  |
 | knowledge/herbs/muhudie.md | herb | kind, trace_status |  |
 | knowledge/herbs/mujinpi.md | herb | kind, trace_status |  |
-| knowledge/herbs/muli.md | herb | kind |  |
 | knowledge/herbs/mutong.md | herb | kind, trace_status |  |
 | knowledge/herbs/muxiang.md | herb | kind, trace_status |  |
 | knowledge/herbs/nanguazi.md | herb | kind, trace_status |  |
@@ -368,7 +337,6 @@
 | knowledge/herbs/qishe.md | herb | kind, trace_status |  |
 | knowledge/herbs/quanxie.md | herb | kind, trace_status |  |
 | knowledge/herbs/qumai.md | herb | kind, trace_status |  |
-| knowledge/herbs/renshen.md | herb | kind |  |
 | knowledge/herbs/roudoukou.md | herb | kind, trace_status |  |
 | knowledge/herbs/rougui.md | herb | kind, trace_status |  |
 | knowledge/herbs/rousuirong.md | herb | kind, trace_status |  |
@@ -392,14 +360,12 @@
 | knowledge/herbs/shayuanzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/shechuangzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/shegan.md | herb | kind, trace_status |  |
-| knowledge/herbs/shengjiang.md | herb | kind |  |
 | knowledge/herbs/shengma.md | herb | kind, trace_status |  |
 | knowledge/herbs/shenjincao.md | herb | kind, trace_status |  |
 | knowledge/herbs/shenqu.md | herb | kind, trace_status |  |
 | knowledge/herbs/shexiang.md | herb | kind, trace_status |  |
 | knowledge/herbs/shichangpu.md | herb | kind, trace_status |  |
 | knowledge/herbs/shidi.md | herb | kind, trace_status |  |
-| knowledge/herbs/shigao.md | herb | kind |  |
 | knowledge/herbs/shihu.md | herb | kind, trace_status |  |
 | knowledge/herbs/shijunzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/shiliupi.md | herb | kind, trace_status |  |
@@ -454,11 +420,9 @@
 | knowledge/herbs/xiebai.md | herb | kind, trace_status |  |
 | knowledge/herbs/xiecao.md | herb | kind, trace_status |  |
 | knowledge/herbs/xihonghua.md | herb | kind, trace_status |  |
-| knowledge/herbs/xingren.md | herb | kind |  |
 | knowledge/herbs/xinyi.md | herb | kind, trace_status |  |
 | knowledge/herbs/xionghuang.md | herb | kind, trace_status |  |
 | knowledge/herbs/xiqiancao.md | herb | kind, trace_status |  |
-| knowledge/herbs/xixin.md | herb | kind |  |
 | knowledge/herbs/xiyangshen.md | herb | kind, trace_status |  |
 | knowledge/herbs/xuanfuhua.md | herb | kind, trace_status |  |
 | knowledge/herbs/xuanshen.md | herb | kind, trace_status |  |
@@ -498,7 +462,6 @@
 | knowledge/herbs/zaojiaoci.md | herb | kind, trace_status |  |
 | knowledge/herbs/zaoxintu.md | herb | kind, trace_status |  |
 | knowledge/herbs/zelan.md | herb | kind, trace_status |  |
-| knowledge/herbs/zezie.md | herb | kind |  |
 | knowledge/herbs/zhangnao.md | herb | kind, trace_status |  |
 | knowledge/herbs/zhebeimu.md | herb | kind, trace_status |  |
 | knowledge/herbs/zhechong.md | herb | kind, trace_status |  |
@@ -526,7 +489,6 @@
 | knowledge/herbs/zonglutan.md | herb | kind, trace_status |  |
 | knowledge/acupoints/bafeng.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/baihuanshu.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/baihui.md | acupoint | title, kind |  |
 | knowledge/acupoints/baohuang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/baxie.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/benshen.md | acupoint | title, kind, trace_status |  |
@@ -545,7 +507,6 @@
 | knowledge/acupoints/chengling_gb.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/chengqi.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/chengshan.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/chize.md | acupoint | title, kind |  |
 | knowledge/acupoints/chongmen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/chongyang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ciliao.md | acupoint | title, kind, trace_status |  |
@@ -566,7 +527,6 @@
 | knowledge/acupoints/dazhong.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/dazhong_k.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/dazhu.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/dazhui.md | acupoint | title, kind |  |
 | knowledge/acupoints/dicang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/diji.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/dingchuan.md | acupoint | title, kind, trace_status |  |
@@ -576,7 +536,6 @@
 | knowledge/acupoints/erjian.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ermen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ershenmen.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/feishu.md | acupoint | title, kind |  |
 | knowledge/acupoints/feiyang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/fengchi.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/fengchi_gb.md | acupoint | title, kind, trace_status |  |
@@ -600,7 +559,6 @@
 | knowledge/acupoints/fuxi_bl.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/fuyang2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/fuyang_bl.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/ganshu.md | acupoint | title, kind |  |
 | knowledge/acupoints/gaohuangshu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/geguan.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/geshu.md | acupoint | title, kind, trace_status |  |
@@ -608,9 +566,7 @@
 | knowledge/acupoints/guanchong.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/guangming.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/guanmen.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/guanyuan.md | acupoint | title, kind |  |
 | knowledge/acupoints/hanyan.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/hegu.md | acupoint | title, kind |  |
 | knowledge/acupoints/heliao_sj.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/heyang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/houxi.md | acupoint | title, kind, trace_status |  |
@@ -670,7 +626,6 @@
 | knowledge/acupoints/liangqiu2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/lidui.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/lidui2.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/lieque.md | acupoint | title, kind |  |
 | knowledge/acupoints/ligou.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ligou_lv.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/lingdao.md | acupoint | title, kind, trace_status |  |
@@ -680,7 +635,6 @@
 | knowledge/acupoints/luoshen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/luozhen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/meichong.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/mingmen.md | acupoint | title, kind |  |
 | knowledge/acupoints/mubian.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/naohu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/naohui.md | acupoint | title, kind, trace_status |  |
@@ -688,12 +642,10 @@
 | knowledge/acupoints/naokong_bl.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/naokong_gb.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/naoshu.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/neiguan.md | acupoint | title, kind |  |
 | knowledge/acupoints/neiting.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/neiting2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/pangguangshu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/pianli.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/pishu.md | acupoint | title, kind |  |
 | knowledge/acupoints/pohu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/pucan.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qianding.md | acupoint | title, kind, trace_status |  |
@@ -701,7 +653,6 @@
 | knowledge/acupoints/qiangu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qiaoyin_gb.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qichong.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/qihai.md | acupoint | title, kind |  |
 | knowledge/acupoints/qimen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qimen_lv.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qinglengyuan.md | acupoint | title, kind, trace_status |  |
@@ -711,7 +662,6 @@
 | knowledge/acupoints/quanliao.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qubin.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qucha.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/quchi.md | acupoint | title, kind |  |
 | knowledge/acupoints/qugu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ququan.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ququan_lv.md | acupoint | title, kind, trace_status |  |
@@ -726,7 +676,6 @@
 | knowledge/acupoints/sanjiaoju.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/sanjiaoshu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/sanyangluo.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/sanyinjiao.md | acupoint | title, kind |  |
 | knowledge/acupoints/shangjuxu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shanglian.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shangliao.md | acupoint | title, kind, trace_status |  |
@@ -747,9 +696,7 @@
 | knowledge/acupoints/shenmai2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shenmai_bl.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shenmen.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/shenque.md | acupoint | title, kind |  |
 | knowledge/acupoints/shenque_ren.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/shenshu.md | acupoint | title, kind |  |
 | knowledge/acupoints/shentang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shenting.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shenzhu.md | acupoint | title, kind, trace_status |  |
@@ -772,9 +719,7 @@
 | knowledge/acupoints/sizhukong.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/suliao.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/taibai.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/taichong.md | acupoint | title, kind |  |
 | knowledge/acupoints/taichong_lv.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/taixi.md | acupoint | title, kind |  |
 | knowledge/acupoints/taixi_k.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/taiyang_ex.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/taiyi.md | acupoint | title, kind, trace_status |  |
@@ -790,7 +735,6 @@
 | knowledge/acupoints/tianliao.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/tianquan.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/tianrong.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/tianshu.md | acupoint | title, kind |  |
 | knowledge/acupoints/tiantu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/tianxi.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/tianxi2.md | acupoint | title, kind, trace_status |  |
@@ -807,7 +751,6 @@
 | knowledge/acupoints/toulinqi_bl.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/touqiaoyin.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/touwei.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/waiguan.md | acupoint | title, kind |  |
 | knowledge/acupoints/waiqiu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/wangu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/wangu_gb.md | acupoint | title, kind, trace_status |  |
@@ -815,7 +758,6 @@
 | knowledge/acupoints/weidao.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/weishu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/weiyang.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/weizhong.md | acupoint | title, kind |  |
 | knowledge/acupoints/wenliu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/wuchu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/wuli.md | acupoint | title, kind, trace_status |  |
@@ -838,7 +780,6 @@
 | knowledge/acupoints/xingjian.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/xingjian_lv.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/xinhui.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/xinshu.md | acupoint | title, kind |  |
 | knowledge/acupoints/xiongxiang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/xiongxiang2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/xiwan.md | acupoint | title, kind, trace_status |  |
@@ -883,7 +824,6 @@
 | knowledge/acupoints/yinyu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/yishe.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/yixi.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/yongquan.md | acupoint | title, kind |  |
 | knowledge/acupoints/yongquan_k.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/yuanye.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/yuji.md | acupoint | title, kind, trace_status |  |
@@ -919,7 +859,6 @@
 | knowledge/acupoints/zhonglushu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zhongshu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zhongting.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/zhongwan.md | acupoint | title, kind |  |
 | knowledge/acupoints/zhongwan_ren.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zhongzhu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zhourong.md | acupoint | title, kind, trace_status |  |
@@ -931,7 +870,6 @@
 | knowledge/acupoints/zigong_ren.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zulinqi.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zulinqi_gb.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/zusanli.md | acupoint | title, kind |  |
 | knowledge/acupoints/zusanli_st.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zutonggu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zuwuli.md | acupoint | title, kind, trace_status |  |

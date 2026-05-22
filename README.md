@@ -127,6 +127,11 @@ python3 scripts/check_frontmatter_schema.py
 
 # P5 收尾报告
 python3 scripts/build_p5_report.py
+
+# P6 verified 条目标准化
+python3 scripts/standardize_verified_frontmatter.py --apply
+python3 scripts/check_frontmatter_schema.py
+# 报告：report/p6_standardization_report.md
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

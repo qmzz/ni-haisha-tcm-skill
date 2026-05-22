@@ -4,6 +4,12 @@ source_refs:
   - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
     page_num: 59
     quote: "人纪系列针灸篇 个中点叫阴交，中间是气海。 从阴交穴外开两寸叫外陵，天枢、外陵、大巨、水道、归来、气冲，一路下来二寸全是 阳明经。病人说这里痛，你一看是胃经，就结束了。所以经络要强，针灸经络学不强，只会 开处方，诊断实力就不够。 再从石门穴外开两寸，这是大巨，关元穴外开两寸是水道，这都是近取穴，肠鸣 、腹 泻"
+kind: "acupoint"
+review_status: verified
+reviewer: "p6_verified_standardization"
+safety_disclaimer_required: true
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+title: "天枢"
 ---
 
 # 天枢穴 (ST25)
@@ -13,6 +19,22 @@ source_refs:
 **属性：** 大肠募穴
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 
