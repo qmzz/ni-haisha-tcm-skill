@@ -103,6 +103,12 @@ python3 cli.py review-stats
 python3 scripts/build_alias_candidates.py
 python3 scripts/apply_alias_candidates.py
 python3 scripts/build_quality_report.py
+
+# P4 Agent tools / frontmatter / docs
+python3 tools/tcm_tools.py tcm_review_stats '{}'
+python3 tools/tcm_tools.py tcm_search_sources_fts '{"query":"桂枝汤","limit":5}'
+python3 tools/tcm_tools.py tcm_compare_formulas '{"names":["桂枝汤","麻黄汤"]}'
+python3 scripts/check_frontmatter_schema.py
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

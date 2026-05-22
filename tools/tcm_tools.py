@@ -22,6 +22,7 @@ from internal.diagnosis_engine import DiagnosisEngine
 from internal.safety_guard import DISCLAIMER, build_missing_questions, check_red_flags
 from internal.source_corpus import SourceCorpus
 from internal.trace_service import TraceService
+from internal.fts_search import FtsSearch
 
 
 def _payload() -> Dict[str, Any]:
@@ -119,6 +120,65 @@ def tcm_diagnose_assist(payload: Dict[str, Any]) -> Dict[str, Any]:
     return result
 
 
+def _load_jsonl(path: Path):
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8") as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
+def tcm_search_sources_fts(payload: Dict[str, Any]) -> Dict[str, Any]:
+    query = payload.get("query") or payload.get("keyword") or ""
+    return {
+        "query": query,
+        "hits": FtsSearch().search(query, limit=int(payload.get("limit", 5)), context=int(payload.get("context", 100))),
+    }
+
+
+def tcm_review_next(payload: Dict[str, Any]) -> Dict[str, Any]:
+    kind = payload.get("kind")
+    status = payload.get("status")
+    limit = int(payload.get("limit", 10))
+    decisions = {(r.get("kind"), r.get("item_id")) for r in _load_jsonl(ROOT / "data" / "review_decisions.jsonl")}
+    rows = []
+    for item in _load_jsonl(ROOT / "data" / "review_queue.jsonl"):
+        if kind and item.get("kind") != kind:
+            continue
+        if status and item.get("review_status") != status:
+            continue
+        if (item.get("kind"), item.get("item_id")) in decisions:
+            continue
+        rows.append(item)
+    return {"count": len(rows), "items": rows[:limit]}
+
+
+def tcm_review_stats(payload: Dict[str, Any]) -> Dict[str, Any]:
+    counts = {}
+    for item in _load_jsonl(ROOT / "data" / "review_queue.jsonl"):
+        key = f"{item.get('kind')}:{item.get('review_status')}"
+        counts[key] = counts.get(key, 0) + 1
+    return {"review_queue_count": sum(counts.values()), "counts": counts}
+
+
+def tcm_quality_report(payload: Dict[str, Any]) -> Dict[str, Any]:
+    path = ROOT / "report" / "quality_report.md"
+    return {"available": path.exists(), "report": path.read_text(encoding="utf-8") if path.exists() else ""}
+
+
+def _compare(kind: str, subdir: str, names):
+    if isinstance(names, str):
+        names = [x.strip() for x in names.replace("，", ",").split(",") if x.strip()]
+    return {"kind": kind, "items": [_query_markdown(kind, subdir, {"name": name, "chars": 600, "limit": 1}) for name in names]}
+
+
+def tcm_compare_formulas(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return _compare("formula", "formulas", payload.get("names") or payload.get("query") or [])
+
+
+def tcm_compare_herbs(payload: Dict[str, Any]) -> Dict[str, Any]:
+    return _compare("herb", "herbs", payload.get("names") or payload.get("query") or [])
+
+
 TOOLS = {
     "tcm_safety_check": tcm_safety_check,
     "tcm_source_search": tcm_source_search,
@@ -127,6 +187,12 @@ TOOLS = {
     "tcm_herb_query": tcm_herb_query,
     "tcm_acupoint_query": tcm_acupoint_query,
     "tcm_diagnose_assist": tcm_diagnose_assist,
+    "tcm_search_sources_fts": tcm_search_sources_fts,
+    "tcm_review_next": tcm_review_next,
+    "tcm_review_stats": tcm_review_stats,
+    "tcm_quality_report": tcm_quality_report,
+    "tcm_compare_formulas": tcm_compare_formulas,
+    "tcm_compare_herbs": tcm_compare_herbs,
 }
 
 
