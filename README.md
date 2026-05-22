@@ -146,6 +146,14 @@ python3 scripts/build_p6_release_report.py
 python3 scripts/p7_classify_no_source.py
 python3 scripts/p7_build_alias_review.py --apply-safe
 # 报告：report/p7_no_source_classification.md, report/p7_alias_review.md
+
+# P7 第三批 verified 精修
+python3 scripts/p7_seed_verified_batch3.py
+python3 scripts/build_verified_sources.py
+python3 scripts/apply_verified_frontmatter.py --apply
+python3 scripts/standardize_verified_frontmatter.py --apply
+python3 scripts/check_frontmatter_schema.py
+# 报告：report/p7_verified_batch3_report.md
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

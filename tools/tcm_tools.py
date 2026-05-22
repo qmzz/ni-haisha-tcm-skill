@@ -229,6 +229,79 @@ def tcm_compare_herbs(payload: Dict[str, Any]) -> Dict[str, Any]:
     return _compare("herb", "herbs", payload.get("names") or payload.get("query") or [])
 
 
+def tcm_lookup(payload: Dict[str, Any]) -> Dict[str, Any]:
+    query = payload.get("query") or payload.get("name") or ""
+    kind = payload.get("kind")
+    kind_map = {"formula": "formulas", "herb": "herbs", "acupoint": "acupoints"}
+    if not kind:
+        trace = TraceService().trace(query, limit=1)
+        first = (trace.get("matches") or [{}])[0]
+        kind = first.get("kind") or "formula"
+    subdir = kind_map.get(kind, "formulas")
+    markdown = _query_markdown(kind, subdir, {"name": query, "chars": int(payload.get("chars", 900)), "limit": 1})
+    trace = TraceService().trace(query, limit=int(payload.get("limit", 5)))
+    return {
+        "disclaimer": DISCLAIMER,
+        "query": query,
+        "kind": kind,
+        "trace": _compact_trace(trace, limit=int(payload.get("summary_limit", 3))),
+        "markdown": markdown.get("matches", []),
+        "safety_boundary": "学习参考与资料检索，不作为诊断、处方、用药、针灸操作或治疗建议。",
+    }
+
+
+def tcm_explain_trace(payload: Dict[str, Any]) -> Dict[str, Any]:
+    query = payload.get("query") or payload.get("name") or ""
+    trace = TraceService().trace(query, limit=int(payload.get("limit", 5)))
+    status = trace.get("trace_status")
+    explanations = {
+        "verified": "命中 data/verified_sources.jsonl，说明该条目已有复核来源链路。",
+        "candidate": "命中 index 候选来源，但尚未进入 verified；需要人工复核。",
+        "needs_review": "命中 review_queue，说明候选不足或来源相关性需要人工确认。",
+        "source_search": "未命中治理索引，已退回原始语料关键词搜索。",
+        "no_source_found": "当前未找到可用来源，保持待考，不应补写医学结论。",
+        "empty_query": "查询为空。",
+    }
+    return {
+        "query": query,
+        "trace_status": status,
+        "explanation": explanations.get(status, "未知状态，需要人工检查。"),
+        "boundary": "trace 状态只代表来源治理状态，不代表医学真实性或临床适用性。",
+        "trace": _compact_trace(trace, limit=int(payload.get("summary_limit", 3))),
+    }
+
+
+def tcm_review_dashboard(payload: Dict[str, Any]) -> Dict[str, Any]:
+    verified = _load_jsonl(ROOT / "data" / "verified_sources.jsonl")
+    queue = _load_jsonl(ROOT / "data" / "review_queue.jsonl")
+    decisions = {(r.get("kind"), r.get("item_id")) for r in _load_jsonl(ROOT / "data" / "review_decisions.jsonl")}
+    unresolved = [r for r in queue if (r.get("kind"), r.get("item_id")) not in decisions]
+    audit_path = ROOT / "report" / "frontmatter_audit.md"
+    audit = audit_path.read_text(encoding="utf-8").splitlines()[:5] if audit_path.exists() else []
+    return {
+        "verified": {"count": len(verified), "by_kind": _count_by(verified, "kind")},
+        "review_queue": {"count": len(queue), "unresolved": len(unresolved), "by_status": _count_by(queue, "review_status")},
+        "frontmatter_audit_head": audit,
+        "reports": {
+            "p7_no_source_classification": str((ROOT / "report" / "p7_no_source_classification.md").relative_to(ROOT)),
+            "p7_alias_review": str((ROOT / "report" / "p7_alias_review.md").relative_to(ROOT)),
+        },
+        "boundary": "治理统计用于复核排程，不作为医学建议。",
+    }
+
+
+def tcm_batch_trace(payload: Dict[str, Any]) -> Dict[str, Any]:
+    queries = payload.get("queries") or payload.get("names") or payload.get("query") or []
+    if isinstance(queries, str):
+        queries = [x.strip() for x in queries.replace("，", ",").split(",") if x.strip()]
+    limit = int(payload.get("limit", 3))
+    return {
+        "count": len(queries),
+        "items": [_compact_trace(TraceService().trace(q, limit=limit), limit=limit) for q in queries],
+        "boundary": "批量 trace 仅展示来源治理状态。",
+    }
+
+
 TOOLS = {
     "tcm_safety_check": tcm_safety_check,
     "tcm_source_search": tcm_source_search,
@@ -241,6 +314,10 @@ TOOLS = {
     "tcm_trace_summary": tcm_trace_summary,
     "tcm_verified_stats": tcm_verified_stats,
     "tcm_no_source_report": tcm_no_source_report,
+    "tcm_lookup": tcm_lookup,
+    "tcm_explain_trace": tcm_explain_trace,
+    "tcm_review_dashboard": tcm_review_dashboard,
+    "tcm_batch_trace": tcm_batch_trace,
     "tcm_review_next": tcm_review_next,
     "tcm_review_stats": tcm_review_stats,
     "tcm_quality_report": tcm_quality_report,

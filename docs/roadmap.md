@@ -52,8 +52,8 @@
 
 - [x] P7-A：no_source_found 分类治理，生成 `data/no_source_classification.jsonl` 与 `report/p7_no_source_classification.md`。
 - [x] P7-B：alias / synonym 治理增强，生成 `data/alias_review.jsonl` 与 `report/p7_alias_review.md`，safe_alias 可控应用。
-- [ ] P7-C：第三批 verified 精修。
-- [ ] P7-D：Agent 查询编排增强。
+- [x] P7-C：第三批 verified 精修，verified 总数提升至 147（方剂 50、药材 47、穴位 50）。
+- [x] P7-D：Agent 查询编排增强，新增 lookup、explain_trace、review_dashboard、batch_trace。
 - [ ] P7-E：CLI / 文档产品化。
 - [ ] P7-F：版本发布准备。
 

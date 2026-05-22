@@ -18,7 +18,7 @@ class P5ReportTest(unittest.TestCase):
         report = ROOT / "report" / "p5_refinement_report.md"
         self.assertTrue(report.exists())
         text = report.read_text(encoding="utf-8")
-        self.assertRegex(text, r"verified_sources：(?:72|117)")
+        self.assertRegex(text, r"verified_sources：(?:72|117|147)")
         self.assertIn("样板标准化条目：10/10", text)
         self.assertIn("P5-A：核心方剂", text)
         self.assertIn("candidate 不等于 verified", text)

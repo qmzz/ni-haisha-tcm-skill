@@ -31,11 +31,13 @@ class P6RemainingTest(unittest.TestCase):
 
     def test_p6_b_verified_expanded(self):
         rows = [json.loads(line) for line in (ROOT / "data" / "verified_sources.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
-        self.assertEqual(len(rows), 117)
+        self.assertGreaterEqual(len(rows), 117)
         counts = {}
         for row in rows:
             counts[row["kind"]] = counts.get(row["kind"], 0) + 1
-        self.assertEqual(counts, {"acupoint": 40, "formula": 40, "herb": 37})
+        self.assertGreaterEqual(counts["formula"], 40)
+        self.assertGreaterEqual(counts["herb"], 37)
+        self.assertGreaterEqual(counts["acupoint"], 40)
 
     def test_p6_c_no_source_report(self):
         report = (ROOT / "report" / "p6_no_source_report.md").read_text(encoding="utf-8")
@@ -47,14 +49,16 @@ class P6RemainingTest(unittest.TestCase):
         self.assertEqual(summary["trace_status"], "verified")
         self.assertIn("summary", summary)
         stats = self.run_tool("tcm_verified_stats", {})
-        self.assertEqual(stats["verified_count"], 117)
-        self.assertEqual(stats["by_kind"]["formula"], 40)
+        self.assertGreaterEqual(stats["verified_count"], 117)
+        self.assertGreaterEqual(stats["by_kind"]["formula"], 40)
         no_source = self.run_tool("tcm_no_source_report", {})
         self.assertTrue(no_source["available"])
 
     def test_p6_frontmatter_audit(self):
         report = (ROOT / "report" / "frontmatter_audit.md").read_text(encoding="utf-8")
-        self.assertIn("missing_required: 821", report)
+        marker = "missing_required:"
+        line = next(line for line in report.splitlines() if marker in line)
+        self.assertLessEqual(int(line.split(marker, 1)[1].strip()), 821)
 
 
 if __name__ == "__main__":

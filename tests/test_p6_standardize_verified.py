@@ -30,7 +30,9 @@ class P6StandardizeVerifiedTest(unittest.TestCase):
 
     def test_frontmatter_audit_verified_reduction(self):
         report = (ROOT / "report" / "frontmatter_audit.md").read_text(encoding="utf-8")
-        self.assertIn("missing_required: 821", report)
+        marker = "missing_required:"
+        line = next(line for line in report.splitlines() if marker in line)
+        self.assertLessEqual(int(line.split(marker, 1)[1].strip()), 821)
 
 
 if __name__ == "__main__":

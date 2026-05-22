@@ -24,6 +24,10 @@ python3 tools/tcm_tools.py tcm_compare_herbs '{"names":["麻黄","桂枝"]}'
 python3 tools/tcm_tools.py tcm_trace_summary '{"query":"大柴胡汤"}'
 python3 tools/tcm_tools.py tcm_verified_stats '{}'
 python3 tools/tcm_tools.py tcm_no_source_report '{}'
+python3 tools/tcm_tools.py tcm_lookup '{"query":"白头翁汤"}'
+python3 tools/tcm_tools.py tcm_explain_trace '{"query":"白头翁汤"}'
+python3 tools/tcm_tools.py tcm_review_dashboard '{}'
+python3 tools/tcm_tools.py tcm_batch_trace '{"queries":["桂枝汤","白头翁汤"]}'
 ```
 
 ## P6 增强说明
@@ -31,6 +35,10 @@ python3 tools/tcm_tools.py tcm_no_source_report '{}'
 - `tcm_trace_summary`：适合 Agent 回复前快速取得压缩来源摘要。
 - `tcm_verified_stats`：查看 verified 覆盖总量与类别分布。
 - `tcm_no_source_report`：查看 no_source_found 专项治理报告。
+- `tcm_lookup`：统一查询入口，返回 markdown 预览、trace 摘要与安全边界。
+- `tcm_explain_trace`：解释 verified / candidate / needs_review / no_source_found 等治理状态。
+- `tcm_review_dashboard`：汇总 verified、review_queue、frontmatter audit 与报告入口。
+- `tcm_batch_trace`：批量查询多个条目的来源治理状态。
 
 > verified 仅表示来源已纳入复核链路，不代表医学真实性或临床适用性结论。
 
