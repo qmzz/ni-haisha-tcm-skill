@@ -1,7 +1,7 @@
 # Frontmatter Audit
 
 - files: 939
-- missing_required: 939
+- missing_required: 929
 - warnings: 0
 
 | file | kind | missing | warnings |
@@ -13,7 +13,6 @@
 | knowledge/formulas/baizhu_fuzi.md | formula | kind, trace_status |  |
 | knowledge/formulas/banxia_houpo.md | formula | kind, trace_status |  |
 | knowledge/formulas/banxia_san.md | formula | kind, trace_status |  |
-| knowledge/formulas/banxia_xiexin.md | formula | kind |  |
 | knowledge/formulas/chaihu_guizhi.md | formula | kind, trace_status |  |
 | knowledge/formulas/chaihu_longgu.md | formula | kind, trace_status |  |
 | knowledge/formulas/dachaihu_tang.md | formula | kind, trace_status |  |
@@ -50,7 +49,6 @@
 | knowledge/formulas/guizhi_jiagetang.md | formula | kind |  |
 | knowledge/formulas/guizhi_qu_shaoyao.md | formula | kind, trace_status |  |
 | knowledge/formulas/guizhi_shaoyao.md | formula | kind, trace_status |  |
-| knowledge/formulas/guizhi_tang.md | formula | kind |  |
 | knowledge/formulas/honglanhua_jiu.md | formula | kind, trace_status |  |
 | knowledge/formulas/houpo_mahuang.md | formula | kind, trace_status |  |
 | knowledge/formulas/houpo_shengjiang.md | formula | kind, trace_status |  |
@@ -69,7 +67,6 @@
 | knowledge/formulas/mahuang_fuzi_xixin.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_lianqiao.md | formula | kind, trace_status |  |
 | knowledge/formulas/mahuang_shengma.md | formula | kind, trace_status |  |
-| knowledge/formulas/mahuang_tang.md | formula | kind |  |
 | knowledge/formulas/maimendong_tang.md | formula | kind, trace_status |  |
 | knowledge/formulas/maxing_shigan.md | formula | kind |  |
 | knowledge/formulas/muli_zexie.md | formula | kind, trace_status |  |
@@ -94,9 +91,7 @@
 | knowledge/formulas/tongmai_sini.md | formula | kind, trace_status |  |
 | knowledge/formulas/wangbuliuxing.md | formula | kind, trace_status |  |
 | knowledge/formulas/wenjing_tang.md | formula | kind, trace_status |  |
-| knowledge/formulas/wuling_san.md | formula | kind |  |
 | knowledge/formulas/wumei_wan.md | formula | kind, trace_status |  |
-| knowledge/formulas/xiaochaihu_tang.md | formula | kind |  |
 | knowledge/formulas/xiaochengqi_tang.md | formula | kind |  |
 | knowledge/formulas/xiaoer_gan.md | formula | kind, trace_status |  |
 | knowledge/formulas/xiaojianzhong_tang.md | formula | kind, trace_status |  |
@@ -145,7 +140,6 @@
 | knowledge/herbs/baiziren.md | herb | kind, trace_status |  |
 | knowledge/herbs/bajitian.md | herb | kind, trace_status |  |
 | knowledge/herbs/banlangen.md | herb | kind, trace_status |  |
-| knowledge/herbs/banxia.md | herb | kind |  |
 | knowledge/herbs/banzhilian.md | herb | kind, trace_status |  |
 | knowledge/herbs/beimu.md | herb | kind, trace_status |  |
 | knowledge/herbs/beishashen.md | herb | kind, trace_status |  |
@@ -221,8 +215,6 @@
 | knowledge/herbs/fuling.md | herb | kind |  |
 | knowledge/herbs/fupenzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/fuxiaomai.md | herb | kind, trace_status |  |
-| knowledge/herbs/fuzi.md | herb | kind |  |
-| knowledge/herbs/gancao.md | herb | kind |  |
 | knowledge/herbs/ganjiang.md | herb | kind |  |
 | knowledge/herbs/ganlan.md | herb | kind, trace_status |  |
 | knowledge/herbs/gansui.md | herb | kind, trace_status |  |
@@ -240,7 +232,6 @@
 | knowledge/herbs/gualue.md | herb | kind, trace_status |  |
 | knowledge/herbs/guanzhong.md | herb | kind, trace_status |  |
 | knowledge/herbs/guiban.md | herb | kind, trace_status |  |
-| knowledge/herbs/guizhi.md | herb | kind |  |
 | knowledge/herbs/gusuibu.md | herb | kind, trace_status |  |
 | knowledge/herbs/guya.md | herb | kind, trace_status |  |
 | knowledge/herbs/haifengteng.md | herb | kind, trace_status |  |
@@ -330,7 +321,6 @@
 | knowledge/herbs/mabo.md | herb | kind, trace_status |  |
 | knowledge/herbs/machixian.md | herb | kind, trace_status |  |
 | knowledge/herbs/madouling.md | herb | kind, trace_status |  |
-| knowledge/herbs/mahuang.md | herb | kind |  |
 | knowledge/herbs/mahuanggen.md | herb | kind, trace_status |  |
 | knowledge/herbs/maidong.md | herb | kind, trace_status |  |
 | knowledge/herbs/maiya.md | herb | kind, trace_status |  |

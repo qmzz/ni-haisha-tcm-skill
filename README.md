@@ -120,6 +120,10 @@ python3 scripts/apply_verified_frontmatter.py --apply
 python3 scripts/p5_seed_core_acupoint_decisions.py
 python3 scripts/build_verified_sources.py
 python3 scripts/apply_verified_frontmatter.py --apply
+
+# P5 样板条目 frontmatter / 安全边界标准化
+python3 scripts/p5_standardize_sample_frontmatter.py
+python3 scripts/check_frontmatter_schema.py
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

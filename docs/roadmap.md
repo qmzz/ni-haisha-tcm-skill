@@ -53,7 +53,7 @@
 - [x] P5-A：核心方剂 verified 扩展首批 20 个。
 - [x] P5-B：核心药材 verified 扩展首批 17 个。
 - [x] P5-C：核心穴位 verified 扩展首批 20 个。
-- [ ] P5-D：精修条目 frontmatter / 正文结构标准化。
+- [x] P5-D：精修条目 frontmatter / 正文结构标准化首批 10 个样板。
 - [ ] P5-E：质量、review、frontmatter 报告更新与发布说明。
 
 ## P4：知识治理成熟化
