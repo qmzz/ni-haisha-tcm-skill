@@ -343,6 +343,50 @@ def review_next_show(as_json: bool = False):
         print(f"- {item.get('kind')} {item.get('item_id')} {item.get('name')} [{item.get('review_status')}] {item.get('reason')}")
 
 
+def review_import(as_json: bool = False):
+    """导入人工复核模板并更新 review_decisions.jsonl"""
+    import subprocess
+    input_path = _cli_option("--file") or (sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith("--") else "data/review_decisions.template.jsonl")
+    result = subprocess.run([sys.executable, str(SKILL_DIR / "scripts" / "review_import.py"), input_path], cwd=SKILL_DIR, check=True, capture_output=True, text=True)
+    if as_json:
+        print(json.dumps({"ok": True, "output": result.stdout}, ensure_ascii=False, indent=2))
+    else:
+        print(result.stdout.strip())
+
+
+def review_apply(as_json: bool = False):
+    """根据 review_decisions 重新生成 verified_sources 与 review progress"""
+    import subprocess
+    outputs = []
+    for script in ["build_verified_sources.py", "build_review_progress.py"]:
+        result = subprocess.run([sys.executable, str(SKILL_DIR / "scripts" / script)], cwd=SKILL_DIR, check=True, capture_output=True, text=True)
+        outputs.append(result.stdout)
+    if as_json:
+        print(json.dumps({"ok": True, "outputs": outputs}, ensure_ascii=False, indent=2))
+    else:
+        print("".join(outputs).strip())
+
+
+def review_stats(as_json: bool = False):
+    """查看 review 决策统计"""
+    path = SKILL_DIR / "data" / "review_decisions.jsonl"
+    rows = []
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            rows = [json.loads(line) for line in f if line.strip()]
+    counts = {}
+    for row in rows:
+        key = f"{row.get('kind')}:{row.get('decision')}"
+        counts[key] = counts.get(key, 0) + 1
+    result = {"count": len(rows), "counts": counts}
+    if as_json:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    else:
+        print(f"review_decisions: {len(rows)}")
+        for key in sorted(counts):
+            print(f"- {key}: {counts[key]}")
+
+
 def review_export(as_json: bool = False):
     """导出人工复核模板"""
     path = SKILL_DIR / "data" / "review_queue.jsonl"
@@ -594,6 +638,9 @@ def main():
         "review-queue": lambda: review_queue_show(as_json="--json" in sys.argv),
         "review-next": lambda: review_next_show(as_json="--json" in sys.argv),
         "review-export": lambda: review_export(as_json="--json" in sys.argv),
+        "review-import": lambda: review_import(as_json="--json" in sys.argv),
+        "review-apply": lambda: review_apply(as_json="--json" in sys.argv),
+        "review-stats": lambda: review_stats(as_json="--json" in sys.argv),
         "stats": stats,
         "help": help,
     }

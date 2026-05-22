@@ -52,6 +52,8 @@ def classify(record: Dict, preferred_sources: List[str]) -> str:
     source_file = first.get("source_file", "")
     quote = first.get("quote", "")
     name = record.get("name", "")
+    if first.get("quality_score", 0) < 60:
+        return "needs_review"
     if name and name not in quote:
         return "needs_review"
     if preferred_sources and not any(src in source_file for src in preferred_sources):
@@ -74,7 +76,7 @@ def main():
                     "name": record.get("name"),
                     "file": record.get("file"),
                     "review_status": status,
-                    "reason": "未检索到来源候选" if status == "no_source_found" else "候选来源需人工复核",
+                    "reason": "未检索到来源候选" if status == "no_source_found" else (hits[0].get("needs_review_reason") if hits else "候选来源需人工复核"),
                     "top_source": hits[0] if hits else None,
                 })
     with out_path.open("w", encoding="utf-8") as out:

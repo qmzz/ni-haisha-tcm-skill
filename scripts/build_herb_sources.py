@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from internal.source_corpus import SourceCorpus
 from internal.alias_registry import keywords_for
+from internal.source_quality import enrich_hits
 
 ROOT = Path(__file__).resolve().parents[1]
 HERB_DIR = ROOT / "knowledge" / "herbs"
@@ -81,6 +82,7 @@ def build(limit_per_item: int = 5) -> List[Dict]:
                 deduped.append(hit)
         hits = deduped
         hits.sort(key=lambda h: score_hit(h.get("matched_keyword") or item["name"], h, item.get("source")), reverse=True)
+        hits = enrich_hits("herb", item["name"], hits, item.get("source"))
         item["searched_keywords"] = keywords_for("herb", item["name"])
         item["source_hits"] = hits[:limit_per_item]
         item["source_hit_count"] = len(hits)

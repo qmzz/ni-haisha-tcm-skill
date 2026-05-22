@@ -4,22 +4,22 @@
 
 ## 总览
 
-- 复核队列总数：**223**
+- 复核队列总数：**218**
 
 ### 按类型统计
 
 | kind | count |
 |------|------:|
 | acupoint | 73 |
-| formula | 4 |
-| herb | 146 |
+| formula | 5 |
+| herb | 140 |
 
 ### 按状态统计
 
 | status | count |
 |--------|------:|
-| needs_review | 38 |
-| no_source_found | 185 |
+| needs_review | 34 |
+| no_source_found | 184 |
 
 ### 类型 × 状态
 
@@ -27,9 +27,9 @@
 |------|--------|------:|
 | acupoint | needs_review | 9 |
 | acupoint | no_source_found | 64 |
-| formula | needs_review | 4 |
-| herb | needs_review | 25 |
-| herb | no_source_found | 121 |
+| formula | needs_review | 5 |
+| herb | needs_review | 20 |
+| herb | no_source_found | 120 |
 
 ## 优先处理建议
 
@@ -43,13 +43,13 @@
 |------|----|------|--------|--------|
 | acupoint | bafeng | 八风 | needs_review | 候选来源需人工复核 |
 | acupoint | baxie | 八邪 | needs_review | 候选来源需人工复核 |
-| acupoint | fubai | 浮白 | needs_review | 候选来源需人工复核 |
+| acupoint | fubai | 浮白 | needs_review | quality_score_below_verified_threshold |
 | acupoint | jimai | 急脉 | needs_review | 候选来源需人工复核 |
-| acupoint | naoshu | 臑俞 | needs_review | 候选来源需人工复核 |
-| acupoint | tianfu2 | 天府二 | needs_review | 候选来源需人工复核 |
+| acupoint | naoshu | 臑俞 | needs_review | quality_score_below_verified_threshold |
+| acupoint | tianfu2 | 天府二 | needs_review | quality_score_below_verified_threshold |
 | acupoint | yixi | 譩譆 | needs_review | 候选来源需人工复核 |
-| acupoint | yuanye | 渊腋 | needs_review | 候选来源需人工复核 |
-| acupoint | zhongshu | 中枢 | needs_review | 候选来源需人工复核 |
+| acupoint | yuanye | 渊腋 | needs_review | quality_score_below_verified_threshold |
+| acupoint | zhongshu | 中枢 | needs_review | quality_score_below_verified_threshold |
 
 ## acupoint / no_source_found
 
@@ -93,37 +93,33 @@
 | formula | baizhu_fuzi | 白术附子汤 | needs_review | 候选来源需人工复核 |
 | formula | guizhi_houpuxingzi | 桂枝加厚朴杏子汤 | needs_review | 候选来源需人工复核 |
 | formula | mahuang_lianqiao | 麻黄连轺赤小豆汤 | needs_review | 候选来源需人工复核 |
+| formula | muli_zexie | 牡蛎泽泻散 | needs_review | 候选来源需人工复核 |
 | formula | zhishi_zhizi | 枳实栀子豉汤 | needs_review | 候选来源需人工复核 |
 
 ## herb / needs_review
 
 | kind | id | name | status | reason |
 |------|----|------|--------|--------|
-| herb | baidoukou | 白豆蔻 | needs_review | 候选来源需人工复核 |
-| herb | baiguo | 白果 | needs_review | 候选来源需人工复核 |
-| herb | baihe | 百合 | needs_review | 候选来源需人工复核 |
-| herb | baihuasheshecao | 白花蛇舌草 | needs_review | 候选来源需人工复核 |
-| herb | baiji | 白及 | needs_review | 候选来源需人工复核 |
-| herb | banlangen | 板蓝根 | needs_review | 候选来源需人工复核 |
-| herb | biandou | 白扁豆 | needs_review | 候选来源需人工复核 |
-| herb | chenxiang | 沉香 | needs_review | 候选来源需人工复核 |
-| herb | dengxincao | 灯心草 | needs_review | 候选来源需人工复核 |
-| herb | ezhu | 莪术 | needs_review | 候选来源需人工复核 |
-| herb | fanxieye | 番泻叶 | needs_review | 候选来源需人工复核 |
-| herb | ganlan | 橄榄 | needs_review | 候选来源需人工复核 |
-| herb | haijinsha | 海金沙 | needs_review | 候选来源需人工复核 |
-| herb | heshouwu | 何首乌 | needs_review | 候选来源需人工复核 |
-| herb | jianghuang | 姜黄 | needs_review | 候选来源需人工复核 |
-| herb | jinyinhua | 金银花 | needs_review | 候选来源需人工复核 |
-| herb | lugen | 芦根 | needs_review | 候选来源需人工复核 |
-| herb | qumai | 瞿麦 | needs_review | 候选来源需人工复核 |
-| herb | walengzi | 瓦楞子 | needs_review | 候选来源需人工复核 |
-| herb | xiyangshen | 西洋参 | needs_review | 候选来源需人工复核 |
-| herb | xuejie | 血竭 | needs_review | 候选来源需人工复核 |
-| herb | xuhuang | 血竭 | needs_review | 候选来源需人工复核 |
-| herb | yefujia | 夜交藤 | needs_review | 候选来源需人工复核 |
-| herb | zaofan | 皂矾 | needs_review | 候选来源需人工复核 |
-| herb | zhuye | 淡竹叶 | needs_review | 候选来源需人工复核 |
+| herb | baidoukou | 白豆蔻 | needs_review | alias_match_only；alias_requires_review |
+| herb | baiguo | 白果 | needs_review | quality_score_below_verified_threshold |
+| herb | baihuasheshecao | 白花蛇舌草 | needs_review | quality_score_below_verified_threshold |
+| herb | banlangen | 板蓝根 | needs_review | quality_score_below_verified_threshold |
+| herb | biandou | 白扁豆 | needs_review | alias_match_only；alias_requires_review |
+| herb | bingpian | 冰片 | needs_review | alias_match_only；alias_requires_review |
+| herb | dengxincao | 灯心草 | needs_review | quality_score_below_verified_threshold |
+| herb | ezhu | 莪术 | needs_review | quality_score_below_verified_threshold |
+| herb | fanxieye | 番泻叶 | needs_review | alias_match_only；alias_requires_review |
+| herb | ganlan | 橄榄 | needs_review | quality_score_below_verified_threshold |
+| herb | haijinsha | 海金沙 | needs_review | quality_score_below_verified_threshold |
+| herb | jianghuang | 姜黄 | needs_review | quality_score_below_verified_threshold |
+| herb | lugen | 芦根 | needs_review | quality_score_below_verified_threshold |
+| herb | walengzi | 瓦楞子 | needs_review | quality_score_below_verified_threshold |
+| herb | xiyangshen | 西洋参 | needs_review | quality_score_below_verified_threshold |
+| herb | xuejie | 血竭 | needs_review | quality_score_below_verified_threshold |
+| herb | xuhuang | 血竭 | needs_review | quality_score_below_verified_threshold |
+| herb | yefujia | 夜交藤 | needs_review | quality_score_below_verified_threshold |
+| herb | zaofan | 皂矾 | needs_review | quality_score_below_verified_threshold |
+| herb | zhuye | 淡竹叶 | needs_review | quality_score_below_verified_threshold |
 
 ## herb / no_source_found
 
@@ -137,7 +133,6 @@
 | herb | biba | 荜澄茄 | no_source_found | 未检索到来源候选 |
 | herb | bibo | 荜茇 | no_source_found | 未检索到来源候选 |
 | herb | bichengqie | 荜澄茄 | no_source_found | 未检索到来源候选 |
-| herb | bingpian | 冰片 | no_source_found | 未检索到来源候选 |
 | herb | cangerzi | 苍耳子 | no_source_found | 未检索到来源候选 |
 | herb | cansha | 蚕砂 | no_source_found | 未检索到来源候选 |
 | herb | caodoukou | 草豆蔻 | no_source_found | 未检索到来源候选 |
@@ -159,3 +154,4 @@
 | herb | haifengteng | 海风藤 | no_source_found | 未检索到来源候选 |
 | herb | haifushi | 海浮石 | no_source_found | 未检索到来源候选 |
 | herb | haigeqiao | 海蛤壳 | no_source_found | 未检索到来源候选 |
+| herb | haima | 海马 | no_source_found | 未检索到来源候选 |

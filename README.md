@@ -96,6 +96,12 @@ python3 scripts/build_sqlite_fts.py
 python3 cli.py fts-search 桂枝汤 --limit 5
 python3 cli.py review-next --kind herb --status needs_review --limit 10
 python3 cli.py review-export --kind herb --status no_source_found --limit 50
+# P4 Review 决策闭环、质量评分与二次 alias 治理
+python3 cli.py review-import data/review_decisions.template.jsonl
+python3 cli.py review-apply
+python3 cli.py review-stats
+python3 scripts/build_alias_candidates.py
+python3 scripts/apply_alias_candidates.py
 python3 scripts/build_quality_report.py
 ```
 

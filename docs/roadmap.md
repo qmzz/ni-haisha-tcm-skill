@@ -48,6 +48,15 @@
 - [x] OpenClaw 工具化：`tcm_safety_check`、`tcm_source_search`、`tcm_trace`、`tcm_formula_query`、`tcm_herb_query`、`tcm_acupoint_query`、`tcm_diagnose_assist`。
 - [x] verified frontmatter 试点回写：15 个 verified 条目。
 
+## P4：知识治理成熟化
+
+- [x] P4-A：Review 决策闭环增强（review-import / review-apply / review-stats / review_progress）。
+- [x] P4-C：检索质量评分升级（quality_score / match_reason / risk_flags / needs_review_reason）。
+- [x] P4-B：no_source_found 二次治理（alias_candidates / alias_candidates.md / apply_alias_candidates）。
+- [ ] P4-D：Agent 工具体验升级。
+- [ ] P4-E：frontmatter 标准化。
+- [ ] P4-F：发布与集成文档。
+
 ## P3：检索增强、复核效率提升与知识治理闭环
 
 - [x] P3-A：review_queue 支持 kind/status/limit 过滤。

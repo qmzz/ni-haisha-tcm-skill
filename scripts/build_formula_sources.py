@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from internal.source_corpus import SourceCorpus
 from internal.alias_registry import keywords_for
+from internal.source_quality import enrich_hits
 
 FORMULA_DIR = Path(__file__).resolve().parents[1] / "knowledge" / "formulas"
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
@@ -87,6 +88,7 @@ def build(limit_per_formula: int = 5) -> List[Dict]:
                 deduped.append(hit)
         hits = deduped
         hits.sort(key=lambda h: score_hit(h.get("matched_keyword") or item["name"], h, item.get("source")), reverse=True)
+        hits = enrich_hits("formula", item["name"], hits, item.get("source"))
         item["searched_keywords"] = keywords_for("formula", item["name"])
         item["source_hits"] = hits[:limit_per_formula]
         item["source_hit_count"] = len(hits)

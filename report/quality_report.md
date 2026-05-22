@@ -5,7 +5,7 @@
 | kind | total | with_candidates | no_source | coverage |
 |------|------:|----------------:|----------:|---------:|
 | formula | 113 | 113 | 0 | 100.0% |
-| herb | 415 | 294 | 121 | 70.8% |
+| herb | 415 | 295 | 120 | 71.1% |
 | acupoint | 411 | 347 | 64 | 84.4% |
 
 ## Review Queue
@@ -14,17 +14,17 @@
 |------|--------|------:|
 | acupoint | needs_review | 9 |
 | acupoint | no_source_found | 64 |
-| formula | needs_review | 4 |
-| herb | needs_review | 25 |
-| herb | no_source_found | 121 |
+| formula | needs_review | 5 |
+| herb | needs_review | 20 |
+| herb | no_source_found | 120 |
 
 ## Verified / Alias
 
 - verified_sources：15
 - alias kind 数：3
-- acupoint alias 条目：23
+- acupoint alias 条目：24
 - formula alias 条目：4
-- herb alias 条目：43
+- herb alias 条目：47
 
 ## 治理原则
 

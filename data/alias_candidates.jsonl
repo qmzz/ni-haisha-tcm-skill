@@ -1,0 +1,4 @@
+{"kind": "herb", "item_id": "haitongpi", "name": "海桐皮", "alias": "刺桐皮", "alias_source": "manual_candidate", "confidence": "medium", "status": "candidate_only"}
+{"kind": "herb", "item_id": "zhangnao", "name": "樟脑", "alias": "韶脑", "alias_source": "manual_candidate", "confidence": "medium", "status": "candidate_only"}
+{"kind": "herb", "item_id": "zihuadiding", "name": "紫花地丁", "alias": "地丁", "alias_source": "manual_candidate", "confidence": "medium", "status": "candidate_only"}
+{"kind": "acupoint", "item_id": "sishencong", "name": "四神聪", "alias": "四神聪穴", "alias_source": "manual_candidate", "confidence": "medium", "status": "candidate_only"}
