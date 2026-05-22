@@ -51,10 +51,10 @@
 ## P6：规模化精修与可用性增强
 
 - [x] P6-A：标准化扩展到全部 verified 条目（72 个），frontmatter missing_required 降至 867。
-- [ ] P6-B：第二批 verified 扩展。
-- [ ] P6-C：no_source_found 专项治理。
-- [ ] P6-D：Agent 查询体验优化。
-- [ ] P6-E：README / 文档产品化。
+- [x] P6-B：第二批 verified 扩展，verified 总数提升至 117（方剂 40、药材 37、穴位 40）。
+- [x] P6-C：no_source_found 专项治理，生成 `report/p6_no_source_report.md`，未决 no_source_found 保持待复核。
+- [x] P6-D：Agent 查询体验优化，新增 trace 摘要、verified 统计与 no_source 报告工具。
+- [x] P6-E：README / 文档产品化，生成 `report/p6_release_report.md`。
 
 ## P5：高价值知识条目精修与 verified 覆盖提升
 

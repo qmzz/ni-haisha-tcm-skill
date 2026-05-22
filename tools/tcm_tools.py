@@ -127,6 +127,56 @@ def _load_jsonl(path: Path):
         return [json.loads(line) for line in f if line.strip()]
 
 
+
+def _count_by(rows, key):
+    counts = {}
+    for row in rows:
+        value = row.get(key)
+        counts[value] = counts.get(value, 0) + 1
+    return counts
+
+
+def _compact_trace(trace: Dict[str, Any], limit: int = 3) -> Dict[str, Any]:
+    matches = []
+    for item in (trace.get("matches") or [])[:limit]:
+        refs = item.get("source_refs") or []
+        first_ref = refs[0] if refs else item
+        matches.append({
+            "kind": item.get("kind"),
+            "item_id": item.get("item_id"),
+            "name": item.get("name"),
+            "file": item.get("file"),
+            "source_file": first_ref.get("source_file"),
+            "page_num": first_ref.get("page_num"),
+            "quote": (first_ref.get("quote") or "")[:260],
+        })
+    return {
+        "query": trace.get("query"),
+        "trace_status": trace.get("trace_status"),
+        "summary": f"{trace.get('trace_status')}，命中 {len(trace.get('matches') or [])} 条；优先展示 verified 来源。",
+        "matches": matches,
+    }
+
+
+def tcm_trace_summary(payload: Dict[str, Any]) -> Dict[str, Any]:
+    query = payload.get("query") or payload.get("name") or ""
+    trace = TraceService().trace(query, limit=int(payload.get("limit", 5)))
+    return {"disclaimer": DISCLAIMER, **_compact_trace(trace, limit=int(payload.get("summary_limit", 3)))}
+
+
+def tcm_verified_stats(payload: Dict[str, Any]) -> Dict[str, Any]:
+    rows = _load_jsonl(ROOT / "data" / "verified_sources.jsonl")
+    return {
+        "verified_count": len(rows),
+        "by_kind": _count_by(rows, "kind"),
+        "boundary": "verified 表示来源已纳入复核链路，不代表医学真实性或临床适用性结论。",
+    }
+
+
+def tcm_no_source_report(payload: Dict[str, Any]) -> Dict[str, Any]:
+    path = ROOT / "report" / "p6_no_source_report.md"
+    return {"available": path.exists(), "report": path.read_text(encoding="utf-8") if path.exists() else ""}
+
 def tcm_search_sources_fts(payload: Dict[str, Any]) -> Dict[str, Any]:
     query = payload.get("query") or payload.get("keyword") or ""
     return {
@@ -188,6 +238,9 @@ TOOLS = {
     "tcm_acupoint_query": tcm_acupoint_query,
     "tcm_diagnose_assist": tcm_diagnose_assist,
     "tcm_search_sources_fts": tcm_search_sources_fts,
+    "tcm_trace_summary": tcm_trace_summary,
+    "tcm_verified_stats": tcm_verified_stats,
+    "tcm_no_source_report": tcm_no_source_report,
     "tcm_review_next": tcm_review_next,
     "tcm_review_stats": tcm_review_stats,
     "tcm_quality_report": tcm_quality_report,

@@ -18,7 +18,7 @@ class P6StandardizeVerifiedTest(unittest.TestCase):
 
     def test_all_verified_entries_have_standard_fields(self):
         rows = [json.loads(line) for line in (ROOT / "data" / "verified_sources.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
-        self.assertEqual(len(rows), 72)
+        self.assertGreaterEqual(len(rows), 72)
         for row in rows:
             text = (ROOT / row["file"]).read_text(encoding="utf-8")
             self.assertIn("review_status: verified", text)
@@ -30,7 +30,7 @@ class P6StandardizeVerifiedTest(unittest.TestCase):
 
     def test_frontmatter_audit_verified_reduction(self):
         report = (ROOT / "report" / "frontmatter_audit.md").read_text(encoding="utf-8")
-        self.assertIn("missing_required: 867", report)
+        self.assertIn("missing_required: 821", report)
 
 
 if __name__ == "__main__":

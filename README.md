@@ -132,6 +132,15 @@ python3 scripts/build_p5_report.py
 python3 scripts/standardize_verified_frontmatter.py --apply
 python3 scripts/check_frontmatter_schema.py
 # 报告：report/p6_standardization_report.md
+
+# P6 第二批 verified 扩展 + 治理报告
+python3 scripts/p6_seed_second_batch_decisions.py
+python3 scripts/build_verified_sources.py
+python3 scripts/apply_verified_frontmatter.py --apply
+python3 scripts/standardize_verified_frontmatter.py --apply
+python3 scripts/build_p6_no_source_report.py
+python3 scripts/build_p6_release_report.py
+# 报告：report/p6_no_source_report.md, report/p6_release_report.md
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

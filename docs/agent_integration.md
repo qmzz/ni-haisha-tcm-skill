@@ -21,7 +21,18 @@ python3 tools/tcm_tools.py tcm_review_stats '{}'
 python3 tools/tcm_tools.py tcm_quality_report '{}'
 python3 tools/tcm_tools.py tcm_compare_formulas '{"names":["桂枝汤","麻黄汤"]}'
 python3 tools/tcm_tools.py tcm_compare_herbs '{"names":["麻黄","桂枝"]}'
+python3 tools/tcm_tools.py tcm_trace_summary '{"query":"大柴胡汤"}'
+python3 tools/tcm_tools.py tcm_verified_stats '{}'
+python3 tools/tcm_tools.py tcm_no_source_report '{}'
 ```
+
+## P6 增强说明
+
+- `tcm_trace_summary`：适合 Agent 回复前快速取得压缩来源摘要。
+- `tcm_verified_stats`：查看 verified 覆盖总量与类别分布。
+- `tcm_no_source_report`：查看 no_source_found 专项治理报告。
+
+> verified 仅表示来源已纳入复核链路，不代表医学真实性或临床适用性结论。
 
 ## 安全边界
 
