@@ -555,7 +555,7 @@
 | knowledge/acupoints/chengling_gb.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/chengqi.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/chengshan.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/chize.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/chize.md | acupoint | title, kind |  |
 | knowledge/acupoints/chongmen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/chongyang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ciliao.md | acupoint | title, kind, trace_status |  |
@@ -576,7 +576,7 @@
 | knowledge/acupoints/dazhong.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/dazhong_k.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/dazhu.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/dazhui.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/dazhui.md | acupoint | title, kind |  |
 | knowledge/acupoints/dicang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/diji.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/dingchuan.md | acupoint | title, kind, trace_status |  |
@@ -586,7 +586,7 @@
 | knowledge/acupoints/erjian.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ermen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ershenmen.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/feishu.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/feishu.md | acupoint | title, kind |  |
 | knowledge/acupoints/feiyang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/fengchi.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/fengchi_gb.md | acupoint | title, kind, trace_status |  |
@@ -610,7 +610,7 @@
 | knowledge/acupoints/fuxi_bl.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/fuyang2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/fuyang_bl.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/ganshu.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/ganshu.md | acupoint | title, kind |  |
 | knowledge/acupoints/gaohuangshu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/geguan.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/geshu.md | acupoint | title, kind, trace_status |  |
@@ -618,7 +618,7 @@
 | knowledge/acupoints/guanchong.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/guangming.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/guanmen.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/guanyuan.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/guanyuan.md | acupoint | title, kind |  |
 | knowledge/acupoints/hanyan.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/hegu.md | acupoint | title, kind |  |
 | knowledge/acupoints/heliao_sj.md | acupoint | title, kind, trace_status |  |
@@ -680,7 +680,7 @@
 | knowledge/acupoints/liangqiu2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/lidui.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/lidui2.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/lieque.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/lieque.md | acupoint | title, kind |  |
 | knowledge/acupoints/ligou.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/ligou_lv.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/lingdao.md | acupoint | title, kind, trace_status |  |
@@ -690,7 +690,7 @@
 | knowledge/acupoints/luoshen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/luozhen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/meichong.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/mingmen.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/mingmen.md | acupoint | title, kind |  |
 | knowledge/acupoints/mubian.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/naohu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/naohui.md | acupoint | title, kind, trace_status |  |
@@ -698,12 +698,12 @@
 | knowledge/acupoints/naokong_bl.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/naokong_gb.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/naoshu.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/neiguan.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/neiguan.md | acupoint | title, kind |  |
 | knowledge/acupoints/neiting.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/neiting2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/pangguangshu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/pianli.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/pishu.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/pishu.md | acupoint | title, kind |  |
 | knowledge/acupoints/pohu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/pucan.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qianding.md | acupoint | title, kind, trace_status |  |
@@ -711,7 +711,7 @@
 | knowledge/acupoints/qiangu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qiaoyin_gb.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qichong.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/qihai.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/qihai.md | acupoint | title, kind |  |
 | knowledge/acupoints/qimen.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qimen_lv.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/qinglengyuan.md | acupoint | title, kind, trace_status |  |
@@ -757,9 +757,9 @@
 | knowledge/acupoints/shenmai2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shenmai_bl.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shenmen.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/shenque.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/shenque.md | acupoint | title, kind |  |
 | knowledge/acupoints/shenque_ren.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/shenshu.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/shenshu.md | acupoint | title, kind |  |
 | knowledge/acupoints/shentang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shenting.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/shenzhu.md | acupoint | title, kind, trace_status |  |
@@ -782,9 +782,9 @@
 | knowledge/acupoints/sizhukong.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/suliao.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/taibai.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/taichong.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/taichong.md | acupoint | title, kind |  |
 | knowledge/acupoints/taichong_lv.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/taixi.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/taixi.md | acupoint | title, kind |  |
 | knowledge/acupoints/taixi_k.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/taiyang_ex.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/taiyi.md | acupoint | title, kind, trace_status |  |
@@ -800,7 +800,7 @@
 | knowledge/acupoints/tianliao.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/tianquan.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/tianrong.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/tianshu.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/tianshu.md | acupoint | title, kind |  |
 | knowledge/acupoints/tiantu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/tianxi.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/tianxi2.md | acupoint | title, kind, trace_status |  |
@@ -817,7 +817,7 @@
 | knowledge/acupoints/toulinqi_bl.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/touqiaoyin.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/touwei.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/waiguan.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/waiguan.md | acupoint | title, kind |  |
 | knowledge/acupoints/waiqiu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/wangu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/wangu_gb.md | acupoint | title, kind, trace_status |  |
@@ -825,7 +825,7 @@
 | knowledge/acupoints/weidao.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/weishu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/weiyang.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/weizhong.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/weizhong.md | acupoint | title, kind |  |
 | knowledge/acupoints/wenliu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/wuchu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/wuli.md | acupoint | title, kind, trace_status |  |
@@ -848,7 +848,7 @@
 | knowledge/acupoints/xingjian.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/xingjian_lv.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/xinhui.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/xinshu.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/xinshu.md | acupoint | title, kind |  |
 | knowledge/acupoints/xiongxiang.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/xiongxiang2.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/xiwan.md | acupoint | title, kind, trace_status |  |
@@ -893,7 +893,7 @@
 | knowledge/acupoints/yinyu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/yishe.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/yixi.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/yongquan.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/yongquan.md | acupoint | title, kind |  |
 | knowledge/acupoints/yongquan_k.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/yuanye.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/yuji.md | acupoint | title, kind, trace_status |  |
@@ -929,7 +929,7 @@
 | knowledge/acupoints/zhonglushu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zhongshu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zhongting.md | acupoint | title, kind, trace_status |  |
-| knowledge/acupoints/zhongwan.md | acupoint | title, kind, trace_status |  |
+| knowledge/acupoints/zhongwan.md | acupoint | title, kind |  |
 | knowledge/acupoints/zhongwan_ren.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zhongzhu.md | acupoint | title, kind, trace_status |  |
 | knowledge/acupoints/zhourong.md | acupoint | title, kind, trace_status |  |
