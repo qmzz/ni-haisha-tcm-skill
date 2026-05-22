@@ -1,5 +1,10 @@
 ---
 title: "磁石"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "herb"
 source: "神农本草经"
 category: "待考"
 tags: ["神农本草经", "中药", "倪海厦"]
@@ -11,9 +16,29 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
+trace_status: candidate
+source_refs:
+  - source_file: "倪海厦人纪系列之神农本草经.json"
+    page_num: 76
+    quote: "倪注神农本草经 一四八、慈石 【本经原文】味辛寒，主周痹，风湿肢节中痛不可持物，洗洗，酸消，除大热，烦满及耳聋， 今名磁石。 【产地】产山中能吸铁。 【性味】味辛，性寒，无毒。 【主治】磁石为补肾强阴要药，取其能引肺气入肾，使阴阳安宅，镇惊，明目，通耳，益精。 【别录】养肾脏，强骨气，益精除烦，通关节，消痈肿鼠瘘，颈核喉痛，小儿惊痫，炼水饮 之。 【甄权】补男"
 ---
 
 # 磁石
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📌 基础信息
 

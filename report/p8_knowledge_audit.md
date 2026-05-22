@@ -9,7 +9,7 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 - 条目总数：939
 - verified 来源链路：210
 - frontmatter 标记 verified 但未进入 registry：0
-- frontmatter 完整：241
+- frontmatter 完整：369
 - refined 条目：29
 - complete 条目：181
 - 数据明细：`data/knowledge_completeness.jsonl`
@@ -19,7 +19,7 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 | kind | total | verified_registry | candidate | needs_review | no_source_found | unknown | stale_verified_fm | frontmatter_complete | source_refs | safety_boundary | refined | complete |
 |------|-------|-------------------|-----------|--------------|-----------------|---------|-------------------|----------------------|-------------|-----------------|---------|----------|
 | formula | 113 | 113 | 0 | 0 | 0 | 0 | 0 | 113 | 113 | 113 | 29 | 84 |
-| herb | 415 | 47 | 248 | 0 | 120 | 0 | 0 | 78 | 295 | 78 | 0 | 47 |
+| herb | 415 | 47 | 248 | 0 | 120 | 0 | 0 | 206 | 295 | 206 | 0 | 47 |
 | acupoint | 411 | 50 | 297 | 0 | 64 | 0 | 0 | 50 | 347 | 50 | 0 | 50 |
 
 ## quality_tier 分布
@@ -44,7 +44,7 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 - usage: 29
 
 ### herb
-- safety_boundary: 337
+- safety_boundary: 209
 
 ### acupoint
 - safety_boundary: 361

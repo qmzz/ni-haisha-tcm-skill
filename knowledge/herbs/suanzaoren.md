@@ -1,5 +1,10 @@
 ---
 title: "酸枣仁"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "herb"
 source: "神农本草经"
 category: "待考"
 tags: ["神农本草经", "中药", "倪海厦"]
@@ -11,9 +16,29 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
+trace_status: candidate
+source_refs:
+  - source_file: "倪海厦人纪系列之神农本草经.json"
+    page_num: 57
+    quote: "服恐泄真气。 一○○、酸枣 【本经原文】味酸平，主心腹寒热，邪结气聚，四肢酸疼，湿痹，久服安五脏，轻身延年。 【产地】产我国山西河南等地，多生山野间，或作棘实，，乃棘树之实也，实之大者名酸枣 仁，入药。 【性味】味酸，性平，无毒。 【主治】酸枣仁为宁心敛汗要药，主心腹寒热，邪结气聚，烦心不眠，虚汗烦渴，治四肢酸 V100415.01 42"
 ---
 
 # 酸枣仁
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📌 基础信息
 

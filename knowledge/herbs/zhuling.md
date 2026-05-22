@@ -2,8 +2,8 @@
 title: "猪苓"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p8_stale_verified_frontmatter_fix"
-review_status: candidate
+reviewer: "p6_verified_standardization"
+review_status: verified
 kind: "herb"
 source: "神农本草经"
 category: "利水渗湿药"

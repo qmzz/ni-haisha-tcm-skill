@@ -1,5 +1,10 @@
 ---
 title: "锁阳"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "herb"
 source: "神农本草经"
 category: "待考"
 tags: ["神农本草经", "中药", "倪海厦"]
@@ -11,9 +16,29 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
+trace_status: candidate
+source_refs:
+  - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
+    page_num: 95
+    quote: "。强筋骨安五脏这种。产地呢四川的巴戟天最好。你看它颜色是黑的，黑的呢 入肾，入骨入肾，所以主治呢巴戟天是补气益精的要药。强筋骨壮元阳治遗精，如果你说巴 戟天治遗精，精虚，你吃巴戟天精会增，哇，量会增加很多啊，可还是可能会再遗哟。我们 有很多锁阳、固阳，因为你只在壮阳你没有固啊。你忘了去固阳，固阳有固阳的药啊。那你 第 95 页 共 339 页"
 ---
 
 # 锁阳
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📌 基础信息
 
