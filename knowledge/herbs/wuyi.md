@@ -1,5 +1,10 @@
 ---
 title: "芜荑"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: candidate
+kind: "herb"
 source: "神农本草经"
 category: "待考"
 tags: ["神农本草经", "中药", "倪海厦"]
@@ -11,9 +16,29 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
+trace_status: candidate
+source_refs:
+  - source_file: "倪海厦人纪系列之神农本草经.json"
+    page_num: 96
+    quote: "倪注神农本草经 【禁忌】凡脾胃虚弱，血虚发热，心肺无邪热，小便闭由膀胱气虚，均忌。 二〇九、芜荑 【本经原文】味辛，平，无毒。治五内邪气，散皮肤骨节中淫淫行毒，去三虫，化食，逐寸 白，散腹中嗢嗢喘息。生川谷，一名芜菇。 二一○、枳实 【本经原文】味苦，寒，无毒。治大风在皮肤中，如麻豆苦痒，除寒热结，止利，长肌肉， 利五脏，益气轻身。生"
 ---
 
 # 芜荑
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📌 基础信息
 

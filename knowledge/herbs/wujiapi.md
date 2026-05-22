@@ -1,5 +1,10 @@
 ---
 title: "五加皮"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: candidate
+kind: "herb"
 source: "神农本草经"
 category: "待考"
 tags: ["神农本草经", "中药", "倪海厦"]
@@ -11,9 +16,29 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
+trace_status: candidate
+source_refs:
+  - source_file: "倪海厦人纪系列之神农本草经.json"
+    page_num: 59
+    quote: "倪注神农本草经 一○三、五加皮 【本经原文】味辛温，主心腹疝气腹痛，益气疗躄，小儿不能行，疽创阴蚀。 【产地】产我国陕西江浙湖南等地，五叶者良，根皮入药。 【性味】味辛，性温，无毒。 【主治】五加皮为祛风湿壮筋骨要药，主疼痹风弱，五缓虚羸，小儿行迟，疝气腹痛，治瘀 留皮"
 ---
 
 # 五加皮
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📌 基础信息
 

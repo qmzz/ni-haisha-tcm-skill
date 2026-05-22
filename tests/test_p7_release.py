@@ -44,7 +44,7 @@ class P7ReleaseClosureTest(unittest.TestCase):
         subprocess.run([sys.executable, "scripts/build_p7_release_report.py"], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
         report = (ROOT / "report" / "p7_release_report.md").read_text(encoding="utf-8")
         self.assertIn("P7-E：CLI / 文档产品化", report)
-        self.assertRegex(report, r"总数：(?:147|171|209|210)")
+        self.assertRegex(report, r"总数：(?:147|171|209|210|240)")
         self.assertIn("acupoint_name_variant: 63", report)
 
         roadmap = (ROOT / "docs" / "roadmap.md").read_text(encoding="utf-8")
