@@ -1,8 +1,18 @@
 ---
 title: "芍药甘草附子汤"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "formula"
 source: "伤寒论"
 category: "温里剂"
 tags: ["伤寒论", "温里剂"]
+trace_status: candidate
+source_refs:
+  - source_file: "倪海厦人纪系列之伤寒论.json"
+    page_num: 54
+    quote: "倪注《伤寒论》 觀 其 脈 證 第 54 页 2010-05-09定稿 知 犯 何 逆 隨 證 治 之 七三：发汗,病不解,反恶寒者,虚故也。「芍药甘草附子汤」主之。 芍药甘草附子汤方 芍药三两 甘草二两炙 附子二枚,炮去皮,破八片 右三味,以水五升,煮取一升五合,去滓,分温三服。 芍药甘草附子汤大多用在素虚的人,平常身体虚缺血的人会用到,平常用白芍两钱,炙甘 草两钱,炮附子四钱。临床在用来治疗"
 ---
 
 # 芍药甘草附子汤
@@ -11,6 +21,20 @@ tags: ["伤寒论", "温里剂"]
 **分类：** 温里剂  
 **功效：** 扶阳益阴
 
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：方剂
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 组成
 

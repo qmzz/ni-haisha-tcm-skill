@@ -1,8 +1,18 @@
 ---
 title: "鸡屎白散"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "formula"
 source: "金匮要略"
 category: "利水剂"
 tags: ["金匮要略", "利水剂"]
+trace_status: candidate
+source_refs:
+  - source_file: "金匮要略.json"
+    page_num: null
+    quote: "筋阴狐疝蛔虫病脉证并治第十九 论一首 脉证二条 方四首 师曰：病者趺蹶，其人但能前不能却，刺腨入二寸， 此太阳经伤也。 病人常以手指臂胫动，此人身体瞤瞤者，藜芦甘草汤 主之。 方未见。 转筋之为病，其人臂脚直，脉上下行，微弦，转筋入 腹者，鸡屎白散主之。方： 鸡屎白 上一味，为散，取方寸匕，以水六合和，温服。 阴狐疝气者，偏有小大，时时上下，蜘蛛散主之。方： 蜘蛛 桂枝 十四枚，熬焦 半两，去皮 上二味为散，取八分一匕，饮和服，日再服，蜜丸亦 得。 问曰：病腹痛有虫，其脉何以别之？师"
 ---
 
 # 鸡屎白散
@@ -11,6 +21,20 @@ tags: ["金匮要略", "利水剂"]
 **分类：** 利水剂  
 **功效：** 利水消肿
 
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：方剂
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 组成
 

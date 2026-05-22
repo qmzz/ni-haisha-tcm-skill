@@ -1,8 +1,18 @@
 ---
 title: "甘草干姜汤"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "formula"
 source: "伤寒论"
 category: "温里剂"
 tags: ["伤寒论", "温里剂"]
+trace_status: candidate
+source_refs:
+  - source_file: "倪海厦人纪系列之伤寒论.json"
+    page_num: 30
+    quote: "倪注《伤寒论》 觀 其 脈 證 知 犯 何 逆 第 30 页 2010-05-09定稿 隨 證 治 之 够恢复,先 ,生附子下 壮肾阳,实际上 生附子下去的时候,心脏的力量就会跳起来,为什么前条不加生附子,因为肾阳还很足。 甘草干姜汤方 括肺和心脏 剂,大量吐 「甘草干姜汤」,「甘草干姜汤」又名「二神汤」, 血是热,开寒 凉的药,犀角、生地、菊花下去,病人吐得更厉害,胃穿孔、胃溃疡、会胃吐血的,都是胃家素 有寒证的,所以用热药,就是「 【直指方】曰：「甘草干姜汤」治男女"
 ---
 
 # 甘草干姜汤
@@ -11,6 +21,20 @@ tags: ["伤寒论", "温里剂"]
 **分类：** 温里剂  
 **功效：** 温中复阳
 
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：方剂
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 组成
 

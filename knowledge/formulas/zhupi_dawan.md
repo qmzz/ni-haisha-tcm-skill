@@ -1,8 +1,18 @@
 ---
 title: "竹皮大丸"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "formula"
 source: "金匮要略"
 category: "清热剂"
 tags: ["金匮要略", "清热剂"]
+trace_status: candidate
+source_refs:
+  - source_file: "金匮要略.json"
+    page_num: null
+    quote: "生姜 炙 各一两 一枚，炮，去皮，破八片 十五枚，擘 五 两，切 上十味， 咀，以水一斗，煮取二升半，去滓，分温 三服，温覆使汗出。颈项强，用大附子一枚，破之如豆大， 煎药，扬去沫。呕者，加半夏半升，洗。 妇人乳中虚，烦乱呕逆，安中益气，竹皮大丸主之。 方： 生竹茹 石膏 桂枝 甘草 白 二分 二分，研 一分，去皮 七分，炙 薇 一分 上五味，末之，枣肉和丸如弹丸大，以饮服一丸，日 三夜二服。有热者，倍白薇；烦喘者，加柏实一分。 妇人产后下利虚极，白头翁加甘草阿胶汤主之。方： 白头"
 ---
 
 # 竹皮大丸
@@ -11,6 +21,20 @@ tags: ["金匮要略", "清热剂"]
 **分类：** 清热剂  
 **功效：** 清热降逆，安中益气
 
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：方剂
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 组成
 

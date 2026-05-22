@@ -1,8 +1,18 @@
 ---
 title: "大黄甘遂汤"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "formula"
 source: "金匮要略"
 category: "逐水剂"
 tags: ["金匮要略", "逐水剂"]
+trace_status: candidate
+source_refs:
+  - source_file: "05【视频同步文稿】人-金匮要略（可打印）.json"
+    page_num: 412
+    quote: "叶拿掉，把它换成干姜，哦，这 个是崩漏的时候，哦，那这个处方呢，诸位回头看，胶艾汤就可以了，把那个艾 叶换成干姜，干姜就代表里面，因为我们认为里面是寒的，才会造成这样子。 妇人少腹满如敦状，小便微难而不渴，生后者，此为水舆血 俱结在血室也，大黄甘遂汤主之。 上以疗君亲之疾,下以救贫贱之厄,中以保身长全。精进学习为往圣继绝学 第412页共492页"
 ---
 
 # 大黄甘遂汤
@@ -11,6 +21,20 @@ tags: ["金匮要略", "逐水剂"]
 **分类：** 逐水剂  
 **功效：** 破血逐水
 
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：方剂
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 组成
 

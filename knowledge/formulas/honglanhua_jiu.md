@@ -1,8 +1,18 @@
 ---
 title: "红蓝花酒"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "formula"
 source: "金匮要略"
 category: "活血剂"
 tags: ["金匮要略", "活血剂"]
+trace_status: candidate
+source_refs:
+  - source_file: "金匮要略.json"
+    page_num: null
+    quote: "下，不下再服。亦治男子膀胱满急有瘀血者。 妇人经水闭不利，脏坚癖不止，中有干血，下白物， 矾石丸主之。方： 矾石 杏仁 三分，烧 一分，去皮尖，熬 上二味，末之，炼蜜和丸如枣核大，内脏中，剧者再 内之。 治妇人六十二种风，兼主腹中血气刺痛，红蓝花酒。 方： 红蓝花 一大两 上一味，以酒一大升，煎强半，顿服，不止再服。 疑非 仲景方。 妇人腹中诸疾痛，当归芍药散主之。 方见妊娠中。 妇人腹中痛，小建中汤主之。 方见（虚）劳中。 问曰：妇人病，食饮如故，烦热不得卧，而反倚息者， 何也？师"
 ---
 
 # 红蓝花酒
@@ -11,6 +21,20 @@ tags: ["金匮要略", "活血剂"]
 **分类：** 活血剂  
 **功效：** 活血行气，止痛
 
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：方剂
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 组成
 

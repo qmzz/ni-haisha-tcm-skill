@@ -1,8 +1,18 @@
 ---
 title: "三物黄芩汤"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "formula"
 source: "金匮要略"
 category: "清热剂"
 tags: ["金匮要略", "清热剂"]
+trace_status: candidate
+source_refs:
+  - source_file: "金匮要略.json"
+    page_num: null
+    quote: "主之。方： 白头翁 黄连 柏皮 秦皮 甘草 阿 二两 各三两 二两，炙 胶 二两 上六味， 咀，以水七升，煮取二升半，去滓，内胶， 令消尽，分温三服。 附方： 妇人多在草蓐得风，四肢苦烦热，皆自发露所为。头 痛者，与小柴胡汤；头不痛但烦，与三物黄芩汤。方： 小柴 胡汤方见呕吐中。 黄芩 苦参 干地黄 一两 二两 四两 上药 咀，以水八升，煮取二升，去滓，温服一升， 多吐下虫。 见《千金》。 治妇人产后虚羸不足，腹中刺痛不止，吸吸少气，或 苦少腹拘急，挛痛引腰背，不能食饮。产后一月，日得"
 ---
 
 # 三物黄芩汤
@@ -11,6 +21,20 @@ tags: ["金匮要略", "清热剂"]
 **分类：** 清热剂  
 **功效：** 清热除烦
 
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：方剂
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 组成
 

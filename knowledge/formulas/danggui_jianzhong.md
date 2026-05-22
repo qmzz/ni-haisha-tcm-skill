@@ -1,8 +1,18 @@
 ---
 title: "当归建中汤"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "formula"
 source: "金匮要略"
 category: "补益剂"
 tags: ["金匮要略", "补益剂"]
+trace_status: candidate
+source_refs:
+  - source_file: "金匮要略.json"
+    page_num: null
+    quote: "黄芩 苦参 干地黄 一两 二两 四两 上药 咀，以水八升，煮取二升，去滓，温服一升， 多吐下虫。 见《千金》。 治妇人产后虚羸不足，腹中刺痛不止，吸吸少气，或 苦少腹拘急，挛痛引腰背，不能食饮。产后一月，日得服 四五剂为善，令人强壮。内补当归建中汤方： 当归 桂枝 芍药 生姜 甘草 四两 去皮，三两 六两 三两，切 二 大枣 两，炙 十二枚，擘 上六味， 咀，以水一斗，煮取三升，去滓，分温三 服，一日令尽。若大虚，加饴糖六两，汤成，内之于火上 暖，令饴糖消。若无生姜，则以干姜代之。若"
 ---
 
 # 当归建中汤
@@ -11,6 +21,20 @@ tags: ["金匮要略", "补益剂"]
 **分类：** 补益剂  
 **功效：** 温中补血，缓急止痛
 
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：方剂
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 组成
 
