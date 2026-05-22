@@ -80,6 +80,10 @@ python3 scripts/apply_verified_frontmatter.py --apply
 # OpenClaw / Agent JSON 工具入口
 python3 tools/tcm_tools.py tcm_trace '{"query":"桂枝汤"}'
 python3 tools/tcm_tools.py tcm_diagnose_assist '{"symptoms":["发热","恶寒","无汗","脉浮紧"]}'
+
+# P3 review queue 筛选与报告
+python3 cli.py review-queue --kind herb --status no_source_found --limit 20
+python3 scripts/build_review_report.py
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

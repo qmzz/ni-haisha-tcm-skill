@@ -297,29 +297,49 @@ def verified_source_search(query: str, as_json: bool = False):
     print(f"\n{'='*60}")
 
 
+def _cli_option(name: str, default=None):
+    if name not in sys.argv:
+        return default
+    idx = sys.argv.index(name)
+    if idx + 1 >= len(sys.argv):
+        return default
+    return sys.argv[idx + 1]
+
+
 def review_queue_show(as_json: bool = False):
-    """查看 P1/P2 复核队列"""
+    """查看 P1/P2/P3 复核队列，支持 kind/status/limit 过滤"""
     path = SKILL_DIR / "data" / "review_queue.jsonl"
     items = []
     if path.exists():
         with path.open(encoding="utf-8") as f:
             items = [json.loads(line) for line in f if line.strip()]
+
+    kind_filter = _cli_option("--kind")
+    status_filter = _cli_option("--status")
+    limit = int(_cli_option("--limit", 20))
+    if kind_filter:
+        items = [item for item in items if item.get("kind") == kind_filter]
+    if status_filter:
+        items = [item for item in items if item.get("review_status") == status_filter]
+
     if as_json:
-        print(json.dumps({"count": len(items), "items": items}, ensure_ascii=False, indent=2))
+        print(json.dumps({"count": len(items), "items": items[:limit]}, ensure_ascii=False, indent=2))
         return
     print(f"\n{'='*60}")
     print("🧾 来源复核队列")
     print(f"{'='*60}")
     print(f"总数：{len(items)}")
+    if kind_filter or status_filter:
+        print(f"过滤：kind={kind_filter or '*'} status={status_filter or '*'} limit={limit}")
     counts = {}
     for item in items:
         key = f"{item.get('kind')}:{item.get('review_status')}"
         counts[key] = counts.get(key, 0) + 1
     for key in sorted(counts):
         print(f"- {key}: {counts[key]}")
-    print("\n前 20 条：")
-    for item in items[:20]:
-        print(f"- {item.get('kind')} {item.get('item_id')} {item.get('name')} [{item.get('review_status')}]")
+    print(f"\n前 {limit} 条：")
+    for item in items[:limit]:
+        print(f"- {item.get('kind')} {item.get('item_id')} {item.get('name')} [{item.get('review_status')}] {item.get('reason')}")
     print(f"\n{'='*60}")
 
 

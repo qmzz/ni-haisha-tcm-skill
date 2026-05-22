@@ -48,7 +48,14 @@
 - [x] OpenClaw 工具化：`tcm_safety_check`、`tcm_source_search`、`tcm_trace`、`tcm_formula_query`、`tcm_herb_query`、`tcm_acupoint_query`、`tcm_diagnose_assist`。
 - [x] verified frontmatter 试点回写：15 个 verified 条目。
 
-## P3：检索增强
+## P3：检索增强、复核效率提升与知识治理闭环
+
+- [x] P3-A：review_queue 支持 kind/status/limit 过滤。
+- [x] P3-A：生成 `report/review_report.md` 审核报告。
+- [ ] P3-B：alias / 异名 / 繁简匹配，降低 no_source_found。
+- [ ] P3-C：SQLite FTS5 轻量全文检索。
+- [ ] P3-D：review decision 增量标记工作流。
+- [ ] P3-E：quality_report 质量看板。
 
 - [ ] 基于 `source_pages.jsonl` 建 SQLite FTS5 检索。
 - [ ] 支持按方剂/药材/穴位/症状/证型检索原文。
