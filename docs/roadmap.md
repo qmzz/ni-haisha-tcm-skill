@@ -54,8 +54,15 @@
 - [x] P7-B：alias / synonym 治理增强，生成 `data/alias_review.jsonl` 与 `report/p7_alias_review.md`，safe_alias 可控应用。
 - [x] P7-C：第三批 verified 精修，verified 总数提升至 147（方剂 50、药材 47、穴位 50）。
 - [x] P7-D：Agent 查询编排增强，新增 lookup、explain_trace、review_dashboard、batch_trace。
-- [ ] P7-E：CLI / 文档产品化。
-- [ ] P7-F：版本发布准备。
+- [x] P7-E：CLI / 文档产品化。
+- [x] P7-F：版本发布准备。
+
+## P8：发布后增强建议
+
+- [ ] CLI 打包与安装体验优化。
+- [ ] 对 no_source_found 条目继续小批量人工复核。
+- [ ] Agent 查询增加更完整的语义检索与多轮问诊状态机。
+- [ ] 评估 release tag 与版本化数据快照。
 
 ## P6：规模化精修与可用性增强
 

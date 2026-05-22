@@ -2,6 +2,23 @@
 
 所有对本项目的重大更改都将记录在此文件中。
 
+## [1.1.0] - 2026-05-22
+
+### P7 知识治理与查询产品化
+
+- 完成 P7-A no_source_found 分类治理：输出 `data/no_source_classification.jsonl` 与 `report/p7_no_source_classification.md`。
+- 完成 P7-B alias / synonym 治理增强：输出 `data/alias_review.jsonl` 与 `report/p7_alias_review.md`，safe_alias 采用白名单可控应用。
+- 完成 P7-C 第三批 verified 精修：累计 verified_sources 提升至 147（方剂 50、药材 47、穴位 50）。
+- 完成 P7-D Agent 查询编排增强：新增 `tcm_lookup`、`tcm_explain_trace`、`tcm_review_dashboard`、`tcm_batch_trace`。
+- 完成 P7-E CLI / 文档产品化：新增 `lookup`、`explain-trace`、`review-dashboard`、`batch-trace` CLI 命令，均支持 `--json`。
+- 完成 P7-F 发布准备：新增 `scripts/build_p7_release_report.py` 与 `report/p7_release_report.md`。
+
+### 安全边界
+
+- verified 仅表示来源追溯链路通过复核，不代表医学真实性或临床适用性。
+- alias hit 仍只进入 candidate / needs_review，不自动 verified。
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+
 ## [1.0.0] - 2026-05-19
 
 ### 首次发布
@@ -34,15 +51,11 @@
 
 ## 待发布
 
-### 1.1.0（计划中）
-- 补全剩余 285 个穴位详细信息
-- 补全剩余 368 味非核心药材
-- 整理金匮要略方剂
-
 ### 1.2.0（计划中）
-- 改进诊断引擎算法
-- 增加更多医案
-- 优化数据结构
+- 继续小批量人工复核 no_source_found 条目
+- CLI 打包与安装体验优化
+- 改进诊断引擎算法与多轮问诊状态机
+- 优化数据结构与语义检索体验
 
 ### 2.0.0（计划中）
 - Web API 接口

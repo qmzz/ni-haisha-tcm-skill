@@ -17,6 +17,13 @@
   python3 cli.py acupoint-source 百会
   python3 cli.py trace 桂枝汤
   python3 cli.py verified-source 桂枝汤
+
+# P7 Agent 查询编排（均支持 --json）
+python3 cli.py lookup 白头翁汤
+python3 cli.py explain-trace 白头翁汤
+python3 cli.py review-dashboard
+python3 cli.py batch-trace 桂枝汤,白头翁汤,大敦
+
   python3 cli.py review-queue
   python3 cli.py stats
 """
@@ -298,6 +305,92 @@ def verified_source_search(query: str, as_json: bool = False):
             print(ref["quote"])
     print(f"\n{'='*60}")
 
+
+
+def _load_tool_function(name: str):
+    """Load a JSON tool function from tools/tcm_tools.py without shelling out."""
+    tools_dir = SKILL_DIR / "tools"
+    if str(tools_dir) not in sys.path:
+        sys.path.insert(0, str(tools_dir))
+    from tcm_tools import TOOLS  # type: ignore
+    return TOOLS[name]
+
+
+def _print_json_or_summary(result, as_json: bool = False):
+    if as_json:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return True
+    return False
+
+
+def lookup_show(query: str, as_json: bool = False):
+    """P7 统一查询入口：markdown 预览 + trace 摘要 + 安全边界。"""
+    result = _load_tool_function("tcm_lookup")({"query": query})
+    if _print_json_or_summary(result, as_json):
+        return
+    print(f"\n{'='*60}")
+    print("🔎 TCM Lookup")
+    print(f"{'='*60}")
+    print(f"【查询】{result.get('query')}")
+    print(f"【类型】{result.get('kind')}")
+    trace = result.get("trace", {})
+    print(f"【来源状态】{trace.get('trace_status')}")
+    print(f"【安全边界】{result.get('safety_boundary')}")
+    for item in result.get("markdown", []):
+        print(f"\n【文件】{item.get('file')}")
+        preview = (item.get("preview") or "").strip()
+        print(preview[:900])
+    print(f"\n{'='*60}")
+
+
+def explain_trace_show(query: str, as_json: bool = False):
+    """解释来源治理状态。"""
+    result = _load_tool_function("tcm_explain_trace")({"query": query})
+    if _print_json_or_summary(result, as_json):
+        return
+    print(f"\n{'='*60}")
+    print("🧭 Trace 状态解释")
+    print(f"{'='*60}")
+    print(f"【查询】{result.get('query')}")
+    print(f"【状态】{result.get('trace_status')}")
+    print(f"【解释】{result.get('explanation')}")
+    print(f"【边界】{result.get('boundary')}")
+    print(f"\n{'='*60}")
+
+
+def review_dashboard_show(as_json: bool = False):
+    """P7 来源治理看板。"""
+    result = _load_tool_function("tcm_review_dashboard")({})
+    if _print_json_or_summary(result, as_json):
+        return
+    verified = result.get("verified", {})
+    queue = result.get("review_queue", {})
+    print(f"\n{'='*60}")
+    print("📊 TCM Review Dashboard")
+    print(f"{'='*60}")
+    print(f"verified: {verified.get('count')} {verified.get('by_kind')}")
+    print(f"review_queue: {queue.get('count')} unresolved={queue.get('unresolved')}")
+    print(f"by_status: {queue.get('by_status')}")
+    if result.get("frontmatter_audit_head"):
+        print("\nfrontmatter audit:")
+        for line in result.get("frontmatter_audit_head"):
+            print(f"  {line}")
+    print(f"\n【边界】{result.get('boundary')}")
+    print(f"\n{'='*60}")
+
+
+def batch_trace_show(query: str, as_json: bool = False):
+    """批量查询多个条目的来源治理状态。"""
+    result = _load_tool_function("tcm_batch_trace")({"query": query})
+    if _print_json_or_summary(result, as_json):
+        return
+    print(f"\n{'='*60}")
+    print("🧭 Batch Trace")
+    print(f"{'='*60}")
+    for item in result.get("items", []):
+        print(f"- {item.get('query')}: {item.get('trace_status')} ({item.get('match_count')} matches)")
+    print(f"\n【边界】{result.get('boundary')}")
+    print(f"\n{'='*60}")
 
 def _cli_option(name: str, default=None):
     if name not in sys.argv:
@@ -591,6 +684,10 @@ def help():
   python3 cli.py review-queue             查看来源复核队列
   python3 cli.py review-next              查看下一批未决复核条目
   python3 cli.py review-export            导出人工复核模板
+  python3 cli.py lookup <名称>             P7 统一查询入口
+  python3 cli.py explain-trace <名称>      解释来源治理状态
+  python3 cli.py review-dashboard          P7 来源治理看板
+  python3 cli.py batch-trace <名称列表>    批量来源治理状态
   python3 cli.py help                      显示帮助
 
 示例：
@@ -606,6 +703,13 @@ def help():
   python3 cli.py acupoint-source 百会
   python3 cli.py trace 桂枝汤
   python3 cli.py verified-source 桂枝汤
+
+# P7 Agent 查询编排（均支持 --json）
+python3 cli.py lookup 白头翁汤
+python3 cli.py explain-trace 白头翁汤
+python3 cli.py review-dashboard
+python3 cli.py batch-trace 桂枝汤,白头翁汤,大敦
+
   python3 cli.py review-queue
   python3 cli.py stats
 
@@ -641,6 +745,10 @@ def main():
         "review-import": lambda: review_import(as_json="--json" in sys.argv),
         "review-apply": lambda: review_apply(as_json="--json" in sys.argv),
         "review-stats": lambda: review_stats(as_json="--json" in sys.argv),
+        "lookup": lambda: lookup_show(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
+        "explain-trace": lambda: explain_trace_show(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
+        "review-dashboard": lambda: review_dashboard_show(as_json="--json" in sys.argv),
+        "batch-trace": lambda: batch_trace_show(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
         "stats": stats,
         "help": help,
     }

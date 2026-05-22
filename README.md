@@ -154,6 +154,14 @@ python3 scripts/apply_verified_frontmatter.py --apply
 python3 scripts/standardize_verified_frontmatter.py --apply
 python3 scripts/check_frontmatter_schema.py
 # 报告：report/p7_verified_batch3_report.md
+
+# P7 CLI / 文档产品化与发布收口
+python3 cli.py lookup 白头翁汤 --json
+python3 cli.py explain-trace 白头翁汤 --json
+python3 cli.py review-dashboard --json
+python3 cli.py batch-trace 桂枝汤,白头翁汤,大敦 --json
+python3 scripts/build_p7_release_report.py
+# 报告：report/p7_release_report.md
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用
@@ -173,6 +181,46 @@ cp -r . ~/.openclaw/workspace/skills/ni-haisha
 | 医案 | 51 篇 | 100% |
 | 概念 | 45 个 | 100% |
 | 诊断 | 45 篇 | 100% |
+
+
+## 🧭 P7 来源治理与 Agent 查询编排
+
+P7 已完成 no_source 分类、alias review、第三批 verified 精修与查询编排产品化。当前累计 verified 来源链路：
+
+| 类型 | 数量 |
+|------|------|
+| 方剂 | 50 |
+| 药材 | 47 |
+| 穴位 | 50 |
+| **合计** | **147** |
+
+> verified 仅表示来源追溯链路通过复核，不代表医学真实性或临床适用性。
+
+### CLI 查询编排
+
+```bash
+python3 cli.py lookup 白头翁汤
+python3 cli.py explain-trace 白头翁汤
+python3 cli.py review-dashboard
+python3 cli.py batch-trace 桂枝汤,白头翁汤,大敦
+```
+
+以上命令均支持 `--json`，适合 Agent 或外部系统集成。
+
+### Agent JSON 工具
+
+```bash
+python3 tools/tcm_tools.py tcm_lookup '{"query":"白头翁汤"}'
+python3 tools/tcm_tools.py tcm_explain_trace '{"query":"白头翁汤"}'
+python3 tools/tcm_tools.py tcm_review_dashboard '{}'
+python3 tools/tcm_tools.py tcm_batch_trace '{"queries":["桂枝汤","白头翁汤"]}'
+```
+
+详见：
+
+- [Agent 集成文档](docs/agent_integration.md)
+- [P7 verified batch3 报告](report/p7_verified_batch3_report.md)
+- [P7 发布收口报告](report/p7_release_report.md)
 
 ## 🔧 诊断引擎
 
@@ -245,4 +293,4 @@ ni-haisha/
 
 ---
 
-**最后更新：** 2026-05-19
+**最后更新：** 2026-05-22

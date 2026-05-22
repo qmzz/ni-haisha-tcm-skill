@@ -2,7 +2,7 @@
 name: ni
 description: "倪海厦中医 AI 助手 - 基于经方医学的辨证辅助、资料检索与学习系统 | 人纪系列知识蒸馏"
 argument-hint: "[command] [args]"
-version: "1.0.0"
+version: "1.1.0"
 user-invocable: true
 allowed-tools: Read, Write, Bash
 ---
@@ -13,7 +13,7 @@ allowed-tools: Read, Write, Bash
 
 > ⚠️ 本 Skill 仅用于中医理论学习、资料检索和辨证思路参考，不能替代合格医师的面诊、诊断或治疗。所有知识补全必须尊重原始 PDF 提取 JSON 或既有知识文件，不得凭空编造。
 
-**版本：** 1.0.0  
+**版本：** 1.1.0  
 **知识来源：** 倪海厦人纪系列（伤寒论、金匮要略、黄帝内经、神农本草经、针灸篇）  
 **架构参考：** 毛泽东.skill 六层认知架构
 
@@ -70,6 +70,10 @@ allowed-tools: Read, Write, Bash
 /ni trace [名称/ID]          # 统一来源追溯
 /ni verified-source [名称/ID] # 查询 verified 来源
 /ni review-queue            # 查看来源复核队列
+/ni lookup [名称]             # P7 统一查询入口
+/ni explain-trace [名称]      # 解释来源治理状态
+/ni review-dashboard          # 来源治理看板
+/ni batch-trace [名称列表]    # 批量来源治理状态
 ```
 
 ### 结构化工具入口
@@ -84,6 +88,10 @@ python3 tools/tcm_tools.py tcm_formula_query '{"name":"桂枝汤"}'
 python3 tools/tcm_tools.py tcm_herb_query '{"name":"麻黄"}'
 python3 tools/tcm_tools.py tcm_acupoint_query '{"name":"百会"}'
 python3 tools/tcm_tools.py tcm_diagnose_assist '{"symptoms":["发热","恶寒","无汗","脉浮紧"]}'
+python3 tools/tcm_tools.py tcm_lookup '{"query":"白头翁汤"}'
+python3 tools/tcm_tools.py tcm_explain_trace '{"query":"白头翁汤"}'
+python3 tools/tcm_tools.py tcm_review_dashboard '{}'
+python3 tools/tcm_tools.py tcm_batch_trace '{"queries":["桂枝汤","白头翁汤"]}'
 ```
 
 工具输出均为 JSON；辨证辅助必须包含免责声明、安全检查和来源状态。
