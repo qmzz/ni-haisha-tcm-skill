@@ -14,6 +14,9 @@
   python3 cli.py formula-source 桂枝汤
   python3 cli.py herb-source 麻黄
   python3 cli.py acupoint-source 百会
+  python3 cli.py trace 桂枝汤
+  python3 cli.py verified-source 桂枝汤
+  python3 cli.py review-queue
   python3 cli.py stats
 """
 
@@ -26,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from internal.diagnosis_engine import DiagnosisEngine
 from internal.source_corpus import SourceCorpus
+from internal.trace_service import TraceService
 
 SKILL_DIR = Path(__file__).parent
 KNOWLEDGE_DIR = SKILL_DIR / "knowledge"
@@ -235,6 +239,90 @@ def acupoint_source_search(name: str, as_json: bool = False):
     _record_source_search("穴位", "acupoint_sources.jsonl", "acupoint_id", name, as_json)
 
 
+def trace_search(query: str, as_json: bool = False):
+    """统一来源追溯查询"""
+    service = TraceService()
+    result = service.trace(query)
+    if as_json:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+
+    print(f"\n{'='*60}")
+    print("🧭 来源追溯")
+    print(f"{'='*60}")
+    print(f"【查询】{query}")
+    print(f"【状态】{result['trace_status']}")
+    matches = result.get("matches", [])
+    if not matches:
+        print("未找到可追溯来源。")
+        return
+    for i, item in enumerate(matches, 1):
+        if "source_refs" in item:
+            print(f"\n[{i}] {item.get('kind')} · {item.get('name')} · {item.get('item_id')}")
+            for j, ref in enumerate(item.get("source_refs") or [], 1):
+                page = f"第 {ref['page_num']} 页" if ref.get("page_num") else "页码未知"
+                print(f"  ({j}) {ref.get('source_file')} · {page}")
+                print(f"      {ref.get('quote')}")
+        elif "top_source" in item:
+            print(f"\n[{i}] {item.get('kind')} · {item.get('name')} · {item.get('review_status')}")
+            print(f"    {item.get('reason')}")
+        else:
+            page = f"第 {item['page_num']} 页" if item.get("page_num") else "页码未知"
+            print(f"\n[{i}] {item.get('source_file')} · {page}")
+            print(item.get("quote"))
+    print(f"\n{'='*60}")
+
+
+def verified_source_search(query: str, as_json: bool = False):
+    """查询 verified 来源"""
+    service = TraceService()
+    result = service.trace(query)
+    if result.get("trace_status") != "verified":
+        result = {"query": query, "trace_status": "not_verified", "matches": []}
+    if as_json:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
+    print(f"\n{'='*60}")
+    print("✅ Verified 来源")
+    print(f"{'='*60}")
+    if not result["matches"]:
+        print(f"未找到 verified 来源：{query}")
+        return
+    for item in result["matches"]:
+        print(f"\n【{item['name']}】{item['kind']} · {item['item_id']}")
+        for ref in item.get("source_refs", []):
+            page = f"第 {ref['page_num']} 页" if ref.get("page_num") else "页码未知"
+            print(f"- {ref['source_file']} · {page}")
+            print(ref["quote"])
+    print(f"\n{'='*60}")
+
+
+def review_queue_show(as_json: bool = False):
+    """查看 P1/P2 复核队列"""
+    path = SKILL_DIR / "data" / "review_queue.jsonl"
+    items = []
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            items = [json.loads(line) for line in f if line.strip()]
+    if as_json:
+        print(json.dumps({"count": len(items), "items": items}, ensure_ascii=False, indent=2))
+        return
+    print(f"\n{'='*60}")
+    print("🧾 来源复核队列")
+    print(f"{'='*60}")
+    print(f"总数：{len(items)}")
+    counts = {}
+    for item in items:
+        key = f"{item.get('kind')}:{item.get('review_status')}"
+        counts[key] = counts.get(key, 0) + 1
+    for key in sorted(counts):
+        print(f"- {key}: {counts[key]}")
+    print("\n前 20 条：")
+    for item in items[:20]:
+        print(f"- {item.get('kind')} {item.get('item_id')} {item.get('name')} [{item.get('review_status')}]")
+    print(f"\n{'='*60}")
+
+
 def source_search(keyword: str, as_json: bool = False):
     """检索原始 JSON 来源"""
     corpus = SourceCorpus()
@@ -341,6 +429,9 @@ def help():
   python3 cli.py formula-source <方剂名>   查询方剂来源候选
   python3 cli.py herb-source <药材名>      查询药材来源候选
   python3 cli.py acupoint-source <穴位名>  查询穴位来源候选
+  python3 cli.py trace <名称/ID>           统一来源追溯
+  python3 cli.py verified-source <名称/ID> 查询 verified 来源
+  python3 cli.py review-queue             查看来源复核队列
   python3 cli.py help                      显示帮助
 
 示例：
@@ -353,6 +444,9 @@ def help():
   python3 cli.py formula-source 桂枝汤
   python3 cli.py herb-source 麻黄
   python3 cli.py acupoint-source 百会
+  python3 cli.py trace 桂枝汤
+  python3 cli.py verified-source 桂枝汤
+  python3 cli.py review-queue
   python3 cli.py stats
 
 {'='*60}
@@ -378,6 +472,9 @@ def main():
         "formula-source": lambda: formula_source_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
         "herb-source": lambda: herb_source_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
         "acupoint-source": lambda: acupoint_source_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
+        "trace": lambda: trace_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
+        "verified-source": lambda: verified_source_search(" ".join(arg for arg in sys.argv[2:] if arg != "--json"), as_json="--json" in sys.argv),
+        "review-queue": lambda: review_queue_show(as_json="--json" in sys.argv),
         "stats": stats,
         "help": help,
     }

@@ -39,6 +39,15 @@
 - [ ] 多轮问诊状态机：先补采关键信息，再输出辨证思路。
 - [ ] 输出包含证据引用：来源文件、页码、原文片段。
 
+## P2：可复核知识治理与工具化
+
+- [x] 建立 `data/review_decisions.jsonl` 试点复核决策。
+- [x] 建立 `data/verified_sources.jsonl`，首批 15 个 verified 条目。
+- [x] 增加统一 trace 服务：`internal/trace_service.py`。
+- [x] 增加 CLI：`trace`、`verified-source`、`review-queue`。
+- [ ] OpenClaw 工具化：`tcm_safety_check`、`tcm_source_search`、`tcm_trace`、`tcm_diagnose_assist`。
+- [ ] verified frontmatter 试点回写。
+
 ## P3：检索增强
 
 - [ ] 基于 `source_pages.jsonl` 建 SQLite FTS5 检索。
