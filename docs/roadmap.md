@@ -45,8 +45,8 @@
 - [x] 建立 `data/verified_sources.jsonl`，首批 15 个 verified 条目。
 - [x] 增加统一 trace 服务：`internal/trace_service.py`。
 - [x] 增加 CLI：`trace`、`verified-source`、`review-queue`。
-- [ ] OpenClaw 工具化：`tcm_safety_check`、`tcm_source_search`、`tcm_trace`、`tcm_diagnose_assist`。
-- [ ] verified frontmatter 试点回写。
+- [x] OpenClaw 工具化：`tcm_safety_check`、`tcm_source_search`、`tcm_trace`、`tcm_formula_query`、`tcm_herb_query`、`tcm_acupoint_query`、`tcm_diagnose_assist`。
+- [x] verified frontmatter 试点回写：15 个 verified 条目。
 
 ## P3：检索增强
 

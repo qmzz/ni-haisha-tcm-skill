@@ -72,6 +72,14 @@ python3 scripts/build_review_queue.py
 # 初始化 P2 verified 试点并生成 verified 来源索引
 python3 scripts/init_review_decisions.py
 python3 scripts/build_verified_sources.py
+
+# verified frontmatter 试点回写（默认 dry-run，加 --apply 才写入）
+python3 scripts/apply_verified_frontmatter.py --dry-run
+python3 scripts/apply_verified_frontmatter.py --apply
+
+# OpenClaw / Agent JSON 工具入口
+python3 tools/tcm_tools.py tcm_trace '{"query":"桂枝汤"}'
+python3 tools/tcm_tools.py tcm_diagnose_assist '{"symptoms":["发热","恶寒","无汗","脉浮紧"]}'
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

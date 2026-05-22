@@ -67,6 +67,26 @@ allowed-tools: Read, Write, Bash
 /ni source [关键词]          # 检索原始 PDF 提取 JSON 原文片段
 /ni sources                 # 查看原始 JSON 来源清单
 /ni compare [方剂 1] [方剂 2] # 比较方剂
+/ni trace [名称/ID]          # 统一来源追溯
+/ni verified-source [名称/ID] # 查询 verified 来源
+/ni review-queue            # 查看来源复核队列
+```
+
+### 结构化工具入口
+
+P2 起提供 JSON 工具入口，供 OpenClaw / QwenPaw / 其他 Agent 调用：
+
+```bash
+python3 tools/tcm_tools.py tcm_safety_check '{"text":"胸痛,呼吸困难"}'
+python3 tools/tcm_tools.py tcm_source_search '{"keyword":"桂枝汤","limit":5}'
+python3 tools/tcm_tools.py tcm_trace '{"query":"桂枝汤"}'
+python3 tools/tcm_tools.py tcm_formula_query '{"name":"桂枝汤"}'
+python3 tools/tcm_tools.py tcm_herb_query '{"name":"麻黄"}'
+python3 tools/tcm_tools.py tcm_acupoint_query '{"name":"百会"}'
+python3 tools/tcm_tools.py tcm_diagnose_assist '{"symptoms":["发热","恶寒","无汗","脉浮紧"]}'
+```
+
+工具输出均为 JSON；辨证辅助必须包含免责声明、安全检查和来源状态。
 ```
 
 ---
