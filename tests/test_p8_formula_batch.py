@@ -44,7 +44,7 @@ class P8FormulaBatchTest(unittest.TestCase):
         self.assertRegex(report, r"formula_verified_after: (?:74|112|113)")
         self.assertRegex(report, r"verified_total_after: (?:171|209|210)")
         audit = (ROOT / "report" / "frontmatter_audit.md").read_text(encoding="utf-8")
-        self.assertRegex(audit, r"missing_required: (?:767|729|728|698|570)")
+        self.assertRegex(audit, r"missing_required: (?:767|729|728|698|570|565)")
 
 
 if __name__ == "__main__":

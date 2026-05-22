@@ -1,7 +1,7 @@
 # Frontmatter Audit
 
 - files: 939
-- missing_required: 570
+- missing_required: 565
 - warnings: 0
 
 | file | kind | missing | warnings |
@@ -49,7 +49,6 @@
 | knowledge/herbs/difuzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/dijincao.md | herb | kind, trace_status |  |
 | knowledge/herbs/dingxiang.md | herb | kind, trace_status |  |
-| knowledge/herbs/dongchongxiacao.md | herb | kind, trace_status |  |
 | knowledge/herbs/dongkuizi.md | herb | kind, trace_status |  |
 | knowledge/herbs/ejiao.md | herb | kind, trace_status |  |
 | knowledge/herbs/ezhu.md | herb | kind, trace_status |  |
@@ -59,7 +58,6 @@
 | knowledge/herbs/ganlan.md | herb | kind, trace_status |  |
 | knowledge/herbs/gansui.md | herb | kind, trace_status |  |
 | knowledge/herbs/gaoliangjiang.md | herb | kind, trace_status |  |
-| knowledge/herbs/gejie.md | herb | kind, trace_status |  |
 | knowledge/herbs/gijingcao.md | herb | kind, trace_status |  |
 | knowledge/herbs/gouteng.md | herb | kind, trace_status |  |
 | knowledge/herbs/gualou.md | herb | kind, trace_status |  |
@@ -116,14 +114,12 @@
 | knowledge/herbs/machixian.md | herb | kind, trace_status |  |
 | knowledge/herbs/maidong.md | herb | kind, trace_status |  |
 | knowledge/herbs/maqianzi.md | herb | kind, trace_status |  |
-| knowledge/herbs/meiguihua.md | herb | kind, trace_status |  |
 | knowledge/herbs/menghua.md | herb | kind, trace_status |  |
 | knowledge/herbs/mohantian.md | herb | kind, trace_status |  |
 | knowledge/herbs/moyao.md | herb | kind, trace_status |  |
 | knowledge/herbs/muhudie.md | herb | kind, trace_status |  |
 | knowledge/herbs/mujinpi.md | herb | kind, trace_status |  |
 | knowledge/herbs/mutong.md | herb | kind, trace_status |  |
-| knowledge/herbs/nanguazi.md | herb | kind, trace_status |  |
 | knowledge/herbs/nanshashen.md | herb | kind, trace_status |  |
 | knowledge/herbs/niubangzi.md | herb | kind, trace_status |  |
 | knowledge/herbs/nuodaogenxu.md | herb | kind, trace_status |  |
@@ -208,7 +204,6 @@
 | knowledge/herbs/zhike.md | herb | kind, trace_status |  |
 | knowledge/herbs/zhuli.md | herb | kind, trace_status |  |
 | knowledge/herbs/zhumagen.md | herb | kind, trace_status |  |
-| knowledge/herbs/zhuru.md | herb | kind, trace_status |  |
 | knowledge/herbs/zhushagen.md | herb | kind, trace_status |  |
 | knowledge/herbs/zhuye.md | herb | kind, trace_status |  |
 | knowledge/herbs/zihuadiding.md | herb | kind, trace_status |  |

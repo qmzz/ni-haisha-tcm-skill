@@ -20,7 +20,15 @@ REPORT = ROOT / "report" / "p8_herb_verified_batch_report.md"
 
 REVIEWER = "p8_herb_verified_batch"
 DEFAULT_THRESHOLD = 95
-QUALITY_OVERRIDES: dict[str, int] = {}
+QUALITY_OVERRIDES: dict[str, int] = {
+    # Mid-score tail items are explicit manual whitelist entries.
+    # They are accepted as traceability candidates only, not medical validation.
+    "dongchongxiacao": 90,
+    "gejie": 90,
+    "meiguihua": 90,
+    "nanguazi": 90,
+    "zhuru": 90,
+}
 
 ITEMS = [
     "zisu",
@@ -183,6 +191,12 @@ ITEMS = [
     "ziheche",
     "zirun",
     "zisuan",
+    # P8-C mid-score tail: remaining herb candidates with first source_ref quality_score >= 90.
+    "dongchongxiacao",
+    "gejie",
+    "meiguihua",
+    "nanguazi",
+    "zhuru",
 ]
 
 

@@ -6,12 +6,12 @@ P8-C 启动药材知识库数据完备化。本批采用小批量人工白名单
 
 ## 本批结果
 
-- whitelist: 159
-- added: 159
+- whitelist: 164
+- added: 164
 - skipped_existing: 0
 - errors: 0
-- herb_verified_after: 206
-- verified_total_after: 369
+- herb_verified_after: 211
+- verified_total_after: 374
 
 ## 新增药材
 
@@ -176,6 +176,11 @@ P8-C 启动药材知识库数据完备化。本批采用小批量人工白名单
 | ziheche | 紫河车 | 神农本草经.json | None | 96 | 95 |
 | zirun | 自然铜 | 02【视频同步文稿】人-神农本草经（可打印）.json | 272 | 99 | 95 |
 | zisuan | 紫菀 | 神农本草经.json | None | 99 | 95 |
+| dongchongxiacao | 冬虫夏草 | 02【视频同步文稿】人-神农本草经（可打印）.json | 326 | 93 | 90 |
+| gejie | 蛤蚧 | 神农本草经.json | None | 93 | 90 |
+| meiguihua | 玫瑰花 | 02【视频同步文稿】人-神农本草经（可打印）.json | 121 | 93 | 90 |
+| nanguazi | 南瓜子 | 02【视频同步文稿】人-神农本草经（可打印）.json | 175 | 90 | 90 |
+| zhuru | 竹茹 | 02【视频同步文稿】人-神农本草经（可打印）.json | 232 | 93 | 90 |
 
 ## 边界
 
