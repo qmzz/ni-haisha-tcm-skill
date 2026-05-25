@@ -150,12 +150,16 @@ def _compact_trace(trace: Dict[str, Any], limit: int = 3) -> Dict[str, Any]:
             "page_num": first_ref.get("page_num"),
             "quote": (first_ref.get("quote") or "")[:260],
         })
-    return {
+    result = {
         "query": trace.get("query"),
         "trace_status": trace.get("trace_status"),
         "summary": f"{trace.get('trace_status')}，命中 {len(trace.get('matches') or [])} 条；优先展示 verified 来源。",
         "matches": matches,
     }
+    # P10-B: pass through alias_redirect if present
+    if trace.get("alias_redirect"):
+        result["alias_redirect"] = trace["alias_redirect"]
+    return result
 
 
 def tcm_trace_summary(payload: Dict[str, Any]) -> Dict[str, Any]:

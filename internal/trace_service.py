@@ -46,6 +46,23 @@ class TraceService:
         if not query:
             return {"query": query, "trace_status": "empty_query", "matches": []}
 
+        # P10-B: alias resolution
+        alias_match = self._resolve_alias(query)
+        if alias_match:
+            target_id = alias_match.get("target_id")
+            # Redirect trace to target
+            result = self._trace_core(target_id, limit)
+            result["alias_redirect"] = {
+                "from": query,
+                "to": target_id,
+                "alias_of": alias_match.get("alias_id"),
+                "note": f"命中 alias，自动跳转至标准条目 {target_id}"
+            }
+            return result
+
+        return self._trace_core(query, limit)
+
+    def _trace_core(self, query: str, limit: int) -> Dict:
         verified = self._trace_verified(query)
         if verified:
             return {"query": query, "trace_status": "verified", "matches": verified[:limit]}
@@ -61,6 +78,14 @@ class TraceService:
         corpus = SourceCorpus()
         hits = [h.to_dict() for h in corpus.search(query, limit=limit, context=100)]
         return {"query": query, "trace_status": "source_search" if hits else "no_source_found", "matches": hits}
+
+    def _resolve_alias(self, query: str) -> Optional[Dict]:
+        """P10-B: 检查 alias_index，返回 alias 映射。"""
+        aliases = _load_jsonl(self.data_dir / "alias_index.jsonl")
+        for a in aliases:
+            if query == a.get("alias_id") or query == a.get("alias_title"):
+                return a
+        return None
 
     def _trace_verified(self, query: str) -> List[Dict]:
         records = _load_jsonl(self.data_dir / "verified_sources.jsonl")
