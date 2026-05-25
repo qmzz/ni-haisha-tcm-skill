@@ -2,6 +2,15 @@
 
 所有对本项目的重大更改都将记录在此文件中。
 
+## [Unreleased]
+
+### P8-B/C 收口
+- 补齐 P8-B/C 文档：在 `README.md` 与 `docs/roadmap.md` 中记录方剂 verified 全覆盖与药材 verified 扩展进展。
+- 将 `README.md` 中累计 verified 数值从 147 更新为当前实际值 374。
+- 在 `README.md` 中补充 P8 常用命令与数据刷新提示，避免 `p8_seed_*` 后读到旧 dashboard 数值。
+
+> 本次为文档与收口同步，不涉及额外医学内容扩展。
+
 ## [1.1.0] - 2026-05-22
 
 ### P7 知识治理与查询产品化
