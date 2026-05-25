@@ -19,8 +19,8 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 | kind | total | verified_registry | candidate | needs_review | no_source_found | unknown | stale_verified_fm | frontmatter_complete | source_refs | safety_boundary | refined | complete |
 |------|-------|-------------------|-----------|--------------|-----------------|---------|-------------------|----------------------|-------------|-----------------|---------|----------|
 | formula | 113 | 113 | 0 | 0 | 0 | 0 | 0 | 113 | 113 | 113 | 29 | 84 |
-| herb | 415 | 292 | 5 | 0 | 118 | 0 | 0 | 415 | 297 | 292 | 0 | 292 |
-| acupoint | 411 | 107 | 289 | 0 | 15 | 0 | 0 | 411 | 396 | 107 | 0 | 107 |
+| herb | 415 | 292 | 5 | 0 | 118 | 0 | 0 | 415 | 297 | 415 | 0 | 292 |
+| acupoint | 411 | 107 | 289 | 0 | 15 | 0 | 0 | 411 | 396 | 411 | 0 | 107 |
 
 ## quality_tier 分布
 
@@ -44,11 +44,10 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 - usage: 29
 
 ### herb
-- safety_boundary: 123
+- 暂无缺口
 
 ### acupoint
-- safety_boundary: 304
-- source_trace_notice: 304
+- 暂无缺口
 
 ## P8-B/P8-C/P8-D 建议
 

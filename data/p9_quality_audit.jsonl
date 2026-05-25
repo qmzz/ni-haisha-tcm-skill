@@ -1,10 +1,4 @@
-{"file": "knowledge/acupoints/huagai.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=9"}
-{"file": "knowledge/acupoints/huantiao.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=8"}
 {"file": "knowledge/acupoints/laogong.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=8"}
-{"file": "knowledge/acupoints/xuanji.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=9"}
-{"file": "knowledge/acupoints/yutang.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=9"}
-{"file": "knowledge/acupoints/zhongzhu.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=8"}
-{"file": "knowledge/acupoints/zigong.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=9"}
 {"file": "knowledge/herbs/baiguo.md", "kind": "herb", "level": "review", "code": "low_score_verified_needs_review", "detail": "P8-D verified via QUALITY_OVERRIDES (score=50, threshold=50)"}
 {"file": "knowledge/herbs/baihuasheshecao.md", "kind": "herb", "level": "review", "code": "low_score_verified_needs_review", "detail": "P8-D verified via QUALITY_OVERRIDES (score=59, threshold=50)"}
 {"file": "knowledge/herbs/banlangen.md", "kind": "herb", "level": "review", "code": "low_score_verified_needs_review", "detail": "P8-D verified via QUALITY_OVERRIDES (score=53, threshold=50)"}

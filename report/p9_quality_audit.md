@@ -6,9 +6,9 @@
 
 ## 总览
 
-- issues: 83
-- by_level: {'info': 7, 'review': 76}
-- by_kind: {'acupoint': 64, 'herb': 19}
+- issues: 77
+- by_level: {'info': 1, 'review': 76}
+- by_kind: {'acupoint': 58, 'herb': 19}
 
 ## 问题类型 Top
 
@@ -16,19 +16,13 @@
 |-------|------|-------|
 | review | parent_expand_verified_needs_human_review | 51 |
 | review | low_score_verified_needs_review | 25 |
-| info | body_short | 7 |
+| info | body_short | 1 |
 
 ## 样例（前 100 条）
 
 | level | kind | code | file | detail |
 |-------|------|------|------|--------|
-| info | acupoint | body_short | knowledge/acupoints/huagai.md | lines=9 |
-| info | acupoint | body_short | knowledge/acupoints/huantiao.md | lines=8 |
 | info | acupoint | body_short | knowledge/acupoints/laogong.md | lines=8 |
-| info | acupoint | body_short | knowledge/acupoints/xuanji.md | lines=9 |
-| info | acupoint | body_short | knowledge/acupoints/yutang.md | lines=9 |
-| info | acupoint | body_short | knowledge/acupoints/zhongzhu.md | lines=8 |
-| info | acupoint | body_short | knowledge/acupoints/zigong.md | lines=9 |
 | review | herb | low_score_verified_needs_review | knowledge/herbs/baiguo.md | P8-D verified via QUALITY_OVERRIDES (score=50, threshold=50) |
 | review | herb | low_score_verified_needs_review | knowledge/herbs/baihuasheshecao.md | P8-D verified via QUALITY_OVERRIDES (score=59, threshold=50) |
 | review | herb | low_score_verified_needs_review | knowledge/herbs/banlangen.md | P8-D verified via QUALITY_OVERRIDES (score=53, threshold=50) |

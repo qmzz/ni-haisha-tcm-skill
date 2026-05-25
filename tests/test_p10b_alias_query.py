@@ -51,7 +51,7 @@ class P10BAliasQueryTest(unittest.TestCase):
     def test_standard_name_no_redirect(self):
         """标准名查询不应触发 alias redirect。"""
         result = subprocess.run(
-            [sys.executable, "tools/tcm_tools.py", "tcm_trace", '{"query":"huangbo"}'],
+            [sys.executable, "tools/tcm_tools.py", "tcm_trace", '{"query":"aoye"}'],
             cwd=ROOT, check=True, capture_output=True, text=True,
         )
         data = json.loads(result.stdout)
