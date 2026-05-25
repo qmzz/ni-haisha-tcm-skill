@@ -74,7 +74,7 @@
 - [x] P9-B：质量复核队列，生成 `data/p9_review_queue.jsonl`（173 条：warning 90 + review 76 + info 7）。
 - [x] P9-C：修复 P8 seed 脚本幂等性，避免重复追加 verified 决策。
 - [x] P9-D：duplicate_title 治理，90 条降至 30 条（herb alias pair 16 + acupoint same-name 14）。
-- [ ] P9-E：处理剩余 30 条 duplicate_title（需要人工判断是否为真正同药/同穴）。
+- [x] P9-E：处理剩余 30 条 duplicate_title，warning 清零（duplicate_title: 0）。
 - [ ] P9-F：人工复核 parent_expand_verified_needs_human_review（51 条）与 low_score_verified_needs_review（25 条）。
 - [ ] CLI 打包与安装体验优化。
 - [ ] 对 no_source_found 条目继续小批量人工复核。

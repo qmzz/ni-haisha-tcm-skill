@@ -18,7 +18,15 @@
   - 为 45 组重复名添加 alias/alias_of frontmatter
   - p9_d_resolve_duplicate_titles.py: herb aliases + acupoint variant 标注
   - p9_quality_audit.py: 排除已有 alias 标注的重复名
-- **当前 P9 issues: 113 (error: 0, warning: 30, review: 76, info: 7)**
+- P9-D: duplicate_title 治理，90 条降至 30 条
+  - 为 45 组重复名添加 alias/alias_of frontmatter
+  - p9_d_resolve_duplicate_titles.py: herb aliases + acupoint variant 标注
+  - p9_quality_audit.py: 排除已有 alias 标注的重复名
+- P9-E: 清理剩余 15 组 duplicate_title，warning 清零
+  - 为 7 组 herb 别名对 + 8 组 acupoint 异写/别名添加 alias_of 标注
+  - p9_e_resolve_remaining_duplicates.py: 基于 index 真实数据治理
+- **当前 P9 issues: 83 (error: 0, warning: 0, review: 76, info: 7)**
+- **duplicate_title: 0 ✅**
 
 ### P8-E no_source_found 扩展治理
 
