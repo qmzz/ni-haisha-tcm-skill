@@ -147,9 +147,21 @@ def main():
             if trace == "verified" and not has_notice:
                 all_issues.append(issue(rel, kind, "warning", "verified_without_safety_notice"))
 
-    # 重复中文名/标题
+    # 重复中文名/标题 (排除已标注 alias 的)
     for (kind, title), files in name_index.items():
         if title and len(files) > 1:
+            # 检查是否至少有一个文件有 alias 标记
+            has_alias = False
+            for f in files:
+                path = ROOT / f
+                if path.exists():
+                    text = path.read_text(encoding="utf-8")
+                    fm, _ = parse_frontmatter(text)
+                    if fm.get("aliases") or fm.get("alias_of"):
+                        has_alias = True
+                        break
+            if has_alias:
+                continue
             for f in files:
                 all_issues.append(issue(f, kind, "warning", "duplicate_title", ", ".join(files)))
 

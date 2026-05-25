@@ -2,6 +2,7 @@
 title: "下脘"
 kind: acupoint
 trace_status: unverified
+alias_of: "xiawan"
 ---
 
 # 下脘

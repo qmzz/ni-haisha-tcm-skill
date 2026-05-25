@@ -2,6 +2,7 @@
 title: "罗布麻叶"
 kind: herb
 trace_status: no_source_found
+aliases: ["luobumaye"]
 ---
 
 # 罗布麻叶

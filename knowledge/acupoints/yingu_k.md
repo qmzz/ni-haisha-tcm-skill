@@ -2,6 +2,7 @@
 title: "阴谷"
 kind: acupoint
 trace_status: unverified
+alias_of: "yingu"
 ---
 
 # 阴谷穴 (KI10)

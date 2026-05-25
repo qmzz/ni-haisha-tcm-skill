@@ -2,6 +2,7 @@
 title: "太溪"
 kind: acupoint
 trace_status: unverified
+alias_of: "taixi"
 ---
 
 # 太溪穴 (KI3)

@@ -2,6 +2,7 @@
 title: "期门"
 kind: acupoint
 trace_status: unverified
+alias_of: "qimen"
 ---
 
 # 期门穴 (LR14)

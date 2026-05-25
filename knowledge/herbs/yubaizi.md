@@ -2,6 +2,7 @@
 title: "禹白附"
 kind: herb
 trace_status: no_source_found
+aliases: ["yubaifu"]
 ---
 
 # 禹白附

@@ -2,6 +2,7 @@
 title: "土鳖虫"
 kind: herb
 trace_status: no_source_found
+aliases: ["zhechong"]
 ---
 
 # 土鳖虫

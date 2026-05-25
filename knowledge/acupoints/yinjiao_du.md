@@ -2,6 +2,7 @@
 title: "龈交"
 kind: acupoint
 trace_status: unverified
+alias_of: "yinjiao"
 ---
 
 # 龈交

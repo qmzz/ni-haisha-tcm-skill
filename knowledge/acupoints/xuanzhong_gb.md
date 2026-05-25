@@ -2,6 +2,7 @@
 title: "悬钟"
 kind: acupoint
 trace_status: unverified
+alias_of: "xuanzhong"
 ---
 
 # 悬钟穴 (GB39)

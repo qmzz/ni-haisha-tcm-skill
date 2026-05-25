@@ -2,6 +2,7 @@
 title: "风池"
 kind: acupoint
 trace_status: unverified
+alias_of: "fengchi"
 ---
 
 # 风池穴 (GB20)

@@ -2,6 +2,7 @@
 title: "丘墟"
 kind: acupoint
 trace_status: unverified
+alias_of: "qiuxu"
 ---
 
 # 丘墟穴 (GB40)

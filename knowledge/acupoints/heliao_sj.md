@@ -2,6 +2,7 @@
 title: "和髎"
 kind: acupoint
 trace_status: unverified
+alias_of: "heliao"
 ---
 
 # 和髎

@@ -2,6 +2,7 @@
 title: "天柱"
 kind: acupoint
 trace_status: unverified
+alias_of: "tianzhu"
 ---
 
 # 天柱

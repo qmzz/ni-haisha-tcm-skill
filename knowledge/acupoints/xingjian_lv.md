@@ -2,6 +2,7 @@
 title: "行间"
 kind: acupoint
 trace_status: unverified
+alias_of: "xingjian"
 ---
 
 # 行间穴 (LR2)

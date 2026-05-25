@@ -2,6 +2,7 @@
 title: "复溜"
 kind: acupoint
 trace_status: unverified
+alias_of: "fuliu"
 ---
 
 # 复溜穴 (KI7)

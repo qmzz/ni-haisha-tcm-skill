@@ -2,6 +2,7 @@
 title: "照海"
 kind: acupoint
 trace_status: unverified
+alias_of: "zhaohai"
 ---
 
 # 照海穴 (KI6)

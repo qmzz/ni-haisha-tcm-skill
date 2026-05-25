@@ -2,6 +2,7 @@
 title: "脑户"
 kind: acupoint
 trace_status: unverified
+alias_of: "naokong"
 ---
 
 # 脑户

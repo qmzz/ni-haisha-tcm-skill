@@ -2,6 +2,7 @@
 title: "扶突"
 kind: acupoint
 trace_status: unverified
+alias_of: "futu"
 ---
 
 # 扶突

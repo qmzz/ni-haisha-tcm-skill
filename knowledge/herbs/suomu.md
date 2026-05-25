@@ -2,6 +2,7 @@
 title: "苏木"
 kind: herb
 trace_status: no_source_found
+aliases: ["sumu"]
 ---
 
 # 苏木

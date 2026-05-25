@@ -2,6 +2,7 @@
 title: "涌泉"
 kind: acupoint
 trace_status: unverified
+alias_of: "yongquan"
 ---
 
 # 涌泉穴 (KI1)

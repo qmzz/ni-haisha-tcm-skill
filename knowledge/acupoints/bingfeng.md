@@ -2,6 +2,7 @@
 title: "秉风"
 kind: acupoint
 trace_status: unverified
+alias_of: "bingfeng"
 ---
 
 # 秉风

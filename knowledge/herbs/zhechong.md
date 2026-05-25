@@ -2,6 +2,7 @@
 title: "土鳖虫"
 kind: herb
 trace_status: no_source_found
+aliases: ["tubiechong"]
 ---
 
 # 土鳖虫

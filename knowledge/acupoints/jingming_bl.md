@@ -2,6 +2,7 @@
 title: "睛明"
 kind: acupoint
 trace_status: unverified
+alias_of: "jingming"
 ---
 
 # 睛明

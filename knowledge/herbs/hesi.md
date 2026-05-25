@@ -2,6 +2,7 @@
 title: "鹤虱"
 kind: herb
 trace_status: no_source_found
+aliases: ["hezi"]
 ---
 
 # 鹤虱

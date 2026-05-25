@@ -2,6 +2,7 @@
 title: "蠡沟"
 kind: acupoint
 trace_status: unverified
+alias_of: "ligou"
 ---
 
 # 蠡沟穴 (LR5)

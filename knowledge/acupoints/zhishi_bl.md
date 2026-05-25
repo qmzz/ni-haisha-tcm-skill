@@ -2,6 +2,7 @@
 title: "志室"
 kind: acupoint
 trace_status: unverified
+alias_of: "zhishi"
 ---
 
 # 志室

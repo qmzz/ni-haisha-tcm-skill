@@ -2,6 +2,7 @@
 title: "荜澄茄"
 kind: herb
 trace_status: no_source_found
+aliases: ["bichengqie"]
 ---
 
 # 荜澄茄
