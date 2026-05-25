@@ -173,6 +173,19 @@ python3 cli.py review-dashboard --json
 # 审计报告：report/p8_knowledge_audit.md
 # 方剂报告：report/p8_formula_verified_batch_report.md
 # 药材报告：report/p8_herb_verified_batch_report.md
+
+# P8-D herb needs_review 处理 (score >= 50)
+python3 scripts/p8_seed_herb_candidate_review.py
+python3 scripts/build_verified_sources.py
+
+# P8-F acupoint needs_review 处理 (score >= 55)
+python3 scripts/p8_seed_acupoint_verified_batch.py
+python3 scripts/build_verified_sources.py
+
+# P8 Frontmatter 标准化补全
+python3 scripts/p8_add_basic_frontmatter.py --apply
+python3 scripts/check_frontmatter_schema.py
+# 报告：report/p8_frontmatter_standardization.md
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

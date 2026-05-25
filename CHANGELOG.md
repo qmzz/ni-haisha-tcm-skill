@@ -4,6 +4,14 @@
 
 ## [Unreleased]
 
+### P8-D/F + Frontmatter 标准化
+
+- P8-D herb needs_review 处理：17 个 score ≥ 50 的条目通过 QUALITY_OVERRIDES 验证。
+- P8-F acupoint needs_review 处理：8 个 score ≥ 55 的条目通过 QUALITY_OVERRIDES 验证。
+- Frontmatter 标准化：为 478 个知识文件添加基础 frontmatter (kind + trace_status)。
+- **当前 verified 总计：461（方剂 113、药材 290、穴位 58）**
+- **Frontmatter missing_required: 565 → 503 → 0**
+
 ### P8-B/C 收口
 - 补齐 P8-B/C 文档：在 `README.md` 与 `docs/roadmap.md` 中记录方剂 verified 全覆盖与药材 verified 扩展进展。
 - 将 `README.md` 中累计 verified 数值从 147 更新为当前实际值 374。

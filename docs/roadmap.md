@@ -61,7 +61,10 @@
 
 - [x] P8-A：知识库完整度审计，输出 `data/knowledge_completeness.jsonl` 与 `report/p8_knowledge_audit.md`。
 - [x] P8-B：方剂 verified 全覆盖，`formula verified` 达到 113 / 113，输出 `report/p8_formula_verified_batch_report.md`。
-- [x] P8-C：药材 verified 扩展（高分与中分批次），`herb verified` 提升至 211，输出 `report/p8_herb_verified_batch_report.md`。
+- [x] P8-C：药材 verified 扩展（高分与中分批次），`herb verified` 提升至 273，输出 `report/p8_herb_verified_batch_report.md`。
+- [x] P8-D：herb needs_review 处理（score ≥ 50），17 个条目通过 QUALITY_OVERRIDES 验证。
+- [x] P8-F：acupoint needs_review 处理（score ≥ 55），8 个条目通过 QUALITY_OVERRIDES 验证。
+- [x] P8-Frontmatter：为所有 939 个知识文件添加基础 frontmatter，missing_required: 0。
 - [ ] 继续处理 herb 剩余 candidate 分层（白名单 / needs_review / 保持观察）。
 - [ ] CLI 打包与安装体验优化。
 - [ ] 对 no_source_found 条目继续小批量人工复核。
