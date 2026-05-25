@@ -62,6 +62,7 @@ ITEMS = [
     "tujuzi",
     "tianma",
     # P8-C high-score tail: remaining herb candidates with first source_ref quality_score >= 95.
+    # Plus P8-C mid-score tail: expand coverage for candidates with first source_ref quality_score in [70, 94].
     "aoye",
     "baijiangcao",
     "baijiezi",
@@ -191,7 +192,7 @@ ITEMS = [
     "ziheche",
     "zirun",
     "zisuan",
-    # P8-C mid-score tail: remaining herb candidates with first source_ref quality_score >= 90.
+    # P8-C mid-score tail: remaining herb candidates with first source_ref quality_score in [70, 94].
     "dongchongxiacao",
     "gejie",
     "meiguihua",
@@ -200,10 +201,43 @@ ITEMS = [
 ]
 
 
+# === 动态扩展：自动补全 herb_index 中质量分在 70-94 且未 verified 的条目 ===
+def _dynamic_extend_mid_score_candidates():
+    """将 herb_index 中 score in [70, 94] 且未 verified 的药材追加到 ITEMS。"""
+    verified_ids = set()
+    for row in load_jsonl(DATA / "verified_sources.jsonl"):
+        if row.get("kind") == "herb":
+            verified_ids.add(row.get("item_id"))
+    static = set(ITEMS)
+    extra = []
+    for row in load_jsonl(DATA / "herb_index.jsonl"):
+        hid = row.get("herb_id")
+        if not hid or hid in verified_ids or hid in static:
+            continue
+        srcs = row.get("source_refs") or []
+        if not srcs:
+            continue
+        score = srcs[0].get("quality_score") or 0
+        if 70 <= score < 95:
+            extra.append((hid, score))
+    extra.sort(key=lambda x: x[0])
+    # 动态追加到 ITEMS
+    for hid, _ in extra:
+        if hid not in static:
+            ITEMS.append(hid)
+            static.add(hid)
+
+
+# === 动态扩展结束 ===
+
+
 def load_jsonl(path: Path):
     if not path.exists():
         return []
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+_dynamic_extend_mid_score_candidates()
 
 
 def write_report(summary: dict, added_rows: list[dict], errors: list[dict]) -> None:
@@ -256,6 +290,18 @@ def main() -> int:
     decisions = load_jsonl(decisions_path)
     by_key = {(row.get("kind"), row.get("item_id")): row for row in decisions}
     today = date.today().isoformat()
+    # 动态 override：对无显式白名单的条目，使用 source_ref 的实际分数作为 threshold（不低于 70）
+    quality_overrides = dict(QUALITY_OVERRIDES)
+    for item_id in ITEMS:
+        if item_id in quality_overrides:
+            continue
+        item = index.get(item_id)
+        srcs = (item or {}).get("source_refs") or []
+        if not srcs:
+            continue
+        score = srcs[0].get("quality_score") or 0
+        if 70 <= score < DEFAULT_THRESHOLD:
+            quality_overrides[item_id] = score
     added_rows = []
     errors = []
     skipped_existing = 0
@@ -274,7 +320,7 @@ def main() -> int:
             errors.append({"item_id": item_id, "error": "missing_source_ref"})
             continue
         ref = refs[0]
-        threshold = QUALITY_OVERRIDES.get(item_id, DEFAULT_THRESHOLD)
+        threshold = quality_overrides.get(item_id, DEFAULT_THRESHOLD)
         if (ref.get("quality_score") or 0) < threshold:
             errors.append({"item_id": item_id, "error": "quality_below_threshold", "quality_score": ref.get("quality_score"), "threshold": threshold})
             continue

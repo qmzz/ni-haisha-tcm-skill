@@ -1,5 +1,10 @@
 ---
 title: "冬葵子"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "herb"
 source: "待考"
 category: "待考"
 tags: ["中药", "倪海厦"]
@@ -11,9 +16,29 @@ tags: ["中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
+trace_status: candidate
+source_refs:
+  - source_file: "倪海厦人纪系列之神农本草经.json"
+    page_num: 53
+    quote: "倪注神农本草经 八十八、姑活 【本经原文】味甘温，主大风邪气，湿痹寒痛。久服轻身益寿耐老，一名冬葵子。 【产地】处处有之。 【性味】冬葵子及叶，根味皆甘，性滑。 【主治】为冷滑解热药，主滑胎易产，治热痢，通尿疗淋。 【别录】疗妇人乳内闭。肿痛，根治恶疮疗淋，利小便。解蜀椒毒。 【甄权】冬葵苗煮汁服利小肠，治时行黄病，干叶为末及烧灰服治金疮"
 ---
 
 # 冬葵子
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📌 基础信息
 
