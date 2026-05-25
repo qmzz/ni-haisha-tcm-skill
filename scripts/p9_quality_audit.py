@@ -170,6 +170,9 @@ def main():
         notes = d.get("notes", "") or ""
         rel = d.get("file", "")
         kind = d.get("kind", "")
+        # P9-F: source chain complete and reviewed
+        if any(v.get("review_status") == "trace_review_passed" for v in verified_by_file.get(rel, [])):
+            continue
         if "parent name expand" in notes or "parent expand" in notes:
             all_issues.append(issue(rel, kind, "review", "parent_expand_verified_needs_human_review", notes))
         if "QUALITY_OVERRIDES" in notes or "score=" in notes:
