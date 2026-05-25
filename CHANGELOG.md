@@ -4,7 +4,31 @@
 
 ## [Unreleased]
 
-### P9 数据质量治理（进行中）
+### P10 查询质量与可用性增强
+
+- P10-B: alias 查询闭环
+  - 新增 `scripts/build_alias_index.py` 与 `data/alias_index.jsonl`（80 条 alias_of 映射）。
+  - `TraceService.trace()` 支持 alias redirect：`alias_id -> target_id -> trace_core`。
+  - `tcm_lookup` / `tcm_trace` 输出透传 `alias_redirect`，Agent 可直接展示标准条目跳转说明。
+  - 新增 `tests/test_p10b_alias_query.py`，覆盖 herb / acupoint alias 查询。
+- P10-C: safety_boundary 全覆盖
+  - 新增 `scripts/p10c_add_safety_boundary.py`，为所有知识条目补学习与安全边界。
+  - 新增 `scripts/p10c_add_acupoint_notice.py`，为全部穴位补来源追溯声明与“仅作学习与来源追溯，不作为针灸操作指导”。
+  - `safety_boundary: 939 / 939`，`acupoint source_trace_notice: 411 / 411`。
+- P10-D: no_source_found 残余治理
+  - 新增 `scripts/p10d_nsf_source_search.py`：对 133 条 no_source_found 做中文正名原始资料检索，命中 0。
+  - 新增 `scripts/p10d_nsf_alias_search.py`：结合 `data/aliases.json` 做别名原始资料检索，命中 0。
+  - 结论：剩余 133 条 no_source_found 在当前倪海厦原始 JSON 中无明确命中，保持 no_source_found，不凭模型记忆补内容。
+- P10-E: body_short 收口
+  - 当前仅剩 1 条 info 级 `body_short`（`knowledge/acupoints/laogong.md`），属换行格式导致的统计提示，不影响查询与追溯。
+- 当前指标：
+  - `verified: 512 / 939`
+  - `candidate: 294 / 939`
+  - `no_source_found: 133 / 939`
+  - `safety_boundary: 939 / 939`
+  - 测试：`84 passed`
+
+### P9 数据质量治理（已完成）
 
 - P9-A: 创建数据质量审计脚本 `scripts/p9_quality_audit.py`，从内容一致性、完整性、准确性等维度检查。
 - P9-A 修复: 解决 `registry_verified_but_frontmatter_not_verified` 313 个严重一致性错误，错误级问题清零。

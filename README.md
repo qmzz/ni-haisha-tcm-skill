@@ -10,12 +10,14 @@
 
 - 🩺 **辨证辅助** — 基于六经辨证和八纲辨证，覆盖 50+ 方剂；输出仅作学习参考
 - 📋 **医案库** — 51篇经典医案（伤寒/金匮/针灸/疑难杂症）
-- 💊 **方剂查询** — 113 首经方，含倪海厦讲解
-- 🌿 **药材库** — 416 味药材（48 味核心完整）
-- 🪡 **穴位库** — 412 个穴位（127 个核心穴位完整）
+- 💊 **方剂查询** — 113 首经方，含倪海厦讲解，verified 全覆盖
+- 🌿 **药材库** — 415 味药材（292 条 verified）
+- 🪡 **穴位库** — 411 个穴位（107 条 verified）
 - 📖 **概念库** — 45 个中医核心概念
+- 🔗 **别名查询** — 80 条 alias 映射，支持别名自动跳转到标准条目
+- 🛡️ **安全边界** — 939 条知识条目统一学习与安全声明
 - 📊 **数据文件** — 症状→方剂映射、概念关系图谱
-- 🖥️ **CLI 工具** — 命令行诊断、查询工具
+- 🖥️ **CLI 工具** — 命令行诊断、查询、追溯、审核工具
 
 ## 🚀 快速开始
 
@@ -254,6 +256,7 @@ python3 cli.py batch-trace 桂枝汤,白头翁汤,大敦
 
 ```bash
 python3 tools/tcm_tools.py tcm_lookup '{"query":"白头翁汤"}'
+python3 tools/tcm_tools.py tcm_lookup '{"query":"zanzhu"}'  # alias 自动跳转到攒竹
 python3 tools/tcm_tools.py tcm_explain_trace '{"query":"白头翁汤"}'
 python3 tools/tcm_tools.py tcm_review_dashboard '{}'
 python3 tools/tcm_tools.py tcm_batch_trace '{"queries":["桂枝汤","白头翁汤"]}'
