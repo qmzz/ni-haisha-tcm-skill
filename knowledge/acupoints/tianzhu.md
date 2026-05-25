@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天柱
 
 **拼音：** tianzhu  

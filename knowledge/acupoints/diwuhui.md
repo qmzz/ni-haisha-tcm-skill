@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 地五会
 
 **定位：** 足背，第 4、5 趾间缝纹端后方  

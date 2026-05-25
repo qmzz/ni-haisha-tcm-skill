@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 五枢
 
 **定位：** 髂前上棘前内侧，脐下 3 寸旁开  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 日月穴 (GB24)
 
 **归经：** 足少阳胆经  

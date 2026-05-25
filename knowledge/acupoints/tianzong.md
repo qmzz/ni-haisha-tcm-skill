@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天宗
 
 **定位：** 肩胛部，冈下窝中央凹陷处  

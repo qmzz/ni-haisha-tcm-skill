@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 至阴
 
 **定位：** 足小趾外侧，距趾甲角 0.1 寸  

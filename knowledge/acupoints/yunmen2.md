@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 云门二
 
 **定位：** 胸前壁外上方，锁骨下窝凹陷处  

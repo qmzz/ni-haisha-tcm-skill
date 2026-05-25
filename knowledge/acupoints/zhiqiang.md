@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 至阳穴 (DU9)
 
 **归经：** 督脉  

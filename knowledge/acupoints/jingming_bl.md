@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 睛明
 
 **定位：** 目内眦内上方眶内侧壁凹陷中  

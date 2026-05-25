@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 龈交
 
 **定位：** 上唇系带与上齿龈交接处  

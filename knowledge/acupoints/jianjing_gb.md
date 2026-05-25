@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 肩井二
 
 **定位：** 大椎与肩峰端连线中点  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 京门穴 (GB25)
 
 **归经：** 足少阳胆经  

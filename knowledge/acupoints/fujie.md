@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 腹结
 
 **定位：** 下腹部，脐中下 1.3 寸，前正中线旁开 4 寸  

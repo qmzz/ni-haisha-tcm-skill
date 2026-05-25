@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 间使穴 (PC5)
 
 **归经：** 手厥阴心包经  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 中都穴 (LR6)
 
 **归经：** 足厥阴肝经  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 髀关
 
 **定位：** 大腿前面，当髂前上棘与髌底外侧端连线上  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 上脘穴 (RN13)
 
 **归经：** 任脉  

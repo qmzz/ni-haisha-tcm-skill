@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 四白
 
 **定位：** 面部，瞳孔直下，眶下孔凹陷处  

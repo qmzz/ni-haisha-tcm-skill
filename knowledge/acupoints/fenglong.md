@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 丰隆穴 (ST40)
 
 **归经：** 足阳明胃经  

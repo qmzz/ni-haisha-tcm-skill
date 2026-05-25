@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 冲阳
 
 **定位：** 足背最高处，拇长伸肌腱与趾长伸肌腱之间，足背动脉搏动处  

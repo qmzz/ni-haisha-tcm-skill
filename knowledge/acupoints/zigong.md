@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 紫宫
 
 **定位：** 前正中线上，天突下 3 寸  

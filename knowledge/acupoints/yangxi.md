@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 阳溪
 
 **定位：** 腕背横纹桡侧，拇短伸肌腱与拇长伸肌腱之间  

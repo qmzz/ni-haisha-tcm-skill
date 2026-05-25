@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 络却二
 
 **定位：** 百会旁开 1.5 寸  

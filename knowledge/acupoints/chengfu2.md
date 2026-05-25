@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 承扶二
 
 **定位：** 臀横纹中央  

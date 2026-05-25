@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 脑空二
 
 **定位：** 风池上 2.25 寸  

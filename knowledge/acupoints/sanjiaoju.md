@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 三焦俞穴 (BL22)
 
 **归经：** 足太阳膀胱经  

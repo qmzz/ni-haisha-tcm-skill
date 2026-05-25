@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 角孙
 
 **定位：** 耳尖直上入发际处  

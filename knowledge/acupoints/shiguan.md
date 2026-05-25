@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 石关
 
 **定位：** 前正中线旁开 0.5 寸，脐中上 3 寸  

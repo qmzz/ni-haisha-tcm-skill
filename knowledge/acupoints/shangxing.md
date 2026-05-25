@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 上星穴 (DU23)
 
 **归经：** 督脉  

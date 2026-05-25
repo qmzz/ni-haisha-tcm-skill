@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 中封二
 
 **定位：** 足背，内踝前，胫骨前肌腱内侧  

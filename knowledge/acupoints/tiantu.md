@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天突穴 (RN22)
 
 **归经：** 任脉  

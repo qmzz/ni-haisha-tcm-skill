@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 魄户
 
 **定位：** 第 3 胸椎棘突下，旁开 3 寸  

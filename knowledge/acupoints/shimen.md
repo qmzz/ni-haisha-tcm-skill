@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 石门
 
 **定位：** 下腹部，前正中线上，脐中下 2 寸  

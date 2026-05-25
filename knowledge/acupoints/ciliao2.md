@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 次髎二
 
 **定位：** 第 2 骶后孔中  

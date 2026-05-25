@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 环跳穴 (GB30)
 
 **归经：** 足少阳胆经  

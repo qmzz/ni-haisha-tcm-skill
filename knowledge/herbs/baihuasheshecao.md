@@ -1,5 +1,10 @@
 ---
 title: "白花蛇舌草"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: candidate
+kind: "herb"
 source: "神农本草经"
 category: "清热解毒药"
 tags: ["清热解毒药", "神农本草经", "中药", "倪海厦"]
@@ -11,9 +16,29 @@ tags: ["清热解毒药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
+trace_status: candidate
+source_refs:
+  - source_file: "倪海夏-汉唐中医方剂讲解.json"
+    page_num: 58
+    quote: "之症，胆汁会逆入到血里面而人身体发黄。 实脾而不能去清热。不是说治疗肝炎用什幺半边莲、白花蛇舌草这 再看我们现在目前治疗胆结石的中西医结合的方子以及温病派 类清热药，说是去病毒杀病毒的药。治疗的病程比较长，如果没有 的方子，他们治疗这些黄症胆结石之症，都是些清热，然后化石， 信心，根本就不能治疗这幺长时间。 但是石头也没有化掉，这是目"
 ---
 
 # 白花蛇舌草
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📌 基础信息
 

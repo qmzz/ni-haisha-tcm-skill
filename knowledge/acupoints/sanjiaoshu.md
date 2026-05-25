@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 三焦俞
 
 **定位：** 第 1 腰椎棘突下，旁开 1.5 寸  

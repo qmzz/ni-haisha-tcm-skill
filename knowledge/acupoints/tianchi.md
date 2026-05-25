@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天池
 
 **定位：** 胸部，第 4 肋间隙，乳头外 1 寸  

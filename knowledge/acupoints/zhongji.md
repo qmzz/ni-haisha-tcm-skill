@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 中极
 
 **定位：** 下腹部，前正中线上，脐中下 4 寸  

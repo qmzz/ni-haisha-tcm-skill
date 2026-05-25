@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 维道
 
 **定位：** 五枢下 0.5 寸  

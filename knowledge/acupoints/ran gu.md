@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 然谷二
 
 **定位：** 足内侧缘，舟骨粗隆下方，赤白肉际  

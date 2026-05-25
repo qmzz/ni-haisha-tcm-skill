@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 四神聪
 
 **定位：** 百会前后左右各旁开 1 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 腹结二
 
 **定位：** 腹部，脐中下 1.3 寸，前正中线旁开 4 寸  

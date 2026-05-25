@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 支沟穴 (SJ6)
 
 **归经：** 手少阳三焦经  

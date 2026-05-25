@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 中渚穴 (SJ3)
 
 **归经：** 手少阳三焦经  

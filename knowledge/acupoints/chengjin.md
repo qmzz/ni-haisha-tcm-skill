@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 承筋
 
 **定位：** 小腿后面正中，委中与昆仑连线上，承山上 1 寸  

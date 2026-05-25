@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 大横二
 
 **定位：** 腹中部，脐中旁开 4 寸  

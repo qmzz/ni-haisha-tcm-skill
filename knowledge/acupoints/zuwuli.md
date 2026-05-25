@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 足五里
 
 **定位：** 气冲直下 3 寸  

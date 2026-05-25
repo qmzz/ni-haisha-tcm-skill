@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 听宫
 
 **定位：** 耳屏前，下颌骨髁突后缘凹陷处  

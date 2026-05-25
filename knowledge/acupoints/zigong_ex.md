@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 子宫
 
 **定位：** 下腹部，脐下 4 寸，前正中线旁开 3 寸  

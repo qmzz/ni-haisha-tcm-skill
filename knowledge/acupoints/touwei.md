@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 头维
 
 **定位：** 头侧部，额角发际上 0.5 寸，头正中线旁 4.5 寸  

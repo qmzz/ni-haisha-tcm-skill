@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天溪
 
 **定位：** 胸外侧部，第 4 肋间隙，前正中线旁开 6 寸  

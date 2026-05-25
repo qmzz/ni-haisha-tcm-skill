@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 臂臑二
 
 **定位：** 臂外侧，曲池与肩髃连线上，曲池上 7 寸  

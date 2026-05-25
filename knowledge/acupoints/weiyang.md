@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 委阳
 
 **定位：** 腘横纹外侧端，股二头肌腱内侧缘  

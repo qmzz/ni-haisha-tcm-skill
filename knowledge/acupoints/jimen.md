@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 箕门
 
 **定位：** 股内侧，血海与冲门连线上，血海上 6 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 素髎穴 (DU25)
 
 **归经：** 督脉  

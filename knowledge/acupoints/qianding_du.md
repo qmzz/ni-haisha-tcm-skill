@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 前顶二
 
 **定位：** 百会前 1.5 寸  

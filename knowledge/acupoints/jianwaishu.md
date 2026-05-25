@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 肩外俞
 
 **定位：** 肩胛区，第 1 胸椎棘突下，后正中线旁开 3 寸  

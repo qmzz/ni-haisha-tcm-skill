@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 囟会
 
 **定位：** 前发际上 2 寸  

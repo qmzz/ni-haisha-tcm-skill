@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 曲垣
 
 **定位：** 肩胛冈内侧端上缘凹陷处  

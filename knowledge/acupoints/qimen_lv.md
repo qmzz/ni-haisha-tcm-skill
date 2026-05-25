@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 期门穴 (LR14)
 
 **归经：** 足厥阴肝经  

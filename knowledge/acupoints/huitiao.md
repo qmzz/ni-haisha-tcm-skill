@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 会阳
 
 **定位：** 尾骨端旁开 0.5 寸  

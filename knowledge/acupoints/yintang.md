@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 印堂
 
 **定位：** 额部，两眉头连线中点  

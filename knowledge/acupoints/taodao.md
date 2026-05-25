@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 陶道
 
 **定位：** 后正中线上，第 1 胸椎棘突下凹陷中  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 三阳络
 
 **定位：** 前臂背面，阳池上 4 寸  

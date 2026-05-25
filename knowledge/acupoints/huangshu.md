@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 肓俞
 
 **定位：** 脐中旁开 0.5 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 胸乡二
 
 **定位：** 胸外侧部，第 3 肋间隙  

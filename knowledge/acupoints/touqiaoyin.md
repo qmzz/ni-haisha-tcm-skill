@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 头窍阴
 
 **定位：** 乳突后上方，完骨上缘  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 筋缩
 
 **定位：** 背部，后正中线上，第 9 胸椎棘突下凹陷中  

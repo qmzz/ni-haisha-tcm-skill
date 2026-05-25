@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 风门
 
 **定位：** 第 2 胸椎棘突下，旁开 1.5 寸  

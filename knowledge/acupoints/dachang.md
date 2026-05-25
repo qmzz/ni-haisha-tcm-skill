@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 大迎
 
 **定位：** 下颌角前方，咬肌附着部前缘，面动脉搏动处  

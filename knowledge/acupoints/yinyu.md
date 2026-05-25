@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 殷门
 
 **定位：** 大腿后面，承扶与委中连线上，承扶下 6 寸  

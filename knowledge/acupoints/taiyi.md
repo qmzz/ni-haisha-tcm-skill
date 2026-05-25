@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 太乙
 
 **定位：** 上腹部，脐中上 2 寸，前正中线旁开 2 寸  

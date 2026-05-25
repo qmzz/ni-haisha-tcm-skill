@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 承山穴 (BL57)
 
 **归经：** 足太阳膀胱经  

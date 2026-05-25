@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 冲门
 
 **定位：** 腹股沟外侧，距前正中线 3.5 寸  

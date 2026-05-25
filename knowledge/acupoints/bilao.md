@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 臂臑外
 
 **定位：** 臂外侧曲池上 5 寸  

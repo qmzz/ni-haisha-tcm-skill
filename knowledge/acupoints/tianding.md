@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天鼎
 
 **定位：** 颈外侧部，胸锁乳突肌后缘，结喉旁 1 寸  

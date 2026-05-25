@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 阴包
 
 **定位：** 股内侧，当股骨内上髁上 4 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 中庭
 
 **定位：** 前正中线上，平第 5 肋间隙  

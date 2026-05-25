@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 厥阴俞
 
 **定位：** 第 4 胸椎棘突下，旁开 1.5 寸  

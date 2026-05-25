@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 地机
 
 **定位：** 小腿内侧，内踝尖上 9 寸，胫骨内侧缘后方  

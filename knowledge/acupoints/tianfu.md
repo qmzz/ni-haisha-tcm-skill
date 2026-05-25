@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天府
 
 **定位：** 臂内侧面，肱二头肌桡侧缘，腋前纹头下 3 寸  

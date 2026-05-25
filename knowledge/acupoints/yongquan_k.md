@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 涌泉穴 (KI1)
 
 **归经：** 足少阴肾经  

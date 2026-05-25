@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 扶突
 
 **定位：** 颈外侧部，结喉旁 3 寸，胸锁乳突肌前后缘之间  

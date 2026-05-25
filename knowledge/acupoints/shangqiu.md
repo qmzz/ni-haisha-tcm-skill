@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 商丘
 
 **定位：** 足内踝前下方凹陷中  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 定喘
 
 **定位：** 第 7 颈椎棘突下，旁开 0.5 寸  

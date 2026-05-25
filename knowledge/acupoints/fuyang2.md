@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 跗阳二
 
 **定位：** 外踝尖上 3 寸  

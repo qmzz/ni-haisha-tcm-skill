@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 仆参
 
 **定位：** 跟骨外侧，昆仑直下凹陷中  

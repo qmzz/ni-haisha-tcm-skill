@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 络却
 
 **定位：** 头部，百会旁开 1.5 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 鱼际
 
 **定位：** 手拇指本节第 1 掌指关节后凹陷处  

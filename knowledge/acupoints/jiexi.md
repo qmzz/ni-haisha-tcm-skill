@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 解溪穴 (ST41)
 
 **归经：** 足阳明胃经  

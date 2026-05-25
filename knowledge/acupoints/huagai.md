@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 华盖
 
 **定位：** 前正中线上，天突下 2 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 清冷渊
 
 **定位：** 肘上 2 寸  

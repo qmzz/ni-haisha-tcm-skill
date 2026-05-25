@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天容
 
 **定位：** 颈外侧，下颌角后方，胸锁乳突肌前缘  

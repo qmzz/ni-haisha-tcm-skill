@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 大包二
 
 **定位：** 侧胸部，腋中线上，第 6 肋间隙  

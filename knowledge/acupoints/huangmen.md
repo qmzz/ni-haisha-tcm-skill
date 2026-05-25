@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 肓门
 
 **定位：** 第 1 腰椎棘突下，旁开 3 寸  

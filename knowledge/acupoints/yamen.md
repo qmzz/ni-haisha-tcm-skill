@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 哑门
 
 **定位：** 后发际正中直上 0.5 寸  

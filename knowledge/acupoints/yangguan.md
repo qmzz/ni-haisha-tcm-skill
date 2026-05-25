@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 腰阳关
 
 **定位：** 腰部，后正中线上，第 4 腰椎棘突下凹陷中  

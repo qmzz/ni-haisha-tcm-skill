@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天泉
 
 **定位：** 臂内侧，腋前纹头下 2 寸，肱二头肌长短头之间  

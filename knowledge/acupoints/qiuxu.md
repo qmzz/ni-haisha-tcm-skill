@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 丘墟穴 (GB40)
 
 **归经：** 足少阳胆经  

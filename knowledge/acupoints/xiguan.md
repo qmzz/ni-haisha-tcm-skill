@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 膝关穴 (LR7)
 
 **归经：** 足厥阴肝经  

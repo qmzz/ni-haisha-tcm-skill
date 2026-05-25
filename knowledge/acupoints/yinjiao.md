@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 龈交穴 (DU28)
 
 **归经：** 督脉  

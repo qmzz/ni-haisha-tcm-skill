@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 中都二
 
 **定位：** 内踝上 7 寸  

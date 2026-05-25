@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 颧髎
 
 **定位：** 面部，目外眦直下，颧骨下缘凹陷中  

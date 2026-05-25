@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 五处
 
 **定位：** 头部，前发际上 1 寸，旁开 1.5 寸  

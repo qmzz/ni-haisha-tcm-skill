@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 腹哀二
 
 **定位：** 上腹部，脐中上 3 寸，前正中线旁开 4 寸  

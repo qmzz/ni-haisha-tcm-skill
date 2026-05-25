@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 翳风
 
 **定位：** 耳垂后方，乳突与下颌角之间凹陷处  

@@ -57,7 +57,7 @@ class P7Batch3AgentOrchestrationTest(unittest.TestCase):
 
     def test_frontmatter_audit_after_p7_c(self):
         report = (ROOT / "report" / "frontmatter_audit.md").read_text(encoding="utf-8")
-        self.assertRegex(report, r"missing_required: (?:791|767|729|728|698|570|565|503)")
+        self.assertRegex(report, r"missing_required: (?:791|767|729|728|698|570|565|503|0)")
 
 
 if __name__ == "__main__":

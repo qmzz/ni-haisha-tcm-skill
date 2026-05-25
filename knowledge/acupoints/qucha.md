@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 曲差
 
 **定位：** 头部，神庭旁开 1.5 寸，入发际 0.5 寸  

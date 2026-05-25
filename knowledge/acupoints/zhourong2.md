@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 周荣二
 
 **定位：** 胸外侧部，第 2 肋间隙  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 跗阳
 
 **定位：** 外踝尖上 3 寸，腓骨前缘  

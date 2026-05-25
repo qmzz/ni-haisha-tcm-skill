@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 间使
 
 **定位：** 前臂掌侧，腕横纹上 3 寸，掌长肌腱与桡侧腕屈肌腱之间  

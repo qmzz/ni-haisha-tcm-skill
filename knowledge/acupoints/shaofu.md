@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 少府
 
 **定位：** 手掌面，第 4、5 掌骨之间，握拳时小指尖处  

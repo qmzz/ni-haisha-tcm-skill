@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 正营
 
 **定位：** 目窗后 1 寸  

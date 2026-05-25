@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 厉兑二
 
 **定位：** 第 2 趾末节外侧，距趾甲角 0.1 寸  

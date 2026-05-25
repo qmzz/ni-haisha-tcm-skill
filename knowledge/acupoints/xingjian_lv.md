@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 行间穴 (LR2)
 
 **归经：** 足厥阴肝经  

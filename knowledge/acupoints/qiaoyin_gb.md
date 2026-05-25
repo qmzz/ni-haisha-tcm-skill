@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 足窍阴
 
 **定位：** 第 4 趾外侧，距趾甲角 0.1 寸  

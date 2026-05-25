@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 阳纲
 
 **定位：** 第 10 胸椎棘突下，旁开 1.5 寸  

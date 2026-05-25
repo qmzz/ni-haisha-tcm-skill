@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 通谷
 
 **定位：** 前发际上 1 寸，神庭旁开 1.5 寸  

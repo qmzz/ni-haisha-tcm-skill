@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 阴交二
 
 **定位：** 前正中线上，脐下 1 寸  

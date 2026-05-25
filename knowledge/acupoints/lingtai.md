@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 灵台
 
 **定位：** 后正中线上，第 6 胸椎棘突下凹陷中  

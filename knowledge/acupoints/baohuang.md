@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 胞肓
 
 **定位：** 第 2 骶后孔平，旁开 3 寸  

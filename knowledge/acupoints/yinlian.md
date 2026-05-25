@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 阴廉
 
 **定位：** 气冲直下 2 寸  

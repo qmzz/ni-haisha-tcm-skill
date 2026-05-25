@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 犊鼻
 
 **定位：** 髌骨下缘，髌韧带外侧凹陷中  

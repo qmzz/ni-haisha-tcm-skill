@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 交信二
 
 **定位：** 太溪上 2 寸，复溜前 0.5 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 巨髎
 
 **定位：** 面部，瞳孔直下，平鼻翼下缘处  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 滑肉门
 
 **定位：** 上腹部，脐中上 1 寸，前正中线旁开 2 寸  

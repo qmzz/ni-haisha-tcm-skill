@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 膝阳关
 
 **定位：** 股骨外上髁上方凹陷中  

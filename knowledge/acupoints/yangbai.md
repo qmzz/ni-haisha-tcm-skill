@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 阳白
 
 **定位：** 瞳孔直上，眉上 1 寸  

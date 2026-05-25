@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 人迎
 
 **定位：** 颈部，喉结旁 1.5 寸，胸锁乳突肌前缘，颈总动脉搏动处  

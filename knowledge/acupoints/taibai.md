@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 太白
 
 **定位：** 足内侧缘，足大趾本节第 1 跖趾关节后下方  

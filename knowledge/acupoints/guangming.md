@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 光明
 
 **定位：** 外踝尖上 5 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 梁丘二
 
 **定位：** 髌底外上缘上 2 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 耳神门
 
 **定位：** 耳郭上部三角窝后 1/3 处  

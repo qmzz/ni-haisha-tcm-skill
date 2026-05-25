@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 照海穴 (KI6)
 
 **归经：** 足少阴肾经  

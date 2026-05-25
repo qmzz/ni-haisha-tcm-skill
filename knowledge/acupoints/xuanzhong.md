@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 悬钟穴 (GB39)
 
 **归经：** 足少阳胆经  

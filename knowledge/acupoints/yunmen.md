@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 云门
 
 **定位：** 胸前壁外上方，肩胛骨突上方  

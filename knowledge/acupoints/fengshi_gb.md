@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 风市二
 
 **定位：** 大腿外侧中线，腘横纹上 7 寸  

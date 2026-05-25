@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 小肠俞穴 (BL27)
 
 **归经：** 足太阳膀胱经  

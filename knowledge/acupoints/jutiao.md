@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 居髎
 
 **定位：** 髂前上棘与股骨大转子高点连线中点  

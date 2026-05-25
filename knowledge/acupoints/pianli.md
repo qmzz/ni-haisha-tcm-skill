@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 偏历
 
 **定位：** 前臂背面桡侧，阳溪与曲池连线上，腕横纹上 3 寸  

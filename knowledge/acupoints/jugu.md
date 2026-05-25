@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 巨骨
 
 **定位：** 肩上部，锁骨肩峰端与肩胛冈之间凹陷中  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 太溪穴 (KI3)
 
 **归经：** 足少阴肾经  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 阴谷穴 (KI10)
 
 **归经：** 足少阴肾经  

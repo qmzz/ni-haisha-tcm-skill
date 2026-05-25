@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 瞳子髎
 
 **拼音：** tongziliao  

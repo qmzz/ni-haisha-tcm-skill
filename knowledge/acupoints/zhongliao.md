@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 中髎穴 (BL33)
 
 **归经：** 足太阳膀胱经  

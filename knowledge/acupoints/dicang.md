@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 地仓
 
 **定位：** 面部，口角外侧，上直瞳孔  

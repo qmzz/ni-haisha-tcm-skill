@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 下巨虚
 
 **定位：** 上巨虚下 3 寸  

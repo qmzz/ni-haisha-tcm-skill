@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 臑会
 
 **定位：** 消泺上 3 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 脑户
 
 **定位：** 后发际正中直上 2.5 寸  

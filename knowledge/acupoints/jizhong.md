@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 脊中
 
 **定位：** 背部，后正中线上，第 11 胸椎棘突下凹陷中  

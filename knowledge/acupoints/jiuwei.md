@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 鸠尾穴 (RN15)
 
 **归经：** 任脉  

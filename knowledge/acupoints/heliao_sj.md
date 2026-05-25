@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 和髎
 
 **定位：** 耳前，鬓发后缘，颞浅动脉后缘  

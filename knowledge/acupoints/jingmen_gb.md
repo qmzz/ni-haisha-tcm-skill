@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 京门二
 
 **定位：** 第 12 肋骨游离端下方  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 郄门
 
 **定位：** 前臂掌侧，腕横纹上 5 寸，掌长肌腱与桡侧腕屈肌腱之间  

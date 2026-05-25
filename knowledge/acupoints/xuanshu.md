@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 悬枢
 
 **定位：** 腰部，后正中线上，第 1 腰椎棘突下凹陷中  

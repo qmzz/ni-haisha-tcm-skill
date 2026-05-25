@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 上星二
 
 **定位：** 前发际上 1 寸  

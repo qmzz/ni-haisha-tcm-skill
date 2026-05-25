@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 束骨
 
 **定位：** 足外侧，第 5 趾跖关节后方，赤白肉际处  

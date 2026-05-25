@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 腰痛点
 
 **定位：** 手背第 2、3 和第 4、5 掌骨间近腕处  

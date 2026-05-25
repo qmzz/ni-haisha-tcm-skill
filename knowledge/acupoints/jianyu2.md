@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 肩髃二
 
 **定位：** 肩部，肩峰前下方凹陷处  

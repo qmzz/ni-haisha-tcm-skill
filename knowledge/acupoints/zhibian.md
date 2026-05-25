@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 秩边
 
 **定位：** 第 4 骶后孔平，旁开 3 寸  

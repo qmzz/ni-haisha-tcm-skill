@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 风池穴 (GB20)
 
 **归经：** 足少阳胆经  

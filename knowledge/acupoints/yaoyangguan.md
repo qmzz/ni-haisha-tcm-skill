@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 腰阳关穴 (DU3)
 
 **归经：** 督脉  

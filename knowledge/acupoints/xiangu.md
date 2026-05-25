@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 陷谷
 
 **定位：** 足背，第 2、3 跖骨结合部前方凹陷中  

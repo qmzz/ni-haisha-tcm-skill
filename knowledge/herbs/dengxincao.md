@@ -1,5 +1,10 @@
 ---
 title: "灯心草"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: candidate
+kind: "herb"
 source: "待考"
 category: "待考"
 tags: ["中药", "倪海厦"]
@@ -11,9 +16,29 @@ tags: ["中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
+trace_status: candidate
+source_refs:
+  - source_file: "04【视频同步文稿】人-伤寒论（可打印）.json"
+    page_num: 143
+    quote: "很好。分消汤：苍术三、白术三、茯苓三、陈皮二、厚朴二。 虚症的时候用补气建中汤，在金匮谈到，治肝先实脾。实症跟虚症，苍术、 白术、茯苓、陈皮、厚朴这五味药是相同的。实症加香附子二，猪苓二，泽泻二， 实症用枳实一，大腹皮一，西砂仁一，木香一，灯心草一把，灯心草非常轻，它 是包好的，一把还不到一钱。干姜一，生姜一。这是实症。分消汤如果把枳实，"
 ---
 
 # 灯心草
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📌 基础信息
 

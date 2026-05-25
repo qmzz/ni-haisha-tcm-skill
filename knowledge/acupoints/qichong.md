@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 气冲
 
 **定位：** 腹股沟部，脐中下 5 寸，前正中线旁开 2 寸  

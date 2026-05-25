@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 阳辅
 
 **定位：** 外踝尖上 4 寸，腓骨前缘  

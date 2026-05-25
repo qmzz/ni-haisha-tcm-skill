@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 白环俞
 
 **定位：** 第 4 骶后孔旁开 1.5 寸  

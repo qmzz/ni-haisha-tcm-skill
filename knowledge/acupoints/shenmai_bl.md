@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 申脉二
 
 **定位：** 外踝直下凹陷中  

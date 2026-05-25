@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 目窗
 
 **定位：** 头临泣后 1 寸  

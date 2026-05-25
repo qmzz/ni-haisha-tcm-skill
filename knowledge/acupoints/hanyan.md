@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 颔厌
 
 **定位：** 头维后下方，鬓发中  

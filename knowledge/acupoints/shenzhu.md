@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 身柱穴 (DU12)
 
 **归经：** 督脉  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 大都
 
 **定位：** 足内侧缘，足大趾本节第 1 跖趾关节前下方  

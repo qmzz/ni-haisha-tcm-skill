@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 昆仑二
 
 **定位：** 外踝尖与跟腱之间凹陷中  

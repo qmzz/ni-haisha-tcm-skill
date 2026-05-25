@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 经渠
 
 **定位：** 前臂掌面桡侧，桡骨茎突与桡动脉之间，腕横纹上 1 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 中封穴 (LR4)
 
 **归经：** 足厥阴肝经  

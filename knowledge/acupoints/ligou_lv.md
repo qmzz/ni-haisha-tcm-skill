@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 蠡沟穴 (LR5)
 
 **归经：** 足厥阴肝经  

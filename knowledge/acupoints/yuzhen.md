@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 玉枕
 
 **定位：** 后头部，枕外粗隆上缘外侧凹陷处  

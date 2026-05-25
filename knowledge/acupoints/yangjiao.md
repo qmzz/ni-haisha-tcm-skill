@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 阳交
 
 **定位：** 外踝尖上 7 寸，腓骨后缘  

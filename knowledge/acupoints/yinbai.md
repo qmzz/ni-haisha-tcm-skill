@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 隐白
 
 **定位：** 足大趾末节内侧，距趾甲角 0.1 寸  

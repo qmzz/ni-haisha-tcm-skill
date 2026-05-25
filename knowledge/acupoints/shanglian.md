@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 上廉
 
 **定位：** 前臂背面桡侧，阳溪与曲池连线上，肘横纹下 3 寸  

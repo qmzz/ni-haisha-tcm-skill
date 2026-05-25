@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 足通谷
 
 **定位：** 足外侧，第 5 趾跖关节前方，赤白肉际处  

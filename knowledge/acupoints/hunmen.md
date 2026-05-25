@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 魂门
 
 **定位：** 第 9 胸椎棘突下，旁开 3 寸  

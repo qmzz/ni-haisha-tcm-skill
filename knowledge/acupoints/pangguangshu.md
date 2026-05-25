@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 膀胱俞穴 (BL28)
 
 **归经：** 足太阳膀胱经  

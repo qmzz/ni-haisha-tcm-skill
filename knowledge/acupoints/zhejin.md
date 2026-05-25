@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 辄筋
 
 **定位：** 第 4 肋间隙，乳头直下旁开  

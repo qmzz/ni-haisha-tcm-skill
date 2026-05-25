@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 大肠俞穴 (BL25)
 
 **归经：** 足太阳膀胱经  

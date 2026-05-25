@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 曲泉二
 
 **定位：** 膝内侧横纹内侧端  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 府舍
 
 **定位：** 腹部，脐中下 4.3 寸，前正中线旁开 4 寸  

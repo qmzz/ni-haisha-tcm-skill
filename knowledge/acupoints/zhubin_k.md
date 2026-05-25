@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 筑宾二
 
 **定位：** 太溪上 5 寸，跟腱前缘  

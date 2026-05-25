@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 阴市
 
 **定位：** 大腿前面，髂前上棘与髌底外侧端连线上，髌底上 3 寸  

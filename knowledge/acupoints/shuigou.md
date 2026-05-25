@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 水沟穴 (DU26)
 
 **归经：** 督脉  

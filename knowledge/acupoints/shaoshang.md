@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 少商
 
 **定位：** 手拇指末节桡侧，距指甲角 0.1 寸  

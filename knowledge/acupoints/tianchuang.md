@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天窗
 
 **定位：** 颈外侧，扶突后，与喉结相平  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 中府
 
 **定位：** 胸前壁外上方，云门下 1 寸  

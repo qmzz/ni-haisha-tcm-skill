@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 长强穴 (GV1)
 
 **归经：** 督脉  

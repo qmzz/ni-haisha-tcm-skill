@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 本神
 
 **定位：** 前发际上 0.5 寸，神庭旁开 3 寸  

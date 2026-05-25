@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 水突
 
 **定位：** 颈部，胸锁乳突肌前缘，人迎与气舍连线中点  

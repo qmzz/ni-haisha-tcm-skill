@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 少冲
 
 **定位：** 小指末节桡侧，距指甲角 0.1 寸  

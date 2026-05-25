@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 申脉穴 (BL62)
 
 **归经：** 足太阳膀胱经  

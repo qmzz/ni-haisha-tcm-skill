@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 章门二
 
 **定位：** 第 11 肋游离端下方  

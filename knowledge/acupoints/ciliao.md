@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 次髎穴 (BL32)
 
 **归经：** 足太阳膀胱经  

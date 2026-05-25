@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 悬颅
 
 **定位：** 头部，角孙上方  

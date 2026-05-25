@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 消泺
 
 **定位：** 肘与肩髎连线上，肘上 5 寸  

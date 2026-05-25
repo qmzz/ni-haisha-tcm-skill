@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 夹脊
 
 **定位：** 第 1 胸椎至第 5 腰椎两旁各 0.5 寸  

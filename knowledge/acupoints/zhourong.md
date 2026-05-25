@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 周荣
 
 **定位：** 胸外侧部，第 2 肋间隙，前正中线旁开 6 寸  

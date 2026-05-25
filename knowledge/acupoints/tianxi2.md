@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 天溪二
 
 **定位：** 胸外侧部，第 4 肋间隙  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 太冲穴 (LR3)
 
 **归经：** 足厥阴肝经  

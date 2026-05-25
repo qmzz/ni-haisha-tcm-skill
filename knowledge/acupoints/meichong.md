@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 眉冲
 
 **定位：** 头部，攒竹直上入发际 0.5 寸  

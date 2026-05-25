@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 脑空
 
 **定位：** 风池上 2.25 寸，枕骨下  

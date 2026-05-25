@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 肩髎
 
 **定位：** 肩峰后下方凹陷处  

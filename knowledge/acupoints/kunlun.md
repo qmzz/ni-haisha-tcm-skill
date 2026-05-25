@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 昆仑穴 (BL60)
 
 **归经：** 足太阳膀胱经  

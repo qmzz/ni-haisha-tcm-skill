@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 攒竹
 
 **定位：** 眉头陷中，眶上切迹处  

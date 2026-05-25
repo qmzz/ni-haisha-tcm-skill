@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 胃俞穴 (BL21)
 
 **归经：** 足太阳膀胱经  

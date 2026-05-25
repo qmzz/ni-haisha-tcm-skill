@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 志室
 
 **定位：** 第 2 腰椎棘突下，旁开 3 寸  

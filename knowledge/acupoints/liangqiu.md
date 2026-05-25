@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 梁丘穴 (ST34)
 
 **归经：** 足阳明胃经  

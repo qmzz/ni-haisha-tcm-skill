@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 京骨
 
 **定位：** 足外侧，第 5 跖骨粗隆下方，赤白肉际处  

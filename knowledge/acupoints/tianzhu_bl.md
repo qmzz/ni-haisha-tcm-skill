@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 天柱
 
 **定位：** 项后发际正中旁开 1.3 寸  

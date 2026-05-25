@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 太乙二
 
 **定位：** 腹中部，脐中旁 2 寸（扩展占位）  

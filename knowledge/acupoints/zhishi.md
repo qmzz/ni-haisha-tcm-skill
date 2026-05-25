@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 志室穴 (BL52)
 
 **归经：** 足太阳膀胱经  

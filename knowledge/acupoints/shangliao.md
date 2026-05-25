@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 上髎
 
 **定位：** 第 1 骶后孔中  

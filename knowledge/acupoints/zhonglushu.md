@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 中膂俞
 
 **定位：** 第 3 骶后孔旁开 1.5 寸  

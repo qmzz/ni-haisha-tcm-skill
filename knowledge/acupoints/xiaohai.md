@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 小海穴 (SI8)
 
 **归经：** 手太阳小肠经  

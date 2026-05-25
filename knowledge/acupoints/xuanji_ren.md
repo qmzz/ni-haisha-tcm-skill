@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 璇玑二
 
 **定位：** 前正中线上，天突下 1 寸  

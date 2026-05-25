@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 建里二
 
 **定位：** 前正中线上，脐上 3 寸  

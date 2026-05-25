@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 太阳
 
 **定位：** 眉梢与目外眦之间向后约 1 寸凹陷中  

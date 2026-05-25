@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 天髎
 
 **定位：** 肩胛冈上角凹陷中  

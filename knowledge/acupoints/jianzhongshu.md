@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 肩中俞
 
 **定位：** 肩胛区，第 7 颈椎棘突下，后正中线旁开 2 寸  

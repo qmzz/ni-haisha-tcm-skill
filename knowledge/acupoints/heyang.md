@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 合阳
 
 **定位：** 小腿后面，委中与承山连线上，委中下 2 寸  

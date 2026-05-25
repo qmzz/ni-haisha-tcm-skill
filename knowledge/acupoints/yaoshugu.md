@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 腰俞
 
 **定位：** 骶部，当骶管裂孔处  

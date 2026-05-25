@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 金门
 
 **定位：** 外踝前下方，骰骨下缘凹陷中  

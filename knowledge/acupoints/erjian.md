@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 二间
 
 **定位：** 手食指本节第 2 掌指关节前桡侧凹陷处  

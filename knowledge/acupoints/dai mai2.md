@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 带脉二
 
 **定位：** 第 11 肋端下，脐水平线交点  

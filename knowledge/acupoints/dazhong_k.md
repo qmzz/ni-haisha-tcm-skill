@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 大钟二
 
 **定位：** 内踝后下方，跟腱附着部内侧前方  

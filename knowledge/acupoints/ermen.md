@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 耳门
 
 **定位：** 耳屏上切迹前，下颌髁突后缘凹陷中  

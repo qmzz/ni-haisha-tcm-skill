@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 五里
 
 **定位：** 臂外侧面，曲池上 3 寸  

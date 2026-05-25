@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 秉风
 
 **定位：** 肩胛冈中点上方凹陷处  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: no_source_found
+---
+
 # 内庭二
 
 **定位：** 足背第 2、3 趾间缝纹端  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 神庭
 
 **定位：** 头部，前发际正中直上 0.5 寸  

@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 三间
 
 **定位：** 手食指本节第 2 掌指关节后桡侧凹陷处  

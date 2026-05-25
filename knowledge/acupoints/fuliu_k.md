@@ -1,3 +1,9 @@
+---
+title: ""
+kind: acupoint
+trace_status: unverified
+---
+
 # 复溜穴 (KI7)
 
 **归经：** 足少阴肾经  
