@@ -2,6 +2,7 @@
 title: "黑芝麻"
 kind: herb
 trace_status: no_source_found
+alias_of: "heizhima"
 ---
 
 # 黑芝麻

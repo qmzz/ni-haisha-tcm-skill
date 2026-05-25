@@ -2,6 +2,7 @@
 title: "攒竹"
 kind: acupoint
 trace_status: unverified
+alias_of: "cuanzhu"
 ---
 
 # 攒竹

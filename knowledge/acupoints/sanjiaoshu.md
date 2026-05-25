@@ -2,6 +2,7 @@
 title: "三焦俞"
 kind: acupoint
 trace_status: unverified
+alias_of: "sanjiaoju"
 ---
 
 # 三焦俞

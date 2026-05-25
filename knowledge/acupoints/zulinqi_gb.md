@@ -2,6 +2,7 @@
 title: "足临泣"
 kind: acupoint
 trace_status: unverified
+alias_of: "zulinqi"
 ---
 
 # 足临泣穴 (GB41)

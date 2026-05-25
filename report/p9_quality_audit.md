@@ -6,16 +6,15 @@
 
 ## 总览
 
-- issues: 113
-- by_level: {'info': 7, 'warning': 30, 'review': 76}
-- by_kind: {'acupoint': 78, 'herb': 35}
+- issues: 83
+- by_level: {'info': 7, 'review': 76}
+- by_kind: {'acupoint': 64, 'herb': 19}
 
 ## 问题类型 Top
 
 | level | code | count |
 |-------|------|-------|
 | review | parent_expand_verified_needs_human_review | 51 |
-| warning | duplicate_title | 30 |
 | review | low_score_verified_needs_review | 25 |
 | info | body_short | 7 |
 
@@ -30,36 +29,6 @@
 | info | acupoint | body_short | knowledge/acupoints/yutang.md | lines=9 |
 | info | acupoint | body_short | knowledge/acupoints/zhongzhu.md | lines=8 |
 | info | acupoint | body_short | knowledge/acupoints/zigong.md | lines=9 |
-| warning | herb | duplicate_title | knowledge/herbs/aishe.md | knowledge/herbs/aishe.md, knowledge/herbs/aoye.md |
-| warning | herb | duplicate_title | knowledge/herbs/aoye.md | knowledge/herbs/aishe.md, knowledge/herbs/aoye.md |
-| warning | herb | duplicate_title | knowledge/herbs/aoshugen.md | knowledge/herbs/aoshugen.md, knowledge/herbs/nuodaogenxu.md |
-| warning | herb | duplicate_title | knowledge/herbs/nuodaogenxu.md | knowledge/herbs/aoshugen.md, knowledge/herbs/nuodaogenxu.md |
-| warning | herb | duplicate_title | knowledge/herbs/diji.md | knowledge/herbs/diji.md, knowledge/herbs/diyu.md |
-| warning | herb | duplicate_title | knowledge/herbs/diyu.md | knowledge/herbs/diji.md, knowledge/herbs/diyu.md |
-| warning | herb | duplicate_title | knowledge/herbs/fupenzi.md | knowledge/herbs/fupenzi.md, knowledge/herbs/wuyaozi.md |
-| warning | herb | duplicate_title | knowledge/herbs/wuyaozi.md | knowledge/herbs/fupenzi.md, knowledge/herbs/wuyaozi.md |
-| warning | herb | duplicate_title | knowledge/herbs/guya.md | knowledge/herbs/guya.md, knowledge/herbs/shandou.md |
-| warning | herb | duplicate_title | knowledge/herbs/shandou.md | knowledge/herbs/guya.md, knowledge/herbs/shandou.md |
-| warning | herb | duplicate_title | knowledge/herbs/hechezi.md | knowledge/herbs/hechezi.md, knowledge/herbs/heizhima.md |
-| warning | herb | duplicate_title | knowledge/herbs/heizhima.md | knowledge/herbs/hechezi.md, knowledge/herbs/heizhima.md |
-| warning | herb | duplicate_title | knowledge/herbs/shijunzi.md | knowledge/herbs/shijunzi.md, knowledge/herbs/shizhangzi.md |
-| warning | herb | duplicate_title | knowledge/herbs/shizhangzi.md | knowledge/herbs/shijunzi.md, knowledge/herbs/shizhangzi.md |
-| warning | herb | duplicate_title | knowledge/herbs/zirantong.md | knowledge/herbs/zirantong.md, knowledge/herbs/zirun.md |
-| warning | herb | duplicate_title | knowledge/herbs/zirun.md | knowledge/herbs/zirantong.md, knowledge/herbs/zirun.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/cuanzhu.md | knowledge/acupoints/cuanzhu.md, knowledge/acupoints/zanzhu.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/zanzhu.md | knowledge/acupoints/cuanzhu.md, knowledge/acupoints/zanzhu.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/jian Shi.md | knowledge/acupoints/jian Shi.md, knowledge/acupoints/jianshi.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/jianshi.md | knowledge/acupoints/jian Shi.md, knowledge/acupoints/jianshi.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/sanjiaoju.md | knowledge/acupoints/sanjiaoju.md, knowledge/acupoints/sanjiaoshu.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/sanjiaoshu.md | knowledge/acupoints/sanjiaoju.md, knowledge/acupoints/sanjiaoshu.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/taichong.md | knowledge/acupoints/taichong.md, knowledge/acupoints/taichong_lv.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/taichong_lv.md | knowledge/acupoints/taichong.md, knowledge/acupoints/taichong_lv.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/xiabai.md | knowledge/acupoints/xiabai.md, knowledge/acupoints/xiamen.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/xiamen.md | knowledge/acupoints/xiabai.md, knowledge/acupoints/xiamen.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/yangguan.md | knowledge/acupoints/yangguan.md, knowledge/acupoints/yaoyangguan.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/yaoyangguan.md | knowledge/acupoints/yangguan.md, knowledge/acupoints/yaoyangguan.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/zulinqi.md | knowledge/acupoints/zulinqi.md, knowledge/acupoints/zulinqi_gb.md |
-| warning | acupoint | duplicate_title | knowledge/acupoints/zulinqi_gb.md | knowledge/acupoints/zulinqi.md, knowledge/acupoints/zulinqi_gb.md |
 | review | herb | low_score_verified_needs_review | knowledge/herbs/baiguo.md | P8-D verified via QUALITY_OVERRIDES (score=50, threshold=50) |
 | review | herb | low_score_verified_needs_review | knowledge/herbs/baihuasheshecao.md | P8-D verified via QUALITY_OVERRIDES (score=59, threshold=50) |
 | review | herb | low_score_verified_needs_review | knowledge/herbs/banlangen.md | P8-D verified via QUALITY_OVERRIDES (score=53, threshold=50) |
@@ -123,3 +92,16 @@
 | review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/taiyi2.md | P8-E parent name expand trace (acupoint_parent_expand, score=77, variant=太乙) |
 | review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/tianxi2.md | P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=天溪) |
 | review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/xiongxiang2.md | P8-E parent name expand trace (acupoint_parent_expand, score=77, variant=胸乡) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/xuanji_ren.md | P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=璇玑) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/yunmen2.md | P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=云门) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/yutang_ren.md | P8-E parent name expand trace (acupoint_parent_expand, score=77, variant=玉堂) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/zhangmen_lv.md | P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=章门) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/zhongdu_lv.md | P8-E parent name expand trace (acupoint_parent_expand, score=77, variant=中都) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/zhongfeng_lv.md | P8-E parent name expand trace (acupoint_parent_expand, score=77, variant=中封) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/zhongwan_ren.md | P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=中脘) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/zhourong2.md | P8-E parent name expand trace (acupoint_parent_expand, score=77, variant=周荣) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/zhubin_k.md | P8-E parent name expand trace (acupoint_parent_expand, score=77, variant=筑宾) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/zigong_ren.md | P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=紫宫) |
+| review | acupoint | parent_expand_verified_needs_human_review | knowledge/acupoints/zusanli_st.md | P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=足三里) |
+| review | herb | parent_expand_verified_needs_human_review | knowledge/herbs/chuanyubeimu.md | P8-E parent name expand trace (herb_parent_expand, score=100, variant=贝母) |
+| review | herb | parent_expand_verified_needs_human_review | knowledge/herbs/zhushagen.md | P8-E parent name expand trace (herb_parent_expand, score=100, variant=朱砂) |

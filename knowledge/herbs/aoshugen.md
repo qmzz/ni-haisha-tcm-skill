@@ -2,6 +2,7 @@
 title: "糯稻根须"
 kind: herb
 trace_status: no_source_found
+alias_of: "nuodaogenxu"
 ---
 
 # 糯稻根须

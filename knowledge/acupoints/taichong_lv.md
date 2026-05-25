@@ -2,6 +2,7 @@
 title: "太冲"
 kind: acupoint
 trace_status: unverified
+alias_of: "taichong"
 ---
 
 # 太冲穴 (LR3)

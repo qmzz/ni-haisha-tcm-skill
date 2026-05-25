@@ -2,6 +2,7 @@
 title: "间使"
 kind: acupoint
 trace_status: unverified
+alias_of: "jianshi"
 ---
 
 # 间使

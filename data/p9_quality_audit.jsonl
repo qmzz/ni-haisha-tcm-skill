@@ -5,36 +5,6 @@
 {"file": "knowledge/acupoints/yutang.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=9"}
 {"file": "knowledge/acupoints/zhongzhu.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=8"}
 {"file": "knowledge/acupoints/zigong.md", "kind": "acupoint", "level": "info", "code": "body_short", "detail": "lines=9"}
-{"file": "knowledge/herbs/aishe.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/aishe.md, knowledge/herbs/aoye.md"}
-{"file": "knowledge/herbs/aoye.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/aishe.md, knowledge/herbs/aoye.md"}
-{"file": "knowledge/herbs/aoshugen.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/aoshugen.md, knowledge/herbs/nuodaogenxu.md"}
-{"file": "knowledge/herbs/nuodaogenxu.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/aoshugen.md, knowledge/herbs/nuodaogenxu.md"}
-{"file": "knowledge/herbs/diji.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/diji.md, knowledge/herbs/diyu.md"}
-{"file": "knowledge/herbs/diyu.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/diji.md, knowledge/herbs/diyu.md"}
-{"file": "knowledge/herbs/fupenzi.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/fupenzi.md, knowledge/herbs/wuyaozi.md"}
-{"file": "knowledge/herbs/wuyaozi.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/fupenzi.md, knowledge/herbs/wuyaozi.md"}
-{"file": "knowledge/herbs/guya.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/guya.md, knowledge/herbs/shandou.md"}
-{"file": "knowledge/herbs/shandou.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/guya.md, knowledge/herbs/shandou.md"}
-{"file": "knowledge/herbs/hechezi.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/hechezi.md, knowledge/herbs/heizhima.md"}
-{"file": "knowledge/herbs/heizhima.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/hechezi.md, knowledge/herbs/heizhima.md"}
-{"file": "knowledge/herbs/shijunzi.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/shijunzi.md, knowledge/herbs/shizhangzi.md"}
-{"file": "knowledge/herbs/shizhangzi.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/shijunzi.md, knowledge/herbs/shizhangzi.md"}
-{"file": "knowledge/herbs/zirantong.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/zirantong.md, knowledge/herbs/zirun.md"}
-{"file": "knowledge/herbs/zirun.md", "kind": "herb", "level": "warning", "code": "duplicate_title", "detail": "knowledge/herbs/zirantong.md, knowledge/herbs/zirun.md"}
-{"file": "knowledge/acupoints/cuanzhu.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/cuanzhu.md, knowledge/acupoints/zanzhu.md"}
-{"file": "knowledge/acupoints/zanzhu.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/cuanzhu.md, knowledge/acupoints/zanzhu.md"}
-{"file": "knowledge/acupoints/jian Shi.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/jian Shi.md, knowledge/acupoints/jianshi.md"}
-{"file": "knowledge/acupoints/jianshi.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/jian Shi.md, knowledge/acupoints/jianshi.md"}
-{"file": "knowledge/acupoints/sanjiaoju.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/sanjiaoju.md, knowledge/acupoints/sanjiaoshu.md"}
-{"file": "knowledge/acupoints/sanjiaoshu.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/sanjiaoju.md, knowledge/acupoints/sanjiaoshu.md"}
-{"file": "knowledge/acupoints/taichong.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/taichong.md, knowledge/acupoints/taichong_lv.md"}
-{"file": "knowledge/acupoints/taichong_lv.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/taichong.md, knowledge/acupoints/taichong_lv.md"}
-{"file": "knowledge/acupoints/xiabai.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/xiabai.md, knowledge/acupoints/xiamen.md"}
-{"file": "knowledge/acupoints/xiamen.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/xiabai.md, knowledge/acupoints/xiamen.md"}
-{"file": "knowledge/acupoints/yangguan.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/yangguan.md, knowledge/acupoints/yaoyangguan.md"}
-{"file": "knowledge/acupoints/yaoyangguan.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/yangguan.md, knowledge/acupoints/yaoyangguan.md"}
-{"file": "knowledge/acupoints/zulinqi.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/zulinqi.md, knowledge/acupoints/zulinqi_gb.md"}
-{"file": "knowledge/acupoints/zulinqi_gb.md", "kind": "acupoint", "level": "warning", "code": "duplicate_title", "detail": "knowledge/acupoints/zulinqi.md, knowledge/acupoints/zulinqi_gb.md"}
 {"file": "knowledge/herbs/baiguo.md", "kind": "herb", "level": "review", "code": "low_score_verified_needs_review", "detail": "P8-D verified via QUALITY_OVERRIDES (score=50, threshold=50)"}
 {"file": "knowledge/herbs/baihuasheshecao.md", "kind": "herb", "level": "review", "code": "low_score_verified_needs_review", "detail": "P8-D verified via QUALITY_OVERRIDES (score=59, threshold=50)"}
 {"file": "knowledge/herbs/banlangen.md", "kind": "herb", "level": "review", "code": "low_score_verified_needs_review", "detail": "P8-D verified via QUALITY_OVERRIDES (score=53, threshold=50)"}

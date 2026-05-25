@@ -2,6 +2,7 @@
 title: "侠白"
 kind: acupoint
 trace_status: unverified
+alias_of: "xiabai"
 ---
 
 # 侠白

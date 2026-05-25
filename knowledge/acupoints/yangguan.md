@@ -2,6 +2,7 @@
 title: "腰阳关"
 kind: acupoint
 trace_status: no_source_found
+alias_of: "yaoyangguan"
 ---
 
 # 腰阳关

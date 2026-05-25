@@ -2,6 +2,7 @@
 title: "谷芽"
 kind: herb
 trace_status: no_source_found
+alias_of: "guya"
 ---
 
 # 谷芽
