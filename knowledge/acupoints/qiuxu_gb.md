@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "丘墟"
 kind: acupoint
 trace_status: unverified
 ---

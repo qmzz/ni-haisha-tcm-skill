@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "大横"
 kind: acupoint
 trace_status: unverified
 ---

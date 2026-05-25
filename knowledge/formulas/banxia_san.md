@@ -8,7 +8,7 @@ kind: "formula"
 source: "伤寒论"
 category: "温里剂"
 tags: ["伤寒论", "温里剂"]
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "04【视频同步文稿】人-伤寒论（可打印）.json"
     page_num: 173

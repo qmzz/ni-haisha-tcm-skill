@@ -8,7 +8,7 @@ kind: "formula"
 source: "金匮要略"
 category: "理气剂"
 tags: ["金匮要略", "理气剂"]
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "倪海夏-汉唐中医方剂讲解.json"
     page_num: 125

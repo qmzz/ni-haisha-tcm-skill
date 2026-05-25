@@ -1,5 +1,5 @@
 ---
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "黄帝内经上册.json"
     page_num: null

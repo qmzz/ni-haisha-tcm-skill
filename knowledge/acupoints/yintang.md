@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "印堂"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "上巨虚"
 kind: acupoint
 trace_status: unverified
 ---

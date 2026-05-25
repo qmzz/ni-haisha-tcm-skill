@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "珍珠母"
 kind: herb
 trace_status: no_source_found
 ---

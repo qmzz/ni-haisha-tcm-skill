@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "小肠俞"
 kind: acupoint
 trace_status: unverified
 ---

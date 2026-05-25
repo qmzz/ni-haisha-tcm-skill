@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "气冲"
 kind: acupoint
 trace_status: unverified
 ---

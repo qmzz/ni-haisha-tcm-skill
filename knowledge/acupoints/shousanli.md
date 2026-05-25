@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "手三里"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "下极俞"
 kind: acupoint
 trace_status: no_source_found
 ---

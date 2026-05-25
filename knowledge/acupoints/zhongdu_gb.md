@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "中渎"
 kind: acupoint
 trace_status: unverified
 ---

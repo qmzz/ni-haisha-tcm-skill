@@ -16,7 +16,7 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "生用：清热解毒。蜜炙：升阳。"
 配伍禁忌: "阴虚火旺、麻疹已透者忌用。"
 鉴别要点: "不规则条形，断面黄白色，有裂隙。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "倪海厦人纪系列之神农本草经.json"
     page_num: 52

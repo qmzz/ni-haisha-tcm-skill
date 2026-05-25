@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "温溜"
 kind: acupoint
 trace_status: unverified
 ---

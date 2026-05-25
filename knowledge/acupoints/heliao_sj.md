@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "和髎"
 kind: acupoint
 trace_status: unverified
 ---

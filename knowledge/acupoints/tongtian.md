@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "通天"
 kind: acupoint
 trace_status: unverified
 ---

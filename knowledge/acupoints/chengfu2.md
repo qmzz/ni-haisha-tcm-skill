@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "承扶二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 105
+    quote: "，临床上我们用的很多。我们很常用的穴道可以做 个记号，用的很少的，就只要知道有个穴道在那边就可以了。 25、承扶穴至委阳穴（5-01:39:08） 在我们的臀部这边，你看这股沟这样弯起来，正好在大腿的正中间横纹的这个地方，这 个穴道我们就称承扶。 近取穴对坐骨神经痛效果非常好。承扶下针时是用三寸针，一针透进去，一针就到骨头 上面。深针才有效果，因为这里肉很多，扎太浅就没效，一定要深针。像久年痔疮，臀肿、 小便不利，近取穴都可以用。坐骨神经痛 在这边时，我们也可以下针。扎承扶没有什"
 ---
 
 # 承扶二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 舒筋活络，止腰腿
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 臀横纹中央

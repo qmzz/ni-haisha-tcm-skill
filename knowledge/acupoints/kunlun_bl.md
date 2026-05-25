@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "昆仑二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 110
+    quote: "人纪系列针灸篇 昆仑穴是膀胱经的经穴，是火。孕妇不能下针，下针会落胎，小孩子会掉。所以平常用 在生完小孩，胎盘 没有下来，可以用昆仑，把胎盘掉出来，这是用在生完小孩以后的。 30、仆参穴至京骨穴（5-02:20:54） 昆仑下来是仆参。仆参穴治足跟痛 或脚后跟痛。仆参在哪呢？昆仑是下到骨头旁边， 昆仑在外踝裸跟大筋的中间，从昆仑再下来到骨头旁边是仆参。仆参穴治疗足后跟痛"
 ---
 
 # 昆仑二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 舒筋活络，清头目
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 外踝尖与跟腱之间凹陷中

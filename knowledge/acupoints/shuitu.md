@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "水突"
 kind: acupoint
 trace_status: unverified
 ---

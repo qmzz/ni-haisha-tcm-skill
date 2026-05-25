@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "支正"
 kind: acupoint
 trace_status: unverified
 ---

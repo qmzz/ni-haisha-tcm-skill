@@ -16,7 +16,7 @@ tags: ["中药", "倪海厦"]
 炮制方法: "待考"
 配伍禁忌: "待考"
 鉴别要点: "待考"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "04【视频同步文稿】人-伤寒论（可打印）.json"
     page_num: 143

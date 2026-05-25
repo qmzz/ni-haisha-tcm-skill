@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "金钱草"
 kind: herb
 trace_status: no_source_found
 ---

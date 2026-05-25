@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "瞳子髎"
 kind: acupoint
 trace_status: unverified
 ---

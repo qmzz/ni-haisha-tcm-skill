@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "胞肓"
 kind: acupoint
 trace_status: unverified
 ---

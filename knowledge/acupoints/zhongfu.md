@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "中府"
 kind: acupoint
 trace_status: unverified
 ---

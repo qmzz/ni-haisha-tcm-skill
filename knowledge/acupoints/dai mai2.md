@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "带脉二"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "三间"
 kind: acupoint
 trace_status: unverified
 ---

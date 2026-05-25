@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "大钟二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 115
+    quote: "在哪呢？在我们脚后跟骨头跟大筋交接的地方。这是筋，这是骨头， 正在交接点的地方就是大钟穴。大钟穴是足少阴肾径的络穴，别走太阳经。络穴跟原穴一样， 虚实都可以治疗。所谓肾经的实症，如小便排不出来，我们可扎大钟穴，虚症，如腰酸痛 ， 你也可以扎大钟穴。它是络穴，当你做补泻的时候，你可以按照它的虚实来做补泻。水泉正 好在大钟穴下来到骨边。 我放大画给你们看。这个是内踝裸，这是胫骨，这里有个大筋，这大筋是连到我们脚后 跟骨的地方。太溪穴下来到骨边，这个穴道就是水泉。我们扎水泉不是这样下针"
 ---
 
 # 大钟二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 补肾益精，强腰脊
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 内踝后下方，跟腱附着部内侧前方

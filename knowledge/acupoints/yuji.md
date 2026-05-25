@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "鱼际"
 kind: acupoint
 trace_status: unverified
 ---

@@ -108,6 +108,7 @@ def standardize(record: dict, apply: bool):
     before_lines = list(lines)
     upsert_scalar(lines, "title", f'"{record.get("name") or path.stem}"')
     upsert_scalar(lines, "kind", f'"{kind}"')
+    upsert_scalar(lines, "trace_status", "verified")
     upsert_scalar(lines, "review_status", "verified")
     upsert_scalar(lines, "reviewer", '"p6_verified_standardization"')
     upsert_scalar(lines, "safety_disclaimer_required", "true")

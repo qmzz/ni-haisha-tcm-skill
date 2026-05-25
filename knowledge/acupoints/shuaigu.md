@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "率谷"
 kind: acupoint
 trace_status: unverified
 ---

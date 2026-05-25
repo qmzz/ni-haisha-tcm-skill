@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "云门二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 42
+    quote: "实际上由云门找中府较好找。 我们可以看铜人，上面这是云门，但第一个是中府。 我们平常下针，中府如果直刺，容易扎到肺。云门是肺的募穴，这两个穴道靠肺很近， 我们扁鹊针灸手法是一针透两穴。由中府透下去，所以针是倒着往上刺，不是直刺，从中府 刺到云门，不要刺到肋骨，所以不会碰到肺，而且扎得到穴道。所以一针透两穴，一般这个 穴是治疗久咳 、气喘 。以后会介绍到俞募治疗，肺的募穴是云门穴。俞募治疗，取俞穴以 及募穴。 下针的方式，是顺着经走，在补泻的手法里面呢，慢慢我会一点一点教你。顺为补"
 ---
 
 # 云门二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 宣肺止咳，泄热除烦
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 胸前壁外上方，锁骨下窝凹陷处

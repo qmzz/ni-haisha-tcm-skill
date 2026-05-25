@@ -16,7 +16,7 @@ tags: ["补虚药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "生地黄砂锅蒸至黑润为熟地黄。九蒸九晒最佳。"
 配伍禁忌: "脾虚湿滞、腹满便溏者忌用。黏腻碍胃，须配砂仁等行气药。"
 鉴别要点: "断面乌黑如漆，味甜。河南产怀地黄最佳。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "倪海厦人纪系列之神农本草经.json"
     page_num: 29

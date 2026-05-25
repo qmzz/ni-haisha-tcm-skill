@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "海风藤"
 kind: herb
 trace_status: no_source_found
 ---

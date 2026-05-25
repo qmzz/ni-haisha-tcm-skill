@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "悬颅"
 kind: acupoint
 trace_status: unverified
 ---

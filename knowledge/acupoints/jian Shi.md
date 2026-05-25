@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "间使"
 kind: acupoint
 trace_status: unverified
 ---

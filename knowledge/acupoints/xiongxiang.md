@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "胸乡"
 kind: acupoint
 trace_status: unverified
 ---

@@ -16,7 +16,7 @@ tags: ["清热药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "生用：清湿热。盐炒：入肾经，滋阴降火。"
 配伍禁忌: "脾胃虚寒者忌用。"
 鉴别要点: "板片状，断面鲜黄色。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 142

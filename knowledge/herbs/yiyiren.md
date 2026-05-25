@@ -16,7 +16,7 @@ tags: ["利水渗湿药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "生用：清热利湿。炒用：健脾止泻。"
 配伍禁忌: "孕妇慎服。"
 鉴别要点: "宽卵圆形，乳白色，味甘淡。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "倪海厦人纪系列之神农本草经.json"
     page_num: 34

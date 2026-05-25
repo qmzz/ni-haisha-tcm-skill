@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "角孙"
 kind: acupoint
 trace_status: unverified
 ---

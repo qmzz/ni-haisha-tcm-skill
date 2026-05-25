@@ -72,9 +72,15 @@ def main():
     decisions_path = os.path.join(PROJECT_ROOT, 'data/review_decisions.jsonl')
     decisions = load_jsonl(decisions_path)
     
+    # Idempotency: skip items already in decisions
+    existing_keys = {(d.get('kind'), d.get('item_id'), d.get('decision')) for d in decisions}
+    
     # Add verified entries for items to verify
     new_decisions = []
     for item, score in to_verify:
+        key = ('acupoint', item['item_id'], 'verified')
+        if key in existing_keys:
+            continue
         top_source = item.get('top_source', {})
         new_entry = {
             'kind': 'acupoint',

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "绿萼梅"
 kind: herb
 trace_status: no_source_found
 ---

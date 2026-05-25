@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "中都二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 148
+    quote: "来一个沟。任何沟，如水沟、蠡沟，这个沟就是有淤积、有积块，所 有的沟都可以取。腹胀满少腹有积块，我们名称有沟的、谷的，如阴谷。沟，如这个蠡沟、 水沟。谷，如小肠经的本穴阳谷穴，都是沟、谷，通通可以取。看它的名称来取穴。 从中封穴再上二寸就是中都，在内踝上七寸这个穴道就叫中都。中都可治妇人产后恶 露 。这些穴道穴性都差不多。 再上来是膝关，膝关是我们常常使用的穴道。医书上是指膝盖横纹头，实际上我们是扎 上五分的地方，不要扎到横纹头，在上五分的地方下针。这个穴道就是膝关。治疗膝盖风湿"
 ---
 
 # 中都二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 疏肝理气，调经血
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 内踝上 7 寸

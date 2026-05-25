@@ -16,7 +16,7 @@ tags: ["补虚药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "去心用（麦冬心易令人烦）。朱砂拌：安神。"
 配伍禁忌: "风寒咳嗽、脾胃虚寒泄泻者忌用。"
 鉴别要点: "正品浙江产'杭麦冬'最佳，类纺锤形，半透明，味甘微苦。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "倪海厦人纪系列之神农本草经.json"
     page_num: 32

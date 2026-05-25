@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "肩外俞"
 kind: acupoint
 trace_status: unverified
 ---

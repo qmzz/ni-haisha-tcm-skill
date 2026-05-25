@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "关冲"
 kind: acupoint
 trace_status: unverified
 ---

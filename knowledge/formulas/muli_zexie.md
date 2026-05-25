@@ -8,7 +8,7 @@ kind: "formula"
 source: "伤寒论"
 category: "利水剂"
 tags: ["伤寒论", "利水剂"]
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "桂林古本伤寒杂病论 .json"
     page_num: null

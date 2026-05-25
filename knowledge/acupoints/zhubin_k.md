@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "筑宾二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 117
+    quote: "去，因为伤到骨膜会很痛，要移开一点点，不要 贴着骨边下针。 再来是筑宾。看这边，这是右腿内侧，这是内踝裸。筑宾穴在太溪穴直上五寸，再往后 开一寸。筑宾穴是阴维脉的郄穴。阴维脉是什么，我们讲奇经八脉时会讲。筑宾穴跟曲池这 两个穴道是呼应的。 筑宾穴是肚脐以下的消炎、解毒穴，也可镇痛。肚脐以上是曲池。巨阙是我们前面讲过 的上纪，关元是下纪。这个气呢，在上焦、上半身，由巨阙穴管它的纪律，就是管周边的循 环。肚脐以下的纪律是由关元在管。肚脐以上的炎症下曲池。肚脐以下就下筑宾。现在大家 都"
 ---
 
 # 筑宾二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 宁心安神，利腰腿
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 太溪上 5 寸，跟腱前缘

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "环跳"
 kind: acupoint
 trace_status: unverified
 ---

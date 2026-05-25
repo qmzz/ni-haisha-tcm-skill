@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "本神"
 kind: acupoint
 trace_status: unverified
 ---

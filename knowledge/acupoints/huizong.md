@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "会宗"
 kind: acupoint
 trace_status: unverified
 ---

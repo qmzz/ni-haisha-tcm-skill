@@ -16,7 +16,7 @@ tags: ["活血化瘀药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "去皮尖炒用。捣碎入煎。"
 配伍禁忌: "孕妇忌用。便溏者慎用。"
 鉴别要点: "扁卵圆形，种皮黄棕色，味微甜。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 321

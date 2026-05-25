@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "千年健"
 kind: herb
 trace_status: no_source_found
 ---

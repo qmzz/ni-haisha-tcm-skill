@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "头临泣"
 kind: acupoint
 trace_status: unverified
 ---

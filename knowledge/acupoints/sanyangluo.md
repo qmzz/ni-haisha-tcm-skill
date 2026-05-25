@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "三阳络"
 kind: acupoint
 trace_status: unverified
 ---

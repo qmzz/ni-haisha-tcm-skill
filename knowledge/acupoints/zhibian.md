@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "秩边"
 kind: acupoint
 trace_status: unverified
 ---

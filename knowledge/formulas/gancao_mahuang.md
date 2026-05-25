@@ -8,7 +8,7 @@ kind: "formula"
 source: "金匮要略"
 category: "解表剂"
 tags: ["金匮要略", "解表剂"]
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "05【视频同步文稿】人-金匮要略（可打印）.json"
     page_num: 282

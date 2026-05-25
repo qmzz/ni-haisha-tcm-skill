@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "内庭"
 kind: acupoint
 trace_status: unverified
 ---

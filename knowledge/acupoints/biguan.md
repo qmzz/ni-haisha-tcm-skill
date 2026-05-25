@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "髀关"
 kind: acupoint
 trace_status: unverified
 ---

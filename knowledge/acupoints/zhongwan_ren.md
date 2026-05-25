@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "中脘二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 30
+    quote: "断。 8、胃之募穴一中脘（2-00:14:33） 再来是建里，这些穴道其实穴性都差不多，都很少用。再来是重要的大穴中脘穴，中脘 穴是胃的募穴，胃病治此。下针也可以，灸也可以。针一寸差不多就到了，灸呢，效果非常 好。 我们《针灸大成》上面写，中脘穴在脐上四寸，不要用同身寸去量，量了半天还是错。 这是丈量法腹寸，心蔽骨与神阙的正中间。手太阳少阳足阳明任脉之会，胃的募穴，《难经》 说腑会中脘。 我们身上有八会穴①，八个会穴，腑会中脘、脏会章门、筋会阳陵泉、气会膻中。将来 会有一个治病法"
 ---
 
 # 中脘二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 和胃健脾，降逆气
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 前正中线上，脐上 4 寸

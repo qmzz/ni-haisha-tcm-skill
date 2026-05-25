@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "太乙二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 57
+    quote: "门。你们看这关门穴，顾名思义，就是不想吃东西，吃东西就 想吐，跟不容一样，你知道就好了。以任脉的穴位为准，这些穴道为辅，比如胃痛 扎中脘， 如果扎完还有痛，可以在旁开两寸的穴道再扎。 我们隔盐灸神阙，灸完后，肠鸣腹泻 还有就可以配合天枢穴。太乙和滑肉门都可以用 在长高 ，下针，灸都可以。小孩想长高，你可以帮他灸。 现在诸位学到三个穴道：身柱，脊椎第三椎，可以长得高大，再来是太乙跟滑肉门，这 是我们可增高的穴道。灸完胃口大开，再灸身柱，小孩子就会长得人高马大。千万要记得， 头脑也要"
 ---
 
 # 太乙二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 腹痛
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 腹中部，脐中旁 2 寸（扩展占位）

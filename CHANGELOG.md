@@ -4,6 +4,20 @@
 
 ## [Unreleased]
 
+### P9 数据质量治理（进行中）
+
+- P9-A: 创建数据质量审计脚本 `scripts/p9_quality_audit.py`，从内容一致性、完整性、准确性等维度检查。
+- P9-A 修复: 解决 `registry_verified_but_frontmatter_not_verified` 313 个严重一致性错误，错误级问题清零。
+  - 修复 `standardize_verified_frontmatter.py`：补写 `trace_status: verified`。
+  - 修复 P8-E seed 脚本：从 index 文件获取 `item_id -> file` 映射，消除 51 条空 file。
+  - 新增 `p9_fix_verified_source_refs.py`：为 51 条 parent_expand 条目补 `source_refs` frontmatter。
+  - 新增 `p9_fix_empty_titles.py`：修复 427 个 frontmatter 空 title。
+- P9-B: 生成质量复核队列 `data/p9_review_queue.jsonl`（173 条）。
+- P9-C: 修复 P8 seed 脚本幂等性问题（`p8_seed_herb_candidate_review.py`、`p8_seed_acupoint_verified_batch.py`、`p8_e_3_seed_verified.py`），避免重复追加 verified 决策。
+- **当前 verified: 512（formula 113, herb 292, acupoint 107）**
+- **frontmatter missing_required: 0, warnings: 0**
+- **P9 质量审计: error: 0, warning: 90, review: 76, info: 7**
+
 ### P8-E no_source_found 扩展治理
 
 - P8-E-1: 盘点 herb 120 + acupoint 64 个 no_source_found 清单

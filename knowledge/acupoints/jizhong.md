@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "脊中"
 kind: acupoint
 trace_status: unverified
 ---

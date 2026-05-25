@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "昆仑"
 kind: acupoint
 trace_status: unverified
 ---

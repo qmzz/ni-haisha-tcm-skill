@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "魄户"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "腰阳关"
 kind: acupoint
 trace_status: no_source_found
 ---

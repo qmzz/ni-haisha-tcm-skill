@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "十七"
 kind: acupoint
 trace_status: unverified
 ---

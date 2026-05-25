@@ -16,7 +16,7 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "糯米或麦芽糖化制成。软饴糖和硬饴糖两种。"
 配伍禁忌: "湿阻中满、痰湿内盛、糖尿病忌用。"
 鉴别要点: "黄色黏稠糖浆，味甜。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "倪海厦人纪系列之神农本草经.json"
     page_num: 138

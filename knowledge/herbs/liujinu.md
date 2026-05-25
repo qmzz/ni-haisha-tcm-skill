@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "刘寄奴"
 kind: herb
 trace_status: no_source_found
 ---

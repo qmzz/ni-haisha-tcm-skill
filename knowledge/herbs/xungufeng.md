@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "寻骨风"
 kind: herb
 trace_status: no_source_found
 ---

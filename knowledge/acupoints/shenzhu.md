@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "身柱"
 kind: acupoint
 trace_status: unverified
 ---

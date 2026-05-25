@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "丰隆"
 kind: acupoint
 trace_status: unverified
 ---

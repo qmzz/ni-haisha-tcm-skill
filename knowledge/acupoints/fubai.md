@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "浮白"
 kind: acupoint
 trace_status: needs_review
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "人迎"
 kind: acupoint
 trace_status: unverified
 ---

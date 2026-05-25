@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "长强"
 kind: acupoint
 trace_status: unverified
 ---

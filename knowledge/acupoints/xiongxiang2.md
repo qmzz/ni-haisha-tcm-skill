@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "胸乡二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 75
+    quote: "道胸乡在那，就要看周荣。周荣这个穴道，病人下巴在这，嘴巴在这，这是脖子， 这是肩膀。这个是缺盆，这是手臂的肌肉，缺盆和手臂肌肉交接的地方是云门穴，云门跳一 个肋骨，就是中府穴。从中府穴再跳一个肋骨，就是我们的周荣穴。周荣穴再跳一个肋骨就 是胸乡穴。 这是我们找穴道的方法。云门中府周荣，是一条线下来。若有硬块在云门中府出现的话， 我们要在肺经上治疗。我们如果有硬块在脾经，我们要在脾经上治疗，这是你们要知道穴道 的目的。 初期硬块出来的时候，灸比针好，因为灸是“久火”。为什么一开始要"
 ---
 
 # 胸乡二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 宽胸止咳，理胁痛
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 胸外侧部，第 3 肋间隙

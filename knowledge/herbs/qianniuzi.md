@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "牵牛子"
 kind: herb
 trace_status: no_source_found
 ---

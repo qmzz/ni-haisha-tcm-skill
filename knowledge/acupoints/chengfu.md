@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "承扶"
 kind: acupoint
 trace_status: unverified
 ---

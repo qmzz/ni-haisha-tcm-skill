@@ -8,7 +8,7 @@ kind: "formula"
 source: "金匮要略"
 category: "排脓剂"
 tags: ["金匮要略", "排脓剂"]
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "05【视频同步文稿】人-金匮要略（可打印）.json"
     page_num: 370

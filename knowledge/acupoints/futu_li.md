@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "扶突"
 kind: acupoint
 trace_status: unverified
 ---

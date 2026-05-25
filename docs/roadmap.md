@@ -66,6 +66,15 @@
 - [x] P8-F：acupoint needs_review 处理（score ≥ 55），8 个条目通过 QUALITY_OVERRIDES 验证。
 - [x] P8-Frontmatter：为所有 939 个知识文件添加基础 frontmatter，missing_required: 0。
 - [x] P8-E：no_source_found 扩展治理，盘点 184 条、扩展命中 156 条、51 条高置信 parent/alias 命中落库为 verified，verified 总数提升至 512。
+- [x] P9-A：数据质量审计与一致性修复，error 级问题从 313 清零。
+  - 修复 `registry_verified_but_frontmatter_not_verified` 313 条。
+  - 修复 P8-E seed 脚本空 file 字段（51 条）。
+  - 修复 427 个 frontmatter 空 title。
+  - 为 51 条 parent_expand 条目补 `source_refs` frontmatter。
+- [x] P9-B：质量复核队列，生成 `data/p9_review_queue.jsonl`（173 条：warning 90 + review 76 + info 7）。
+- [x] P9-C：修复 P8 seed 脚本幂等性，避免重复追加 verified 决策。
+- [ ] P9-D：处理 duplicate_title（45 组，90 条），区分 herb alias pair 与 acupoint variant。
+- [ ] P9-E：人工复核 parent_expand_verified_needs_human_review（51 条）与 low_score_verified_needs_review（25 条）。
 - [ ] CLI 打包与安装体验优化。
 - [ ] 对 no_source_found 条目继续小批量人工复核。
 - [ ] Agent 查询增加更完整的语义检索与多轮问诊状态机。

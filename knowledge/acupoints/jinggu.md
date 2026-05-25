@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "京骨"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "脑空二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 135
+    quote: "缝。那就是头临泣。头临泣和目窗，尤其是治风泪，风一吹就流泪，这种症状 很多。这两个都是眼科的大穴及近取穴，在近取穴的时候是不分虚实的，通通可以用。从头 临泣直直往后一寸半就是目窗，目窗再往后一寸半，沿着下来就是正营，再过来是承灵，再 过来是脑空，再过来就是风池。从这头中间，后面大部分是治疗头痛、头昏、眩的穴道。前 面是治眼科的穴，因为胆经有络到上面，络到眼睛的上方。胆经在这个地方比较复杂一点。 最重要的是要知道经络的走向。胃经只到头维，最上面是督脉，再过来膀胱经，再来是胆经， 再"
 ---
 
 # 脑空二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 平肝熄风，止头痛
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 风池上 2.25 寸

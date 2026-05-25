@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "胡椒"
 kind: herb
 trace_status: unverified
 ---

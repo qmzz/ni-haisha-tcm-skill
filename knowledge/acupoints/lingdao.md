@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "灵道"
 kind: acupoint
 trace_status: unverified
 ---

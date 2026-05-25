@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "犊鼻"
 kind: acupoint
 trace_status: unverified
 ---

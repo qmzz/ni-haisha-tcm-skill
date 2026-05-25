@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "筋缩"
 kind: acupoint
 trace_status: unverified
 ---

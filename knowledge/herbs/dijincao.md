@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "地锦草"
 kind: herb
 trace_status: no_source_found
 ---

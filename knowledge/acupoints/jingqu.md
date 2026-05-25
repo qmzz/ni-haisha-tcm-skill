@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "经渠"
 kind: acupoint
 trace_status: unverified
 ---

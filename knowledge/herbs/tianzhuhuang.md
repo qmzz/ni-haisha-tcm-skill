@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "天竺黄"
 kind: herb
 trace_status: no_source_found
 ---

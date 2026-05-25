@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "胃仓"
 kind: acupoint
 trace_status: unverified
 ---

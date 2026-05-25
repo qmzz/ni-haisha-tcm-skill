@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "地机"
 kind: acupoint
 trace_status: unverified
 ---

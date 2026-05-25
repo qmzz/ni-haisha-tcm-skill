@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "阳白"
 kind: acupoint
 trace_status: unverified
 ---

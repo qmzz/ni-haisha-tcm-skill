@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "通里"
 kind: acupoint
 trace_status: unverified
 ---

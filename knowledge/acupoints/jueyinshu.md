@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "厥阴俞"
 kind: acupoint
 trace_status: unverified
 ---

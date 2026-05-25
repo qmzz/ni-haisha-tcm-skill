@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "上星二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 172
+    quote: "穴是很有名的鼻科大穴。 严重的时候，入发际五分，这叫神庭穴，那神庭再上五分的距离，五分就是半寸，这个 穴道叫上星。合谷、通天、上星、迎香，这些穴道都是非常有名的鼻科大穴。 最有名的是灸上星，用米粒灸。用凡士林涂涂，小小的艾放上去，香一点，烧上星的时 候，会感到一阵麻。在麻的同时，鼻子开始开通了，鼻窦炎 时干燥效果最好，不管是化脓、 浓涕，灸上星很有效。鼻塞、喷嚏通通可以用。这些是我们鼻科的大穴。 扎胆经的风池也很好，扎风池的时候，在对侧的颧髎下针，针下对的时候，一下去，鼻 ① 视"
 ---
 
 # 上星二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 通鼻窍，清头目
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 前发际上 1 寸

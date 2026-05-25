@@ -16,7 +16,7 @@ tags: ["温里药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "生用（有毒，一般不内服）。甘草水浸制：减毒。"
 配伍禁忌: "阴虚有热者忌用。孕妇慎用。"
 鉴别要点: "球形，表面暗黄绿色，香气浓郁，味辛辣而苦。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 233

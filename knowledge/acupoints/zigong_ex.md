@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "子宫"
 kind: acupoint
 trace_status: unverified
 ---

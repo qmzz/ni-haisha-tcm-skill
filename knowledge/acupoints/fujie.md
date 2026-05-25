@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "腹结"
 kind: acupoint
 trace_status: unverified
 ---

@@ -8,7 +8,7 @@ kind: "formula"
 source: "伤寒论"
 category: "温里剂"
 tags: ["伤寒论", "温里剂"]
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "倪海厦人纪系列之伤寒论.json"
     page_num: 30

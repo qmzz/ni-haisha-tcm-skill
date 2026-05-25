@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "龈交"
 kind: acupoint
 trace_status: unverified
 ---

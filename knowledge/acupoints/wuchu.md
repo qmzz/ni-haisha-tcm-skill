@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "五处"
 kind: acupoint
 trace_status: unverified
 ---

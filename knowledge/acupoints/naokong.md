@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "脑空"
 kind: acupoint
 trace_status: unverified
 ---

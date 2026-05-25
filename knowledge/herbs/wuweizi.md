@@ -16,7 +16,7 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "生用：敛肺止咳。醋炒：涩精止泻。蜜炙：润肺止咳。"
 配伍禁忌: "外有表邪、内有实热初起者忌用（恐敛邪）。"
 鉴别要点: "正品粒大、肉厚、紫红色、油性大者为佳。东北产五味子最佳。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 120

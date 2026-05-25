@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "鸠尾二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 178
+    quote: "位现在有概念了，人得了肺积水，就是有水在肺里面的时候，肺是金啊，不可以 有水，有水要下到肾脏去，若这水下不去，停在肺里面，病人就但坐不得卧，这是肺里面有 积水的现象。 下针横膈嘛，就下背后的膈俞。第七椎，至阳穴外开一寸半的膈俞。正面下膻中，鸠尾 穴及乳根，这几个都是近取穴。所以，积水一定要在这下方。会很重，正常的情形，应该是 像水蒸气一样。那针下去以后，就像把水倒下来。我们要开沟疏通水道。名字有沟，有谷， 有溪，有海的，都是可以通利水道，如小肠经的阳谷、后溪，海如照海。针灸穴道每"
 ---
 
 # 鸠尾二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 安神止惊，和胃气
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 前正中线上，胸剑联合下 1 寸

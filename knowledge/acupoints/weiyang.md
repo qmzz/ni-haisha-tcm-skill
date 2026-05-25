@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "委阳"
 kind: acupoint
 trace_status: unverified
 ---

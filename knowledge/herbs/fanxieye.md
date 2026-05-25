@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "番泻叶"
 kind: herb
 trace_status: needs_review
 ---

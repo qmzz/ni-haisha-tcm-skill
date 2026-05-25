@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "臑会"
 kind: acupoint
 trace_status: unverified
 ---

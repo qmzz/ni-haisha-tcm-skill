@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "玉枕"
 kind: acupoint
 trace_status: unverified
 ---

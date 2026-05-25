@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "足窍阴"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "刺蒺藜"
 kind: herb
 trace_status: no_source_found
 ---

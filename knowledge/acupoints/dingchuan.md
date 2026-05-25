@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "定喘"
 kind: acupoint
 trace_status: unverified
 ---

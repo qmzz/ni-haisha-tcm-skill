@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "承山"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "期门"
 kind: acupoint
 trace_status: unverified
 ---

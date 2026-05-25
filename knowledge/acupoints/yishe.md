@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "意舍"
 kind: acupoint
 trace_status: unverified
 ---

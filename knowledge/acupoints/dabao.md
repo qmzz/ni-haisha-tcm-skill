@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "大包"
 kind: acupoint
 trace_status: unverified
 ---

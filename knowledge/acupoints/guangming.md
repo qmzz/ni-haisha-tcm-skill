@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "光明"
 kind: acupoint
 trace_status: unverified
 ---

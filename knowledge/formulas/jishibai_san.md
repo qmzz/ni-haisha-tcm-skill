@@ -8,7 +8,7 @@ kind: "formula"
 source: "金匮要略"
 category: "利水剂"
 tags: ["金匮要略", "利水剂"]
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "金匮要略.json"
     page_num: null

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "头窍阴"
 kind: acupoint
 trace_status: no_source_found
 ---

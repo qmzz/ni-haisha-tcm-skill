@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "太阳"
 kind: acupoint
 trace_status: unverified
 ---

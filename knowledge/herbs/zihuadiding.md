@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "紫花地丁"
 kind: herb
 trace_status: no_source_found
 ---

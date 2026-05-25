@@ -1,7 +1,15 @@
 ---
-title: ""
-kind: acupoint
-trace_status: no_source_found
+title: "曲泉二"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 148
+    quote: "肝 经的合穴，主水。因为它主水，肝是主木，水生木，所以曲泉是肝经的母穴。 母穴顾名思义，虚症都可以在这里治疗，肝经皮肤痒 就下曲泉。阴挺不下，扎针就去 掉了。过去中医书上有很多阴挺不下的病例，几百年、几千年就已有这个问题。我们遇到时， 就在曲泉下针。肝主筋，主所有身上的筋。 肝主一点到三点的失眠。肝经络过少腹，到达子宫，所有妇科的病，男人的小便困难， 通通可以。阴部的痒，妇人阴部痒起来不得了，阴痒 痒起来很厉害，曲泉穴是很好的穴道 可以治疗。 从曲泉上三寸就是阴包。或从膝关上四寸"
 ---
 
 # 曲泉二
@@ -11,6 +19,22 @@ trace_status: no_source_found
 **功效：** 清肝利湿，舒筋络
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 膝内侧横纹内侧端

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "志室"
 kind: acupoint
 trace_status: unverified
 ---

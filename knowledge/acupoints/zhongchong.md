@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "中冲"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "辄筋"
 kind: acupoint
 trace_status: unverified
 ---

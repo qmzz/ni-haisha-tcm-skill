@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "清冷渊"
 kind: acupoint
 trace_status: unverified
 ---

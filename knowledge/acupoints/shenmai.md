@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "申脉"
 kind: acupoint
 trace_status: unverified
 ---

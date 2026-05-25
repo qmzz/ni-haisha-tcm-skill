@@ -16,7 +16,7 @@ tags: ["神农本草经", "中药", "倪海厦"]
 炮制方法: "生用：解肌退热透疹。煨用：升阳止泻。"
 配伍禁忌: "胃寒呕吐者忌用。麻疹已透者慎用。"
 鉴别要点: "纵切面，黄白色，纤维性强。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 194

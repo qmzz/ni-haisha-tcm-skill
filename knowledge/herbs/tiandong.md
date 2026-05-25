@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "天冬"
 kind: herb
 trace_status: unverified
 ---

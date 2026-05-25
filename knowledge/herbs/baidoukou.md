@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "白豆蔻"
 kind: herb
 trace_status: needs_review
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "偏历"
 kind: acupoint
 trace_status: unverified
 ---

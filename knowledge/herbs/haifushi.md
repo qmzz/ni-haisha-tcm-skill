@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "海浮石"
 kind: herb
 trace_status: no_source_found
 ---

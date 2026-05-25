@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "足五里"
 kind: acupoint
 trace_status: no_source_found
 ---

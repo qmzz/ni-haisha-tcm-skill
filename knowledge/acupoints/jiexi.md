@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "解溪"
 kind: acupoint
 trace_status: unverified
 ---

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "冲门"
 kind: acupoint
 trace_status: unverified
 ---

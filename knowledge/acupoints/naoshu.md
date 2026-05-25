@@ -1,5 +1,5 @@
 ---
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "03【视频同步文稿】人-黄帝内经-下册（可打印）.json"
     page_num: 99

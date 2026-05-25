@@ -16,7 +16,7 @@ tags: ["温里药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "炒去汗（挥发油）。开口的蜀椒效果好。"
 配伍禁忌: "阴虚火旺、孕妇忌用。"
 鉴别要点: "红色或紫红色小颗粒，香气浓郁，味辛辣。四川产最佳。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 143

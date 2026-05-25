@@ -19,10 +19,26 @@ from typing import Dict, List, Tuple
 ROOT = Path(__file__).resolve().parents[1]
 HITS_PATH = ROOT / "data" / "p8_e_no_source_expand_hits.jsonl"
 DECISIONS_PATH = ROOT / "data" / "review_decisions.jsonl"
+INDEX_PATHS = {
+    "acupoint": ROOT / "data" / "acupoint_index.jsonl",
+    "herb": ROOT / "data" / "herb_index.jsonl",
+}
 
 
 def load_jsonl(path: Path) -> List[Dict]:
     return [json.loads(line) for line in path.open(encoding="utf-8") if line.strip()]
+
+
+def load_file_map() -> Dict[Tuple[str, str], str]:
+    mapping: Dict[Tuple[str, str], str] = {}
+    id_keys = {"acupoint": "acupoint_id", "herb": "herb_id"}
+    for kind, path in INDEX_PATHS.items():
+        for row in load_jsonl(path):
+            item_id = row.get(id_keys[kind])
+            file = row.get("file")
+            if item_id and file:
+                mapping[(kind, item_id)] = file
+    return mapping
 
 
 def best_hit_per_item(hits: List[Dict]) -> Dict[Tuple[str, str], Dict]:
@@ -38,6 +54,10 @@ def best_hit_per_item(hits: List[Dict]) -> Dict[Tuple[str, str], Dict]:
 def main():
     best = best_hit_per_item(load_jsonl(HITS_PATH))
     decisions = load_jsonl(DECISIONS_PATH)
+    file_map = load_file_map()
+
+    # Idempotency: skip items already in decisions
+    existing_keys = {(d.get('kind'), d.get('item_id'), d.get('decision')) for d in decisions}
 
     added = []
 
@@ -52,11 +72,15 @@ def main():
         else:
             continue
 
+        key = (kind, item_id, "verified")
+        if key in existing_keys:
+            continue
+
         decisions.append({
             "kind": kind,
             "item_id": item_id,
             "name": hit.get("name"),
-            "file": hit.get("matched_hit", {}).get("file") or "",
+            "file": file_map.get((kind, item_id), ""),
             "decision": "verified",
             "source_file": hit.get("matched_hit", {}).get("source_file"),
             "page_num": hit.get("matched_hit", {}).get("page_num"),

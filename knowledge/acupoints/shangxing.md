@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "上星"
 kind: acupoint
 trace_status: unverified
 ---

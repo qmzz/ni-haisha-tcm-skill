@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "颧髎"
 kind: acupoint
 trace_status: unverified
 ---

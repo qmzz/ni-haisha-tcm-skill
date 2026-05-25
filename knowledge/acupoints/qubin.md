@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "曲鬓"
 kind: acupoint
 trace_status: unverified
 ---

@@ -16,7 +16,7 @@ tags: ["化痰止咳平喘药", "神农本草经", "中药", "倪海厦"]
 炮制方法: "生用。米炒可缓其升散之性。"
 配伍禁忌: "阴虚久咳、气逆咳血者忌用。"
 鉴别要点: "圆柱形，断面白色，有放射状纹理（菊花心）。"
-trace_status: candidate
+trace_status: verified
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 283

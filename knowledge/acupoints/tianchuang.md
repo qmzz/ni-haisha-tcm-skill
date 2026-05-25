@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "天窗"
 kind: acupoint
 trace_status: unverified
 ---
