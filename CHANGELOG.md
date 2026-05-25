@@ -14,9 +14,11 @@
   - 新增 `p9_fix_empty_titles.py`：修复 427 个 frontmatter 空 title。
 - P9-B: 生成质量复核队列 `data/p9_review_queue.jsonl`（173 条）。
 - P9-C: 修复 P8 seed 脚本幂等性问题（`p8_seed_herb_candidate_review.py`、`p8_seed_acupoint_verified_batch.py`、`p8_e_3_seed_verified.py`），避免重复追加 verified 决策。
-- **当前 verified: 512（formula 113, herb 292, acupoint 107）**
-- **frontmatter missing_required: 0, warnings: 0**
-- **P9 质量审计: error: 0, warning: 90, review: 76, info: 7**
+- P9-D: duplicate_title 治理，90 条降至 30 条
+  - 为 45 组重复名添加 alias/alias_of frontmatter
+  - p9_d_resolve_duplicate_titles.py: herb aliases + acupoint variant 标注
+  - p9_quality_audit.py: 排除已有 alias 标注的重复名
+- **当前 P9 issues: 113 (error: 0, warning: 30, review: 76, info: 7)**
 
 ### P8-E no_source_found 扩展治理
 
