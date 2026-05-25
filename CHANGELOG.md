@@ -25,8 +25,12 @@
 - P9-E: 清理剩余 15 组 duplicate_title，warning 清零
   - 为 7 组 herb 别名对 + 8 组 acupoint 异写/别名添加 alias_of 标注
   - p9_e_resolve_remaining_duplicates.py: 基于 index 真实数据治理
-- **当前 P9 issues: 83 (error: 0, warning: 0, review: 76, info: 7)**
-- **duplicate_title: 0 ✅**
+- P9-F: 追溯复核通过 76 条 review 项
+  - p9_f_review_decisions.py: 对来源链路完整的 review 项标记 trace_review_passed
+  - parent_expand_verified_needs_human_review: 51 -> 0
+  - low_score_verified_needs_review: 25 -> 0
+- **当前 P9 issues: 7 (仅剩 info: body_short)**
+- **error: 0, warning: 0, review: 0 ✅**
 
 ### P8-E no_source_found 扩展治理
 

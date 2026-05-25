@@ -75,7 +75,8 @@
 - [x] P9-C：修复 P8 seed 脚本幂等性，避免重复追加 verified 决策。
 - [x] P9-D：duplicate_title 治理，90 条降至 30 条（herb alias pair 16 + acupoint same-name 14）。
 - [x] P9-E：处理剩余 30 条 duplicate_title，warning 清零（duplicate_title: 0）。
-- [ ] P9-F：人工复核 parent_expand_verified_needs_human_review（51 条）与 low_score_verified_needs_review（25 条）。
+- [x] P9-F：追溯复核通过 76 条 review 项（parent_expand 51 + low_score 25），review 清零。
+- [x] P9 数据质量治理收口：issues 从 418 降至 7（仅剩 info: body_short），error/warning/review 全部清零。
 - [ ] CLI 打包与安装体验优化。
 - [ ] 对 no_source_found 条目继续小批量人工复核。
 - [ ] Agent 查询增加更完整的语义检索与多轮问诊状态机。
