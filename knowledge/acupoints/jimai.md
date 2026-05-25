@@ -6,8 +6,8 @@ source_refs:
     quote: "二十八穴：喉中央二，膺中骨陷中各一， 鸠尾下三寸，胃脘五寸，胃脘以下至横骨六寸半一。腹脉法也。 下阴别一，目下各一，下唇一，断交一。 冲脉气所发者二十二穴：侠鸠尾外各半寸至脐寸一，侠脐 下傍各五分至横骨寸一，腹脉法也。 足少阴舌下，厥阴毛中急脉各一，手少阴各一，阴阳跷各 一，手足诸鱼际脉气所发者，凡三百六十五穴也。 ·121· 05-10-18 子部·黄帝内经 骨空论篇第六十 黄帝问曰：余闻风者百病之始也，以针治之奈何？岐伯对 曰：风从外入，令人振寒，汗出头痛，身重恶寒，治在风府"
 title: "急脉"
 kind: "acupoint"
-review_status: candidate
-reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: verified
+reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---

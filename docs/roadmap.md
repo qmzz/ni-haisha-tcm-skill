@@ -65,7 +65,7 @@
 - [x] P8-D：herb needs_review 处理（score ≥ 50），17 个条目通过 QUALITY_OVERRIDES 验证。
 - [x] P8-F：acupoint needs_review 处理（score ≥ 55），8 个条目通过 QUALITY_OVERRIDES 验证。
 - [x] P8-Frontmatter：为所有 939 个知识文件添加基础 frontmatter，missing_required: 0。
-- [ ] 继续处理 herb 剩余 candidate 分层（白名单 / needs_review / 保持观察）。
+- [x] P8-E：no_source_found 扩展治理，盘点 184 条、扩展命中 156 条、51 条高置信 parent/alias 命中落库为 verified，verified 总数提升至 512。
 - [ ] CLI 打包与安装体验优化。
 - [ ] 对 no_source_found 条目继续小批量人工复核。
 - [ ] Agent 查询增加更完整的语义检索与多轮问诊状态机。

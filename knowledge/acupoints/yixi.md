@@ -6,8 +6,8 @@ source_refs:
     quote: "1· 05-10-18 子部·黄帝内经 骨空论篇第六十 黄帝问曰：余闻风者百病之始也，以针治之奈何？岐伯对 曰：风从外入，令人振寒，汗出头痛，身重恶寒，治在风府， 调其阴阳，不足则补，有余则泻。大风颈项痛，刺风府，风府 在上椎。大风汗出，灸譩譆，譩譆在背下侠脊傍三寸所，厌之 令病者呼譩譆，譩譆应手。从风憎风，刺眉头。失枕在肩上横 骨间，折使榆臂齐肘正，灸脊中。月少络季胁引少腹而痛胀，刺 譩譆。腰痛不可以转摇，急引阴卵，刺八髎与痛上，八髎在腰 尻分间。鼠瘘寒热，还刺寒府，寒府在附膝"
 title: "譩譆"
 kind: "acupoint"
-review_status: candidate
-reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: verified
+reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---

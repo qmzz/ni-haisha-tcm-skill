@@ -6,8 +6,8 @@ source_refs:
     quote: "愿尽闻痈疽之形，与忌曰名。岐伯曰：痈发于嗌 中，名曰猛疽。猛疽不治，化为脓，脓不泻，塞咽，半日死。 其化为脓者，泻则合豕膏，冷食，三日而已。 ·401· 05-10-18 子部·黄帝内经 发于颈，名曰夭疽。其痈大以赤黑，不急治，则热气下入 渊腋，前伤任脉，内熏肝肺。熏肝肺，十余日而死矣。 阳留大发，消脑留项，名曰脑烁。其色不乐，项痛而如刺 以针。烦心者，死不可治。 发于肩及臑，名曰疵痈。其状赤黑，急治之，此令人汗出 至足，不害五脏。痈发四五日，逞焫之。 发于腋下赤坚者，名曰米疽。"
 title: "渊腋"
 kind: "acupoint"
-review_status: candidate
-reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: verified
+reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---

@@ -6,8 +6,8 @@ source_refs:
     quote: "，所以当你一总起来，会有虫咬着的时候在这边或者是 狗咬，狗咬到或者是这个蛇咬到，对不对？或者是扭伤，或者是得到这个什么破伤风感染到，从八峰八鞋手肿 起来，包括我们痛风、痛风在内，在末梢上气血不通的时候，你吃药要到那边很远，很远，那我们在八峰八邪 上可以直接疏通，那这就是阴阳交汇的地方吗，所以阴经阳经到指头的末梢就是井穴了。那这是针刺直接扎进 去，两个古峰的中间加进去，没有什么穴道就按照这样下进去，那如果是扭伤肿的很大，你说这个下的气还不 够峰的，再给他里面再骨节这边再下一个针也可"
 title: "八邪"
 kind: "acupoint"
-review_status: candidate
-reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: verified
+reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---

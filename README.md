@@ -182,10 +182,20 @@ python3 scripts/build_verified_sources.py
 python3 scripts/p8_seed_acupoint_verified_batch.py
 python3 scripts/build_verified_sources.py
 
-# P8 Frontmatter 标准化补全
-python3 scripts/p8_add_basic_frontmatter.py --apply
+# P8-E no_source_found 扩展治理
+python3 scripts/p8_e_1_no_source_inventory.py
+python3 scripts/p8_e_1_acupoint_variant.py
+python3 scripts/p8_e_2_expand_search.py
+python3 scripts/p8_e_3_build_auto_candidates.py
+python3 scripts/p8_e_3_seed_verified.py
+python3 scripts/build_verified_sources.py
+python3 scripts/apply_verified_frontmatter.py --apply
+python3 scripts/standardize_verified_frontmatter.py --apply
 python3 scripts/check_frontmatter_schema.py
-# 报告：report/p8_frontmatter_standardization.md
+python3 scripts/build_p8_knowledge_audit.py
+# 报告：report/p8_e_closure.md
+# 当前 verified: 512 (formula 113, herb 292, acupoint 107)
+# frontmatter missing_required: 0
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用

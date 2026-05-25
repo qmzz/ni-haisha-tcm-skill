@@ -6,8 +6,8 @@ source_refs:
     quote: "进入血的,结果跑出去,就代表营卫不协 常没事流汗的人,气候又没变化,突然流虚汗,就是代表「营卫不协调」,这时候没有 有症状就可以吃桂枝汤,让它协调。中风证是伤到卫分,只需要用到桂枝；而伤寒 因此麻黄与桂枝必须并用。 新药物学知道麻黄素有刺激中枢神经的效能,是作用于交感神经兴奋药,我 药。麻黄素,西医用在急救、兴奋上面,也知道麻黄会发汗,但是西医只用单味的麻黄 勤求古訓，博采眾方"
 title: "中枢"
 kind: "acupoint"
-review_status: candidate
-reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: verified
+reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---

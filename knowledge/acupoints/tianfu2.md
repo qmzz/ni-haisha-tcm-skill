@@ -6,8 +6,8 @@ source_refs:
     quote: "十五穴，中月吕两傍各五，凡十穴， 大椎上两傍各一，凡二穴，目瞳子浮白二穴，两髀厌分中二穴， 犊鼻二穴，耳中多所闻二穴，眉本二穴，完骨二穴，项中央一 穴，枕骨二穴，上关二穴，大迎二穴，下关二穴，天柱二穴， 巨虚上下廉四穴，曲牙二穴，天突一穴，天府二穴，天牖二穴， 扶突二穴，天窗二穴，肩解二穴，关元一穴，委阳二穴，肩贞 二穴，瘖门一穴，脐一穴，胸俞十二穴，背俞二穴，膺俞十二 穴，分肉二穴，踝上横二穴，阴阳跷四穴，水俞在诸分，热俞 ·118· 世和经典教育·经史子集 在气穴，寒热俞在两骸"
 title: "天府二"
 kind: "acupoint"
-review_status: candidate
-reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: verified
+reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---

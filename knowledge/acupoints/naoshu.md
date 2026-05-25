@@ -6,8 +6,8 @@ source_refs:
     quote: "尾椎骨 下，我们的长强穴，下面是骨头缝，骨空的地方。“数髓空在面”，我们鼻子旁边，这个居髎，旁边有两个凹 洞，这个骨里面有骨空，我们可以。那两个肩也有骨空，就是我们的那个居髎，居髎穴。那骨空在，如果是在 两个肩膀的时候，在后面的，我们所谓的臑俞，臑俞，这个后面，太阳经，你摸后面，看骨头后面凹进去一块， 那是手太阳，小肠经的臑俞，臑俞穴。这个呢，如果是，这个我们为什么要去了解骨空？我们治骨头的病，就 是在骨空，治骨头的病在骨空，老师，你怎么知道他是骨头伤？很简单，如果说，他有经络上"
 title: "臑俞"
 kind: "acupoint"
-review_status: candidate
-reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: verified
+reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---

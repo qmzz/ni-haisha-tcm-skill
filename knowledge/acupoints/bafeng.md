@@ -6,8 +6,8 @@ source_refs:
     quote: "得冷，所以你千万不要按照这里说，隔着布就 刺下去啊。那么我们针刺的时候一定要严肃，不能嬉皮笑脸的，嬉皮笑脸的那个针扎不准，手在那边抖。 第四节 摇针：治肿病 那这种摇针，如果遇到肿胀，比如我手肿起来了，肿得很大，扭到了对不对，那针扎到我们的八风上面的 时候，针出来要摇针，摇针是泄气，把针泄出来，摇针，尤其我们用细针去摇。像我们以前墙上那种九针，拿 个很粗的针进去摇，那一定大出血，那就过了，一个很细的针下去。摇针是在肿病的时候用的。那经刺勿摇， 那刺到经络上的穴道的时候，不可以摇，"
 title: "八风"
 kind: "acupoint"
-review_status: candidate
-reviewer: "p8_stale_verified_frontmatter_fix"
+review_status: verified
+reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---
