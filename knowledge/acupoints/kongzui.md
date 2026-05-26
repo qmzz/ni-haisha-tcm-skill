@@ -11,7 +11,6 @@ reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---
-
 # 孔最
 
 **定位：** 前臂掌面桡侧，尺泽与太渊连线上，腕横纹上 7 寸  

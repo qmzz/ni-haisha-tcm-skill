@@ -11,7 +11,6 @@ reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---
-
 # 天府二
 
 **定位：** 臂内侧面，肱二头肌桡侧缘，腋前纹头下 2 寸  

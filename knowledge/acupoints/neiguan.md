@@ -11,7 +11,6 @@ safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 title: "内关"
 ---
-
 # 内关
 
 **定位：** 前臂掌侧，腕横纹上 2 寸，掌长肌腱与桡侧腕屈肌腱之间  

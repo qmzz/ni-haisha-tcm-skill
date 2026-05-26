@@ -11,7 +11,6 @@ safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 title: "足三里"
 ---
-
 # 足三里穴 (ST36)
 
 **归经：** 足阳明胃经  

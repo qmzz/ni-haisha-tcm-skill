@@ -11,7 +11,6 @@ safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 title: "列缺"
 ---
-
 # 列缺
 
 **定位：** 前臂桡侧缘，桡骨茎突上方，腕横纹上 1.5 寸  

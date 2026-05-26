@@ -11,7 +11,6 @@ safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 title: "三阴交"
 ---
-
 # 三阴交
 
 **定位：** 小腿内侧，足内踝尖上 3 寸，胫骨内侧缘后方  
