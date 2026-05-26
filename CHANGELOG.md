@@ -22,6 +22,8 @@
 - 治理稳定性：
   - P9-F 追溯复核纳入测试与管线闭环，避免 `review_status` 在重建后丢失。
   - 清理 `knowledge/acupoints/laogong.md` 历史 JSON patch 残留，P9 quality audit issues 清零。
+- P11 收口：
+  - 新增 `scripts/p11_finalize_closure.py` 与 `report/p11_closure.md`，固定 P11 阶段产物、指标、边界与 P12 入口。
 - 当前指标：
   - `verified: 642 / 939`
   - `candidate: 164 / 939`
