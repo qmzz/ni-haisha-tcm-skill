@@ -4,6 +4,20 @@
 
 ## [Unreleased]
 
+### P12 candidate 批量收口
+
+- 新增 `scripts/p12_candidate_batch.py` 与 `report/p12_candidate_batch_report.md`。
+- 对剩余 164 条 candidate 做一次性来源检索与分流：
+  - 161 条在原始 JSON 中找到中文名命中，提取 source_refs 并纳入 verified。
+  - 3 条 herb（白豆蔻、白扁豆、番泻叶）仅有低质量 alias 命中，保留 candidate/needs_review，不强行 verified。
+- 测试 seed 链纳入 P12 脚本，并调整 pipeline 顺序为 build -> apply -> standardize -> stale fix，避免测试降级新 verified frontmatter。
+- 当前指标：
+  - `verified: 803 / 939`
+  - `candidate: 3 / 939`
+  - `no_source_found: 133 / 939`
+  - `P9 quality issues: 0`
+  - 测试：`84 passed`
+
 ### P11 内容质量与治理闭环
 
 - P11-A/B: 内容质量队列与方剂 usage 结构补全

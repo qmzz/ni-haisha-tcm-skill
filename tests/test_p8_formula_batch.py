@@ -17,13 +17,14 @@ SEED_SCRIPTS = [
     "scripts/p8_e_3_seed_verified.py",
     "scripts/p11_c_seed_acupoint_verified.py",
     "scripts/p11_d_seed_acupoint_verified.py",
+    "scripts/p12_candidate_batch.py",
 ]
 
 PIPELINE_SCRIPTS = [
     "scripts/build_verified_sources.py",
-    "scripts/p8_fix_stale_verified_frontmatter.py",
     "scripts/apply_verified_frontmatter.py",
     "scripts/standardize_verified_frontmatter.py",
+    "scripts/p8_fix_stale_verified_frontmatter.py",
     "scripts/p9_fix_verified_source_refs.py",
     "scripts/p9_fix_empty_titles.py",
     "scripts/check_frontmatter_schema.py",

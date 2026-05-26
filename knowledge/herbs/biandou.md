@@ -1,8 +1,12 @@
 ---
 title: "白扁豆"
 kind: herb
-trace_status: needs_review
+trace_status: no_source_found
+candidate_review_reason: "alias_match_only; alias_requires_review"
 ---
+source_scope: "not_in_nihaixia_source"
+external_reference_required: true
+no_source_policy: "keep_boundary_until_traceable_source"
 
 # 白扁豆
 

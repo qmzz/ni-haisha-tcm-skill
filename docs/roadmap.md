@@ -81,6 +81,7 @@
 - [x] P11-C/D：穴位 candidate verified 小批量扩展，固定白名单 + 幂等 seed，verified 总数提升至 642。
 - [x] P11-E：133 条 no_source_found 补充来源范围边界标记，明确需外部可追溯来源，不凭模型记忆补写。
 - [x] P11 收口：生成 `report/p11_closure.md`，固定 P11 阶段产物、指标、边界与 P12 入口。
+- [x] P12：剩余 164 条 candidate 批量处理，161 条从原始资料提取 source_refs 并 verified，3 条 herb alias 低质量命中保留 candidate/needs_review。
 - [ ] CLI 打包与安装体验优化。
 - [ ] 对剩余 candidate 条目继续小批量人工复核。
 - [ ] Agent 查询增加更完整的语义检索与多轮问诊状态机。

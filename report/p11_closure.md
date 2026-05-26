@@ -44,10 +44,10 @@ P11 的目标不是追求 verified 百分比，而是在不凭模型记忆扩写
 ## 当前核心指标
 
 - total: 939
-- verified: 642 / 939
-- candidate: 164 / 939
+- verified: 803 / 939
+- candidate: 3 / 939
 - no_source_found: 133 / 939
-- verified_sources: 642
+- verified_sources: 803
 - alias_index: 80
 
 ### 按类型追溯状态
@@ -55,8 +55,8 @@ P11 的目标不是追求 verified 百分比，而是在不凭模型记忆扩写
 | kind | total | verified | candidate | no_source_found |
 |------|-------|----------|-----------|-----------------|
 | formula | 113 | 113 | 0 | 0 |
-| herb | 415 | 292 | 5 | 118 |
-| acupoint | 411 | 237 | 159 | 15 |
+| herb | 415 | 294 | 3 | 118 |
+| acupoint | 411 | 396 | 0 | 15 |
 
 ## 质量治理状态
 
@@ -67,10 +67,10 @@ P11 的目标不是追求 verified 百分比，而是在不凭模型记忆扩写
 
 ## P11 当前队列
 
-- queue total: 297
-- by_priority: {'P2': 133, 'P1': 164}
-- by_task: {'no_source_boundary_or_external_source': 133, 'review_candidate_source_refs': 164}
-- by_kind: {'herb': 123, 'acupoint': 174}
+- queue total: 136
+- by_priority: {'P2': 133, 'P1': 3}
+- by_task: {'no_source_boundary_or_external_source': 133, 'review_candidate_source_refs': 3}
+- by_kind: {'herb': 121, 'acupoint': 15}
 
 解释：P11 队列剩余项不是本阶段必须清空的缺陷，而是下一阶段复核/外部来源策略入口。
 
