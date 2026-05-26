@@ -10,23 +10,22 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 - verified 来源链路：512
 - frontmatter 标记 verified 但未进入 registry：0
 - frontmatter 完整：939
-- refined 条目：29
-- complete 条目：483
+- refined 条目：0
+- complete 条目：512
 - 数据明细：`data/knowledge_completeness.jsonl`
 
 ## 按类别统计
 
 | kind | total | verified_registry | candidate | needs_review | no_source_found | unknown | stale_verified_fm | frontmatter_complete | source_refs | safety_boundary | refined | complete |
 |------|-------|-------------------|-----------|--------------|-----------------|---------|-------------------|----------------------|-------------|-----------------|---------|----------|
-| formula | 113 | 113 | 0 | 0 | 0 | 0 | 0 | 113 | 113 | 113 | 29 | 84 |
+| formula | 113 | 113 | 0 | 0 | 0 | 0 | 0 | 113 | 113 | 113 | 0 | 113 |
 | herb | 415 | 292 | 5 | 0 | 118 | 0 | 0 | 415 | 297 | 415 | 0 | 292 |
 | acupoint | 411 | 107 | 289 | 0 | 15 | 0 | 0 | 411 | 396 | 411 | 0 | 107 |
 
 ## quality_tier 分布
 
 ### formula
-- complete: 84
-- refined: 29
+- complete: 113
 
 ### herb
 - complete: 292
@@ -41,7 +40,7 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 ## 内容缺口统计
 
 ### formula
-- usage: 29
+- 暂无缺口
 
 ### herb
 - 暂无缺口
