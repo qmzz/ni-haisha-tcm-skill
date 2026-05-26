@@ -1,7 +1,15 @@
 ---
 title: "中庭"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 120
+    quote: "人纪系列针灸篇 肾经上下针，如果你很讨厌这个女的就下涌泉，忘了然谷了嘛!如果这太太每天行善，就用 然谷。如果说是虚症，就在复溜。病很久了，按了很舒服，复溜上下针。这是我们在临床上 选取穴道的方法。 两乳中间是膻中，下一寸六是中庭，中庭外开二寸，每隔一个肋骨，就有一个穴道。隔 一个肋骨，就是《针灸大成》上的隔一寸六的单位。中庭外开二寸，就是我们的步廊穴。书 上讲胸肋痛等都可以在这治。 15、神封穴至俞府穴（6-00:13:16） 再来是神封，神封穴书上把它印在步廊穴"
 ---
 
 # 中庭
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 宽胸和胃，止呃逆
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 前正中线上，平第 5 肋间隙

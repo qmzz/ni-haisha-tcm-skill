@@ -16,6 +16,7 @@ SEED_SCRIPTS = [
     "scripts/p8_seed_acupoint_verified_batch.py",
     "scripts/p8_e_3_seed_verified.py",
     "scripts/p11_c_seed_acupoint_verified.py",
+    "scripts/p11_d_seed_acupoint_verified.py",
 ]
 
 PIPELINE_SCRIPTS = [

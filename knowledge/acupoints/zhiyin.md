@@ -1,7 +1,15 @@
 ---
 title: "至阴"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 111
+    quote: "。你就可以知道这个病人的脏气很乱。 我们讲《黄帝内经》时会再讲，这里只要知道到大概就可以了。 再来是膀胱经的井穴――至阴。 在脚小趾头旁边，趾甲旁边的穴道叫至阴。至阴穴是膀胱经的子穴，膀胱经是阳经，所 以是金水木火土，所以膀胱经真正的母穴是至阴。但是，因为补井当补合，所以我们用委中 来取代它。至阴穴有个特殊的治症，就是治疗胎位不正 。胎位不正的时候，针下去很快哦， 二十四小时以后，慢慢就回正了。在下针时，当然不要拿三寸针扎下去，这针会倒嘛，拿一 寸小针刺下去就好了，因为在脚趾头的"
 ---
 
 # 至阴
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 矫正胎位，苏厥逆
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 足小趾外侧，距趾甲角 0.1 寸

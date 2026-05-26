@@ -1,7 +1,15 @@
 ---
 title: "阳白"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 135
+    quote: "到一寸的地方，就是胆经下来到结尾的地方，然后再往回走一路上 去。从这上来先不要提，从这一路倒过来就是阳白穴。阳白穴在眉毛跟发际的中间，正在眼 睛眉毛的上方。阳白常常下针。阳白穴的下法是把皮肤拉起来，从阳白刺进去，刺到眉毛的 中间，这我们叫做阳白透鱼腰。因为眉毛像条鱼一样，所以叫阳白透鱼腰。阳白透鱼腰是治 疗眼睛近视，视物不明，或是眼睛痛，或有内障都可以在这治。所以，胆经通到鱼腰，所以 你的内障若从上面下来，就还是在胆经上面来治。有的病人，他就是阳白痛。问它头痛在哪？ 一看就在阳白"
 ---
 
 # 阳白
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 祛风明目，止头痛
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 瞳孔直上，眉上 1 寸

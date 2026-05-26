@@ -4,19 +4,19 @@
 
 ## 摘要
 
-- total: 327
+- total: 297
 - P0: 0
-- P1: 194
+- P1: 164
 - P2: 133
 
 ## 按任务类型
 
-- review_candidate_source_refs: 194
+- review_candidate_source_refs: 164
 - no_source_boundary_or_external_source: 133
 
 ## 按类型
 
-- acupoint: 204
+- acupoint: 174
 - herb: 123
 
 ## P0 明细：verified 但缺关键正文结构

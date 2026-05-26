@@ -1,7 +1,15 @@
 ---
 title: "阴都"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 119
+    quote: "（6-00:50:39） 再来是石关穴，石关穴在建里外开一寸。大家都知道，建里上去是中脘，建里外开一寸 是石关。你想石头关到的，一定是胃方面的问题，诸如此类。这是穴性，有些针灸大成是印 一寸半，有些印一寸，你们都要以一寸为准。 石关再上来是阴都，阴都是在任脉的中脘穴外开一寸。由这些穴道你可知道经络的走向， 我们从下往上一直走，就是告诉你这个足少阴肾经的经气流注是由下往上的。气血的方向要 知道。穴道的名称记错倒无所谓，因为用的不多。通谷在上脘穴上一寸。我们有两个通谷， 一个在肾经里"
 ---
 
 # 阴都
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 宽胸理气，和胃逆
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 前正中线旁开 0.5 寸，脐中上 4 寸

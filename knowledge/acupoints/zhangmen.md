@@ -1,7 +1,15 @@
 ---
 title: "章门"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 149
+    quote: "寸。这些穴道都是求子穴。妇人没怀孕，想生小孩生不到，这时候用隔姜灸接近腹腔的 地方。多半是用灸的。因为动脉很多。平常我们不针，用的最多就是求子。 9、章门穴与期门穴（7-00:51:47） 再来是章门穴。手臂之下、胸肋骨最下方，这个穴道就是章门穴。就在肋骨正下方。过 去有人将手弯起来，手肘尖到的地方就是章门穴。但有的人很皮啊，会左右移，就找不到了。 所以找肋骨尖下方。就是章门穴。章门用法很多了。我们叫脏会章门。按照《难经》，脏病 治此。五脏是肝心脾肺肾，章门穴都可以治。章门不单单"
 ---
 
 # 章门穴 (LR13)
@@ -11,6 +19,22 @@ trace_status: unverified
 **特定穴：** 脾之募穴、八会穴之脏会
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

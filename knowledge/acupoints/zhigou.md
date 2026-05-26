@@ -1,7 +1,15 @@
 ---
 title: "支沟"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 127
+    quote: "痛得很难 过。在针支沟、照海时，并无谓寒热，下针后，二十四小时就排便了。支沟照海下去，可以 再帮他下关元，大肠经的募穴天枢，中脘再来四花灸。中脘、天枢和神阙用隔盐灸，然后再 下关元、支沟、照海，那肯定会好的嘛。这是加减法，你们自己可加减。 支沟穴呢?我们所谓的开沟渠，如人中、支沟，女人的阴道就是沟。有了这个观念，所 以妇人难产、胎衣不出，或者是漏下不止、任脉不通、不容易怀孕，都可以在支沟上做。从 支沟穴平行移到骨头旁边就是会宗穴。从会宗穴再跳回来到支沟上一寸，三焦经在这弯了一 下"
 ---
 
 # 支沟穴 (SJ6)
@@ -11,6 +19,22 @@ trace_status: unverified
 **属性：** 经穴
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 
