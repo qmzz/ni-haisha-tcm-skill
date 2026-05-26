@@ -6,18 +6,16 @@
 
 ## 总览
 
-- issues: 1
-- by_level: {'info': 1}
-- by_kind: {'acupoint': 1}
+- issues: 0
+- by_level: {}
+- by_kind: {}
 
 ## 问题类型 Top
 
 | level | code | count |
 |-------|------|-------|
-| info | body_short | 1 |
 
 ## 样例（前 100 条）
 
 | level | kind | code | file | detail |
 |-------|------|------|------|--------|
-| info | acupoint | body_short | knowledge/acupoints/laogong.md | lines=8 |
