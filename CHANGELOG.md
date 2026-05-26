@@ -4,6 +4,32 @@
 
 ## [Unreleased]
 
+### P11 内容质量与治理闭环
+
+- P11-A/B: 内容质量队列与方剂 usage 结构补全
+  - 新增 `scripts/p11_build_content_quality_queue.py`、`scripts/p11_b_fill_formula_usage.py`。
+  - 29 个 verified 方剂补齐 `## 用法` 结构：16 个摘录现有 source_refs，13 个明确标记“现有 verified 来源未提供明确用法，待补充”。
+  - 方剂 complete: `113 / 113`。
+- P11-C/D: 穴位 candidate verified 小批量扩展
+  - P11-C 固定白名单 100 条，P11-D direct-quote 固定白名单 30 条。
+  - 新增 `scripts/p11_c_seed_acupoint_verified.py`、`scripts/p11_d_seed_acupoint_verified.py`。
+  - 所有 seed 均幂等，已纳入测试链路，避免动态推进导致数据回归。
+  - verified 总数：`512 -> 642`；穴位 verified：`107 -> 237`。
+- P11-E: no_source_found 来源范围边界标记
+  - 新增 `scripts/p11_e_mark_no_source_scope.py`。
+  - 为 133 条 no_source_found 补充 `source_scope: not_in_nihaixia_source`、`external_reference_required: true`、`no_source_policy: keep_boundary_until_traceable_source`。
+  - 不改变 trace_status，不补医学正文；后续提升必须引入可追溯外部来源。
+- 治理稳定性：
+  - P9-F 追溯复核纳入测试与管线闭环，避免 `review_status` 在重建后丢失。
+  - 清理 `knowledge/acupoints/laogong.md` 历史 JSON patch 残留，P9 quality audit issues 清零。
+- 当前指标：
+  - `verified: 642 / 939`
+  - `candidate: 164 / 939`
+  - `no_source_found: 133 / 939`
+  - `safety_boundary: 939 / 939`
+  - `P9 quality issues: 0`
+  - 测试：`84 passed`
+
 ### P10 查询质量与可用性增强
 
 - P10-B: alias 查询闭环
@@ -20,7 +46,7 @@
   - 新增 `scripts/p10d_nsf_alias_search.py`：结合 `data/aliases.json` 做别名原始资料检索，命中 0。
   - 结论：剩余 133 条 no_source_found 在当前倪海厦原始 JSON 中无明确命中，保持 no_source_found，不凭模型记忆补内容。
 - P10-E: body_short 收口
-  - 当前仅剩 1 条 info 级 `body_short`（`knowledge/acupoints/laogong.md`），属换行格式导致的统计提示，不影响查询与追溯。
+  - P11 后已清理 `knowledge/acupoints/laogong.md` 历史格式残留，P9 quality audit issues 已清零。
 - 当前指标：
   - `verified: 512 / 939`
   - `candidate: 294 / 939`

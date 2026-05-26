@@ -76,9 +76,12 @@
 - [x] P9-D：duplicate_title 治理，90 条降至 30 条（herb alias pair 16 + acupoint same-name 14）。
 - [x] P9-E：处理剩余 30 条 duplicate_title，warning 清零（duplicate_title: 0）。
 - [x] P9-F：追溯复核通过 76 条 review 项（parent_expand 51 + low_score 25），review 清零。
-- [x] P9 数据质量治理收口：issues 从 418 降至 7（仅剩 info: body_short），error/warning/review 全部清零。
+- [x] P9 数据质量治理收口：issues 从 418 降至 0，error/warning/review/info 全部清零。
+- [x] P11-A/B：内容质量队列与方剂 usage 结构补全，方剂 complete: 113 / 113。
+- [x] P11-C/D：穴位 candidate verified 小批量扩展，固定白名单 + 幂等 seed，verified 总数提升至 642。
+- [x] P11-E：133 条 no_source_found 补充来源范围边界标记，明确需外部可追溯来源，不凭模型记忆补写。
 - [ ] CLI 打包与安装体验优化。
-- [ ] 对 no_source_found 条目继续小批量人工复核。
+- [ ] 对剩余 candidate 条目继续小批量人工复核。
 - [ ] Agent 查询增加更完整的语义检索与多轮问诊状态机。
 - [ ] 评估 release tag 与版本化数据快照。
 

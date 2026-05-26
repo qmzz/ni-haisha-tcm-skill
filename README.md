@@ -196,7 +196,7 @@ python3 scripts/standardize_verified_frontmatter.py --apply
 python3 scripts/check_frontmatter_schema.py
 python3 scripts/build_p8_knowledge_audit.py
 # 报告：report/p8_e_closure.md
-# 当前 verified: 512 (formula 113, herb 292, acupoint 107)
+# 当前 verified: 642 (formula 113, herb 292, acupoint 237)
 # frontmatter missing_required: 0
 
 # P9 数据质量治理
@@ -205,8 +205,8 @@ python3 scripts/p9_fix_verified_source_refs.py
 python3 scripts/p9_fix_empty_titles.py
 python3 scripts/p9_build_review_queue.py
 # 报告：report/p9_quality_audit.md
-# 当前 P9 issues: 173 (warning: 90, review: 76, info: 7)
-# error: 0 (P9-A 已修复所有硬错误)
+# 当前 P9 issues: 0
+# error/warning/review/info: 0
 ```
 
 ### 方式三：作为 OpenClaw Skill 使用
