@@ -10,8 +10,8 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 - verified 来源链路：803
 - frontmatter 标记 verified 但未进入 registry：0
 - frontmatter 完整：939
-- refined 条目：0
-- complete 条目：803
+- refined 条目：80
+- complete 条目：723
 - 数据明细：`data/knowledge_completeness.jsonl`
 
 ## 按类别统计
@@ -19,7 +19,7 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 | kind | total | verified_registry | candidate | needs_review | no_source_found | unknown | stale_verified_fm | frontmatter_complete | source_refs | safety_boundary | refined | complete |
 |------|-------|-------------------|-----------|--------------|-----------------|---------|-------------------|----------------------|-------------|-----------------|---------|----------|
 | formula | 113 | 113 | 0 | 0 | 0 | 0 | 0 | 113 | 113 | 113 | 0 | 113 |
-| herb | 415 | 294 | 3 | 0 | 118 | 0 | 0 | 415 | 297 | 415 | 0 | 294 |
+| herb | 415 | 294 | 3 | 0 | 118 | 0 | 0 | 415 | 297 | 415 | 80 | 214 |
 | acupoint | 411 | 396 | 0 | 0 | 15 | 0 | 0 | 411 | 396 | 411 | 0 | 396 |
 
 ## quality_tier 分布
@@ -28,7 +28,8 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 - complete: 113
 
 ### herb
-- complete: 294
+- complete: 214
+- refined: 80
 - seed: 118
 - traced: 3
 
@@ -42,7 +43,8 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 - 暂无缺口
 
 ### herb
-- 暂无缺口
+- meridian: 148
+- properties: 95
 
 ### acupoint
 - 暂无缺口

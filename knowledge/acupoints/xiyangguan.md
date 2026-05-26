@@ -7,7 +7,6 @@ external_reference_required: true
 no_source_policy: "keep_boundary_until_traceable_source"
 
 ---
-
 # 膝阳关
 
 **定位：** 股骨外上髁上方凹陷中  
@@ -20,7 +19,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 股骨外上髁上方凹陷中
 
 ## 🔍 取穴方法
-待补充...
 
 ## 💡 功效主治
 - **功效：** 利关节，祛风湿
@@ -56,4 +54,3 @@ no_source_policy: "keep_boundary_until_traceable_source"
 - **追溯方式**: 通过 `source_refs` 字段关联原始视频/文稿
 - **验证状态**: 见 frontmatter `trace_status`
 - **用途**: 仅作学习与来源追溯，不作为针灸操作指导
-

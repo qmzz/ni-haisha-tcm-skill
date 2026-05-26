@@ -115,9 +115,24 @@ def main():
     global source_texts
     source_texts = load_source_texts()
 
-    # Load current state
-    kc_rows = load_jsonl(DATA / "knowledge_completeness.jsonl")
-    candidates = [r for r in kc_rows if r.get("trace_status") == "candidate"]
+    # Load current candidate rows directly from index files.
+    # Do NOT rely on knowledge_completeness.jsonl because tests rebuild it later;
+    # this script must be a stable seed source.
+    candidates = []
+    for row in load_jsonl(DATA / "herb_index.jsonl"):
+        if row.get("trace_status") == "candidate":
+            candidates.append({
+                "kind": "herb",
+                "item_id": row.get("herb_id"),
+                "file": row.get("file"),
+            })
+    for row in load_jsonl(DATA / "acupoint_index.jsonl"):
+        if row.get("trace_status") == "candidate":
+            candidates.append({
+                "kind": "acupoint",
+                "item_id": row.get("acupoint_id"),
+                "file": row.get("file"),
+            })
 
     # Load aliases for name lookup
     aliases = {}

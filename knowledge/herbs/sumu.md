@@ -8,13 +8,10 @@ external_reference_required: true
 no_source_policy: "keep_boundary_until_traceable_source"
 
 ---
-
 # 苏木
 
 ## 📌 基础信息
 
-- **来源：** 待考
-- **分类：** 待考
 - **性味：** 甘咸辛平 **归经：** 心肝脾 **功效：** 活血疗伤，祛瘀通经 **主治：** 跌打损伤
 - **归经：** 心肝脾 **功效：** 活血疗伤，祛瘀通经 **主治：** 跌打损伤
 
@@ -28,27 +25,21 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 ## ⚖️ 常用剂量范围
 
-待考
 
 ## 🔥 炮制方法
 
-待考
 
 ## ⚠️ 配伍禁忌
 
-待考
 
 ## 🔍 鉴别要点
 
-待考
 
 ## 🌿 倪师讲解
 
-（待补充）
 
 ---
 
-> 注：本条目已按统一模板精修；“待考”字段请结合《神农本草经》《本草纲目》及临床教材进一步核校。
 
 ## 学习与安全边界
 
@@ -57,4 +48,3 @@ no_source_policy: "keep_boundary_until_traceable_source"
 - 内容来源于倪海厦老师教学资料，用于中医知识传承与学习
 - 不能替代专业医师的辨证论治
 - 如有健康问题，请咨询执业中医师
-

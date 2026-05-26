@@ -7,7 +7,6 @@ external_reference_required: true
 no_source_policy: "keep_boundary_until_traceable_source"
 
 ---
-
 # 四神聪
 
 **定位：** 百会前后左右各旁开 1 寸  
@@ -91,4 +90,3 @@ no_source_policy: "keep_boundary_until_traceable_source"
 - **追溯方式**: 通过 `source_refs` 字段关联原始视频/文稿
 - **验证状态**: 见 frontmatter `trace_status`
 - **用途**: 仅作学习与来源追溯，不作为针灸操作指导
-

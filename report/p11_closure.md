@@ -67,10 +67,10 @@ P11 的目标不是追求 verified 百分比，而是在不凭模型记忆扩写
 
 ## P11 当前队列
 
-- queue total: 136
-- by_priority: {'P2': 133, 'P1': 3}
-- by_task: {'no_source_boundary_or_external_source': 133, 'review_candidate_source_refs': 3}
-- by_kind: {'herb': 121, 'acupoint': 15}
+- queue total: 216
+- by_priority: {'P2': 133, 'P1': 3, 'P0': 80}
+- by_task: {'no_source_boundary_or_external_source': 133, 'review_candidate_source_refs': 3, 'fill_verified_missing_content_field': 80}
+- by_kind: {'herb': 201, 'acupoint': 15}
 
 解释：P11 队列剩余项不是本阶段必须清空的缺陷，而是下一阶段复核/外部来源策略入口。
 
