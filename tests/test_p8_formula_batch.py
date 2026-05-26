@@ -29,6 +29,8 @@ PIPELINE_SCRIPTS = [
     "scripts/check_frontmatter_schema.py",
     "scripts/build_p8_knowledge_audit.py",
     "scripts/p9_quality_audit.py",
+    "scripts/p9_f_review_decisions.py",
+    "scripts/p9_quality_audit.py",
 ]
 
 
