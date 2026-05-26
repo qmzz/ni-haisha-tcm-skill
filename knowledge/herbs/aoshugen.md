@@ -3,6 +3,10 @@ title: "糯稻根须"
 kind: herb
 trace_status: no_source_found
 alias_of: "nuodaogenxu"
+source_scope: "not_in_nihaixia_source"
+external_reference_required: true
+no_source_policy: "keep_boundary_until_traceable_source"
+
 ---
 
 # 糯稻根须

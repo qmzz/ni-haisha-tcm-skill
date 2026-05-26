@@ -3,6 +3,10 @@ title: "荜澄茄"
 kind: herb
 trace_status: no_source_found
 aliases: ["bichengqie"]
+source_scope: "not_in_nihaixia_source"
+external_reference_required: true
+no_source_policy: "keep_boundary_until_traceable_source"
+
 ---
 
 # 荜澄茄

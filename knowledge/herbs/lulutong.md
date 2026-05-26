@@ -2,6 +2,10 @@
 title: "路路通"
 kind: herb
 trace_status: no_source_found
+source_scope: "not_in_nihaixia_source"
+external_reference_required: true
+no_source_policy: "keep_boundary_until_traceable_source"
+
 ---
 
 # 路路通

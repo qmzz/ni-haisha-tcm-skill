@@ -2,6 +2,10 @@
 title: "腰阳关"
 kind: acupoint
 trace_status: no_source_found
+source_scope: "not_in_nihaixia_source"
+external_reference_required: true
+no_source_policy: "keep_boundary_until_traceable_source"
+
 ---
 
 # 腰阳关穴 (DU3)

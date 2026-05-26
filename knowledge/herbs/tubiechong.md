@@ -3,6 +3,10 @@ title: "土鳖虫"
 kind: herb
 trace_status: no_source_found
 aliases: ["zhechong"]
+source_scope: "not_in_nihaixia_source"
+external_reference_required: true
+no_source_policy: "keep_boundary_until_traceable_source"
+
 ---
 
 # 土鳖虫

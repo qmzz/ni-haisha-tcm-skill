@@ -3,6 +3,10 @@ title: "黑芝麻"
 kind: herb
 trace_status: no_source_found
 alias_of: "heizhima"
+source_scope: "not_in_nihaixia_source"
+external_reference_required: true
+no_source_policy: "keep_boundary_until_traceable_source"
+
 ---
 
 # 黑芝麻
