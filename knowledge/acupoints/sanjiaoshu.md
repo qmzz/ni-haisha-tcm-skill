@@ -1,7 +1,15 @@
 ---
 title: "三焦俞"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 101
+    quote: "人纪系列针灸篇 我们休息一下，待会做个demo。 讲到三焦俞，三焦俞也是讲水道。像水的问题，下利、大便带水、排水，水肿，吃东西 不消化、都可以用三焦。治肚子胀满，三焦俞也用得很多。用了俞穴，就应会用募穴。肚脐 以下二寸，也就是神阙下二寸的石门穴。石门穴是三焦经的募穴。 再来是肾俞。我们都知道肾像两个"
 alias_of: "sanjiaoju"
 ---
 
@@ -12,6 +20,22 @@ alias_of: "sanjiaoju"
 **功效：** 调三焦，利水湿
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 第 1 腰椎棘突下，旁开 1.5 寸

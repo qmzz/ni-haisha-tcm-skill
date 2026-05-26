@@ -1,7 +1,15 @@
 ---
 title: "水泉"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 116
+    quote: "以上的人出现很多，几乎每天都有老外找我说后跟痛。他们吃钙片想帮助骨头，却反而伤 到肾脏，这时就好像榔头打铁钉，所以你钙片吃的越多，骨头就越松，不但没有帮助反而把 骨头硬化掉了。 水泉在临床上面，像月经停经不来 都可以用，都可以在水泉上下针。水泉是很好用的 一个穴道。再来是照海穴。内踝裸下五分的地方，就是现在讲的照海穴。在内踝裸下五分这 有个凹缝，下照海穴针是这个角度下针，不是直针下，是斜 45 度从内踝裸刺到照海穴。照 海穴管阴蹻脉。 癫痫 的病，痫病夜发，晚上发癫痫就灸照海，灸"
 ---
 
 # 水泉
@@ -13,6 +21,22 @@ trace_status: unverified
 **功效：** 补肾益精，通经利水
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📖 倪师讲解
 

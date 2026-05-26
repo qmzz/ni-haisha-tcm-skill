@@ -1,7 +1,15 @@
 ---
 title: "长强"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 34
+    quote: "人纪系列针灸篇 督脉跟任脉一样，没有井荣俞经合。书上在讲考正穴法之前有提到，要知任督二脉之功， 先将四门关闭，耳、目、口、鼻先闭起来。 1、长强穴（主治痔疮）（2-00:54:24） 督脉第一个穴道是长强穴，是足少阴、少阳之会，这个穴是痔疮 的根本。怎么找这个 穴道呢?让病人躺在床上，在尾椎骨的下方，肛门与尾椎骨的中间。长强穴下针的时候，采 斜刺。长强穴，无谓补泻，引气到就好了，下针不用太深，一寸左右。主要是治痔疮。 医书上有很多痔，什么长"
 ---
 
 # 长强穴 (GV1)
@@ -11,6 +19,22 @@ trace_status: unverified
 **属性：** 督脉络穴、足少阴肾经之别络
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

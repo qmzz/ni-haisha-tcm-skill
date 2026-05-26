@@ -1,7 +1,15 @@
 ---
 title: "天溪"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 74
+    quote: "半，小孩子的话，很浅的，三分就到了。要看他肚子大小来决定深浅。 而肋骨周围的穴道，下针的手法是这样子。针不是随便下进去，直接下进去会要人命， 所以我们是沿着肋刺，在两个肋骨中间，不要穿到肋骨里面去，要在两个肋中间，在夹缝中 间取穴。所以，下天溪穴不要直接在天溪穴下针，一定要在靠过来约五分的地方下针。也没 有人从乳中透到天溪，没有人直接这样下的。 为什么要知道这个天溪。如果妇人的乳房，有个硬块在这边，你一看，在乳中穴的旁边 二寸，她这乳房硬块是长在足太阴脾经上面。所以，乳房硬块在那"
 ---
 
 # 天溪
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 胸胁胀满
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 胸外侧部，第 4 肋间隙，前正中线旁开 6 寸

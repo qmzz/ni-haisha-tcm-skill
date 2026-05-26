@@ -1,7 +1,15 @@
 ---
 title: "气冲"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 59
+    quote: "，睾丸不见啦，睾丸 上缩到腹部，下针 归来就好了。因为男人的睾丸缩到里面去了。还有一种症很特殊，睾丸会一直转，那西医会 把睾丸拿掉，不然一转，血管会转在一起，血液会坏死。我们穴道很多，以后介绍到肝经会 更多，肝经直接络到阴器的地方。 再来是气冲，从曲骨外开二寸是气冲。怀孕的孕妇，在针腹针时，肚脐以下的腹针，最 好不要针。怀孕不要针。 气冲这个穴道平时可以用灸的。这些穴道，中极、气冲、关元都围绕在妇人子宫、卵巢 这边，所以可以助孕 ，不需要用人工受精。 我在美国临床，有一个太太做了"
 ---
 
 # 气冲
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 理气止痛，调经种子
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 腹股沟部，脐中下 5 寸，前正中线旁开 2 寸

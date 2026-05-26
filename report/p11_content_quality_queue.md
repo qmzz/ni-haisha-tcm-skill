@@ -4,19 +4,19 @@
 
 ## 摘要
 
-- total: 427
+- total: 327
 - P0: 0
-- P1: 294
+- P1: 194
 - P2: 133
 
 ## 按任务类型
 
-- review_candidate_source_refs: 294
+- review_candidate_source_refs: 194
 - no_source_boundary_or_external_source: 133
 
 ## 按类型
 
-- acupoint: 304
+- acupoint: 204
 - herb: 123
 
 ## P0 明细：verified 但缺关键正文结构
@@ -37,24 +37,24 @@
 | acupoint | baohuang | baohuang | knowledge/acupoints/baohuang.md |
 | acupoint | benshen | benshen | knowledge/acupoints/benshen.md |
 | acupoint | biguan | biguan | knowledge/acupoints/biguan.md |
-| acupoint | binao | binao | knowledge/acupoints/binao.md |
 | acupoint | bingfeng | bingfeng | knowledge/acupoints/bingfeng.md |
-| acupoint | changqiang | changqiang | knowledge/acupoints/changqiang.md |
 | acupoint | chengfu | chengfu | knowledge/acupoints/chengfu.md |
 | acupoint | chengguang | chengguang | knowledge/acupoints/chengguang.md |
 | acupoint | chengjin | chengjin | knowledge/acupoints/chengjin.md |
 | acupoint | chengling | chengling | knowledge/acupoints/chengling.md |
 | acupoint | chengshan | chengshan | knowledge/acupoints/chengshan.md |
-| acupoint | chongmen | chongmen | knowledge/acupoints/chongmen.md |
-| acupoint | chongyang | chongyang | knowledge/acupoints/chongyang.md |
 | acupoint | ciliao | ciliao | knowledge/acupoints/ciliao.md |
-| acupoint | dabao | dabao | knowledge/acupoints/dabao.md |
-| acupoint | dachang | dachang | knowledge/acupoints/dachang.md |
 | acupoint | dachangshu | dachangshu | knowledge/acupoints/dachangshu.md |
-| acupoint | daheng | daheng | knowledge/acupoints/daheng.md |
 | acupoint | dai mai2 | dai mai2 | knowledge/acupoints/dai mai2.md |
-| acupoint | daimai | daimai | knowledge/acupoints/daimai.md |
-| acupoint | danshu | danshu | knowledge/acupoints/danshu.md |
 | acupoint | dazhong | dazhong | knowledge/acupoints/dazhong.md |
-| acupoint | dazhu | dazhu | knowledge/acupoints/dazhu.md |
 | acupoint | dicang | dicang | knowledge/acupoints/dicang.md |
+| acupoint | dingchuan | dingchuan | knowledge/acupoints/dingchuan.md |
+| acupoint | diwuhui | diwuhui | knowledge/acupoints/diwuhui.md |
+| acupoint | dubi | dubi | knowledge/acupoints/dubi.md |
+| acupoint | feiyang | feiyang | knowledge/acupoints/feiyang.md |
+| acupoint | fengchi_gb | fengchi_gb | knowledge/acupoints/fengchi_gb.md |
+| acupoint | fenglong | fenglong | knowledge/acupoints/fenglong.md |
+| acupoint | fengmen | fengmen | knowledge/acupoints/fengmen.md |
+| acupoint | fuai | fuai | knowledge/acupoints/fuai.md |
+| acupoint | fubai | fubai | knowledge/acupoints/fubai.md |
+| acupoint | futu | futu | knowledge/acupoints/futu.md |

@@ -1,7 +1,15 @@
 ---
 title: "五里"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 149
+    quote: "看不好病嘛，改这样 有用吗，没有用的。什么水针啊，都没有用。针灸还是回到古老最好，因为我们过去祖传的 针灸方式很强，熟的话效果是立竿见影的，没有比这更快更好的了。因为很多的医生做不到。 就要用别的方式来吸引你的注意力，结果还是没有好。 8、五里穴与阴廉穴（助孕）（7-00:49:01） 再来是五里，五里在曲骨外开二寸。阴廉在气冲穴旁开五分下两寸处。曲骨外开二寸， 是足阳明胃经的气冲。从气冲下三寸再旁开五分就是五里。往上就足阴廉。所以阴廉跟五里 差一寸。这些穴道都是求子穴。妇人没怀"
 ---
 
 # 五里
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 清热解毒，通经活络
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 臂外侧面，曲池上 3 寸

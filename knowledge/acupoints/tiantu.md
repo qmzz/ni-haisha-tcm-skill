@@ -1,7 +1,15 @@
 ---
 title: "天突"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 32
+    quote: "”。我们身上很多黄油，身上很多的油网就是三焦，这个黄油就是膏，膏 的源头呢，来自鸠尾。平常我们不灸，都是下针。 11、膻中穴与天突穴（2-00:31:05） 接下来的穴道是膻中，玉堂、紫宫，华盖，璇玑，穴道我们怎么找？ 喉咙在这边，我们先找天突，天突最好找。这是天突，正好在喉咙那儿有个洞，不是直 接进去，直接进去会扎到气管，我们不要扎到气管，中医称气管叫重楼，因为它一圈一圈的， 有十二根，中医叫十二重楼。不要直针，下一寸就到了，不然一刺就剌到肺，不可以。 先找天突，再找鸩尾，这两"
 ---
 
 # 天突穴 (RN22)
@@ -10,6 +18,22 @@ trace_status: unverified
 **定位：** 颈部，当前正中线上，胸骨上窝中央
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

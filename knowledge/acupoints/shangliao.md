@@ -1,7 +1,15 @@
 ---
 title: "上髎"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 102
+    quote: "髎穴与会阳穴（5-01:12:06） 下面要跟诸位介绍八髎穴。八髎穴是全身上下最小的穴道。八髎穴有八个点。我们怎么 找这八髎穴?上髎呢?从督脉外开一寸半是膀胱经，一寸半的中间，就是七八分的地方，外面 是小肠俞，小肠俞和督脉中间的地方是所谓的上髎。上髎统治所有的腰痛，不管你的腰痛在 那个部位，都可以治。妇女无法怀孕，想要生小孩，可以灸灸上髎，同时针上髎也可以。阴 部的治症，通通可以用上髎穴。上髎穴很小，大概像绿豆这么大。所以，你下针时可以左右 找到一个洞，扎到洞里面去约一寸，平常是"
 ---
 
 # 上髎
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 强腰脊，理下焦
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 第 1 骶后孔中

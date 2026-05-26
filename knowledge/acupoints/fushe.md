@@ -1,7 +1,15 @@
 ---
 title: "府舍"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 74
+    quote: "了。四寸是脾经，二寸是胃经，再往里面半寸是肾经，所以要知道经络的走向， 那天病人说我这里痛，你一看就知道是胃经（或是哪一条经络）。 所以，病人在陈述他的症状时，你的经络学很熟，大概就知道是哪条经的问题。所以针 灸一定要强，可以帮助我们诊断。府舍是近取穴，近取穴因为靠近腹部。所以都可以治疗腹 部的病。所以，你看针灸书上写的都很难区分，你也不用花时间去区分，不要死板板的。 再过来是腹结，要从石门找。关元再上面是石门，阴交，神阙。在石门外开四寸，我们 这个肚脐下二寸，再外开四寸，就是腹"
 ---
 
 # 府舍
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 健脾和胃，理气痛
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 腹部，脐中下 4.3 寸，前正中线旁开 4 寸

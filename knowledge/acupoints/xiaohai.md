@@ -1,7 +1,15 @@
 ---
 title: "小海"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 85
+    quote: "焦经，我们三焦经还没有介绍到。 那这是臑腧的找法，所以要先找臑腧，再从臑腧下三寸找肩贞穴。这些穴道你们知道就 好了。有时病人说，我痛到后面去，指的地方正好就是臑腧、肩贞。一般很多人会痛在臑腧。 我们一看是小肠经，问他“痛多久”，痛三天，就下小海。三个月，就下后溪。穴道就这样 取的。 看身体那边痛，我们再扎对侧。不要书上写治肩，而乱枪打鸟，看到书上写治肩而下了 三十几针，病人起来后还是痛，因为没有扎到小海，知道我的意思吧。现在的针灸就是这样 子，所以他们的书我看不懂。因为我看古人的"
 ---
 
 # 小海穴 (SI8)
@@ -11,6 +19,22 @@ trace_status: unverified
 **属性：** 合穴
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

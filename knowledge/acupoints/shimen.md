@@ -1,7 +1,15 @@
 ---
 title: "石门"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 28
+    quote: "脐下两寸，是石门，石门是三焦 的募穴。 在介绍之前，先让你们了解一下什么叫三焦，中医三焦的观念，古体字“膲”，身上脏 腑之间的油网，这个油网就是三焦。所有的记载以唐容川《中医汇通医书五种》将三焦定义 写得最好，他是经方家。他说三焦是油网，而石门是三焦的募穴。 石门，《针灸大成》说妇人禁针灸，犯之绝子。顾名思义叫石门嘛，门像石头关住了， 从此不生小孩，这穴道还不是很强。在右门穴、关元穴的中间，有个奇穴，这叫做绝孕穴。 所以穴道要很熟，在关元上面灸，不断的生小孩。上半寸的地方是绝孕穴"
 ---
 
 # 石门
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 腹痛水肿
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

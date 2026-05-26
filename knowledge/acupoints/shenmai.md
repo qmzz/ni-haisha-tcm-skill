@@ -1,7 +1,15 @@
 ---
 title: "申脉"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 116
+    quote: "。内踝裸下五分的地方，就是现在讲的照海穴。在内踝裸下五分这 有个凹缝，下照海穴针是这个角度下针，不是直针下，是斜 45 度从内踝裸刺到照海穴。照 海穴管阴蹻脉。 癫痫 的病，痫病夜发，晚上发癫痫就灸照海，灸阴蹻脉的照海穴。白天晚上都发，就 申脉、照海一起灸。 8、扁桃腺诊治（5-03:18:47） 由于肾经一路从照海，到喉部这边，照海管阴蹻，阴蹻跟着肾经上来的时候是重叠在一 起的，一直到喉咙这边。所以我们在治症的时候，有个很好的治疗，我们叫列缺照海。列缺 跟照海这两个穴道，因列缺"
 ---
 
 # 申脉穴 (BL62)
@@ -11,6 +19,22 @@ trace_status: unverified
 **特定穴：** 八脉交会穴（通阳跷脉）
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

@@ -1,7 +1,15 @@
 ---
 title: "郄门"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 122
+    quote: "人纪系列针灸篇 2、郄门穴至内关穴（6-00:31:32） 再来是郄门穴，郄门穴是心包经的郄穴。郄穴镇痛、止痛的效果很好的。郄门穴怎么找 呢？我画右手内侧，这是手肘横纹，这是两个筋的中间。这是手臂，这是手的内侧。这是大 拇指，这小指，在这有个大筋，大筋的外侧是肺经的尺泽，大筋的内侧是曲泽。从手横纹头， 这边有两条筋。在这个筋约上五寸的地方，就是郄门穴。我们有十二经筋"
 ---
 
 # 郄门
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 心痛心悸
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

@@ -1,7 +1,15 @@
 ---
 title: "委阳"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 106
+    quote: "人纪系列针灸篇 膀胱经是阳经，这是病人的背面，这是右腿，这是左腿。在膀胱经的外侧，通通是阳经， 内侧就是阴经。所以，往这走是阴经，往这走通通是阳经。外侧的穴道，在肌肉和筋的中间， 这个穴道叫委阳。从委阳上一寸，就是浮郄穴。浮郄穴只要知道就好了，我们也很少用它。 用的比较多的是委阳、委中和后面的承山。 委阳穴和委中平行。委阳，不是说扎下去就阳萎了。委阳是足太阳经的络穴，足太阳之 别络。在原络治疗的时候会用到它。记得原络治疗，会用到原"
 ---
 
 # 委阳
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 利水通淋，舒腰脊
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 腘横纹外侧端，股二头肌腱内侧缘

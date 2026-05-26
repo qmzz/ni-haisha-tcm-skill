@@ -1,7 +1,15 @@
 ---
 title: "地机"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 149
+    quote: "都下，左腿、右腿都下。当病人 肝癌有腹水，肚子因肝硬化有腹水 ，我除了下这个穴道以外，病人右边肋很痛，我就下肝 关，再下肝经的郄穴来镇痛。待会我们十二经络讲完，我们开始讲针刺手法及止痛的手法， 去止痛，好像麻醉一样。 肚子积很多水，阴陵泉，地机、三阴交三皇。那肚子上也可以下针，水分、水道。当我 下完以后再给他灸，当然可以啊!胃口没了，灸腑会中脘，关元穴。那膏肓治百病，我灸一 百壮。方法太多了，所以你一定要去悟，这穴道不要去记，一下子就通通出来了。这就是正 确的方向。等你会了以后，"
 ---
 
 # 地机
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 痛经腹胀
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

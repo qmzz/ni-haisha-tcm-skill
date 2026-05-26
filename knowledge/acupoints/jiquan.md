@@ -1,7 +1,15 @@
 ---
 title: "极泉"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 78
+    quote: "会上《黄帝内经》。 诸位看第一个穴道叫极泉。卷八 28 页。这个腋下的地方，正上方是我们的肩井，下面 是极泉。平时极泉不会下针，也不会去灸，我们知道那个穴道叫极泉就好了。如果说有乳房 硬块，就知道是在心经。所以你要在心经上治疗，但不一定要用极泉治疗，它可帮助我们诊 断用。 第二个穴道是青灵。青灵在手肘上三寸。所谓手肘上三寸的定义，是我们手弯起来，手 肘弯起来外侧是曲池，这弯起来内侧叫少海。从少海上三寸，是青灵，一般很少用，但你要 知道心经从这经过，从这条路线到极泉去。 3、母穴："
 ---
 
 # 极泉
@@ -13,6 +21,22 @@ trace_status: unverified
 **功效：** 宽胸理气，通经活络
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📖 倪师讲解
 

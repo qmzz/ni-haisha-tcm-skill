@@ -1,7 +1,15 @@
 ---
 title: "巨阙"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 77
+    quote: "碰到一个个子比你高大的敌 手，他把你捉起来丢到墙壁上，碰的一声，对方会以为我撞墙受伤了，其实我才开始啊！因 为平时我就在撞墙啊。利用撞墙反弹的力量去攻击它，一拳就打到大包上。一拳就打在它的 十二重楼，因为我们对穴道很了解啊！我们一打他的心募巨阙，对方就受不了啦。而大包管 全身大络，大络一受到重击，全身经脉就不通，对方就倒了。 那我现在表演撞墙的动作，同时发出来的声音是“喝”，就可以把心脏动脉血管的堵塞 打通。所以你帮病人扎寸的时候，可以用针灸法，而对自己的时候，一样可以让它通，而"
 ---
 
 # 巨阙
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 宁心安神，和胃气
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 前正中线上，脐上 6 寸

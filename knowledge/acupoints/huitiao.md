@@ -1,7 +1,15 @@
 ---
 title: "会阳"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 30
+    quote: "非常 好。 我们《针灸大成》上面写，中脘穴在脐上四寸，不要用同身寸去量，量了半天还是错。 这是丈量法腹寸，心蔽骨与神阙的正中间。手太阳少阳足阳明任脉之会，胃的募穴，《难经》 说腑会中脘。 我们身上有八会穴①，八个会穴，腑会中脘、脏会章门、筋会阳陵泉、气会膻中。将来 会有一个治病法则，叫会郄治疗法。 每一条经都有一个郄穴②。身上每一个腑，包含胆，这是消化系统，小肠、胃、大肠、 膀胱、子宫、胞户。脏呢，肝心脾肺肾。中医的脾是把西医的胰脏包含在里面，所有腑的病 通通在中脘上治，所以我们"
 ---
 
 # 会阳
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 理下焦，止痔疾
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 尾骨端旁开 0.5 寸

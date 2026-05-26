@@ -1,7 +1,15 @@
 ---
 title: "上巨虚"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 63
+    quote: "。条口穴一针，可以透到承山穴。条口透 承山专治五十肩，比如说病人肩抬不起来，你从对侧条口穴下去，拿三寸针，一路透到承山 穴，透针时叫病人抬手，这样就好了。这是我们条口透承山的方法。 再来就是下巨虚。下巨虚治女子乳房硬块，腹部硬块都可以。那以上巨虚治肚脐以上最 好。肚脐以下找下巨虚。这硬块局限在足阳明胃经上面，你一看硬块在阳明胃经上面，对西 医来说可能是子宫肿瘤，都没关系。马上采对侧治疗为主。 14、丰隆穴与导痰针灸法（3-02:25:55） 再来是丰隆穴，丰隆穴要怎么找?我们这个腿"
 ---
 
 # 上巨虚
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 调肠胃，化湿热
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 足三里下 3 寸

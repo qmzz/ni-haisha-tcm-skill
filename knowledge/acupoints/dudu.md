@@ -1,7 +1,15 @@
 ---
 title: "大都"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 106
+    quote: "中。承扶在近取穴的时候，是用在治坐骨神经痛，效果很好。委阳 偶尔会用到，委中用得最多。 委阳又称太阳经的别络。不是正络是别络，所谓别络是指还有分支在这里，不是大络。 像我们的淋巴肿大，可以用委阳。因为它是在转角的地方，这个三角的地方，腋下肿大都可 以在委阳上下针。在治症上面，如果是瘀血在里面会产生刺痛。当瘀血产生刺痛时，我们是 采用活血化瘀的方法。针灸里面穴道很多都可以活血化瘀，处方也很多。 如果是痞块或积块，也就是硬块在里面，或气闷在那个地方。我们治肿瘤的时候就是两 个字，就是"
 ---
 
 # 大都
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 腹胀胃痛
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

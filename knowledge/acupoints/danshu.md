@@ -1,7 +1,15 @@
 ---
 title: "胆俞"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 99
+    quote: "很痛，你一下针，马上会痛得缩回去了。在针井穴时，病人会抽一下因 为是初病，疝气、坠肠的地方，脱肠都会缩回去，效果很好。 我们书上说，肝俞上面第五行，“积聚痞痛”，就是讲肝里面有肿瘤，有硬块。治症都可 以在肝俞上面治疗。 在第十椎外开一寸半是胆俞。按时间的时症，晚上十一点到半夜一点，它有问题，我们 可以在胆俞穴上下针。诊断时，我们怎么知道胆有问题，在第十椎会有压痛点，尤其是胆结 石时，压的会很痛。你帮他治疗好了以后，没压痛点就是病已经去了。 14、四花灸（膈俞、肝俞）（5-00:4"
 ---
 
 # 胆俞穴 (BL19)
@@ -10,6 +18,22 @@ trace_status: unverified
 **定位：** 背部，当第 10 胸椎棘突下，旁开 1.5 寸
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

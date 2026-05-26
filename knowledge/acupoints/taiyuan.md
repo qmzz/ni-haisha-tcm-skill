@@ -1,7 +1,15 @@
 ---
 title: "太渊"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 44
+    quote: "书上卷八第六页说“寸口动脉陷中，肺脉所行，禁灸”。脉 上面是不灸的，灸的话会伤到血脉。 再来是太渊，太渊穴呢，《难经》说“脉会太渊”，寸口脉会太渊，太渊是俞穴。太渊属 土。阴阳五行来说是土生金。既然是土生金，土是妈妈嘛，手太阴肺经的母穴就是太渊，手 太阴肺经的子穴就是尺泽，本穴就是经渠。 每个经络都有子穴母穴，阴经就是木火土金水，阳经就是金水木火土。 太渊脉病治此。脉怎么会有病呢？这个脉跳跳停停，西医叫心律不整 ，可以在太渊治 疗。你摸到脉后，先用指甲切一下，把脉切开，针再下进去"
 ---
 
 # 太渊
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 补肺益气，通脉化瘀
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

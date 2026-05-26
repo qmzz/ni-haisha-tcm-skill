@@ -1,7 +1,15 @@
 ---
 title: "复溜"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 116
+    quote: "。 9、复溜、交信与筑宾穴（5-03:22:47） 再来是太溪穴，太溪在大筋和内踝裸的中间，从太溪穴正直上二寸的距离就是复溜。复 溜是肾经的母穴，所以肾家的虚症，可以在复溜上治疗。既然复溜是母穴，下针的时候，应 该要顺经对不对？你不会直接在复溜上下针，你一定要在下五分的地方，对复溜下针去随着 它。你针下去这个地方就已经是补了，可是是小补，你在去转针的时候，就是大补。再拔一 点出来，就是大大补。我们有很多补法，经络讲完以后，我会再讲治疗法则，包括子母、会 郄、原络、俞募，还有针刺手"
 ---
 
 # 复溜穴 (KI7)
@@ -11,6 +19,22 @@ trace_status: unverified
 **特定穴：** 经穴
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

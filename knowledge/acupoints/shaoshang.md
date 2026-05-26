@@ -1,7 +1,15 @@
 ---
 title: "少商"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 45
+    quote: "我当然不用毛笔， 平常我们放血的时候，要因地制宜嘛。我们拿个三寸长针，我跟他说我要放血，妳那么大了， 我不要用毛笔骗你。我把三寸针往前推，大概是这个长度时，把柄弯起来，这样针就不会往 后跑。等扁桃腺放血完，再下列缺、照海，喉咙就不痛了。然后少商再放点血。这就是针刺 的手法。 《针灸大成》写“少商，肺脉之所出”。书上讲的乳蛾，就是讲扁桃腺。肺经，从中府 云门一直到少商穴，走完少商以后，这气血会回到大肠经上面。 在介绍大肠经之前，我补充一下，当有时症发生，你可以扎俞穴，你也可以扎鱼际"
 ---
 
 # 少商
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 清热利咽，开窍醒神
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

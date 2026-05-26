@@ -1,7 +1,15 @@
 ---
 title: "大横"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 74
+    quote: "的病。所以，你看针灸书上写的都很难区分，你也不用花时间去区分，不要死板板的。 再过来是腹结，要从石门找。关元再上面是石门，阴交，神阙。在石门外开四寸，我们 这个肚脐下二寸，再外开四寸，就是腹结，很少在腹结上治疗，但要知道经络的走向。再来 是大横，大横就是神阙外开四寸，外开二寸就是太阳经的天枢穴，再外开二寸是大横。大部 分都是治肠胃方面，常看到这个病人泻利 、拉肚子 ，都可以在这附近取穴。 腹哀呢?我们从任脉开始找。这是腰，这是肚脐，这是肋骨，这是中脘，这是水分、下 脘、建里。建里"
 ---
 
 # 大横
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 腹痛便秘
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 腹中部，脐中旁开 4 寸

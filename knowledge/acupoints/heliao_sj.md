@@ -1,7 +1,15 @@
 ---
 title: "和髎"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 131
+    quote: "三焦经经过的地方。在靠近耳门前，这斜的半寸 到一寸的中间，你摸有个动脉在跳，这就和髎穴。 和髎穴在脉的下方，一般来说下针的时候，手摸上去，先用指甲把脉推开来，针就下去 了。你们千万不要按着脉下，按着脉下就直接扎到动脉上面，会造成淤青一块。像和髎、耳 门、听宫、听会都是所谓的近取穴。遇到耳朵流脓、耳朵发炎 、耳鸣 ，耳聋 ，到底要扎 哪一个。临床上我们在做的时候，我是今天扎耳门，明天扎听宫，后天扎听会。要轮刺，不 要老是扎一个穴道，不要那么死脑筋，我偏要扎耳门不可，扎了皮肤都硬成一"
 alias_of: "heliao"
 ---
 
@@ -12,6 +20,22 @@ alias_of: "heliao"
 **功效：** 祛风通络，清头目
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 耳前，鬓发后缘，颞浅动脉后缘

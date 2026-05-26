@@ -1,7 +1,15 @@
 ---
 title: "前谷"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 82
+    quote: "下到，而且很痛。我们所谓的巧手是下针进去没有痛， 刚好在骨和肉中间。这个横纹头就是我们的前谷穴，针的角度是这样子，直针这样下进去。 下针时也是手握拳，但叫病人不要握太紧。 3、后溪穴（4-01:44:00） 再过来这个横纹头的穴道就是后溪。前谷后溪都是要握手取，像二间三间也是，手上二 间、三间，都是凹的地方。那四肢末梢的穴道我们学的很多，在针刺上面效果很好，而且也 很安全。 前谷穴是心经的荣穴，穴性是水，用在很多地方，像妇人奶水 不够，用前谷穴。现在 讲针灸的导引术，奶水不足时，"
 ---
 
 # 前谷
@@ -13,6 +21,22 @@ trace_status: unverified
 **功效：** 清热熄风，通经活络
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📖 倪师讲解
 

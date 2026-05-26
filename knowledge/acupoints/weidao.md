@@ -1,7 +1,15 @@
 ---
 title: "维道"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 138
+    quote: "人纪系列针灸篇 元外开二寸就是水道，水道在足阳明胃经上。从水道再走五寸半，从这横过来，这个穴道就 是五枢穴。关元下一寸是任脉的中极穴。从中极穴外开八寸的距离就是维道穴。这三个穴道， 带脉、五枢、维道，是属于人的带脉。带脉的症状，病人会陈述，下半身好像泡在水里面。 你今天可以洗澡放冷水，让屁股坐下去，坐到腰部，这种感覚就是带脉的症状。下半身好像 坐在冷水里，有时还会听到水声，这就是带脉病。 现在诸位知道"
 ---
 
 # 维道
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 调经利湿，理少腹
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 五枢下 0.5 寸

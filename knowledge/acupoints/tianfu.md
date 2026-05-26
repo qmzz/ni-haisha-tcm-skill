@@ -1,7 +1,15 @@
 ---
 title: "天府"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 42
+    quote: "如说天府下 去血没有止，再针侠白，因为差一寸像加强效果，变成两倍效果，增强它的效果。这两个主 治都是流鼻血，我不管你是一般的流鼻血，还是鼻咽癌。不管里面的病，只要是流鼻血都可 以下。十四岁小孩子，流鼻血是正常，可下可不下，大人流鼻血或外伤在天府治疗。 再下面的穴道，手肘上面有大筋，大筋的外侧，手弯曲的就是尺泽穴。按井荣俞经合， 这是肺经的合穴，因为它是阴经嘛。下面一句话，肺实泻之。肺家的实症，在这个穴道上治。 直刺就没有所谓的补泻。最简单泻的手法，肺的经气是向下，病人躺平，逆向下"
 ---
 
 # 天府
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 气喘鼻衄
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 

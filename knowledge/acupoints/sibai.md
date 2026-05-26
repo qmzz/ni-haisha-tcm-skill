@@ -1,7 +1,15 @@
 ---
 title: "四白"
-kind: acupoint
-trace_status: unverified
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p6_verified_standardization"
+review_status: verified
+kind: "acupoint"
+trace_status: verified
+source_refs:
+  - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
+    page_num: 53
+    quote: "在我们技术好的话下针可以，因为以前针很粗，现在针很细。如果不针， 我们知道这穴道要干什么?因为要用来诊断。这眼珠子，下眼袋拉开一看，这个人眼翳从下 往上升，就知道是足阳明胃经的问题，升到瞳孔边把眼睛遮住就看不到了。所以用在辨证很 有帮助。 四白呢?眼珠在这边，从眼框下来是四白。我们量穴是这样量，眼要正视，这一条线先 找到，然后从眼框骨头看过来，下一寸，同身寸一寸的距离，这是四白。那我们针灸上面， 你们将来当医生，脑筋要灵活。要叫病人瞳孔放正，你们要学到不放正也找得到，因为有人 是"
 ---
 
 # 四白
@@ -11,6 +19,22 @@ trace_status: unverified
 **功效：** 目疾面痛
 
 ---
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：穴位
+- 追溯状态：verified
+- 来源引用：见本文 frontmatter 中的 `source_refs`
+- 穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ## 📍 穴位定位
 
