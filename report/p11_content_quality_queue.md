@@ -99,7 +99,7 @@
 | herb | yujin | yujin | properties,meridian | knowledge/herbs/yujin.md |
 | herb | yuyuliang | yuyuliang | meridian | knowledge/herbs/yuyuliang.md |
 | herb | zaojia | zaojia | meridian | knowledge/herbs/zaojia.md |
-| herb | zaojiaoci | zaojiaoci | properties,meridian | knowledge/herbs/zaojiaoci.md |
+| herb | zaojiaoci | zaojiaoci | meridian | knowledge/herbs/zaojiaoci.md |
 | herb | zaoxintu | zaoxintu | meridian | knowledge/herbs/zaoxintu.md |
 | herb | zhushagen | zhushagen | meridian | knowledge/herbs/zhushagen.md |
 | herb | ziheche | ziheche | properties,meridian | knowledge/herbs/ziheche.md |

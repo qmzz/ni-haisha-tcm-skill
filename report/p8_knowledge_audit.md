@@ -44,7 +44,7 @@ P8-A 用于盘点方剂、药材、穴位知识库的治理状态与内容完备
 
 ### herb
 - meridian: 148
-- properties: 95
+- properties: 94
 
 ### acupoint
 - 暂无缺口

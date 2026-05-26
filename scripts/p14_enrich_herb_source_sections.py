@@ -35,7 +35,9 @@ SECTION_ORDER = [
 
 EXTRACT_PATTERNS = {
     "xingwei": re.compile(r"【性味】\s*([^【]{2,140})"),
+    "xingwei_alt": re.compile(r"(味[酸苦甘辛咸、]{1,6}[，,]?性[寒热温凉平]{1,2}[，,]?(?:无毒|有[毒小毒]毒)?[^【。]{0,20})"),
     "zhuzhi": re.compile(r"【主治】\s*([^【]{2,180})"),
+    "zhuzhi_alt": re.compile(r"(主治[呢：:]\s*[^【。]{2,120})"),
     "yongliang": re.compile(r"【用量】\s*([^【]{2,140})"),
     "jinji": re.compile(r"【禁忌】\s*([^【]{2,180})"),
     "benjing": re.compile(r"【本经原文】\s*([^【]{2,220})"),
@@ -132,21 +134,31 @@ def enrich_file(path: Path, apply: bool) -> Dict:
     changes: List[str] = []
     new_body = body
 
-    if fields.get("xingwei") and not ("## 🌡️ 性味" in new_body or "性味" in section_body(new_body, "## 📌 基础信息") if section_body(new_body, "## 📌 基础信息") is not None else False):
-        new_body = insert_after(new_body, "## 📌 基础信息", f"## 🌡️ 性味\n\n> 来源摘录：{fields['xingwei']}")
+    xingwei_val = fields.get("xingwei") or fields.get("xingwei_alt")
+    if xingwei_val and not ("## 🌡️ 性味" in new_body or "性味" in section_body(new_body, "## 📌 基础信息") if section_body(new_body, "## 📌 基础信息") is not None else False):
+        new_body = insert_after(new_body, "## 📌 基础信息", f"## 🌡️ 性味\n\n> 来源摘录：{xingwei_val}")
         changes.append("add_xingwei")
 
-    if fields.get("yongliang") and section_empty(new_body, "## ⚖️ 常用剂量范围"):
-        new_body = replace_empty_section(new_body, "## ⚖️ 常用剂量范围", f"> 来源摘录：{fields['yongliang']}")
-        changes.append("fill_yongliang")
+    if fields.get("yongliang"):
+        if section_empty(new_body, "## ⚖️ 常用剂量范围"):
+            new_body = replace_empty_section(new_body, "## ⚖️ 常用剂量范围", f"> 来源摘录：{fields['yongliang']}")
+            changes.append("fill_yongliang")
+        elif "## ⚖️ 常用剂量范围" not in new_body:
+            new_body = insert_after(new_body, "## 🎯 主治" if "## 🎯 主治" in new_body else "## 💊 功效", f"## ⚖️ 常用剂量范围\n\n> 来源摘录：{fields['yongliang']}")
+            changes.append("add_yongliang")
 
-    if fields.get("jinji") and section_empty(new_body, "## ⚠️ 配伍禁忌"):
-        new_body = replace_empty_section(new_body, "## ⚠️ 配伍禁忌", f"> 来源摘录：{fields['jinji']}")
-        changes.append("fill_jinji")
+    if fields.get("jinji"):
+        if section_empty(new_body, "## ⚠️ 配伍禁忌"):
+            new_body = replace_empty_section(new_body, "## ⚠️ 配伍禁忌", f"> 来源摘录：{fields['jinji']}")
+            changes.append("fill_jinji")
+        elif "## ⚠️ 配伍禁忌" not in new_body:
+            new_body = insert_after(new_body, "## ⚖️ 常用剂量范围" if "## ⚖️ 常用剂量范围" in new_body else "## 💊 功效", f"## ⚠️ 配伍禁忌\n\n> 来源摘录：{fields['jinji']}")
+            changes.append("add_jinji")
 
     # Preserve existing 功效/主治 if present; only add source quote under empty 主治 section.
-    if fields.get("zhuzhi") and section_empty(new_body, "## 🎯 主治"):
-        new_body = replace_empty_section(new_body, "## 🎯 主治", f"> 来源摘录：{fields['zhuzhi']}")
+    zhuzhi_val = fields.get("zhuzhi") or fields.get("zhuzhi_alt")
+    if zhuzhi_val and section_empty(new_body, "## 🎯 主治"):
+        new_body = replace_empty_section(new_body, "## 🎯 主治", f"> 来源摘录：{zhuzhi_val}")
         changes.append("fill_zhuzhi")
 
     # Do not fill meridian unless explicit 归经 exists. If found, add source excerpt under 基础信息.
