@@ -24,18 +24,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 中风痰厥，气郁暴厥，中恶昏迷，心腹疼痛
 
-## ⚖️ 常用剂量范围
-
-
-## 🔥 炮制方法
-
-
-## ⚠️ 配伍禁忌
-
-
-## 🔍 鉴别要点
-
-
 ## 🌿 倪师讲解
 
 

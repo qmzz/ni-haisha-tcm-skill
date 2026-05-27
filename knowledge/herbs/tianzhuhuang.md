@@ -23,18 +23,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 痰热癫痫，中风痰壅
 
-## ⚖️ 常用剂量范围
-
-
-## 🔥 炮制方法
-
-
-## ⚠️ 配伍禁忌
-
-
-## 🔍 鉴别要点
-
-
 ## 🌿 倪师讲解
 
 

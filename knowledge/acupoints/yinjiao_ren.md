@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 前正中线上，脐下 1 寸
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 健脾利湿，调下焦
 - **主治：** 腹痛，带下，月经不调

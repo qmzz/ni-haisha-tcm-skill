@@ -18,21 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 疏散风热，清肺润燥，平抑肝阳
 
-## 🎯 主治
-
-
-## ⚖️ 常用剂量范围
-
-
-## 🔥 炮制方法
-
-
-## ⚠️ 配伍禁忌
-
-
-## 🔍 鉴别要点
-
-
 ## 🌿 倪师讲解
 
 风热咳嗽

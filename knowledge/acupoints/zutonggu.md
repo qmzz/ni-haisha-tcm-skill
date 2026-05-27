@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 足外侧，第 5 趾跖关节前方，赤白肉际处
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 清头目，利腰脊
 - **主治：** 头痛，项强，目眩，癫痫

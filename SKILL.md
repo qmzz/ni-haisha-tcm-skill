@@ -2,7 +2,7 @@
 name: ni
 description: "倪海厦中医资料检索 Skill：面向 Agent 的方剂、药材、穴位、辨证辅助与来源追溯 JSON 工具"
 argument-hint: "<tool_name> <json_payload>"
-version: "1.0.0-rc1"
+version: "1.0.0-rc2-p18"
 user-invocable: true
 allowed-tools: Read, Bash
 ---
@@ -61,18 +61,17 @@ python3 tools/tcm_tools.py tcm_search_sources_fts '{"query":"桂枝汤","limit":
 ## 当前数据基线
 
 ```text
-version: v1.0.0-rc1
-total: 939
-verified: 803
-no_source_found: 133
-candidate: 3
-P9 issues: 0
-placeholder files: 0
-JSON fragment files: 0
-frontmatter warnings: 0
+version: v1.0.0-rc2-p18
+indexed medical items: 939
+knowledge markdown files: 1083
+knowledge_completeness trace_status: verified 803 / no_source_found 133 / candidate 3
+verified_sources registry rows: 778
+status: P17/P18 精修进行中，非最终稳定版
 ```
 
-P16 内容质量定版报告：`report/p16_content_release.md`
+注意：P16 曾作为内容质量基线，但 P17 审计发现仍有内容治理问题。P18 只做机械清理，不凭模型记忆补写医学内容。
+
+相关报告：`report/p16_content_release.md`、`report/p17_content_audit.md`
 
 ## 目录
 

@@ -18,21 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 疏散风热，宣肺透疹，解毒利咽
 
-## 🎯 主治
-
-
-## ⚖️ 常用剂量范围
-
-
-## 🔥 炮制方法
-
-
-## ⚠️ 配伍禁忌
-
-
-## 🔍 鉴别要点
-
-
 ## 🌿 倪师讲解
 
 风热感冒咽痛

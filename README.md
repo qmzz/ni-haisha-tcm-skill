@@ -78,31 +78,29 @@ python3 tools/tcm_tools.py help '{}'
 
 ## 知识库当前状态
 
-当前基线：`v1.0.0-rc1`
+当前基线：`v1.0.0-rc2-p18`
 
 ```text
-total: 939
-verified: 803
-no_source_found: 133
-candidate: 3
-P9 issues: 0
-placeholder files: 0
-JSON fragment files: 0
-frontmatter warnings: 0
+indexed medical items: 939
+knowledge markdown files: 1083
+knowledge_completeness trace_status: verified 803 / no_source_found 133 / candidate 3
+verified_sources registry rows: 778
+P17 audit before P18 cleanup: P0 256 / P1 682 / OK 145
+P18 mechanical cleanup: removed source-label prefixes, model-placeholder quote lines, OCR replacement chars, JSON fragment lines, and empty headings where safely detectable
 ```
 
-P16 内容质量定版已完成：
+状态说明：
 
-- 正文占位词已清零；
-- JSON / patch 残片已清零；
-- 短正文已通过来源摘录重排和原始 JSON 窗口扩展处理；
-- 空壳章节已删除；
-- 未明确来源的 `归经` 等字段未硬补。
+- `verified` 仅表示来源追溯链路通过，不代表医学真实性、临床适用性或治疗建议。
+- P16 曾作为内容质量基线，但 P17 审计发现仍有内容治理问题；当前状态应视作 **P17/P18 精修进行中**，不是最终稳定版。
+- P18 只做机械清理，不凭模型记忆补写剂量、归经、禁忌、针刺方法等医学内容。
+- `verified_sources.jsonl` 与 `knowledge_completeness.jsonl` 仍存在统计口径差异，后续需继续治理 registry 同步。
 
-详细报告见：
+相关报告：
 
 ```text
 report/p16_content_release.md
+report/p17_content_audit.md
 ```
 
 ---
@@ -125,9 +123,9 @@ report/               # 治理与定版报告
 
 ## 维护说明
 
-本仓库曾包含大量 P0-P16 阶段性治理脚本和测试脚本。RC 定版后已清理，不再作为 Skill 运行路径的一部分，避免干扰 Agent 使用。
+本仓库曾包含大量 P0-P16 阶段性治理脚本。当前保留少量工具脚本与测试，用于回归验证和机械清理。
 
-如未来维护知识库，建议新建独立维护分支或维护目录；不要把一次性治理命令堆进 README。
+如未来维护知识库，建议在维护分支中进行；不要把一次性治理命令堆进 README。
 
 ---
 

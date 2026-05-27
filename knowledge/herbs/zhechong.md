@@ -24,18 +24,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 血瘀经闭，跌打损伤
 
-## ⚖️ 常用剂量范围
-
-
-## 🔥 炮制方法
-
-
-## ⚠️ 配伍禁忌
-
-
-## 🔍 鉴别要点
-
-
 ## 🌿 倪师讲解
 
 

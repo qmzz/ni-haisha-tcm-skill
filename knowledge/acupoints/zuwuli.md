@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 气冲直下 3 寸
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 理气止痛，调冲任
 - **主治：** 腹痛，腹胀，下肢痿痹

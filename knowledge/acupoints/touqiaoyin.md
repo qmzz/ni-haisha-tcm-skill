@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 乳突后上方，完骨上缘
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 清头明目，聪耳窍
 - **主治：** 头痛，眩晕，目赤痛，鼻渊

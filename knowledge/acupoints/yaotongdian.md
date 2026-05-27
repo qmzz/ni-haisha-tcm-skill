@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 手背第 2、3 和第 4、5 掌骨间近腕处
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 急止腰痛，通经络
 - **主治：** 急性腰扭伤，腰腿痛
