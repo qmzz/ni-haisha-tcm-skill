@@ -31,11 +31,20 @@ class TcmToolSmokeTests(unittest.TestCase):
         self.assertEqual(data["trace"]["trace_status"], "verified")
         self.assertTrue(data["markdown"])
 
-    def test_no_source_index_row_is_not_promoted_to_candidate(self):
+    def test_verified_registry_synced_herb_traces_verified(self):
         data = run_tool("tcm_trace", {"query": "薄荷"})
+        self.assertEqual(data["trace_status"], "verified")
+        self.assertTrue(data["matches"])
+        self.assertEqual(data["matches"][0]["kind"], "herb")
+        self.assertEqual(data["matches"][0]["item_id"], "bohe")
+        self.assertTrue(data["matches"][0].get("source_refs"))
+
+    def test_no_source_index_row_is_not_promoted_to_candidate(self):
+        data = run_tool("tcm_trace", {"query": "川贝母"})
         self.assertEqual(data["trace_status"], "no_source_found")
         self.assertTrue(data["matches"])
         self.assertEqual(data["matches"][0]["kind"], "herb")
+        self.assertEqual(data["matches"][0]["item_id"], "chuanyubeimu")
 
     def test_candidate_with_source_refs_stays_candidate(self):
         data = run_tool("tcm_trace", {"query": "白豆蔻"})
