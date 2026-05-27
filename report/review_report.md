@@ -1,6 +1,6 @@
 # P3 Review Queue 审核报告
 
-> 本报告由 `scripts/build_review_report.py` 生成，用于辅助 P3 阶段处理来源复核队列。
+> 本报告用于记录 P3 阶段来源复核队列。
 
 ## 总览
 

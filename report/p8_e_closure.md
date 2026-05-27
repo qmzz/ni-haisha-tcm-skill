@@ -58,8 +58,8 @@ review_queue: 218 (unresolved=137)
 
 ## 新增脚本
 
-- `scripts/p8_e_1_no_source_inventory.py`: 盘点 no_source_found 清单
-- `scripts/p8_e_1_acupoint_variant.py`: acupoint 命名变体分类
-- `scripts/p8_e_2_expand_search.py`: 扩展搜索
-- `scripts/p8_e_3_build_auto_candidates.py`: 自动候选生成
-- `scripts/p8_e_3_seed_verified.py`: 落库 verified
+- 盘点 no_source_found 清单。
+- 完成 acupoint 命名变体分类。
+- 完成扩展搜索。
+- 完成自动候选生成。
+- 完成 verified 落库。

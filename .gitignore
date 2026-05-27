@@ -49,33 +49,13 @@ Thumbs.db
 *.bak
 *.backup
 
-# Scripts (temporary, not for release)
-scripts/expand_short_concepts.py
-scripts/expand_herbs_acupoints.py
-scripts/add_missing_herbs_manual.py
-scripts/fill_acupoints_bulk.py
-scripts/fill_acupoints_batch2.py
-scripts/fill_acupoints_final.py
-scripts/fill_acupoints_last_43.py
-scripts/fill_acupoints_to_411.py
-scripts/fill_herbs_bulk.py
-scripts/fill_herbs_final_95.py
-scripts/fill_herbs_last_86.py
-scripts/fill_herbs_remaining_76.py
-scripts/fill_to_target_herbs_acupoints.py
-scripts/final_fill_targets.py
-scripts/final_herbs_to_365.py
-scripts/final_topoff_targets.py
-scripts/generate_acupoints.py
-scripts/generate_acupoints_100.py
-scripts/generate_herbs.py
-scripts/optimize_short_concepts.py
+# Generated/temporary maintenance files
 
 # Internal tests
 internal/tests/
 internal/__pycache__/
 
-# Generated source indexes (rebuild with scripts/build_source_index.py)
+# Generated source indexes
 data/source_manifest.json
 data/source_pages.jsonl
 data/source_fts.sqlite

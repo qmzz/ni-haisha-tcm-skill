@@ -29,6 +29,6 @@ trace_status: {verified|needs_review|no_source_found|unverified}
 
 ## 相关脚本
 
-- `scripts/p8_add_basic_frontmatter.py`: 批量添加基础 frontmatter
+- 批量添加基础 frontmatter。
   - 默认 dry-run
   - `--apply`: 实际写入

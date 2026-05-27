@@ -102,4 +102,4 @@ P12 不建议继续粗放扩 verified。建议方向：
 
 ---
 
-本报告由 `scripts/p11_finalize_closure.py` 生成。
+本报告记录 P11 阶段收口状态。

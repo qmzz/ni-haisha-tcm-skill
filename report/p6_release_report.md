@@ -6,7 +6,7 @@ P6 已完成：标准化、第二批 verified 扩展、no_source_found 专项治
 
 ## P6-A：全部 verified 标准化
 
-- verified 条目标准化脚本：`scripts/standardize_verified_frontmatter.py`
+- verified 条目已完成标准化并纳入当时的治理流程。
 - 当前 frontmatter audit：
 
 ```text

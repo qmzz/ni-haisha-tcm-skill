@@ -1,278 +1,85 @@
 ---
 name: ni
-description: "倪海厦中医 AI 助手 - 基于经方医学的辨证辅助、资料检索与学习系统 | 人纪系列知识蒸馏"
-argument-hint: "[command] [args]"
-version: "1.1.0"
+description: "倪海厦中医资料检索 Skill：面向 Agent 的方剂、药材、穴位、辨证辅助与来源追溯 JSON 工具"
+argument-hint: "<tool_name> <json_payload>"
+version: "1.0.0-rc1"
 user-invocable: true
-allowed-tools: Read, Write, Bash
+allowed-tools: Read, Bash
 ---
 
 # 倪海厦中医 Skill
 
-> *"治病必求于本，本于阴阳"* — 倪海厦
+本 Skill 面向 Agent 调用，用于中医理论学习、资料检索和来源追溯。
 
-> ⚠️ 本 Skill 仅用于中医理论学习、资料检索和辨证思路参考，不能替代合格医师的面诊、诊断或治疗。所有知识补全必须尊重原始 PDF 提取 JSON 或既有知识文件，不得凭空编造。
+> ⚠️ 安全边界：不能替代合格医师面诊、诊断、处方、用药或针灸操作。穴位内容仅作学习与来源追溯，不作为针灸操作指导。
 
-**版本：** 1.1.0  
-**知识来源：** 倪海厦人纪系列（伤寒论、金匮要略、黄帝内经、神农本草经、针灸篇）  
-**架构参考：** 毛泽东.skill 六层认知架构
+## 首选调用方式
 
----
-
-## 📚 核心能力
-
-### 1. 中医诊断 🩺
-- **八纲辨证** - 阴阳表里寒热虚实分析
-- **六经辨证** - 太阳、阳明、少阳、太阴、少阴、厥阴
-- **脏腑辨证** - 五脏六腑功能状态分析
-- **气血津液辨证** - 气血盛衰、津液盈亏判断
-
-### 2. 经方推荐 🌿
-- **伤寒论方剂** - 113 经方应用指导
-- **金匮要略方剂** - 杂病治疗方剂
-- **随证加减** - 根据症状调整方剂组成
-- **剂量资料参考** - 展示资料中的剂量信息，仅供学习核对，不作为用药依据
-
-### 3. 知识查询 📖
-- **中医概念** - 阴阳、五行、脏腑、经络等
-- **药材查询** - 性味归经、功效应用
-- **穴位查询** - 定位、主治、针刺方法
-- **方剂查询** - 组成、主治、用法
-
-### 4. 渐进学习 🎓
-- **入门** (2 小时) - 中医基础理论
-- **基础** (4 小时) - 诊断方法与中药基础
-- **进阶** (8 小时) - 经方应用与针灸
-- **专业** (20 小时) - 临床医案与实战
-
----
-
-## 🚀 使用方法
-
-### 快捷方式
 ```bash
-/ni [症状描述]              # 辨证辅助快捷方式
+python3 tools/tcm_tools.py <tool_name> '<json_payload>'
 ```
 
-### 完整命令
-```bash
-/ni help                    # 获取帮助
-/ni diagnose [症状]         # 辨证辅助（学习参考）
-/ni formula [方剂名]        # 查询方剂
-/ni herb [药材名]           # 查询药材
-/ni acupoint [穴位名]       # 查询穴位
-/ni concept [概念名]        # 查询中医概念
-/ni learn                   # 学习系统
-/ni case [病名]             # 查看医案
-/ni source [关键词]          # 检索原始 PDF 提取 JSON 原文片段
-/ni sources                 # 查看原始 JSON 来源清单
-/ni compare [方剂 1] [方剂 2] # 比较方剂
-/ni trace [名称/ID]          # 统一来源追溯
-/ni verified-source [名称/ID] # 查询 verified 来源
-/ni review-queue            # 查看来源复核队列
-/ni lookup [名称]             # P7 统一查询入口
-/ni explain-trace [名称]      # 解释来源治理状态
-/ni review-dashboard          # 来源治理看板
-/ni batch-trace [名称列表]    # 批量来源治理状态
-```
+所有输出均为 JSON。
 
-### 结构化工具入口
-
-P2 起提供 JSON 工具入口，供 OpenClaw / QwenPaw / 其他 Agent 调用：
+## 常用工具
 
 ```bash
+# 安全检查
 python3 tools/tcm_tools.py tcm_safety_check '{"text":"胸痛,呼吸困难"}'
-python3 tools/tcm_tools.py tcm_source_search '{"keyword":"桂枝汤","limit":5}'
+
+# 统一查询：优先使用
+python3 tools/tcm_tools.py tcm_lookup '{"query":"桂枝汤"}'
+
+# 来源追溯
 python3 tools/tcm_tools.py tcm_trace '{"query":"桂枝汤"}'
+python3 tools/tcm_tools.py tcm_explain_trace '{"query":"白豆蔻"}'
+
+# 方剂 / 药材 / 穴位
 python3 tools/tcm_tools.py tcm_formula_query '{"name":"桂枝汤"}'
 python3 tools/tcm_tools.py tcm_herb_query '{"name":"麻黄"}'
 python3 tools/tcm_tools.py tcm_acupoint_query '{"name":"百会"}'
+
+# 辨证辅助：仅作学习参考
 python3 tools/tcm_tools.py tcm_diagnose_assist '{"symptoms":["发热","恶寒","无汗","脉浮紧"]}'
-python3 tools/tcm_tools.py tcm_lookup '{"query":"白头翁汤"}'
-python3 tools/tcm_tools.py tcm_explain_trace '{"query":"白头翁汤"}'
-python3 tools/tcm_tools.py tcm_review_dashboard '{}'
-python3 tools/tcm_tools.py tcm_batch_trace '{"queries":["桂枝汤","白头翁汤"]}'
+
+# 来源检索
+python3 tools/tcm_tools.py tcm_source_search '{"keyword":"桂枝汤","limit":5}'
+python3 tools/tcm_tools.py tcm_search_sources_fts '{"query":"桂枝汤","limit":5}'
 ```
 
-工具输出均为 JSON；辨证辅助必须包含免责声明、安全检查和来源状态。
+未知工具名会返回 `available_tools`。
+
+## Agent 必须遵守
+
+1. 先做安全判断；遇到高风险症状，提示及时就医，不继续给方剂建议。
+2. 普通查询优先用 `tcm_lookup` 或 `tcm_trace`，不要直接拼 Markdown。
+3. `verified` 只代表来源追溯链路通过，不代表医学真实性或临床适用性。
+4. `candidate` 不可当作 verified 使用。
+5. `no_source_found` 不要硬补；如需扩展，必须引入新的可追溯来源。
+6. 不凭模型记忆补剂量、归经、禁忌、针刺方法等医学内容。
+
+## 当前数据基线
+
+```text
+version: v1.0.0-rc1
+total: 939
+verified: 803
+no_source_found: 133
+candidate: 3
+P9 issues: 0
+placeholder files: 0
+JSON fragment files: 0
+frontmatter warnings: 0
 ```
 
----
+P16 内容质量定版报告：`report/p16_content_release.md`
 
-## 📖 知识库结构
+## 目录
 
+```text
+tools/tcm_tools.py    # Agent JSON 工具主入口
+internal/             # 查询、诊断、安全、来源追溯模块
+knowledge/            # Markdown 知识库
+data/                 # 索引和治理状态数据
+report/               # 治理与定版报告
 ```
-knowledge/
-├── diagnosis/          # 诊断知识
-│   ├── wangzhen.md     # 望诊
-│   ├── wenzhen.md      # 闻诊
-│   ├── wenzhen_ask.md  # 问诊（十问歌）
-│   └── qiezhen.md      # 切诊（脉象）
-├── formulas/           # 方剂
-│   ├── jingfang_index.md   # 经方索引
-│   ├── guizhi_tang.md      # 桂枝汤
-│   ├── mahuang_tang.md     # 麻黄汤
-│   └── ...
-├── herbs/              # 药材
-│   ├── herb_index.md   # 药材索引
-│   ├── mahuang.md      # 麻黄
-│   ├── guizhi.md       # 桂枝
-│   └── ...
-├── acupoints/          # 穴位
-│   ├── acupoint_index.md   # 穴位索引
-│   ├── hegu.md         # 合谷
-│   ├── zusanli.md      # 足三里
-│   └── ...
-├── concepts/           # 中医概念
-│   ├── concept_index.md    # 概念索引
-│   ├── yinyang.md   # 阴阳
-│   ├── wuxing.md    # 五行
-│   └── ...
-└── cases/              # 医案
-    └── case_*.md       # 典型医案
-```
-
----
-
-## 🏗️ 六层认知架构
-
-```
-┌─────────────────────────────────────────┐
-│  用户界面层                              │
-│  命令解析 / 响应格式化 / 多轮对话        │
-├─────────────────────────────────────────┤
-│  分析决策层                              │
-│  辨证辅助 / 证型判断 / 方剂匹配参考      │
-├─────────────────────────────────────────┤
-│  方法执行层                              │
-│  八纲辨证 / 六经辨证 / 脏腑辨证          │
-├─────────────────────────────────────────┤
-│  知识检索层                              │
-│  概念库 / 方剂库 / 药材库 / 穴位库       │
-├─────────────────────────────────────────┤
-│  性能监控层                              │
-│  缓存优化 / 查询日志 / 性能统计          │
-├─────────────────────────────────────────┤
-│  集成接口层                              │
-│  统一 API / 数据导入导出 / 外部系统对接  │
-└─────────────────────────────────────────┘
-```
-
----
-
-## 📋 使用示例
-
-### 示例 1：辨证辅助
-```bash
-/ni diagnose 发热恶寒头痛无汗脉浮紧
-```
-
-**返回：**
-```
-【六经辨证】太阳伤寒证
-【八纲】表证、寒证、实证
-【相关方剂参考】麻黄汤
-【组成】麻黄 9g、桂枝 6g、杏仁 9g、炙甘草 3g
-【用法】水煎服，日三服
-【倪师讲解】此为太阳伤寒表实证，麻黄汤主之...
-```
-
-### 示例 2：方剂查询
-```bash
-/ni formula 桂枝汤
-```
-
-**返回：**
-```
-【方剂名】桂枝汤
-【来源】伤寒论
-【组成】桂枝 9g、白芍 9g、生姜 9g、大枣 3 枚、炙甘草 6g
-【主治】太阳中风证，发热恶寒，汗出，脉浮缓
-【倪师讲解】桂枝汤为伤寒论第一方，调和营卫...
-【加减法】
-- 项背强几几：加葛根
-- 喘：加厚朴、杏仁
-```
-
-### 示例 3：学习路径
-```bash
-/ni learn --path=入门
-```
-
-**返回：**
-```
-【学习路径】中医入门（预计 2 小时）
-
-模块 1：阴阳五行（30 分钟）
-- 阴阳概念
-- 五行生克
-- 阴阳与五行的关系
-
-模块 2：脏腑经络（30 分钟）
-- 五脏六腑
-- 十二经络
-- 气血津液
-
-模块 3：望闻问切（30 分钟）
-- 望诊要点
-- 闻诊要点
-- 问诊十问
-- 切诊脉象
-
-模块 4：六经辨证（30 分钟）
-- 太阳病
-- 阳明病
-- 少阳病
-- 太阴病
-- 少阴病
-- 厥阴病
-
-开始学习请输入：/ni learn start 入门
-```
-
----
-
-## 📊 知识来源
-
-本 Skill 知识蒸馏自倪海厦人纪系列：
-
-| 资料 | 内容 | 页数 |
-|------|------|------|
-| 伤寒论 | 六经辨证、113 经方 | 198 页 |
-| 金匮要略 | 杂病治疗方剂 | 492 页 |
-| 黄帝内经 | 中医基础理论 | 308 页 |
-| 神农本草经 | 中药学基础 | 339 页 |
-| 针灸篇 | 针灸理论与实务 | 216 页 |
-| 汉唐中医方剂 | 方剂讲解 | 235 页 |
-
-**总计：** 1,988 页，3,045,663 字符
-
----
-
-## ⚠️ 免责声明
-
-本 Skill 提供的信息仅供参考，不能替代专业中医师的诊断和治疗。如有健康问题，请咨询合格的中医师。
-
-- 本 Skill 基于倪海厦教学资料构建
-- 方剂剂量仅供参考，实际应用需因人而异
-- 孕妇、儿童、老人等特殊人群用药需谨慎
-- 中药可能与西药产生相互作用，请告知医师您正在服用的所有药物
-
----
-
-## 🔧 技术实现
-
-### 核心模块
-- `internal/diagnosis_engine.py` - 诊断引擎
-- `internal/formula_recommender.py` - 方剂推荐器
-- `internal/source_corpus.py` - 原始 JSON 来源检索与溯源
-
-### 数据结构
-- `data/learning_paths.json` - 学习路径
-- `data/symptom_formula.json` - 症状 - 方剂映射
-- `data/concept_graph.json` - 概念关系图
-
----
-
-**最后更新：** 2026-04-11  
-**维护者：** 赛博帝国内阁首辅
