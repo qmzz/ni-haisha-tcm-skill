@@ -1,27 +1,46 @@
-# 六淫辨证
+---
+title: "liuyin_bianzheng"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p17_content_quality"
+review_status: candidate
+kind: "diagnosi"
+trace_status: candidate
+source_refs: []
+---
 
-**分类：** 病因辨证
+# liuyin_bianzheng
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：诊断
+- 追溯状态：candidate
+- 复核说明：当前条目内容待补充来源引用。
+
+<!-- P5_STANDARD_NOTICE_END -->
+
+# liuyin_bianzheng
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：诊断
+- 追溯状态：no_source_found
+- 复核说明：当前未在倪海厦知识库中找到对该条目的专门讲解。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ---
 
-## 风邪
-- 善行数变，易袭阳位
-
-## 寒邪
-- 凝滞收引，主痛主寒
-
-## 暑邪
-- 炎热升散，多夹湿
-
-## 湿邪
-- 重浊黏滞，缠绵难愈
-
-## 燥邪
-- 易伤津液，肺先受之
-
-## 火邪
-- 炎上耗气，伤津动血
-
 ---
-
-**最后更新：** 2026-04-13

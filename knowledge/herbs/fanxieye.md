@@ -1,56 +1,28 @@
 ---
 title: "番泻叶"
-kind: herb
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p17_content_quality"
+review_status: candidate
+kind: "herb"
 trace_status: no_source_found
-candidate_review_reason: "alias_match_only; alias_requires_review"
+source_refs: []
 ---
-source_scope: "not_in_nihaixia_source"
-external_reference_required: true
-no_source_policy: "keep_boundary_until_traceable_source"
 
 # 番泻叶
 
-## 📌 基础信息
-
-- **来源：** 神农本草经 + 倪海厦人纪系列
-- **分类：** 泻下药
-- **性味：** 甘苦寒
-- **归经：** 大肠
-
-## 💊 功效
-
-泻热行滞，通便
-
-## 🎯 主治
-
-
-## ⚖️ 常用剂量范围
-
-
-## 🔥 炮制方法
-
-
-## ⚠️ 配伍禁忌
-
-
-## 🔍 鉴别要点
-
-
-## 🌿 倪师讲解
-
-> "「番泻叶」这味药，在经方中应用广泛..."
-
-> 来源摘录：孩子，四五天五六天甚至十来天不大便，另外 第三象限中，这是寒湿之气，湿热之气在第二象限中，二者皆为阴 一个，要注意，现在市场上的减肥药 排泄药等，它里面是配的大黄 邪，容易致人成癌症，就是成不可治症。所以说一个寒湿气会治疗 使用，有的是配的泻叶使用，用过后会使身体正常的体液泄下来， 了同 时再会治湿热之气，那幺说会治癌症会治这些现在认为不可治 而人体堆积的垃圾痰饮之气并没有动。使人体正常的体液变的更少， 263 264
-
----
-
----
-
+<!-- P5_STANDARD_NOTICE_START -->
 
 ## 学习与安全边界
 
-**本条目仅供中医学习参考，不构成诊断或治疗建议。**
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
 
-- 内容来源于倪海厦老师教学资料，用于中医知识传承与学习
-- 不能替代专业医师的辨证论治
-- 如有健康问题，请咨询执业中医师
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：no_source_found
+- 复核说明：当前未在倪海厦知识库中找到对该药材的专门讲解。
+
+<!-- P5_STANDARD_NOTICE_END -->
+
+---

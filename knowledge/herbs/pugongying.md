@@ -1,54 +1,28 @@
 ---
 title: "蒲公英"
-kind: herb
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p17_content_quality"
+review_status: candidate
+kind: "herb"
 trace_status: no_source_found
-source_scope: "not_in_nihaixia_source"
-external_reference_required: true
-no_source_policy: "keep_boundary_until_traceable_source"
-
+source_refs: []
 ---
+
 # 蒲公英
 
-## 📌 基础信息
-
-- **来源：** 神农本草经 + 倪海厦人纪系列
-- **分类：** 清热药
-- **性味：** 苦甘寒
-- **归经：** 肝胃
-
-## 💊 功效
-
-清热解毒，消肿散结，利湿通淋
-
-## 🎯 主治
-
-
-## ⚖️ 常用剂量范围
-
-
-## 🔥 炮制方法
-
-
-## ⚠️ 配伍禁忌
-
-
-## 🔍 鉴别要点
-
-
-## 🌿 倪师讲解
-
-> "「蒲公英」这味药，在经方中应用广泛..."
-
-
----
-
----
-
+<!-- P5_STANDARD_NOTICE_START -->
 
 ## 学习与安全边界
 
-**本条目仅供中医学习参考，不构成诊断或治疗建议。**
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
 
-- 内容来源于倪海厦老师教学资料，用于中医知识传承与学习
-- 不能替代专业医师的辨证论治
-- 如有健康问题，请咨询执业中医师
+## 来源追溯状态
+
+- 条目类型：药材
+- 追溯状态：no_source_found
+- 复核说明：当前未在倪海厦知识库中找到对该药材的专门讲解。
+
+<!-- P5_STANDARD_NOTICE_END -->
+
+---

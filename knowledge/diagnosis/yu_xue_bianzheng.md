@@ -1,30 +1,46 @@
-# 瘀血辨证
+---
+title: "yu_xue_bianzheng"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p17_content_quality"
+review_status: candidate
+kind: "diagnosi"
+trace_status: candidate
+source_refs: []
+---
 
-**分类：** 病理产物辨证
+# yu_xue_bianzheng
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：诊断
+- 追溯状态：candidate
+- 复核说明：当前条目内容待补充来源引用。
+
+<!-- P5_STANDARD_NOTICE_END -->
+
+# yu_xue_bianzheng
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：诊断
+- 追溯状态：no_source_found
+- 复核说明：当前未在倪海厦知识库中找到对该条目的专门讲解。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ---
 
-## 典型表现
-- 刺痛，痛有定处
-- 肿块固定不移
-- 面色晦暗
-- 唇舌紫暗或有瘀点
-- 脉涩
-
 ---
-
-## 治法
-- 活血化瘀
-- 行气活血
-- 通络止痛
-
----
-
-## 常用方
-- 血府逐瘀汤
-- 桃红四物汤
-- 通窍活血汤
-
----
-
-**最后更新：** 2026-04-13

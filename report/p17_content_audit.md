@@ -1,0 +1,1278 @@
+# P17 全库逐条内容精修审计清单
+> 本报告用于定位正文精修任务，不代表医学真实性判断；后续修正文案仍只依据当前知识条目、source_refs.quote 与原始 JSON 来源，不凭模型记忆补医学内容。
+## 汇总
+```json
+{
+  "total_files": 1083,
+  "by_kind": {
+    "acupoint": 412,
+    "case": 51,
+    "concept": 45,
+    "diagnosi": 45,
+    "formula": 114,
+    "herb": 416
+  },
+  "files_with_issues": 1028,
+  "priority": {
+    "P1": 682,
+    "P0": 256,
+    "OK": 145
+  },
+  "issues": {
+    "frontmatter_error": 92,
+    "acupoint_missing_operation_notice": 1,
+    "index_quote_mismatch": 724,
+    "empty_sections": 624,
+    "body_has_source_label": 279,
+    "model_placeholder": 91,
+    "ocr_noise": 62,
+    "quote_cross_entry_or_ocr_tail": 132,
+    "stale_dirty_index_quote": 63,
+    "json_fragment": 3
+  }
+}
+```
+## 问题类型说明
+- `model_placeholder`：模板式/生成式占位句，例如“这味药，在经方中应用广泛”。
+- `quote_cross_entry_or_ocr_tail`：来源摘录疑似串入下一条或含 OCR 尾巴。
+- `ocr_noise`：正文或 frontmatter 含明显 OCR 重复乱码/替换字符。
+- `json_fragment`：残留 JSON patch/page fragment。
+- `index_quote_mismatch` / `stale_dirty_index_quote`：Markdown 与 data 索引中的 quote 不一致或索引仍是脏 quote。
+- `empty_sections`：存在空壳小节。
+- `body_has_source_label`：正文仍保留“来源摘录：”流水线标签，需要改为自然引用或删掉。
+- `acupoint_missing_operation_notice`：穴位条目缺“仅作学习与来源追溯，不作为针灸操作指导”边界提示。
+
+## P0 优先队列（前 120 条）
+- `knowledge/acupoints/binao.md`｜acupoint｜臂臑｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「臂臑」这个穴位，在临床上应用非常广泛..."  > 来源摘录：人纪系列针灸篇 再来是五里穴。肘髎穴往上三寸，就是五里穴。这个穴道呢，禁针，因为有大动脉在， 所以知道就好了，很少用。再来是臂臑，臂臑从手肘上七寸，也可从肩髃找，从肩髃最好找， 我们手臂上有个凹洞，那个凹洞就是肩髃
+- `knowledge/acupoints/cuanzhu.md`｜acupoint｜攒竹｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「攒竹」这个穴位，在临床上应用非常广泛..."  > 来源摘录：“速 以三壮可灸”。 17、光明、阳辅与悬钟穴（6-03:22:51） 光明穴是足少阳的络，别走厥阴。胆经是个很大的经脉，很多穴都络出去。光明穴也是 络穴，我们用光明穴，络厥阴。大部分是用在眼科的治症。所以，治眼科
+- `knowledge/acupoints/daimai.md`｜acupoint｜带脉｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「带脉」这个穴位，在临床上应用非常广泛..."  > 来源摘录：人纪系列针灸篇 元外开二寸就是水道，水道在足阳明胃经上。从水道再走五寸半，从这横过来，这个穴道就 是五枢穴。关元下一寸是任脉的中极穴。从中极穴外开八寸的距离就是维道穴。这三个穴道， 带脉、五枢、维道，是属于人的带脉
+- `knowledge/acupoints/dazhong.md`｜acupoint｜大钟｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「大钟」这个穴位，在临床上应用非常广泛..."  > 来源摘录：注胸中，合 心主。病实则肘挛，虚则不收。取之所别也。 足太阳之别，名曰飞扬。去踝七寸，别走少阴。实则鼽窒， 头背痛；虚则鼽衄。取之所别也。 足少阳之别，名曰光明，去踝五寸，别走厥阴，下络足跗。 实则厥，虚则痿躄，坐
+- `knowledge/acupoints/fengshi.md`｜acupoint｜风市｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「风市」这个穴位，在临床上应用非常广泛..."  > 来源摘录：16、阳交穴至外丘穴（治犬咬伤）（6-03:17:28） 再来是阳交。阳交跟外丘这两个穴道很妙。如果我们把脚延伸下来，从外踝裸直上七寸， 这个穴道我们称之为外丘穴。从外丘往后一寸，就是阳交穴。然后阳交穴再会到阳陵泉
+- `knowledge/acupoints/fuyang_bl.md`｜acupoint｜跗阳｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/acupoints/guanchong.md`｜acupoint｜关冲｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「关冲」这个穴位，在临床上应用非常广泛..."  > 来源摘录：上辅骨之前及绝骨之端 也，为经；入于阳之陵泉，阳之陵泉，在膝外陷者中也，为合， 伸而得之。足少阳也。 胃出于厉兑，厉兑者，足大趾内次趾之端也，为井金；溜 于内庭，内庭，次趾外间也，为荥；注于陷谷，陷谷者，上中 指内
+- `knowledge/acupoints/guanmen.md`｜acupoint｜关门｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/acupoints/huizong.md`｜acupoint｜会宗｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「会宗」这个穴位，在临床上应用非常广泛..."  > 来源摘录：。 我们便秘有分寒、热。寒症的便秘就是肠子没有蠕动了，病人没有感觉，一个礼拜不大便也 不难过，这是寒症。热症的便秘，病人只有一天不大便就会很难过，肚子很胀，绞痛得很难 过。在针支沟、照海时，并无谓寒热，下针后，二十
+- `knowledge/acupoints/jianyu.md`｜acupoint｜肩髃｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「肩髃」这个穴位，在临床上应用非常广泛..."  > 来源摘录：人纪系列针灸篇 再来是五里穴。肘髎穴往上三寸，就是五里穴。这个穴道呢，禁针，因为有大动脉在， 所以知道就好了，很少用。再来是臂臑，臂臑从手肘上七寸，也可从肩髃找，从肩髃最好找， 我们手臂上有个凹洞，那个凹洞就是肩髃
+- `knowledge/acupoints/jiaoxin.md`｜acupoint｜交信｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「交信」这个穴位，在临床上应用非常广泛..."  > 来源摘录：····················114 6、太溪穴与肾结石诊治（5-03:07:27）··························································11
+- `knowledge/acupoints/jingming.md`｜acupoint｜睛明｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「睛明」这个穴位，在临床上应用非常广泛..."  > 来源摘录：以三壮可灸”。 17、光明、阳辅与悬钟穴（6-03:22:51） 光明穴是足少阳的络，别走厥阴。胆经是个很大的经脉，很多穴都络出去。光明穴也是 络穴，我们用光明穴，络厥阴。大部分是用在眼科的治症。所以，治眼科像眼旁
+- `knowledge/acupoints/jiquan.md`｜acupoint｜极泉｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「极泉」这个穴位，在临床上应用非常广泛..."  > 来源摘录：会上《黄帝内经》。 诸位看第一个穴道叫极泉。卷八 28 页。这个腋下的地方，正上方是我们的肩井，下面 是极泉。平时极泉不会下针，也不会去灸，我们知道那个穴道叫极泉就好了。如果说有乳房 硬块，就知道是在心经。所以你要
+- `knowledge/acupoints/jugu.md`｜acupoint｜巨骨｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/acupoints/lidui.md`｜acupoint｜厉兑｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「厉兑」这个穴位，在临床上应用非常广泛..."  > 来源摘录：接的地方，我们把 图放大，越放越大。这是病人的左脚，这是第二个趾头，这是第三个脚趾。在这两个脚趾交 缝上五分的地方，可以摸到两个脚趾骨。不要在骨头上下针，要在骨头后下针，这个穴道我 们称内庭。 从内庭上二寸是陷谷。
+- `knowledge/acupoints/ligou.md`｜acupoint｜蠡沟｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「蠡沟」这个穴位，在临床上应用非常广泛..."  > 来源摘录：。 足少阳之别，名曰光明，去踝五寸，别走厥阴，下络足跗。 实则厥，虚则痿躄，坐不能起。取之所别也。 ·262· 世和经典教育·经史子集 足阳明之别，名曰丰隆。去踝八寸。别走太阴；其别者， 循胫骨外廉，上络头项，合诸
+- `knowledge/acupoints/lingdao.md`｜acupoint｜灵道｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「灵道」这个穴位，在临床上应用非常广泛..."  > 来源摘录：····································76 非置入性治疗清除动脉血管阻塞（4-00:59:20）·······································77 
+- `knowledge/acupoints/qiangu.md`｜acupoint｜前谷｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「前谷」这个穴位，在临床上应用非常广泛..."  > 来源摘录：下到，而且很痛。我们所谓的巧手是下针进去没有痛， 刚好在骨和肉中间。这个横纹头就是我们的前谷穴，针的角度是这样子，直针这样下进去。 下针时也是手握拳，但叫病人不要握太紧。 3、后溪穴（4-01:44:00） 再过来
+- `knowledge/acupoints/qingling.md`｜acupoint｜青灵｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「青灵」这个穴位，在临床上应用非常广泛..."  > 来源摘录：八 28 页。这个腋下的地方，正上方是我们的肩井，下面 是极泉。平时极泉不会下针，也不会去灸，我们知道那个穴道叫极泉就好了。如果说有乳房 硬块，就知道是在心经。所以你要在心经上治疗，但不一定要用极泉治疗，它可帮助我
+- `knowledge/acupoints/rangu.md`｜acupoint｜然谷｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「然谷」这个穴位，在临床上应用非常广泛..."  > 来源摘录：以治疗。再来第二个穴道叫然谷，然谷 穴在什么地方呢？我用右脚内侧图画给你们看，故意画大一点。那这个高骨，这边有一个骨 头下来，上次我们学过，高骨下到骨边，在右边，是脾经的公孙，公孙生冲脉。那公孙往后 一寸，沿着骨边
+- `knowledge/acupoints/renzhong.md`｜acupoint｜人中｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「人中」这个穴位，在临床上应用非常广泛..."  > 来源摘录：，并无谓寒热，下针后，二十四小时就排便了。支沟照海下去，可以 再帮他下关元，大肠经的募穴天枢，中脘再来四花灸。中脘、天枢和神阙用隔盐灸，然后再 下关元、支沟、照海，那肯定会好的嘛。这是加减法，你们自己可加减。 支沟
+- `knowledge/acupoints/shaoze.md`｜acupoint｜少泽｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「少泽」这个穴位，在临床上应用非常广泛..."  > 来源摘录：是足阳明也。 三焦者，上合手少阳，出于关冲，关冲者，手小指次指之 端也，为井金；溜于液门，液门，小指次指之间也，为荥；注 于中渚，中渚，本节之后陷者中也，为俞；过于阳池，阳池， 在腕上陷者之中也，为原；行于支沟，支
+- `knowledge/acupoints/shuaigu.md`｜acupoint｜率谷｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「率谷」这个穴位，在临床上应用非常广泛..."  > 来源摘录：································································································131 2、瞳子髎穴（
+- `knowledge/acupoints/shuiquan.md`｜acupoint｜水泉｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「水泉」这个穴位，在临床上应用非常广泛..."  > 来源摘录：以上的人出现很多，几乎每天都有老外找我说后跟痛。他们吃钙片想帮助骨头，却反而伤 到肾脏，这时就好像榔头打铁钉，所以你钙片吃的越多，骨头就越松，不但没有帮助反而把 骨头硬化掉了。 水泉在临床上面，像月经停经不来 都可
+- `knowledge/acupoints/tianjing.md`｜acupoint｜天井｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「天井」这个穴位，在临床上应用非常广泛..."  > 来源摘录：上行二寸陷者中也，为俞；过于冲阳，冲阳，足跗上五 寸陷者中也，为原，摇足而得之；行于解溪，解溪，上冲阳一 寸半陷者中也，为经；入于下陵，下陵，膝下三寸胻骨外三里 也，为合；复下三里三寸，为巨虚上廉，复下上廉三寸，为
+- `knowledge/acupoints/tianzhu.md`｜acupoint｜天柱｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「天柱」这个穴位，在临床上应用非常广泛..."  > 来源摘录：来看你，这个病人头从一边弯过去，天柱倾命在旦夕。天柱是近取穴，后项强痛也可以 下天柱。 从天柱外开一寸的地方，在这个骨缝边有一个奇穴，贴在骨边属于经外奇穴，专治失眠 ， 穴名安眠。 如果晚上睡都睡不好，可以压压安眠
+- `knowledge/acupoints/tinghui.md`｜acupoint｜听会｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「听会」这个穴位，在临床上应用非常广泛..."  > 来源摘录：01:56:30） 再来在三焦经上面，有最后两个穴道和髎和耳门。在耳前有一个骨缝，你手按在这，嘴 一张开来，就出现一条骨缝对不对?骨缝有三个穴道。最上面这个穴道是耳门，中间是听宫， 下面是听会。 现在讲耳门，耳门是
+- `knowledge/acupoints/tongziliao.md`｜acupoint｜瞳子髎｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「瞳子髎」这个穴位，在临床上应用非常广泛..."  > 来源摘录：三壮的意思，原文是“速 以三壮可灸”。 17、光明、阳辅与悬钟穴（6-03:22:51） 光明穴是足少阳的络，别走厥阴。胆经是个很大的经脉，很多穴都络出去。光明穴也是 络穴，我们用光明穴，络厥阴。大部分是用在眼科的
+- `knowledge/acupoints/wangu_gb.md`｜acupoint｜完骨｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yangchi.md`｜acupoint｜阳池｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「阳池」这个穴位，在临床上应用非常广泛..."  > 来源摘录：背面，手腕关节正中间有凹洞，这个穴道我们称阳池穴。过去我们 治疗糖尿病 ，分上消中消下消。我们从阳池穴可以透到大陵穴。这是治疗糖尿病消渴很有 名的穴道。一般在这个穴道不灸，因为多汗。如果有病人来，比如说，他左脚胃经
+- `knowledge/acupoints/yanggu.md`｜acupoint｜阳谷｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「阳谷」这个穴位，在临床上应用非常广泛..."  > 来源摘录：开一寸半的膈俞。正面下膻中，鸠尾 穴及乳根，这几个都是近取穴。所以，积水一定要在这下方。会很重，正常的情形，应该是 像水蒸气一样。那针下去以后，就像把水倒下来。我们要开沟疏通水道。名字有沟，有谷， 有溪，有海的，都
+- `knowledge/acupoints/yanglao.md`｜acupoint｜养老｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「养老」这个穴位，在临床上应用非常广泛..."  > 来源摘录：人纪系列针灸篇 以。 养老穴要下浅，且要把手转过来下针，用一寸针，半寸就下到，这是针养老的方法。养 老穴呢，本身是小肠经的郄穴。我们有很有名的“养老透间使”。用透穴的方法，专治手肘 扭伤 、手不能扭毛巾。所以病人说
+- `knowledge/acupoints/yemen.md`｜acupoint｜液门｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「液门」这个穴位，在临床上应用非常广泛..."  > 来源摘录：阳之陵泉，在膝外陷者中也，为合， 伸而得之。足少阳也。 胃出于厉兑，厉兑者，足大趾内次趾之端也，为井金；溜 于内庭，内庭，次趾外间也，为荥；注于陷谷，陷谷者，上中 指内间上行二寸陷者中也，为俞；过于冲阳，冲阳，足跗
+- `knowledge/acupoints/yinxi.md`｜acupoint｜阴郄｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「阴郄」这个穴位，在临床上应用非常广泛..."  > 来源摘录：······························76 非置入性治疗清除动脉血管阻塞（4-00:59:20）·······································77 2、极泉穴与
+- `knowledge/acupoints/yongquan.md`｜acupoint｜涌泉｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「涌泉」这个穴位，在临床上应用非常广泛..."  > 来源摘录：然谷，然谷 穴在什么地方呢？我用右脚内侧图画给你们看，故意画大一点。那这个高骨，这边有一个骨 头下来，上次我们学过，高骨下到骨边，在右边，是脾经的公孙，公孙生冲脉。那公孙往后 一寸，沿着骨边和肌肉中间，这个穴道，就
+- `knowledge/acupoints/zhizheng.md`｜acupoint｜支正｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「支正」这个穴位，在临床上应用非常广泛..."  > 来源摘录：阴根于隐白，结于太仓。少阴根于涌泉，结于廉泉。厥 阴根于大敦，结于玉英，络于膻中。太阴为合，少阳为枢。故 开折，则仓廪无所输，膈洞。膈洞者，取之太阴，视有余不足， 故开折者，气不足而生病也。合折，即气绝而喜悲。悲者
+- `knowledge/acupoints/zhongchong.md`｜acupoint｜中冲｜model_placeholder, body_has_source_label, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「中冲」这个穴位，在临床上应用非常广泛..."  > 来源摘录：如人不欲行。阴有阳 疾者，取之下陵三里，正往无殆，气下乃止，不下复始也。疾 高而内者，取之阴之陵泉；疾高而外者，取之阳之陵泉也。 ·226· 世和经典教育·经史子集 本输第二 黄帝问于岐伯曰：凡刺之道，必通十二经络
+- `knowledge/acupoints/zhubin.md`｜acupoint｜筑宾｜model_placeholder, body_has_source_label, ocr_noise, index_quote_mismatch
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「筑宾」这个穴位，在临床上应用非常广泛..."  > 来源摘录：大的一块，上面红红的长得像鱼鳞一样，一片一片排列的很整齐，一 刮就掉下来许多干皮，然后没多久又长回来，我故意讲恶心一点，做 医生就不要怕这些。然后你看完了这一边，他再展示另一边给你看， 「啊!我背上还有!」裤脚一拉
+- `knowledge/formulas/dahuang_gansui.md`｜formula｜大黄甘遂汤｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/danggui_shengjiang.md`｜formula｜当归生姜羊肉汤｜ocr_noise, index_quote_mismatch
+- `knowledge/formulas/didang_tang.md`｜formula｜抵当汤｜model_placeholder, index_quote_mismatch
+- `knowledge/formulas/fuling_rongyan.md`｜formula｜茯苓戎盐汤｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/honglanhua_jiu.md`｜formula｜红蓝花酒｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/huashi_baiyu.md`｜formula｜滑石白鱼散｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/linggui_zhugan.md`｜formula｜苓桂术甘汤｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/maxing_shigan.md`｜formula｜麻杏石甘汤｜ocr_noise, index_quote_mismatch
+- `knowledge/formulas/puhui_san.md`｜formula｜蒲灰散｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/shechuangzi_san.md`｜formula｜蛇床子散｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/shegan_mahuang.md`｜formula｜射干麻黄汤｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/tingli_dazao.md`｜formula｜葶苈大枣泻肺汤｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/wenjing_tang.md`｜formula｜温经汤｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/xuanfu_daihe.md`｜formula｜旋覆代赭汤｜model_placeholder, empty_sections, index_quote_mismatch
+- `knowledge/formulas/yiyi_fuzi.md`｜formula｜薏苡附子败酱散｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/yuebi_tang.md`｜formula｜越婢汤｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/zaojia_wan.md`｜formula｜皂荚丸｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/zeqi_tang.md`｜formula｜泽漆汤｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/zhishi_shaoyao.md`｜formula｜枳实芍药散｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/baifan.md`｜herb｜白矾｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：毒，或 为蛇虫所伤，配黄蜡二倍，溶化研细，外用亦可内服。其它配合方剂很多，举凡矾石色暗者 不入药，以白而明最佳，故色白者曰白矾：色光明者曰明矾。 【倪注】枯矾可与麝香合用，因为麝香无孔不入，配合之则可去脑鼻之间的风寒与瘀伤。 【炮制】取净生白矾，研粉即得。 枯矾： 【炮制】取净生白矾，置炽锅内，煅至全部泡松呈白色蜂巢状，取出放凉研粉即得。二矾极 酸，变为涩味，酸则收而引津，涩则止而不流。 胆矾：生铜中，有酸木之味，正得铜中金收之性，金性缓，能平木气。 六、消石 【本经原文】味苦寒  --- 
+- `knowledge/herbs/baihe.md`｜herb｜百合｜model_placeholder
+  - 摘要：于这个药煮完以后可以把百合吃掉，你不会拿桂枝起来吃嘛，甘草很甜，但是你不会拿甘草渣来吃，百合你可以捡出来吃，这样你可以煮莲子可以捡出来吃啊，都可以捡出百合来吃，很好吃嘛。  ## 🧾 精修说明  - 已删除原正文中的模板式占位句：`「百合」这味药，在经方中应用广泛...`。 - 已截断并清除来源摘录中串入的下一条“知母”及 OCR 重复乱码。 - 本条正文只整理当前来源页中与“百合”直接相关的讲解内容；未从模型记忆补写新的医学结论。 
+- `knowledge/herbs/baiji.md`｜herb｜白及｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：八六、白及 【本经原文】一名甘根，一名连及草。味苦，平，无毒。治痈肿，恶疮，败疽，伤阴，死肌， 胃中邪气，贼风，鬼击，痱缓不收，生川谷。 【产地】山野多年生草本，庭园亦可种类，根黄白色，中含粘液颇多。 【性味】味苦辛，性寒，无毒。 【主治】白及为止血疗疮要药，功能逐瘀生新，补肺损，止吐血。 【甄权】除白癣疥虫，结热不消，阴下痿，面上皯疱。 【大明】止惊邪，血，痫疾，风痹，赤眼，症结，温热，疟疾，发背，瘰疬，肠风痔瘘，扑 损刀箭伤，汤火疮，生肌止痛。 【东垣】止肺血。 【灵胎】敛疮  --- 
+- `knowledge/herbs/baijiezi.md`｜herb｜白芥子｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+  - 摘要：# 💊 功效  温肺化痰，利气散结  ## 🎯 主治  寒痰喘咳，悬饮胁痛，阴疽流注  ## ⚖️ 常用剂量范围  > 来源摘录：普通三分至钱半。  ## ⚠️ 配伍禁忌  > 来源摘录：凡阴虚火炎，温病大热，喉症血症均忌。  ## 🌿 倪师讲解  > 来源摘录：豚头痛，发热恶风，汗出身痛。 【用量】普通三分至钱半。 【禁忌】凡阴虚火炎，温病大热，喉症血症均忌。 【倪注】桂枝为古今皆用之要药，治疗甚广，与麻黄柴胡荆芥防风生姜葱白等同用，治风寒 束表，与桑枝附子牛膝威灵仙茯苓防己等同用，治关节疼痛。与白芥子厚朴杏仁半夏等同用， 治上气咳逆。与白芍同用解肌和中，与葛根同用发汗退热，伤寒论中使用最多的就是桂枝了。 【炮制】拣去杂质。刮去粗皮，刷去灰
+- `knowledge/herbs/baimaogen.md`｜herb｜白茅根｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+  - 摘要： -->  ## 📌 基础信息  - **来源：** 神农本草经 - **分类：** 止血药  ## 🌡️ 性味  > 来源摘录：味甘，性寒，无毒。  ## 💊 功效  凉血止血，清热利尿  ## 🎯 主治  血热吐衄，热淋水肿  ## ⚖️ 常用剂量范围  > 来源摘录：普通钱半至三钱。  ## ⚠️ 配伍禁忌  > 来源摘录：不宜遇铁。胃寒脾湿者忌之。  ## 🌿 倪师讲解  > 来源摘录：使，畏茱萸蛇蜕皮。 一七八、茅根 【本经原文】味甘，寒，无毒。治劳伤、虚羸，补中益气，除瘀血、血闭、寒热，利小便。 其苗，主下水。一名兰根。一名茹根。 【产地】生于原野路傍之宿根草，产楚地，今处处皆有。 【性味】味甘，性寒，无毒。 【主治】白茅根为止血
+- `knowledge/herbs/baishao.md`｜herb｜白芍｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/baixianpi.md`｜herb｜白鲜皮｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要：苦寒 - **归经：** 脾胃膀胱  ## 💊 功效  清热燥湿，祛风解毒  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「白鲜皮」这味药，在经方中应用广泛..."  > 来源摘录：，破多年凝血，能化脓为水，产后诸病，止腹痛，余疹烦渴。 【大明】治血气心腹痛，破症结，催生落胞，血运鼻衄，吐血，赤白带下，赤眼障膜，弩肉， 聤耳，疮疖疥癣，丹毒，排脓补瘘。 【用量】普通一二钱。 【禁忌】忌葱，性专
+- `knowledge/herbs/baiziren.md`｜herb｜柏子仁｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：气。 【好古】主心病嗌干，心痛，渴而引饮，肾病消中。 【用量】普通一钱至三钱。 【禁忌】凡有外邪实热，脾虚有湿及肠滑者忌。 九十七、柏实 【本经原文】味甘平，主惊悸，安五脏，益气除湿痹，久服令人悦泽美色，耳目聪明，不饥 不老，轻身延年。今名柏子仁。 【产地】处处有之，山野最宜种植，树高大可做木材，叶侧生者入药，名侧柏叶，实名柏子 仁，亦入药。 【性味】味甘性平无毒。 【主治】柏子仁为滋润要药，主养心气，润肾燥，除风湿，治痹痛，疗恍惚虚损，养肝舒脾。 【别录】疗恍惚虚损，吸吸历节，腰  --- 
+- `knowledge/herbs/bajitian.md`｜herb｜巴戟天｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：【附录】 鲜石斛—石斛茎之鲜者，以铁皮鲜石斛为最良，治胃中大热，津液干竭，凉肺生精，胜于石 斛。 钗石斛—石斛之状似金钗者，较之寻常石斛凉性多而黏性少，滋阴降火，于小儿胃热尤宜。 川石斛—石斛之产于四川者，其茎紧小，清热之功较着。 四十三、巴戟天 【本经原文】味辛微温主大风邪气，阴痿不起，强筋骨安五脏，补中增智益气。 【产地】产四川者最佳，多山林内，叶经冬不枯，根似联珠，入药。 【性味】味辛甘，性微温，无毒。 【主治】巴戟天为补气益精要药，功能祛风除湿，强筋骨，壮元阳，治遗精。 【  --- 
+- `knowledge/herbs/banlangen.md`｜herb｜板蓝根｜model_placeholder, body_has_source_label, empty_sections
+  - 摘要：、胃  ## 💊 功效  清热解毒，凉血利咽  ## 🎯 主治  温毒发斑，咽喉肿痛，丹毒痄腮  ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「板蓝根」这味药，在经方中应用广泛..."  > 来源摘录：那边喝茶嘛，你为什 么要躺着喝，对不对。哦，自己造成的这样子，水病呢是外来的。就是表证失治， 本来这个是桂枝汤证或者是葛根汤证，对不对？那可是呢你遇到那个南方温病 派，他就不会用麻黄汤、桂枝汤、葛根汤啊。一看哦，用
+- `knowledge/herbs/beimu.md`｜herb｜贝母｜quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/beishashen.md`｜herb｜北沙参｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：、胃  ## 💊 功效  养阴清肺，益胃生津  ## 🎯 主治  肺热燥咳，胃阴不足，咽干口渴  ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「北沙参」这味药，在经方中应用广泛..."  > 来源摘录：瘿瘤之疾。 【括要】下气杀虫，利小便，发汗通经，将根末吹入鼻中，能做轻嚏。 【用量】普通五分至一钱。 【禁忌】使人呕恶，不宜多用。 七十九、沙参 【本经原文】味苦微寒，主血积，惊气，除寒热，补中益肺气，久服利人。 
+- `knowledge/herbs/bianxu.md`｜herb｜萹蓄｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：至三钱，外用无定量。 【禁忌】多食下气，令人作泻，故有人取以代大黄者。 二九六、萹蓄 【本经原文】味苦，平，无毒．治浸淫，疥瘙，疽，痔，杀三虫。生山谷。一名萹竹。 【产地】处处有之，多繁殖路旁，叶细绿。 【性味】味苦，性平，无毒。 【主治】萹蓄草为杀虫疥，利小便要药，治湿疮浸淫，热淋涩痛，热疾黄疸。 【别录】疗女子阴蚀。 【甄权】煮汁饮小儿，疗蚘虫有验。 【用量】普通一钱至三钱。 【禁忌】无湿热者勿用。 二九七、狼毒 【本经原文】味辛，平，有大毒。治咳逆上气，破积聚，饮食寒热，水  --- 
+- `knowledge/herbs/bibo.md`｜herb｜荜茇｜model_placeholder, empty_sections
+  - 摘要：* 辛热 - **归经：** 胃大肠  ## 💊 功效  温中散寒，下气止痛  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「荜茇」这味药，在经方中应用广泛..."   ---  ---   ## 学习与安全边界  **本条目仅供中医学习参考，不构成诊断或治疗建议。**  - 内容来源于倪海厦老师教学资料，用于中医知识传承与学习 - 不能替代专业医师的辨证论治 - 如有健康问题，请咨询执业中医
+- `knowledge/herbs/biejia.md`｜herb｜鳖甲｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：煮服能够下乳石，这奶水在里面停留很久 以后了，清出来的时候是硬邦邦的一个像石头一样的，这是用露蜂房。 诸位记得是味甘而且咸，甘咸的，下面都是好几味攻坚的药，我们治疗癌症的时候都会 使用到的。 ���� 二二二二三三三三三三三三、、、、鳖鳖鳖鳖甲甲甲甲 【【【【本本本本经经经经原原原原文文文文】】】】味味味味咸咸咸咸，，，，平平平平，，，，无无无无毒毒毒毒。。。。治治治治心心心心腹腹腹腹症症症症瘕瘕瘕瘕坚坚坚坚积积积积，，，，寒寒寒寒热热热热，，，，去去去去痞痞痞痞，，，，息息息息  --- 
+- `knowledge/herbs/bingpian.md`｜herb｜冰片｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：经 饮汁，日二，以平安为度。 大风疠疾——须眉已无，皮肉已烂成疮者：蜜蜂子，胡蜂子，黄蜂子并炒各一分，白花 蛇，乌梢蛇并酒浸去皮骨炙干，全蝎，僵蚕并炒，各一两，地龙炒半两，蝎虎（守宫），赤 足蜈蚣各 15 条，丹砂一两，雄黄 一分（醋炒），龙脑半钱，共为细末，每服一钱匕，蜜汤 调下，月三五服。（圣济）。 一二三、蜜蜡 【本经原文】味甘微温，主下利脓血，补中益气续绝伤，治金创，益气不饥耐老，今用之甚 稀。 【性味】味淡甘，性温。 【主治】止血，安胎，补益要药，治孕妇胎动下血有殊效，  --- 
+- `knowledge/herbs/bixie.md`｜herb｜萆薢｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：ARD_NOTICE_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 🌡️ 性味  > 来源摘录：甘苦性平。功能除浊分清。  ## 💊 功效   ## 🎯 主治  > 来源摘录：入足阳明厥阴，祛风去湿，以固下焦，补肝虚，坚筋骨，益睛明目。恶疮梅毒及淋 浊。  ## ⚖️ 常用剂量范围  > 来源摘录：普通一至二钱。  ## ⚠️ 配伍禁忌  > 来源摘录：制丹砂矾石，得菖蒲滑石射干良。  ## 🌿 倪师讲解  > 来源摘录：要药，主清肺火以滋源，通膀胱以利水，益精气，治淋闭。 【别录】止烦下气，通膀胱满，补五劳，安五脏，去恶风，益精。 【日华】治淋沥遗溺。 【苏颂】炒末冷酒调服，治发背。 【用量】普通一至二钱。
+- `knowledge/herbs/bohe.md`｜herb｜薄荷｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要：## 💊 功效  疏散风热，清利头目，利咽透疹  ## 🎯 主治  风热感冒，头痛目赤，咽喉肿痛  ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「薄荷」这味药，在经方中应用广泛..."  > 来源摘录：水中，味微咸，又具草之质，是禀水木二气而生，故能清火润肝。 一九三、泽兰 【本经原文】一名龙枣。味苦，微温，无毒。治乳妇衄血，中风余疾，大腹水肿，身面四肢 浮肿，骨节中水，金疮，痈肿疮脓。生诸大泽旁。一名虎兰。 【
+- `knowledge/herbs/cangzhu.md`｜herb｜苍术｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/changshan.md`｜herb｜常山｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要：ARD_NOTICE_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 🌡️ 性味  > 来源摘录：味苦辛，性寒，有毒。  ## 💊 功效   ## 🎯 主治  > 来源摘录：蜀漆为驱痰截疟要药，主袪老痰积饮，治新久诸疟，能引痰上行使吐，下行使下， 逐水消肿，杀虫，疗蛊。（春夏用蜀漆，秋冬用常山）  ## 🌿 倪师讲解  > 来源摘录：河南四川等地，江浙亦有之，生于山野阴湿之处，为落叶小灌木，根名 为常山，苗即为蜀漆。 【性味】味苦辛，性寒，有毒。 【主治】蜀漆为驱痰截疟要药，主袪老痰积饮，治新久诸疟，能引痰上行使吐，下行使下， 逐水消肿，杀虫，疗蛊。（春夏用蜀漆，秋冬用常山） 【别录】疗鬼蛊往来，水胀，洒洒恶寒
+- `knowledge/herbs/changshanmiao.md`｜herb｜常山苗｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：D -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 💊 功效  ## ⚖️ 常用剂量范围  > 来源摘录：普通八分至三钱。  ## ⚠️ 配伍禁忌  > 来源摘录：凡真气虚者忌，忌葱菜及菘茗，得甘草吐疟痰，酒炒用良。  ## 🌿 倪师讲解  > 来源摘录：漆为驱痰截疟要药，主袪老痰积饮，治新久诸疟，能引痰上行使吐，下行使下， 逐水消肿，杀虫，疗蛊。（春夏用蜀漆，秋冬用常山） 【别录】疗鬼蛊往来，水胀，洒洒恶寒，鼠瘘 【甄权】治诸疟，吐痰涎，治项下瘤瘘。 【容川】为治疟要药，痰疟是积湿而成的，常山苗能透达以吐之。 【药征】主治胸腹及脐下动剧者，故兼治惊狂火逆疟疾。 【用量】普通八分至三钱。 【禁忌】凡真气虚者忌，忌葱菜及
+- `knowledge/herbs/chantui.md`｜herb｜蝉蜕｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：* 甘寒  ## 💊 功效  疏散风热，利咽开音，透疹  ## 🌿 倪师讲解  音哑咽痛要药  ---  ---  > 来源摘录：结滞者勿用。 > 来源摘录：三四三、石蚕 > 来源摘录：【本经原文】味咸，寒，有毒。治五癃，破石淋，堕胎。肉，解结气，利水道，除热。生池 泽。一名沙虱。 > 来源摘录：三四四、雀瓮 > 来源摘录：【本经原文】味甘，平，无毒．治小儿惊痫，寒热，结气，蛊毒，鬼疰。生树枝间。一名躁 舍。又名知了。今名蝉蜕。 > 来源摘录：【产地】生夏日树间。 > 来源摘录：【性味】昧甘咸性寒。 > 来源摘录：【主冶】为解热镇惊退翳之药，治小儿热惊，皮肤风热瘾疹。目生翳瘴，治小儿哑病及阴肿。 > 来源摘录：【别录】治小儿惊痫，妇人生子不下
+- `knowledge/herbs/chenpi.md`｜herb｜陈皮｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/chenxiang.md`｜herb｜沉香｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+  - 摘要：- **归经：** 脾胃肾  ## 💊 功效  行气止痛，温中止呕，纳气平喘  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「沉香」这味药，在经方中应用广泛..."  > 来源摘录：中津液枯少，脉虚微无力，大便艰涩者。柏子仁散（柏子仁，远志，人参，桑 寄生，防风，琥珀，当归，生地，甘草）治产后败血挟邪攻心，乱语狂言，乍见鬼神等症。 柏子仁丸（柏子仁，干地黄，茯苓，枳壳，覆盆子，北五味，附子，石
+- `knowledge/herbs/cheqianzi.md`｜herb｜车前子｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/herbs/chuanshanjia.md`｜herb｜穿山甲｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：D -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 💊 功效  ## ⚖️ 常用剂量范围  > 来源摘录：普通一钱至二钱。  ## ⚠️ 配伍禁忌  > 来源摘录：走而不守，血症慎用，孕妇忌之。 民间方治妇人乳少，因气郁者：王不留行，穿山甲，炒龙骨，瞿麦穗，麦门冬等分为末，每 服一钱，热酒调之，后食猪蹄汤。此名涌泉汤。  ## 🌿 倪师讲解  > 来源摘录：这个漏乳，这个乳房的问题，能够治风毒通血脉，下乳汁，月经不调。 那后边的民间方呢，我们用得很多，像这过去一些民间方有炒麦芽，能够化乳汁的，那像涌 泉汤，奶水太少的，我们也有，像猪脚，猪脚那个胶质很多，吃下去奶水会很多，配合一些 王不留行啊、穿山甲这些滋补的药，诸位可
+- `knowledge/herbs/chuanwu.md`｜herb｜川乌｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+  - 摘要： **来源：** 神农本草经 - **性味：** 辛热  ## 💊 功效  祛风除湿，温经止痛  ## 🎯 主治  > 来源摘录：乌头为扶元回阳，补火退寒要药。功同附子。  ## ⚖️ 常用剂量范围  > 来源摘录：普通一钱至三钱  ## 🌿 倪师讲解  寒湿痹痛  ---  > 来源摘录：对我来说是野人拿着乌头射动物。吹箭，你为什么 不拿我给病人放到嘴巴里面那个东西去化验一下？我们怎么使用它？不是拿乌头直接拿出 来那个药一煎就给他吃啊，吓死人了。我们乌头有两种，一种是川乌头，一种是草乌头。你 如果到中药行去，他会问你：“你要川乌还是草乌？”要看看你是行家，我们是用川乌头， 草乌头是伤科在用。草乌头非常的毒。那是我们伤科，我们伤科很多药要用铜
+- `knowledge/herbs/chuanxiong.md`｜herb｜川芎｜index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/chuanyubeimu.md`｜herb｜川贝母｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：金，滋水而下润肾燥，治命门相火有馀。 【容川】知母叶至难死。拔之犹生，即知其得水气多，故能清气分之热。 【用量】普通钱半至三钱。 【禁忌】能滑肠，泄泻者忌，阳痿及易举易痿，脾弱饮食不化，胃虚不思食，均忌，勿犯铁 器，得黄相及酒良。 一七二、贝母 【本经原文】味辛，平，无毒。治伤寒烦热，淋沥邪气，疝瘕。喉痹，乳难，金疮，风痉。 一名空草。 【产地】产四川山西等地，为圆球形之根。色白入药，今浙江亦有之，称浙贝母，功用稍异。 【性味】味辛苦，性平无毒。 【主治】贝母为袪痰治咳要药，功能  --- 
+- `knowledge/herbs/cishi.md`｜herb｜磁石｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：倪注神农本草经 一四八、慈石 【本经原文】味辛寒，主周痹，风湿肢节中痛不可持物，洗洗，酸消，除大热，烦满及耳聋， 今名磁石。 【产地】产山中能吸铁。 【性味】味辛，性寒，无毒。 【主治】磁石为补肾强阴要药，取其能引肺气入肾，使阴阳安宅，镇惊，明目，通耳，益精。 【别录】养肾脏，强骨气，益精除烦，通关节，消痈肿鼠瘘，颈核喉痛，小儿惊痫，炼水饮 之。 【甄权】补男子肾虚风虚身强，腰中不利，加而明之。 【大明】治筋骨羸弱，补五劳七伤  --- 
+- `knowledge/herbs/ciweipi.md`｜herb｜刺猬皮｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要：_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 💊 功效  ## 🌿 倪师讲解  > 来源摘录：效果更快。那如果是外痔，发起来的肿块硬在那边很痛， 你用针刺放血，放血的时候他痛就消了很多，你再加些内服的药。针灸针孔最，承山。把刺 猬烤干麿成灰，跟着酒一起吃，不要生用哦，动物的皮生用不得了要把刺猬皮弄干净， > 来源摘录：把它 刷洗干净烧烤以后再去弄。刺猬皮治疗痔疮，我们最主要的主力是使用在痔疮，因为刺猬钻 地的力量非常地强。 > 来源摘录：���� 二二二二三三三三二二二二、、、、露露露露蜂蜂蜂蜂房房房房 【【【【本本本本经经经经原原原原文文文文】】】】味味味味苦苦苦苦，，，，平平平平，，，，有有有有毒毒  
+- `knowledge/herbs/congbai.md`｜herb｜葱白｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要：** 辛温 - **归经：** 肺胃  ## 💊 功效  发汗解表，散寒通阳  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「葱白」这味药，在经方中应用广泛..."  > 来源摘录：安神定志匀气脉。 【元素】治上焦风邪，泻肺实，散头目中滞气，经络中留湿，主上部见血。 【吴克潜】防风善表散，故用以解毒，如砒毒，乌头毒。芫花毒，野菌毒，诸毒药，又防风 本制黄耆，黄耆得防风而功最大，治风邪久留不去，
+- `knowledge/herbs/dafupi.md`｜herb｜大腹皮｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要：ARD_NOTICE_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 🌡️ 性味  > 来源摘录：味甘性平，滑利，无毒。  ## 💊 功效   ## 🎯 主治  > 来源摘录：榆白皮为泄滞去着，  ## 🌿 倪师讲解  > 来源摘录：，大枣，赤小豆，治心气不足，悲愁恚怒，烦热，面黄衄血，喉痛 舌强，妇人气血两虚）等。 【附录】 赤茯苓：性质功用与白茯苓同，尤能利窍行水，破结气，泻心小肠膀胱湿热，凡外感证多用 之。 茯苓皮：主利水道，开肌理，治水肿肤胀，行水而不耗气，胜于大腹皮。 【容川】茯苓得木之气，又能疏土，故能化气行水。 九十九、榆皮 【本草原文】味甘平，主大小便不通，利水道，除邪气，久服轻身不饥。今名榆白
+- `knowledge/herbs/dahuang.md`｜herb｜大黄｜index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/daji.md`｜herb｜大戟｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：苦寒有毒 - **归经：** 肺脾肾  ## 💊 功效  泻水逐饮，消肿散结  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「大戟」这味药，在经方中应用广泛..."  > 来源摘录：死人哦，这个大戟很凶，所以一定要确定它的功能是什么。大戟是峻剂，我们前面介绍过的 甘遂，再来是大戟，这都是排水的药，攻水的药，这是攻水的峻剂。你看，本经的原文：它 呢，十二种水，就是全身经络嘛，十二条经络，积水，全
+- `knowledge/herbs/danggui.md`｜herb｜当归｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/dangshen.md`｜herb｜党参｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+  - 摘要： - **归经：** 脾肺  ## 💊 功效  补中益气，健脾益肺，养血生津  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「党参」这味药，在经方中应用广泛..."  > 来源摘录：的人参拿起来切的时候，你 在烘焙过以后，他拿起来很干很硬，你拿烤炉烤一下，他软掉了，开始切，切片的时候味道 很呛鼻，个人参的味道很呛鼻，里面的确是暗红色的，高丽的红参。 人参价钱太贵，张仲景也用到人参，人参太贵的时
+- `knowledge/herbs/danshen.md`｜herb｜丹参｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： - **归经：** 心肝  ## 💊 功效  活血调经，祛瘀止痛，凉血消痈  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「丹参」这味药，在经方中应用广泛..."  > 来源摘录：疝痛。 【灵胎】养血消瘀。 【用量】普通二钱至三四钱，大剂一两。 【禁忌】孕妇无故忌，畏咸水，反藜芦。 丹参为女子调经良药，故有一味丹参功兼四物之称，产后养血去瘀，能入心养血，故天王补 心丹中用此味治劳心过度，神志
+- `knowledge/herbs/daqingye.md`｜herb｜大青叶｜model_placeholder, body_has_source_label, empty_sections
+  - 摘要：* 苦寒 - **归经：** 心胃  ## 💊 功效  清热解毒，凉血消斑  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「大青叶」这味药，在经方中应用广泛..."  > 来源摘录：中药单味这是钱，这个时候要这样子写，这是我们的习惯。这是一分，两分、 三分这样子，好如果你这样写就是一钱两钱三钱，这是分的单位。那十分是一钱。三分五分 就好了，一点点进去，你不要害人啊，吃了不敢出门。这个蓝实，蓝实
+- `knowledge/herbs/dengxincao.md`｜herb｜灯心草｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：些那个健脾的 药，这个补脾的药一下去，尤其象黄精白术啊茯苓，一下去以后，脾脏就会缩起 来，哦，阳恢复会慢慢慢慢回来，原来肿大的脾脏就会回收......回收，那这个 小便呐我一看他小便很好啊，通通排出来了，那22号什么方子都没有动，又加了 点灯心草，再加点灯芯草，哦，这就可以再吃。 哦，到了3月1号呐，哦，他回来，哦，他睡还是没有办法通宵，每两个小时 醒过来一次，那他体力还是不够哦，小便呐它这个很好，而且有力量，小便排出 来有力量哦，这个时候这个病人呐，这个很好玩，就是四十年以前开刀  --- 
+- `knowledge/herbs/difuzi.md`｜herb｜地肤子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：甄权】治阴卵颓疾；去风热，可做汤沐浴，与阳起石同服，主丈夫阴痿不起，补气益力。 【日华】治客热丹肿。 【用量】普通一钱至二三钱。 【禁忌】老人小便短而频数，是膀胱气化不足，小肠火偏弱也，法当补小肠火；如乌药艾叶， 不可独用地肤子。 【附录】地肤子煎——煎水洗目，去热暗雀盲涩痛，煎水服利小便诸淋，解恶疮。 七十六、景天 【本经原文】味苦平，主大热，火创身热烦邪恶气华，主女人漏下赤白，轻身明目。 【产地】多自生于高山上，庭中盆景俱可栽种，叶入药。 【性味】味苦甘，性寒。无毒。 【主治】  --- 
+- `knowledge/herbs/dilong.md`｜herb｜地龙｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：钻嘛，我们 叫地龙。味咸，诸位看，性味甘酸，那个性味里面的时候，味甘酸性寒无毒，本经说味咸寒 无毒，有一点差异。真的实际上它是有咸味。蚯蚓呢主解毒，赤白痢啊，我们常常在用蚯蚓 的时候，用在攻坚，比如说妇人有干血痨，里面有淤血的时候，我们会用地龙，因为地龙是 无孔不入。还有呢，在脑积水的时候，也会用到地龙，因为这个水停在脑部里面，如果泥土 挡到，水浮在上面就下不来，所以我们用地龙下去，脑部肿瘤，脑瘤的时候我们会使用到地 龙，因为地龙的能够疏通开来，然后生半夏，把水导下来。所以说这个  --- 
+- `knowledge/herbs/dingxiang.md`｜herb｜丁香｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+  - 摘要：- **归经：** 脾胃肾  ## 💊 功效  温中降逆，散寒止痛，温肾助阳  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「丁香」这味药，在经方中应用广泛..."  > 来源摘录：，桂枝 一定有那个香味在那边，很重的香味，放在嘴巴里边有点辣辣的。那这种，以前的香料群岛， 到菲律宾的香料群岛一带，南洋这一带，来取香料，什么肉桂呀，都是他们那个专门要拿的 药嘛，英国人要拿的药，什么这个豆蔻哇，大
+- `knowledge/herbs/dongkuizi.md`｜herb｜冬葵子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：仁研汁煮粥频食之。（圣济总录） 大风癞疾——大麻浸酒，研取白汁，滤去渣，纳瓶中，煮数沸，每饮一杯。（圣惠） 健忘——麻勃一升，人参二两，为末，蒸令气遍，每卧服一刀圭。（范汪） 【容川】麻仁油滑，而无辛烈之性，故但能润降，不能速下。 一三八、冬葵子 【本经原文】味甘寒，主五脏六腑，寒热羸瘦。五癃，利小便，久服坚骨，长肌肉，轻身延 年。 【产地】处处有之，苗叶做菜茹，味甘美为百菜主。 【性味】味甘，性寒，无毒。 【主治】冬葵子为润燥滑肠利窍要药，主通行荣卫，行津液，利二便，下乳滑胎，治  --- 
+- `knowledge/herbs/duhuo.md`｜herb｜独活｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/duzhong.md`｜herb｜杜仲｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/ejiao.md`｜herb｜阿胶｜model_placeholder, body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+  - 摘要：：止血。一般不入煎，烊化（溶化）后兑入药液。  ## ⚠️ 配伍禁忌  脾胃虚弱、便溏者慎用。黏腻碍胃。  ## 🔍 鉴别要点  正品山东东阿产阿胶最佳，黑褐色有光泽，质硬脆，断面光亮。伪品为杂皮胶。  ## 🌿 倪师讲解  > "「阿胶」这味药，在经方中应用广泛..."  > 来源摘录：猪苓是很好的利尿剂，在膀胱的结石，肾结石的时候，我们会用一些像 猪苓 。用滑石，用溶盐，青盐呀，咸能软坚啊。用猪苓，茯苓，泽泻等，那你说老师这个 药下去以后，如果石头很大，石头旁边很利嘛，会把那个尿道割破，割破小便
+- `knowledge/herbs/fangfeng.md`｜herb｜防风｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/fangji.md`｜herb｜防己｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+  - 摘要： **性味：** 苦辛寒  ## 💊 功效  祛风湿，止痛，利水消肿  ## 🌿 倪师讲解  风湿水肿  ---  > 来源摘录：诸痫痫痫痫，，，，除除除除 邪邪邪邪，，，，利利利利大大大大小小小小便便便便，，，，通通通通腠腠腠腠理理理理，，，，利利利利 九窍。生川谷。一名解离。 > 来源摘录：一百九十四这个防己，市面上有汉防己木防己，还有广防己，什么什么很多说明，我们 使用的是木防己，前一阵子说哎呀这个有马兜铃酸什么呀，马兜铃本来就是中药，那广防那 个汉防己里面也有含有马兜铃在里面，马兜铃呢本身是个中药， > 来源摘录：有个中药就叫马兜铃，汉防 己里面也有马兜铃的成分在里面，那是毒的，我们使用的防己是木防己，木防己没有毒。 > 来源摘录：【
+- `knowledge/herbs/fanxieye.md`｜herb｜番泻叶｜model_placeholder, body_has_source_label, empty_sections
+  - 摘要：** 甘苦寒 - **归经：** 大肠  ## 💊 功效  泻热行滞，通便  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「番泻叶」这味药，在经方中应用广泛..."  > 来源摘录：孩子，四五天五六天甚至十来天不大便，另外 第三象限中，这是寒湿之气，湿热之气在第二象限中，二者皆为阴 一个，要注意，现在市场上的减肥药 排泄药等，它里面是配的大黄 邪，容易致人成癌症，就是成不可治症。所以说一个寒湿
+- `knowledge/herbs/fengfang.md`｜herb｜蜂房｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：ARD_NOTICE_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 🌡️ 性味  > 来源摘录：味苦，性平。  ## 💊 功效   ## 🎯 主治  > 来源摘录：猬皮治五痔，泻血，阴肿痛及反胃，炙为末或烧灰服。  ## ⚖️ 常用剂量范围  > 来源摘录：一般一钱至三钱。  ## ⚠️ 配伍禁忌  > 来源摘录：禁生用。  ## 🌿 倪师讲解  > 来源摘录：。 酒者杀之。生川谷、田野。 【产地】山地多有之。 【性味】味苦，性平。 【主治】猬皮治五痔，泻血，阴肿痛及反胃，炙为末或烧灰服。 【别录】疗腹痛疝积，烧灰酒服。 【毅明】治反胃吐食。 【用量】一般一钱至三钱。 【禁忌】禁生用。 二三二、露蜂房 【本经
+- `knowledge/herbs/fuling.md`｜herb｜茯苓｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/gancao.md`｜herb｜甘草｜index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/ganlan.md`｜herb｜橄榄｜body_has_source_label, ocr_noise, json_fragment, empty_sections, index_quote_mismatch
+  - 摘要：_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 💊 功效  ## 🌿 倪师讲解  > 来源摘录：菖蒲。有的菖蒲长在石头上面，有的长在水里面， 形状是一条一条的，上面还有菖蒲花茎，根是长在水里面。把它采收 起来，放在阳光下晒干，晒干以后变成干的菖蒲，然后用火去烧。烧 成菖蒲灰后，把灰扫起来，跟滑石粉混合在一起， > 来源摘录：然后跟麻油或食用 油等，用橄榄油也可以，这些油本身没有功能，只是靠它使粉黏在一 起。然后涂在皮肤四肢上面，全身涂满，涂的时候也可以内服，像我 这种身材一次给我二钱，二钱的量差不多就是一个我们喝汤用的汤匙 平杓， > 来源摘录：中间一半就是钱半，剂量差不多就是这样子。小孩子的话一钱 或是  
+- `knowledge/herbs/gansui.md`｜herb｜甘遂｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：寒有毒 - **归经：** 肺肾大肠  ## 💊 功效  泻水逐饮，消肿散结  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「甘遂」这味药，在经方中应用广泛..."  > 来源摘录：草是缓，那你减缓它的速度了，我们需要药比较缓 慢发挥的时候，慢慢进去的时候，我们就会用到甘草，有些药跑得太快了，必需要用甘草， 有些状况是危急的，你必须要让药走得很快，这个时候，你不要加甘草在里面，比如说我们 前面
+- `knowledge/herbs/gaoliangjiang.md`｜herb｜高良姜｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+  - 摘要：* 辛热 - **归经：** 脾胃  ## 💊 功效  温中止痛，温中止呕  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「高良姜」这味药，在经方中应用广泛..."  > 来源摘录：杜蘅也；西山经云：天帝 之上有草焉，其状如葵，其臭如蘼芜，名曰杜蘅；尔雅云：杜，土卤；郭璞 云：杜蘅也，似葵而香；楚词云：采芳州兮杜若；范子计然云：杜若生南郡 汉中又云秦蘅，出于陇西天水；沈括补笔谈云：杜若，即今之
+- `knowledge/herbs/gongcao.md`｜herb｜茺蔚子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：，无升达之孔道，味 既苦泻，故下行双足。其节如膝，能利膝胫，以其形似也。 二十八、充蔚子 【本经原文】味辛微温，主明目益精，除水气，久服轻身，茎主瘾疹痒，可做浴汤，一名益 母。 【产地】多生于原野及近水处，叶为深裂式，茎做方形，名益母草，即茺蔚子。 【性味】味辛苦性微寒，无毒。 【主治】此药为去瘀生新，通调月经，及产后要药，根茎功用相同。 【别录】疗血逆，大热头痛心烦。 【吴瑞】舂仁生食补中益气，通血脉，填精髓，止渴，润肝。 【用量】普通一钱至三钱。 【禁忌】血崩及瞳子散大均忌，唯  --- 
+- `knowledge/herbs/gouqizi.md`｜herb｜枸杞子｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：诸位倒阳，不然的话，你不知道怎样生阳啊。就好像我们要治病，要把别人治 回来，你要知道怎样杀人。它是坚筋骨，长期吃的话，美容养颜。大家气色会非常的好，这 个肾脏病的时候我们都可以吃，随时可以补气的。过去我们常常炖鸡啊什么的，放点枸杞在 里面。枸杞子。 ���� 九九九九十十十十七七七七、、、、柏柏柏柏实实实实 【【【【本本本本经经经经原原原原文文文文】】】】味味味味甘甘甘甘平平平平，，，，主主主主惊惊惊惊悸悸悸悸，，，，安安安安五五五五脏脏脏脏，，，，益益益益气气气气除除除除湿湿湿湿  --- 
+- `knowledge/herbs/guadi.md`｜herb｜瓜蒂｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：ARD_NOTICE_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 🌡️ 性味  > 来源摘录：味苦，性寒，无毒。  ## 💊 功效   ## 🎯 主治  > 来源摘录：上焦之实症，以吐取之，浊痰壅塞，全身水肿等实症。  ## 🌿 倪师讲解  > 来源摘录：，皆吐下之。即甜瓜之蒂也。 【产地】处处有之，取甜瓜之苦蒂入药。 【性味】味苦，性寒，无毒。 【主治】上焦之实症，以吐取之，浊痰壅塞，全身水肿等实症。 【倪注】主治因上焦不通造成之全身性水肿，专治膈上之疾，中风浊痰不出，无法吞咽。仲 景方之瓜蒂散。 【药征】主治胸中有毒，欲吐而不吐也。 【用量】普通一钱至二钱。 【禁忌】凡虚弱之人禁忌之。吐后不止，可服半夏
+- `knowledge/herbs/gualou.md`｜herb｜瓜蒌｜model_placeholder, body_has_source_label, ocr_noise, index_quote_mismatch, stale_dirty_index_quote
+  - 摘要：化痰，宽胸散结。瓜蒌皮：偏清化热痰，理气宽胸。瓜蒌仁：偏润肠通便。  ## ⚠️ 配伍禁忌  反乌头（十八反）。脾胃虚寒便溏者忌用瓜蒌仁。  ## 🔍 鉴别要点  椭圆形，表面橙红色，种子扁平卵圆形。  ## 🌿 倪师讲解  > "「瓜蒌」这味药，在经方中应用广泛..."  > 来源摘录：，生津的力 量比较强，瓜蒌实治膈间之结气，因为瓜蒌像人的胸隔膜，所以，胸膈这边的问题都可以治 疗。 【药征】呢主治胸痞，胸痞的话，就是胸口的闷痛，胀痛，那里面可能原因是心脏瓣膜 闭锁不全，或者是动脉血管堵塞，或者是
+- `knowledge/herbs/gualue.md`｜herb｜瓜蒌｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/guanzhong.md`｜herb｜贯众｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 苦微寒 - **归经：** 肝脾胃  ## 💊 功效  清热解毒，凉血止血  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「贯众」这味药，在经方中应用广泛..."  > 来源摘录：。 【别录】利大小肠，明目。 【大明】止疟疾，消痰，退热。 【用量】普通五分至钱半。 【禁忌】赤小豆为使，恶薯蓣。 二八九、茵芋 【本经原文】味苦，温，有毒。治五臓邪气，心腹寒热，羸瘦，如疟状，发作有时，诸关节 风
+- `knowledge/herbs/guiban.md`｜herb｜龟板｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：忌，肾虚无火，寒精自出者亦忌。 一二五、龟甲 【本经原文】味咸平，主漏下赤白，破症瘕疟痎，五痔阴蚀，湿痹四肢重弱，小儿囟不合。 久服轻身不饥。 【产地】处处有之，生池泽及海水中，其甲即龟甲，肉亦入药。 【性味】味甘咸，性平，无毒。 【主治】龟板为益阴滋血要药，主补心肾，益大肠，去瘀血，续筋骨，治久疟，劳复，血痹， 湿痹，症瘕，产难，久痢久泻。 【别录】惊恚气，心腹痛不可久立，骨中寒热，伤寒劳复；或肌体寒热欲死，以作汤良，久 服益气资智，烧灰治小儿头疮难燥，女子阴疮。 【甄权】烧灰  --- 
+
+## 全量问题清单
+- `knowledge/acupoints/binao.md`｜P0｜acupoint｜臂臑｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/cuanzhu.md`｜P0｜acupoint｜攒竹｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/daimai.md`｜P0｜acupoint｜带脉｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/dazhong.md`｜P0｜acupoint｜大钟｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/fengshi.md`｜P0｜acupoint｜风市｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/fuyang_bl.md`｜P0｜acupoint｜跗阳｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/acupoints/guanchong.md`｜P0｜acupoint｜关冲｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/guanmen.md`｜P0｜acupoint｜关门｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/acupoints/huizong.md`｜P0｜acupoint｜会宗｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/jianyu.md`｜P0｜acupoint｜肩髃｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/jiaoxin.md`｜P0｜acupoint｜交信｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/jingming.md`｜P0｜acupoint｜睛明｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/jiquan.md`｜P0｜acupoint｜极泉｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/jugu.md`｜P0｜acupoint｜巨骨｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/acupoints/lidui.md`｜P0｜acupoint｜厉兑｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/ligou.md`｜P0｜acupoint｜蠡沟｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/lingdao.md`｜P0｜acupoint｜灵道｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/qiangu.md`｜P0｜acupoint｜前谷｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/qingling.md`｜P0｜acupoint｜青灵｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/rangu.md`｜P0｜acupoint｜然谷｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/renzhong.md`｜P0｜acupoint｜人中｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/shaoze.md`｜P0｜acupoint｜少泽｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/shuaigu.md`｜P0｜acupoint｜率谷｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/shuiquan.md`｜P0｜acupoint｜水泉｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/tianjing.md`｜P0｜acupoint｜天井｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/tianzhu.md`｜P0｜acupoint｜天柱｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/tinghui.md`｜P0｜acupoint｜听会｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/tongziliao.md`｜P0｜acupoint｜瞳子髎｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/wangu_gb.md`｜P0｜acupoint｜完骨｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yangchi.md`｜P0｜acupoint｜阳池｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/yanggu.md`｜P0｜acupoint｜阳谷｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/yanglao.md`｜P0｜acupoint｜养老｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/yemen.md`｜P0｜acupoint｜液门｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/yinxi.md`｜P0｜acupoint｜阴郄｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/yongquan.md`｜P0｜acupoint｜涌泉｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/zhizheng.md`｜P0｜acupoint｜支正｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/zhongchong.md`｜P0｜acupoint｜中冲｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/acupoints/zhubin.md`｜P0｜acupoint｜筑宾｜model_placeholder, body_has_source_label, ocr_noise, index_quote_mismatch
+- `knowledge/formulas/dahuang_gansui.md`｜P0｜formula｜大黄甘遂汤｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/danggui_shengjiang.md`｜P0｜formula｜当归生姜羊肉汤｜ocr_noise, index_quote_mismatch
+- `knowledge/formulas/didang_tang.md`｜P0｜formula｜抵当汤｜model_placeholder, index_quote_mismatch
+- `knowledge/formulas/fuling_rongyan.md`｜P0｜formula｜茯苓戎盐汤｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/honglanhua_jiu.md`｜P0｜formula｜红蓝花酒｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/huashi_baiyu.md`｜P0｜formula｜滑石白鱼散｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/linggui_zhugan.md`｜P0｜formula｜苓桂术甘汤｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/maxing_shigan.md`｜P0｜formula｜麻杏石甘汤｜ocr_noise, index_quote_mismatch
+- `knowledge/formulas/puhui_san.md`｜P0｜formula｜蒲灰散｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/shechuangzi_san.md`｜P0｜formula｜蛇床子散｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/shegan_mahuang.md`｜P0｜formula｜射干麻黄汤｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/tingli_dazao.md`｜P0｜formula｜葶苈大枣泻肺汤｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/wenjing_tang.md`｜P0｜formula｜温经汤｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/xuanfu_daihe.md`｜P0｜formula｜旋覆代赭汤｜model_placeholder, empty_sections, index_quote_mismatch
+- `knowledge/formulas/yiyi_fuzi.md`｜P0｜formula｜薏苡附子败酱散｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/formulas/yuebi_tang.md`｜P0｜formula｜越婢汤｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/zaojia_wan.md`｜P0｜formula｜皂荚丸｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/zeqi_tang.md`｜P0｜formula｜泽漆汤｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/formulas/zhishi_shaoyao.md`｜P0｜formula｜枳实芍药散｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/baifan.md`｜P0｜herb｜白矾｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/baihe.md`｜P0｜herb｜百合｜model_placeholder
+- `knowledge/herbs/baiji.md`｜P0｜herb｜白及｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/baijiezi.md`｜P0｜herb｜白芥子｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/baimaogen.md`｜P0｜herb｜白茅根｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/baishao.md`｜P0｜herb｜白芍｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/baixianpi.md`｜P0｜herb｜白鲜皮｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/baiziren.md`｜P0｜herb｜柏子仁｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/bajitian.md`｜P0｜herb｜巴戟天｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/banlangen.md`｜P0｜herb｜板蓝根｜model_placeholder, body_has_source_label, empty_sections
+- `knowledge/herbs/beimu.md`｜P0｜herb｜贝母｜quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/beishashen.md`｜P0｜herb｜北沙参｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/bianxu.md`｜P0｜herb｜萹蓄｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/bibo.md`｜P0｜herb｜荜茇｜model_placeholder, empty_sections
+- `knowledge/herbs/biejia.md`｜P0｜herb｜鳖甲｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/bingpian.md`｜P0｜herb｜冰片｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/bixie.md`｜P0｜herb｜萆薢｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/bohe.md`｜P0｜herb｜薄荷｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/cangzhu.md`｜P0｜herb｜苍术｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/changshan.md`｜P0｜herb｜常山｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/changshanmiao.md`｜P0｜herb｜常山苗｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/chantui.md`｜P0｜herb｜蝉蜕｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/chenpi.md`｜P0｜herb｜陈皮｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/chenxiang.md`｜P0｜herb｜沉香｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/cheqianzi.md`｜P0｜herb｜车前子｜ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/herbs/chuanshanjia.md`｜P0｜herb｜穿山甲｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/chuanwu.md`｜P0｜herb｜川乌｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/chuanxiong.md`｜P0｜herb｜川芎｜index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/chuanyubeimu.md`｜P0｜herb｜川贝母｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections
+- `knowledge/herbs/cishi.md`｜P0｜herb｜磁石｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/ciweipi.md`｜P0｜herb｜刺猬皮｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/congbai.md`｜P0｜herb｜葱白｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/dafupi.md`｜P0｜herb｜大腹皮｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/dahuang.md`｜P0｜herb｜大黄｜index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/daji.md`｜P0｜herb｜大戟｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/danggui.md`｜P0｜herb｜当归｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/dangshen.md`｜P0｜herb｜党参｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/danshen.md`｜P0｜herb｜丹参｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/daqingye.md`｜P0｜herb｜大青叶｜model_placeholder, body_has_source_label, empty_sections
+- `knowledge/herbs/dengxincao.md`｜P0｜herb｜灯心草｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/difuzi.md`｜P0｜herb｜地肤子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/dilong.md`｜P0｜herb｜地龙｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/dingxiang.md`｜P0｜herb｜丁香｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/dongkuizi.md`｜P0｜herb｜冬葵子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/duhuo.md`｜P0｜herb｜独活｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/duzhong.md`｜P0｜herb｜杜仲｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/ejiao.md`｜P0｜herb｜阿胶｜model_placeholder, body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/fangfeng.md`｜P0｜herb｜防风｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/fangji.md`｜P0｜herb｜防己｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/fanxieye.md`｜P0｜herb｜番泻叶｜model_placeholder, body_has_source_label, empty_sections
+- `knowledge/herbs/fengfang.md`｜P0｜herb｜蜂房｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/fuling.md`｜P0｜herb｜茯苓｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/gancao.md`｜P0｜herb｜甘草｜index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/ganlan.md`｜P0｜herb｜橄榄｜body_has_source_label, ocr_noise, json_fragment, empty_sections, index_quote_mismatch
+- `knowledge/herbs/gansui.md`｜P0｜herb｜甘遂｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/gaoliangjiang.md`｜P0｜herb｜高良姜｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/gongcao.md`｜P0｜herb｜茺蔚子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/gouqizi.md`｜P0｜herb｜枸杞子｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/guadi.md`｜P0｜herb｜瓜蒂｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/gualou.md`｜P0｜herb｜瓜蒌｜model_placeholder, body_has_source_label, ocr_noise, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/gualue.md`｜P0｜herb｜瓜蒌｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/guanzhong.md`｜P0｜herb｜贯众｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/guiban.md`｜P0｜herb｜龟板｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/haizaomu.md`｜P0｜herb｜海藻｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/hehuanpi.md`｜P0｜herb｜合欢皮｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/heshouwu.md`｜P0｜herb｜何首乌｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/honghua.md`｜P0｜herb｜红花｜ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/houpo.md`｜P0｜herb｜厚朴｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/huaihua.md`｜P0｜herb｜槐花｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/huaijiao.md`｜P0｜herb｜槐角｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/huajiao.md`｜P0｜herb｜花椒｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/huangbai.md`｜P0｜herb｜黄柏｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/huangbo.md`｜P0｜herb｜黄柏｜model_placeholder, body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/huanglian.md`｜P0｜herb｜黄连｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/huangqi.md`｜P0｜herb｜黄芪｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/hujiao.md`｜P0｜herb｜胡椒｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/huomaren.md`｜P0｜herb｜火麻仁｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/hupo.md`｜P0｜herb｜琥珀｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/jiangcan.md`｜P0｜herb｜僵蚕｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/jiegeng.md`｜P0｜herb｜桔梗｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/jili.md`｜P0｜herb｜蒺藜｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/jineijin.md`｜P0｜herb｜鸡内金｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/jingjie.md`｜P0｜herb｜荆芥｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/jinyingzi.md`｜P0｜herb｜金樱子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections
+- `knowledge/herbs/jixueteng.md`｜P0｜herb｜鸡血藤｜model_placeholder, empty_sections
+- `knowledge/herbs/kuandonghua.md`｜P0｜herb｜款冬花｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/kunbu.md`｜P0｜herb｜昆布｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/leiwan.md`｜P0｜herb｜雷丸｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/lianqiao.md`｜P0｜herb｜连翘｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/lingxiaohua.md`｜P0｜herb｜凌霄花｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/lingyangjiao.md`｜P0｜herb｜羚羊角｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/lingzhi.md`｜P0｜herb｜灵芝｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/liuhuang.md`｜P0｜herb｜硫黄｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/lizhihe.md`｜P0｜herb｜荔枝核｜model_placeholder, empty_sections
+- `knowledge/herbs/longyanrou.md`｜P0｜herb｜龙眼肉｜model_placeholder, body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/luhui.md`｜P0｜herb｜芦荟｜model_placeholder, empty_sections
+- `knowledge/herbs/lujiao.md`｜P0｜herb｜鹿角｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/luoshiteng.md`｜P0｜herb｜络石藤｜body_has_source_label, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/lurong.md`｜P0｜herb｜鹿茸｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/herbs/madouling.md`｜P0｜herb｜马兜铃｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch
+- `knowledge/herbs/mahuang.md`｜P0｜herb｜麻黄｜body_has_source_label, ocr_noise, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/mahuanggen.md`｜P0｜herb｜麻黄根｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/maidong.md`｜P0｜herb｜麦冬｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/maiya.md`｜P0｜herb｜麦芽｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/mangxiao.md`｜P0｜herb｜芒硝｜ocr_noise, index_quote_mismatch
+- `knowledge/herbs/manjingzi.md`｜P0｜herb｜蔓荆子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/meiguihua.md`｜P0｜herb｜玫瑰花｜body_has_source_label, ocr_noise, empty_sections
+- `knowledge/herbs/mengchong.md`｜P0｜herb｜虻虫｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/mingfan.md`｜P0｜herb｜明矾｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/moyao.md`｜P0｜herb｜没药｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/mugua.md`｜P0｜herb｜木瓜｜body_has_source_label, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/mutong.md`｜P0｜herb｜木通｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/muxiang.md`｜P0｜herb｜木香｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/nanshashen.md`｜P0｜herb｜南沙参｜model_placeholder, body_has_source_label, empty_sections
+- `knowledge/herbs/niuhuang.md`｜P0｜herb｜牛黄｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/niuxi.md`｜P0｜herb｜牛膝｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/nvzhenzi.md`｜P0｜herb｜女贞子｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/paojiang.md`｜P0｜herb｜炮姜｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/peilan.md`｜P0｜herb｜佩兰｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/pugongying.md`｜P0｜herb｜蒲公英｜model_placeholder, empty_sections
+- `knowledge/herbs/puhuang.md`｜P0｜herb｜蒲黄｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/qiancao.md`｜P0｜herb｜茜草｜body_has_source_label, ocr_noise, json_fragment, empty_sections, index_quote_mismatch
+- `knowledge/herbs/qianghuo.md`｜P0｜herb｜羌活｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/qianshi.md`｜P0｜herb｜芡实｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/qingdai.md`｜P0｜herb｜青黛｜model_placeholder, body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/qingpi.md`｜P0｜herb｜青皮｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/qingxiangzi.md`｜P0｜herb｜青葙子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/qinpi.md`｜P0｜herb｜秦皮｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/quanxie.md`｜P0｜herb｜全蝎｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/qumai.md`｜P0｜herb｜瞿麦｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/rousuirong.md`｜P0｜herb｜肉苁蓉｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/ruxiang.md`｜P0｜herb｜乳香｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/sangbaipi.md`｜P0｜herb｜桑白皮｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/sangzhi.md`｜P0｜herb｜桑枝｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/shanyao.md`｜P0｜herb｜山药｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shanzhuyu.md`｜P0｜herb｜山茱萸｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shashen.md`｜P0｜herb｜沙参｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shechuangzi.md`｜P0｜herb｜蛇床子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shegan.md`｜P0｜herb｜射干｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/shenqu.md`｜P0｜herb｜神曲｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/shexiang.md`｜P0｜herb｜麝香｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shichangpu.md`｜P0｜herb｜石菖蒲｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/shigao.md`｜P0｜herb｜石膏｜body_has_source_label, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/shihu.md`｜P0｜herb｜石斛｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shijunzi.md`｜P0｜herb｜使君子｜body_has_source_label, ocr_noise, json_fragment, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/shizhangzi.md`｜P0｜herb｜使君子｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/shudihuang.md`｜P0｜herb｜熟地黄｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/shuizhi.md`｜P0｜herb｜水蛭｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/songjie.md`｜P0｜herb｜松节｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/songziren.md`｜P0｜herb｜松子仁｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections
+- `knowledge/herbs/suoyang.md`｜P0｜herb｜锁阳｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/tanxiang.md`｜P0｜herb｜檀香｜model_placeholder, empty_sections
+- `knowledge/herbs/tiandong.md`｜P0｜herb｜天冬｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/tianma.md`｜P0｜herb｜天麻｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/tiannanxing.md`｜P0｜herb｜天南星｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/tinglizi.md`｜P0｜herb｜葶苈子｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/tongcao.md`｜P0｜herb｜通草｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/wangbuliuxing.md`｜P0｜herb｜王不留行｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/weilingxian.md`｜P0｜herb｜威灵仙｜quote_cross_entry_or_ocr_tail, empty_sections
+- `knowledge/herbs/wubeizi.md`｜P0｜herb｜五倍子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/wugong.md`｜P0｜herb｜蜈蚣｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/wujiapi.md`｜P0｜herb｜五加皮｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/wushaoshe.md`｜P0｜herb｜乌梢蛇｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections
+- `knowledge/herbs/wuyao.md`｜P0｜herb｜乌药｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/wuyi.md`｜P0｜herb｜芜荑｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/wuzhuyu.md`｜P0｜herb｜吴茱萸｜model_placeholder, body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/xiangfu.md`｜P0｜herb｜香附｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xiaohuixiang.md`｜P0｜herb｜小茴香｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/xiaoji.md`｜P0｜herb｜小蓟｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xingren.md`｜P0｜herb｜杏仁｜ocr_noise, index_quote_mismatch
+- `knowledge/herbs/xinyi.md`｜P0｜herb｜辛夷｜body_has_source_label, quote_cross_entry_or_ocr_tail, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/xixin.md`｜P0｜herb｜细辛｜body_has_source_label, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/xuanshen.md`｜P0｜herb｜玄参｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xuduan.md`｜P0｜herb｜续断｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yangqishi.md`｜P0｜herb｜阳起石｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yanhucuo.md`｜P0｜herb｜延胡索｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/yanhusuo.md`｜P0｜herb｜延胡索｜model_placeholder, body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/yejuhua.md`｜P0｜herb｜野菊花｜model_placeholder, body_has_source_label, empty_sections
+- `knowledge/herbs/yimucao.md`｜P0｜herb｜益母草｜empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/yinchen.md`｜P0｜herb｜茵陈｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yinyanghuo.md`｜P0｜herb｜淫羊藿｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yiyiren.md`｜P0｜herb｜薏苡仁｜quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/yuanhua.md`｜P0｜herb｜芫花｜model_placeholder, body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yujin.md`｜P0｜herb｜郁金｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/yuliren.md`｜P0｜herb｜郁李仁｜model_placeholder, body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/yuxingcao.md`｜P0｜herb｜鱼腥草｜model_placeholder, empty_sections
+- `knowledge/herbs/yuyuliang.md`｜P0｜herb｜禹余粮｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yuzhu.md`｜P0｜herb｜玉竹｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zaofan.md`｜P0｜herb｜皂矾｜body_has_source_label, ocr_noise, empty_sections
+- `knowledge/herbs/zaojiaoci.md`｜P0｜herb｜皂角刺｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zaoxintu.md`｜P0｜herb｜灶心土｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/zelan.md`｜P0｜herb｜泽兰｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zezie.md`｜P0｜herb｜泽泻｜ocr_noise, index_quote_mismatch
+- `knowledge/herbs/zhebeimu.md`｜P0｜herb｜浙贝母｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zhike.md`｜P0｜herb｜枳壳｜model_placeholder, body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
+- `knowledge/herbs/zhimu.md`｜P0｜herb｜知母｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/zhizi.md`｜P0｜herb｜栀子｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/zhuling.md`｜P0｜herb｜猪苓｜ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
+- `knowledge/herbs/zihuadiding.md`｜P0｜herb｜紫花地丁｜model_placeholder, empty_sections
+- `knowledge/acupoints/acupoint_index.md`｜P1｜acupoint｜acupoint_index｜frontmatter_error, acupoint_missing_operation_notice
+- `knowledge/acupoints/bafeng.md`｜P1｜acupoint｜八风｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/baihuanshu.md`｜P1｜acupoint｜白环俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/baihui.md`｜P1｜acupoint｜百会｜index_quote_mismatch
+- `knowledge/acupoints/baohuang.md`｜P1｜acupoint｜baohuang｜frontmatter_error, empty_sections
+- `knowledge/acupoints/baxie.md`｜P1｜acupoint｜八邪｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/benshen.md`｜P1｜acupoint｜本神｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/biguan.md`｜P1｜acupoint｜髀关｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/bilao.md`｜P1｜acupoint｜臂臑外｜empty_sections
+- `knowledge/acupoints/bingfeng.md`｜P1｜acupoint｜秉风｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/bitong.md`｜P1｜acupoint｜臂臑二｜empty_sections
+- `knowledge/acupoints/changqiang.md`｜P1｜acupoint｜长强｜index_quote_mismatch
+- `knowledge/acupoints/chengfu.md`｜P1｜acupoint｜承扶｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/chengfu2.md`｜P1｜acupoint｜承扶二｜empty_sections
+- `knowledge/acupoints/chengguang.md`｜P1｜acupoint｜承光｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/chengjiang.md`｜P1｜acupoint｜承浆｜index_quote_mismatch
+- `knowledge/acupoints/chengjin.md`｜P1｜acupoint｜承筋｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/chengling.md`｜P1｜acupoint｜承灵｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/chengling_gb.md`｜P1｜acupoint｜承灵二｜empty_sections
+- `knowledge/acupoints/chengqi.md`｜P1｜acupoint｜承泣｜index_quote_mismatch
+- `knowledge/acupoints/chengshan.md`｜P1｜acupoint｜承山｜index_quote_mismatch
+- `knowledge/acupoints/chize.md`｜P1｜acupoint｜尺泽｜index_quote_mismatch
+- `knowledge/acupoints/chongmen.md`｜P1｜acupoint｜冲门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/chongyang.md`｜P1｜acupoint｜冲阳｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/ciliao.md`｜P1｜acupoint｜次髎｜index_quote_mismatch
+- `knowledge/acupoints/ciliao2.md`｜P1｜acupoint｜次髎二｜empty_sections
+- `knowledge/acupoints/dabao.md`｜P1｜acupoint｜大包｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/dabao2.md`｜P1｜acupoint｜大包二｜empty_sections
+- `knowledge/acupoints/dachang.md`｜P1｜acupoint｜大迎｜index_quote_mismatch
+- `knowledge/acupoints/dachangshu.md`｜P1｜acupoint｜大肠俞｜index_quote_mismatch
+- `knowledge/acupoints/dadun.md`｜P1｜acupoint｜大敦｜index_quote_mismatch
+- `knowledge/acupoints/daheng.md`｜P1｜acupoint｜大横｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/daheng2.md`｜P1｜acupoint｜大横二｜empty_sections
+- `knowledge/acupoints/dai mai2.md`｜P1｜acupoint｜带脉二｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/daling.md`｜P1｜acupoint｜大陵｜index_quote_mismatch
+- `knowledge/acupoints/danshu.md`｜P1｜acupoint｜胆俞｜index_quote_mismatch
+- `knowledge/acupoints/danzhong.md`｜P1｜acupoint｜膻中｜index_quote_mismatch
+- `knowledge/acupoints/dazhong_k.md`｜P1｜acupoint｜大钟二｜empty_sections
+- `knowledge/acupoints/dazhu.md`｜P1｜acupoint｜大杼｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/dazhui.md`｜P1｜acupoint｜大椎｜index_quote_mismatch
+- `knowledge/acupoints/dicang.md`｜P1｜acupoint｜地仓｜index_quote_mismatch
+- `knowledge/acupoints/diji.md`｜P1｜acupoint｜地机｜index_quote_mismatch
+- `knowledge/acupoints/dingchuan.md`｜P1｜acupoint｜定喘｜index_quote_mismatch
+- `knowledge/acupoints/diwuhui.md`｜P1｜acupoint｜地五会｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/dubi.md`｜P1｜acupoint｜犊鼻｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/dudu.md`｜P1｜acupoint｜大都｜index_quote_mismatch
+- `knowledge/acupoints/erjian.md`｜P1｜acupoint｜二间｜index_quote_mismatch
+- `knowledge/acupoints/ermen.md`｜P1｜acupoint｜耳门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/ershenmen.md`｜P1｜acupoint｜耳神门｜empty_sections
+- `knowledge/acupoints/feishu.md`｜P1｜acupoint｜肺俞｜index_quote_mismatch
+- `knowledge/acupoints/feiyang.md`｜P1｜acupoint｜飞扬｜index_quote_mismatch
+- `knowledge/acupoints/fengchi.md`｜P1｜acupoint｜风池｜index_quote_mismatch
+- `knowledge/acupoints/fengchi_gb.md`｜P1｜acupoint｜风池｜index_quote_mismatch
+- `knowledge/acupoints/fengfu.md`｜P1｜acupoint｜风府｜index_quote_mismatch
+- `knowledge/acupoints/fenglong.md`｜P1｜acupoint｜丰隆｜index_quote_mismatch
+- `knowledge/acupoints/fengmen.md`｜P1｜acupoint｜风门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/fengshi_bl.md`｜P1｜acupoint｜附分｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/fengshi_gb.md`｜P1｜acupoint｜风市二｜empty_sections
+- `knowledge/acupoints/fuai.md`｜P1｜acupoint｜腹哀｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/fuai2.md`｜P1｜acupoint｜腹哀二｜empty_sections
+- `knowledge/acupoints/fubai.md`｜P1｜acupoint｜浮白｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/fujie.md`｜P1｜acupoint｜腹结｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/fujie2.md`｜P1｜acupoint｜腹结二｜empty_sections
+- `knowledge/acupoints/fuliu.md`｜P1｜acupoint｜复溜｜index_quote_mismatch
+- `knowledge/acupoints/fuliu_k.md`｜P1｜acupoint｜复溜｜index_quote_mismatch
+- `knowledge/acupoints/fushe.md`｜P1｜acupoint｜府舍｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/futu.md`｜P1｜acupoint｜扶突｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/futu_li.md`｜P1｜acupoint｜扶突｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/futu_st.md`｜P1｜acupoint｜伏兔｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/fuxi_bl.md`｜P1｜acupoint｜浮郄｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/fuyang2.md`｜P1｜acupoint｜跗阳二｜empty_sections
+- `knowledge/acupoints/ganshu.md`｜P1｜acupoint｜肝俞｜index_quote_mismatch
+- `knowledge/acupoints/gaohuangshu.md`｜P1｜acupoint｜膏肓俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/geguan.md`｜P1｜acupoint｜膈关｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/geshu.md`｜P1｜acupoint｜膈俞｜index_quote_mismatch
+- `knowledge/acupoints/gongsun.md`｜P1｜acupoint｜公孙｜index_quote_mismatch
+- `knowledge/acupoints/guangming.md`｜P1｜acupoint｜光明｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/guanyuan.md`｜P1｜acupoint｜关元｜index_quote_mismatch
+- `knowledge/acupoints/hanyan.md`｜P1｜acupoint｜颔厌｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/hegu.md`｜P1｜acupoint｜合谷｜index_quote_mismatch
+- `knowledge/acupoints/heliao_sj.md`｜P1｜acupoint｜和髎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/heyang.md`｜P1｜acupoint｜合阳｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/houxi.md`｜P1｜acupoint｜后溪｜index_quote_mismatch
+- `knowledge/acupoints/huagai.md`｜P1｜acupoint｜华盖｜index_quote_mismatch
+- `knowledge/acupoints/huagai_ren.md`｜P1｜acupoint｜华盖二｜empty_sections
+- `knowledge/acupoints/huangmen.md`｜P1｜acupoint｜肓门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/huangshu.md`｜P1｜acupoint｜肓俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/huantiao.md`｜P1｜acupoint｜环跳｜index_quote_mismatch
+- `knowledge/acupoints/huaroumen.md`｜P1｜acupoint｜滑肉门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/huitiao.md`｜P1｜acupoint｜会阳｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/huiyin.md`｜P1｜acupoint｜会阴｜index_quote_mismatch
+- `knowledge/acupoints/hunmen.md`｜P1｜acupoint｜魂门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jiache.md`｜P1｜acupoint｜颊车｜index_quote_mismatch
+- `knowledge/acupoints/jiaji.md`｜P1｜acupoint｜夹脊｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jian Shi.md`｜P1｜acupoint｜间使｜index_quote_mismatch
+- `knowledge/acupoints/jianjing.md`｜P1｜acupoint｜肩井｜index_quote_mismatch
+- `knowledge/acupoints/jianjing_gb.md`｜P1｜acupoint｜肩井二｜empty_sections
+- `knowledge/acupoints/jianli.md`｜P1｜acupoint｜建里｜index_quote_mismatch
+- `knowledge/acupoints/jianli_ren.md`｜P1｜acupoint｜建里二｜empty_sections
+- `knowledge/acupoints/jianliao.md`｜P1｜acupoint｜肩髎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jianshi.md`｜P1｜acupoint｜间使｜index_quote_mismatch
+- `knowledge/acupoints/jianwaishu.md`｜P1｜acupoint｜肩外俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jianyu2.md`｜P1｜acupoint｜肩髃二｜empty_sections
+- `knowledge/acupoints/jianzhongshu.md`｜P1｜acupoint｜肩中俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jiaosun.md`｜P1｜acupoint｜角孙｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jiaoxin_k.md`｜P1｜acupoint｜交信二｜empty_sections
+- `knowledge/acupoints/jiexi.md`｜P1｜acupoint｜解溪｜index_quote_mismatch
+- `knowledge/acupoints/jiexi2.md`｜P1｜acupoint｜解溪二｜empty_sections
+- `knowledge/acupoints/jimai.md`｜P1｜acupoint｜急脉｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jimen.md`｜P1｜acupoint｜箕门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jinggu.md`｜P1｜acupoint｜京骨｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jingmen.md`｜P1｜acupoint｜京门｜index_quote_mismatch
+- `knowledge/acupoints/jingmen_gb.md`｜P1｜acupoint｜京门二｜empty_sections
+- `knowledge/acupoints/jingming_bl.md`｜P1｜acupoint｜睛明｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jingqu.md`｜P1｜acupoint｜经渠｜index_quote_mismatch
+- `knowledge/acupoints/jinmen.md`｜P1｜acupoint｜金门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/jinsuo.md`｜P1｜acupoint｜筋缩｜index_quote_mismatch
+- `knowledge/acupoints/jiuwei.md`｜P1｜acupoint｜鸠尾｜index_quote_mismatch
+- `knowledge/acupoints/jiuwei_ren.md`｜P1｜acupoint｜鸠尾二｜empty_sections
+- `knowledge/acupoints/jizhong.md`｜P1｜acupoint｜脊中｜index_quote_mismatch
+- `knowledge/acupoints/jueyinshu.md`｜P1｜acupoint｜厥阴俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/juguque.md`｜P1｜acupoint｜巨阙｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/juliao.md`｜P1｜acupoint｜巨髎｜index_quote_mismatch
+- `knowledge/acupoints/jutiao.md`｜P1｜acupoint｜居髎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/kongzui.md`｜P1｜acupoint｜孔最｜index_quote_mismatch
+- `knowledge/acupoints/kunlun.md`｜P1｜acupoint｜昆仑｜index_quote_mismatch
+- `knowledge/acupoints/kunlun_bl.md`｜P1｜acupoint｜昆仑二｜empty_sections
+- `knowledge/acupoints/laogong.md`｜P1｜acupoint｜劳宫｜index_quote_mismatch
+- `knowledge/acupoints/liangmen.md`｜P1｜acupoint｜梁门｜empty_sections
+- `knowledge/acupoints/liangqiu.md`｜P1｜acupoint｜梁丘｜index_quote_mismatch
+- `knowledge/acupoints/liangqiu2.md`｜P1｜acupoint｜梁丘二｜empty_sections
+- `knowledge/acupoints/lidui2.md`｜P1｜acupoint｜厉兑二｜empty_sections
+- `knowledge/acupoints/lieque.md`｜P1｜acupoint｜列缺｜index_quote_mismatch
+- `knowledge/acupoints/ligou_lv.md`｜P1｜acupoint｜蠡沟｜index_quote_mismatch
+- `knowledge/acupoints/lingtai.md`｜P1｜acupoint｜灵台｜index_quote_mismatch
+- `knowledge/acupoints/lougu.md`｜P1｜acupoint｜漏谷｜index_quote_mismatch
+- `knowledge/acupoints/luoque.md`｜P1｜acupoint｜络却｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/luoshen.md`｜P1｜acupoint｜络却二｜empty_sections
+- `knowledge/acupoints/luozhen.md`｜P1｜acupoint｜落枕｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/meichong.md`｜P1｜acupoint｜眉冲｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/mingmen.md`｜P1｜acupoint｜命门｜index_quote_mismatch
+- `knowledge/acupoints/mubian.md`｜P1｜acupoint｜目窗｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/naohu.md`｜P1｜acupoint｜脑户｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/naohui.md`｜P1｜acupoint｜臑会｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/naokong.md`｜P1｜acupoint｜脑空｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/naokong_bl.md`｜P1｜acupoint｜脑户｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/naokong_gb.md`｜P1｜acupoint｜脑空二｜empty_sections
+- `knowledge/acupoints/naoshu.md`｜P1｜acupoint｜臑俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/neiguan.md`｜P1｜acupoint｜内关｜index_quote_mismatch
+- `knowledge/acupoints/neiting.md`｜P1｜acupoint｜内庭｜index_quote_mismatch
+- `knowledge/acupoints/neiting2.md`｜P1｜acupoint｜内庭二｜empty_sections
+- `knowledge/acupoints/pangguangshu.md`｜P1｜acupoint｜膀胱俞｜index_quote_mismatch
+- `knowledge/acupoints/pianli.md`｜P1｜acupoint｜偏历｜index_quote_mismatch
+- `knowledge/acupoints/pishu.md`｜P1｜acupoint｜脾俞｜index_quote_mismatch
+- `knowledge/acupoints/pohu.md`｜P1｜acupoint｜魄户｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/pucan.md`｜P1｜acupoint｜仆参｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/qianding.md`｜P1｜acupoint｜前顶｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/qianding_du.md`｜P1｜acupoint｜前顶二｜empty_sections
+- `knowledge/acupoints/qiaoyin_gb.md`｜P1｜acupoint｜足窍阴｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/qichong.md`｜P1｜acupoint｜气冲｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/qihai.md`｜P1｜acupoint｜气海｜index_quote_mismatch
+- `knowledge/acupoints/qimen.md`｜P1｜acupoint｜期门｜index_quote_mismatch
+- `knowledge/acupoints/qimen_lv.md`｜P1｜acupoint｜期门｜index_quote_mismatch
+- `knowledge/acupoints/qinglengyuan.md`｜P1｜acupoint｜清冷渊｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/qiuxu.md`｜P1｜acupoint｜丘墟｜index_quote_mismatch
+- `knowledge/acupoints/qiuxu_gb.md`｜P1｜acupoint｜丘墟｜index_quote_mismatch
+- `knowledge/acupoints/quanliao.md`｜P1｜acupoint｜颧髎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/qubin.md`｜P1｜acupoint｜曲鬓｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/qucha.md`｜P1｜acupoint｜曲差｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/quchi.md`｜P1｜acupoint｜曲池｜index_quote_mismatch
+- `knowledge/acupoints/qugu.md`｜P1｜acupoint｜曲骨｜index_quote_mismatch
+- `knowledge/acupoints/ququan.md`｜P1｜acupoint｜曲泉｜index_quote_mismatch
+- `knowledge/acupoints/ququan_lv.md`｜P1｜acupoint｜曲泉二｜empty_sections
+- `knowledge/acupoints/quyuan.md`｜P1｜acupoint｜曲垣｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/quze.md`｜P1｜acupoint｜曲泽｜index_quote_mismatch
+- `knowledge/acupoints/ran gu.md`｜P1｜acupoint｜然谷二｜empty_sections
+- `knowledge/acupoints/renying.md`｜P1｜acupoint｜人迎｜index_quote_mismatch
+- `knowledge/acupoints/riyue.md`｜P1｜acupoint｜日月｜index_quote_mismatch
+- `knowledge/acupoints/sanjian.md`｜P1｜acupoint｜三间｜index_quote_mismatch
+- `knowledge/acupoints/sanjiaoju.md`｜P1｜acupoint｜三焦俞｜index_quote_mismatch
+- `knowledge/acupoints/sanjiaoshu.md`｜P1｜acupoint｜三焦俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/sanyangluo.md`｜P1｜acupoint｜三阳络｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/sanyinjiao.md`｜P1｜acupoint｜三阴交｜index_quote_mismatch
+- `knowledge/acupoints/shangjuxu.md`｜P1｜acupoint｜上巨虚｜index_quote_mismatch
+- `knowledge/acupoints/shanglian.md`｜P1｜acupoint｜上廉｜index_quote_mismatch
+- `knowledge/acupoints/shangliao.md`｜P1｜acupoint｜上髎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shangqiu.md`｜P1｜acupoint｜商丘｜index_quote_mismatch
+- `knowledge/acupoints/shangqu.md`｜P1｜acupoint｜商曲｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shangwan.md`｜P1｜acupoint｜上脘｜index_quote_mismatch
+- `knowledge/acupoints/shangwan_ren.md`｜P1｜acupoint｜上脘二｜empty_sections
+- `knowledge/acupoints/shangxing.md`｜P1｜acupoint｜上星｜index_quote_mismatch
+- `knowledge/acupoints/shangxing_du.md`｜P1｜acupoint｜上星二｜empty_sections
+- `knowledge/acupoints/shangyang.md`｜P1｜acupoint｜商阳｜index_quote_mismatch
+- `knowledge/acupoints/shaochong.md`｜P1｜acupoint｜少冲｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shaofu.md`｜P1｜acupoint｜少府｜index_quote_mismatch
+- `knowledge/acupoints/shaohai.md`｜P1｜acupoint｜少海｜index_quote_mismatch
+- `knowledge/acupoints/shaoshang.md`｜P1｜acupoint｜少商｜index_quote_mismatch
+- `knowledge/acupoints/shendao.md`｜P1｜acupoint｜神道｜index_quote_mismatch
+- `knowledge/acupoints/shenmai.md`｜P1｜acupoint｜申脉｜index_quote_mismatch
+- `knowledge/acupoints/shenmai2.md`｜P1｜acupoint｜申脉三｜empty_sections
+- `knowledge/acupoints/shenmai_bl.md`｜P1｜acupoint｜申脉二｜empty_sections
+- `knowledge/acupoints/shenmen.md`｜P1｜acupoint｜神门｜index_quote_mismatch
+- `knowledge/acupoints/shenque.md`｜P1｜acupoint｜神阙｜index_quote_mismatch
+- `knowledge/acupoints/shenque_ren.md`｜P1｜acupoint｜神阙二｜empty_sections
+- `knowledge/acupoints/shenshu.md`｜P1｜acupoint｜肾俞｜index_quote_mismatch
+- `knowledge/acupoints/shentang.md`｜P1｜acupoint｜神堂｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shenting.md`｜P1｜acupoint｜神庭｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shenzhu.md`｜P1｜acupoint｜身柱｜index_quote_mismatch
+- `knowledge/acupoints/shidou.md`｜P1｜acupoint｜食窦｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shidou2.md`｜P1｜acupoint｜食窦二｜empty_sections
+- `knowledge/acupoints/shiguan.md`｜P1｜acupoint｜石关｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shimen.md`｜P1｜acupoint｜石门｜index_quote_mismatch
+- `knowledge/acupoints/shiqixue.md`｜P1｜acupoint｜十七｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shousanli.md`｜P1｜acupoint｜手三里｜index_quote_mismatch
+- `knowledge/acupoints/shugu_bl.md`｜P1｜acupoint｜束骨｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/shuifen.md`｜P1｜acupoint｜水分｜index_quote_mismatch
+- `knowledge/acupoints/shuifen_ren.md`｜P1｜acupoint｜水分二｜empty_sections
+- `knowledge/acupoints/shuigou.md`｜P1｜acupoint｜水沟｜index_quote_mismatch
+- `knowledge/acupoints/shuitu.md`｜P1｜acupoint｜水突｜index_quote_mismatch
+- `knowledge/acupoints/sibai.md`｜P1｜acupoint｜四白｜index_quote_mismatch
+- `knowledge/acupoints/sidu.md`｜P1｜acupoint｜四渎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/sizhukong.md`｜P1｜acupoint｜丝竹空｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/suliao.md`｜P1｜acupoint｜素髎｜index_quote_mismatch
+- `knowledge/acupoints/taibai.md`｜P1｜acupoint｜太白｜index_quote_mismatch
+- `knowledge/acupoints/taichong.md`｜P1｜acupoint｜太冲｜index_quote_mismatch
+- `knowledge/acupoints/taichong_lv.md`｜P1｜acupoint｜太冲｜index_quote_mismatch
+- `knowledge/acupoints/taixi.md`｜P1｜acupoint｜太溪｜index_quote_mismatch
+- `knowledge/acupoints/taixi_k.md`｜P1｜acupoint｜太溪｜index_quote_mismatch
+- `knowledge/acupoints/taiyang_ex.md`｜P1｜acupoint｜太阳｜index_quote_mismatch
+- `knowledge/acupoints/taiyi.md`｜P1｜acupoint｜太乙｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/taiyi2.md`｜P1｜acupoint｜太乙二｜empty_sections
+- `knowledge/acupoints/taiyuan.md`｜P1｜acupoint｜太渊｜index_quote_mismatch
+- `knowledge/acupoints/taodao.md`｜P1｜acupoint｜陶道｜index_quote_mismatch
+- `knowledge/acupoints/tianchi.md`｜P1｜acupoint｜天池｜index_quote_mismatch
+- `knowledge/acupoints/tianchuang.md`｜P1｜acupoint｜天窗｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/tianding.md`｜P1｜acupoint｜天鼎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/tianfu.md`｜P1｜acupoint｜天府｜index_quote_mismatch
+- `knowledge/acupoints/tianfu2.md`｜P1｜acupoint｜天府二｜empty_sections
+- `knowledge/acupoints/tianliao.md`｜P1｜acupoint｜天髎｜empty_sections
+- `knowledge/acupoints/tianquan.md`｜P1｜acupoint｜天泉｜index_quote_mismatch
+- `knowledge/acupoints/tianrong.md`｜P1｜acupoint｜天容｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/tianshu.md`｜P1｜acupoint｜天枢｜index_quote_mismatch
+- `knowledge/acupoints/tiantu.md`｜P1｜acupoint｜天突｜index_quote_mismatch
+- `knowledge/acupoints/tianxi.md`｜P1｜acupoint｜天溪｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/tianxi2.md`｜P1｜acupoint｜天溪二｜empty_sections
+- `knowledge/acupoints/tianzhu_bl.md`｜P1｜acupoint｜天柱｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/tianzong.md`｜P1｜acupoint｜天宗｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/tiaokou.md`｜P1｜acupoint｜条口｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/tinggong.md`｜P1｜acupoint｜听宫｜index_quote_mismatch
+- `knowledge/acupoints/tongli.md`｜P1｜acupoint｜通里｜index_quote_mismatch
+- `knowledge/acupoints/tongtian.md`｜P1｜acupoint｜通天｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/toulinqi.md`｜P1｜acupoint｜头临泣｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/toulinqi_bl.md`｜P1｜acupoint｜通谷｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/touqiaoyin.md`｜P1｜acupoint｜头窍阴｜empty_sections
+- `knowledge/acupoints/touwei.md`｜P1｜acupoint｜头维｜index_quote_mismatch
+- `knowledge/acupoints/waiguan.md`｜P1｜acupoint｜外关｜index_quote_mismatch
+- `knowledge/acupoints/waiqiu.md`｜P1｜acupoint｜外丘｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/wangu.md`｜P1｜acupoint｜腕骨｜index_quote_mismatch
+- `knowledge/acupoints/weicang.md`｜P1｜acupoint｜胃仓｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/weidao.md`｜P1｜acupoint｜维道｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/weishu.md`｜P1｜acupoint｜胃俞｜index_quote_mismatch
+- `knowledge/acupoints/weiyang.md`｜P1｜acupoint｜委阳｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/weizhong.md`｜P1｜acupoint｜委中｜index_quote_mismatch
+- `knowledge/acupoints/wenliu.md`｜P1｜acupoint｜温溜｜index_quote_mismatch
+- `knowledge/acupoints/wuchu.md`｜P1｜acupoint｜五处｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/wuli.md`｜P1｜acupoint｜五里｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/wushu_gb.md`｜P1｜acupoint｜五枢｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xiabai.md`｜P1｜acupoint｜侠白｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xiaguan.md`｜P1｜acupoint｜下关｜index_quote_mismatch
+- `knowledge/acupoints/xiaji.md`｜P1｜acupoint｜下极俞｜empty_sections
+- `knowledge/acupoints/xiajuxu.md`｜P1｜acupoint｜下巨虚｜index_quote_mismatch
+- `knowledge/acupoints/xialian.md`｜P1｜acupoint｜下廉｜index_quote_mismatch
+- `knowledge/acupoints/xiamen.md`｜P1｜acupoint｜侠白｜index_quote_mismatch
+- `knowledge/acupoints/xiangu.md`｜P1｜acupoint｜陷谷｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xiaochangshu.md`｜P1｜acupoint｜小肠俞｜index_quote_mismatch
+- `knowledge/acupoints/xiaohai.md`｜P1｜acupoint｜小海｜index_quote_mismatch
+- `knowledge/acupoints/xiaoliao.md`｜P1｜acupoint｜下髎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xiaoluo.md`｜P1｜acupoint｜消泺｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xiawan.md`｜P1｜acupoint｜下脘｜index_quote_mismatch
+- `knowledge/acupoints/xiaxi.md`｜P1｜acupoint｜侠溪｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xiguan.md`｜P1｜acupoint｜膝关｜index_quote_mismatch
+- `knowledge/acupoints/ximen.md`｜P1｜acupoint｜郄门｜index_quote_mismatch
+- `knowledge/acupoints/xingjian.md`｜P1｜acupoint｜行间｜index_quote_mismatch
+- `knowledge/acupoints/xingjian_lv.md`｜P1｜acupoint｜行间｜index_quote_mismatch
+- `knowledge/acupoints/xinhui.md`｜P1｜acupoint｜囟会｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xinshu.md`｜P1｜acupoint｜心俞｜index_quote_mismatch
+- `knowledge/acupoints/xiongxiang.md`｜P1｜acupoint｜胸乡｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xiongxiang2.md`｜P1｜acupoint｜胸乡二｜empty_sections
+- `knowledge/acupoints/xiwan.md`｜P1｜acupoint｜下脘｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xiyangguan.md`｜P1｜acupoint｜膝阳关｜empty_sections
+- `knowledge/acupoints/xuanji.md`｜P1｜acupoint｜璇玑｜index_quote_mismatch
+- `knowledge/acupoints/xuanji_ren.md`｜P1｜acupoint｜璇玑二｜empty_sections
+- `knowledge/acupoints/xuanli.md`｜P1｜acupoint｜悬厘｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xuanlu.md`｜P1｜acupoint｜悬颅｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/xuanshu.md`｜P1｜acupoint｜悬枢｜index_quote_mismatch
+- `knowledge/acupoints/xuanzhong.md`｜P1｜acupoint｜悬钟｜index_quote_mismatch
+- `knowledge/acupoints/xuanzhong_gb.md`｜P1｜acupoint｜悬钟｜index_quote_mismatch
+- `knowledge/acupoints/xuehai.md`｜P1｜acupoint｜血海｜index_quote_mismatch
+- `knowledge/acupoints/yamen.md`｜P1｜acupoint｜哑门｜index_quote_mismatch
+- `knowledge/acupoints/yangbai.md`｜P1｜acupoint｜阳白｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yangfu.md`｜P1｜acupoint｜阳辅｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yanggang.md`｜P1｜acupoint｜阳纲｜empty_sections
+- `knowledge/acupoints/yangjiao.md`｜P1｜acupoint｜阳交｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yanglingquan.md`｜P1｜acupoint｜阳陵泉｜index_quote_mismatch
+- `knowledge/acupoints/yangxi.md`｜P1｜acupoint｜阳溪｜index_quote_mismatch
+- `knowledge/acupoints/yaoshugu.md`｜P1｜acupoint｜腰俞｜index_quote_mismatch
+- `knowledge/acupoints/yaotongdian.md`｜P1｜acupoint｜腰痛点｜empty_sections
+- `knowledge/acupoints/yifeng.md`｜P1｜acupoint｜翳风｜index_quote_mismatch
+- `knowledge/acupoints/yinbai.md`｜P1｜acupoint｜隐白｜index_quote_mismatch
+- `knowledge/acupoints/yinbao.md`｜P1｜acupoint｜阴包｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yindu.md`｜P1｜acupoint｜阴都｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yingu.md`｜P1｜acupoint｜阴谷｜index_quote_mismatch
+- `knowledge/acupoints/yingu_k.md`｜P1｜acupoint｜阴谷｜index_quote_mismatch
+- `knowledge/acupoints/yingxiang.md`｜P1｜acupoint｜迎香｜index_quote_mismatch
+- `knowledge/acupoints/yinjiao.md`｜P1｜acupoint｜龈交｜index_quote_mismatch
+- `knowledge/acupoints/yinjiao_du.md`｜P1｜acupoint｜龈交｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yinjiao_ren.md`｜P1｜acupoint｜阴交二｜empty_sections
+- `knowledge/acupoints/yinlian.md`｜P1｜acupoint｜阴廉｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yinshi.md`｜P1｜acupoint｜阴市｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yintang.md`｜P1｜acupoint｜印堂｜index_quote_mismatch
+- `knowledge/acupoints/yinyu.md`｜P1｜acupoint｜殷门｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yishe.md`｜P1｜acupoint｜意舍｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yixi.md`｜P1｜acupoint｜譩譆｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yongquan_k.md`｜P1｜acupoint｜涌泉｜index_quote_mismatch
+- `knowledge/acupoints/yuanye.md`｜P1｜acupoint｜渊腋｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yuji.md`｜P1｜acupoint｜鱼际｜index_quote_mismatch
+- `knowledge/acupoints/yunmen.md`｜P1｜acupoint｜云门｜index_quote_mismatch
+- `knowledge/acupoints/yunmen2.md`｜P1｜acupoint｜云门二｜empty_sections
+- `knowledge/acupoints/yutang.md`｜P1｜acupoint｜玉堂｜index_quote_mismatch
+- `knowledge/acupoints/yutang_ren.md`｜P1｜acupoint｜玉堂二｜empty_sections
+- `knowledge/acupoints/yuyao.md`｜P1｜acupoint｜鱼腰｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/yuzhen.md`｜P1｜acupoint｜玉枕｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zanzhu.md`｜P1｜acupoint｜攒竹｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhangmen.md`｜P1｜acupoint｜章门｜index_quote_mismatch
+- `knowledge/acupoints/zhangmen_lv.md`｜P1｜acupoint｜章门二｜empty_sections
+- `knowledge/acupoints/zhaohai.md`｜P1｜acupoint｜照海｜index_quote_mismatch
+- `knowledge/acupoints/zhaohai_k.md`｜P1｜acupoint｜照海｜index_quote_mismatch
+- `knowledge/acupoints/zhejin.md`｜P1｜acupoint｜辄筋｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhengying.md`｜P1｜acupoint｜正营｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhibian.md`｜P1｜acupoint｜秩边｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhigou.md`｜P1｜acupoint｜支沟｜index_quote_mismatch
+- `knowledge/acupoints/zhiqiang.md`｜P1｜acupoint｜至阳｜index_quote_mismatch
+- `knowledge/acupoints/zhishi.md`｜P1｜acupoint｜志室｜index_quote_mismatch
+- `knowledge/acupoints/zhishi_bl.md`｜P1｜acupoint｜志室｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhiyin.md`｜P1｜acupoint｜至阴｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhongdu.md`｜P1｜acupoint｜中都｜index_quote_mismatch
+- `knowledge/acupoints/zhongdu_gb.md`｜P1｜acupoint｜中渎｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhongdu_lv.md`｜P1｜acupoint｜中都二｜empty_sections
+- `knowledge/acupoints/zhongfeng.md`｜P1｜acupoint｜中封｜index_quote_mismatch
+- `knowledge/acupoints/zhongfeng_lv.md`｜P1｜acupoint｜中封二｜empty_sections
+- `knowledge/acupoints/zhongfu.md`｜P1｜acupoint｜中府｜index_quote_mismatch
+- `knowledge/acupoints/zhongji.md`｜P1｜acupoint｜中极｜index_quote_mismatch
+- `knowledge/acupoints/zhongliao.md`｜P1｜acupoint｜中髎｜index_quote_mismatch
+- `knowledge/acupoints/zhonglushu.md`｜P1｜acupoint｜中膂俞｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhongshu.md`｜P1｜acupoint｜中枢｜index_quote_mismatch
+- `knowledge/acupoints/zhongting.md`｜P1｜acupoint｜中庭｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhongwan.md`｜P1｜acupoint｜中脘｜index_quote_mismatch
+- `knowledge/acupoints/zhongwan_ren.md`｜P1｜acupoint｜中脘二｜empty_sections
+- `knowledge/acupoints/zhongzhu.md`｜P1｜acupoint｜中渚｜index_quote_mismatch
+- `knowledge/acupoints/zhourong.md`｜P1｜acupoint｜周荣｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zhourong2.md`｜P1｜acupoint｜周荣二｜empty_sections
+- `knowledge/acupoints/zhubin_k.md`｜P1｜acupoint｜筑宾二｜empty_sections
+- `knowledge/acupoints/zigong.md`｜P1｜acupoint｜紫宫｜index_quote_mismatch
+- `knowledge/acupoints/zigong_ex.md`｜P1｜acupoint｜子宫｜empty_sections, index_quote_mismatch
+- `knowledge/acupoints/zigong_ren.md`｜P1｜acupoint｜紫宫二｜empty_sections
+- `knowledge/acupoints/zulinqi.md`｜P1｜acupoint｜足临泣｜index_quote_mismatch
+- `knowledge/acupoints/zulinqi_gb.md`｜P1｜acupoint｜足临泣｜index_quote_mismatch
+- `knowledge/acupoints/zusanli.md`｜P1｜acupoint｜足三里｜index_quote_mismatch
+- `knowledge/acupoints/zusanli_st.md`｜P1｜acupoint｜足三里二｜empty_sections
+- `knowledge/acupoints/zutonggu.md`｜P1｜acupoint｜足通谷｜empty_sections
+- `knowledge/acupoints/zuwuli.md`｜P1｜acupoint｜足五里｜empty_sections
+- `knowledge/formulas/baihu_renshen.md`｜P1｜formula｜白虎加人参汤｜index_quote_mismatch
+- `knowledge/formulas/baihu_tang.md`｜P1｜formula｜白虎汤｜index_quote_mismatch
+- `knowledge/formulas/baitouweng_jiaoai.md`｜P1｜formula｜白头翁加甘草阿胶汤｜index_quote_mismatch
+- `knowledge/formulas/baitouweng_tang.md`｜P1｜formula｜白头翁汤｜index_quote_mismatch
+- `knowledge/formulas/baizhu_fuzi.md`｜P1｜formula｜白术附子汤｜index_quote_mismatch
+- `knowledge/formulas/banxia_houpo.md`｜P1｜formula｜半夏厚朴汤｜index_quote_mismatch
+- `knowledge/formulas/banxia_san.md`｜P1｜formula｜半夏散及汤｜index_quote_mismatch
+- `knowledge/formulas/banxia_xiexin.md`｜P1｜formula｜半夏泻心汤｜index_quote_mismatch
+- `knowledge/formulas/chaihu_guizhi.md`｜P1｜formula｜柴胡桂枝汤｜index_quote_mismatch
+- `knowledge/formulas/chaihu_longgu.md`｜P1｜formula｜柴胡加龙骨牡蛎汤｜index_quote_mismatch
+- `knowledge/formulas/dachaihu_tang.md`｜P1｜formula｜大柴胡汤｜index_quote_mismatch
+- `knowledge/formulas/dachengqi_tang.md`｜P1｜formula｜大承气汤｜index_quote_mismatch
+- `knowledge/formulas/dahuang_huanglian.md`｜P1｜formula｜大黄黄连泻心汤｜index_quote_mismatch
+- `knowledge/formulas/dahuoluo_tang.md`｜P1｜formula｜大青龙汤｜index_quote_mismatch
+- `knowledge/formulas/danggui_jianzhong.md`｜P1｜formula｜当归建中汤｜index_quote_mismatch
+- `knowledge/formulas/danggui_sini.md`｜P1｜formula｜当归四逆汤｜index_quote_mismatch
+- `knowledge/formulas/fangji_fuling.md`｜P1｜formula｜防己茯苓汤｜index_quote_mismatch
+- `knowledge/formulas/fangji_huangqi.md`｜P1｜formula｜防己黄芪汤｜index_quote_mismatch
+- `knowledge/formulas/fuling_gancao.md`｜P1｜formula｜茯苓甘草汤｜index_quote_mismatch
+- `knowledge/formulas/fuling_guizhi.md`｜P1｜formula｜茯苓桂枝甘草大枣汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/fuling_sini.md`｜P1｜formula｜茯苓四逆汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/fuling_xingren.md`｜P1｜formula｜茯苓杏仁甘草汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/fuzi_xiexin.md`｜P1｜formula｜附子泻心汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/gancao_fenmi.md`｜P1｜formula｜甘草粉蜜汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/gancao_fuzi.md`｜P1｜formula｜甘草附子汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/gancao_ganjiang.md`｜P1｜formula｜甘草干姜汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/gancao_mahuang.md`｜P1｜formula｜甘草麻黄汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/gancao_xiexin.md`｜P1｜formula｜甘草泻心汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/ganjiang_fuzi.md`｜P1｜formula｜干姜附子汤｜index_quote_mismatch
+- `knowledge/formulas/getang.md`｜P1｜formula｜葛根汤｜index_quote_mismatch
+- `knowledge/formulas/getang_banxia.md`｜P1｜formula｜葛根加半夏汤｜index_quote_mismatch
+- `knowledge/formulas/gualou_xiebai.md`｜P1｜formula｜瓜蒌薤白白酒汤｜empty_sections
+- `knowledge/formulas/guizhi_dahuang.md`｜P1｜formula｜桂枝加大黄汤｜index_quote_mismatch
+- `knowledge/formulas/guizhi_fuling.md`｜P1｜formula｜桂枝茯苓丸｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/guizhi_fuzi.md`｜P1｜formula｜桂枝附子汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/guizhi_gancao.md`｜P1｜formula｜桂枝甘草汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/guizhi_houpuxingzi.md`｜P1｜formula｜桂枝加厚朴杏子汤｜index_quote_mismatch
+- `knowledge/formulas/guizhi_jiagetang.md`｜P1｜formula｜桂枝加葛根汤｜index_quote_mismatch
+- `knowledge/formulas/guizhi_qu_shaoyao.md`｜P1｜formula｜桂枝去芍药加附子汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/guizhi_shaoyao.md`｜P1｜formula｜桂枝加芍药汤｜index_quote_mismatch
+- `knowledge/formulas/guizhi_tang.md`｜P1｜formula｜桂枝汤｜index_quote_mismatch
+- `knowledge/formulas/houpo_mahuang.md`｜P1｜formula｜厚朴麻黄汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/houpo_shengjiang.md`｜P1｜formula｜厚朴生姜半夏甘草人参汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/huanglian_ejiao.md`｜P1｜formula｜黄连阿胶汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/huangqi_jianzhong.md`｜P1｜formula｜黄芪建中汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/jiaoai_tang.md`｜P1｜formula｜胶艾汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/jiegeng_tang.md`｜P1｜formula｜桔梗汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/jingfang_index.md`｜P1｜formula｜经方索引｜empty_sections
+- `knowledge/formulas/jishibai_san.md`｜P1｜formula｜鸡屎白散｜empty_sections
+- `knowledge/formulas/juzhi_jiang.md`｜P1｜formula｜橘枳姜汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/kujiu_tang.md`｜P1｜formula｜苦酒汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/lizhong_tang.md`｜P1｜formula｜理中汤｜index_quote_mismatch
+- `knowledge/formulas/lizhong_wan.md`｜P1｜formula｜理中丸｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/mahuang_fuzi_gancao.md`｜P1｜formula｜麻黄附子甘草汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/mahuang_fuzi_xixin.md`｜P1｜formula｜麻黄附子细辛汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/mahuang_lianqiao.md`｜P1｜formula｜麻黄连轺赤小豆汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/mahuang_shengma.md`｜P1｜formula｜麻黄升麻汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/mahuang_tang.md`｜P1｜formula｜麻黄汤｜index_quote_mismatch
+- `knowledge/formulas/maimendong_tang.md`｜P1｜formula｜麦门冬汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/muli_zexie.md`｜P1｜formula｜牡蛎泽泻散｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/neibu_danggui.md`｜P1｜formula｜内补当归建中汤｜empty_sections
+- `knowledge/formulas/painong_san.md`｜P1｜formula｜排脓散｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/painong_tang.md`｜P1｜formula｜排脓汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/sanwu_huangqin.md`｜P1｜formula｜三物黄芩汤｜empty_sections
+- `knowledge/formulas/shaoyao_gancao.md`｜P1｜formula｜芍药甘草汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/shaoyao_gancao_fuzi.md`｜P1｜formula｜芍药甘草附子汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/shengjiang_xiexin.md`｜P1｜formula｜生姜泻心汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/shenqi_wan.md`｜P1｜formula｜肾气丸｜index_quote_mismatch
+- `knowledge/formulas/shizao_tang.md`｜P1｜formula｜十枣汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/sini_san.md`｜P1｜formula｜四逆散｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/sini_tang.md`｜P1｜formula｜四逆汤｜index_quote_mismatch
+- `knowledge/formulas/taohe_chengqi.md`｜P1｜formula｜桃核承气汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/taohua_tang.md`｜P1｜formula｜桃花汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/tiaoweichengqi.md`｜P1｜formula｜调胃承气汤｜index_quote_mismatch
+- `knowledge/formulas/tongmai_sini.md`｜P1｜formula｜通脉四逆汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/wangbuliuxing.md`｜P1｜formula｜王不留行散｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/wuling_san.md`｜P1｜formula｜五苓散｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/wumei_wan.md`｜P1｜formula｜乌梅丸｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/xiaochaihu_tang.md`｜P1｜formula｜小柴胡汤｜index_quote_mismatch
+- `knowledge/formulas/xiaochengqi_tang.md`｜P1｜formula｜小承气汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/xiaoer_gan.md`｜P1｜formula｜小儿疳虫蚀齿方｜empty_sections
+- `knowledge/formulas/xiaojianzhong_tang.md`｜P1｜formula｜小建中汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/xiaoqinglong_tang.md`｜P1｜formula｜小青龙汤｜index_quote_mismatch
+- `knowledge/formulas/xiayu_xue.md`｜P1｜formula｜下瘀血汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/xingzi_tang.md`｜P1｜formula｜杏子汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/yinchen_hao.md`｜P1｜formula｜茵陈蒿汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/yuebi_zhu.md`｜P1｜formula｜越婢加术汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/zhenwu_tang.md`｜P1｜formula｜真武汤｜index_quote_mismatch
+- `knowledge/formulas/zhigancao_tang.md`｜P1｜formula｜炙甘草汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/zhishi_zhizi.md`｜P1｜formula｜枳实栀子豉汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/zhizhu_san.md`｜P1｜formula｜蜘蛛散｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/zhizi_chi.md`｜P1｜formula｜栀子豉汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/zhuling_tang.md`｜P1｜formula｜猪苓汤｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/zhupi_dawan.md`｜P1｜formula｜竹皮大丸｜empty_sections, index_quote_mismatch
+- `knowledge/formulas/zhuye_shigao.md`｜P1｜formula｜竹叶石膏汤｜empty_sections, index_quote_mismatch
+- `knowledge/herbs/aidicha.md`｜P1｜herb｜矮地茶｜empty_sections
+- `knowledge/herbs/aishe.md`｜P1｜herb｜艾叶｜empty_sections, index_quote_mismatch
+- `knowledge/herbs/anxixiang.md`｜P1｜herb｜安息香｜empty_sections
+- `knowledge/herbs/aoshu.md`｜P1｜herb｜糯稻根｜empty_sections
+- `knowledge/herbs/aoshugen.md`｜P1｜herb｜糯稻根须｜empty_sections
+- `knowledge/herbs/aoye.md`｜P1｜herb｜艾叶｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/badou.md`｜P1｜herb｜巴豆｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/baibu.md`｜P1｜herb｜百部｜body_has_source_label, empty_sections
+- `knowledge/herbs/baidoukou.md`｜P1｜herb｜白豆蔻｜body_has_source_label, empty_sections
+- `knowledge/herbs/baiguo.md`｜P1｜herb｜白果｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/baihuasheshecao.md`｜P1｜herb｜白花蛇舌草｜body_has_source_label
+- `knowledge/herbs/baijiangcao.md`｜P1｜herb｜败酱草｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/baiqian.md`｜P1｜herb｜白前｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/baitouweng.md`｜P1｜herb｜白头翁｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/baizhi.md`｜P1｜herb｜白芷｜empty_sections, index_quote_mismatch
+- `knowledge/herbs/baizhu.md`｜P1｜herb｜白术｜index_quote_mismatch
+- `knowledge/herbs/banxia.md`｜P1｜herb｜半夏｜index_quote_mismatch
+- `knowledge/herbs/banzhilian.md`｜P1｜herb｜半枝莲｜empty_sections
+- `knowledge/herbs/biandou.md`｜P1｜herb｜白扁豆｜body_has_source_label, empty_sections
+- `knowledge/herbs/biba.md`｜P1｜herb｜荜澄茄｜empty_sections
+- `knowledge/herbs/bichengqie.md`｜P1｜herb｜荜澄茄｜empty_sections
+- `knowledge/herbs/binglang.md`｜P1｜herb｜槟榔｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/buguzhi.md`｜P1｜herb｜补骨脂｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/cangerzi.md`｜P1｜herb｜苍耳子｜empty_sections
+- `knowledge/herbs/cansha.md`｜P1｜herb｜蚕砂｜empty_sections
+- `knowledge/herbs/caodoukou.md`｜P1｜herb｜草豆蔻｜empty_sections
+- `knowledge/herbs/caoguo.md`｜P1｜herb｜草果｜empty_sections
+- `knowledge/herbs/cebaiye.md`｜P1｜herb｜侧柏叶｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/chaihu.md`｜P1｜herb｜柴胡｜index_quote_mismatch
+- `knowledge/herbs/chishizhi.md`｜P1｜herb｜赤石脂｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/chouwutong.md`｜P1｜herb｜臭梧桐｜empty_sections
+- `knowledge/herbs/chuipencao.md`｜P1｜herb｜垂盆草｜empty_sections
+- `knowledge/herbs/chunpi.md`｜P1｜herb｜椿皮｜empty_sections
+- `knowledge/herbs/cijili.md`｜P1｜herb｜刺蒺藜｜empty_sections
+- `knowledge/herbs/daidaihua.md`｜P1｜herb｜代代花｜empty_sections
+- `knowledge/herbs/daizheshi.md`｜P1｜herb｜代赭石｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/danfan.md`｜P1｜herb｜胆矾｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/daodou.md`｜P1｜herb｜刀豆｜empty_sections
+- `knowledge/herbs/dazao.md`｜P1｜herb｜大枣｜index_quote_mismatch
+- `knowledge/herbs/diercao.md`｜P1｜herb｜地耳草｜empty_sections
+- `knowledge/herbs/diji.md`｜P1｜herb｜地榆｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/dijincao.md`｜P1｜herb｜地锦草｜empty_sections
+- `knowledge/herbs/diyu.md`｜P1｜herb｜地榆｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/dongchongxiacao.md`｜P1｜herb｜冬虫夏草｜body_has_source_label, empty_sections
+- `knowledge/herbs/ezhu.md`｜P1｜herb｜莪术｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/feizi.md`｜P1｜herb｜榧子｜empty_sections
+- `knowledge/herbs/fengmi.md`｜P1｜herb｜蜂蜜｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/foshou.md`｜P1｜herb｜佛手｜empty_sections
+- `knowledge/herbs/fupenzi.md`｜P1｜herb｜覆盆子｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/fuxiaomai.md`｜P1｜herb｜浮小麦｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/fuzi.md`｜P1｜herb｜附子｜index_quote_mismatch
+- `knowledge/herbs/ganjiang.md`｜P1｜herb｜干姜｜index_quote_mismatch
+- `knowledge/herbs/gaoben.md`｜P1｜herb｜藁本｜empty_sections, index_quote_mismatch
+- `knowledge/herbs/geda.md`｜P1｜herb｜葛根｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/gegen.md`｜P1｜herb｜葛根｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/gejie.md`｜P1｜herb｜蛤蚧｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/gijingcao.md`｜P1｜herb｜谷精草｜empty_sections
+- `knowledge/herbs/gouteng.md`｜P1｜herb｜钩藤｜empty_sections
+- `knowledge/herbs/guizhi.md`｜P1｜herb｜桂枝｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/gusuibu.md`｜P1｜herb｜骨碎补｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/guya.md`｜P1｜herb｜谷芽｜empty_sections
+- `knowledge/herbs/haifengteng.md`｜P1｜herb｜海风藤｜empty_sections
+- `knowledge/herbs/haifushi.md`｜P1｜herb｜海浮石｜empty_sections
+- `knowledge/herbs/haigeqiao.md`｜P1｜herb｜海蛤壳｜empty_sections
+- `knowledge/herbs/haijinsha.md`｜P1｜herb｜海金沙｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/haima.md`｜P1｜herb｜海马｜empty_sections
+- `knowledge/herbs/haitongpi.md`｜P1｜herb｜海桐皮｜empty_sections
+- `knowledge/herbs/hamayou.md`｜P1｜herb｜哈蟆油｜empty_sections
+- `knowledge/herbs/hechezi.md`｜P1｜herb｜黑芝麻｜empty_sections
+- `knowledge/herbs/heizhima.md`｜P1｜herb｜黑芝麻｜empty_sections
+- `knowledge/herbs/hesi.md`｜P1｜herb｜鹤虱｜empty_sections
+- `knowledge/herbs/hetaoren.md`｜P1｜herb｜核桃仁｜empty_sections
+- `knowledge/herbs/hezi.md`｜P1｜herb｜鹤虱｜empty_sections
+- `knowledge/herbs/hongteng.md`｜P1｜herb｜红藤｜empty_sections
+- `knowledge/herbs/huangjing.md`｜P1｜herb｜黄精｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/huangqin.md`｜P1｜herb｜黄芩｜index_quote_mismatch
+- `knowledge/herbs/huangyaozi.md`｜P1｜herb｜黄药子｜empty_sections
+- `knowledge/herbs/huashi.md`｜P1｜herb｜滑石｜index_quote_mismatch
+- `knowledge/herbs/huazuirushi.md`｜P1｜herb｜花蕊石｜empty_sections
+- `knowledge/herbs/hugulu.md`｜P1｜herb｜胡芦巴｜empty_sections
+- `knowledge/herbs/huoxiang.md`｜P1｜herb｜广藿香｜empty_sections
+- `knowledge/herbs/huzhang.md`｜P1｜herb｜虎杖｜empty_sections
+- `knowledge/herbs/jianghuang.md`｜P1｜herb｜姜黄｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/jiangxiang.md`｜P1｜herb｜降香｜empty_sections
+- `knowledge/herbs/jiguanhua.md`｜P1｜herb｜鸡冠花｜empty_sections
+- `knowledge/herbs/jinguolan.md`｜P1｜herb｜金果榄｜empty_sections
+- `knowledge/herbs/jinqiancao.md`｜P1｜herb｜金钱草｜empty_sections
+- `knowledge/herbs/jinyinhua.md`｜P1｜herb｜金银花｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/jiucaizi.md`｜P1｜herb｜韭菜子｜empty_sections
+- `knowledge/herbs/juemingzi.md`｜P1｜herb｜决明子｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/juhua.md`｜P1｜herb｜菊花｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/kualianpi.md`｜P1｜herb｜苦楝皮｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/kulianpi.md`｜P1｜herb｜苦楝皮｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/kushen.md`｜P1｜herb｜苦参｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/laifuzi.md`｜P1｜herb｜莱菔子｜empty_sections
+- `knowledge/herbs/laoguancao.md`｜P1｜herb｜老鹳草｜empty_sections
+- `knowledge/herbs/leigongteng.md`｜P1｜herb｜雷公藤｜empty_sections
+- `knowledge/herbs/lianxu.md`｜P1｜herb｜莲须｜empty_sections
+- `knowledge/herbs/lianzi.md`｜P1｜herb｜莲子｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/liujinu.md`｜P1｜herb｜刘寄奴｜empty_sections
+- `knowledge/herbs/longdancao.md`｜P1｜herb｜龙胆草｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/longgu.md`｜P1｜herb｜龙骨｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/lugen.md`｜P1｜herb｜芦根｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/lujiaoshuang.md`｜P1｜herb｜鹿角霜｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/lulutong.md`｜P1｜herb｜路路通｜empty_sections
+- `knowledge/herbs/luobuma.md`｜P1｜herb｜罗布麻叶｜empty_sections
+- `knowledge/herbs/luobumaye.md`｜P1｜herb｜罗布麻叶｜empty_sections
+- `knowledge/herbs/luohanguo.md`｜P1｜herb｜罗汉果｜empty_sections
+- `knowledge/herbs/lvtuomei.md`｜P1｜herb｜绿萼梅｜empty_sections
+- `knowledge/herbs/mabo.md`｜P1｜herb｜马勃｜empty_sections
+- `knowledge/herbs/machixian.md`｜P1｜herb｜马齿苋｜empty_sections
+- `knowledge/herbs/maqianzi.md`｜P1｜herb｜马钱子｜empty_sections
+- `knowledge/herbs/menghua.md`｜P1｜herb｜密蒙花｜empty_sections
+- `knowledge/herbs/mengshi.md`｜P1｜herb｜礞石｜body_has_source_label, empty_sections
+- `knowledge/herbs/mohantian.md`｜P1｜herb｜墨旱莲｜empty_sections
+- `knowledge/herbs/muhudie.md`｜P1｜herb｜木蝴蝶｜empty_sections
+- `knowledge/herbs/mujinpi.md`｜P1｜herb｜木槿皮｜empty_sections
+- `knowledge/herbs/muli.md`｜P1｜herb｜牡蛎｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/nanguazi.md`｜P1｜herb｜南瓜子｜body_has_source_label, empty_sections
+- `knowledge/herbs/niubangzi.md`｜P1｜herb｜牛蒡子｜empty_sections
+- `knowledge/herbs/nuodaogenxu.md`｜P1｜herb｜糯稻根须｜empty_sections
+- `knowledge/herbs/oujie.md`｜P1｜herb｜藕节｜empty_sections
+- `knowledge/herbs/pipaye.md`｜P1｜herb｜枇杷叶｜body_has_source_label, empty_sections
+- `knowledge/herbs/poshi.md`｜P1｜herb｜娑罗子｜empty_sections
+- `knowledge/herbs/qianjinzi.md`｜P1｜herb｜千金子｜empty_sections
+- `knowledge/herbs/qiannianjian.md`｜P1｜herb｜千年健｜empty_sections
+- `knowledge/herbs/qianniuzi.md`｜P1｜herb｜牵牛子｜empty_sections
+- `knowledge/herbs/qinjiao.md`｜P1｜herb｜秦艽｜empty_sections, index_quote_mismatch
+- `knowledge/herbs/qishe.md`｜P1｜herb｜蕲蛇｜empty_sections
+- `knowledge/herbs/renshen.md`｜P1｜herb｜人参｜index_quote_mismatch
+- `knowledge/herbs/roudoukou.md`｜P1｜herb｜肉豆蔻｜empty_sections
+- `knowledge/herbs/rougui.md`｜P1｜herb｜肉桂｜empty_sections, index_quote_mismatch
+- `knowledge/herbs/sangjisheng.md`｜P1｜herb｜桑寄生｜empty_sections, index_quote_mismatch
+- `knowledge/herbs/sangpiaoxiao.md`｜P1｜herb｜桑螵蛸｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/sangshen.md`｜P1｜herb｜桑葚｜empty_sections
+- `knowledge/herbs/sangye.md`｜P1｜herb｜桑叶｜empty_sections
+- `knowledge/herbs/sanleng.md`｜P1｜herb｜三棱｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/sanyu.md`｜P1｜herb｜三七｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shandou.md`｜P1｜herb｜谷芽｜empty_sections
+- `knowledge/herbs/shandougen.md`｜P1｜herb｜山豆根｜empty_sections
+- `knowledge/herbs/shanglu.md`｜P1｜herb｜商陆｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shanzha.md`｜P1｜herb｜山楂｜empty_sections
+- `knowledge/herbs/sharen.md`｜P1｜herb｜砂仁｜empty_sections, index_quote_mismatch
+- `knowledge/herbs/shayuanzi.md`｜P1｜herb｜沙苑子｜empty_sections
+- `knowledge/herbs/shengjiang.md`｜P1｜herb｜生姜｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/shengma.md`｜P1｜herb｜升麻｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/shenjincao.md`｜P1｜herb｜伸筋草｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shidi.md`｜P1｜herb｜柿蒂｜empty_sections
+- `knowledge/herbs/shiliupi.md`｜P1｜herb｜石榴皮｜empty_sections
+- `knowledge/herbs/shiwei.md`｜P1｜herb｜石韦｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shixiaoming.md`｜P1｜herb｜石决明｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/shouwuteng.md`｜P1｜herb｜首乌藤｜empty_sections
+- `knowledge/herbs/suanzaoren.md`｜P1｜herb｜酸枣仁｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/suhexiang.md`｜P1｜herb｜苏合香｜empty_sections
+- `knowledge/herbs/sumu.md`｜P1｜herb｜苏木｜empty_sections
+- `knowledge/herbs/suomu.md`｜P1｜herb｜苏木｜empty_sections
+- `knowledge/herbs/suzi.md`｜P1｜herb｜苏子｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/taizishen.md`｜P1｜herb｜太子参｜empty_sections
+- `knowledge/herbs/taoren.md`｜P1｜herb｜桃仁｜index_quote_mismatch
+- `knowledge/herbs/tianzhuhuang.md`｜P1｜herb｜天竺黄｜empty_sections
+- `knowledge/herbs/tubiechong.md`｜P1｜herb｜土鳖虫｜empty_sections
+- `knowledge/herbs/tujingpi.md`｜P1｜herb｜土荆皮｜empty_sections
+- `knowledge/herbs/tujuzi.md`｜P1｜herb｜菟丝子｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/walengzi.md`｜P1｜herb｜瓦楞子｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/wumei.md`｜P1｜herb｜乌梅｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/wuweizi.md`｜P1｜herb｜五味子｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/wuyaozi.md`｜P1｜herb｜覆盆子｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xiakucao.md`｜P1｜herb｜夏枯草｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/xiangjiao.md`｜P1｜herb｜香蕉｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xiangru.md`｜P1｜herb｜香薷｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/xiangyuan.md`｜P1｜herb｜香橼｜empty_sections
+- `knowledge/herbs/xianhecao.md`｜P1｜herb｜仙鹤草｜empty_sections
+- `knowledge/herbs/xianmao.md`｜P1｜herb｜仙茅｜empty_sections
+- `knowledge/herbs/xiebai.md`｜P1｜herb｜薤白｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xiecao.md`｜P1｜herb｜缬草｜empty_sections
+- `knowledge/herbs/xihonghua.md`｜P1｜herb｜西红花｜empty_sections
+- `knowledge/herbs/xionghuang.md`｜P1｜herb｜雄黄｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xiqiancao.md`｜P1｜herb｜豨莶草｜empty_sections
+- `knowledge/herbs/xiyangshen.md`｜P1｜herb｜西洋参｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xuanfuhua.md`｜P1｜herb｜旋覆花｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xuejie.md`｜P1｜herb｜血竭｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xuelianhua.md`｜P1｜herb｜雪莲花｜empty_sections
+- `knowledge/herbs/xueyutan.md`｜P1｜herb｜血余炭｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xuhuang.md`｜P1｜herb｜血竭｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/xungufeng.md`｜P1｜herb｜寻骨风｜empty_sections
+- `knowledge/herbs/yadanzi.md`｜P1｜herb｜鸦胆子｜empty_sections
+- `knowledge/herbs/yangjinhua.md`｜P1｜herb｜洋金花｜empty_sections
+- `knowledge/herbs/yefujia.md`｜P1｜herb｜夜交藤｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yingsuqiao.md`｜P1｜herb｜罂粟壳｜empty_sections
+- `knowledge/herbs/yitang.md`｜P1｜herb｜饴糖｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yizhiren.md`｜P1｜herb｜益智仁｜body_has_source_label, empty_sections
+- `knowledge/herbs/yuanzhi.md`｜P1｜herb｜远志｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/yubaifu.md`｜P1｜herb｜禹白附｜empty_sections
+- `knowledge/herbs/yubaizi.md`｜P1｜herb｜禹白附｜empty_sections
+- `knowledge/herbs/yuejihua.md`｜P1｜herb｜月季花｜empty_sections
+- `knowledge/herbs/yuganzi.md`｜P1｜herb｜余甘子｜empty_sections
+- `knowledge/herbs/zaojia.md`｜P1｜herb｜皂荚｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zhangnao.md`｜P1｜herb｜樟脑｜empty_sections
+- `knowledge/herbs/zhechong.md`｜P1｜herb｜土鳖虫｜empty_sections
+- `knowledge/herbs/zhenzhumu.md`｜P1｜herb｜珍珠母｜empty_sections
+- `knowledge/herbs/zhishi.md`｜P1｜herb｜枳实｜index_quote_mismatch
+- `knowledge/herbs/zhongruzi.md`｜P1｜herb｜钟乳石｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zhuli.md`｜P1｜herb｜竹沥｜empty_sections
+- `knowledge/herbs/zhumagen.md`｜P1｜herb｜苎麻根｜empty_sections
+- `knowledge/herbs/zhuru.md`｜P1｜herb｜竹茹｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zhusha.md`｜P1｜herb｜朱砂｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zhushagen.md`｜P1｜herb｜朱砂根｜body_has_source_label, empty_sections
+- `knowledge/herbs/zhuye.md`｜P1｜herb｜淡竹叶｜body_has_source_label, empty_sections
+- `knowledge/herbs/zicao.md`｜P1｜herb｜紫草｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/ziheche.md`｜P1｜herb｜紫河车｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zirantong.md`｜P1｜herb｜自然铜｜body_has_source_label, empty_sections
+- `knowledge/herbs/zirun.md`｜P1｜herb｜自然铜｜body_has_source_label, empty_sections
+- `knowledge/herbs/zisu.md`｜P1｜herb｜紫苏｜body_has_source_label, index_quote_mismatch
+- `knowledge/herbs/zisuan.md`｜P1｜herb｜紫菀｜body_has_source_label, empty_sections, index_quote_mismatch
+- `knowledge/herbs/zonglu.md`｜P1｜herb｜棕榈｜empty_sections
+- `knowledge/herbs/zonglutan.md`｜P1｜herb｜棕榈炭｜empty_sections
+- `knowledge/concepts/bafa.md`｜OK｜concept｜bafa｜frontmatter_error
+- `knowledge/concepts/bagang.md`｜OK｜concept｜bagang｜frontmatter_error
+- `knowledge/concepts/bingyin_bingji.md`｜OK｜concept｜bingyin_bingji｜frontmatter_error
+- `knowledge/concepts/concept_expansion_plan.md`｜OK｜concept｜concept_expansion_plan｜frontmatter_error
+- `knowledge/concepts/concept_index.md`｜OK｜concept｜concept_index｜frontmatter_error
+- `knowledge/concepts/dachang.md`｜OK｜concept｜dachang｜frontmatter_error
+- `knowledge/concepts/dan.md`｜OK｜concept｜dan｜frontmatter_error
+- `knowledge/concepts/fanzhifa.md`｜OK｜concept｜fanzhifa｜frontmatter_error
+- `knowledge/concepts/fei.md`｜OK｜concept｜fei｜frontmatter_error
+- `knowledge/concepts/gan.md`｜OK｜concept｜gan｜frontmatter_error
+- `knowledge/concepts/jing.md`｜OK｜concept｜jing｜frontmatter_error
+- `knowledge/concepts/jingluo.md`｜OK｜concept｜jingluo｜frontmatter_error
+- `knowledge/concepts/jinye.md`｜OK｜concept｜jinye｜frontmatter_error
+- `knowledge/concepts/jinye_xiedai.md`｜OK｜concept｜jinye_xiedai｜frontmatter_error
+- `knowledge/concepts/liujing.md`｜OK｜concept｜liujing｜frontmatter_error
+- `knowledge/concepts/liuyin.md`｜OK｜concept｜liuyin｜frontmatter_error
+- `knowledge/concepts/neisheng_wuxie.md`｜OK｜concept｜neisheng_wuxie｜frontmatter_error
+- `knowledge/concepts/pangguang.md`｜OK｜concept｜pangguang｜frontmatter_error
+- `knowledge/concepts/pi.md`｜OK｜concept｜pi｜frontmatter_error
+- `knowledge/concepts/qi.md`｜OK｜concept｜qi｜frontmatter_error
+- `knowledge/concepts/qiqing.md`｜OK｜concept｜qiqing｜frontmatter_error
+- `knowledge/concepts/qixue_jinye.md`｜OK｜concept｜qixue_jinye｜frontmatter_error
+- `knowledge/concepts/qixue_shichang.md`｜OK｜concept｜qixue_shichang｜frontmatter_error
+- `knowledge/concepts/sanjiao.md`｜OK｜concept｜sanjiao｜frontmatter_error
+- `knowledge/concepts/shen.md`｜OK｜concept｜shen｜frontmatter_error
+- `knowledge/concepts/tanyin.md`｜OK｜concept｜tanyin｜frontmatter_error
+- `knowledge/concepts/wangwenwenqie.md`｜OK｜concept｜wangwenwenqie｜frontmatter_error
+- `knowledge/concepts/wei.md`｜OK｜concept｜wei｜frontmatter_error
+- `knowledge/concepts/weiqi.md`｜OK｜concept｜weiqi｜frontmatter_error
+- `knowledge/concepts/wuxing.md`｜OK｜concept｜wuxing｜frontmatter_error
+- `knowledge/concepts/xiao chang.md`｜OK｜concept｜xiao chang｜frontmatter_error
+- `knowledge/concepts/xin.md`｜OK｜concept｜xin｜frontmatter_error
+- `knowledge/concepts/xinbao.md`｜OK｜concept｜xinbao｜frontmatter_error
+- `knowledge/concepts/xue.md`｜OK｜concept｜xue｜frontmatter_error
+- `knowledge/concepts/yingqi.md`｜OK｜concept｜yingqi｜frontmatter_error
+- `knowledge/concepts/yinyang.md`｜OK｜concept｜yinyang｜frontmatter_error
+- `knowledge/concepts/yinyang_shitiao.md`｜OK｜concept｜yinyang_shitiao｜frontmatter_error
+- `knowledge/concepts/yuanqi.md`｜OK｜concept｜yuanqi｜frontmatter_error
+- `knowledge/concepts/yuxue.md`｜OK｜concept｜yuxue｜frontmatter_error
+- `knowledge/concepts/zangfu.md`｜OK｜concept｜zangfu｜frontmatter_error
+- `knowledge/concepts/zhengxiangzhengdu.md`｜OK｜concept｜zhengxiangzhengdu｜frontmatter_error
+- `knowledge/concepts/zhengxie.md`｜OK｜concept｜zhengxie｜frontmatter_error
+- `knowledge/concepts/zhihe_zhifa.md`｜OK｜concept｜zhihe_zhifa｜frontmatter_error
+- `knowledge/concepts/zhize_zhifa.md`｜OK｜concept｜zhize_zhifa｜frontmatter_error
+- `knowledge/concepts/zongqi.md`｜OK｜concept｜zongqi｜frontmatter_error
+- `knowledge/diagnosis/bagang_bianzheng.md`｜OK｜diagnosi｜bagang_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/baoli_bianzheng.md`｜OK｜diagnosi｜baoli_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/bianzheng_gangyao.md`｜OK｜diagnosi｜bianzheng_gangyao｜frontmatter_error
+- `knowledge/diagnosis/bianzheng_zonglun.md`｜OK｜diagnosi｜bianzheng_zonglun｜frontmatter_error
+- `knowledge/diagnosis/bingyin_bianzheng.md`｜OK｜diagnosi｜bingyin_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/diagnosis_index.md`｜OK｜diagnosi｜diagnosis_index｜frontmatter_error
+- `knowledge/diagnosis/fei_bianzheng.md`｜OK｜diagnosi｜fei_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/feixi_bianzheng.md`｜OK｜diagnosi｜feixi_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/gan_bianzheng.md`｜OK｜diagnosi｜gan_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/ganxin_bianzheng.md`｜OK｜diagnosi｜ganxin_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/hanre_bianzheng.md`｜OK｜diagnosi｜hanre_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/jingluo_bianzheng.md`｜OK｜diagnosi｜jingluo_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/jueyin_bing.md`｜OK｜diagnosi｜jueyin_bing｜frontmatter_error
+- `knowledge/diagnosis/liujing_bianzheng.md`｜OK｜diagnosi｜liujing_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/liuyin_bianzheng.md`｜OK｜diagnosi｜liuyin_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/pi_bianzheng.md`｜OK｜diagnosi｜pi_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/piwei_bianzheng.md`｜OK｜diagnosi｜piwei_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/qiezhen.md`｜OK｜diagnosi｜qiezhen｜frontmatter_error
+- `knowledge/diagnosis/qiezhen_muban.md`｜OK｜diagnosi｜qiezhen_muban｜frontmatter_error
+- `knowledge/diagnosis/qiqing_bianzheng.md`｜OK｜diagnosi｜qiqing_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/qixue_jinye_bianzheng.md`｜OK｜diagnosi｜qixue_jinye_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/sanjiao_bianzheng.md`｜OK｜diagnosi｜sanjiao_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/shaoyang_bing.md`｜OK｜diagnosi｜shaoyang_bing｜frontmatter_error
+- `knowledge/diagnosis/shaoyin_bing.md`｜OK｜diagnosi｜shaoyin_bing｜frontmatter_error
+- `knowledge/diagnosis/shen_bianzheng.md`｜OK｜diagnosi｜shen_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/shenxi_bianzheng.md`｜OK｜diagnosi｜shenxi_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/shiwenge.md`｜OK｜diagnosi｜shiwenge｜frontmatter_error
+- `knowledge/diagnosis/taiyang_bing.md`｜OK｜diagnosi｜taiyang_bing｜frontmatter_error
+- `knowledge/diagnosis/taiyin_bing.md`｜OK｜diagnosi｜taiyin_bing｜frontmatter_error
+- `knowledge/diagnosis/tan_yin_bianzheng.md`｜OK｜diagnosi｜tan_yin_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/wangzhen.md`｜OK｜diagnosi｜wangzhen｜frontmatter_error
+- `knowledge/diagnosis/wangzhen_muban.md`｜OK｜diagnosi｜wangzhen_muban｜frontmatter_error
+- `knowledge/diagnosis/weiqi_yingxue.md`｜OK｜diagnosi｜weiqi_yingxue｜frontmatter_error
+- `knowledge/diagnosis/weiqi_yingxue_bianzheng.md`｜OK｜diagnosi｜weiqi_yingxue_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/wenzhen.md`｜OK｜diagnosi｜wenzhen｜frontmatter_error
+- `knowledge/diagnosis/wenzhen_ask.md`｜OK｜diagnosi｜wenzhen_ask｜frontmatter_error
+- `knowledge/diagnosis/wenzhen_muban.md`｜OK｜diagnosi｜wenzhen_muban｜frontmatter_error
+- `knowledge/diagnosis/wenzhen_muban2.md`｜OK｜diagnosi｜wenzhen_muban2｜frontmatter_error
+- `knowledge/diagnosis/xin_bianzheng.md`｜OK｜diagnosi｜xin_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/xixin_bianzheng.md`｜OK｜diagnosi｜xixin_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/xushi_bianzheng.md`｜OK｜diagnosi｜xushi_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/yangming_bing.md`｜OK｜diagnosi｜yangming_bing｜frontmatter_error
+- `knowledge/diagnosis/yinyang_bianzheng.md`｜OK｜diagnosi｜yinyang_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/yu_xue_bianzheng.md`｜OK｜diagnosi｜yu_xue_bianzheng｜frontmatter_error
+- `knowledge/diagnosis/zangfu_bianzheng.md`｜OK｜diagnosi｜zangfu_bianzheng｜frontmatter_error

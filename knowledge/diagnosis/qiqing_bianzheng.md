@@ -1,24 +1,46 @@
-# 七情辨证
+---
+title: "qiqing_bianzheng"
+content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+safety_disclaimer_required: true
+reviewer: "p17_content_quality"
+review_status: candidate
+kind: "diagnosi"
+trace_status: candidate
+source_refs: []
+---
 
-**分类：** 病因辨证
+# qiqing_bianzheng
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：诊断
+- 追溯状态：candidate
+- 复核说明：当前条目内容待补充来源引用。
+
+<!-- P5_STANDARD_NOTICE_END -->
+
+# qiqing_bianzheng
+
+<!-- P5_STANDARD_NOTICE_START -->
+
+## 学习与安全边界
+
+本条目用于中医学习、资料检索与来源追溯。内容不构成诊断、处方、用药、针灸操作或治疗建议；涉及剂量、配伍、禁忌、针药操作等内容时，必须由合格专业人士结合实际情况判断。
+
+## 来源追溯状态
+
+- 条目类型：诊断
+- 追溯状态：no_source_found
+- 复核说明：当前未在倪海厦知识库中找到对该条目的专门讲解。
+
+<!-- P5_STANDARD_NOTICE_END -->
 
 ---
 
-## 情志与脏腑
-- 喜伤心
-- 怒伤肝
-- 思伤脾
-- 忧悲伤肺
-- 恐伤肾
-- 惊扰心神
-
 ---
-
-## 临床要点
-- 久怒：肝气郁结、肝火上炎
-- 久思：脾气郁结、食少乏力
-- 久恐：肾气下陷、二便失调
-
----
-
-**最后更新：** 2026-04-13
