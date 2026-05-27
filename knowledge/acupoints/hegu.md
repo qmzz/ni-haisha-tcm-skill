@@ -11,6 +11,7 @@ safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 title: "合谷"
 ---
+
 # 合谷
 
 **定位：** 手背第 1、2 掌骨间，第 2 掌骨桡侧中点处  

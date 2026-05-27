@@ -60,8 +60,8 @@ P11 的目标不是追求 verified 百分比，而是在不凭模型记忆扩写
 
 ## 质量治理状态
 
-- P9 quality issues: 41
-- P9 by_level: {'info': 41}
+- P9 quality issues: 0
+- P9 by_level: {}
 - frontmatter schema: missing_required 0, warnings 0（见 `report/frontmatter_audit.md`）
 - stale_verified_frontmatter: 0（见 `report/p8_stale_verified_fix_report.md`）
 

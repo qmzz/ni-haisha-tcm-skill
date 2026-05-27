@@ -4,6 +4,23 @@
 
 ## [Unreleased]
 
+### P16 内容质量定版收口
+
+- 新增 `scripts/p16_format_short_herb_quotes.py`、`scripts/p16_expand_short_herb_source_windows.py`、`scripts/p16_finalize_content_release.py`。
+- 对 P15 后剩余 41 个 `body_short` 药材条目进行最终正文整理：
+  - 41 个短正文中的长 `来源摘录` 按句读重排，短正文降至 19。
+  - 对剩余 19 个短正文，从原始 JSON 中围绕条目中文名截取更宽来源窗口，作为 `P16 扩展摘录`，不转写成无依据结构字段。
+  - 最终 `P9 quality issues: 0`，`p9_review_queue: 0`。
+- 新增 `report/p16_content_release.md`，作为正文质量定版报告。
+- 定版边界：`归经` 等未在当前来源明确出现的字段不凭模型记忆补写；3 条低质量 alias candidate 保持复核状态；133 条 no_source_found 保持来源范围边界。
+- 测试：`84 passed`。
+
+### P13-P15 正文质量主线
+
+- P13：清理知识正文/frontmatter 占位词，`待考/待补充/暂无/待完善/TODO/待查/待定/待确认/未提供明确/现有 verified 来源未提供` 命中清零；清理 JSON patch/quote 残片。
+- P14：仅从现有 `source_refs.quote` 抽取明确 `性味/主治/用量/禁忌` 等来源摘录补强药材正文，不硬补 `归经`。
+- P15：删除 80 个 herb 无内容空壳小节，frontmatter 有明确字段时同步正文；不恢复无依据结构。
+
 ### P12 candidate 批量收口
 
 - 新增 `scripts/p12_candidate_batch.py` 与 `report/p12_candidate_batch_report.md`。

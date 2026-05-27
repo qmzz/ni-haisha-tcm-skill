@@ -11,6 +11,7 @@ safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 title: "气海"
 ---
+
 # 气海
 
 **定位：** 下腹部，前正中线上，脐中下 1.5 寸  

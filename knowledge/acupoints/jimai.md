@@ -11,6 +11,7 @@ reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---
+
 # 急脉
 
 **定位：** 耻骨结节外下方，气冲外下方  

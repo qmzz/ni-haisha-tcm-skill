@@ -11,6 +11,7 @@ reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---
+
 # 八风
 
 **定位：** 足背 1-5 趾间缝纹端处共 8 穴  

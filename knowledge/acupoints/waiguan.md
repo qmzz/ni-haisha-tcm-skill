@@ -11,6 +11,7 @@ safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 title: "外关"
 ---
+
 # 外关穴 (SJ5)
 
 **归经：** 手少阳三焦经  

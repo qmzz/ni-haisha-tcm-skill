@@ -11,6 +11,7 @@ reviewer: "p6_verified_standardization"
 safety_disclaimer_required: true
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 ---
+
 # 颊车
 
 **定位：** 面颊部，下颌角前上方约一横指，咀嚼时咬肌隆起处  
