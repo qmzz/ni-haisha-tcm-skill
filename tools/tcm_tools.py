@@ -114,8 +114,11 @@ def tcm_diagnose_assist(payload: Dict[str, Any]) -> Dict[str, Any]:
             "missing_questions": build_missing_questions(symptoms),
         }
     result = DiagnosisEngine().analyze(symptoms)
-    formula_name = (result.get("formula") or {}).get("name")
-    result["formula_trace"] = TraceService().trace(formula_name, limit=3) if formula_name else {"trace_status": "no_formula"}
+    formula = result.get("formula") or {}
+    formula_name = formula.get("name")
+    formula_id = formula.get("formula_id")
+    trace_query = formula_id or formula_name
+    result["formula_trace"] = TraceService().trace(trace_query, limit=3) if trace_query else {"trace_status": "no_formula"}
     result["stopped"] = False
     return result
 

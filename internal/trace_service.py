@@ -69,7 +69,21 @@ class TraceService:
 
         candidates = self._trace_candidates(query)
         if candidates:
-            return {"query": query, "trace_status": "candidate", "matches": candidates[:limit]}
+            candidate_matches = [m for m in candidates if m.get("trace_status") == "candidate"]
+            no_source_matches = [m for m in candidates if m.get("trace_status") == "no_source_found"]
+            other_matches = [m for m in candidates if m.get("trace_status") not in {"candidate", "no_source_found"}]
+
+            if candidate_matches:
+                return {"query": query, "trace_status": "candidate", "matches": candidate_matches[:limit]}
+            if other_matches:
+                status = other_matches[0].get("trace_status") or "candidate"
+                return {"query": query, "trace_status": status, "matches": other_matches[:limit]}
+
+            # `*_index.jsonl` also contains no_source_found inventory rows.  They
+            # are useful for resolving the canonical file/name, but must not be
+            # promoted to `candidate`: candidate means there are source_refs that
+            # still need human review.  Empty no-source rows should stay explicit.
+            return {"query": query, "trace_status": "no_source_found", "matches": no_source_matches[:limit]}
 
         review_items = self._trace_review_queue(query)
         if review_items:
@@ -98,13 +112,17 @@ class TraceService:
         for kind, id_key, path in INDEX_CONFIG:
             for record in _load_jsonl(path):
                 if _matches(record, query, id_key=id_key):
+                    trace_status = record.get("trace_status", "candidate")
+                    source_refs = record.get("source_refs", [])
+                    if trace_status == "candidate" and not source_refs:
+                        trace_status = "no_source_found"
                     matches.append({
                         "kind": kind,
                         "item_id": record.get(id_key),
                         "name": record.get("name"),
                         "file": record.get("file"),
-                        "trace_status": record.get("trace_status", "candidate"),
-                        "source_refs": record.get("source_refs", []),
+                        "trace_status": trace_status,
+                        "source_refs": source_refs,
                     })
         exact = [m for m in matches if query == m.get("name") or query == m.get("item_id")]
         return exact or matches
