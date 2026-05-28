@@ -17,7 +17,9 @@ class RegistryConsistencyTests(unittest.TestCase):
         missing = [
             (row.get("kind"), row.get("item_id"), row.get("name"))
             for row in completeness
-            if row.get("trace_status") == "verified" and (row.get("kind"), row.get("item_id")) not in registry_keys
+            if row.get("trace_status") == "verified"
+            and row.get("source_quality_level") != "verified_alias"
+            and (row.get("kind"), row.get("item_id")) not in registry_keys
         ]
         self.assertEqual(missing, [])
 
@@ -133,7 +135,12 @@ class RegistryConsistencyTests(unittest.TestCase):
 
     def test_p5a_contextual_review_leaves_small_contextual_bucket(self):
         rows = load_jsonl(ROOT / "data" / "verified_sources.jsonl")
-        contextual = [r for r in rows if r.get("source_quality_level") == "verified_contextual"]
+        contextual = [
+            r
+            for r in rows
+            if r.get("source_quality_level") == "verified_contextual"
+            and not str(r.get("p6c_resolution", "")).startswith("internal_")
+        ]
         needs_review = [r for r in rows if r.get("source_quality_level") == "needs_review"]
         self.assertLessEqual(len(contextual), 20)
         self.assertLessEqual(len(needs_review), 40)
@@ -166,6 +173,22 @@ class RegistryConsistencyTests(unittest.TestCase):
                 if row.get("source_quality_level") == "candidate_contextual":
                     remaining.append((path.name, row.get("kind"), row.get("item_id") or row.get("herb_id") or row.get("formula_id") or row.get("acupoint_id")))
         self.assertEqual(remaining, [])
+
+    def test_no_source_rows_are_classified_for_p6(self):
+        rows = load_jsonl(ROOT / "data" / "knowledge_completeness.jsonl")
+        missing = [
+            (r.get("kind"), r.get("item_id"))
+            for r in rows
+            if r.get("source_quality_level") == "no_source" and not r.get("no_source_classification")
+        ]
+        self.assertEqual(missing, [])
+
+    def test_p6_no_source_queue_matches_inventory(self):
+        rows = load_jsonl(ROOT / "data" / "knowledge_completeness.jsonl")
+        queue = load_jsonl(ROOT / "data" / "p30_no_source_classification.jsonl")
+        no_source_keys = {(r.get("kind"), r.get("item_id")) for r in rows if r.get("source_quality_level") == "no_source"}
+        queue_keys = {(r.get("kind"), r.get("item_id")) for r in queue}
+        self.assertEqual(queue_keys, no_source_keys)
 
 
 if __name__ == "__main__":

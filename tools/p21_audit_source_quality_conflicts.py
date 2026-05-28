@@ -65,7 +65,9 @@ def main() -> int:
             # source_quality_level is authoritative for trace relation quality; no_source/needs_review
             # rows are allowed to diverge from historical frontmatter review_status.
             if fm_status and row.get("trace_status") and fm_status != row.get("trace_status"):
-                if not (row.get("source_quality_level") in {"no_source", "needs_review"} and fm_status == "verified"):
+                allowed_historical_verified = row.get("source_quality_level") in {"no_source", "needs_review"} and fm_status == "verified"
+                allowed_alias_from_no_source = row.get("source_quality_level") == "verified_alias" and row.get("p6b_resolution") == "mapped_to_verified_canonical_as_alias" and fm_status == "no_source_found"
+                if not (allowed_historical_verified or allowed_alias_from_no_source):
                     issues.append(f"frontmatter={fm_status} but index={row.get('trace_status')}")
             if ver and row.get("source_quality_level") != ver.get("source_quality_level"):
                 issues.append(f"index_quality={row.get('source_quality_level')} but registry_quality={ver.get('source_quality_level')}")

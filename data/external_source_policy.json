@@ -1,0 +1,39 @@
+{
+  "policy_version": "p6d-2026-05-28",
+  "purpose": "Define governance rules for no_source rows that cannot be traced to the current Ni Haixia corpus.",
+  "boundary": "This policy is traceability governance only. It does not validate medical truth, efficacy, diagnosis, prescription, dosage, acupuncture operation, or treatment advice.",
+  "allowed_external_source_scopes": [
+    "official_pharmacopoeia",
+    "classical_tcm_text",
+    "modern_tcm_reference",
+    "acupoint_standard_reference"
+  ],
+  "forbidden_actions_without_manual_review": [
+    "promote external rows to verified_direct or verified_contextual",
+    "mix external source_refs with nihaixia source_refs without source_scope",
+    "add dosage, contraindication, pregnancy, pediatric, emergency, or treatment claims from unsourced text",
+    "remove safety disclaimers or source_quality_policy"
+  ],
+  "required_fields_for_future_external_source_ref": [
+    "source_scope",
+    "source_title",
+    "source_file_or_url",
+    "page_num_or_section",
+    "quote",
+    "license_or_access_note",
+    "reviewer",
+    "review_status"
+  ],
+  "target_source_quality_level_before_review": "external_source_candidate",
+  "target_source_quality_level_after_manual_review": "external_verified_reference",
+  "nihaixia_source_quality_levels_remain_distinct": [
+    "verified_direct",
+    "verified_contextual",
+    "verified_alias"
+  ],
+  "next_action_map": {
+    "external_source_required": "await_external_source_policy_review_and_whitelist",
+    "internal_research_exhausted": "manual_review_or_external_source_policy",
+    "alias_or_duplicate_mapped": "review_canonical_source_status"
+  }
+}
