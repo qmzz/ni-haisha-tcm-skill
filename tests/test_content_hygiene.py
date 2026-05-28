@@ -30,6 +30,19 @@ class ContentHygieneTests(unittest.TestCase):
                     hits.append((str(path.relative_to(ROOT)), line_no))
         self.assertEqual(hits, [])
 
+    def test_no_obvious_repeated_ocr_heading_tails(self):
+        hits = []
+        patterns = [
+            re.compile(r"【【.*】】"),
+            re.compile(r"[一二三四五六七八九〇○零]{4,}、"),
+        ]
+        for path in (ROOT / "knowledge").rglob("*.md"):
+            text = path.read_text(encoding="utf-8")
+            for pattern in patterns:
+                if pattern.search(text):
+                    hits.append((str(path.relative_to(ROOT)), pattern.pattern))
+        self.assertEqual(hits, [])
+
 
 if __name__ == "__main__":
     unittest.main()
