@@ -16,13 +16,14 @@ Agent 调用时优先使用：
 python3 tools/tcm_tools.py <tool_name> '<json_payload>'
 ```
 
-所有工具输出均为 JSON。
+所有工具输出均为 JSON。旧版 `internal/formula_recommender.py` 已废弃；不要导入旧推荐器或依赖硬编码推荐结果。
 
 ### 常用工具
 
 ```bash
-# 安全检查：高风险症状会阻止继续给方剂参考
+# 安全检查：急症红旗、特殊人群、实际治疗意图会阻止继续给方剂/操作参考
 python3 tools/tcm_tools.py tcm_safety_check '{"text":"胸痛,呼吸困难"}'
+python3 tools/tcm_tools.py tcm_safety_policy '{}'
 
 # 统一查询：自动带来源状态、正文摘录和安全边界
 python3 tools/tcm_tools.py tcm_lookup '{"query":"桂枝汤"}'
@@ -32,6 +33,8 @@ python3 tools/tcm_tools.py tcm_trace '{"query":"桂枝汤"}'
 
 # 解释来源治理状态
 python3 tools/tcm_tools.py tcm_explain_trace '{"query":"白豆蔻"}'
+python3 tools/tcm_tools.py tcm_source_quality_levels '{}'
+python3 tools/tcm_tools.py tcm_safety_policy '{}'
 
 # 方剂 / 药材 / 穴位查询
 python3 tools/tcm_tools.py tcm_formula_query '{"name":"桂枝汤"}'
@@ -57,7 +60,7 @@ python3 tools/tcm_tools.py help '{}'
 ## Agent 调用原则
 
 1. **先安全检查，再医学参考**  
-   用户描述包含胸痛、呼吸困难、昏迷、大出血等高风险信号时，应优先提示及时就医，不继续给方剂建议。
+   用户描述包含胸痛、呼吸困难、昏迷、大出血等急症红旗时，应优先提示及时就医，不继续给方剂或穴位建议；涉及孕产妇、婴幼儿、老人等特殊人群，或出现“怎么吃/剂量/开方/抓药/针刺/艾灸”等实际治疗意图时，也必须停止处方、剂量、服药和针灸操作输出，仅保留资料检索与来源追溯。
 
 2. **优先 `tcm_lookup` / `tcm_trace`**  
    普通查询不要直接读 Markdown 拼答案，先用 JSON 工具拿到来源状态和边界说明。
@@ -78,31 +81,30 @@ python3 tools/tcm_tools.py help '{}'
 
 ## 知识库当前状态
 
-当前基线：`v1.0.0-rc1`
+当前基线：`v1.0.0-rc2-p18`
 
 ```text
-total: 939
-verified: 803
-no_source_found: 133
-candidate: 3
-P9 issues: 0
-placeholder files: 0
-JSON fragment files: 0
-frontmatter warnings: 0
+indexed medical items: 939
+knowledge markdown files: 1083
+knowledge_completeness trace_status: verified 803 / no_source_found 133 / candidate 3
+verified_sources registry rows: 778
+P17 audit before P18 cleanup: P0 256 / P1 682 / OK 145
+P18 mechanical cleanup: removed source-label prefixes, model-placeholder quote lines, OCR replacement chars, JSON fragment lines, and empty headings where safely detectable
 ```
 
-P16 内容质量定版已完成：
+状态说明：
 
-- 正文占位词已清零；
-- JSON / patch 残片已清零；
-- 短正文已通过来源摘录重排和原始 JSON 窗口扩展处理；
-- 空壳章节已删除；
-- 未明确来源的 `归经` 等字段未硬补。
+- `verified` 仅表示来源追溯链路通过，不代表医学真实性、临床适用性或治疗建议。
+- Source quality 分级见 `docs/source_quality_levels.md`；当前建议等级包括 `verified_direct`、`verified_contextual`、`verified_alias`、`candidate_alias`，尚未全面落地到所有数据行，Agent 默认保守处理。
+- P16 曾作为内容质量基线，但 P17 审计发现仍有内容治理问题；当前状态应视作 **P17/P18 精修进行中**，不是最终稳定版。
+- P18 只做机械清理，不凭模型记忆补写剂量、归经、禁忌、针刺方法等医学内容。
+- `verified_sources.jsonl` 与 `knowledge_completeness.jsonl` 仍存在统计口径差异，后续需继续治理 registry 同步。
 
-详细报告见：
+相关报告：
 
 ```text
 report/p16_content_release.md
+report/p17_content_audit.md
 ```
 
 ---
@@ -113,7 +115,7 @@ report/p16_content_release.md
 SKILL.md              # Skill 元信息与 Agent 使用说明
 README.md             # 本文件：面向 Agent 的简洁入口说明
 tools/tcm_tools.py    # Agent JSON 工具主入口
-internal/             # 查询、诊断、安全、来源追溯内部模块
+internal/             # 查询、辨证辅助、安全、来源追溯内部模块（旧推荐器已 deprecated）
 knowledge/            # 方剂、药材、穴位、概念、医案 Markdown 知识库
 data/                 # 索引、来源、alias、治理状态数据
 report/               # 治理与定版报告
@@ -125,9 +127,9 @@ report/               # 治理与定版报告
 
 ## 维护说明
 
-本仓库曾包含大量 P0-P16 阶段性治理脚本和测试脚本。RC 定版后已清理，不再作为 Skill 运行路径的一部分，避免干扰 Agent 使用。
+本仓库曾包含大量 P0-P16 阶段性治理脚本。当前保留少量工具脚本与测试，用于回归验证和机械清理。旧版 `internal/formula_recommender.py` 已改名为 `internal/formula_recommender_deprecated.py`，仅作历史参考，不参与 Agent 运行。
 
-如未来维护知识库，建议新建独立维护分支或维护目录；不要把一次性治理命令堆进 README。
+如未来维护知识库，建议在维护分支中进行；不要把一次性治理命令堆进 README。
 
 ---
 

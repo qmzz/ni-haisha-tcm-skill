@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 上腹部，脐中上 4 寸，前正中线旁开 2 寸
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 胃痛呕吐
 - **主治：** 胃痛，呕吐，腹胀

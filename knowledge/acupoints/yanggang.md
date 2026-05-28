@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 第 10 胸椎棘突下，旁开 1.5 寸
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 疏肝利胆，和脾胃
 - **主治：** 腰脊强痛，痔疾

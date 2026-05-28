@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 肩胛冈上角凹陷中
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 祛风利肩，舒筋络
 - **主治：** 颈项强痛，肩背痛

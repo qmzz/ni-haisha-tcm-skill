@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 第 4 骶后孔旁开 1.5 寸
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 理下焦，调胞宫
 - **主治：** 腰背痛，下肢痿痹

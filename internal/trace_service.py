@@ -65,19 +65,54 @@ class TraceService:
     def _trace_core(self, query: str, limit: int) -> Dict:
         verified = self._trace_verified(query)
         if verified:
-            return {"query": query, "trace_status": "verified", "matches": verified[:limit]}
+            return {"query": query, "trace_status": "verified", "source_quality_level": self._rollup_quality(verified), "matches": verified[:limit]}
 
         candidates = self._trace_candidates(query)
         if candidates:
-            return {"query": query, "trace_status": "candidate", "matches": candidates[:limit]}
+            candidate_matches = [m for m in candidates if m.get("trace_status") == "candidate"]
+            no_source_matches = [m for m in candidates if m.get("trace_status") == "no_source_found"]
+            other_matches = [m for m in candidates if m.get("trace_status") not in {"candidate", "no_source_found"}]
+
+            if candidate_matches:
+                return {"query": query, "trace_status": "candidate", "source_quality_level": self._rollup_quality(candidate_matches), "matches": candidate_matches[:limit]}
+            if other_matches:
+                status = other_matches[0].get("trace_status") or "candidate"
+                return {"query": query, "trace_status": status, "source_quality_level": self._rollup_quality(other_matches), "matches": other_matches[:limit]}
+
+            # `*_index.jsonl` also contains no_source_found inventory rows.  They
+            # are useful for resolving the canonical file/name, but must not be
+            # promoted to `candidate`: candidate means there are source_refs that
+            # still need human review.  Empty no-source rows should stay explicit.
+            return {"query": query, "trace_status": "no_source_found", "source_quality_level": "no_source", "matches": no_source_matches[:limit]}
 
         review_items = self._trace_review_queue(query)
         if review_items:
-            return {"query": query, "trace_status": "needs_review", "matches": review_items[:limit]}
+            return {"query": query, "trace_status": "needs_review", "source_quality_level": self._rollup_quality(review_items) or "needs_review", "matches": review_items[:limit]}
 
         corpus = SourceCorpus()
         hits = [h.to_dict() for h in corpus.search(query, limit=limit, context=100)]
-        return {"query": query, "trace_status": "source_search" if hits else "no_source_found", "matches": hits}
+        return {"query": query, "trace_status": "source_search" if hits else "no_source_found", "source_quality_level": "source_search" if hits else "no_source", "matches": hits}
+
+
+    def _rollup_quality(self, rows: List[Dict]) -> str:
+        levels = [r.get("source_quality_level") for r in rows if r.get("source_quality_level")]
+        if not levels:
+            return ""
+        priority = [
+            "verified_direct",
+            "verified_alias",
+            "verified_contextual",
+            "candidate_direct",
+            "candidate_alias",
+            "candidate_contextual",
+            "needs_review",
+            "source_search",
+            "no_source",
+        ]
+        for level in priority:
+            if level in levels:
+                return level
+        return levels[0]
 
     def _resolve_alias(self, query: str) -> Optional[Dict]:
         """P10-B: 检查 alias_index，返回 alias 映射。"""
@@ -98,13 +133,18 @@ class TraceService:
         for kind, id_key, path in INDEX_CONFIG:
             for record in _load_jsonl(path):
                 if _matches(record, query, id_key=id_key):
+                    trace_status = record.get("trace_status", "candidate")
+                    source_refs = record.get("source_refs", [])
+                    if trace_status == "candidate" and not source_refs:
+                        trace_status = "no_source_found"
                     matches.append({
                         "kind": kind,
                         "item_id": record.get(id_key),
                         "name": record.get("name"),
                         "file": record.get("file"),
-                        "trace_status": record.get("trace_status", "candidate"),
-                        "source_refs": record.get("source_refs", []),
+                        "trace_status": trace_status,
+                        "source_refs": source_refs,
+                        "source_quality_level": record.get("source_quality_level"),
                     })
         exact = [m for m in matches if query == m.get("name") or query == m.get("item_id")]
         return exact or matches

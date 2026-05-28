@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 耳郭上部三角窝后 1/3 处
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 安神止痛，调情志
 - **主治：** 失眠，心悸，耳鸣

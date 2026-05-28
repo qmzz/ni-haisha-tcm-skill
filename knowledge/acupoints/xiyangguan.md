@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 股骨外上髁上方凹陷中
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 利关节，祛风湿
 - **主治：** 膝肿痛，下肢痿痹

@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""
-倪海厦经方推荐器
-基于伤寒论和金匮要略的方剂匹配系统
+"""Deprecated legacy formula recommender.
 
-知识来源：倪海厦人纪系列 - 伤寒论、金匮要略、汉唐中医方剂讲解
+This module is intentionally kept only as historical reference. It contains a
+small hard-coded formula set and is not part of the Agent runtime path. New code
+must use tools/tcm_tools.py with DiagnosisEngine + TraceService, which reads the
+current knowledge/index/source registry.
+
+Do not import this module for medical outputs.
 """
 
 import json
@@ -384,7 +387,9 @@ class FormulaRecommender:
 
 
 if __name__ == "__main__":
-    # 测试方剂推荐器
+    raise SystemExit("internal.formula_recommender_deprecated is deprecated; use tools/tcm_tools.py instead")
+
+    # Historical smoke examples below are intentionally unreachable.
     recommender = FormulaRecommender()
     
     # 测试用例 1：太阳中风

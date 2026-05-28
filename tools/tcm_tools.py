@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from internal.diagnosis_engine import DiagnosisEngine
-from internal.safety_guard import DISCLAIMER, build_missing_questions, check_red_flags
+from internal.safety_guard import DISCLAIMER, build_missing_questions, check_red_flags, normalize_symptoms, safety_policy
 from internal.source_corpus import SourceCorpus
 from internal.trace_service import TraceService
 from internal.fts_search import FtsSearch
@@ -38,17 +38,22 @@ def _print(data: Dict[str, Any]) -> None:
 
 def tcm_safety_check(payload: Dict[str, Any]) -> Dict[str, Any]:
     raw = payload.get("symptoms") or payload.get("text") or ""
-    if isinstance(raw, str):
-        symptoms = [s.strip() for s in raw.replace("，", ",").split(",") if s.strip()]
-    else:
-        symptoms = [str(s).strip() for s in raw if str(s).strip()]
+    symptoms = normalize_symptoms(raw)
     safety = check_red_flags(symptoms)
+    if safety.get("risk_level") == "high":
+        message = "检测到急症红旗，建议优先联系急救或及时就医；本工具不继续给出方剂或穴位建议。"
+    elif safety.get("risk_level") == "medium":
+        message = "检测到特殊人群或实际治疗意图；本工具只保留资料检索与学习边界，不给出处方、剂量、服药或针灸操作建议。"
+    else:
+        message = "未检测到内置红旗；仍仅作中医理论学习和资料检索参考。"
     return {
         "disclaimer": DISCLAIMER,
-        "high_risk": bool(safety.get("should_stop_formula")),
+        "risk_level": safety.get("risk_level"),
+        "high_risk": safety.get("risk_level") == "high",
+        "blocked": bool(safety.get("should_stop_formula")),
         "red_flags": safety.get("red_flags", []),
         "safety": safety,
-        "message": "建议优先联系专业医师或及时就医；本工具不继续给出方剂参考。" if safety.get("should_stop_formula") else "未检测到内置红旗症状。",
+        "message": message,
     }
 
 
@@ -100,22 +105,26 @@ def tcm_acupoint_query(payload: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def tcm_diagnose_assist(payload: Dict[str, Any]) -> Dict[str, Any]:
-    symptoms = payload.get("symptoms") or []
-    if isinstance(symptoms, str):
-        symptoms = [s.strip() for s in symptoms.replace("，", ",").split(",") if s.strip()]
+    symptoms = normalize_symptoms(payload.get("symptoms") or [])
     text = ",".join(symptoms)
     safety = tcm_safety_check({"text": text})
-    if safety["high_risk"]:
+    if safety["blocked"]:
         return {
             "disclaimer": DISCLAIMER,
             "safety": safety,
             "stopped": True,
-            "reason": "检测到高风险信号，停止输出方剂参考。",
+            "reason": "检测到安全风险或实际治疗意图，停止输出方剂参考。",
+            "allowed_response_scope": safety["safety"].get("allowed_response_scope"),
             "missing_questions": build_missing_questions(symptoms),
         }
     result = DiagnosisEngine().analyze(symptoms)
-    formula_name = (result.get("formula") or {}).get("name")
-    result["formula_trace"] = TraceService().trace(formula_name, limit=3) if formula_name else {"trace_status": "no_formula"}
+    formula = result.get("formula") or {}
+    formula_name = formula.get("name")
+    formula_id = formula.get("formula_id")
+    trace_query = formula_id or formula_name
+    result["formula_trace"] = TraceService().trace(trace_query, limit=3) if trace_query else {"trace_status": "no_formula", "source_quality_level": "no_source"}
+    result["safety"] = safety["safety"]
+    result["safety_boundary"] = "辨证结果仅供学习参考，不构成诊断、处方、剂量、服药或针灸操作建议。"
     result["stopped"] = False
     return result
 
@@ -146,6 +155,7 @@ def _compact_trace(trace: Dict[str, Any], limit: int = 3) -> Dict[str, Any]:
             "item_id": item.get("item_id"),
             "name": item.get("name"),
             "file": item.get("file"),
+            "source_quality_level": item.get("source_quality_level", trace.get("source_quality_level", "")),
             "source_file": first_ref.get("source_file"),
             "page_num": first_ref.get("page_num"),
             "quote": (first_ref.get("quote") or "")[:260],
@@ -153,6 +163,7 @@ def _compact_trace(trace: Dict[str, Any], limit: int = 3) -> Dict[str, Any]:
     result = {
         "query": trace.get("query"),
         "trace_status": trace.get("trace_status"),
+        "source_quality_level": trace.get("source_quality_level", ""),
         "summary": f"{trace.get('trace_status')}，命中 {len(trace.get('matches') or [])} 条；优先展示 verified 来源。",
         "matches": matches,
     }
@@ -249,6 +260,7 @@ def tcm_lookup(payload: Dict[str, Any]) -> Dict[str, Any]:
         "query": query,
         "kind": kind,
         "trace": _compact_trace(trace, limit=int(payload.get("summary_limit", 3))),
+        "source_quality_level": trace.get("source_quality_level", ""),
         "markdown": markdown.get("matches", []),
         "safety_boundary": "学习参考与资料检索，不作为诊断、处方、用药、针灸操作或治疗建议。",
     }
@@ -271,9 +283,35 @@ def tcm_explain_trace(payload: Dict[str, Any]) -> Dict[str, Any]:
         "trace_status": status,
         "explanation": explanations.get(status, "未知状态，需要人工检查。"),
         "boundary": "trace 状态只代表来源治理状态，不代表医学真实性或临床适用性。",
+        "source_quality_level": trace.get("source_quality_level", ""),
         "trace": _compact_trace(trace, limit=int(payload.get("summary_limit", 3))),
     }
 
+
+def tcm_safety_policy(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Return P2 medical safety policy for Agent callers."""
+    return safety_policy()
+
+
+def tcm_source_quality_levels(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Return source quality/status policy for Agent callers."""
+    return {
+        "boundary": "来源质量只描述资料链路可信度，不判断医学真实性、临床适用性或治疗建议。",
+        "trace_status": {
+            "verified": "来源追溯链路已登记；可引用来源摘录，但必须保留学习参考与安全边界。",
+            "candidate": "有候选来源但未验证；只能说可能相关，不能当作 verified。",
+            "needs_review": "相关性或条目归属仍需人工确认；不输出确定医学结论。",
+            "no_source_found": "当前来源范围内未找到依据；不凭模型记忆补写医学细节。",
+            "source_search": "仅原始语料关键词命中；只能作为检索线索。",
+        },
+        "suggested_verified_sublevels": {
+            "verified_direct": "来源片段以条目名为主题，包含专门讲解/本经原文/方剂组成/穴位定位等。",
+            "verified_contextual": "来源片段明确提到条目名，但主题可能是病案、其他方剂或上下文说明。",
+            "verified_alias": "通过别名/父级名/异名命中，且已人工确认归属。",
+            "candidate_alias": "alias 命中但未人工确认。",
+        },
+        "doc": "docs/source_quality_levels.md",
+    }
 
 def tcm_review_dashboard(payload: Dict[str, Any]) -> Dict[str, Any]:
     verified = _load_jsonl(ROOT / "data" / "verified_sources.jsonl")
@@ -320,6 +358,8 @@ TOOLS = {
     "tcm_no_source_report": tcm_no_source_report,
     "tcm_lookup": tcm_lookup,
     "tcm_explain_trace": tcm_explain_trace,
+    "tcm_safety_policy": tcm_safety_policy,
+    "tcm_source_quality_levels": tcm_source_quality_levels,
     "tcm_review_dashboard": tcm_review_dashboard,
     "tcm_batch_trace": tcm_batch_trace,
     "tcm_review_next": tcm_review_next,

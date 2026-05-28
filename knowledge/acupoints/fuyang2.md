@@ -18,8 +18,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 📍 穴位定位
 外踝尖上 3 寸
 
-## 🔍 取穴方法
-
 ## 💡 功效主治
 - **功效：** 舒筋活络，化痰湿
 - **主治：** 头痛，项强，腰背痛，癫痫

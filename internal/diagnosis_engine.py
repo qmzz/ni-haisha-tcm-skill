@@ -42,11 +42,11 @@ class DiagnosisEngine:
                     "shanghan": {"name": "太阳伤寒", "key_symptoms": ["发热", "恶寒", "无汗", "脉浮紧"], "formula": "麻黄汤", "formula_id": "mahuang_tang"},
                     "daqinglong": {"name": "太阳伤寒兼里热", "key_symptoms": ["发热", "恶寒", "无汗", "烦躁", "脉浮紧"], "formula": "大青龙汤", "formula_id": "dahuoluo_tang"},
                     "xiaochilong": {"name": "外寒内饮", "key_symptoms": ["发热", "恶寒", "咳喘", "痰多清稀"], "formula": "小青龙汤", "formula_id": "xiaoqinglong_tang"},
-                    "gegen": {"name": "太阳兼经输不利", "key_symptoms": ["发热", "恶寒", "项背强几几", "无汗"], "formula": "葛根汤", "formula_id": "ge_gen_tang"},
+                    "gegen": {"name": "太阳兼经输不利", "key_symptoms": ["发热", "恶寒", "项背强几几", "无汗"], "formula": "葛根汤", "formula_id": "getang"},
                     "gegen_jiashu": {"name": "太阳兼经输不利有汗", "key_symptoms": ["发热", "恶寒", "项背强几几", "汗出"], "formula": "桂枝加葛根汤", "formula_id": "guizhi_jiagetang"},
                     "guizhi_jiahoupo": {"name": "太阳中风兼喘", "key_symptoms": ["发热", "恶风", "汗出", "咳喘"], "formula": "桂枝加厚朴杏子汤", "formula_id": "guizhi_houpuxingzi"},
-                    "guizhi_jiafuzi": {"name": "太阳阳虚", "key_symptoms": ["恶风", "汗出不止", "小便难", "四肢微急"], "formula": "桂枝加附子汤", "formula_id": "guizhi_fuzi"},
-                    "maxing_shigan": {"name": "邪热壅肺", "key_symptoms": ["咳喘", "发热", "口渴", "痰黄"], "formula": "麻杏甘石汤", "formula_id": "maxing_shigan"},
+                    "guizhi_jiafuzi": {"name": "太阳阳虚", "key_symptoms": ["恶风", "汗出不止", "小便难", "四肢微急"], "formula": "桂枝加附子汤", "formula_id": ""},
+                    "maxing_shigan": {"name": "邪热壅肺", "key_symptoms": ["咳喘", "发热", "口渴", "痰黄"], "formula": "麻杏石甘汤", "formula_id": "maxing_shigan"},
                     "wusan": {"name": "太阳蓄水", "key_symptoms": ["发热", "口渴", "小便不利", "脉浮"], "formula": "五苓散", "formula_id": "wuling_san"},
                 }
             },
@@ -61,7 +61,7 @@ class DiagnosisEngine:
                     "fuzheng_weijishi": {"name": "阳明腑实胃热", "key_symptoms": ["心烦", "腹胀满", "大便不通"], "formula": "调胃承气汤", "formula_id": "tiaoweichengqi"},
                     "qirensun": {"name": "阳明热盛气津两伤", "key_symptoms": ["大热", "大汗", "大渴", "脉洪大无力"], "formula": "白虎加人参汤", "formula_id": "baihu_renshen"},
                     "zhizi_chi": {"name": "热扰胸膈", "key_symptoms": ["虚烦不得眠", "心中懊憹"], "formula": "栀子豉汤", "formula_id": "zhizi_chi"},
-                    "maziren": {"name": "脾约", "key_symptoms": ["大便硬", "小便数"], "formula": "麻子仁丸", "formula_id": "maimendong_tang"},
+                    "maziren": {"name": "脾约", "key_symptoms": ["大便硬", "小便数"], "formula": "麻子仁丸", "formula_id": ""},
                 }
             },
             "shaoyang": {
@@ -72,7 +72,7 @@ class DiagnosisEngine:
                     "xiaochaihu": {"name": "少阳证", "key_symptoms": ["往来寒热", "胸胁苦满", "口苦", "咽干", "目眩"], "formula": "小柴胡汤", "formula_id": "xiaochaihu_tang"},
                     "dachaihu": {"name": "少阳兼阳明", "key_symptoms": ["往来寒热", "心下急", "郁郁微烦", "便秘"], "formula": "大柴胡汤", "formula_id": "dachaihu_tang"},
                     "chaihu_guizhi": {"name": "少阳兼太阳", "key_symptoms": ["发热", "恶寒", "支节烦痛", "微呕"], "formula": "柴胡桂枝汤", "formula_id": "chaihu_guizhi"},
-                    "chaihu_guizhi_ganjiang": {"name": "少阳兼水饮", "key_symptoms": ["胸胁满微结", "小便不利", "渴而不呕"], "formula": "柴胡桂枝干姜汤", "formula_id": "chaihu_longgu"},
+                    "chaihu_guizhi_ganjiang": {"name": "少阳兼水饮", "key_symptoms": ["胸胁满微结", "小便不利", "渴而不呕"], "formula": "柴胡桂枝干姜汤", "formula_id": ""},
                     "chaihu_jialonggu": {"name": "少阳兼烦惊", "key_symptoms": ["胸满", "烦惊", "谵语", "小便不利"], "formula": "柴胡加龙骨牡蛎汤", "formula_id": "chaihu_longgu"},
                 }
             },
@@ -82,11 +82,11 @@ class DiagnosisEngine:
                 "symptoms": ["腹满", "吐", "食不下", "自利", "口不渴", "时腹自痛"],
                 "subtypes": {
                     "pihan": {"name": "太阴脾寒", "key_symptoms": ["腹满而吐", "食不下", "自利益甚", "时腹自痛"], "formula": "理中汤", "formula_id": "lizhong_tang"},
-                    "fuzi_lizhong": {"name": "太阴虚寒重证", "key_symptoms": ["腹痛剧烈", "畏寒肢冷", "下利清谷"], "formula": "附子理中丸", "formula_id": "lizhong_wan"},
+                    "fuzi_lizhong": {"name": "太阴虚寒重证", "key_symptoms": ["腹痛剧烈", "畏寒肢冷", "下利清谷"], "formula": "附子理中丸", "formula_id": ""},
                     "xiaojianzhong": {"name": "中焦虚寒", "key_symptoms": ["腹中急痛", "喜温喜按", "心悸而烦"], "formula": "小建中汤", "formula_id": "xiaojianzhong_tang"},
                     "huangqi_jianzhong": {"name": "气虚虚劳", "key_symptoms": ["腹中急痛", "气短乏力", "自汗"], "formula": "黄芪建中汤", "formula_id": "huangqi_jianzhong"},
                     "danggui_jianzhong": {"name": "血虚虚劳", "key_symptoms": ["腹中急痛", "面色萎黄", "心悸"], "formula": "当归建中汤", "formula_id": "danggui_jianzhong"},
-                    "wuma_wan": {"name": "虚寒腹痛", "key_symptoms": ["绕脐腹痛", "冷汗出", "手足厥冷"], "formula": "乌头桂枝汤", "formula_id": "danggui_sini"},
+                    "wuma_wan": {"name": "虚寒腹痛", "key_symptoms": ["绕脐腹痛", "冷汗出", "手足厥冷"], "formula": "乌头桂枝汤", "formula_id": ""},
                 }
             },
             "shaoyin": {
@@ -101,7 +101,7 @@ class DiagnosisEngine:
                     "shaoyao_gancao": {"name": "筋脉拘急", "key_symptoms": ["脚挛急", "腹挛急"], "formula": "芍药甘草汤", "formula_id": "shaoyao_gancao"},
                     "si_ni_san": {"name": "阳郁厥逆", "key_symptoms": ["手足厥冷", "但身热", "咳悸"], "formula": "四逆散", "formula_id": "sini_san"},
                     "danggui_sini": {"name": "血虚寒厥", "key_symptoms": ["手足厥寒", "脉细欲绝", "腰腿冷痛"], "formula": "当归四逆汤", "formula_id": "danggui_sini"},
-                    "danggui_sini_wuzhuyu": {"name": "血虚寒厥兼久寒", "key_symptoms": ["手足厥寒", "脉细欲绝", "呕吐腹痛"], "formula": "当归四逆加吴茱萸生姜汤", "formula_id": "danggui_sini"},
+                    "danggui_sini_wuzhuyu": {"name": "血虚寒厥兼久寒", "key_symptoms": ["手足厥寒", "脉细欲绝", "呕吐腹痛"], "formula": "当归四逆加吴茱萸生姜汤", "formula_id": ""},
                 }
             },
             "jueyin": {
@@ -110,7 +110,7 @@ class DiagnosisEngine:
                 "symptoms": ["消渴", "气上撞心", "心中疼热", "饥而不欲食", "食则吐蛔", "下之利不止", "巅顶痛", "吐涎"],
                 "subtypes": {
                     "hanre_cuozha": {"name": "厥阴寒热错杂", "key_symptoms": ["消渴", "气上撞心", "心中疼热", "饥而不欲食", "食则吐蛔"], "formula": "乌梅丸", "formula_id": "wumei_wan"},
-                    "wuzhuyu_tang": {"name": "肝寒犯胃", "key_symptoms": ["巅顶痛", "干呕吐涎沫", "手足厥冷"], "formula": "吴茱萸汤", "formula_id": "danggui_sini"},
+                    "wuzhuyu_tang": {"name": "肝寒犯胃", "key_symptoms": ["巅顶痛", "干呕吐涎沫", "手足厥冷"], "formula": "吴茱萸汤", "formula_id": ""},
                     "jueyin_banxia": {"name": "上热下寒", "key_symptoms": ["手足厥冷", "喉痹", "唾脓血", "泄利不止"], "formula": "麻黄升麻汤", "formula_id": "mahuang_shengma"},
                 }
             },
@@ -121,16 +121,16 @@ class DiagnosisEngine:
                 "subtypes": {
                     "xiongbi": {"name": "胸阳不振", "key_symptoms": ["胸痹", "短气", "胸背痛"], "formula": "瓜蒌薤白白酒汤", "formula_id": "gualou_xiebai"},
                     "xiongbi_tan": {"name": "胸阳不振痰浊", "key_symptoms": ["胸痹", "不得卧", "心痛彻背"], "formula": "瓜蒌薤白半夏汤", "formula_id": "gualou_xiebai"},
-                    "tanyin": {"name": "中阳不足痰饮", "key_symptoms": ["胸胁支满", "目眩", "心悸", "气短"], "formula": "苓桂术甘汤", "formula_id": "fuling_guizhi"},
+                    "tanyin": {"name": "中阳不足痰饮", "key_symptoms": ["胸胁支满", "目眩", "心悸", "气短"], "formula": "苓桂术甘汤", "formula_id": "linggui_zhugan"},
                     "yushui": {"name": "阳虚水肿", "key_symptoms": ["一身悉肿", "恶风", "小便不利"], "formula": "越婢汤", "formula_id": "yuebi_tang"},
                     "huangdan": {"name": "阳黄", "key_symptoms": ["面目发黄", "如橘色", "小便黄"], "formula": "茵陈蒿汤", "formula_id": "yinchen_hao"},
-                    "linzheng": {"name": "热淋", "key_symptoms": ["小便淋沥", "涩痛", "短赤"], "formula": "八正散", "formula_id": "yuebi_zhu"},
+                    "linzheng": {"name": "热淋", "key_symptoms": ["小便淋沥", "涩痛", "短赤"], "formula": "八正散", "formula_id": ""},
                     "mopi": {"name": "气滞痰凝", "key_symptoms": ["咽中如有炙脔"], "formula": "半夏厚朴汤", "formula_id": "banxia_houpo"},
-                    "shimian": {"name": "阴虚火旺失眠", "key_symptoms": ["虚烦不眠", "心悸", "盗汗"], "formula": "酸枣仁汤", "formula_id": "wumei_wan"},
+                    "shimian": {"name": "阴虚火旺失眠", "key_symptoms": ["虚烦不眠", "心悸", "盗汗"], "formula": "酸枣仁汤", "formula_id": ""},
                     "wenjing": {"name": "虚寒瘀血", "key_symptoms": ["月经不调", "久不受孕", "少腹冷痛"], "formula": "温经汤", "formula_id": "wenjing_tang"},
                     "zhigancao": {"name": "气阴两虚", "key_symptoms": ["心动悸", "脉结代", "虚羸少气"], "formula": "炙甘草汤", "formula_id": "zhigancao_tang"},
                     "baixi": {"name": "风湿相搏", "key_symptoms": ["骨节疼烦", "掣痛不得屈伸"], "formula": "甘草附子汤", "formula_id": "gancao_fuzi"},
-                    "zhujing": {"name": "血虚", "key_symptoms": ["面色萎黄", "月经量少", "头晕目眩"], "formula": "四物汤", "formula_id": "danggui_sini"},
+                    "zhujing": {"name": "血虚", "key_symptoms": ["面色萎黄", "月经量少", "头晕目眩"], "formula": "四物汤", "formula_id": ""},
                     "shenqiwan": {"name": "肾阳虚", "key_symptoms": ["腰膝酸冷", "小便不利", "脚软"], "formula": "肾气丸", "formula_id": "shenqi_wan"},
                     "banxia_xiexin": {"name": "寒热错杂痞", "key_symptoms": ["心下痞", "但满不痛", "呕吐"], "formula": "半夏泻心汤", "formula_id": "banxia_xiexin"},
                     "xie_xin": {"name": "热痞", "key_symptoms": ["心下痞", "按之濡", "口渴", "心烦"], "formula": "大黄黄连泻心汤", "formula_id": "dahuang_huanglian"},
@@ -180,7 +180,7 @@ class DiagnosisEngine:
             "炙甘草汤": {"source": "伤寒论", "ingredients": "炙甘草12g、生姜9g、人参6g、生地48g、桂枝9g、阿胶6g、麦冬12g、麻仁9g、大枣30枚", "dosage": "水煎服，阿胶烊化", "contraindications": "无虚证不宜", "ni_comment": "心动悸脉结代第一方"},
             "小建中汤": {"source": "伤寒论", "ingredients": "桂枝9g、白芍18g、生姜9g、大枣4枚、炙甘草6g、饴糖30g", "dosage": "水煎，饴糖烊化", "contraindications": "实热证不宜", "ni_comment": "虚劳腹痛第一方"},
             "栀子豉汤": {"source": "伤寒论", "ingredients": "栀子12g、豆豉9g", "dosage": "水煎服", "contraindications": "中焦虚寒者不宜", "ni_comment": "虚烦不得眠第一方"},
-            "麻杏甘石汤": {"source": "伤寒论", "ingredients": "麻黄9g、杏仁9g、炙甘草6g、石膏18g", "dosage": "水煎服，石膏先煎", "contraindications": "风寒咳喘不宜", "ni_comment": "肺热咳喘第一方"},
+            "麻杏石甘汤": {"source": "伤寒论", "ingredients": "麻黄9g、杏仁9g、炙甘草6g、石膏18g", "dosage": "水煎服，石膏先煎", "contraindications": "风寒咳喘不宜", "ni_comment": "肺热咳喘第一方"},
             "当归四逆汤": {"source": "伤寒论", "ingredients": "当归9g、桂枝9g、白芍9g、细辛3g、炙甘草6g、通草6g、大枣25枚", "dosage": "水煎服", "contraindications": "热证不宜", "ni_comment": "血虚寒厥手足厥寒"},
             "四逆散": {"source": "伤寒论", "ingredients": "柴胡6g、枳实6g、白芍6g、炙甘草6g", "dosage": "水煎服或散剂", "contraindications": "纯寒纯热不宜", "ni_comment": "阳郁气滞四肢厥冷"},
             "瓜蒌薤白白酒汤": {"source": "金匮要略", "ingredients": "瓜蒌实1枚、薤白9g、白酒适量", "dosage": "水酒煎服", "contraindications": "阴虚火旺不宜", "ni_comment": "胸痹第一方"},
