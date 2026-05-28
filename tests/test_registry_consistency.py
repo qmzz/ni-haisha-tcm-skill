@@ -131,6 +131,27 @@ class RegistryConsistencyTests(unittest.TestCase):
         self.assertEqual(data["soft_missing_contra_or_caution"], 0)
         self.assertGreater(data["trace_safe_caution_placeholders"], 0)
 
+    def test_p5a_contextual_review_leaves_small_contextual_bucket(self):
+        rows = load_jsonl(ROOT / "data" / "verified_sources.jsonl")
+        contextual = [r for r in rows if r.get("source_quality_level") == "verified_contextual"]
+        needs_review = [r for r in rows if r.get("source_quality_level") == "needs_review"]
+        self.assertLessEqual(len(contextual), 20)
+        self.assertLessEqual(len(needs_review), 40)
+
+    def test_needs_review_rows_have_p5a_reason(self):
+        rows = load_jsonl(ROOT / "data" / "verified_sources.jsonl")
+        missing = [
+            (r.get("kind"), r.get("item_id"))
+            for r in rows
+            if r.get("source_quality_level") == "needs_review" and not r.get("p5a_review_reason")
+        ]
+        self.assertEqual(missing, [])
+
+    def test_no_needs_review_remaining_in_verified_registry(self):
+        rows = load_jsonl(ROOT / "data" / "verified_sources.jsonl")
+        remaining = [(r.get("kind"), r.get("item_id")) for r in rows if r.get("source_quality_level") == "needs_review"]
+        self.assertEqual(remaining, [])
+
 
 if __name__ == "__main__":
     unittest.main()

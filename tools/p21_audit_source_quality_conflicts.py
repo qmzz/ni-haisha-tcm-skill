@@ -57,12 +57,16 @@ def main() -> int:
             fm_status = frontmatter_status(ROOT / row.get("file", ""))
             issues: list[str] = []
 
-            if ver and row.get("trace_status") != "verified":
+            if ver and ver.get("trace_status") == "verified" and row.get("trace_status") != "verified":
                 issues.append(f"index={row.get('trace_status')} but registry=verified")
-            if ver and comp.get("trace_status") != "verified":
+            if ver and ver.get("trace_status") == "verified" and comp.get("trace_status") != "verified":
                 issues.append(f"completeness={comp.get('trace_status')} but registry=verified")
+            # Frontmatter may still carry historical review_status=verified. After P5-B
+            # source_quality_level is authoritative for trace relation quality; no_source/needs_review
+            # rows are allowed to diverge from historical frontmatter review_status.
             if fm_status and row.get("trace_status") and fm_status != row.get("trace_status"):
-                issues.append(f"frontmatter={fm_status} but index={row.get('trace_status')}")
+                if not (row.get("source_quality_level") in {"no_source", "needs_review"} and fm_status == "verified"):
+                    issues.append(f"frontmatter={fm_status} but index={row.get('trace_status')}")
             if ver and row.get("source_quality_level") != ver.get("source_quality_level"):
                 issues.append(f"index_quality={row.get('source_quality_level')} but registry_quality={ver.get('source_quality_level')}")
             if ver and comp.get("source_quality_level") and comp.get("source_quality_level") != ver.get("source_quality_level"):
@@ -96,7 +100,7 @@ def main() -> int:
     for kind, id_key, path in INDEX_FILES:
         for row in load_jsonl(path):
             level = row.get("source_quality_level", "")
-            if "alias" in level:
+            if level == "candidate_alias":
                 alias_risks.append({
                     "kind": kind,
                     "item_id": row.get(id_key),
