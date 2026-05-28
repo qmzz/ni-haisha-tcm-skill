@@ -152,6 +152,21 @@ class RegistryConsistencyTests(unittest.TestCase):
         remaining = [(r.get("kind"), r.get("item_id")) for r in rows if r.get("source_quality_level") == "needs_review"]
         self.assertEqual(remaining, [])
 
+    def test_no_candidate_contextual_remaining(self):
+        files = [
+            ROOT / "data" / "verified_sources.jsonl",
+            ROOT / "data" / "formula_index.jsonl",
+            ROOT / "data" / "herb_index.jsonl",
+            ROOT / "data" / "acupoint_index.jsonl",
+            ROOT / "data" / "knowledge_completeness.jsonl",
+        ]
+        remaining = []
+        for path in files:
+            for row in load_jsonl(path):
+                if row.get("source_quality_level") == "candidate_contextual":
+                    remaining.append((path.name, row.get("kind"), row.get("item_id") or row.get("herb_id") or row.get("formula_id") or row.get("acupoint_id")))
+        self.assertEqual(remaining, [])
+
 
 if __name__ == "__main__":
     unittest.main()
