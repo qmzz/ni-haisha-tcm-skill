@@ -3,7 +3,7 @@ title: "蒲公英"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
 reviewer: "p17_content_quality"
-review_status: candidate
+review_status: no_source_found
 kind: "herb"
 trace_status: no_source_found
 source_refs: []
