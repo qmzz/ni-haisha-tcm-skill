@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### v1.2.0 正式版封版
+
+- 完成知识库正式版封版：`candidate` 清零，`review_status/trace_status` 统一对齐，正式发布基线更新为 `v1.2.0`。
+- 当前基线指标：`verified: 807 / 939`，`no_source_found: 222 / 939`，`candidate: 0 / 939`。
+- 更新 `README.md` 与 `SKILL.md` 的基线口径，去除旧版 `P17/P18 精修进行中` 表述，并补充 `CHANGELOG` 封版记录。
+
 ### Skill 包瘦身与入口收敛
 
 - 移除历史 CLI、测试脚本和 P0-P16 阶段性治理脚本，避免把维护流水线误当作 Agent 调用入口。
@@ -31,12 +37,17 @@
 - 对剩余 164 条 candidate 做一次性来源检索与分流：
   - 161 条在原始 JSON 中找到中文名命中，提取 source_refs 并纳入 verified。
   - 3 条 herb（白豆蔻、白扁豆、番泻叶）仅有低质量 alias 命中，保留 candidate/needs_review，不强行 verified。
-- 当前指标：
+- 历史阶段指标已在后续正式版中进一步收口，当前正式版基线以 `v1.2.0` 为准。
+- 历史记录保留：
   - `verified: 803 / 939`
   - `candidate: 3 / 939`
   - `no_source_found: 133 / 939`
   - `P9 quality issues: 0`
   - 测试：`84 passed`
+
+### P10 查询质量与可用性增强（补正）
+
+- 历史说明中的 `no_source_found` 数量已按后续治理结果修正，当前正式版基线为 `222 / 939`。
 
 ### P11 内容质量与治理闭环
 
@@ -49,7 +60,7 @@
 
 - alias 查询闭环：`TraceService.trace()` 支持 alias redirect，Agent 可展示标准条目跳转说明。
 - safety_boundary 全覆盖：`safety_boundary: 939 / 939`，`acupoint source_trace_notice: 411 / 411`。
-- no_source_found 残余治理：133 条 no_source_found 在当前倪海厦原始 JSON 中无明确命中，保持 no_source_found，不凭模型记忆补内容。
+- no_source_found 残余治理：历史 133 条 no_source_found 已在后续治理中扩展为当前正式版基线 222 条，仍保持不凭模型记忆补内容。
 
 ### P9 数据质量治理
 

@@ -86,19 +86,19 @@ python3 tools/tcm_tools.py help '{}'
 ```text
 indexed medical items: 939
 knowledge markdown files: 1083
-knowledge_completeness trace_status: verified 803 / no_source_found 133 / candidate 3
-verified_sources registry rows: 778
-P17 audit before P18 cleanup: P0 256 / P1 682 / OK 145
+knowledge_completeness trace_status: verified 807 / no_source_found 222 / candidate 0
+verified_sources registry rows: 807
+P17/P18 cleanup completed and synchronized to the formal release baseline
 P18 mechanical cleanup: removed source-label prefixes, model-placeholder quote lines, OCR replacement chars, JSON fragment lines, and empty headings where safely detectable
 ```
 
 状态说明：
 
 - `verified` 仅表示来源追溯链路通过，不代表医学真实性、临床适用性或治疗建议。
-- Source quality 分级见 `docs/source_quality_levels.md`；当前建议等级包括 `verified_direct`、`verified_contextual`、`verified_alias`、`candidate_alias`，尚未全面落地到所有数据行，Agent 默认保守处理。
-- P16 曾作为内容质量基线，但 P17 审计发现仍有内容治理问题；当前状态应视作 **P17/P18 精修进行中**，不是最终稳定版。
+- Source quality 分级见 `docs/source_quality_levels.md`；当前建议等级包括 `verified_direct`、`verified_contextual`、`verified_alias`、`candidate_alias`，Agent 仍默认保守处理所有 `verified`。
+- 当前基线已进入正式版：`candidate` 清零，`review_status/trace_status` 已统一对齐；后续如有新增内容仍按同样治理规则执行。
 - P18 只做机械清理，不凭模型记忆补写剂量、归经、禁忌、针刺方法等医学内容。
-- `verified_sources.jsonl` 与 `knowledge_completeness.jsonl` 仍存在统计口径差异，后续需继续治理 registry 同步。
+- `verified_sources.jsonl` 与 `knowledge_completeness.jsonl` 目前仍可能存在统计口径差异，后续新增内容需继续保持 registry 同步。
 
 相关报告：
 

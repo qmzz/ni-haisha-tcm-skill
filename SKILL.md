@@ -65,15 +65,15 @@ python3 tools/tcm_tools.py tcm_search_sources_fts '{"query":"桂枝汤","limit":
 ## 当前数据基线
 
 ```text
-version: v1.0.0-rc2-p18
+version: v1.2.0
 indexed medical items: 939
 knowledge markdown files: 1083
-knowledge_completeness trace_status: verified 803 / no_source_found 133 / candidate 3
-verified_sources registry rows: 778
-status: P17/P18 精修进行中，非最终稳定版
+knowledge_completeness trace_status: verified 807 / no_source_found 222 / candidate 0
+verified_sources registry rows: 807
+status: formal release, candidate cleared
 ```
 
-注意：P16 曾作为内容质量基线，但 P17 审计发现仍有内容治理问题。P18 只做机械清理，不凭模型记忆补写医学内容。
+注意：P16 曾作为内容质量基线，但后续 P17/P18 已完成治理收口，当前以正式版基线为准。P18 只做机械清理，不凭模型记忆补写医学内容。
 
 Source quality 分级见 `docs/source_quality_levels.md`。当前建议等级包括 `verified_direct`、`verified_contextual`、`verified_alias`、`candidate_alias`；尚未全面落地时，Agent 默认保守处理所有 `verified`。
 
