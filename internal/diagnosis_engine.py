@@ -26,7 +26,7 @@ class DiagnosisEngine:
 
         # 加载症状-方剂映射
         try:
-            with open(self.data_dir / "symptom_formula.json", 'r') as f:
+            with open(self.data_dir / 'symptom_formula.json', 'r', encoding='utf-8') as f:
                 self.symptom_formula = json.load(f)
         except FileNotFoundError:
             self.symptom_formula = {"symptoms": {}}
