@@ -18,7 +18,6 @@ class RegistryConsistencyTests(unittest.TestCase):
             (row.get("kind"), row.get("item_id"), row.get("name"))
             for row in completeness
             if row.get("trace_status") == "verified"
-            and row.get("source_quality_level") != "verified_alias"
             and (row.get("kind"), row.get("item_id")) not in registry_keys
         ]
         self.assertEqual(missing, [])
@@ -74,6 +73,7 @@ class RegistryConsistencyTests(unittest.TestCase):
             [sys.executable, str(ROOT / "tools" / "p21_audit_source_quality_conflicts.py")],
             cwd=ROOT,
             text=True,
+            encoding="utf-8",
             capture_output=True,
         )
         self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
@@ -99,6 +99,7 @@ class RegistryConsistencyTests(unittest.TestCase):
             [sys.executable, str(ROOT / "tools" / "p22_audit_medical_safety.py")],
             cwd=ROOT,
             text=True,
+            encoding="utf-8",
             capture_output=True,
         )
         self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
@@ -126,6 +127,7 @@ class RegistryConsistencyTests(unittest.TestCase):
             [sys.executable, str(ROOT / "tools" / "p22_audit_medical_safety.py")],
             cwd=ROOT,
             text=True,
+            encoding="utf-8",
             capture_output=True,
         )
         self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)

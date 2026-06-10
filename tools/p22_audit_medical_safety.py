@@ -11,6 +11,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "report" / "p22_medical_safety_audit.md"
 
@@ -30,6 +33,7 @@ def run_tool(tool: str, payload: dict[str, Any]) -> dict[str, Any]:
         [sys.executable, str(ROOT / "tools" / "tcm_tools.py"), tool, json.dumps(payload, ensure_ascii=False)],
         cwd=ROOT,
         text=True,
+        encoding="utf-8",
         capture_output=True,
         check=True,
     )

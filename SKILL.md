@@ -68,8 +68,8 @@ python3 tools/tcm_tools.py tcm_search_sources_fts '{"query":"桂枝汤","limit":
 version: v1.2.0
 indexed medical items: 939
 knowledge markdown files: 1083
-knowledge_completeness trace_status: verified 807 / no_source_found 222 / candidate 0
-verified_sources registry rows: 807
+knowledge_completeness trace_status: verified 802 / no_source_found 137 / candidate 0
+verified_sources registry rows: 802
 status: formal release, candidate cleared
 ```
 
