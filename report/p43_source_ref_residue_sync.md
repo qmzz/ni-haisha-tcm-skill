@@ -1,0 +1,87 @@
+# P43 Source Ref Residue Sync
+
+同步已清理 Markdown frontmatter 中的 source_refs 到 JSONL 注册表，清除追溯结果中的 OCR 尾巴残留。
+
+- Synced refs this run: 0
+- Current P43 synced rows: 74
+- Missing clean refs: 0
+- Remaining bad source_refs: 0
+
+## Synced This Run
+
+
+## Current Synced Rows
+- `verified_sources.jsonl` `changshan` 常山: 573 chars
+- `verified_sources.jsonl` `changshanmiao` 常山苗: 406 chars
+- `verified_sources.jsonl` `chuanxiong` 川芎: 1262 chars
+- `verified_sources.jsonl` `cishi` 磁石: 1117 chars
+- `verified_sources.jsonl` `ciweipi` 刺猬皮: 275 chars
+- `verified_sources.jsonl` `dilong` 地龙: 558 chars
+- `verified_sources.jsonl` `dongkuizi` 冬葵子: 947 chars
+- `verified_sources.jsonl` `duhuo` 独活: 618 chars
+- `verified_sources.jsonl` `duzhong` 杜仲: 785 chars
+- `verified_sources.jsonl` `fangfeng` 防风: 484 chars
+- `verified_sources.jsonl` `guadi` 瓜蒂: 968 chars
+- `verified_sources.jsonl` `gualou` 瓜蒌: 256 chars
+- `verified_sources.jsonl` `gualue` 瓜蒌: 256 chars
+- `verified_sources.jsonl` `guanzhong` 贯众: 518 chars
+- `verified_sources.jsonl` `haizaomu` 海藻: 1316 chars
+- `verified_sources.jsonl` `hehuanpi` 合欢皮: 284 chars
+- `verified_sources.jsonl` `houpo` 厚朴: 224 chars
+- `verified_sources.jsonl` `jiangcan` 僵蚕: 2202 chars
+- `verified_sources.jsonl` `jili` 蒺藜: 1184 chars
+- `verified_sources.jsonl` `kuandonghua` 款冬花: 990 chars
+- `verified_sources.jsonl` `leiwan` 雷丸: 359 chars
+- `verified_sources.jsonl` `longyanrou` 龙眼肉: 208 chars
+- `verified_sources.jsonl` `lujiao` 鹿角: 1279 chars
+- `verified_sources.jsonl` `luoshiteng` 络石藤: 670 chars
+- `verified_sources.jsonl` `madouling` 马兜铃: 1239 chars
+- `verified_sources.jsonl` `mengchong` 虻虫: 734 chars
+- `verified_sources.jsonl` `mutong` 木通: 442 chars
+- `verified_sources.jsonl` `niuhuang` 牛黄: 400 chars
+- `verified_sources.jsonl` `qiancao` 茜草: 638 chars
+- `verified_sources.jsonl` `shanzhuyu` 山茱萸: 156 chars
+- `verified_sources.jsonl` `shegan` 射干: 123 chars
+- `verified_sources.jsonl` `shexiang` 麝香: 95 chars
+- `verified_sources.jsonl` `yinchen` 茵陈: 199 chars
+- `verified_sources.jsonl` `yuanhua` 芫花: 239 chars
+- `verified_sources.jsonl` `zhimu` 知母: 94 chars
+- `verified_sources.jsonl` `zhizi` 栀子: 145 chars
+- `verified_sources.jsonl` `zhuling` 猪苓: 134 chars
+- `herb_index.jsonl` `changshan` 常山: 573 chars
+- `herb_index.jsonl` `changshanmiao` 常山苗: 406 chars
+- `herb_index.jsonl` `chuanxiong` 川芎: 1262 chars
+- `herb_index.jsonl` `cishi` 磁石: 1117 chars
+- `herb_index.jsonl` `ciweipi` 刺猬皮: 275 chars
+- `herb_index.jsonl` `dilong` 地龙: 558 chars
+- `herb_index.jsonl` `dongkuizi` 冬葵子: 947 chars
+- `herb_index.jsonl` `duhuo` 独活: 618 chars
+- `herb_index.jsonl` `duzhong` 杜仲: 785 chars
+- `herb_index.jsonl` `fangfeng` 防风: 484 chars
+- `herb_index.jsonl` `guadi` 瓜蒂: 968 chars
+- `herb_index.jsonl` `gualou` 瓜蒌: 256 chars
+- `herb_index.jsonl` `gualue` 瓜蒌: 256 chars
+- `herb_index.jsonl` `guanzhong` 贯众: 518 chars
+- `herb_index.jsonl` `haizaomu` 海藻: 1316 chars
+- `herb_index.jsonl` `hehuanpi` 合欢皮: 284 chars
+- `herb_index.jsonl` `houpo` 厚朴: 224 chars
+- `herb_index.jsonl` `jiangcan` 僵蚕: 2202 chars
+- `herb_index.jsonl` `jili` 蒺藜: 1184 chars
+- `herb_index.jsonl` `kuandonghua` 款冬花: 990 chars
+- `herb_index.jsonl` `leiwan` 雷丸: 359 chars
+- `herb_index.jsonl` `longyanrou` 龙眼肉: 208 chars
+- `herb_index.jsonl` `lujiao` 鹿角: 1279 chars
+- `herb_index.jsonl` `luoshiteng` 络石藤: 670 chars
+- `herb_index.jsonl` `madouling` 马兜铃: 1239 chars
+- `herb_index.jsonl` `mengchong` 虻虫: 734 chars
+- `herb_index.jsonl` `mutong` 木通: 442 chars
+- `herb_index.jsonl` `niuhuang` 牛黄: 400 chars
+- `herb_index.jsonl` `qiancao` 茜草: 638 chars
+- `herb_index.jsonl` `shanzhuyu` 山茱萸: 156 chars
+- `herb_index.jsonl` `shegan` 射干: 123 chars
+- `herb_index.jsonl` `shexiang` 麝香: 95 chars
+- `herb_index.jsonl` `yinchen` 茵陈: 199 chars
+- `herb_index.jsonl` `yuanhua` 芫花: 239 chars
+- `herb_index.jsonl` `zhimu` 知母: 94 chars
+- `herb_index.jsonl` `zhizi` 栀子: 145 chars
+- `herb_index.jsonl` `zhuling` 猪苓: 134 chars
