@@ -8,7 +8,7 @@
 ## 前 100 条
 
 | kind | item_id | name | expand_reason | search_variant | quality_score | matched_keyword |
-|------|---------|------|---------------|----------------|---------------|-----------------|
+|-|-|-|-|-|-|-|
 | herb | chuanyubeimu | 川贝母 | herb_alias_fallback | 贝母 | 100 | 贝母 |
 | herb | chuanyubeimu | 川贝母 | herb_alias_fallback | 贝母 | 100 | 贝母 |
 | herb | chuanyubeimu | 川贝母 | herb_alias_fallback | 贝母 | 100 | 贝母 |

@@ -25,7 +25,7 @@
 ## review 样例
 
 | kind | item_id | name | alias | decision |
-|------|---------|------|-------|----------|
+|-|-|-|-|-|
 | herb | haitongpi | 海桐皮 | 刺桐皮 | safe_alias |
 | herb | zhangnao | 樟脑 | 韶脑 | safe_alias |
 | herb | zihuadiding | 紫花地丁 | 地丁 | safe_alias |

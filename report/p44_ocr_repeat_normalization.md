@@ -13,7 +13,7 @@ No new medical content was added; only lines/strings with strong OCR-repeat trig
 ## Cleaning Rules Applied
 
 Strong OCR-trigger patterns normalized:
-- Replacement characters (�)
+- Replacement characters ()
 - Repeated brackets: 【【 -> 【, 】】 -> 】, 《《 -> 《, 》》 -> 》
 - Repeated punctuation (3+): ，，， -> ，, 。。。 -> 。, etc.
 - Repeated CJK characters (3+ consecutive same): collapsed to single
@@ -24,9 +24,9 @@ Targeted OCR page-footer/text residue replacements:
 - 虫虫虫。 -> 虫。
 - 通通通 -> 通
 - 通通通\n第 -> 通\n第
-- 勤勤勤勤求求求求古古古古訓訓訓訓 -> 勤求古訓
-- 博博博博采采采采眾眾眾眾方方方方 -> 博采眾方
-- 小小小小桂桂桂桂枝枝枝枝····群群群群龙龙龙龙无无无无首首首首 -> 小桂枝·群龙无首
+- 勤求古訓 -> 勤求古訓
+- 博采眾方 -> 博采眾方
+- 小桂枝·群龙无首 -> 小桂枝·群龙无首
 
 ## Intentionally Not Cleaned
 

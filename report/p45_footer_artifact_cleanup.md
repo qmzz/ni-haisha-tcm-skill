@@ -12,7 +12,7 @@ No medical content was inferred or added. The script only removes explicit page/
 
 ## Cleaned Artifact Classes
 
-- `11110000` OCR barcode/binary residue
+- `10` OCR barcode/binary residue
 - `校排` typesetting residue
 - `V100415.xx` publisher version stamps
 - `世和经典教育·经史子集` education-org footers
@@ -39,7 +39,7 @@ No medical content was inferred or added. The script only removes explicit page/
 
 Targeted P45 residual scan returned zero active knowledge hits for:
 
-- `11110000`
+- `10`
 - `校排`
 - `V100415`
 - `世和经典教育`

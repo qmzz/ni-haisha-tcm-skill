@@ -5,30 +5,30 @@
 {
   "total_files": 1083,
   "by_kind": {
-    "acupoint": 412,
-    "case": 51,
-    "concept": 45,
-    "diagnosi": 45,
-    "formula": 114,
-    "herb": 416
+ "acupoint": 412,
+ "case": 51,
+ "concept": 45,
+ "diagnosi": 45,
+ "formula": 114,
+ "herb": 416
   },
   "files_with_issues": 1028,
   "priority": {
-    "P1": 682,
-    "P0": 256,
-    "OK": 145
+ "P1": 682,
+ "P0": 256,
+ "OK": 145
   },
   "issues": {
-    "frontmatter_error": 92,
-    "acupoint_missing_operation_notice": 1,
-    "index_quote_mismatch": 724,
-    "empty_sections": 624,
-    "body_has_source_label": 279,
-    "model_placeholder": 91,
-    "ocr_noise": 62,
-    "quote_cross_entry_or_ocr_tail": 132,
-    "stale_dirty_index_quote": 63,
-    "json_fragment": 3
+ "frontmatter_error": 92,
+ "acupoint_missing_operation_notice": 1,
+ "index_quote_mismatch": 724,
+ "empty_sections": 624,
+ "body_has_source_label": 279,
+ "model_placeholder": 91,
+ "ocr_noise": 62,
+ "quote_cross_entry_or_ocr_tail": 132,
+ "stale_dirty_index_quote": 63,
+ "json_fragment": 3
   }
 }
 ```
@@ -62,7 +62,7 @@
 - `knowledge/acupoints/jianyu.md`｜acupoint｜肩髃｜model_placeholder, body_has_source_label, index_quote_mismatch
   - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「肩髃」这个穴位，在临床上应用非常广泛..."  > 来源摘录：人纪系列针灸篇 再来是五里穴。肘髎穴往上三寸，就是五里穴。这个穴道呢，禁针，因为有大动脉在， 所以知道就好了，很少用。再来是臂臑，臂臑从手肘上七寸，也可从肩髃找，从肩髃最好找， 我们手臂上有个凹洞，那个凹洞就是肩髃
 - `knowledge/acupoints/jiaoxin.md`｜acupoint｜交信｜model_placeholder, body_has_source_label, index_quote_mismatch
-  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「交信」这个穴位，在临床上应用非常广泛..."  > 来源摘录：····················114 6、太溪穴与肾结石诊治（5-03:07:27）··························································11
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「交信」这个穴位，在临床上应用非常广泛..."  > 来源摘录：·114 6、太溪穴与肾结石诊治（5-03:07:27）·11
 - `knowledge/acupoints/jingming.md`｜acupoint｜睛明｜model_placeholder, body_has_source_label, index_quote_mismatch
   - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「睛明」这个穴位，在临床上应用非常广泛..."  > 来源摘录：以三壮可灸”。 17、光明、阳辅与悬钟穴（6-03:22:51） 光明穴是足少阳的络，别走厥阴。胆经是个很大的经脉，很多穴都络出去。光明穴也是 络穴，我们用光明穴，络厥阴。大部分是用在眼科的治症。所以，治眼科像眼旁
 - `knowledge/acupoints/jiquan.md`｜acupoint｜极泉｜model_placeholder, body_has_source_label, index_quote_mismatch
@@ -73,7 +73,7 @@
 - `knowledge/acupoints/ligou.md`｜acupoint｜蠡沟｜model_placeholder, body_has_source_label, index_quote_mismatch
   - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「蠡沟」这个穴位，在临床上应用非常广泛..."  > 来源摘录：。 足少阳之别，名曰光明，去踝五寸，别走厥阴，下络足跗。 实则厥，虚则痿躄，坐不能起。取之所别也。 ·262· 世和经典教育·经史子集 足阳明之别，名曰丰隆。去踝八寸。别走太阴；其别者， 循胫骨外廉，上络头项，合诸
 - `knowledge/acupoints/lingdao.md`｜acupoint｜灵道｜model_placeholder, body_has_source_label, index_quote_mismatch
-  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「灵道」这个穴位，在临床上应用非常广泛..."  > 来源摘录：····································76 非置入性治疗清除动脉血管阻塞（4-00:59:20）·······································77 
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「灵道」这个穴位，在临床上应用非常广泛..."  > 来源摘录：·76 非置入性治疗清除动脉血管阻塞（4-00:59:20）·77 
 - `knowledge/acupoints/qiangu.md`｜acupoint｜前谷｜model_placeholder, body_has_source_label, index_quote_mismatch
   - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「前谷」这个穴位，在临床上应用非常广泛..."  > 来源摘录：下到，而且很痛。我们所谓的巧手是下针进去没有痛， 刚好在骨和肉中间。这个横纹头就是我们的前谷穴，针的角度是这样子，直针这样下进去。 下针时也是手握拳，但叫病人不要握太紧。 3、后溪穴（4-01:44:00） 再过来
 - `knowledge/acupoints/qingling.md`｜acupoint｜青灵｜model_placeholder, body_has_source_label, index_quote_mismatch
@@ -85,7 +85,7 @@
 - `knowledge/acupoints/shaoze.md`｜acupoint｜少泽｜model_placeholder, body_has_source_label, index_quote_mismatch
   - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「少泽」这个穴位，在临床上应用非常广泛..."  > 来源摘录：是足阳明也。 三焦者，上合手少阳，出于关冲，关冲者，手小指次指之 端也，为井金；溜于液门，液门，小指次指之间也，为荥；注 于中渚，中渚，本节之后陷者中也，为俞；过于阳池，阳池， 在腕上陷者之中也，为原；行于支沟，支
 - `knowledge/acupoints/shuaigu.md`｜acupoint｜率谷｜model_placeholder, body_has_source_label, index_quote_mismatch
-  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「率谷」这个穴位，在临床上应用非常广泛..."  > 来源摘录：································································································131 2、瞳子髎穴（
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「率谷」这个穴位，在临床上应用非常广泛..."  > 来源摘录：·131 2、瞳子髎穴（
 - `knowledge/acupoints/shuiquan.md`｜acupoint｜水泉｜model_placeholder, body_has_source_label, index_quote_mismatch
   - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「水泉」这个穴位，在临床上应用非常广泛..."  > 来源摘录：以上的人出现很多，几乎每天都有老外找我说后跟痛。他们吃钙片想帮助骨头，却反而伤 到肾脏，这时就好像榔头打铁钉，所以你钙片吃的越多，骨头就越松，不但没有帮助反而把 骨头硬化掉了。 水泉在临床上面，像月经停经不来 都可
 - `knowledge/acupoints/tianjing.md`｜acupoint｜天井｜model_placeholder, body_has_source_label, index_quote_mismatch
@@ -106,7 +106,7 @@
 - `knowledge/acupoints/yemen.md`｜acupoint｜液门｜model_placeholder, body_has_source_label, index_quote_mismatch
   - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「液门」这个穴位，在临床上应用非常广泛..."  > 来源摘录：阳之陵泉，在膝外陷者中也，为合， 伸而得之。足少阳也。 胃出于厉兑，厉兑者，足大趾内次趾之端也，为井金；溜 于内庭，内庭，次趾外间也，为荥；注于陷谷，陷谷者，上中 指内间上行二寸陷者中也，为俞；过于冲阳，冲阳，足跗
 - `knowledge/acupoints/yinxi.md`｜acupoint｜阴郄｜model_placeholder, body_has_source_label, index_quote_mismatch
-  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「阴郄」这个穴位，在临床上应用非常广泛..."  > 来源摘录：······························76 非置入性治疗清除动脉血管阻塞（4-00:59:20）·······································77 2、极泉穴与
+  - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「阴郄」这个穴位，在临床上应用非常广泛..."  > 来源摘录：·76 非置入性治疗清除动脉血管阻塞（4-00:59:20）·77 2、极泉穴与
 - `knowledge/acupoints/yongquan.md`｜acupoint｜涌泉｜model_placeholder, body_has_source_label, index_quote_mismatch
   - 摘要：源追溯，不作为针灸操作指导。 - 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。  <!-- P5_STANDARD_NOTICE_END -->  ## 📖 倪师讲解  > "「涌泉」这个穴位，在临床上应用非常广泛..."  > 来源摘录：然谷，然谷 穴在什么地方呢？我用右脚内侧图画给你们看，故意画大一点。那这个高骨，这边有一个骨 头下来，上次我们学过，高骨下到骨边，在右边，是脾经的公孙，公孙生冲脉。那公孙往后 一寸，沿着骨边和肌肉中间，这个穴道，就
 - `knowledge/acupoints/zhizheng.md`｜acupoint｜支正｜model_placeholder, body_has_source_label, index_quote_mismatch
@@ -161,7 +161,7 @@
 - `knowledge/herbs/bibo.md`｜herb｜荜茇｜model_placeholder, empty_sections
   - 摘要：* 辛热 - **归经：** 胃大肠  ## 💊 功效  温中散寒，下气止痛  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「荜茇」这味药，在经方中应用广泛..."   ---  ---   ## 学习与安全边界  **本条目仅供中医学习参考，不构成诊断或治疗建议。**  - 内容来源于倪海厦老师教学资料，用于中医知识传承与学习 - 不能替代专业医师的辨证论治 - 如有健康问题，请咨询执业中医
 - `knowledge/herbs/biejia.md`｜herb｜鳖甲｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
-  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：煮服能够下乳石，这奶水在里面停留很久 以后了，清出来的时候是硬邦邦的一个像石头一样的，这是用露蜂房。 诸位记得是味甘而且咸，甘咸的，下面都是好几味攻坚的药，我们治疗癌症的时候都会 使用到的。 ���� 二二二二三三三三三三三三、、、、鳖鳖鳖鳖甲甲甲甲 【【【【本本本本经经经经原原原原文文文文】】】】味味味味咸咸咸咸，，，，平平平平，，，，无无无无毒毒毒毒。。。。治治治治心心心心腹腹腹腹症症症症瘕瘕瘕瘕坚坚坚坚积积积积，，，，寒寒寒寒热热热热，，，，去去去去痞痞痞痞，，，，息息息息  --- 
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：煮服能够下乳石，这奶水在里面停留很久 以后了，清出来的时候是硬邦邦的一个像石头一样的，这是用露蜂房。 诸位记得是味甘而且咸，甘咸的，下面都是好几味攻坚的药，我们治疗癌症的时候都会 使用到的。  二三、鳖甲 【本经原文】味咸，平，无毒。治心腹症瘕坚积，寒热，去痞，息  --- 
 - `knowledge/herbs/bingpian.md`｜herb｜冰片｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
   - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：经 饮汁，日二，以平安为度。 大风疠疾——须眉已无，皮肉已烂成疮者：蜜蜂子，胡蜂子，黄蜂子并炒各一分，白花 蛇，乌梢蛇并酒浸去皮骨炙干，全蝎，僵蚕并炒，各一两，地龙炒半两，蝎虎（守宫），赤 足蜈蚣各 15 条，丹砂一两，雄黄 一分（醋炒），龙脑半钱，共为细末，每服一钱匕，蜜汤 调下，月三五服。（圣济）。 一二三、蜜蜡 【本经原文】味甘微温，主下利脓血，补中益气续绝伤，治金创，益气不饥耐老，今用之甚 稀。 【性味】味淡甘，性温。 【主治】止血，安胎，补益要药，治孕妇胎动下血有殊效，  --- 
 - `knowledge/herbs/bixie.md`｜herb｜萆薢｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
@@ -189,7 +189,7 @@
 - `knowledge/herbs/cishi.md`｜herb｜磁石｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
   - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：倪注神农本草经 一四八、慈石 【本经原文】味辛寒，主周痹，风湿肢节中痛不可持物，洗洗，酸消，除大热，烦满及耳聋， 今名磁石。 【产地】产山中能吸铁。 【性味】味辛，性寒，无毒。 【主治】磁石为补肾强阴要药，取其能引肺气入肾，使阴阳安宅，镇惊，明目，通耳，益精。 【别录】养肾脏，强骨气，益精除烦，通关节，消痈肿鼠瘘，颈核喉痛，小儿惊痫，炼水饮 之。 【甄权】补男子肾虚风虚身强，腰中不利，加而明之。 【大明】治筋骨羸弱，补五劳七伤  --- 
 - `knowledge/herbs/ciweipi.md`｜herb｜刺猬皮｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
-  - 摘要：_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 💊 功效  ## 🌿 倪师讲解  > 来源摘录：效果更快。那如果是外痔，发起来的肿块硬在那边很痛， 你用针刺放血，放血的时候他痛就消了很多，你再加些内服的药。针灸针孔最，承山。把刺 猬烤干麿成灰，跟着酒一起吃，不要生用哦，动物的皮生用不得了要把刺猬皮弄干净， > 来源摘录：把它 刷洗干净烧烤以后再去弄。刺猬皮治疗痔疮，我们最主要的主力是使用在痔疮，因为刺猬钻 地的力量非常地强。 > 来源摘录：���� 二二二二三三三三二二二二、、、、露露露露蜂蜂蜂蜂房房房房 【【【【本本本本经经经经原原原原文文文文】】】】味味味味苦苦苦苦，，，，平平平平，，，，有有有有毒毒  
+  - 摘要：_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 💊 功效  ## 🌿 倪师讲解  > 来源摘录：效果更快。那如果是外痔，发起来的肿块硬在那边很痛， 你用针刺放血，放血的时候他痛就消了很多，你再加些内服的药。针灸针孔最，承山。把刺 猬烤干麿成灰，跟着酒一起吃，不要生用哦，动物的皮生用不得了要把刺猬皮弄干净， > 来源摘录：把它 刷洗干净烧烤以后再去弄。刺猬皮治疗痔疮，我们最主要的主力是使用在痔疮，因为刺猬钻 地的力量非常地强。 > 来源摘录： 二三二、露蜂房 【本经原文】味苦，平，有毒毒  
 - `knowledge/herbs/congbai.md`｜herb｜葱白｜model_placeholder, body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
   - 摘要：** 辛温 - **归经：** 肺胃  ## 💊 功效  发汗解表，散寒通阳  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「葱白」这味药，在经方中应用广泛..."  > 来源摘录：安神定志匀气脉。 【元素】治上焦风邪，泻肺实，散头目中滞气，经络中留湿，主上部见血。 【吴克潜】防风善表散，故用以解毒，如砒毒，乌头毒。芫花毒，野菌毒，诸毒药，又防风 本制黄耆，黄耆得防风而功最大，治风邪久留不去，
 - `knowledge/herbs/dafupi.md`｜herb｜大腹皮｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
@@ -205,7 +205,7 @@
 - `knowledge/herbs/daqingye.md`｜herb｜大青叶｜model_placeholder, body_has_source_label, empty_sections
   - 摘要：* 苦寒 - **归经：** 心胃  ## 💊 功效  清热解毒，凉血消斑  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「大青叶」这味药，在经方中应用广泛..."  > 来源摘录：中药单味这是钱，这个时候要这样子写，这是我们的习惯。这是一分，两分、 三分这样子，好如果你这样写就是一钱两钱三钱，这是分的单位。那十分是一钱。三分五分 就好了，一点点进去，你不要害人啊，吃了不敢出门。这个蓝实，蓝实
 - `knowledge/herbs/dengxincao.md`｜herb｜灯心草｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
-  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：些那个健脾的 药，这个补脾的药一下去，尤其象黄精白术啊茯苓，一下去以后，脾脏就会缩起 来，哦，阳恢复会慢慢慢慢回来，原来肿大的脾脏就会回收......回收，那这个 小便呐我一看他小便很好啊，通通排出来了，那22号什么方子都没有动，又加了 点灯心草，再加点灯芯草，哦，这就可以再吃。 哦，到了3月1号呐，哦，他回来，哦，他睡还是没有办法通宵，每两个小时 醒过来一次，那他体力还是不够哦，小便呐它这个很好，而且有力量，小便排出 来有力量哦，这个时候这个病人呐，这个很好玩，就是四十年以前开刀  --- 
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：些那个健脾的 药，这个补脾的药一下去，尤其象黄精白术啊茯苓，一下去以后，脾脏就会缩起 来，哦，阳恢复会慢回来，原来肿大的脾脏就会回收.回收，那这个 小便呐我一看他小便很好啊，通通排出来了，那22号什么方子都没有动，又加了 点灯心草，再加点灯芯草，哦，这就可以再吃。 哦，到了3月1号呐，哦，他回来，哦，他睡还是没有办法通宵，每两个小时 醒过来一次，那他体力还是不够哦，小便呐它这个很好，而且有力量，小便排出 来有力量哦，这个时候这个病人呐，这个很好玩，就是四十年以前开刀  --- 
 - `knowledge/herbs/difuzi.md`｜herb｜地肤子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
   - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：甄权】治阴卵颓疾；去风热，可做汤沐浴，与阳起石同服，主丈夫阴痿不起，补气益力。 【日华】治客热丹肿。 【用量】普通一钱至二三钱。 【禁忌】老人小便短而频数，是膀胱气化不足，小肠火偏弱也，法当补小肠火；如乌药艾叶， 不可独用地肤子。 【附录】地肤子煎——煎水洗目，去热暗雀盲涩痛，煎水服利小便诸淋，解恶疮。 七十六、景天 【本经原文】味苦平，主大热，火创身热烦邪恶气华，主女人漏下赤白，轻身明目。 【产地】多自生于高山上，庭中盆景俱可栽种，叶入药。 【性味】味苦甘，性寒。无毒。 【主治】  --- 
 - `knowledge/herbs/dilong.md`｜herb｜地龙｜body_has_source_label, empty_sections, index_quote_mismatch, stale_dirty_index_quote
@@ -220,7 +220,7 @@
   - 摘要：：止血。一般不入煎，烊化（溶化）后兑入药液。  ## ⚠️ 配伍禁忌  脾胃虚弱、便溏者慎用。黏腻碍胃。  ## 🔍 鉴别要点  正品山东东阿产阿胶最佳，黑褐色有光泽，质硬脆，断面光亮。伪品为杂皮胶。  ## 🌿 倪师讲解  > "「阿胶」这味药，在经方中应用广泛..."  > 来源摘录：猪苓是很好的利尿剂，在膀胱的结石，肾结石的时候，我们会用一些像 猪苓 。用滑石，用溶盐，青盐呀，咸能软坚啊。用猪苓，茯苓，泽泻等，那你说老师这个 药下去以后，如果石头很大，石头旁边很利嘛，会把那个尿道割破，割破小便
 - `knowledge/herbs/fangfeng.md`｜herb｜防风｜quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch
 - `knowledge/herbs/fangji.md`｜herb｜防己｜body_has_source_label, ocr_noise, quote_cross_entry_or_ocr_tail, index_quote_mismatch
-  - 摘要： **性味：** 苦辛寒  ## 💊 功效  祛风湿，止痛，利水消肿  ## 🌿 倪师讲解  风湿水肿  ---  > 来源摘录：诸痫痫痫痫，，，，除除除除 邪邪邪邪，，，，利利利利大大大大小小小小便便便便，，，，通通通通腠腠腠腠理理理理，，，，利利利利 九窍。生川谷。一名解离。 > 来源摘录：一百九十四这个防己，市面上有汉防己木防己，还有广防己，什么什么很多说明，我们 使用的是木防己，前一阵子说哎呀这个有马兜铃酸什么呀，马兜铃本来就是中药，那广防那 个汉防己里面也有含有马兜铃在里面，马兜铃呢本身是个中药， > 来源摘录：有个中药就叫马兜铃，汉防 己里面也有马兜铃的成分在里面，那是毒的，我们使用的防己是木防己，木防己没有毒。 > 来源摘录：【
+  - 摘要： **性味：** 苦辛寒  ## 💊 功效  祛风湿，止痛，利水消肿  ## 🌿 倪师讲解  风湿水肿  ---  > 来源摘录：诸痫，除 邪，利大小便，通腠理，利 九窍。生川谷。一名解离。 > 来源摘录：一百九十四这个防己，市面上有汉防己木防己，还有广防己，什么什么很多说明，我们 使用的是木防己，前一阵子说哎呀这个有马兜铃酸什么呀，马兜铃本来就是中药，那广防那 个汉防己里面也有含有马兜铃在里面，马兜铃呢本身是个中药， > 来源摘录：有个中药就叫马兜铃，汉防 己里面也有马兜铃的成分在里面，那是毒的，我们使用的防己是木防己，木防己没有毒。 > 来源摘录：【
 - `knowledge/herbs/fanxieye.md`｜herb｜番泻叶｜model_placeholder, body_has_source_label, empty_sections
   - 摘要：** 甘苦寒 - **归经：** 大肠  ## 💊 功效  泻热行滞，通便  ## 🎯 主治   ## ⚖️ 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > "「番泻叶」这味药，在经方中应用广泛..."  > 来源摘录：孩子，四五天五六天甚至十来天不大便，另外 第三象限中，这是寒湿之气，湿热之气在第二象限中，二者皆为阴 一个，要注意，现在市场上的减肥药 排泄药等，它里面是配的大黄 邪，容易致人成癌症，就是成不可治症。所以说一个寒湿
 - `knowledge/herbs/fengfang.md`｜herb｜蜂房｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
@@ -236,7 +236,7 @@
 - `knowledge/herbs/gongcao.md`｜herb｜茺蔚子｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
   - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：，无升达之孔道，味 既苦泻，故下行双足。其节如膝，能利膝胫，以其形似也。 二十八、充蔚子 【本经原文】味辛微温，主明目益精，除水气，久服轻身，茎主瘾疹痒，可做浴汤，一名益 母。 【产地】多生于原野及近水处，叶为深裂式，茎做方形，名益母草，即茺蔚子。 【性味】味辛苦性微寒，无毒。 【主治】此药为去瘀生新，通调月经，及产后要药，根茎功用相同。 【别录】疗血逆，大热头痛心烦。 【吴瑞】舂仁生食补中益气，通血脉，填精髓，止渴，润肝。 【用量】普通一钱至三钱。 【禁忌】血崩及瞳子散大均忌，唯  --- 
 - `knowledge/herbs/gouqizi.md`｜herb｜枸杞子｜body_has_source_label, ocr_noise, empty_sections, index_quote_mismatch, stale_dirty_index_quote
-  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：诸位倒阳，不然的话，你不知道怎样生阳啊。就好像我们要治病，要把别人治 回来，你要知道怎样杀人。它是坚筋骨，长期吃的话，美容养颜。大家气色会非常的好，这 个肾脏病的时候我们都可以吃，随时可以补气的。过去我们常常炖鸡啊什么的，放点枸杞在 里面。枸杞子。 ���� 九九九九十十十十七七七七、、、、柏柏柏柏实实实实 【【【【本本本本经经经经原原原原文文文文】】】】味味味味甘甘甘甘平平平平，，，，主主主主惊惊惊惊悸悸悸悸，，，，安安安安五五五五脏脏脏脏，，，，益益益益气气气气除除除除湿湿湿湿  --- 
+  - 摘要： 常用剂量范围   ## 🔥 炮制方法   ## ⚠️ 配伍禁忌   ## 🔍 鉴别要点   ## 🌿 倪师讲解  > 来源摘录：诸位倒阳，不然的话，你不知道怎样生阳啊。就好像我们要治病，要把别人治 回来，你要知道怎样杀人。它是坚筋骨，长期吃的话，美容养颜。大家气色会非常的好，这 个肾脏病的时候我们都可以吃，随时可以补气的。过去我们常常炖鸡啊什么的，放点枸杞在 里面。枸杞子。  九十七、柏实 【本经原文】味甘平，主惊悸，安五脏，益气除湿  --- 
 - `knowledge/herbs/guadi.md`｜herb｜瓜蒂｜body_has_source_label, quote_cross_entry_or_ocr_tail, empty_sections, index_quote_mismatch, stale_dirty_index_quote
   - 摘要：ARD_NOTICE_END -->  ## 📌 基础信息  - **来源：** 神农本草经  ## 🌡️ 性味  > 来源摘录：味苦，性寒，无毒。  ## 💊 功效   ## 🎯 主治  > 来源摘录：上焦之实症，以吐取之，浊痰壅塞，全身水肿等实症。  ## 🌿 倪师讲解  > 来源摘录：，皆吐下之。即甜瓜之蒂也。 【产地】处处有之，取甜瓜之苦蒂入药。 【性味】味苦，性寒，无毒。 【主治】上焦之实症，以吐取之，浊痰壅塞，全身水肿等实症。 【倪注】主治因上焦不通造成之全身性水肿，专治膈上之疾，中风浊痰不出，无法吞咽。仲 景方之瓜蒂散。 【药征】主治胸中有毒，欲吐而不吐也。 【用量】普通一钱至二钱。 【禁忌】凡虚弱之人禁忌之。吐后不止，可服半夏
 - `knowledge/herbs/gualou.md`｜herb｜瓜蒌｜model_placeholder, body_has_source_label, ocr_noise, index_quote_mismatch, stale_dirty_index_quote

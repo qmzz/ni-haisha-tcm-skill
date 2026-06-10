@@ -8,7 +8,7 @@
 - changed_files: 0
 
 | kind | item_id | file | target_trace_status | action |
-|------|---------|------|---------------------|--------|
+|-|-|-|-|-|
 
 ## 边界
 

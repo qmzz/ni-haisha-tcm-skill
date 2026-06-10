@@ -45,9 +45,9 @@ verified_total: 512
 review_queue: 218 (unresolved=137)
   - needs_review: 34
   - no_source_found: 184
-    - herb: 120 (已减少 2 via parent expand)
-    - acupoint: 64 (已减少 49 via parent expand)
-    - formula: 0
+ - herb: 120 (已减少 2 via parent expand)
+ - acupoint: 64 (已减少 49 via parent expand)
+ - formula: 0
 ```
 
 ## 关键决策

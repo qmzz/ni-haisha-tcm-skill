@@ -3,7 +3,7 @@
 ## 来源候选覆盖率
 
 | kind | total | with_candidates | no_source | coverage |
-|------|------:|----------------:|----------:|---------:|
+|-|-:|-:|-:|-:|
 | formula | 113 | 113 | 0 | 100.0% |
 | herb | 415 | 295 | 120 | 71.1% |
 | acupoint | 411 | 347 | 64 | 84.4% |
@@ -11,7 +11,7 @@
 ## Review Queue
 
 | kind | status | count |
-|------|--------|------:|
+|-|-|-:|
 | acupoint | needs_review | 9 |
 | acupoint | no_source_found | 64 |
 | formula | needs_review | 5 |

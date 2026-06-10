@@ -16,7 +16,7 @@
 ## Verified 条目
 
 | kind | item_id | name | score | source_file | page |
-|------|---------|------|-------|-------------|------|
+|-|-|-|-|-|-|
 | herb | aishe | 艾叶 | 89 | 金匮要略.json | 1 |
 | herb | aoye | 艾叶 | 89 | 金匮要略.json | 1 |
 | herb | badou | 巴豆 | 89 | 金匮要略.json | 1 |

@@ -8,7 +8,7 @@
 ## Queue 分布
 
 | kind | status | count |
-|------|--------|------:|
+|-|-|-:|
 | acupoint | needs_review | 9 |
 | acupoint | no_source_found | 64 |
 | formula | needs_review | 5 |
@@ -18,7 +18,7 @@
 ## Decision 分布
 
 | kind | decision | count |
-|------|----------|------:|
+|-|-|-:|
 | acupoint | verified | 5 |
 | formula | verified | 5 |
 | herb | verified | 5 |

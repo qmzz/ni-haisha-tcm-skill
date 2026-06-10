@@ -24,7 +24,7 @@
 当前 no_source_found 中带 alias candidate 的条目数：4
 
 | kind | item_id | name | alias_candidates |
-|------|---------|------|------------------|
+|-|-|-|-|
 | herb | haitongpi | 海桐皮 | 刺桐皮 |
 | herb | zhangnao | 樟脑 | 韶脑 |
 | herb | zihuadiding | 紫花地丁 | 地丁 |
@@ -40,7 +40,7 @@
 ## 未决样例（前 80 条）
 
 | kind | status | item_id | name | reason |
-|------|--------|---------|------|--------|
+|-|-|-|-|-|
 | formula | needs_review | baizhu_fuzi | 白术附子汤 | 候选来源需人工复核 |
 | formula | needs_review | mahuang_lianqiao | 麻黄连轺赤小豆汤 | 候选来源需人工复核 |
 | formula | needs_review | muli_zexie | 牡蛎泽泻散 | 候选来源需人工复核 |

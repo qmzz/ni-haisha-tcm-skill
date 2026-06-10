@@ -139,5 +139,24 @@ class ContentHygieneTests(unittest.TestCase):
         self.assertEqual(hits, [])
 
 
+
+    def test_report_files_have_no_ocr_residue(self):
+        hits = []
+        patterns = [
+            re.compile(chr(0xFFFD) + r'{1,}'),
+            re.compile(r'(\S)\1{3,}'),
+            re.compile(r'\.{10,}'),
+            re.compile(r'[\u00b7\u2022\u2219\u25cf]{6,}'),
+        ]
+        for path in (ROOT / 'report').rglob('*.*'):
+            if path.suffix not in ('.md', '.json'):
+                continue
+            text = path.read_text(encoding='utf-8')
+            for pattern in patterns:
+                if pattern.search(text):
+                    hits.append((str(path.relative_to(ROOT)), pattern.pattern))
+        self.assertEqual(hits, [])
+
+
 if __name__ == "__main__":
     unittest.main()

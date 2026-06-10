@@ -11,7 +11,7 @@
 ### uncategorized (120)
 
 | item_id | name | top_source_quality | top_source_reason |
-|---------|------|--------------------|-------------------|
+|-|-|-|-|
 | aidicha | 矮地茶 |  |  |
 | anxixiang | 安息香 |  |  |
 | aoshu | 糯稻根 |  |  |
@@ -138,7 +138,7 @@
 ### naming_variant (51)
 
 | item_id | name | top_source_quality | top_source_reason |
-|---------|------|--------------------|-------------------|
+|-|-|-|-|
 | bilao | 臂臑外 |  |  |
 | bitong | 臂臑二 |  |  |
 | chengfu2 | 承扶二 |  |  |
@@ -194,7 +194,7 @@
 ### uncategorized (13)
 
 | item_id | name | top_source_quality | top_source_reason |
-|---------|------|--------------------|-------------------|
+|-|-|-|-|
 | ershenmen | 耳神门 |  |  |
 | liangmen | 梁门 |  |  |
 | shenmai2 | 申脉三 |  |  |

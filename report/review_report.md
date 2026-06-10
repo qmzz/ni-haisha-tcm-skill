@@ -9,7 +9,7 @@
 ### 按类型统计
 
 | kind | count |
-|------|------:|
+|-|-:|
 | acupoint | 73 |
 | formula | 5 |
 | herb | 140 |
@@ -17,14 +17,14 @@
 ### 按状态统计
 
 | status | count |
-|--------|------:|
+|-|-:|
 | needs_review | 34 |
 | no_source_found | 184 |
 
 ### 类型 × 状态
 
 | kind | status | count |
-|------|--------|------:|
+|-|-|-:|
 | acupoint | needs_review | 9 |
 | acupoint | no_source_found | 64 |
 | formula | needs_review | 5 |
@@ -40,7 +40,7 @@
 ## acupoint / needs_review
 
 | kind | id | name | status | reason |
-|------|----|------|--------|--------|
+|-|-|-|-|-|
 | acupoint | bafeng | 八风 | needs_review | 候选来源需人工复核 |
 | acupoint | baxie | 八邪 | needs_review | 候选来源需人工复核 |
 | acupoint | fubai | 浮白 | needs_review | quality_score_below_verified_threshold |
@@ -54,7 +54,7 @@
 ## acupoint / no_source_found
 
 | kind | id | name | status | reason |
-|------|----|------|--------|--------|
+|-|-|-|-|-|
 | acupoint | bilao | 臂臑外 | no_source_found | 未检索到来源候选 |
 | acupoint | bitong | 臂臑二 | no_source_found | 未检索到来源候选 |
 | acupoint | chengfu2 | 承扶二 | no_source_found | 未检索到来源候选 |
@@ -89,7 +89,7 @@
 ## formula / needs_review
 
 | kind | id | name | status | reason |
-|------|----|------|--------|--------|
+|-|-|-|-|-|
 | formula | baizhu_fuzi | 白术附子汤 | needs_review | 候选来源需人工复核 |
 | formula | guizhi_houpuxingzi | 桂枝加厚朴杏子汤 | needs_review | 候选来源需人工复核 |
 | formula | mahuang_lianqiao | 麻黄连轺赤小豆汤 | needs_review | 候选来源需人工复核 |
@@ -99,7 +99,7 @@
 ## herb / needs_review
 
 | kind | id | name | status | reason |
-|------|----|------|--------|--------|
+|-|-|-|-|-|
 | herb | baidoukou | 白豆蔻 | needs_review | alias_match_only；alias_requires_review |
 | herb | baiguo | 白果 | needs_review | quality_score_below_verified_threshold |
 | herb | baihuasheshecao | 白花蛇舌草 | needs_review | quality_score_below_verified_threshold |
@@ -124,7 +124,7 @@
 ## herb / no_source_found
 
 | kind | id | name | status | reason |
-|------|----|------|--------|--------|
+|-|-|-|-|-|
 | herb | aidicha | 矮地茶 | no_source_found | 未检索到来源候选 |
 | herb | anxixiang | 安息香 | no_source_found | 未检索到来源候选 |
 | herb | aoshu | 糯稻根 | no_source_found | 未检索到来源候选 |

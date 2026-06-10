@@ -23,7 +23,7 @@
 ## P0 明细：verified 但缺关键正文结构
 
 | kind | item_id | title | missing | file |
-|------|---------|-------|---------|------|
+|-|-|-|-|-|
 | herb | baihuasheshecao | baihuasheshecao | properties,meridian | knowledge/herbs/baihuasheshecao.md |
 | herb | baijiangcao | baijiangcao | meridian | knowledge/herbs/baijiangcao.md |
 | herb | baijiezi | baijiezi | properties,meridian | knowledge/herbs/baijiezi.md |
@@ -108,7 +108,7 @@
 ## P1 示例：candidate with source_refs（前 30）
 
 | kind | item_id | title | file |
-|------|---------|-------|------|
+|-|-|-|-|
 | herb | baidoukou | baidoukou | knowledge/herbs/baidoukou.md |
 | herb | biandou | biandou | knowledge/herbs/biandou.md |
 | herb | fanxieye | fanxieye | knowledge/herbs/fanxieye.md |

@@ -10,7 +10,7 @@
 ## Verified 分布
 
 | kind | count |
-|------|------:|
+|-|-:|
 | acupoint | 25 |
 | formula | 25 |
 | herb | 22 |
@@ -18,7 +18,7 @@
 ## P5 Reviewer 分布
 
 | reviewer | count |
-|----------|------:|
+|-|-:|
 | p5_core_acupoint_seed | 20 |
 | p5_core_formula_seed | 20 |
 | p5_core_herb_seed | 17 |
@@ -26,7 +26,7 @@
 ## Review Queue 分布
 
 | kind | status | count |
-|------|--------|------:|
+|-|-|-:|
 | acupoint | needs_review | 9 |
 | acupoint | no_source_found | 64 |
 | formula | needs_review | 5 |
@@ -36,7 +36,7 @@
 ## P5 样板标准化条目
 
 | file | standardized |
-|------|--------------|
+|-|-|
 | knowledge/formulas/guizhi_tang.md | True |
 | knowledge/formulas/mahuang_tang.md | True |
 | knowledge/formulas/xiaochaihu_tang.md | True |

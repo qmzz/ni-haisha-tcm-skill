@@ -7,7 +7,7 @@
 ## 明细
 
 | item_id | title | status | keywords |
-|---------|-------|--------|----------|
+|-|-|-|-|
 | baihu_renshen | baihu_renshen | filled | 升 |
 | baitouweng_jiaoai | baitouweng_jiaoai | filled | 煮取, 去滓, 以水, 煮, 升 |
 | baitouweng_tang | baitouweng_tang | filled | 升 |

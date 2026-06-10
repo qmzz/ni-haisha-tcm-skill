@@ -31,7 +31,7 @@
 ## alias candidate 样例
 
 | kind | item_id | name | suggested_aliases | action |
-|------|---------|------|-------------------|--------|
+|-|-|-|-|-|
 | herb | haitongpi | 海桐皮 | 刺桐皮 | manual_alias_review |
 | herb | zhangnao | 樟脑 | 韶脑 | manual_alias_review |
 | herb | zihuadiding | 紫花地丁 | 地丁 | manual_alias_review |
@@ -40,7 +40,7 @@
 ## 全量分类样例（前 80 条）
 
 | kind | item_id | name | category | signals |
-|------|---------|------|----------|---------|
+|-|-|-|-|-|
 | herb | aidicha | 矮地茶 | no_obvious_lead |  |
 | herb | anxixiang | 安息香 | herb_name_review | herb_suffix_name |
 | herb | aoshu | 糯稻根 | herb_name_review | herb_suffix_name |

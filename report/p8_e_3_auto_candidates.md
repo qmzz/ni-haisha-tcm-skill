@@ -6,7 +6,7 @@
 ## auto: 51
 
 | kind | item_id | name | expand_reason | quality_score |
-|------|---------|------|---------------|---------------|
+|-|-|-|-|-|
 | acupoint | bilao | 臂臑外 | acupoint_trim_variant:外 | 80 |
 | acupoint | bitong | 臂臑二 | acupoint_trim_variant:二 | 80 |
 | acupoint | chengfu2 | 承扶二 | acupoint_trim_variant:二 | 77 |
@@ -62,5 +62,5 @@
 ## manual: 1
 
 | kind | item_id | name | expand_reason | quality_score |
-|------|---------|------|---------------|---------------|
+|-|-|-|-|-|
 | acupoint | fuyang2 | 跗阳二 | acupoint_trim_variant:二 | 71 |

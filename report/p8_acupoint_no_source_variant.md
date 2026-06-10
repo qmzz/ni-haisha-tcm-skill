@@ -15,7 +15,7 @@
 ## naming_variant
 
 | item_id | name |
-|---------|------|
+|-|-|
 | bilao | 臂臑外 |
 | bitong | 臂臑二 |
 | chengfu2 | 承扶二 |
@@ -71,7 +71,7 @@
 ## uncategorized (前 50)
 
 | item_id | name |
-|---------|------|
+|-|-|
 | ershenmen | 耳神门 |
 | liangmen | 梁门 |
 | shenmai2 | 申脉三 |
