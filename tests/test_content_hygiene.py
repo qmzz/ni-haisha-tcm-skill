@@ -73,6 +73,9 @@ class ContentHygieneTests(unittest.TestCase):
         hits = []
         patterns = [
             re.compile(r"V[0-9]+-[0-9]{1,8}"),
+            re.compile(r"05-10-18"),
+            re.compile(r"\u5b50\u90e8\u00b7\u9ec4\u5e1d\u5185\u7ecf"),
+            re.compile(r"\u00b7[0-9]{1,4}\u00b7"),
             re.compile(r"\u7b2c\s*[0-9]+\s*\u9875\s*\u5171\s*[0-9]+\s*\u9875"),
             re.compile(r"\u5b88\u5019\u8bda\u5b9e\u56fd\u5b66\u4e66\u5e97"),
             re.compile(r"\u5185\u90e8\u4e2d\u533b\u6559\u6750\u7cfb\u5217"),
@@ -114,6 +117,8 @@ class ContentHygieneTests(unittest.TestCase):
         hits = []
         patterns = [
             re.compile(r"V[0-9]+-[0-9]{1,8}"),
+            re.compile(r"05-10-18"),
+            re.compile(r"\u5b50\u90e8\u00b7\u9ec4\u5e1d\u5185\u7ecf"),
             re.compile(r"\u00b7[0-9]{1,4}\u00b7"),
         ]
         for path in (ROOT / "knowledge").rglob("*.md"):
