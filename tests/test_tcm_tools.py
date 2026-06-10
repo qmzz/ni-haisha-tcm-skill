@@ -12,6 +12,7 @@ def run_tool(tool, payload):
         [sys.executable, str(ROOT / "tools" / "tcm_tools.py"), tool, json.dumps(payload, ensure_ascii=False)],
         cwd=ROOT,
         text=True,
+        encoding="utf-8",
         capture_output=True,
         check=True,
     )
@@ -89,10 +90,17 @@ class TcmToolSmokeTests(unittest.TestCase):
         self.assertFalse(data["stopped"])
         self.assertEqual(data["formula"]["name"], "麻子仁丸")
         self.assertEqual(data["formula"]["formula_id"], "")
+        self.assertEqual(data["formula_trace"]["query"], "麻子仁丸")
+        self.assertEqual(data["formula_trace"]["trace_status"], "source_search")
         self.assertNotEqual(
             (data["formula_trace"].get("matches") or [{}])[0].get("item_id"),
             "maimendong_tang",
         )
+
+    def test_source_fts_tool_searches_bundled_database(self):
+        data = run_tool("tcm_search_sources_fts", {"query": "桂枝汤", "limit": 2})
+        self.assertTrue(data["hits"])
+        self.assertEqual(data["hits"][0]["search_mode"], "fts")
 
     def test_source_quality_levels_tool_documents_boundary(self):
         data = run_tool("tcm_source_quality_levels", {})

@@ -58,7 +58,6 @@ internal/__pycache__/
 # Generated source indexes
 data/source_manifest.json
 data/source_pages.jsonl
-data/source_fts.sqlite
 
 # Knowledge base - keep all files
 # (no exclusion rules for knowledge/)

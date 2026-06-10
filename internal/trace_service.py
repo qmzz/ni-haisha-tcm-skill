@@ -6,6 +6,7 @@
 2. data/*_index.jsonl 中的 candidate refs
 3. data/review_queue.jsonl
 4. 原始 JSON keyword search fallback
+5. SQLite FTS source fallback
 """
 
 from __future__ import annotations
@@ -14,6 +15,7 @@ import json
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional
 
+from internal.fts_search import FtsSearch
 from internal.source_corpus import SourceCorpus
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -91,7 +93,14 @@ class TraceService:
 
         corpus = SourceCorpus()
         hits = [h.to_dict() for h in corpus.search(query, limit=limit, context=100)]
-        return {"query": query, "trace_status": "source_search" if hits else "no_source_found", "source_quality_level": "source_search" if hits else "no_source", "matches": hits}
+        if hits:
+            return {"query": query, "trace_status": "source_search", "source_quality_level": "source_search", "matches": hits}
+
+        fts_hits = FtsSearch().search(query, limit=limit, context=100)
+        if fts_hits:
+            return {"query": query, "trace_status": "source_search", "source_quality_level": "source_search", "matches": fts_hits}
+
+        return {"query": query, "trace_status": "no_source_found", "source_quality_level": "no_source", "matches": []}
 
 
     def _rollup_quality(self, rows: List[Dict]) -> str:

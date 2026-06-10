@@ -18,6 +18,9 @@ from typing import Any, Dict
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 from internal.diagnosis_engine import DiagnosisEngine
 from internal.safety_guard import DISCLAIMER, build_missing_questions, check_red_flags, normalize_symptoms, safety_policy
 from internal.source_corpus import SourceCorpus
@@ -122,7 +125,14 @@ def tcm_diagnose_assist(payload: Dict[str, Any]) -> Dict[str, Any]:
     formula_name = formula.get("name")
     formula_id = formula.get("formula_id")
     trace_query = formula_id or formula_name
-    result["formula_trace"] = TraceService().trace(trace_query, limit=3) if trace_query else {"trace_status": "no_formula", "source_quality_level": "no_source"}
+    if trace_query:
+        formula_trace = TraceService().trace(trace_query, limit=3)
+        if formula_id and formula_name and formula_trace.get("trace_status") == "no_source_found" and not formula_trace.get("matches"):
+            formula_trace = TraceService().trace(formula_name, limit=3)
+            formula_trace["fallback_from_formula_id"] = formula_id
+        result["formula_trace"] = formula_trace
+    else:
+        result["formula_trace"] = {"trace_status": "no_formula", "source_quality_level": "no_source"}
     result["safety"] = safety["safety"]
     result["safety_boundary"] = "辨证结果仅供学习参考，不构成诊断、处方、剂量、服药或针灸操作建议。"
     result["stopped"] = False
@@ -194,9 +204,11 @@ def tcm_no_source_report(payload: Dict[str, Any]) -> Dict[str, Any]:
 
 def tcm_search_sources_fts(payload: Dict[str, Any]) -> Dict[str, Any]:
     query = payload.get("query") or payload.get("keyword") or ""
+    search = FtsSearch()
     return {
         "query": query,
-        "hits": FtsSearch().search(query, limit=int(payload.get("limit", 5)), context=int(payload.get("context", 100))),
+        "available": search.available(),
+        "hits": search.search(query, limit=int(payload.get("limit", 5)), context=int(payload.get("context", 100))),
     }
 
 
