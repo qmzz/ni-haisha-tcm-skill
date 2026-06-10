@@ -7,9 +7,6 @@
 - Missing clean refs: 0
 - Remaining bad source_refs: 0
 
-## Synced This Run
-
-
 ## Current Synced Rows
 - `verified_sources.jsonl` `changshan` 常山: 573 chars
 - `verified_sources.jsonl` `changshanmiao` 常山苗: 406 chars
