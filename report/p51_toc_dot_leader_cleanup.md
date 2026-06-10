@@ -1,0 +1,106 @@
+# P51 TOC Dot Leader Cleanup
+
+Removed high-confidence table-of-contents dot leaders with trailing page numbers from active content.
+Only runs of six or more middle dots followed by page number groups were removed; entry text and ordinary page references were left unchanged.
+Needs-review evidence queues outside the active JSONL registry set were left unchanged.
+
+- Markdown files changed: 87
+- JSONL files changed: 6
+- Dot leader page markers removed: 4349
+
+## Markdown Changes
+- `knowledge/acupoints/baihuanshu.md`: 6 dot leader page markers
+- `knowledge/acupoints/binao.md`: 56 dot leader page markers
+- `knowledge/acupoints/bingfeng.md`: 6 dot leader page markers
+- `knowledge/acupoints/chengfu.md`: 1 dot leader page markers
+- `knowledge/acupoints/chengjin.md`: 6 dot leader page markers
+- `knowledge/acupoints/cuanzhu.md`: 48 dot leader page markers
+- `knowledge/acupoints/daheng2.md`: 6 dot leader page markers
+- `knowledge/acupoints/daimai.md`: 50 dot leader page markers
+- `knowledge/acupoints/dazhong.md`: 50 dot leader page markers
+- `knowledge/acupoints/fengshi.md`: 48 dot leader page markers
+- `knowledge/acupoints/fuai.md`: 6 dot leader page markers
+- `knowledge/acupoints/fuyang_bl.md`: 50 dot leader page markers
+- `knowledge/acupoints/guanchong.md`: 48 dot leader page markers
+- `knowledge/acupoints/guanmen.md`: 48 dot leader page markers
+- `knowledge/acupoints/hanyan.md`: 5 dot leader page markers
+- `knowledge/acupoints/huangshu.md`: 6 dot leader page markers
+- `knowledge/acupoints/huizong.md`: 56 dot leader page markers
+- `knowledge/acupoints/jianwaishu.md`: 6 dot leader page markers
+- `knowledge/acupoints/jianyu.md`: 54 dot leader page markers
+- `knowledge/acupoints/jianzhongshu.md`: 6 dot leader page markers
+- `knowledge/acupoints/jiaoxin.md`: 60 dot leader page markers
+- `knowledge/acupoints/jingming.md`: 48 dot leader page markers
+- `knowledge/acupoints/jiquan.md`: 48 dot leader page markers
+- `knowledge/acupoints/jueyinshu.md`: 6 dot leader page markers
+- `knowledge/acupoints/jugu.md`: 54 dot leader page markers
+- `knowledge/acupoints/jutiao.md`: 6 dot leader page markers
+- `knowledge/acupoints/lidui.md`: 58 dot leader page markers
+- `knowledge/acupoints/lingdao.md`: 50 dot leader page markers
+- `knowledge/acupoints/lingtai.md`: 6 dot leader page markers
+- `knowledge/acupoints/lougu.md`: 6 dot leader page markers
+- `knowledge/acupoints/meichong.md`: 6 dot leader page markers
+- `knowledge/acupoints/mubian.md`: 6 dot leader page markers
+- `knowledge/acupoints/pucan.md`: 6 dot leader page markers
+- `knowledge/acupoints/qiangu.md`: 48 dot leader page markers
+- `knowledge/acupoints/qinglengyuan.md`: 6 dot leader page markers
+- `knowledge/acupoints/qingling.md`: 48 dot leader page markers
+- `knowledge/acupoints/quanliao.md`: 6 dot leader page markers
+- `knowledge/acupoints/rangu.md`: 50 dot leader page markers
+- `knowledge/acupoints/renzhong.md`: 50 dot leader page markers
+- `knowledge/acupoints/shaochong.md`: 6 dot leader page markers
+- `knowledge/acupoints/shaoze.md`: 48 dot leader page markers
+- `knowledge/acupoints/shendao.md`: 5 dot leader page markers
+- `knowledge/acupoints/shentang.md`: 5 dot leader page markers
+- `knowledge/acupoints/shenzhu.md`: 5 dot leader page markers
+- `knowledge/acupoints/shidou.md`: 6 dot leader page markers
+- `knowledge/acupoints/shousanli.md`: 5 dot leader page markers
+- `knowledge/acupoints/shuaigu.md`: 50 dot leader page markers
+- `knowledge/acupoints/shuiquan.md`: 50 dot leader page markers
+- `knowledge/acupoints/sidu.md`: 6 dot leader page markers
+- `knowledge/acupoints/suliao.md`: 6 dot leader page markers
+- `knowledge/acupoints/tianding.md`: 5 dot leader page markers
+- `knowledge/acupoints/tianjing.md`: 56 dot leader page markers
+- `knowledge/acupoints/tianzhu.md`: 58 dot leader page markers
+- `knowledge/acupoints/tianzong.md`: 6 dot leader page markers
+- `knowledge/acupoints/tiaokou.md`: 6 dot leader page markers
+- `knowledge/acupoints/tinghui.md`: 50 dot leader page markers
+- `knowledge/acupoints/tongziliao.md`: 50 dot leader page markers
+- `knowledge/acupoints/toulinqi.md`: 6 dot leader page markers
+- `knowledge/acupoints/waiqiu.md`: 6 dot leader page markers
+- `knowledge/acupoints/wangu_gb.md`: 52 dot leader page markers
+- `knowledge/acupoints/weicang.md`: 4 dot leader page markers
+- `knowledge/acupoints/wenliu.md`: 5 dot leader page markers
+- `knowledge/acupoints/xiaoluo.md`: 6 dot leader page markers
+- `knowledge/acupoints/xiongxiang.md`: 6 dot leader page markers
+- `knowledge/acupoints/yangchi.md`: 48 dot leader page markers
+- `knowledge/acupoints/yanggu.md`: 48 dot leader page markers
+- `knowledge/acupoints/yanglao.md`: 48 dot leader page markers
+- `knowledge/acupoints/yemen.md`: 60 dot leader page markers
+- `knowledge/acupoints/yinbao.md`: 6 dot leader page markers
+- `knowledge/acupoints/yinjiao.md`: 6 dot leader page markers
+- `knowledge/acupoints/yinjiao_du.md`: 6 dot leader page markers
+- `knowledge/acupoints/yinxi.md`: 48 dot leader page markers
+- `knowledge/acupoints/yinyu.md`: 5 dot leader page markers
+- `knowledge/acupoints/yongquan.md`: 50 dot leader page markers
+- `knowledge/acupoints/yuzhen.md`: 6 dot leader page markers
+- `knowledge/acupoints/zhibian.md`: 3 dot leader page markers
+- `knowledge/acupoints/zhizheng.md`: 50 dot leader page markers
+- `knowledge/acupoints/zhongchong.md`: 48 dot leader page markers
+- `knowledge/acupoints/zhourong.md`: 6 dot leader page markers
+- `knowledge/acupoints/zhubin.md`: 50 dot leader page markers
+- `knowledge/herbs/difuzi.md`: 108 dot leader page markers
+- `knowledge/herbs/fuxiaomai.md`: 6 dot leader page markers
+- `knowledge/herbs/huaijiao.md`: 12 dot leader page markers
+- `knowledge/herbs/jiangcan.md`: 110 dot leader page markers
+- `knowledge/herbs/jingjie.md`: 108 dot leader page markers
+- `knowledge/herbs/manjingzi.md`: 108 dot leader page markers
+- `knowledge/herbs/nvzhenzi.md`: 110 dot leader page markers
+
+## JSONL Changes
+- `data/acupoint_index.jsonl`: 53 rows, 321 dot leader page markers
+- `data/acupoint_sources.jsonl`: 61 rows, 183 dot leader page markers
+- `data/herb_index.jsonl`: 5 rows, 272 dot leader page markers
+- `data/herb_sources.jsonl`: 3 rows, 29 dot leader page markers
+- `data/review_decisions.jsonl`: 46 rows, 263 dot leader page markers
+- `data/verified_sources.jsonl`: 58 rows, 593 dot leader page markers

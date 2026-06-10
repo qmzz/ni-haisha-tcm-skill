@@ -9,7 +9,7 @@ trace_status: verified
 source_refs:
   - source_file: "01【视频同步文稿】人-针灸篇（可打印）.json"
     page_num: 1
-    quote: "····················································104"
+    quote: ""
 ---
 
 # 承扶
