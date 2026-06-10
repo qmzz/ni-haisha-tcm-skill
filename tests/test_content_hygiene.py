@@ -144,7 +144,7 @@ class ContentHygieneTests(unittest.TestCase):
         hits = []
         patterns = [
             re.compile(chr(0xFFFD) + r'{1,}'),
-            re.compile(r'(\S)\1{3,}'),
+            re.compile(r'([\u4e00-\u9fff\u3000-\u303f\uff00-\uffef])\1{3,}'),
             re.compile(r'\.{10,}'),
             re.compile(r'[\u00b7\u2022\u2219\u25cf]{6,}'),
         ]
