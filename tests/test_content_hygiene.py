@@ -84,6 +84,7 @@ class ContentHygieneTests(unittest.TestCase):
             re.compile(r"\u00b7{6,}\s*[0-9]{1,4}"),
             re.compile(r"\u00b7{6,}"),
             re.compile(r"\.{6,}\s*[0-9]{1,4}"),
+            re.compile(r"\.{10,}(?=(?:[\"\r\n]|$))"),
         ]
         files = [
             ROOT / "data" / "acupoint_index.jsonl",
@@ -126,6 +127,7 @@ class ContentHygieneTests(unittest.TestCase):
             re.compile(r"\u00b7{6,}\s*[0-9]{1,4}"),
             re.compile(r"\u00b7{6,}"),
             re.compile(r"\.{6,}\s*[0-9]{1,4}"),
+            re.compile(r"\.{10,}(?=(?:[\"\r\n]|$))"),
         ]
         for path in (ROOT / "knowledge").rglob("*.md"):
             text = path.read_text(encoding="utf-8")

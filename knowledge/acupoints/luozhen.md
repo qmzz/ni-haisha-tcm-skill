@@ -9,7 +9,7 @@ trace_status: verified
 source_refs:
   - source_file: "黄帝内经上册.json"
     page_num: 1
-    quote: "\n第六十篇 骨空论\n第一节 落枕针法\n第二节 奇经八脉治法....................................."
+    quote: "\n第六十篇 骨空论\n第一节 落枕针法\n第二节 奇经八脉治法"
 ---
 
 # 落枕

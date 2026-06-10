@@ -9,7 +9,7 @@ trace_status: verified
 source_refs:
   - source_file: "黄帝内经.json"
     page_num: 1
-    quote: "{\"filename\": \"黄帝内经.pdf\", \"total_pages\": 411, \"total_chars\": 212395, \"full_text\": \"子部·黄 帝内经\n黄帝内经\n05-10-19\n \n目 录\n素问\n上古天真论篇第一\n四气调神大论篇第二\n生气通天论篇第三\n金匮真言论篇第四\n阴阳应象大论篇第五\n阴阳离合论篇第六\n阴阳别论篇第七\n灵兰秘典论篇第八 ................................."
+    quote: "{\"filename\": \"黄帝内经.pdf\", \"total_pages\": 411, \"total_chars\": 212395, \"full_text\": \"子部·黄 帝内经\n黄帝内经\n05-10-19\n \n目 录\n素问\n上古天真论篇第一\n四气调神大论篇第二\n生气通天论篇第三\n金匮真言论篇第四\n阴阳应象大论篇第五\n阴阳离合论篇第六\n阴阳别论篇第七\n灵兰秘典论篇第八"
 ---
 
 # 通天
