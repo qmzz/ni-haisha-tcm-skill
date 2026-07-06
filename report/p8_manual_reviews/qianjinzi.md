@@ -1,33 +1,47 @@
-# 千金子 手工复核记录
+# qianjinzi 手工复核记录
 
 - **复核时间：** 2026-07-06
 - **当前文件：** `knowledge/herbs/qianjinzi.md`
-- **队列位置：** `data/review_queue.jsonl` 第 92 行
-- **条目：** 千金子 (`qianjinzi`)
+- **风险分类：** `herb_high_risk`
 
 ## 当前文件概况
 
-本轮人工读取 knowledge 文件、review_queue 行，并核对 `data/herb_sources.jsonl`、`data/herb_index.jsonl`、`data/knowledge_completeness.jsonl`、`data/p30_no_source_classification.jsonl`、`data/p36_external_source_queue.jsonl`，只读查询 `data/source_fts.sqlite`。
+当前条目为种子型 `no_source_found` 页面。原文件包含“来源：神农本草经”种子信息、空的“倪师讲解”、禁忌待考与学习安全边界。P8 本轮未扩写医学内容，仅补充高风险边界和人工复核状态。
 
 ## 查到的来源 / 引用摘要
 
-- review_queue：`no_source_found`；reason=`未检索到来源候选`。
-- herb_sources：status=`no_source_found`，source_hit_count=`0`，searched_keywords=['千金子'].
-- herb_index：trace_status=`no_source_found`，source_quality_level=`no_source`，source_refs_count=0.
-- completeness：trace_status=`no_source_found`，quality_tier=`seed`，source_quality_level=`no_source`。
-- p30：classification=`external_source_required`，canonical_item_id=`None`，risk_tier=`high`。
-- p36：category=`herb_high_risk`，risk_tier=`high`，recommended_source_scopes=['official_pharmacopoeia', 'modern_tcm_reference'].
-- source FTS/LIKE：按名称 `千金子` 检索得到 0 条 LIKE 命中；未检出可追溯命中。
+1. `data/herb_sources.jsonl`
+   - `herb_id=qianjinzi`
+   - `searched_keywords=["千金子"]`
+   - `source_hits=[]`，`source_hit_count=0`，`status=no_source_found`
+2. `data/review_queue.jsonl`
+   - `review_status=no_source_found`
+   - `reason=未检索到来源候选`
+3. `data/source_fts.sqlite`
+   - 以“千金子 / 续随子”检索 `source_pages_fts`，无命中
+4. `data/no_source_classification.jsonl` / `data/p39_high_risk_external_review_queue.jsonl`
+   - 一致标记为 `external_source_required` 与 `herb_high_risk`
+   - 要求外部权威来源和完整安全字段复核
 
 ## 修改点
 
-- 既有高风险 P8 review note 已存在；本轮按任务要求复核队列、知识文件与索引/来源状态后记录跳过，不重复改写医学正文。
+1. frontmatter 增加 `content_scope`、`safety_disclaimer_required`
+2. frontmatter 增加 `reviewer: p8_manual_source_refinement`
+3. frontmatter 增加 `review_status: pending_external_authoritative_source`
+4. frontmatter 增加 `risk_tier: high`
+5. 正文增加“高风险外部来源复核边界（P8 手工）”段落
 
 ## 保留边界
 
-- `no_source_found` / `external_source_required` 条目继续保持未验证边界；既有医学性字段仅作为待核验草稿或占位。
-- 弱候选、上下文提及、别名/重复映射线索不等于医学内容全字段验证。
+- 保持 `trace_status: no_source_found`
+- 保留种子信息但不据此扩写
+- 不补写功效、剂量、毒性、禁忌、妊娠/儿童、相互作用或法定状态
 
-## 下一步
+## 未决问题
 
-后续若纳入外部来源，应逐条补充明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量、禁忌及特殊安全字段。
+- “来源：神农本草经”种子信息是否准确，需外部/内部来源进一步核验
+- 若后续扩写，需确定药典或现代中药学权威来源版本
+
+## 是否需要外部权威资料
+
+**需要。** 当前内部语料无命中；作为高风险药材，后续扩写必须依赖药典或同等级权威资料。
