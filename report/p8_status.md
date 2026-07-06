@@ -395,3 +395,67 @@
 ## 下一条
 
 - 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 116 行。需先读取 `data/review_queue.jsonl` 第 116 行确认条目后再处理。
+
+---
+
+# R9-redo 更新（2026-07-06 23:21+）
+
+- **分支：** `p8-manual-source-refinement`
+- **本轮范围：** `data/review_queue.jsonl` 第 116-125 行（`xianhecao` / 仙鹤草 到 `xungufeng` / 寻骨风）
+- **R9-redo 原则：** 上轮 R9 dirty diff 已隔离回滚；本轮未复用 dirty diff，逐条读取知识正文、review_queue、herb_sources/herb_index/knowledge_completeness/p30/p36（verified 条目 p30/p36 无对应 no-source 记录时已在 note 说明），并只读查询 `source_fts.sqlite`。
+
+## R9-redo 启动检查
+
+- 当前分支：`p8-manual-source-refinement`
+- 初始基线：`.venv/bin/python -m pytest -q` → `38 passed`
+
+## R9-redo 完成条目（review_queue 第 116-125 行）
+
+116. `xianhecao` / 仙鹤草
+   - `no_source_found`；FTS/LIKE 无命中；p30/p36 为 `external_source_required`；只写 review note，未改正文。
+117. `xianmao` / 仙茅
+   - `no_source_found`；FTS/LIKE 无命中；p30/p36 为 `external_source_required`；只写 review note，未改正文。
+118. `xiecao` / 缬草
+   - `no_source_found`；FTS/LIKE 无命中；p30/p36 为 `external_source_required`；只写 review note，未改正文。
+119. `xihonghua` / 西红花
+   - `no_source_found`；FTS/LIKE 无命中；p30/p36 为 `external_source_required`；只写 review note，未改正文。
+120. `xiqiancao` / 豨莶草
+   - `no_source_found`；FTS/LIKE 无命中；p30/p36 为 `external_source_required`；只写 review note，未改正文。
+121. `xiyangshen` / 西洋参
+   - `needs_review` in queue but already verified in registry；FTS 0、LIKE 2（05 金匮 pages 475/476）；保留现有 verified trace boundary，未补结构字段、未改正文。
+122. `xuejie` / 血竭
+   - `needs_review` in queue but already verified in registry；FTS 0、LIKE 2（05 金匮 page 257、伤寒论 page 152）；记录伤科/破瘀语境边界，未改正文。
+123. `xuelianhua` / 雪莲花
+   - `no_source_found`；FTS/LIKE 无命中；p30/p36 为 `external_source_required`；只写 review note，未改正文。
+124. `xuhuang` / 血竭
+   - `needs_review` in queue but already verified in registry；与 `xuejie` 为 duplicate/alias 血竭条目；FTS/LIKE for `血竭` 同上，romanized `xuhuang`/`xuejie` 无命中；只记录 canonicalization follow-up，未改正文/registry。
+125. `xungufeng` / 寻骨风
+   - `no_source_found`；FTS/LIKE 无命中；p30/p36 为 `external_source_required`；只写 review note，未改正文。
+
+## R9-redo 新增 review note
+
+- `report/p8_manual_reviews/xianhecao.md`
+- `report/p8_manual_reviews/xianmao.md`
+- `report/p8_manual_reviews/xiecao.md`
+- `report/p8_manual_reviews/xihonghua.md`
+- `report/p8_manual_reviews/xiqiancao.md`
+- `report/p8_manual_reviews/xiyangshen.md`
+- `report/p8_manual_reviews/xuejie.md`
+- `report/p8_manual_reviews/xuelianhua.md`
+- `report/p8_manual_reviews/xuhuang.md`
+- `report/p8_manual_reviews/xungufeng.md`
+
+## R9-redo 测试状态
+
+- 启动基线：`38 passed`
+- 第 116-120 行完成后：`38 passed`
+- 第 121-125 行与状态文件完成后最终复测：`38 passed`
+
+## R9-redo follow-up
+
+- `xuejie` 与 `xuhuang` 均为 血竭，且互设 aliases；建议后续单独做 canonical item ID/registry 字段一致性清理，不在本轮批量改 registry。
+- `xuejie` frontmatter/index 中存在结构字段串联污染（性味/归经/功效/主治拼接），建议后续数据质量专项处理。
+
+## 下一条
+
+- 下一条为 `data/review_queue.jsonl` 第 126 行；继续前需先读取该行确认条目。
