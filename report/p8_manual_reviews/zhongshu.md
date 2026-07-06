@@ -40,3 +40,9 @@
 - ⚠️ source_ref 引文与穴位无关，trace_status 应从 verified 降级为 no_source_found 或 weak_source
 - ⚠️ source_quality_level: verified_direct 为误判，应修正
 - 建议后续：重新审查 zhongshu 的来源状态，修正或移除错误 source_ref
+
+## R19 action
+
+- 已执行最小修复：清理 `knowledge/acupoints/zhongshu.md` 中错误 `source_refs` 与非穴位来源摘录。
+- 已同步注册表：`acupoint_index.jsonl`、`knowledge_completeness.jsonl` 降级为 `trace_status=no_source_found`、`source_quality_level=no_source`，并从 `verified_sources.jsonl` 移除。
+- 已加入 no-source / external-source 后续队列；未补写任何穴位医学字段。

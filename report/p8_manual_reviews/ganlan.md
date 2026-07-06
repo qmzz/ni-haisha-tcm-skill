@@ -29,3 +29,8 @@
 
 - 建议后续将该条从 verified 降级或重新进入 no_source/external source 流程，并清理 frontmatter `source_refs` 与正文中无关来源摘录；需要与 `herb_index`、`verified_sources`、`knowledge_completeness` 协同更新，避免单改 Markdown 造成状态分裂。
 
+## R19 action
+
+- 已执行最小修复：清理 `knowledge/herbs/ganlan.md` 中 football/橄榄球语境的错误 `source_refs` 与无关来源摘录。
+- 已同步注册表：`herb_index.jsonl`、`knowledge_completeness.jsonl` 降级为 `trace_status=no_source_found`、`source_quality_level=no_source`，并从 `verified_sources.jsonl` 移除。
+- 已加入 no-source / external-source 后续队列；未补写 `properties` 或 `meridian`。

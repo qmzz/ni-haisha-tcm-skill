@@ -28,3 +28,9 @@
 ## 未决问题
 
 - 建议后续协同降级 `trace_status` 或重入 no_source/external source 流程，并清理 Markdown、`herb_index`、`verified_sources` 中的误引用。
+
+## R19 action
+
+- 已执行最小修复：清理 `knowledge/herbs/jianghuang.md` 中“干姜黄连黄芩人参汤”跨词误切的错误 `source_refs` 与无关来源摘录。
+- 已同步注册表：`herb_index.jsonl`、`knowledge_completeness.jsonl` 降级为 `trace_status=no_source_found`、`source_quality_level=no_source`，并从 `verified_sources.jsonl` 移除。
+- 已加入 no-source / external-source 后续队列；未补写 `properties` 或 `meridian`。
