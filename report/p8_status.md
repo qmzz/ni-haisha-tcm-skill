@@ -24,7 +24,7 @@
 
 - 基线：`38 passed`
 - 修复后：`38 passed`
-- 提交：待本轮提交后回填。
+- 提交：`976ef65 fix: apply P8 reviewed corrections jinyingzi lugen madouling dongkuizi`。
 
 ### R20 工作边界
 
