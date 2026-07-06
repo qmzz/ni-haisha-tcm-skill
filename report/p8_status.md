@@ -1,3 +1,23 @@
+## R24 P8 reviewed corrections (2026-07-07)
+
+- **Scope:** conservative source-boundary tightening / source rebinding for `congbai`, `huangqi`, `hujiao`, `kunbu`, `lianqiao`, `maidong`.
+- **Evidence read:** corresponding `report/p8_manual_reviews/*.md`, `knowledge/herbs/*.md` frontmatter/body, `data/herb_index.jsonl`, `data/herb_sources.jsonl`, `data/verified_sources.jsonl`, `data/knowledge_completeness.jsonl`, and `data/source_fts.sqlite` via `source_pages_fts` / Python sqlite3.
+- **Fix:**
+  - **congbai**: downgraded from `verified_direct` to `verified_contextual`; current strongest quote is concrete postpartum lactation external-use context for 葱白, not an independent materia medica entry.
+  - **huangqi**: downgraded from `verified_direct` to `verified_contextual`; current strongest quote is 防风配伍/炮制语境 with 黄芪, not a standalone 黄芪 source.
+  - **hujiao**: downgraded from `verified_direct` to `verified_contextual`; current quotes mention 胡椒/黑胡椒 as pungent dispersing/external acute-use context, but not an independent 胡椒 materia medica entry.
+  - **kunbu**: downgraded from `verified_direct` to `verified_contextual`; quote says 昆布 can substitute for 海藻 and describes 藻类利小便, but remains 海藻-adjacent rather than a standalone 昆布 entry.
+  - **lianqiao**: rebound from old 柴胡/翘根 contextual quote to independent 连翘 materia medica entry at `02【视频同步文稿】人-神农本草经（可打印）.json` p231; remains `verified_direct`.
+  - **maidong**: rebound from old 菖蒲 formula-composition quote to independent 麦冬 materia medica entry at `02【视频同步文稿】人-神农本草经（可打印）.json` p26; remains `verified_direct`.
+- **Deferred/Eval:**
+  - `hupo`: strongest quote remains formula/context mention around 柏子仁散, not enough for a confident direct rebind or downgrade in this small batch.
+  - `mahuanggen`: strongest quote remains 牡蛎-adjacent mention (`粉身同麻黄根` / `恶麻黄`); evidence boundary is thin, so left unchanged.
+  - `huangbai`/`huangbo`: duplicate/alias 黄柏 governance remains broader than this batch; not changed.
+  - `bohe`: intentionally skipped per R24 instruction; no clear independent source found in this pass.
+- **Tests:** baseline `38 passed`; after R24 corrections `38 passed`.
+- **Commits:**
+  - `998b6ab fix: apply P8 reviewed corrections congbai huangqi hujiao kunbu lianqiao maidong`
+
 ## R23 P8 reviewed corrections (2026-07-07)
 
 - **Scope:** conservative source rebinding / source-boundary tightening for `cishi`, `duhuo`, `gansui`, `heshouwu`, `huajiao`, `maiya`, `meiguihua`.
