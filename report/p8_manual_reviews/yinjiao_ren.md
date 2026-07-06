@@ -57,3 +57,9 @@
 - ⚠️ frontmatter trace_status 与 index trace_status 不一致
 - ⚠️ FTS 存在可用来源（p29 阴交穴讲解）但未引用
 - 建议后续：修正 canonical mapping、补充 source_refs、统一 trace_status
+
+## R19 action
+
+- 已执行最小一致性修复：移除 `yinjiao_ren` 在 `acupoint_index.jsonl`、`knowledge_completeness.jsonl`、`verified_sources.jsonl` 中错误映射到 `yinjiao`（龈交）的 `canonical_item_id` / `verified_alias` 状态。
+- 已统一为 `trace_status=no_source_found`、`source_quality_level=no_source`，并加入 no-source / external-source 后续队列。
+- 未补写 p29 阴交穴来源；该来源需单独核查 quote 后再提升，避免本轮超出高确定性边界。

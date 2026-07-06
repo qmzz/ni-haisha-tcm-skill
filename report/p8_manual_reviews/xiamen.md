@@ -21,3 +21,8 @@ P26 source_ref 与 `xiabai` 相同，来自黄帝内经上册经脉/滑脉讲解
 - **正文修复：** 本轮不改，避免在 p26 队列中批量处理别名合并。
 - **registry 后续修复：** 建议单列 `xiamen`/`xiabai` 别名与重复条目修复：确认是否应删除重复、改为 alias-only，或同步为手太阴肺经；同时替换 source_ref 为针灸篇第 42 页。
 - **理由：** 这里不仅是 dirty quote，还存在 item_id/title/alias/meridian 数据一致性问题，需专项处理。
+
+## R19 action
+
+- 已执行最小一致性修复：`knowledge/acupoints/xiamen.md` 与 `data/acupoint_index.jsonl` 的归经从 `足阳明胃经` 修为 `手太阴肺经`，与 `alias_of: xiabai` / 侠白条目一致。
+- 未做别名合并、删除重复条目或替换 source_ref；这些仍需后续别名专项处理。

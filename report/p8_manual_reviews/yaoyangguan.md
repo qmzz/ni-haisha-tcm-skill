@@ -37,3 +37,8 @@
 
 ## 未决问题
 - yangguan.md 是 yaoyangguan.md 的别名条目，两者内容应保持一致；归经标注存在不一致（见 yangguan.md review note）
+
+## R19 action
+
+- 已同步别名一致性：`yangguan` 的归经已修为 `督脉`，与本主条目一致。
+- 本条目本身保持 `trace_status=no_source_found`，未补写来源或扩展正文。

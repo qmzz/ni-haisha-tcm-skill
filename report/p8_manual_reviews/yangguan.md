@@ -39,3 +39,8 @@
 
 ## 未决问题
 - ⚠️ 归经标注不一致：yangguan.md 标为 "足少阳胆经"，yaoyangguan.md 标为 "督脉"；主条目正确，别名条目有误。建议后续数据质量专项修正。
+
+## R19 action
+
+- 已执行最小一致性修复：`knowledge/acupoints/yangguan.md` 与 `data/acupoint_index.jsonl` 的归经从 `足少阳胆经` 修为 `督脉`，与 `yaoyangguan` 主条目一致。
+- 保持 `trace_status=no_source_found` 与 no-source 外部来源边界；未补写来源或扩展正文。

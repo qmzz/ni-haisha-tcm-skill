@@ -11,7 +11,7 @@ no_source_policy: "keep_boundary_until_traceable_source"
 # 腰阳关
 
 **定位：** 腰部，后正中线上，第 4 腰椎棘突下凹陷中  
-**归经：** 足少阳胆经  
+**归经：** 督脉  
 **功效：** 腰骶痛
 
 ---
