@@ -1,3 +1,12 @@
+## R21 P8 reviewed corrections (2026-07-07)
+
+- **Scope:** conservative sync for `chenpi`, `cheqianzi`, `chuanxiong`, `dilong`, `duzhong`.
+- **Evidence read:** corresponding `report/p8_manual_reviews/*.md`, `knowledge/herbs/*.md` frontmatter/body, `data/herb_index.jsonl`, `data/herb_sources.jsonl`, `data/verified_sources.jsonl`, `data/knowledge_completeness.jsonl`, and `data/source_fts.sqlite`.
+- **Fix:** synced clean `source_refs` from verified Markdown frontmatter into registry files and cleared stale `empty_quote_demoted_to_no_source`/`empty_or_dirty_quote` metadata for the five entries. Also filled the first `herb_sources` source hit from the same verified quote where the registry still had an empty source hit.
+- **Reason:** P26 notes showed historical `empty_quote` flags, but P17 verified Markdown already contains direct non-empty source quotes for these items. No new medical content was inferred.
+- **Deferred:** `daji`, `dangshen`, `danshen` were left for a later pass because their current registry/source boundary needs separate quote-level review. `bohe`, `chenxiang`, `cishi`, `congbai`, `dingxiang`, `duhuo` were not changed in this first R21 commit; they remain candidates for contextual tightening only after quote-level confirmation. `sanleng` and `sangzhi` remain deferred per prior R20 boundary notes.
+- **Tests:** baseline `38 passed`; after this sync `38 passed`.
+
 # P8 手工来源精修状态
 
 
