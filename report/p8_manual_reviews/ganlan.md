@@ -1,30 +1,31 @@
-# 橄榄 手工复核记录
+# ganlan 手工复核记录
 
-- **复核时间：** 2026-07-06
+- **复核时间：** 2026-07-07
 - **当前文件：** `knowledge/herbs/ganlan.md`
-- **队列位置：** `data/review_queue.jsonl` 第 38 行
-- **条目：** 橄榄 (`ganlan`)
+- **队列位置：** `data/p11_content_quality_queue.jsonl` 第 48 行
+- **条目：** 橄榄
 
 ## 当前文件概况
 
-复核前队列状态为 `needs_review`；本轮人工读取 knowledge 文件、review_queue 行，并核对 `data/herb_sources.jsonl`、`data/herb_index.jsonl`、`data/knowledge_completeness.jsonl`、`data/p30_no_source_classification.jsonl`、`data/p36_external_source_queue.jsonl`，只读查询 `data/source_fts.sqlite`。
+当前条目为 herb，frontmatter `trace_status: verified`，有 `source_refs`，正文含安全边界、倪师讲解、来源摘录。`knowledge_completeness` 显示缺失 `properties` 与 `meridian`。
 
-## 查到的来源 / 引用摘要
+## 来源 / FTS 摘要
 
-- `review_queue` top_source 命中为 football/橄榄球语境，属误命中，不能作为药材橄榄来源。
-- source FTS/LIKE 另见“橄榄油”作为蒲灰散黏合用油语境，明确说油本身没有功能；仅可作为语境提及，不支撑橄榄药材条目功效/主治验证。
-- completeness：trace=`verified`，quality=`verified_direct`。
+- `herb_index.jsonl` / `verified_sources.jsonl`：标记 `source_quality_level=verified_direct`，引用 `05【视频同步文稿】人-金匮要略（可打印）.json` page 80。
+- 该引用实际语境为 football 面罩下“两条黑”、胆/盲肠化脓、赤豆当归散等内容，其中“橄榄”只出现在“美国那个 football（美国把橄榄球叫football）”。
+- `herb_sources.jsonl` 对 ganlan 为 `source_hits=[]`，状态仍为 candidate，和 verified registry 不一致。
+- `source_fts.sqlite` 只读检索“橄榄”无命中。
 
-## 修改点
+## 是否直接支撑缺失字段
 
-- 本轮仅写 review note 记录来源边界；未改知识正文，避免对既有 verified 元数据作批量性结构调整。
-- 未新增功效、主治、剂量、禁忌等医学正文。
+- properties：不支撑。未见药材橄榄性味原文。
+- meridian：不支撑。未见药材橄榄归经原文。
 
-## 保留边界
+## 修改 / 不修改理由
 
-- no_source/external_source_required 条目继续保持未验证边界；既有医学性字段仅作为待核验草稿或占位。
-- 弱候选或上下文提及不等于医学内容全字段验证。
+本轮不补写缺失字段。当前 verified 引用属于 false positive / 语义污染，不应作为橄榄药材来源。正文中的“橄榄油也可以”片段也只是蒲灰散外用调和介质，不是药材橄榄条目的直接讲解。
 
-## 下一步
+## 未决问题
 
-后续若纳入外部来源，应逐条补充明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量、禁忌及特殊安全字段。
+- 建议后续将该条从 verified 降级或重新进入 no_source/external source 流程，并清理 frontmatter `source_refs` 与正文中无关来源摘录；需要与 `herb_index`、`verified_sources`、`knowledge_completeness` 协同更新，避免单改 Markdown 造成状态分裂。
+
