@@ -44,3 +44,7 @@
 ## 是否需要外部权威资料
 
 **需要。** 当前内部语料无命中；作为高风险药材，后续扩写必须依赖药典或同等级权威资料。
+## R6 顺序复核补记（2026-07-06）
+
+- 对应 `data/review_queue.jsonl` 第 55 行；本轮按顺序复核 knowledge 文件、review_queue、p30/p36、completeness 与 source FTS。
+- 该条已在高风险轮次完成；本轮确认继续保持 `no_source_found` 与高风险外部权威来源边界，不重复改动知识正文。

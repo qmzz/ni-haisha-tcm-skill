@@ -1,0 +1,30 @@
+# 姜黄 手工复核记录
+
+- **复核时间：** 2026-07-06
+- **当前文件：** `knowledge/herbs/jianghuang.md`
+- **队列位置：** `data/review_queue.jsonl` 第 60 行
+- **条目：** 姜黄 (`jianghuang`)
+
+## 当前文件概况
+
+复核前队列状态为 `needs_review`；本轮人工读取 knowledge 文件、review_queue 行，并核对 `data/herb_sources.jsonl`、`data/herb_index.jsonl`、`data/knowledge_completeness.jsonl`、`data/p30_no_source_classification.jsonl`、`data/p36_external_source_queue.jsonl`，只读查询 `data/source_fts.sqlite`。
+
+## 查到的来源 / 引用摘要
+
+- `review_queue` top_source 为“干姜黄芩黄连人参汤”中的跨词误切，命中“姜黄”实际来自“干姜+黄芩”，不是药材姜黄。
+- source FTS/LIKE 命中均属干姜黄连黄芩人参汤相关语境；不能作为姜黄药材来源。
+- completeness：trace=`verified`，quality=`verified_direct`。
+
+## 修改点
+
+- 本轮仅写 review note 记录来源边界；未改知识正文，避免对既有 verified 元数据作批量性结构调整。
+- 未新增功效、主治、剂量、禁忌等医学正文。
+
+## 保留边界
+
+- no_source/external_source_required 条目继续保持未验证边界；既有医学性字段仅作为待核验草稿或占位。
+- 弱候选或上下文提及不等于医学内容全字段验证。
+
+## 下一步
+
+后续若纳入外部来源，应逐条补充明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量、禁忌及特殊安全字段。

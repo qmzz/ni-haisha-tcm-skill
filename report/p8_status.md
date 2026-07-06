@@ -1,8 +1,8 @@
 # P8 手工来源精修状态
 
-- **更新时间：** 2026-07-06 22:45+ R5
+- **更新时间：** 2026-07-06 23:10+ R6
 - **分支：** `p8-manual-source-refinement`
-- **本轮范围：** `data/review_queue.jsonl` 第 18-37 行（从 `bichengqie` / 荜澄茄到 `foshou` / 佛手；其中第 35 行 `fanxieye` 已由高风险药材前序轮次完成，本轮复核既有记录后未重复修改）
+- **本轮范围：** `data/review_queue.jsonl` 第 38-60 行（从 `ganlan` / 橄榄到 `jianghuang` / 姜黄；其中第 46 `haima`、第 48 `hamayou`、第 55 `huangyaozi` 已由高风险轮次完成，本轮只复核记录，未重复修改知识正文）
 
 ## 本轮启动检查
 
@@ -41,85 +41,95 @@
 
 - `aidicha`, `anxixiang`, `aoshu`, `aoshugen`, `baidoukou`, `baiguo`, `baihuasheshecao`, `banlangen`, `banzhilian`, `biandou`, `biba`, `bibo`
 
-## 本轮完成条目（review_queue 第 18-37 行）
+### review_queue 第 18-37 行（R5）
 
-18. `bichengqie` / 荜澄茄
-   - `no_source_found`；FTS 检索「荜澄茄 / 毕澄茄」无命中。
-   - `p30/p36` 标记 `alias_first`，canonical 仍 no_source；补充来源边界。
-19. `bingpian` / 冰片
-   - `needs_review`；候选为「龙脑」别名级命中，且位于复方/他药语境。
-   - FTS 未见「冰片」专名；移除正文中误落在 frontmatter 后的 no_source 元数据文本，并补充 alias/contextual 边界。
-20. `cangerzi` / 苍耳子
-   - `no_source_found`；FTS 检索无命中。
-   - 对既有“倪师讲解”加未验证提示，补充 no_source 边界。
-21. `cansha` / 蚕砂
-   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
-22. `caodoukou` / 草豆蔻
-   - `no_source_found`；FTS 检索「草豆蔻 / 草蔻」无命中；补充外部权威来源核验边界。
-23. `caoguo` / 草果
-   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
-24. `chouwutong` / 臭梧桐
-   - `no_source_found`；FTS 检索无命中；`p36` 为 `herb_modern_or_regional`；补充边界。
-25. `chuanyubeimu` / 川贝母
-   - `no_source_found`；扩展命中为「贝母」通名，不等同「川贝母」专名。
-   - 保持 no_source，不以通名命中验证川贝母功效主治等字段。
-26. `chuipencao` / 垂盆草
-   - `no_source_found`；FTS 检索无命中；`p36` 为 `herb_modern_or_regional`；补充边界。
-27. `chunpi` / 椿皮
-   - `no_source_found`；FTS 检索无命中；`p30/p36` 为 `internal_research_exhausted`；补充边界。
-28. `cijili` / 刺蒺藜
-   - `no_source_found`；FTS 无「刺蒺藜」专名，仅有「蒺藜/蒺藜子/白蒺藜」通名或近缘语境。
-   - 不以通名命中验证专名条目，补充边界。
-29. `daidaihua` / 代代花
-   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
-30. `daodou` / 刀豆
-   - `no_source_found`；FTS 检索无命中；`p30/p36` 为 `internal_research_exhausted`；补充边界。
-31. `dengxincao` / 灯心草
-   - `needs_review`；候选为分消汤/医案加味语境中的可追溯提及。
-   - 保留既有 verified/contextual，但明确不验证性味、归经、功效、主治、剂量、禁忌等本草字段。
-32. `diercao` / 地耳草
-   - `no_source_found`；FTS 检索无命中；`p36` 为 `herb_modern_or_regional`；补充边界。
-33. `dijincao` / 地锦草
-   - `no_source_found`；FTS 检索无命中；`p36` 为 `herb_modern_or_regional`；补充边界。
-34. `ezhu` / 莪术
-   - `needs_review`；exact-name 提及存在，语境为三棱莪术破血力量较强及妇科/攻坚用药讨论。
-   - 保留可追溯提及，不扩展验证到“神农本草经”来源、性味、归经、功效、主治等全部字段。
-35. `fanxieye` / 番泻叶
-   - 已在高风险药材前序轮次完成；本轮复核既有 `report/p8_manual_reviews/fanxieye.md` 与边界，无重复修改。
-36. `feizi` / 榧子
-   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
-37. `foshou` / 佛手
-   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
+- `bichengqie`, `bingpian`, `cangerzi`, `cansha`, `caodoukou`, `caoguo`, `chouwutong`, `chuanyubeimu`, `chuipencao`, `chunpi`, `cijili`, `daidaihua`, `daodou`, `dengxincao`, `diercao`, `dijincao`, `ezhu`, `fanxieye`（跳过重复改动）, `feizi`, `foshou`
 
-## 本轮新增 review note
+## 本轮完成条目（review_queue 第 38-60 行）
 
-- `report/p8_manual_reviews/bichengqie.md`
-- `report/p8_manual_reviews/bingpian.md`
-- `report/p8_manual_reviews/cangerzi.md`
-- `report/p8_manual_reviews/cansha.md`
-- `report/p8_manual_reviews/caodoukou.md`
-- `report/p8_manual_reviews/caoguo.md`
-- `report/p8_manual_reviews/chouwutong.md`
-- `report/p8_manual_reviews/chuanyubeimu.md`
-- `report/p8_manual_reviews/chuipencao.md`
-- `report/p8_manual_reviews/chunpi.md`
-- `report/p8_manual_reviews/cijili.md`
-- `report/p8_manual_reviews/daidaihua.md`
-- `report/p8_manual_reviews/daodou.md`
-- `report/p8_manual_reviews/dengxincao.md`
-- `report/p8_manual_reviews/diercao.md`
-- `report/p8_manual_reviews/dijincao.md`
-- `report/p8_manual_reviews/ezhu.md`
-- `report/p8_manual_reviews/feizi.md`
-- `report/p8_manual_reviews/foshou.md`
+38. `ganlan` / 橄榄
+   - `needs_review`；review_queue top_source 为 football/橄榄球语境，判定为误命中，不作为药材来源。
+   - source LIKE 另见“橄榄油”作为蒲灰散黏合用油语境，且原文明确“这些油本身没有功能”；只记录语境边界，不补药材正文。
+39. `gijingcao` / 谷精草
+   - `no_source_found`；FTS/LIKE 无命中；`p30/p36` 为 `external_source_required`；补充 P8 外部权威来源边界。
+40. `gouteng` / 钩藤
+   - `no_source_found`；FTS/LIKE 无命中；`p30/p36` 为 `external_source_required`；补充边界。
+41. `guya` / 谷芽
+   - `no_source_found`；FTS/LIKE 无命中；`p30/p36` 为 `external_source_required`；补充边界。
+42. `haifengteng` / 海风藤
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+43. `haifushi` / 海浮石
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+44. `haigeqiao` / 海蛤壳
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+45. `haijinsha` / 海金沙
+   - `needs_review`；FTS/LIKE 检出多处四逆散加滑石、五倍子、海金沙治胆结石语境。
+   - 仅证明倪师语料提及“海金沙”，不自动验证性味、归经、功效、主治等全部本草字段；本轮写 review note，不改正文。
+46. `haima` / 海马
+   - 已在高风险药材前序轮次完成；本轮复核既有边界，只更新 review note 记录“跳过重复改动”，未改知识正文。
+47. `haitongpi` / 海桐皮
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+48. `hamayou` / 哈蟆油
+   - 已在高风险药材前序轮次完成；本轮复核既有边界，只更新 review note 记录“跳过重复改动”，未改知识正文。
+49. `hechezi` / 黑芝麻
+   - `no_source_found`；`p30/p36` 为 alias/duplicate mapped，canonical=`heizhima`；FTS/LIKE 无命中；补充别名/重复映射边界。
+50. `heizhima` / 黑芝麻
+   - `no_source_found`；canonical 候选仍无内部可追溯来源；补充规范条目候选边界。
+51. `hesi` / 鹤虱
+   - `no_source_found`；`p30` 为 `internal_research_exhausted`，canonical=`hesi`；FTS/LIKE 无命中；补充边界。
+52. `hetaoren` / 核桃仁
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+53. `hezi` / 鹤虱
+   - `no_source_found`；别名/重复映射到 `hesi`；FTS/LIKE 无命中；补充边界。
+54. `hongteng` / 红藤
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+55. `huangyaozi` / 黄药子
+   - 已在高风险药材前序轮次完成；本轮复核既有边界，只更新 review note 记录“跳过重复改动”，未改知识正文。
+56. `huazuirushi` / 花蕊石
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+57. `hugulu` / 胡芦巴
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+58. `huoxiang` / 广藿香
+   - `no_source_found`；FTS/LIKE 无命中；既有“倪师讲解”未由内部语料复核证实，补充待核验边界。
+59. `huzhang` / 虎杖
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+60. `jianghuang` / 姜黄
+   - `needs_review`；候选为“干姜黄芩黄连人参汤”跨词误切（干姜 + 黄芩），不是药材姜黄。
+   - FTS/LIKE 命中均属方名语境；本轮写 review note 记录误命中，不改正文。
+
+## 本轮新增 / 确认 review note
+
+- `report/p8_manual_reviews/ganlan.md`
+- `report/p8_manual_reviews/gijingcao.md`
+- `report/p8_manual_reviews/gouteng.md`
+- `report/p8_manual_reviews/guya.md`
+- `report/p8_manual_reviews/haifengteng.md`
+- `report/p8_manual_reviews/haifushi.md`
+- `report/p8_manual_reviews/haigeqiao.md`
+- `report/p8_manual_reviews/haijinsha.md`
+- `report/p8_manual_reviews/haima.md`（高风险前序完成，本轮复核跳过）
+- `report/p8_manual_reviews/haitongpi.md`
+- `report/p8_manual_reviews/hamayou.md`（高风险前序完成，本轮复核跳过）
+- `report/p8_manual_reviews/hechezi.md`
+- `report/p8_manual_reviews/heizhima.md`
+- `report/p8_manual_reviews/hesi.md`
+- `report/p8_manual_reviews/hetaoren.md`
+- `report/p8_manual_reviews/hezi.md`
+- `report/p8_manual_reviews/hongteng.md`
+- `report/p8_manual_reviews/huangyaozi.md`（高风险前序完成，本轮复核跳过）
+- `report/p8_manual_reviews/huazuirushi.md`
+- `report/p8_manual_reviews/hugulu.md`
+- `report/p8_manual_reviews/huoxiang.md`
+- `report/p8_manual_reviews/huzhang.md`
+- `report/p8_manual_reviews/jianghuang.md`
 
 ## 测试状态
 
 - 本轮初始基线：`38 passed`
-- 第 18-29 行处理后：`38 passed`
-- 第 30-37 行处理后：`38 passed`
-- 每批提交后复测：`38 passed`
-- 状态文件更新后最终复测：待运行
+- 第 39-44 行知识边界处理后：`38 passed`
+- 第 47、49-53 行知识边界处理后：`38 passed`
+- 第 54、56-59 行知识边界处理后：`38 passed`
+- review note 与状态文件更新后最终复测：`38 passed`
 
 ## Commits
 
@@ -133,19 +143,24 @@
 - `567d25e refine: manually review formulas muli_zexie zhishi_zhizi`
 - `85d0d43 refine: manually review aidicha anxixiang aoshu aoshugen baidoukou`
 - `1fbda90 refine: manually review baiguo baihuasheshecao banlangen banzhilian biandou biba bibo`
-
-本轮：
-
 - `0636b41 refine: manually review bichengqie bingpian cangerzi cansha caodoukou caoguo`
 - `5ef663e refine: manually review chouwutong chuanyubeimu chuipencao chunpi cijili daidaihua`
 - `db59c35 refine: manually review daodou dengxincao diercao dijincao ezhu feizi foshou`
 
+本轮：
+
+- `c269eac docs(p8): review no-source herb boundaries g-haigeqiao`
+- `55d2687 docs(p8): review alias and no-source herb boundaries h`
+- `4d34272 docs(p8): review hu-series no-source boundaries`
+- `3b4de45 docs(p8): add R6 manual review notes and status`
+
 ## 工作边界
 
-- 未使用脚本批量生成或批量修改知识正文；脚本仅用于只读列清单、查询索引/来源/FTS、生成同构 review note 草稿与跑测试，正文改动逐条保守完成。
+- 正文编辑逐条保守完成；脚本仅用于只读列清单、查询索引/来源/FTS、生成 review note 草稿与跑测试。
 - 对 `no_source_found` / `external_source_required` 条目，未从模型记忆补正文；仅补充清晰来源边界与待外部权威来源核验说明。
+- 对 football“橄榄球”、方名跨词“干姜黄芩”等误命中，明确降级为误命中/不可验证。
 - 对弱候选 / contextual 候选条目，只保留可追溯提及边界，不扩大验证到功效、主治、性味归经、剂量、禁忌等字段。
 
 ## 下一条
 
-- 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 38 行：`ganlan` / 橄榄（药材，当前原因：`quality_score_below_verified_threshold`，候选疑似 football“橄榄球”误命中）。
+- 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 61 行。需先读取 `data/review_queue.jsonl` 第 61 行确认条目后再处理。
