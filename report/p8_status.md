@@ -1,8 +1,8 @@
 # P8 手工来源精修状态
 
-- **更新时间：** 2026-07-06 21:49+ R4
+- **更新时间：** 2026-07-06 22:45+ R5
 - **分支：** `p8-manual-source-refinement`
-- **本轮范围：** `data/review_queue.jsonl` 第 6-17 行（从 `aidicha` / 矮地茶开始，连续 12 条）
+- **本轮范围：** `data/review_queue.jsonl` 第 18-37 行（从 `bichengqie` / 荜澄茄到 `foshou` / 佛手；其中第 35 行 `fanxieye` 已由高风险药材前序轮次完成，本轮复核既有记录后未重复修改）
 
 ## 本轮启动检查
 
@@ -37,69 +37,88 @@
 4. `muli_zexie` / 牡蛎泽泻散
 5. `zhishi_zhizi` / 枳实栀子豉汤
 
-## 本轮完成条目（review_queue 第 6-17 行）
+### review_queue 第 6-17 行（R4）
 
-6. `aidicha` / 矮地茶
-   - `no_source_found`；人工读取知识文件、review_queue、herb_sources、herb_index、knowledge_completeness、p30、p36，并只读检索 FTS。
-   - FTS 检索 `矮地茶 / 紫金牛 / 平地木 / 叶下红` 无命中。
-   - 正文补充 no_source 边界，现有医学性内容标明待外部权威来源核验，不升级质量。
-7. `anxixiang` / 安息香
-   - `no_source_found`；FTS 检索 `安息香 / 拙贝罗香` 无命中。
-   - 补充无内部来源边界；现有功效主治等只保留为待核验内容。
-8. `aoshu` / 糯稻根
-   - `no_source_found`；canonical 映射 `nuodaogenxu`，但 canonical 仍 no_source。
-   - FTS 检索 `糯稻根 / 稻根 / 稻根须 / 糯稻根须` 无命中。
-   - 补充 alias/canonical 与外部来源边界。
-9. `aoshugen` / 糯稻根须
-   - `no_source_found`；canonical 映射 `nuodaogenxu`，但 canonical 仍 no_source。
-   - FTS 检索同组关键词无命中。
-   - 补充 alias/canonical 与外部来源边界。
-10. `baidoukou` / 白豆蔻
-   - `needs_review`；候选仅为「豆蔻」别名级弱命中，`alias_match_only`。
-   - 修正 frontmatter 边界；补充说明候选不能作为白豆蔻专门来源，维持 no_source。
-11. `baiguo` / 白果
-   - `needs_review`；内部语料 exact-name 提及白果于四神汤/肾脏积水语境。
-   - 保留 `trace_status: verified` 作为可追溯提及，但新增边界说明：不支撑性味归经、功效主治等本草字段。
-12. `baihuasheshecao` / 白花蛇舌草
-   - `needs_review`；exact-name 提及于批评胆结石/肝炎清热药语境。
-   - 保留可追溯提及，新增边界说明：不支撑本文功效、主治及“神农本草经”来源字段。
-13. `banlangen` / 板蓝根
-   - `needs_review`；contextual trace，水病/表证失治语境中提及并作负面评价。
-   - 保留 `verified_contextual`，新增边界说明：不支撑功效主治等字段。
-14. `banzhilian` / 半枝莲
-   - `no_source_found`；FTS 检索「半枝莲」无命中。
-   - 补充 no_source 边界；现有医学性内容待外部权威来源核验。
-15. `biandou` / 白扁豆
-   - `needs_review`；候选仅为「扁豆」别名级食忌线索，`alias_match_only`。
-   - 修正 frontmatter 边界；补充说明不能作为白扁豆专门来源，维持 no_source。
-16. `biba` / 荜澄茄
-   - `no_source_found`；映射 canonical `bichengqie`，但 canonical 仍 no_source。
-   - FTS 检索「荜澄茄 / 毕澄茄」无命中。
-   - 补充 alias/canonical 与外部来源边界。
-17. `bibo` / 荜茇
-   - `no_source_found`；FTS 检索「荜茇 / 毕拨 / 荜拨」无命中。
-   - 在既有边界页上补充 P8 手工复核说明。
+- `aidicha`, `anxixiang`, `aoshu`, `aoshugen`, `baidoukou`, `baiguo`, `baihuasheshecao`, `banlangen`, `banzhilian`, `biandou`, `biba`, `bibo`
+
+## 本轮完成条目（review_queue 第 18-37 行）
+
+18. `bichengqie` / 荜澄茄
+   - `no_source_found`；FTS 检索「荜澄茄 / 毕澄茄」无命中。
+   - `p30/p36` 标记 `alias_first`，canonical 仍 no_source；补充来源边界。
+19. `bingpian` / 冰片
+   - `needs_review`；候选为「龙脑」别名级命中，且位于复方/他药语境。
+   - FTS 未见「冰片」专名；移除正文中误落在 frontmatter 后的 no_source 元数据文本，并补充 alias/contextual 边界。
+20. `cangerzi` / 苍耳子
+   - `no_source_found`；FTS 检索无命中。
+   - 对既有“倪师讲解”加未验证提示，补充 no_source 边界。
+21. `cansha` / 蚕砂
+   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
+22. `caodoukou` / 草豆蔻
+   - `no_source_found`；FTS 检索「草豆蔻 / 草蔻」无命中；补充外部权威来源核验边界。
+23. `caoguo` / 草果
+   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
+24. `chouwutong` / 臭梧桐
+   - `no_source_found`；FTS 检索无命中；`p36` 为 `herb_modern_or_regional`；补充边界。
+25. `chuanyubeimu` / 川贝母
+   - `no_source_found`；扩展命中为「贝母」通名，不等同「川贝母」专名。
+   - 保持 no_source，不以通名命中验证川贝母功效主治等字段。
+26. `chuipencao` / 垂盆草
+   - `no_source_found`；FTS 检索无命中；`p36` 为 `herb_modern_or_regional`；补充边界。
+27. `chunpi` / 椿皮
+   - `no_source_found`；FTS 检索无命中；`p30/p36` 为 `internal_research_exhausted`；补充边界。
+28. `cijili` / 刺蒺藜
+   - `no_source_found`；FTS 无「刺蒺藜」专名，仅有「蒺藜/蒺藜子/白蒺藜」通名或近缘语境。
+   - 不以通名命中验证专名条目，补充边界。
+29. `daidaihua` / 代代花
+   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
+30. `daodou` / 刀豆
+   - `no_source_found`；FTS 检索无命中；`p30/p36` 为 `internal_research_exhausted`；补充边界。
+31. `dengxincao` / 灯心草
+   - `needs_review`；候选为分消汤/医案加味语境中的可追溯提及。
+   - 保留既有 verified/contextual，但明确不验证性味、归经、功效、主治、剂量、禁忌等本草字段。
+32. `diercao` / 地耳草
+   - `no_source_found`；FTS 检索无命中；`p36` 为 `herb_modern_or_regional`；补充边界。
+33. `dijincao` / 地锦草
+   - `no_source_found`；FTS 检索无命中；`p36` 为 `herb_modern_or_regional`；补充边界。
+34. `ezhu` / 莪术
+   - `needs_review`；exact-name 提及存在，语境为三棱莪术破血力量较强及妇科/攻坚用药讨论。
+   - 保留可追溯提及，不扩展验证到“神农本草经”来源、性味、归经、功效、主治等全部字段。
+35. `fanxieye` / 番泻叶
+   - 已在高风险药材前序轮次完成；本轮复核既有 `report/p8_manual_reviews/fanxieye.md` 与边界，无重复修改。
+36. `feizi` / 榧子
+   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
+37. `foshou` / 佛手
+   - `no_source_found`；FTS 检索无命中；补充外部权威来源核验边界。
 
 ## 本轮新增 review note
 
-- `report/p8_manual_reviews/aidicha.md`
-- `report/p8_manual_reviews/anxixiang.md`
-- `report/p8_manual_reviews/aoshu.md`
-- `report/p8_manual_reviews/aoshugen.md`
-- `report/p8_manual_reviews/baidoukou.md`
-- `report/p8_manual_reviews/baiguo.md`
-- `report/p8_manual_reviews/baihuasheshecao.md`
-- `report/p8_manual_reviews/banlangen.md`
-- `report/p8_manual_reviews/banzhilian.md`
-- `report/p8_manual_reviews/biandou.md`
-- `report/p8_manual_reviews/biba.md`
-- `report/p8_manual_reviews/bibo.md`
+- `report/p8_manual_reviews/bichengqie.md`
+- `report/p8_manual_reviews/bingpian.md`
+- `report/p8_manual_reviews/cangerzi.md`
+- `report/p8_manual_reviews/cansha.md`
+- `report/p8_manual_reviews/caodoukou.md`
+- `report/p8_manual_reviews/caoguo.md`
+- `report/p8_manual_reviews/chouwutong.md`
+- `report/p8_manual_reviews/chuanyubeimu.md`
+- `report/p8_manual_reviews/chuipencao.md`
+- `report/p8_manual_reviews/chunpi.md`
+- `report/p8_manual_reviews/cijili.md`
+- `report/p8_manual_reviews/daidaihua.md`
+- `report/p8_manual_reviews/daodou.md`
+- `report/p8_manual_reviews/dengxincao.md`
+- `report/p8_manual_reviews/diercao.md`
+- `report/p8_manual_reviews/dijincao.md`
+- `report/p8_manual_reviews/ezhu.md`
+- `report/p8_manual_reviews/feizi.md`
+- `report/p8_manual_reviews/foshou.md`
 
 ## 测试状态
 
 - 本轮初始基线：`38 passed`
-- 第 6-10 行完成后：`38 passed`
-- 第 11-17 行完成后：`38 passed`
+- 第 18-29 行处理后：`38 passed`
+- 第 30-37 行处理后：`38 passed`
+- 每批提交后复测：`38 passed`
 - 状态文件更新后最终复测：待运行
 
 ## Commits
@@ -112,18 +131,21 @@
 - `8be3577 refine: manually review shandougen tubiechong yadanzi yangjinhua zhechong`
 - `c4cc788 refine: manually review baizhu_fuzi guizhi_houpuxingzi mahuang_lianqiao`
 - `567d25e refine: manually review formulas muli_zexie zhishi_zhizi`
-
-本轮：
-
 - `85d0d43 refine: manually review aidicha anxixiang aoshu aoshugen baidoukou`
 - `1fbda90 refine: manually review baiguo baihuasheshecao banlangen banzhilian biandou biba bibo`
 
+本轮：
+
+- `0636b41 refine: manually review bichengqie bingpian cangerzi cansha caodoukou caoguo`
+- `5ef663e refine: manually review chouwutong chuanyubeimu chuipencao chunpi cijili daidaihua`
+- `db59c35 refine: manually review daodou dengxincao diercao dijincao ezhu feizi foshou`
+
 ## 工作边界
 
-- 未使用脚本批量生成或批量修改知识正文；脚本仅用于只读列清单、查询索引/来源/FTS、跑测试。
+- 未使用脚本批量生成或批量修改知识正文；脚本仅用于只读列清单、查询索引/来源/FTS、生成同构 review note 草稿与跑测试，正文改动逐条保守完成。
 - 对 `no_source_found` / `external_source_required` 条目，未从模型记忆补正文；仅补充清晰来源边界与待外部权威来源核验说明。
 - 对弱候选 / contextual 候选条目，只保留可追溯提及边界，不扩大验证到功效、主治、性味归经、剂量、禁忌等字段。
 
 ## 下一条
 
-- 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 18 行：`bichengqie` / 荜澄茄（药材，当前原因：未检索到来源候选）。
+- 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 38 行：`ganlan` / 橄榄（药材，当前原因：`quality_score_below_verified_threshold`，候选疑似 football“橄榄球”误命中）。
