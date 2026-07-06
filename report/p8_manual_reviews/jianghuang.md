@@ -1,30 +1,30 @@
-# 姜黄 手工复核记录
+# jianghuang 手工复核记录
 
-- **复核时间：** 2026-07-06
+- **复核时间：** 2026-07-07
 - **当前文件：** `knowledge/herbs/jianghuang.md`
-- **队列位置：** `data/review_queue.jsonl` 第 60 行
-- **条目：** 姜黄 (`jianghuang`)
+- **队列位置：** `data/p11_content_quality_queue.jsonl` 第 71 行
+- **条目：** 姜黄
 
 ## 当前文件概况
 
-复核前队列状态为 `needs_review`；本轮人工读取 knowledge 文件、review_queue 行，并核对 `data/herb_sources.jsonl`、`data/herb_index.jsonl`、`data/knowledge_completeness.jsonl`、`data/p30_no_source_classification.jsonl`、`data/p36_external_source_queue.jsonl`，只读查询 `data/source_fts.sqlite`。
+当前条目为 herb，frontmatter `trace_status: verified`，有 `source_refs`。正文来源摘录实际围绕《伤寒论》“干姜黄连黄芩人参汤”，p11 缺失 `properties` 与 `meridian`。
 
-## 查到的来源 / 引用摘要
+## 来源 / FTS 摘要
 
-- `review_queue` top_source 为“干姜黄芩黄连人参汤”中的跨词误切，命中“姜黄”实际来自“干姜+黄芩”，不是药材姜黄。
-- source FTS/LIKE 命中均属干姜黄连黄芩人参汤相关语境；不能作为姜黄药材来源。
-- completeness：trace=`verified`，quality=`verified_direct`。
+- `herb_index.jsonl` / `verified_sources.jsonl`：`source_quality_level=verified_direct`，引用 `桂林古本伤寒杂病论 .json`，page_num 为 null。
+- 主引用里的“姜黄”来自“干姜黄芩黄连人参汤/干姜黄连黄芩人参汤”的连续字串，不是药材“姜黄”。
+- `herb_sources.jsonl` 有 5 个候选命中，但均应警惕干姜、黄芩、黄连相邻字串误切。
+- `source_fts.sqlite` 只读检索“姜黄”无命中。
 
-## 修改点
+## 是否直接支撑缺失字段
 
-- 本轮仅写 review note 记录来源边界；未改知识正文，避免对既有 verified 元数据作批量性结构调整。
-- 未新增功效、主治、剂量、禁忌等医学正文。
+- properties：不支撑。
+- meridian：不支撑。
 
-## 保留边界
+## 修改 / 不修改理由
 
-- no_source/external_source_required 条目继续保持未验证边界；既有医学性字段仅作为待核验草稿或占位。
-- 弱候选或上下文提及不等于医学内容全字段验证。
+本轮不补写字段。当前 verified 来源属于 false positive / 分词串联污染，不应支撑姜黄条目任何医学字段。
 
-## 下一步
+## 未决问题
 
-后续若纳入外部来源，应逐条补充明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量、禁忌及特殊安全字段。
+- 建议后续协同降级 `trace_status` 或重入 no_source/external source 流程，并清理 Markdown、`herb_index`、`verified_sources` 中的误引用。

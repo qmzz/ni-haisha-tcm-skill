@@ -1,31 +1,30 @@
-# 胡芦巴 手工复核记录
+# hugulu 手工复核记录
 
-- **复核时间：** 2026-07-06
+- **复核时间：** 2026-07-07
 - **当前文件：** `knowledge/herbs/hugulu.md`
-- **队列位置：** `data/review_queue.jsonl` 第 57 行
-- **条目：** 胡芦巴 (`hugulu`)
+- **队列位置：** `data/p11_content_quality_queue.jsonl` 第 68 行
+- **条目：** 胡芦巴
 
 ## 当前文件概况
 
-复核前队列状态为 `no_source_found`；本轮人工读取 knowledge 文件、review_queue 行，并核对 `data/herb_sources.jsonl`、`data/herb_index.jsonl`、`data/knowledge_completeness.jsonl`、`data/p30_no_source_classification.jsonl`、`data/p36_external_source_queue.jsonl`，只读查询 `data/source_fts.sqlite`。
+当前条目为 herb，frontmatter `trace_status: no_source_found`，有 `external_reference_required: true` 与 `no_source_policy: keep_boundary_until_traceable_source`。p11 缺失字段为 `[]`。字段完整但 no_source；现有苦温、归肾、温肾助阳等内容未被内部来源支撑。
 
-## 查到的来源 / 引用摘要
+## 来源 / FTS 摘要
 
-- source FTS/LIKE 未检出该名称可追溯命中。
-- p30：`external_source_required`；canonical=`None`；risk=`low`。
-- p36：`external_source_required`；建议来源范围=['official_pharmacopoeia', 'modern_tcm_reference', 'classical_tcm_text']。
-- completeness：trace=`no_source_found`，quality=`no_source`。
+- `herb_index.jsonl`：`source_quality_level=no_source`，`source_refs=[]`。
+- `herb_sources.jsonl`：`status=no_source_found`，`source_hits=[]`。
+- `no_source_classification.jsonl`：`review_status=no_source_found`。
+- `source_fts.sqlite` 只读检索“胡芦巴”无命中。
 
-## 修改点
+## 是否直接支撑缺失字段
 
-- 在知识文件中补充 P8 手工来源复核/外部权威来源边界说明。
-- 未新增功效、主治、剂量、禁忌等医学正文。
+当前无内部来源直接支撑 p11 所列缺失字段；若 p11 未列缺失字段，现有医学字段也未被内部来源直接支撑。
 
-## 保留边界
+## 修改 / 不修改理由
 
-- no_source/external_source_required 条目继续保持未验证边界；既有医学性字段仅作为待核验草稿或占位。
-- 弱候选或上下文提及不等于医学内容全字段验证。
+不修改正文，不从模型记忆或常识补写。no_source 条目只能保留边界或进入外部权威来源流程。
 
-## 下一步
+## 未决问题
 
-后续若纳入外部来源，应逐条补充明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量、禁忌及特殊安全字段。
+- 后续如保留或提升现有医学字段，需逐条补充白名单外部权威 `source_refs`。
+- 若正文存在“内容来源于倪海厦老师教学资料”或伪引语表达，应在后续边界治理中统一降噪。
