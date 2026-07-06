@@ -45,3 +45,15 @@
 ## 是否需要外部权威资料
 
 **需要。** 当前内部语料无命中；作为高风险药材，后续扩写必须依赖药典或同等级权威资料。
+
+
+---
+
+## R8 复核补记（2026-07-06）
+
+- 队列位置：`data/review_queue.jsonl` 第 92 行；review_queue 状态=`no_source_found`。
+- 本轮重新核对 knowledge 文件、review_queue、`herb_sources/herb_index/completeness/p30/p36`，并只读查询 `data/source_fts.sqlite`。
+- herb_sources：status=`no_source_found`，source_hit_count=`0`，searched_keywords=['千金子']。
+- p30/p36：classification=`external_source_required`，category=`herb_high_risk`，risk_tier=`high`，canonical_item_id=`None`。
+- source FTS/LIKE：按名称 `千金子` 检索得到 0 条 LIKE 命中；未检出可追溯命中。
+- 处理结论：既有 review note/高风险边界已存在，本轮只复核并记录跳过，不重复改写正文医学内容。
