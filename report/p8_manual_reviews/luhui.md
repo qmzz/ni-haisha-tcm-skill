@@ -1,50 +1,31 @@
-# luhui 手工复核记录
+# 芦荟 手工复核记录
 
 - **复核时间：** 2026-07-06
 - **当前文件：** `knowledge/herbs/luhui.md`
-- **风险分类：** `herb_high_risk`
+- **队列位置：** `data/review_queue.jsonl` 第 74 行
+- **条目：** 芦荟 (`luhui`)
 
 ## 当前文件概况
 
-当前条目为 P5 标准边界型 `no_source_found` 页面，原文件已包含学习用途声明、来源追溯状态和无专门讲解说明。P8 本轮补充高风险外部来源复核边界，并将 frontmatter reviewer/review_status 调整为人工精修状态。
+复核前队列状态为 `no_source_found`；该条目已在前序高风险药材轮次完成正文边界处理。本轮人工读取 knowledge 文件、review_queue 行，并核对 `data/herb_sources.jsonl`、`data/herb_index.jsonl`、`data/knowledge_completeness.jsonl`、`data/p30_no_source_classification.jsonl`、`data/p36_external_source_queue.jsonl`，只读查询 `data/source_fts.sqlite`。
 
 ## 查到的来源 / 引用摘要
 
-1. `data/herb_sources.jsonl`
-   - `herb_id=luhui`
-   - `searched_keywords=["芦荟"]`
-   - `source_hits=[]`，`source_hit_count=0`，`status=no_source_found`
-2. `data/review_queue.jsonl`
-   - `review_status=no_source_found`
-   - `reason=未检索到来源候选`
-3. `data/source_fts.sqlite`
-   - 以“芦荟 / 卢会 / 卢荟”检索 `source_pages_fts`，无命中
-4. `data/p30_no_source_classification.jsonl` / `data/knowledge_completeness.jsonl`
-   - `no_source_classification=internal_research_exhausted`
-   - `p6c_resolution=internal_no_hit`
-5. `data/p36_external_source_queue.jsonl` / `data/p39_high_risk_external_review_queue.jsonl`
-   - 标记为 `herb_high_risk`
-   - 要求外部权威来源和完整安全字段复核
+- source FTS/LIKE 未检出“芦荟”可追溯命中。
+- `herb_sources`：`source_hits=[]`，`source_hit_count=0`，`status=no_source_found`。
+- p30：`internal_research_exhausted`；P6-C 内部语料复查耗尽。
+- p36：risk=`high`，高风险安全字段要求保留，未满足前不得补写/提升医学内容。
+- completeness：trace=`no_source_found`，quality=`no_source`。
 
 ## 修改点
 
-1. frontmatter reviewer 改为 `p8_manual_source_refinement`
-2. frontmatter review_status 改为 `pending_external_authoritative_source`
-3. 增加 `risk_tier: high`、`external_reference_required: true`、`no_source_policy`
-4. 来源追溯说明中补充 P6-C 已 `internal_research_exhausted`
-5. 正文增加“高风险外部来源复核边界（P8 手工）”段落
+- 本轮仅更新 review note；正文已含 P8 高风险外部来源复核边界，未重复修改。
+- 未新增功效、主治、剂量、禁忌等医学正文。
 
 ## 保留边界
 
-- 保持 `trace_status: no_source_found`
-- 保持 P6-C `internal_research_exhausted` 判断
-- 不补写功效、剂量、毒性、禁忌、妊娠/儿童或相互作用
+- 高风险 no_source 条目必须等待药典/权威现代中药学等外部来源，并逐项补齐毒性、禁忌、妊娠/哺乳/儿童、剂量、炮制/用法、相互作用/现代注意、法定限制、急症红旗等字段。
 
-## 未决问题
+## 下一步
 
-- 若后续扩写，需确定药典或现代中药学权威来源版本
-- 是否需要对常见异名进一步建立人工别名清单，需权威来源支撑
-
-## 是否需要外部权威资料
-
-**需要。** 当前内部语料检索已耗尽无可靠命中；作为高风险药材，后续扩写必须依赖药典或同等级权威资料。
+后续若纳入外部来源，应逐条补充明确 `source_refs`，并单独核验所有安全字段。
