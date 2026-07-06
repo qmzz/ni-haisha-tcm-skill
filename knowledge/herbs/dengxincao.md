@@ -25,9 +25,15 @@ source_refs:
 - 条目类型：药材
 - 追溯状态：verified
 - 来源引用：见本文 frontmatter 中的 `source_refs`
-- 复核说明：P17 no_source reprocessed - found in sources.
+- 复核说明：P17 no_source reprocessed - found in sources；P8 人工复核认为此为方剂/医案语境中的可追溯提及，不验证本草功效字段。
 
 <!-- P5_STANDARD_NOTICE_END -->
+
+## 🔎 P8 手工来源复核
+
+`review_queue` 候选与 `review_decisions` 均显示“灯心草”在分消汤或医案加味语境中出现；只读 FTS 未额外检得“灯心草/灯芯草”条目页。该来源可作为内部语料中出现“灯心草”的追溯线索，但不能单独支撑本文性味、归经、功效、主治、剂量或禁忌等本草字段。
+
+本轮保留既有 `trace_status: verified`，并将人工结论限定为 contextual trace。
 
 ## 🌿 倪师讲解
 
