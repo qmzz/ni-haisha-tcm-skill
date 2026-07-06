@@ -2,12 +2,12 @@
 title: "芦根"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p6_verified_standardization"
-review_status: verified
+reviewer: "p8_r20_source_boundary"
+review_status: needs_review
 kind: "herb"
 source: "神农本草经"
 tags: ["神农本草经", "中药", "倪海厦"]
-trace_status: verified
+trace_status: needs_review
 source_refs:
   - source_file: "金匮要略.json"
     page_num: null
@@ -25,9 +25,9 @@ source_refs:
 ## 来源追溯状态
 
 - 条目类型：药材
-- 追溯状态：verified
+- 追溯状态：needs_review
 - 来源引用：见本文 frontmatter 中的 `source_refs`
-- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
+- 复核说明：P8 R20 手工复核确认当前来源仅支撑金匮食物中毒急救方中使用芦根，不支撑芦根性味归经或独立药材字段；后续需外部权威来源或倪师直接讲解。
 
 <!-- P5_STANDARD_NOTICE_END -->
 

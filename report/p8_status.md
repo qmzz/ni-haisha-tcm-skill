@@ -1,6 +1,36 @@
 # P8 手工来源精修状态
 
 
+## R20 高确定性 source-boundary / registry 同步修复（2026-07-07）
+
+- **分支：** `p8-manual-source-refinement`
+- **启动检查：** 初始 `git status --short --branch` 干净；`.venv/bin/python -m pytest -q` → `38 passed`
+- **本轮范围：** 从既有 `report/p8_manual_reviews/*.md` 中选择证据边界清楚的小批修复；不做大规模字段同步、不做别名合并。
+- **完成数量：** 4 项。
+
+### R20 已完成修复
+
+- `jinyingzi`：按已清理 Markdown 同步 `data/herb_index.jsonl` 与 `data/verified_sources.jsonl` 的 quote，移除相邻旋覆花/兰草等污染；不补 properties/meridian。
+- `lugen`：确认当前来源仅为金匮食物中毒急救方中“芦根煮汁”，不支撑芦根独立性味归经；Markdown、`herb_index`、`verified_sources`、`knowledge_completeness` 降级为 needs_review / external_source_required。
+- `madouling`：确认当前来源为防己讲解旁及“马兜铃/马兜铃酸”，不支撑马兜铃独立药材字段；Markdown、`herb_index`、`verified_sources`、`knowledge_completeness` 收紧为 needs_review / contextual_mention。
+- `dongkuizi`：清理 `herb_index` 中 properties/meridian/effects 的 Markdown 字段串联污染；保留 direct source boundary，`meridian` 置空并在 `knowledge_completeness` 标为缺失。
+
+### R20 暂缓 / 未做
+
+- `sanleng`：review note 指出当前神农本草经 source_ref 为玉竹/萎蕤形态 false positive，但 FTS 另有金匮方中三棱用药线索；本轮未证成整体边界，继续暂缓。
+- `sangzhi`：当前 source_ref 来自桑螵蛸产地语境，另有桑枝用药/部位旁及线索；需单独决定 contextual/weak/no_source，不在本轮强改。
+
+### R20 测试与提交
+
+- 基线：`38 passed`
+- 修复后：`38 passed`
+- 提交：待本轮提交后回填。
+
+### R20 工作边界
+
+- 逐项读取 review note、knowledge 文件、index / verified_sources / knowledge_completeness / source_fts.sqlite 后再修改。
+- 未新增外部医学正文，未补未支撑字段，未处理 `xiamen` / `yangguan` / `yinjiao_ren` 已完成项。
+
 ## R19 高确定性专项修复（2026-07-07）
 
 - **分支：** `p8-manual-source-refinement`

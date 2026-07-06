@@ -2,11 +2,11 @@
 title: "马兜铃"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p17_content_quality"
-review_status: verified
+reviewer: "p8_r20_source_boundary"
+review_status: needs_review
 kind: "herb"
 source: "神农本草经"
-trace_status: verified
+trace_status: needs_review
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 226
@@ -58,9 +58,9 @@ source_refs:
 ## 来源追溯状态
 
 - 条目类型：药材
-- 追溯状态：verified
+- 追溯状态：needs_review
 - 来源引用：见本文 frontmatter 中的 `source_refs`
-- 复核说明：P17 content quality verified. 提取了完整的倪海厦讲解原文。
+- 复核说明：P8 R20 手工复核确认当前来源为防己讲解中的马兜铃/马兜铃酸旁及提及，不是马兜铃独立药材讲解；不可作为性味归经等字段依据。
 
 <!-- P5_STANDARD_NOTICE_END -->
 
