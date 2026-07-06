@@ -1,9 +1,9 @@
-# 千金子 手工复核记录
+# 千年健 手工复核记录
 
 - **复核时间：** 2026-07-06
-- **当前文件：** `knowledge/herbs/qianjinzi.md`
-- **队列位置：** `data/review_queue.jsonl` 第 92 行
-- **条目：** 千金子 (`qianjinzi`)
+- **当前文件：** `knowledge/herbs/qiannianjian.md`
+- **队列位置：** `data/review_queue.jsonl` 第 93 行
+- **条目：** 千年健 (`qiannianjian`)
 
 ## 当前文件概况
 
@@ -12,16 +12,16 @@
 ## 查到的来源 / 引用摘要
 
 - review_queue：`no_source_found`；reason=`未检索到来源候选`。
-- herb_sources：status=`no_source_found`，source_hit_count=`0`，searched_keywords=['千金子'].
+- herb_sources：status=`no_source_found`，source_hit_count=`0`，searched_keywords=['千年健'].
 - herb_index：trace_status=`no_source_found`，source_quality_level=`no_source`，source_refs_count=0.
 - completeness：trace_status=`no_source_found`，quality_tier=`seed`，source_quality_level=`no_source`。
-- p30：classification=`external_source_required`，canonical_item_id=`None`，risk_tier=`high`。
-- p36：category=`herb_high_risk`，risk_tier=`high`，recommended_source_scopes=['official_pharmacopoeia', 'modern_tcm_reference'].
-- source FTS/LIKE：按名称 `千金子` 检索得到 0 条 LIKE 命中；未检出可追溯命中。
+- p30：classification=`external_source_required`，canonical_item_id=`None`，risk_tier=`low`。
+- p36：category=`herb_standard`，risk_tier=`low`，recommended_source_scopes=['official_pharmacopoeia', 'modern_tcm_reference', 'classical_tcm_text'].
+- source FTS/LIKE：按名称 `千年健` 检索得到 0 条 LIKE 命中；未检出可追溯命中。
 
 ## 修改点
 
-- 既有高风险 P8 review note 已存在；本轮按任务要求复核队列、知识文件与索引/来源状态后记录跳过，不重复改写医学正文。
+- 本轮新增/确认 P8 手工复核记录；no_source 条目仅补来源边界和外部权威来源需求，未补医学正文。
 
 ## 保留边界
 
