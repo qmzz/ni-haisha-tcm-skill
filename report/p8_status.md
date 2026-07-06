@@ -1,6 +1,42 @@
 # P8 手工来源精修状态
 
 
+## R19 高确定性专项修复（2026-07-07）
+
+- **分支：** `p8-manual-source-refinement`
+- **启动检查：** 初始 `git status --short` 干净；`.venv/bin/python -m pytest -q` → `38 passed`
+- **本轮范围：** 基于既有 `report/p8_manual_reviews/*.md` 证据，只做 5-10 个高确定性数据一致性修复；不新增 review note 队列、不批量重写正文。
+- **完成数量：** 6 项。
+
+### R19 已完成修复
+
+- `zhongshu`：清理伤寒论“中枢神经/生命中枢”等非穴位语境 false positive；Markdown、`acupoint_index`、`knowledge_completeness` 降级为 `no_source_found/no_source`，并从 `verified_sources` 移除。
+- `ganlan`：清理 football/橄榄球语境 false positive；Markdown、`herb_index`、`knowledge_completeness` 降级为 `no_source_found/no_source`，并从 `verified_sources` 移除。
+- `jianghuang`：清理“干姜黄连黄芩人参汤”跨词误切 false positive；Markdown、`herb_index`、`knowledge_completeness` 降级为 `no_source_found/no_source`，并从 `verified_sources` 移除。
+- `xiamen`：title/alias 为侠白，归经从 `足阳明胃经` 修为 `手太阴肺经`；同步 `knowledge/acupoints/xiamen.md` 与 `acupoint_index`，未做别名合并或 source_ref 替换。
+- `yangguan`/`yaoyangguan`：别名条目 `yangguan` 归经从 `足少阳胆经` 修为 `督脉`，与主条目 `yaoyangguan` 保持一致；两者仍保持 no-source 外部来源边界。
+- `yinjiao_ren`：移除错误映射到 `yinjiao`（龈交）的 `canonical_item_id` / `verified_alias` 状态；统一降级为 `no_source_found/no_source` 并加入 no-source / external-source 后续队列。未直接补 p29 来源，留待单独核查 quote 后提升。
+
+### R19 未做 / 暂缓原因
+
+- `sanleng`：review note 指出神农本草经“地下茎粗大有三棱”为玉竹/萎蕤形态 false positive；但正文另含金匮消肿溃坚汤中直接出现“三棱”的片段，本轮未做整体降级，需单独判断药材条目 source boundary。
+- `sangzhi`：当前 source_ref 来自桑螵蛸产地语境，不支撑桑枝归经；但 FTS 另有桑枝用药旁及线索，本轮未贸然整体降级，需后续决定 contextual/weak/no_source 边界。
+- `huangbo`/`huangbai`：属黄柏重复/同源别名治理问题，影响面超过本轮少量高确定性修复；本轮只保留 review notes，不做合并。
+- 其他 p11/p26 候选：继续保留 review note 证据，等待后续按字段同步、source boundary 或 alias 专项处理。
+
+### R19 测试与提交
+
+- 基线：`38 passed`
+- 第一批 `zhongshu ganlan jianghuang` 后：`38 passed`，commit `974adfa fix: apply p8 reviewed source-boundary corrections zhongshu ganlan jianghuang`
+- 第二批 `xiamen yangguan yinjiao_ren` 后：`38 passed`，commit `f3d986e fix: apply p8 reviewed source-boundary corrections xiamen yangguan yinjiao_ren`
+
+### R19 工作边界
+
+- 只使用既有人工复核证据做最小修复；未新增医学字段、未引入外部正文、未做批量清洗。
+- 对降级项同步了 Markdown、index、`knowledge_completeness`、`verified_sources`、no-source/external-source 队列，避免状态分裂。
+- 对证据不足或牵涉广的项目仅记录暂缓原因，不强改。
+
+
 ## R18 p26_needs_review_segments 收尾（2026-07-07）
 
 - **分支：** `p8-manual-source-refinement`
