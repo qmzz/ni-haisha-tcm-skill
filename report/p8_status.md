@@ -7,6 +7,25 @@
 - **Deferred:** `daji`, `dangshen`, `danshen` were left for a later pass because their current registry/source boundary needs separate quote-level review. `bohe`, `chenxiang`, `cishi`, `congbai`, `dingxiang`, `duhuo` were not changed in this first R21 commit; they remain candidates for contextual tightening only after quote-level confirmation. `sanleng` and `sangzhi` remain deferred per prior R20 boundary notes.
 - **Tests:** baseline `38 passed`; after this sync `38 passed`.
 
+## R22 P8 reviewed corrections (2026-07-07)
+
+- **Scope:** downgrade `chenxiang`/`dingxiang` from verified_direct to contextual_mention; sync clean frontmatter quotes for `daji`/`dangshen`/`danshen`.
+- **Evidence read:** corresponding `report/p8_manual_reviews/*.md`, `knowledge/herbs/*.md` frontmatter/body, `data/herb_index.jsonl`, `data/herb_sources.jsonl`, `data/verified_sources.jsonl`, `data/knowledge_completeness.jsonl`, and `data/source_fts.sqlite`.
+- **Fix:**
+  - **chenxiang**: downgraded from `verified_direct` to `contextual_mention` across markdown frontmatter + 3 registry files. Evidence: quote is 柏子仁丸 formula composition 旁及 沉香, followed by 茯苓 independent entry; does not support independent chenxiang materia medica.
+  - **dingxiang**: downgraded from `verified_direct` to `contextual_mention` across markdown frontmatter + 3 registry files. Evidence: quote is 桂枝讲解香料群岛 旁及 丁香; does not support independent dingxiang materia medica.
+  - **daji**: synced verified frontmatter 长 quote (p292 direct lecture on 大戟 properties/dosage) into `herb_index`/`verified_sources`; cleared stale empty_quote metadata.
+  - **dangshen**: synced verified frontmatter 长 quote (p60 党参/人参替换语境) into `herb_index`/`verified_sources`; cleared stale empty_quote metadata.
+  - **danshen**: synced verified frontmatter 长 quote (p118 direct lecture on 丹参) into `herb_index`/`verified_sources`; cleared stale empty_quote metadata. Previous registry had TOC-page-only 丹参 mention; now replaced by the actual lecture segment.
+- **Deferred/Eval:**
+  - `bohe`: skip. Quote is 泽兰叶类薄荷旁及 ("叶类薄荷"); not enough for independent bohe downgrade without more source boundary work. Mark as needs deeper review.
+  - `cishi`: skip. Current quote is 丹砂"畏磁石"旁及 (wrong subject); FTS shows "慈石/磁石" independent pharmacological segment exists but not yet bound to knowledge file. Needs separate source-rebinding, not a simple downgrade.
+  - `congbai`: skip. Current quote is 冬葵/葱白 postpartum galactagogue usage — a concrete mention, not a pure 旁及. Downgrade would require more nuanced boundary classification; defer.
+  - `duhuo`: skip. Current quote is 麝香讲解中"风塞的用独活羌活"旁及; not a full direct lecture. The evidence is thinner than chenxiang/dingxiang. Defer to later batch.
+  - `gansui` through `meiguihua` (R18 batch): not reached this round; only the 5 items above were addressed.
+- **Tests:** baseline `38 passed`; after R22 sync `38 passed`.
+- **Commit:** `de19106 fix: apply P8 reviewed corrections chenxiang, dingxiang downgrade to contextual_mention; daji, dangshen, danshen quote sync`
+
 # P8 手工来源精修状态
 
 
