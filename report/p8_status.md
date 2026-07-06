@@ -164,3 +164,122 @@
 ## 下一条
 
 - 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 61 行。需先读取 `data/review_queue.jsonl` 第 61 行确认条目后再处理。
+
+---
+
+# R7 更新（2026-07-06 23:40+）
+
+- **分支：** `p8-manual-source-refinement`
+- **本轮范围：** `data/review_queue.jsonl` 第 61-85 行（从 `jiangxiang` / 降香 到 `muhudie` / 木蝴蝶；其中第 69 `leigongteng`、第 74 `luhui`、第 82 `maqianzi` 已由高风险轮次完成，本轮只复核记录，未重复修改知识正文）
+
+## R7 启动检查
+
+- 当前分支：`p8-manual-source-refinement`
+- 初始 `git status --short`：工作区干净
+- 初始基线：`.venv/bin/python -m pytest -q` → `38 passed`
+
+## R7 完成条目（review_queue 第 61-85 行）
+
+61. `jiangxiang` / 降香
+   - `no_source_found`；FTS/LIKE 无命中；p30/p36 为 `external_source_required`；补充 P8 外部权威来源边界。
+62. `jiguanhua` / 鸡冠花
+   - `no_source_found`；FTS/LIKE 无命中；补充外部权威来源边界。
+63. `jinguolan` / 金果榄
+   - `no_source_found`；FTS/LIKE 无命中；p7b 为 modern/regional；补充外部来源边界。
+64. `jinqiancao` / 金钱草
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+65. `jiucaizi` / 韭菜子
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+66. `jixueteng` / 鸡血藤
+   - `no_source_found`；FTS/LIKE 无命中；p7b 为 modern/regional；补充边界。
+67. `laifuzi` / 莱菔子
+   - `no_source_found`；FTS/LIKE 对“莱菔子/萝卜子”均无命中；补充边界。
+68. `laoguancao` / 老鹳草
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+69. `leigongteng` / 雷公藤
+   - 已在高风险药材前序轮次完成；本轮复核 FTS/LIKE 无命中及高风险边界，只更新 review note，未改正文。
+70. `lianxu` / 莲须
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+71. `liujinu` / 刘寄奴
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+72. `lizhihe` / 荔枝核
+   - `no_source_found`；p30 为 `internal_research_exhausted`；FTS/LIKE 无命中；补充内部复查耗尽/外部来源边界。
+73. `lugen` / 芦根
+   - `needs_review`；《金匮要略》食禁/食物中毒语境 2 处提及“芦根煮汁/煮芦根汁饮之”。
+   - 仅证明特定语境提及，不扩展为性味、归经、通用功效、主治、剂量或禁忌全字段验证；本轮只写 review note，不改正文。
+74. `luhui` / 芦荟
+   - 已在高风险药材前序轮次完成；本轮复核 P6-C `internal_research_exhausted`、FTS/LIKE 无命中及高风险边界，只更新 review note，未改正文。
+75. `lulutong` / 路路通
+   - `no_source_found`；FTS/LIKE 对“路路通/枫香果”均无命中；补充边界。
+76. `luobuma` / 罗布麻叶
+   - `no_source_found`；别名/重复映射到 canonical=`luobumaye`，规范条目仍无内部来源；补充别名映射边界。
+77. `luobumaye` / 罗布麻叶
+   - `no_source_found`；FTS/LIKE 无命中；补充规范条目边界。
+78. `luohanguo` / 罗汉果
+   - `no_source_found`；FTS/LIKE 无命中；p7b 为 modern/regional；补充边界。
+79. `lvtuomei` / 绿萼梅
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+80. `mabo` / 马勃
+   - `no_source_found`；FTS/LIKE 无命中；p7b 为 modern/regional；补充边界。
+81. `machixian` / 马齿苋
+   - `no_source_found`；FTS/LIKE 对“马齿苋/马齿草”均无命中；补充边界。
+82. `maqianzi` / 马钱子
+   - 已在高风险药材前序轮次完成；本轮复核 FTS/LIKE 无命中及高风险边界，只更新 review note，未改正文。
+83. `menghua` / 密蒙花
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+84. `mohantian` / 墨旱莲
+   - `no_source_found`；FTS/LIKE 无命中；p7b 为 modern/regional；补充边界。
+85. `muhudie` / 木蝴蝶
+   - `no_source_found`；FTS/LIKE 无命中；补充边界。
+
+## R7 新增 / 更新 review note
+
+- `report/p8_manual_reviews/jiangxiang.md`
+- `report/p8_manual_reviews/jiguanhua.md`
+- `report/p8_manual_reviews/jinguolan.md`
+- `report/p8_manual_reviews/jinqiancao.md`
+- `report/p8_manual_reviews/jiucaizi.md`
+- `report/p8_manual_reviews/jixueteng.md`
+- `report/p8_manual_reviews/laifuzi.md`
+- `report/p8_manual_reviews/laoguancao.md`
+- `report/p8_manual_reviews/leigongteng.md`（高风险前序完成，本轮复核跳过正文）
+- `report/p8_manual_reviews/lianxu.md`
+- `report/p8_manual_reviews/liujinu.md`
+- `report/p8_manual_reviews/lizhihe.md`
+- `report/p8_manual_reviews/lugen.md`
+- `report/p8_manual_reviews/luhui.md`（高风险前序完成，本轮复核跳过正文）
+- `report/p8_manual_reviews/lulutong.md`
+- `report/p8_manual_reviews/luobuma.md`
+- `report/p8_manual_reviews/luobumaye.md`
+- `report/p8_manual_reviews/luohanguo.md`
+- `report/p8_manual_reviews/lvtuomei.md`
+- `report/p8_manual_reviews/mabo.md`
+- `report/p8_manual_reviews/machixian.md`
+- `report/p8_manual_reviews/maqianzi.md`（高风险前序完成，本轮复核跳过正文）
+- `report/p8_manual_reviews/menghua.md`
+- `report/p8_manual_reviews/mohantian.md`
+- `report/p8_manual_reviews/muhudie.md`
+
+## R7 测试状态
+
+- 本轮初始基线：`38 passed`
+- 第 61-68 行知识边界处理后：`38 passed`
+- 第 69-85 行知识边界 / review note 处理后：`38 passed`
+- 状态文件更新后最终复测：待本段提交前执行
+
+## R7 Commits
+
+- `f533cf3 docs(p8): review j-l no-source herb boundaries`
+- `c4e3d2d docs(p8): review l-m herb source boundaries`
+- 状态文件最终提交：待提交
+
+## R7 工作边界
+
+- 正文编辑逐条保守完成；脚本仅用于只读列清单、查询索引/来源/FTS、生成 review note 草稿与跑测试。
+- 对 `no_source_found` / `external_source_required` / `internal_research_exhausted` 条目，未从模型记忆补正文；仅补充清晰来源边界与待外部权威来源核验说明。
+- 对 `lugen` 这类弱候选 / contextual 候选，只保留可追溯提及边界，不扩大验证到功效、主治、性味归经、剂量、禁忌等字段。
+- 对前序高风险已处理条目，只复核并更新 review note，不重复改正文。
+
+## 下一条
+
+- 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 86 行 `mujinpi` / 木槿皮。
