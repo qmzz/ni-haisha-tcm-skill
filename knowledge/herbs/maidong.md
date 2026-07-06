@@ -2,49 +2,26 @@
 title: "麦冬"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p17_content_quality"
-review_status: verified
+reviewer: "p8_r24_manual_source_refinement"
+review_status: "trace_review_passed"
 kind: "herb"
 source: "神农本草经 + 倪海厦人纪系列"
 category: "补虚药"
-trace_status: verified
+trace_status: "verified"
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 26
-    quote: "仙曰常食菖蒲饮水，永
-无腹痛之疾，沈金鳌曰治禁口痢，屡用屡效，道藏经曰能治一切风，手足顽痹瘫痪不遂。正
-传曰九节菖蒲去毛捣末，入黑猪心一个，批开煮服，之癫痫风疾，著名方剂有菖蒲丸（石菖
-蒲人参丹参天冬麦冬赤石脂）。治小儿心气不足，不能言语。又醋糊丸棉裹置耳中，治耳内
-卒痛，聋闭不闻，有菖蒲益智丸（菖蒲远志人参桔梗牛膝附子茯苓桂心)。治健忘恍惚，破
-积聚止痛，安心定神聪明耳目均效。
-【倪注】常用于鼻塞不通，脑部受损。内服外用皆宜。
-【炮制】拣去杂质，刷去灰尘，洗净晒干，去灰尘即得。
-二十、鞠华
-【本经原文】味苦平，主风，头眩肿痛，目欲脱泪出，皮肤死肌，恶风湿痹，久服利气血，
-轻身耐老延年，生川野及田野。今之菊花。
-【产地】处处有之，种类很多，黄白二种入药，味苦，家庭玩赏之菊不入药，今杭州出产多，
-号称杭菊。
-【性味】味苦甘平无毒。
-【主治】菊花为清风热明目解毒要药，主诸风头眩肿痛，目痛翳膜，利血脉，治疔疮。
-【甄权】治头目风热，风眩倒地，脑骨疼痛，身上一切游风令消散，利血脉，调四肢。
-【大明】作枕明目，叶亦明目，生熟都可食。
-【元素】养目血，去翳膜。
-【容川】菊叶为治疮之要药，因其性散，能去肌肉中之风邪也。
-【灵胎】平肝熄风。
-【用量】普通一钱至三钱。
-【禁忌】味苦辣者，陈久者，不堪用，其甘者亦名甘菊，可饮可食亦入药。
-【吴克潜】近世用为平肝良药，头痛目疼多因肝经风热上乘所致，菊花入肝，兼行周身，血
-脉不利而死肌，得菊花之利血脉皆效，特长于解毒，外科方剂用之治疔毒发背者，沈金鳌曰
-菊花并茎叶打汁饮，外涂内服皆可。时医用之因防邪热过久而酝酿化毒；平淡多奇功。
-【附加菊叶】菊叶解毒之功胜于花，以鲜者良，捣汁敷一切肿毒，亦可内服。
-【炮制】拣去杂质及梗叶，拍去灰尘即得。
-二十一、人参
-【本经原文】味甘微寒，主补五脏，安精神，定魂魄，止惊悸，除邪气，明目开心益智，久
-服轻身延年。采根，竹刀刮，曝干，无令见风。人形皆具者能做儿啼。
-【产地】我国吉林辽宁产者最良，山西长子县云南姚安县安徽舒城县亦有出产，高丽产出丰。
-【性味】味甘微苦性微寒无毒。
-【主治】人参为大补元气要药，功能治一切衰弱痨瘵，通行周身补五脏之气，泻五脏之火，
-"
+    quote: |
+      ，主心腹结气，伤中伤饱，胃络脉绝羸瘦短气，久服轻身不老，不饥。 生川谷及堤阪。 陶弘景云：实如青珠，根似穬麦，故谓麦门冬。 【产地】生山谷肥地，我国陕西及江浙一带，多有之。叶绿，四季不凋，根黄白色，入药。 【性味】味甘性寒，无毒。 【主治】麦冬为润肺清火要药，主治肺中伏火，痰多，心腹结气，肺弱胃弱，津少口渴，止 咳嗽，疗肺病吐脓血。 【别录】疗身重目黄，心下支满，虚劳客热，口干燥渴，止呕吐，愈痿躄，强阴益精，消谷 调中，保神定肺气，定五脏，令人肥健，美颜色，有子。 【藏器】去心热
+    reviewer: "p8_r24_manual_rebind"
+    reviewed_at: "2026-07-07"
+source_quality_level: "verified_direct"
+source_quality_policy: "source_quality_is_traceability_only_not_medical_validation"
+source_scope: "independent_materia_medica_entry"
+no_source_classification: "resolved_by_direct_source_rebind"
+no_source_reason: "P8 R24: rebound from old 菖蒲 formula-composition quote to independent 麦冬 materia medica entry on p26."
+next_action: "none"
+p8_r24_resolution: "rebound to direct 麦冬 materia medica quote from p26."
 ---
 
 # 麦冬

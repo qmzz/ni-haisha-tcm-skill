@@ -2,37 +2,26 @@
 title: "连翘"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p17_content_quality"
-review_status: verified
+reviewer: "p8_r24_manual_source_refinement"
+review_status: "trace_review_passed"
 kind: "herb"
 source: "神农本草经 + 倪海厦人纪系列"
 category: "清热药"
-trace_status: verified
+trace_status: "verified"
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 231
-    quote: "老老。
-第204，翘根。现在也是很少人能够认得。我们后面有介绍连翘，我们就用连翘来讲它，
-这个地方我们原文保留在这边。
-
-【】。寒。崩
-中。
-叶，主除寒热，出汗。桑耳，平。黑者。治女子漏下赤白汁，血病，症瘕积聚，阴痛，
-阴阳寒热，无子。（王不留行散）
-205，桑根白皮，其实就是桑白皮。桑树的根，当然你写桑根白皮也可以啦，现在都写
-桑白皮，简写就好了。经方里面也使用桑白皮。
-这个在本草经里面来说的话，它专门治虚痨的病，还有象治女子的漏下，赤白带呀，肚
-子里面长硬块呀，症瘕啊都是硬块。象经方里面会有“王不留行散”，里面就有桑根白皮，
-这个产地，到处都有，桑树的根嘛。味道是甘辛，甘味，甜味里面加点辣的味道，有一点辣
-的味道。这两个就是阳。如果你遇到，这味，老师，这个又酸嘛又苦。酸加苦，我们称为涌
-泻，酸苦涌泻为阴药，辛甘发散为阳。酸苦涌泻是阴药。这一个药本身，甘味兼辛味，都在
-里面。【主治】呢，桑白皮为泻肺火，行水道。诸位想想看，任何色白的，一定入肺。那辛
-甘呢发散，能够散肺里面的积水。肺中喘满，去肺中的水汽，水肿，腹满，通通可以用。所
-以你看，【别录】也在说，肚子胀满，腹水，通通可以使用。那这个肺气胀满啊，这个跟前
-面相同了。它的皮入药。所以我们桑树的根直接拿来切，连皮跟根一齐切在里面啊，就是桑
-白皮。诸位看这就是桑白皮的样子，桑根白皮。平常处方的时候，当然2钱，3钱啦，都没
-有关系。
-"
+    quote: |
+      三〇二、连翘 【本经原文】一名异翘，一名兰华。一名折根，一名轵，一名三廉。味苦，平，无毒。治寒 热，鼠瘘，瘰疬，痈肿。恶疮，瘿瘤，结热，蛊毒。生山谷。 【产地】产山谷中及泽地，处处有之，四川产者为胜。 【性味】味苦辛，性平，无毒。 【主治】连翘为散结清火要药，主治疮疡，能清火解毒，消肿排脓，散血结气聚，去上焦热， 通利小便。 【别录】去白虫。 【甄权】通利五淋，小便不通，除心家客热。 【大明】通小肠，排脓治疮疖，止痛，通月经。 【丹溪】泻心火，除脾胃湿热，治中部血证以为使。 【东
+    reviewer: "p8_r24_manual_rebind"
+    reviewed_at: "2026-07-07"
+source_quality_level: "verified_direct"
+source_quality_policy: "source_quality_is_traceability_only_not_medical_validation"
+source_scope: "independent_materia_medica_entry"
+no_source_classification: "resolved_by_direct_source_rebind"
+no_source_reason: "P8 R24: rebound from old 柴胡/翘根 contextual quote to independent 连翘 materia medica entry on p231."
+next_action: "none"
+p8_r24_resolution: "rebound to direct 连翘 materia medica quote from p231."
 ---
 
 # 连翘

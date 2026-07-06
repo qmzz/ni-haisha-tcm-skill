@@ -2,26 +2,24 @@
 title: "葱白"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p17_content_quality"
-review_status: verified
+reviewer: "p8_r24_manual_source_refinement"
+review_status: "trace_review_passed"
 kind: "herb"
 source: "神农本草经 + 倪海厦人纪系列"
 category: "解表药"
-trace_status: verified
+trace_status: "verified"
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
-    page_num: 43
-    quote: "肺实，散头目中滞气，经络中留湿，主上部见血。
-【吴克潜】防风善表散，故用以解毒，如砒毒，乌头毒。芫花毒，野菌毒，诸毒药，又防风
-本制黄耆，黄耆得防风而功最大，治风邪久留不去，表虚自汗不止。
-徐之才曰得葱白行周身，得泽泻橐本疗风，得归芍阳起石禹余粮治妇人子脏风，元素曰治风
-去湿之仙药也。
-【容川】防风辛而味甘入肌，气香而温，故入脾。散肌肉之风寒。
-【灵胎】专治风邪。
-【用量】普通一钱至三钱。
-【禁忌】似中风，产后血虚发痉，诸病血虚痉急，头痛不因风寒，溏泻不因寒湿，二便秘涩，
-小儿慢惊，阴虚盗汗，阳虚自汗，均忌。
-"
+    page_num: 130
+    quote: |
+      勤求古训 博采众方 —————————————————————————————————————————————— 个女孩子第一胎的时候生完，妇女生完小孩以后喂母乳，喂母乳说，诶，奶排不出来，那有 很多奶水，就奶头那边那个孔窍没有开，奶水排不出来，小孩子在哭，吸又吸不出来，那你 又急着喂奶，奶又排不出来，怎么处理，这个冬葵，冬葵很好效果。当然呢，我们过去的民 间方很多，有一种速度最快的，怎么速度快呢，那个葱啊，葱不是有葱白嘛，不一定是要三 星葱，葱白，葱须，然后你切一段葱白的地方，葱白，须须，你拿那个葱白，在乳头那边涂 一下，反过来须须又把它刷一刷，砰，马上奶水就喷出来了，速度就那么快，因为它是辛香 发散的，葱白是辛，那是我们通脉身体上的大葱、青葱，那这个葱在涂完，那个葱须清一清 它，马上奶水就出来，当然你可以再去煮冬葵呀，你要记得擦干净，不然小孩子吃到不是奶 是葱，辣死了，我不要吃哦，抗议，一吃他哭，然后你就不知道了为什么喂小孩子吃奶小孩 子哭，你每次用葱在那边通，葱很辣嘛，小孩子不懂。所以当医生，当妇女，孕妇也要有一 点common sense(常识)，所以方法很多。那后面的经验方呢，复方呢，诸位可以自己参
+source_quality_level: "verified_contextual"
+source_quality_policy: "source_quality_is_traceability_only_not_medical_validation"
+source_scope: "postpartum_lactation_external_use_contextual"
+no_source_classification: "contextual_use"
+no_source_reason: "P8 R24: registry quote is concrete postpartum lactation external use of 葱白, but not an independent 葱白 materia medica entry; retain as contextual trace only."
+next_action: "await_independent_materia_medica_source_for_herb_properties"
+p8_r24_resolution: "downgraded from verified_direct to verified_contextual; concrete 葱白 external-use context, not independent materia medica source."
 ---
 
 # 葱白

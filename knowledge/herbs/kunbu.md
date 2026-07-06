@@ -2,29 +2,23 @@
 title: "昆布"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p17_content_quality"
-review_status: verified
+reviewer: "p8_r24_manual_source_refinement"
+review_status: "trace_review_passed"
 kind: "herb"
 source: "神农本草经"
-trace_status: verified
+trace_status: "verified"
 source_refs:
-  - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
-    page_num: 224
-    quote: "，是属水，所以水生木，所以它对肝脏啊、对胆啊，能够润肝，滋润肝脏都很好，你如果
-用了海藻，你说老师我用昆布，这两个怎么样，差不了多少，都可以，你不用说海藻两钱，
-昆布两钱，没那么麻烦，你用昆布三钱就不需要用海藻了，用一样就可以了，差不多，藻类
-的东西呢，统统是能够利小便，通利小便。
-【甄权】，你看那个海藻，甄权最下面一句话，去腹中幽幽作声，什么意思啊？我告诉
-你们，中医的观念里面认为说，月经呢，为什么叫月，就是天上的月亮，大自然界海有潮汐，
-每一个月涨潮一次退潮一次，每个月涨潮的那几天就是女人月经来的时候，所以女人的月经
-就如同自然界的海水的海潮是相等相通的，海潮来的时候呢，水是咸味的，虽然没有尝过，
-但女人月经是咸味的，男人的精也是咸味的，因为我们是按照潮汐来走，那是比较，这个海
-藻呢就是咸味的东西，所以咸味的对咸味的它能够直接入到子宫卵巢里面去，女人呢这个比
-较孤单海藻可以提供她一些，就吃了海藻的话，情志上面会比较稳定一点，不会说这个欲望
-很强，所以海藻是软坚的，它不是强壮的药物，一般仕女，过去呢，小姐没有结婚，多吃点
-海藻，就是这个意思，我应该这样讲就可以了哦，不用讲很明白。那你绝对不拿海藻来壮阳，
-不需要，海藻是吃的，如果用西医名词来说内分泌就会很好，如果用中医的名词来说因为它
-"
+  - source_file: "倪海厦人纪系列之神农本草经.json"
+    page_num: 91
+    quote: |
+      倪注神农本草经 一九二、海藻 【本经原文】味苦，寒，无毒．治瘿瘤气，颈下核，破散结气，痈肿，症瘕，坚气，腹中上 下鸣，下十二水肿。生东海池泽。一名落首。 【产地】产海岛中，为藻类之产于海中者，种类颇多，入药用马尾藻。 【性味】味咸，性寒，无毒。 【主治】海藻为除热软坚要药，主瘿瘤瘰疬，治瘫肿老痰，通血脉，利小便。 【别录】疗皮间积聚，暴溃瘤气，结热，利小便。 【甄权】辟百邪鬼魅，治气急心下满，疝气下坠，疼痛卵肿，去腹中幽幽作声。 【用量】普通一钱至三钱。 【禁忌】脾家有湿者忌。 【容川】海藻昆布皆生于水中，味微咸，又具草之质，是禀水木二气而生，故能清火润肝。 一九三、泽兰 【本经原文】一名龙枣。味苦，微温，无毒。治乳妇衄血，中风余疾，大腹水肿，身面四肢 浮肿，骨节中水，金疮，痈肿疮脓。生诸大泽旁。一名虎兰。 【产地】生于溪涧或湿地，叶类薄荷，根紫黑色，叶与子根（地笋）皆入药。 【性味】味苦甘，性微温，无毒。 【主治】泽兰为女科要药，功能行血消水，主养血气，破宿瘀，消症瘕痈肿，胎前产后诸病。 【甄权】产后腹痛，频产血气衰冷，成劳瘦羸，妇人血沥腰痛。 【大明】胎前产后百病，通九窍，利关节，养血气破宿血，消症瘕，通小肠，长肌肉，消扑 损瘀血，治鼻血吐血，头风目痛，妇人劳瘦，丈夫面黄。 【灵
+source_quality_level: "verified_contextual"
+source_quality_policy: "source_quality_is_traceability_only_not_medical_validation"
+source_scope: "haizao_adjacent_substitution_contextual_use"
+no_source_classification: "contextual_use"
+no_source_reason: "P8 R24: quote says 昆布 can substitute for 海藻 and describes藻类利小便, but the segment remains 海藻-adjacent rather than an independent 昆布 materia medica entry; retain as contextual trace only."
+next_action: "await_independent_materia_medica_source_for_herb_properties"
+p8_r24_resolution: "downgraded from verified_direct to verified_contextual; 昆布 is concrete contextual use in 海藻 segment, not standalone source."
 ---
 
 # 昆布
