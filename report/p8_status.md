@@ -1,55 +1,78 @@
-# P8 Manual Source Refinement Status
+# P8 手工来源精修状态
 
-Updated: 2026-07-06 21:36 Asia/Shanghai
-Branch: `p8-manual-source-refinement`
+- **更新时间：** 2026-07-06 21:26+ 后续轮次
+- **分支：** `p8-manual-source-refinement`
+- **本轮范围：** 高风险药材队列第 7-14 条 + 方剂 review_queue 前 3 条
 
-## 已完成条目
+## 本轮启动检查
 
-已按 `data/p39_high_risk_external_review_queue.jsonl` 顺序完成前 6 个高风险条目的人工复核、知识文件边界精修与 review note：
+- `git branch --show-current` → `p8-manual-source-refinement`
+- 初始 `git status --short` → 干净
+- 初始基线：`.venv/bin/python -m pytest -q` → `38 passed`
+
+## 已完成高风险药材
+
+上一轮已完成并提交：
 
 1. `fanxieye` / 番泻叶
-   - 确认 `review_queue` 中“泻叶”仅为低分别名命中，不能作为番泻叶来源。
-   - 保持 `trace_status: no_source_found`，增加高风险外部来源复核边界。
-   - note: `report/p8_manual_reviews/fanxieye.md`
 2. `haima` / 海马
-   - `herb_sources`、`review_queue`、FTS 均无可追溯来源。
-   - 按 `herb_animal_or_restricted` 高风险边界处理。
-   - note: `report/p8_manual_reviews/haima.md`
-3. `hamayou` / 哈蟆油
-   - “哈蟆油 / 蛤蟆油 / 雪蛤”FTS 均无命中。
-   - 按 `herb_animal_or_restricted` 高风险边界处理。
-   - note: `report/p8_manual_reviews/hamayou.md`
+3. `hamayou` / 蛤蟆油
 4. `huangyaozi` / 黄药子
-   - `herb_sources`、`review_queue`、FTS 均无可追溯来源。
-   - 保持 `no_source_found`，标记需要外部权威资料。
-   - note: `report/p8_manual_reviews/huangyaozi.md`
 5. `leigongteng` / 雷公藤
-   - 内部语料无命中；既有功效/讲解种子内容来源不明。
-   - 将种子功效/讲解降级为“待外部来源核验”，不作为用药依据。
-   - note: `report/p8_manual_reviews/leigongteng.md`
 6. `luhui` / 芦荟
-   - `p30` / completeness 显示 P6-C `internal_research_exhausted`。
-   - 保持 `no_source_found` 与 P6-C 边界，标记需要外部权威资料。
-   - note: `report/p8_manual_reviews/luhui.md`
 
-## 正在处理 / 下一条
+本轮继续完成：
 
-- 下一条：`maqianzi` / 马钱子。
-- 已只读检索初步确认：`herb_sources`、`review_queue`、source FTS 对“马钱子 / 番木鳖”无可追溯命中；尚未编辑文件或写 review note。
+7. `maqianzi` / 马钱子
+8. `qianjinzi` / 千金子
+9. `qishe` / 蕲蛇
+10. `shandougen` / 山豆根
+11. `tubiechong` / 土鳖虫
+12. `yadanzi` / 鸦胆子
+13. `yangjinhua` / 洋金花
+14. `zhechong` / 土鳖虫
+
+每条均已人工读取当前知识文件、`data/herb_sources.jsonl`、`data/review_queue.jsonl`、`data/herb_index.jsonl` / no-source 分类、`data/p39_high_risk_external_review_queue.jsonl`，并用 `data/source_fts.sqlite` 只读检索相关中文名/异名。
+
+## 本轮完成方剂队列前 3 条
+
+1. `baizhu_fuzi` / 白术附子汤
+   - 对照 `review_queue` top_source、`formula_sources`、`formula_index`、当前知识文件 source_refs。
+   - 结论：top_source 可直接支撑方名、条文与方后组成；仅新增 review note，不改写正文。
+2. `guizhi_houpuxingzi` / 桂枝加厚朴杏子汤
+   - 对照 exact-name source 与别名“桂枝加厚朴杏仁汤”命中。
+   - 结论：exact-name top_source 可支撑 verified；别名仅列为后续 alias 复核线索。
+3. `mahuang_lianqiao` / 麻黄连轺赤小豆汤
+   - 对照 exact-name source 与“连翘/连轺”别名命中。
+   - 结论：exact-name top_source 可支撑 verified；文本差异保留为后续版本/alias 复核线索。
 
 ## 测试状态
 
-- 初始基线：`.venv/bin/python -m pytest -q` → `38 passed`。
-- 第一批 3 条后：`38 passed`。
-- 第二批 3 条后：`38 passed`。
+- 本轮初始基线：`38 passed`
+- `maqianzi qianjinzi qishe` 后：`38 passed`
+- `shandougen tubiechong yadanzi yangjinhua zhechong` 后：`38 passed`
+- 方剂前 3 条 review note 后：`38 passed`
 
 ## Commits
+
+上一轮：
 
 - `39ebfa6 refine: manually review fanxieye haima hamayou`
 - `b379c90 refine: manually review huangyaozi leigongteng luhui`
 
+本轮：
+
+- `f00b29e refine: manually review maqianzi qianjinzi qishe`
+- `8be3577 refine: manually review shandougen tubiechong yadanzi yangjinhua zhechong`
+- `c4cc788 refine: manually review baizhu_fuzi guizhi_houpuxingzi mahuang_lianqiao`
+
 ## 工作边界
 
-- 未使用脚本批量生成或批量修改知识正文；一次误用只读 Python 后又尝试批量编辑 3 个文件，已立即 `git checkout --` 回滚，未纳入成果。
-- 本轮正式知识正文修改均通过人工阅读当前文件、registry/queue/FTS 结果后逐条编辑完成。
-- 所有高风险条目均保守处理：无权威来源时不补剂量、禁忌、妊娠/儿童、毒性、现代相互作用或法定状态。
+- 未使用脚本批量生成或批量修改知识正文；脚本仅用于只读查询与测试。
+- 高风险药材保持保守边界：无可追溯来源时保持 `no_source_found` / `external_source_required`，不补剂量、禁忌、毒性、妊娠/儿童、现代相互作用或法定状态。
+- `tubiechong` / `zhechong` 检索到“地鳖虫/蛰虫/蟅虫”FTS 线索，但当前 registry 仍未绑定 source_refs，本轮不自动提升来源，仅记录待后续人工 alias/source_ref 复核。
+- 方剂前 3 条本轮仅写 review note；正文中现代应用、药理研究、临证加减等未逐项追溯，建议后续内容质量任务继续处理。
+
+## 下一条
+
+- 若继续 `data/review_queue.jsonl` 方剂队列：下一条为第 4 条（请从 `review_queue` 第 4 行开始，避免重复 `baizhu_fuzi`、`guizhi_houpuxingzi`、`mahuang_lianqiao`）。
