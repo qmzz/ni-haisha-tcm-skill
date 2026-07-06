@@ -283,3 +283,115 @@
 ## 下一条
 
 - 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 86 行 `mujinpi` / 木槿皮。
+
+---
+
+# R8 更新（2026-07-06 22:44+）
+
+- **分支：** `p8-manual-source-refinement`
+- **本轮范围：** `data/review_queue.jsonl` 第 86-115 行（从 `mujinpi` / 木槿皮 到 `xiangyuan` / 香橼；其中第 92 `qianjinzi`、第 95 `qishe`、第 100 `shandougen`、第 112 `tubiechong` 已由高风险轮次完成，本轮只复核记录，未重复修改知识正文）
+
+## R8 启动检查
+
+- 当前分支：`p8-manual-source-refinement`
+- 初始 `git status --short`：工作区干净
+- 初始基线：`.venv/bin/python -m pytest -q` → `38 passed`
+
+## R8 完成条目（review_queue 第 86-115 行）
+
+86. `mujinpi` / 木槿皮：`no_source_found`；FTS/LIKE 无命中；补充 P8 外部权威来源边界。
+87. `niubangzi` / 牛蒡子：`no_source_found`；FTS/LIKE 无命中；补充边界。
+88. `nuodaogenxu` / 糯稻根须：`no_source_found`；canonical=`nuodaogenxu`，p36 为 alias-first；补充 canonical/alias 边界。
+89. `oujie` / 藕节：`no_source_found`；FTS/LIKE 无命中；补充边界。
+90. `poshi` / 娑罗子：`no_source_found`；FTS/LIKE 无命中；补充边界。
+91. `pugongying` / 蒲公英：`no_source_found`；p30 为 `internal_research_exhausted`；补充内部复查耗尽/外部来源边界。
+92. `qianjinzi` / 千金子：高风险前序已完成；本轮复核 `herb_sources`、p30/p36 与 FTS/LIKE 无命中，只追加 review note 补记，未重复改正文。
+93. `qiannianjian` / 千年健：`no_source_found`；FTS/LIKE 无命中；补充边界。
+94. `qianniuzi` / 牵牛子：`no_source_found`；FTS/LIKE 无命中；补充边界。
+95. `qishe` / 蕲蛇：高风险前序已完成；本轮复核无命中及高风险边界，只追加 review note 补记，未重复改正文。
+96. `roudoukou` / 肉豆蔻：`no_source_found`；FTS/LIKE 无命中；补充边界。
+97. `sangshen` / 桑葚：`no_source_found`；FTS/LIKE 无命中；补充边界。
+98. `sangye` / 桑叶：`no_source_found`；FTS/LIKE 无命中；补充边界。
+99. `shandou` / 谷芽：`no_source_found`；p30 canonical=`guya`；补充别名/重复映射边界，不升级验证。
+100. `shandougen` / 山豆根：高风险前序已完成；本轮复核无命中及高风险边界，只追加 review note 补记，未重复改正文。
+101. `shanzha` / 山楂：`no_source_found`；既有“倪师讲解”等医学字段未由本轮内部语料复核证实；补充待核验边界。
+102. `shayuanzi` / 沙苑子：`no_source_found`；FTS/LIKE 无命中；补充边界。
+103. `shidi` / 柿蒂：`no_source_found`；FTS/LIKE 无命中；补充边界。
+104. `shiliupi` / 石榴皮：`no_source_found`；FTS/LIKE 无命中；补充边界。
+105. `shouwuteng` / 首乌藤：`no_source_found`；FTS/LIKE 无命中；补充边界。
+106. `suhexiang` / 苏合香：`no_source_found`；FTS/LIKE 无命中；补充边界。
+107. `sumu` / 苏木：`no_source_found`；与 `suomu` 重复/别名线索；补充边界，不合并、不升级验证。
+108. `suomu` / 苏木：`no_source_found`；与 `sumu` 重复/别名线索；补充边界，不合并、不升级验证。
+109. `taizishen` / 太子参：`no_source_found`；FTS/LIKE 无命中；补充边界。
+110. `tanxiang` / 檀香：`no_source_found`；既有“神农本草经 + 倪海厦人纪系列”等来源/医学字段未由本轮内部语料复核证实；补充待核验边界。
+111. `tianzhuhuang` / 天竺黄：`no_source_found`；FTS/LIKE 无命中；补充边界。
+112. `tubiechong` / 土鳖虫：高风险前序已完成；本轮复核无命中及异名线索边界，只追加 review note 补记，未重复改正文。
+113. `tujingpi` / 土荆皮：`no_source_found`；FTS/LIKE 无命中；补充边界。
+114. `walengzi` / 瓦楞子：`needs_review`；FTS/LIKE 可检出倪师语料多处上下文提及，知识文件已有 source_refs 与摘录；本轮只写 review note，保留“提及不等于全字段验证”边界，未改正文。
+115. `xiangyuan` / 香橼：`no_source_found`；FTS/LIKE 无命中；补充边界。
+
+## R8 新增 / 更新 review note
+
+- `report/p8_manual_reviews/mujinpi.md`
+- `report/p8_manual_reviews/niubangzi.md`
+- `report/p8_manual_reviews/nuodaogenxu.md`
+- `report/p8_manual_reviews/oujie.md`
+- `report/p8_manual_reviews/poshi.md`
+- `report/p8_manual_reviews/pugongying.md`
+- `report/p8_manual_reviews/qianjinzi.md`（高风险前序完成，本轮复核跳过正文）
+- `report/p8_manual_reviews/qiannianjian.md`
+- `report/p8_manual_reviews/qianniuzi.md`
+- `report/p8_manual_reviews/qishe.md`（高风险前序完成，本轮复核跳过正文）
+- `report/p8_manual_reviews/roudoukou.md`
+- `report/p8_manual_reviews/sangshen.md`
+- `report/p8_manual_reviews/sangye.md`
+- `report/p8_manual_reviews/shandou.md`
+- `report/p8_manual_reviews/shandougen.md`（高风险前序完成，本轮复核跳过正文）
+- `report/p8_manual_reviews/shanzha.md`
+- `report/p8_manual_reviews/shayuanzi.md`
+- `report/p8_manual_reviews/shidi.md`
+- `report/p8_manual_reviews/shiliupi.md`
+- `report/p8_manual_reviews/shouwuteng.md`
+- `report/p8_manual_reviews/suhexiang.md`
+- `report/p8_manual_reviews/sumu.md`
+- `report/p8_manual_reviews/suomu.md`
+- `report/p8_manual_reviews/taizishen.md`
+- `report/p8_manual_reviews/tanxiang.md`
+- `report/p8_manual_reviews/tianzhuhuang.md`
+- `report/p8_manual_reviews/tubiechong.md`（高风险前序完成，本轮复核跳过正文）
+- `report/p8_manual_reviews/tujingpi.md`
+- `report/p8_manual_reviews/walengzi.md`
+- `report/p8_manual_reviews/xiangyuan.md`
+
+## R8 测试状态
+
+- 本轮初始基线：`38 passed`
+- 第 86-91 行处理后：`38 passed`
+- 第 92-98 行处理后：`38 passed`
+- 第 99-105 行处理后：`38 passed`
+- 第 106-112 行处理后：`38 passed`
+- 第 113-115 行处理后：`38 passed`
+- 状态文件更新后最终复测：待本段提交前执行
+
+## R8 Commits
+
+- `fa7defc P8 manual review herbs 86-91`
+- `7507771 P8 manual review herbs 92-98`（已因覆盖既有高风险 note 而回滚）
+- `b7ea8d9 Revert "P8 manual review herbs 92-98"`
+- `e080bfd P8 manual review herbs 92-98`
+- `6065c24 P8 manual review herbs 99-105`
+- `569a4a1 P8 manual review herbs 106-112`
+- `1a69a08 P8 manual review herbs 113-115`
+- 状态文件最终提交：待提交
+
+## R8 工作边界
+
+- 正文编辑逐条保守完成；脚本仅用于只读列清单、查询索引/来源/FTS、生成 review note 草稿与跑测试。
+- 对 `no_source_found` / `external_source_required` / `internal_research_exhausted` 条目，未从模型记忆补正文；仅补充来源边界与待外部权威来源核验说明。
+- 对 `walengzi` 这类 `needs_review` / contextual 候选，只保留可追溯提及边界，不扩大验证到性味、归经、功效、主治、剂量、禁忌等字段。
+- 对前序高风险已处理条目，只复核并更新 review note，不重复改正文。
+- 对 `shandou`/`guya`、`sumu`/`suomu` 等别名或重复映射线索，只标注 canonical/alias 边界，不合并条目、不升级验证。
+
+## 下一条
+
+- 若继续按 `data/review_queue.jsonl` 顺序推进，下一条为第 116 行。需先读取 `data/review_queue.jsonl` 第 116 行确认条目后再处理。
