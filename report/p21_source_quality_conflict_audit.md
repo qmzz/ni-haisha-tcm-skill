@@ -14,10 +14,10 @@ Read-only audit after P20 rollout.
 
 | level | count |
 |---|---:|
-| `no_source` | 137 |
+| `no_source` | 138 |
 | `verified_alias` | 51 |
 | `verified_contextual` | 2 |
-| `verified_direct` | 749 |
+| `verified_direct` | 748 |
 
 ## Conflicts
 
