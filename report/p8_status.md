@@ -1,5 +1,40 @@
 # P8 手工来源精修状态
 
+## R14 p11_content_quality_queue 续跑（2026-07-07）
+
+- **分支：** `p8-manual-source-refinement`
+- **启动检查：** 初始 `git status --short` 干净；`.venv/bin/python -m pytest -q` → `38 passed`
+- **本轮范围：** `data/p11_content_quality_queue.jsonl` 第 47-76 行，从 `fupenzi` 到 `jinqiancao`，共 30 条逐条人工复核并写/重写 `report/p8_manual_reviews/<item_id>.md`。
+- **下一条：** 第 77 行 `jinyingzi`，文件 `knowledge/herbs/jinyingzi.md`。
+
+### R14 完成摘要
+
+- 第 47-56 行：`fupenzi`, `ganlan`, `gejie`, `gijingcao`, `gouteng`, `guadi`, `guya`, `haifengteng`, `haifushi`, `haigeqiao`。
+- 第 57-66 行：`haima`, `haitongpi`, `hamayou`, `hechezi`, `heizhima`, `hesi`, `hetaoren`, `hezi`, `hongteng`, `huangyaozi`。
+- 第 67-76 行：`huazuirushi`, `hugulu`, `huoxiang`, `huzhang`, `jianghuang`, `jiangxiang`, `jiguanhua`, `jingjie`, `jinguolan`, `jinqiancao`。
+
+### R14 重点发现
+
+- `fupenzi`：来源直接支撑“味酸平”，可作为后续 properties 同步依据；未见归经直接依据。P16 扩展摘录边界过宽，含相邻条目。
+- `ganlan`：当前 verified 引用为 football/橄榄球语境，另有橄榄油作为蒲灰散黏合油语境；不支撑药材橄榄性味/归经，建议后续协同降级或重入外部来源流程。
+- `gejie`：来源为石龙子/蜥蜴名物训诂，提到蛤蚧但不支撑性味/归经；P16 扩展摘录跨到木虻等相邻条目。
+- `jianghuang`：verified 候选来自“干姜黄芩黄连人参汤”跨词误切，不是药材姜黄；不支撑缺失字段，建议后续清理 Markdown 与索引误引用。
+- `jingjie`：当前 frontmatter 主引用是目录页；FTS 另有 `02【视频同步文稿】人-神农本草经（可打印）.json` page 231 直接讲解荆芥/假苏，可后续替换来源引用；未见归经直接依据。
+- `huoxiang`：no_source 条目正文含“倪海厦：广藿香辛微温...”式引语，但 FTS 无内部来源命中，建议后续优先清理伪引语/待核验内容。
+- `hechezi`/`heizhima` 与 `hesi`/`hezi`：存在 alias/重复映射与 item_id 命名疑点，报告已记录，不独立扩写。
+
+### R14 测试与提交
+
+- 初始基线：`38 passed`
+- 第 47-56 行后：`38 passed`，commit `cb3f9d7 refine: manually review p11 quality fupenzi-haigeqiao`
+- 第 57-66 行后：`38 passed`，commit `611415d refine: manually review p11 quality haima-huangyaozi`
+- 第 67-76 行后：`38 passed`，commit `643bafc refine: manually review p11 quality huazuirushi-jinqiancao`
+
+### R14 工作边界
+
+- 本轮未同步 Markdown/index 结构字段，除报告记录“后续可同步字段”外，不新增未验证医学内容。
+- no_source 条目均保持外部权威来源边界；verified 异常条目仅记录 false positive/source boundary 问题，未做跨文件状态降级，避免状态分裂。
+
 - **更新时间：** 2026-07-06 23:10+ R6
 - **分支：** `p8-manual-source-refinement`
 - **本轮范围：** `data/review_queue.jsonl` 第 38-60 行（从 `ganlan` / 橄榄到 `jianghuang` / 姜黄；其中第 46 `haima`、第 48 `hamayou`、第 55 `huangyaozi` 已由高风险轮次完成，本轮只复核记录，未重复修改知识正文）
