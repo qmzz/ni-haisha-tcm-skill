@@ -1,31 +1,29 @@
-# 黑芝麻 手工复核记录
+# hechezi 手工复核记录
 
-- **复核时间：** 2026-07-06
+- **复核时间：** 2026-07-07
 - **当前文件：** `knowledge/herbs/hechezi.md`
-- **队列位置：** `data/review_queue.jsonl` 第 49 行
-- **条目：** 黑芝麻 (`hechezi`)
+- **队列位置：** `data/p11_content_quality_queue.jsonl` 第 60 行
+- **条目：** 黑芝麻（alias_of: heizhima）
 
 ## 当前文件概况
 
-复核前队列状态为 `no_source_found`；本轮人工读取 knowledge 文件、review_queue 行，并核对 `data/herb_sources.jsonl`、`data/herb_index.jsonl`、`data/knowledge_completeness.jsonl`、`data/p30_no_source_classification.jsonl`、`data/p36_external_source_queue.jsonl`，只读查询 `data/source_fts.sqlite`。
+当前条目为 herb，frontmatter `trace_status: no_source_found`，并标记 `alias_of: "heizhima"`。正文含性味、归经、功效、主治等占位内容，以及别名/重复映射边界说明。p11 队列本条 `missing_content_fields=[]`。
 
-## 查到的来源 / 引用摘要
+## 来源 / FTS 摘要
 
-- source FTS/LIKE 未检出该名称可追溯命中。
-- p30：`alias_or_duplicate_mapped`；canonical=`heizhima`；risk=`medium`。
-- p36：`alias_or_duplicate_mapped`；建议来源范围=['official_pharmacopoeia', 'modern_tcm_reference']。
-- completeness：trace=`no_source_found`，quality=`no_source`。
+- `herb_index.jsonl`：名称为黑芝麻，`source_quality_level=no_source`，`source_refs=[]`。
+- `herb_sources.jsonl`：`status=no_source_found`，`source_hits=[]`。
+- `knowledge_completeness.jsonl`：字段检查为 true，但来源质量为 no_source。
+- `source_fts.sqlite` 只读检索“黑芝麻”无命中。
 
-## 修改点
+## 是否直接支撑缺失字段
 
-- 在知识文件中补充 P8 手工来源复核/外部权威来源边界说明。
-- 未新增功效、主治、剂量、禁忌等医学正文。
+p11 未列缺失字段；现有性味、归经、功效、主治未被内部来源直接支撑。
 
-## 保留边界
+## 修改 / 不修改理由
 
-- no_source/external_source_required 条目继续保持未验证边界；既有医学性字段仅作为待核验草稿或占位。
-- 弱候选或上下文提及不等于医学内容全字段验证。
+不修改正文。该条是 `heizhima` 的别名/重复条目，规范化前不应独立扩写或提升质量等级。
 
-## 下一步
+## 未决问题
 
-后续若纳入外部来源，应逐条补充明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量、禁忌及特殊安全字段。
+- 需后续统一 `hechezi` 命名是否误拼/误映射；当前文件标题为黑芝麻，与 item_id 不直观。
