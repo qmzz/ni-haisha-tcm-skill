@@ -619,3 +619,77 @@
 ## 下一条
 
 - `data/review_queue.jsonl` 共 218 行；本轮已推进至末行，当前 review_queue 全部条目均已完成 review note。
+
+---
+
+# R13 更新（2026-07-07 01:15+）
+
+- **分支：** `p8-manual-source-refinement`
+- **本轮范围：** 补齐 `data/p36_external_source_queue.jsonl` / `data/p30_no_source_classification.jsonl` 剩余 2 条；推进 `data/p11_content_quality_queue.jsonl` 前 20 个未写 review note 条目（从第 7 行 `baijiangcao` 到第 45 行 `fengmi`）。
+
+## R13 启动检查
+
+- 当前分支：`p8-manual-source-refinement`
+- 初始 `git status --short`：工作区干净
+- 初始基线：`.venv/bin/python -m pytest -q` → `38 passed`
+
+## R13 完成条目
+
+### p36 / p30 剩余外部来源项
+
+1. `shiqixue` / 十七穴
+   - 队列分类为 `contextual_false_positive_demoted` / `no_source_found`。
+   - FTS 检索“十七”仅见章节编号、药物编号、年龄、椎体序号等；“十七穴”无命中。
+   - 已将 `knowledge/acupoints/shiqixue.md` 从错误 `verified` frontmatter 收紧为 `no_source_found`，删除不可靠 source_refs、定位/主治/刺灸/配伍内容，保留待外部穴位标准来源核验边界。
+2. `gaoliangjiang` / 高良姜
+   - 队列分类为 `external_source_required`；FTS 检索“高良姜/良姜”无命中。
+   - 当前知识文件已为空壳边界状态，本轮未改正文，仅补人工 review note。
+
+### p11 content quality queue
+
+完成 review note：
+
+- `baijiangcao`：来源支撑条目和部分功效语境，但不直接支撑归经；未补字段。
+- `baijiezi`：发现桂枝条 source_ref 串联污染；已删除误带入的桂枝剂量/禁忌/讲解，保留配伍提及边界；未补性味/归经。
+- `baimaogen`：来源支撑性味/功效，未见归经；未补字段。
+- `baiqian`：来源支撑降气化痰等语境，未见归经；未补字段。
+- `baitouweng`：来源支撑热痢/白头翁汤语境，未见归经；未补字段。
+- `bixie`：来源含“入足阳明厥阴”，可供后续结构化补齐参考；本轮未单点同步字段。
+- `changshan`：来源支撑常山/蜀漆治疟语境，未见归经；未补字段。
+- `changshanmiao`：常山苗/蜀漆/常山边界复杂，source_ref 有截断；未补性味/归经。
+- `chantui`：Markdown source_refs 较干净，`herb_index` source_ref 仍旧；未见归经，未补字段。
+- `chishizhi`：来源支撑酸涩收敛/方剂语境，未见归经；未补字段。
+- `chuanshanjia`：发现穿山甲正文串入升麻、胡麻等相邻条目；未补字段，标记后续优先清理。
+- `chuanwu`：来源支撑川乌/乌头和毒性/炮制风险，未见归经；未补字段。
+- `ciweipi`：来源支撑“味苦，性平”，归经无来源；建议后续统一字段同步。
+- `dafupi`：发现大腹皮正文主要来自泽泻方剂提及并串入远志；未补字段，标记后续优先清理。
+- `danfan`：来源支撑性味/主治和小毒信息，未见归经；未补字段。
+- `diyu`：来源支撑性味/主治，未见归经；未补字段。
+- `dongchongxiacao`：发现冬虫夏草只是藏红花语境顺带提及，不能支撑独立药材 verified quality；未补字段，标记后续优先清理。
+- `fangji`：存在龙胆草段尾混入，但也有防己直接条目；未见归经，未补字段。
+- `fengfang`：露蜂房来源存在，但正文串入猬皮/鳖甲；未补归经，标记后续清理边界。
+- `fengmi`：来源支撑“味甘/味甘平”，未见归经；建议后续统一字段同步。
+
+## R13 测试状态
+
+- 初始基线：`38 passed`
+- p36/p30 两条处理后：`38 passed`
+- p11 第一批 10 条处理后：`38 passed`
+- p11 第二批 10 条处理后：`38 passed`
+
+## R13 Commits
+
+- `84560eb refine: manually review remaining external-source items`
+- `3f3a937 refine: manually review p11 quality baijiangcao-chishizhi`
+- `a031be1 refine: manually review p11 quality chuanshanjia-fengmi`
+
+## 工作边界
+
+- 正文修改仅 2 处：`shiqixue` 降级收紧；`baijiezi` 删除桂枝条串联污染。
+- 未凭模型记忆补任何药性、归经、剂量、禁忌或临床用法。
+- 对 p11 缺字段，只有来源明确时才记录“可供后续字段同步”，未进行单点索引/Markdown 不一致更新。
+- 发现多条 source boundary 风险：`chuanshanjia`、`dafupi`、`dongchongxiacao`、`fangji`、`fengfang` 应作为后续 p11 清理优先项。
+
+## 下一条
+
+- `data/p11_content_quality_queue.jsonl` 下一条未有 review note：第 47 行 `fupenzi` / `knowledge/herbs/fupenzi.md`，缺失字段 `properties`, `meridian`。
