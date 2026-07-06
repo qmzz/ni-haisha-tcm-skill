@@ -1,3 +1,25 @@
+## R23 P8 reviewed corrections (2026-07-07)
+
+- **Scope:** conservative source rebinding / source-boundary tightening for `cishi`, `duhuo`, `gansui`, `heshouwu`, `huajiao`, `maiya`, `meiguihua`.
+- **Evidence read:** corresponding `report/p8_manual_reviews/*.md`, `knowledge/herbs/*.md` frontmatter/body, `data/herb_index.jsonl`, `data/herb_sources.jsonl`, `data/verified_sources.jsonl`, `data/knowledge_completeness.jsonl`, and `data/source_fts.sqlite`.
+- **Fix:**
+  - **cishi**: rebound from 丹砂旁及段 (`畏磁石`) to independent `慈石/今名磁石` materia medica segment at `倪海厦人纪系列之神农本草经.json` p76.
+  - **duhuo**: rebound from 麝香开窍旁及段 to independent `独活` segment at `02【视频同步文稿】人-神农本草经（可打印）.json` p79.
+  - **gansui**: rebound from 葶苈/淮山旁及 or wrong-page evidence to independent `甘遂` segment at `02【视频同步文稿】人-神农本草经（可打印）.json` p288.
+  - **heshouwu**: downgraded from `verified_direct` to `contextual_mention`; current quotes are HT-97 何首乌丸 TOC/general processing mentions and FTS found no independent 何首乌/首乌 materia medica segment.
+  - **huajiao**: downgraded from `verified_direct` to `contextual_mention`; current quote is 干漆 segment mentioning 蜀椒/花椒 as handling practice, other FTS hits are formula/context mentions.
+  - **maiya**: downgraded from `verified_direct` to `contextual_mention`; current evidence is 茯苓方剂组成 大麦芽 or 干漆段 麦芽糖 metaphor, not independent 麦芽 source.
+  - **meiguihua**: downgraded from `verified_direct` to `contextual_mention`; current quote is 旋覆花 discussion where 玫瑰花 appears only as comparison.
+- **Deferred/Eval:**
+  - `congbai`: current evidence is concrete postpartum lactation use of 葱白 rather than a pure false positive; needs nuanced boundary decision, not changed in this small batch.
+  - `huangbai`/`huangbo`: duplicate/alias 黄柏 governance remains broader than this batch; not changed.
+  - `huangqi`, `hujiao`, `hupo`, `kunbu`, `lianqiao`, `mahuanggen`, `maidong`: still listed by R18 as high-risk or contextual candidates, but not processed this round to keep the batch small and avoid uncertain boundary calls.
+  - `bohe`: intentionally skipped per R23 instruction; needs deeper source-boundary work.
+- **Tests:** baseline `38 passed`; after `cishi duhuo gansui` `38 passed`; after `heshouwu huajiao maiya meiguihua` `38 passed`.
+- **Commits:**
+  - `eb8a8eb fix: apply P8 reviewed corrections cishi duhuo gansui`
+  - `ad97a59 fix: apply P8 reviewed corrections heshouwu huajiao maiya meiguihua`
+
 ## R21 P8 reviewed corrections (2026-07-07)
 
 - **Scope:** conservative sync for `chenpi`, `cheqianzi`, `chuanxiong`, `dilong`, `duzhong`.
