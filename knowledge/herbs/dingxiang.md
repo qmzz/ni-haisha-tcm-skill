@@ -2,10 +2,10 @@
 title: "丁香"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p17_content_quality"
-review_status: verified
+reviewer: "p8_r22_source_boundary"
+review_status: needs_review
 kind: "herb"
-trace_status: verified
+trace_status: needs_review
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 131
