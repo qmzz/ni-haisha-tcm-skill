@@ -2,14 +2,21 @@
 title: "桑枝"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p6_verified_standardization"
-review_status: verified
+reviewer: "p8_r25_manual_source_refinement"
+review_status: "source_boundary_contextual_mention"
 kind: "herb"
 source: "神农本草经"
 tags: ["神农本草经", "中药", "倪海厦"]
 性味: "微苦平"
 功效: "祛风湿，利关节"
-trace_status: verified
+trace_status: "verified"
+source_quality_level: "verified_contextual"
+source_quality_policy: "source_quality_is_traceability_only_not_medical_validation"
+source_scope: "sangpiaoxiao_habitat_and_branch_use_contextual_mention_only"
+no_source_classification: "contextual_use"
+no_source_reason: "P8 R25: current source_ref is 桑螵蛸 habitat “着生于桑枝上者”; other hits mention 桑枝 with 桂枝/branch-to-limbs context, not an independent 桑枝 materia medica entry."
+next_action: "await_independent_materia_medica_source_for_herb_properties"
+p8_r25_resolution: "downgraded from verified_direct to verified_contextual; 桑枝 appears in habitat/use context, not standalone source."
 source_refs:
   - source_file: "倪海厦人纪系列之神农本草经.json"
     page_num: 68

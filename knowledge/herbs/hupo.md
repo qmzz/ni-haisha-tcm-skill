@@ -2,11 +2,18 @@
 title: "琥珀"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p17_content_quality"
-review_status: verified
+reviewer: "p8_r25_manual_source_refinement"
+review_status: "source_boundary_contextual_mention"
 kind: "herb"
 source: "神农本草经"
-trace_status: verified
+trace_status: "needs_review"
+source_quality_level: "contextual_mention"
+source_quality_policy: "source_quality_is_traceability_only_not_medical_validation"
+source_scope: "baiziren_san_formula_composition_contextual_mention_only"
+no_source_classification: "needs_independent_source"
+no_source_reason: "P8 R25: current source_ref is 柏子仁散 formula composition mentioning 琥珀, followed by 茯苓 entry; it does not support independent 琥珀 materia medica fields."
+next_action: "await_independent_source_for_herb_properties"
+p8_r25_resolution: "downgraded from verified_direct to contextual_mention; 琥珀 is only a 柏子仁散 formula ingredient in the current source."
 source_refs:
   - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
     page_num: 56

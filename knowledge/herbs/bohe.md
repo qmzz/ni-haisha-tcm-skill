@@ -2,10 +2,17 @@
 title: "薄荷"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p17_content_quality"
-review_status: verified
+reviewer: "p8_r25_manual_source_refinement"
+review_status: "trace_review_passed"
 kind: "herb"
-trace_status: verified
+trace_status: "verified"
+source_quality_level: "verified_contextual"
+source_quality_policy: "source_quality_is_traceability_only_not_medical_validation"
+source_scope: "zelan_leaf_similarity_and_mint_tongue_observation_contextual"
+no_source_classification: "contextual_use"
+no_source_reason: "P8 R25: current sources are 泽兰“叶类薄荷” and 金匮 tongue-observation mentions; neither is an independent 薄荷 materia medica source."
+next_action: "await_independent_materia_medica_source_for_herb_properties"
+p8_r25_resolution: "downgraded from verified_direct to verified_contextual; current hits are 泽兰 similarity / tongue-observation contextual mentions, not standalone 薄荷 source."
 source_refs:
   - source_file: "05【视频同步文稿】人-金匮要略（可打印）.json"
     page_num: 174

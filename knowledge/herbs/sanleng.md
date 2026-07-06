@@ -2,12 +2,19 @@
 title: "三棱"
 content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
 safety_disclaimer_required: true
-reviewer: "p6_verified_standardization"
-review_status: verified
+reviewer: "p8_r25_manual_source_refinement"
+review_status: "source_boundary_false_positive"
 kind: "herb"
 source: "神农本草经"
 tags: ["神农本草经", "中药", "倪海厦"]
-trace_status: verified
+trace_status: "needs_review"
+source_quality_level: "contextual_mention"
+source_quality_policy: "source_quality_is_traceability_only_not_medical_validation"
+source_scope: "yuzhu_morphology_false_positive_and_formula_contextual_mention_only"
+no_source_classification: "needs_independent_source"
+no_source_reason: "P8 R25: registry source_ref is 玉竹/萎蕤 morphology “地下茎粗大有三棱”, a false positive for 三棱 herb; FTS hits are formula/三棱针/contextual mentions, not independent materia medica."
+next_action: "await_independent_source_for_herb_properties"
+p8_r25_resolution: "downgraded from verified_direct to contextual_mention; current primary source is a false positive and remaining hits are contextual only."
 source_refs:
   - source_file: "倪海厦人纪系列之神农本草经.json"
     page_num: 30

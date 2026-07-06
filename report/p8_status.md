@@ -1,3 +1,16 @@
+## R25 P8 reviewed corrections (2026-07-07)
+
+- **Scope:** conservative source-boundary tightening for `bohe`, `sanleng`, `sangzhi`, `hupo`, `mahuanggen`.
+- **Evidence read:** corresponding `report/p8_manual_reviews/*.md`, `knowledge/herbs/*.md` frontmatter/body, `data/herb_index.jsonl`, `data/herb_sources.jsonl`, `data/verified_sources.jsonl`, `data/knowledge_completeness.jsonl`, and `data/source_fts.sqlite` via Python `sqlite3` / `source_pages_fts`.
+- **Fix:**
+  - **bohe**: downgraded from `verified_direct` to `verified_contextual`; current evidence is 泽兰“叶类薄荷” plus 金匮 tongue-observation mentions, not an independent 薄荷 materia medica source.
+  - **sanleng**: downgraded from `verified_direct` to `contextual_mention` / `needs_review`; current primary source_ref is 玉竹/萎蕤 morphology “地下茎粗大有三棱”, a false positive for 三棱 herb. FTS only found formula/三棱针/contextual hits.
+  - **sangzhi**: downgraded from `verified_direct` to `verified_contextual`; current source_ref is 桑螵蛸 habitat “着生于桑枝上者”, with only branch-use/contextual supporting hits.
+  - **hupo**: downgraded from `verified_direct` to `contextual_mention` / `needs_review`; current source_ref is 柏子仁散 formula composition mentioning 琥珀, followed by 茯苓 entry.
+  - **mahuanggen**: downgraded from `verified_direct` to `contextual_mention` / `needs_review`; current source_ref is 牡蛎 segment “同麻黄根蛇床子干姜为粉去阴汗”, and bundled FTS had no independent 麻黄根 hit.
+- **Deferred/Eval:** no extra candidates processed. `huangbai`/`huangbo` and field-sync-only items remain out of scope per R25 instruction.
+- **Tests:** baseline `38 passed`; after R25 corrections `38 passed`.
+
 ## R24 P8 reviewed corrections (2026-07-07)
 
 - **Scope:** conservative source-boundary tightening / source rebinding for `congbai`, `huangqi`, `hujiao`, `kunbu`, `lianqiao`, `maidong`.
