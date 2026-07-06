@@ -23,7 +23,7 @@ source_refs:
 ## 来源追溯状态
 
 - 条目类型：药材
-- 追溯状态：verified
+- 追溯状态：needs_review
 - 来源引用：见本文 frontmatter 中的 `source_refs`
 - 复核说明：P17 no_source reprocessed - found in sources.
 
