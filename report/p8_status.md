@@ -1,18 +1,18 @@
 # P8 手工来源精修状态
 
-- **更新时间：** 2026-07-06 21:26+ 后续轮次
+- **更新时间：** 2026-07-06 22:00+ 后续轮次
 - **分支：** `p8-manual-source-refinement`
-- **本轮范围：** 高风险药材队列第 7-14 条 + 方剂 review_queue 前 3 条
+- **本轮范围：** `data/review_queue.jsonl` 方剂第 4-5 条（从第 4 条继续，未重复前三条）
 
 ## 本轮启动检查
 
-- `git branch --show-current` → `p8-manual-source-refinement`
-- 初始 `git status --short` → 干净
+- `git checkout p8-manual-source-refinement` → 已在目标分支
+- 初始 `git status --short --branch` → `## p8-manual-source-refinement`，工作区干净
 - 初始基线：`.venv/bin/python -m pytest -q` → `38 passed`
 
 ## 已完成高风险药材
 
-上一轮已完成并提交：
+前序轮次已完成并提交：
 
 1. `fanxieye` / 番泻叶
 2. `haima` / 海马
@@ -20,9 +20,6 @@
 4. `huangyaozi` / 黄药子
 5. `leigongteng` / 雷公藤
 6. `luhui` / 芦荟
-
-本轮继续完成：
-
 7. `maqianzi` / 马钱子
 8. `qianjinzi` / 千金子
 9. `qishe` / 蕲蛇
@@ -32,47 +29,56 @@
 13. `yangjinhua` / 洋金花
 14. `zhechong` / 土鳖虫
 
-每条均已人工读取当前知识文件、`data/herb_sources.jsonl`、`data/review_queue.jsonl`、`data/herb_index.jsonl` / no-source 分类、`data/p39_high_risk_external_review_queue.jsonl`，并用 `data/source_fts.sqlite` 只读检索相关中文名/异名。
+## 已完成方剂队列
 
-## 本轮完成方剂队列前 3 条
+前序轮次完成 `data/review_queue.jsonl` 方剂前 3 条：
 
 1. `baizhu_fuzi` / 白术附子汤
-   - 对照 `review_queue` top_source、`formula_sources`、`formula_index`、当前知识文件 source_refs。
-   - 结论：top_source 可直接支撑方名、条文与方后组成；仅新增 review note，不改写正文。
 2. `guizhi_houpuxingzi` / 桂枝加厚朴杏子汤
-   - 对照 exact-name source 与别名“桂枝加厚朴杏仁汤”命中。
-   - 结论：exact-name top_source 可支撑 verified；别名仅列为后续 alias 复核线索。
 3. `mahuang_lianqiao` / 麻黄连轺赤小豆汤
-   - 对照 exact-name source 与“连翘/连轺”别名命中。
-   - 结论：exact-name top_source 可支撑 verified；文本差异保留为后续版本/alias 复核线索。
+
+本轮从第 4 条继续，完成：
+
+4. `muli_zexie` / 牡蛎泽泻散
+   - 人工读取当前知识文件、`review_queue` top_source、`formula_sources`、`formula_index`，并只读检查 `source_fts.sqlite`。
+   - 结论：`桂林古本伤寒杂病论 .json` exact-name quote 可支撑方名、主治“大病差后，从腰以下有水气”、组成与服法；保留当前 `verified` / `trace_status: verified`。
+   - 不修改正文；现代克数、临证加减、现代应用/药理研究列为后续内容质量与剂量治理问题。
+5. `zhishi_zhizi` / 枳实栀子豉汤
+   - 人工读取当前知识文件、`review_queue` top_source、`formula_sources`、`formula_index`，并只读检查 `source_fts.sqlite`。
+   - 结论：`桂林古本伤寒杂病论 .json` exact-name quote 可支撑方名、主治“大病差后，劳复”、组成、煎服法及宿食加大黄说明；保留当前 `verified` / `trace_status: verified`。
+   - 不修改正文；现代克数、扩展主治、临证加减、现代应用/药理研究列为后续内容质量与剂量治理问题。
+
+本轮新增 review note：
+
+- `report/p8_manual_reviews/muli_zexie.md`
+- `report/p8_manual_reviews/zhishi_zhizi.md`
 
 ## 测试状态
 
 - 本轮初始基线：`38 passed`
-- `maqianzi qianjinzi qishe` 后：`38 passed`
-- `shandougen tubiechong yadanzi yangjinhua zhechong` 后：`38 passed`
-- 方剂前 3 条 review note 后：`38 passed`
+- `muli_zexie zhishi_zhizi` review note 后：`38 passed`
 
 ## Commits
 
-上一轮：
+前序轮次：
 
 - `39ebfa6 refine: manually review fanxieye haima hamayou`
 - `b379c90 refine: manually review huangyaozi leigongteng luhui`
-
-本轮：
-
 - `f00b29e refine: manually review maqianzi qianjinzi qishe`
 - `8be3577 refine: manually review shandougen tubiechong yadanzi yangjinhua zhechong`
 - `c4cc788 refine: manually review baizhu_fuzi guizhi_houpuxingzi mahuang_lianqiao`
 
+本轮：
+
+- `567d25e refine: manually review formulas muli_zexie zhishi_zhizi`
+
 ## 工作边界
 
-- 未使用脚本批量生成或批量修改知识正文；脚本仅用于只读查询与测试。
-- 高风险药材保持保守边界：无可追溯来源时保持 `no_source_found` / `external_source_required`，不补剂量、禁忌、毒性、妊娠/儿童、现代相互作用或法定状态。
-- `tubiechong` / `zhechong` 检索到“地鳖虫/蛰虫/蟅虫”FTS 线索，但当前 registry 仍未绑定 source_refs，本轮不自动提升来源，仅记录待后续人工 alias/source_ref 复核。
-- 方剂前 3 条本轮仅写 review note；正文中现代应用、药理研究、临证加减等未逐项追溯，建议后续内容质量任务继续处理。
+- 未使用脚本批量生成或批量修改知识正文；脚本仅用于只读列队列、查索引/来源、检查 FTS 表、跑测试。
+- 本轮只新增逐条人工 review note，没有改动方剂正文。
+- 对方剂正文中的现代应用、药理研究、临证加减，未在本轮追溯到原始来源者，均未改写为 verified，仅记录为后续内容质量任务。
 
 ## 下一条
 
-- 若继续 `data/review_queue.jsonl` 方剂队列：下一条为第 4 条（请从 `review_queue` 第 4 行开始，避免重复 `baizhu_fuzi`、`guizhi_houpuxingzi`、`mahuang_lianqiao`）。
+- `data/review_queue.jsonl` 中方剂条目已完成到第 5 行；只读扫描显示第 4 行以后仅有 `muli_zexie` 与 `zhishi_zhizi` 两条方剂。
+- 若继续按 `review_queue` 顺序推进，下一条为第 6 行：`aidicha` / 矮地茶（药材，非方剂，当前原因：未检索到来源候选）。
