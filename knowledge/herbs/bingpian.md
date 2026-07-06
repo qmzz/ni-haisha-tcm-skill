@@ -18,10 +18,6 @@ source_refs:
     quote: "经 饮汁，日二，以平安为度。 大风疠疾——须眉已无，皮肉已烂成疮者：蜜蜂子，胡蜂子，黄蜂子并炒各一分，白花 蛇，乌梢蛇并酒浸去皮骨炙干，全蝎，僵蚕并炒，各一两，地龙炒半两，蝎虎（守宫），赤 足蜈蚣各 15 条，丹砂一两，雄黄 一分（醋炒），龙脑半钱，共为细末，每服一钱匕，蜜汤 调下，月三五服。（圣济）。
 ---
 
-source_scope: "not_in_nihaixia_source"
-external_reference_required: true
-no_source_policy: "keep_boundary_until_traceable_source"
-
 # 冰片
 
 <!-- P5_STANDARD_NOTICE_START -->
@@ -58,3 +54,9 @@ no_source_policy: "keep_boundary_until_traceable_source"
 > 经 饮汁，日二，以平安为度。 大风疠疾——须眉已无，皮肉已烂成疮者：蜜蜂子，胡蜂子，黄蜂子并炒各一分，白花 蛇，乌梢蛇并酒浸去皮骨炙干，全蝎，僵蚕并炒，各一两，地龙炒半两，蝎虎（守宫），赤 足蜈蚣各 15 条，丹砂一两，雄黄 一分（醋炒），龙脑半钱，共为细末，每服一钱匕，蜜汤 调下，月三五服。（圣济）。
 
 ---
+
+## 🔎 P8 手工来源复核
+
+`review_queue` 与 `herb_sources` 对本条的候选均为“龙脑”别名级命中，且仅出现在复方/方书引文或其他药物条目语境中；只读 FTS 检索未见“冰片”专名命中。该候选可作为“龙脑”词项可追溯提及，但不能验证本文“冰片”的性味、归经、功效、主治等本草字段。
+
+本轮未改动既有 `trace_status: verified`，但人工结论建议将该来源理解为别名/语境追溯，不作为医学内容验证依据；若后续治理，宜降级为 contextual/alias trace 或补充外部权威来源。
