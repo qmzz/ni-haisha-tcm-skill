@@ -26,8 +26,16 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 ## 🌿 倪师讲解
 
+当前倪海厦人纪系列资料范围内未找到「安息香」的可追溯专门讲解。
 
 ---
+
+## 来源边界说明（P8 手工复核）
+
+- `data/review_queue.jsonl` 标记为 `no_source_found`，无候选来源。
+- `data/herb_sources.jsonl` 对「安息香 / 拙贝罗香」未检出来源命中。
+- `source_fts.sqlite` 只读检索上述关键词未见可用于支撑正文的命中。
+- 本条已有基础信息、功效与主治缺少倪海厦内部来源支撑，需视为待外部权威来源核验内容，不得据此提升为 verified。
 
 
 ## ⚠️ 禁忌与慎用（待考）
@@ -39,6 +47,6 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 **本条目仅供中医学习参考，不构成诊断或治疗建议。**
 
-- 内容来源于倪海厦老师教学资料，用于中医知识传承与学习
+- 当前未找到倪海厦老师教学资料中的可追溯来源；已有医学性内容待外部权威来源核验
 - 不能替代专业医师的辨证论治
 - 如有健康问题，请咨询执业中医师
