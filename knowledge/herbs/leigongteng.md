@@ -5,6 +5,9 @@ trace_status: no_source_found
 source_scope: "not_in_nihaixia_source"
 external_reference_required: true
 no_source_policy: "keep_boundary_until_traceable_source"
+reviewer: "p8_manual_source_refinement"
+review_status: pending_external_authoritative_source
+risk_tier: high
 
 ---
 # 雷公藤
@@ -14,13 +17,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
 - **来源：** 神农本草经
 - **性味：** 苦辛寒
 
-## 💊 功效
+## 💊 功效（待外部来源核验）
 
-祛风湿，活血通络，消肿止痛
+原种子内容记录为“祛风湿，活血通络，消肿止痛”，但当前倪海厦语料未检出可追溯来源；仅作待核验历史占位，不作为用药依据。
 
-## 🌿 倪师讲解
+## 🌿 倪师讲解（未检出可追溯原文）
 
-顽痹肿痛
+原种子内容记录为“顽痹肿痛”，但当前 source registry 与 FTS 未检出倪师原文；暂不扩写。
 
 **最后更新：** 2026-04-13
 
@@ -31,6 +34,19 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
 涉及实际用药、剂量、配伍、孕产妇、儿童、老人、基础病或正在服用其他药物等情况，必须由合格专业人士结合实际情况判断。
+
+## ⚠️ 高风险外部来源复核边界（P8 手工）
+
+- **毒性/强作用概况：** 当前倪海厦语料、`herb_sources` 与 source FTS 均未检出可追溯命中；不得将种子功效视为已验证医学内容。
+- **禁忌与慎用：** 当前无可追溯原文；不得推定“无禁忌”。
+- **妊娠/哺乳与儿童：** 当前无可追溯原文；需外部权威资料后方可补充。
+- **剂量来源：** 缺少可引用剂量来源；不得给出剂量范围。
+- **炮制/用法：** 缺少可追溯资料；暂不扩写。
+- **现代用药/相互作用风险：** 缺少权威外部来源；需另行复核。
+- **法定/限制状态：** 未查到已白名单外部权威资料；暂不判断。
+- **急症红旗：** 涉及误用、不适或特殊人群用药风险时，应立即咨询合格专业人士或急救渠道；本条目不提供处理方案。
+
+**P8 结论：** 保持 `no_source_found`，既有功效/讲解仅为待核验种子内容；需要外部权威资料后才可扩写。
 
 ## 学习与安全边界
 
