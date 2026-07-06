@@ -34,3 +34,10 @@ no_source_policy: "keep_boundary_until_traceable_source"
 ## 来源边界说明
 
 当前条目在倪海厦人纪系列资料范围内未找到专门讲解；本文只保留条目边界与基础分类，不凭模型记忆补写医学正文。
+
+## 来源边界说明（P8 手工复核）
+
+- `data/review_queue.jsonl` 标记为 `no_source_found`，无候选来源。
+- `data/herb_sources.jsonl` 对「荜茇」未检出来源命中。
+- `source_fts.sqlite` 只读检索「荜茇 / 毕拨 / 荜拨」未见可用于支撑正文的命中。
+- 本条现有分类、性味、归经均已标注“待外部来源验证”；继续保持 no_source 边界，不提升质量。
