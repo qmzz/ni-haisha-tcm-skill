@@ -85,8 +85,7 @@ no_source_policy: "keep_boundary_until_traceable_source"
 
 ## 来源追溯状态
 
-本条目内容来源于倪海厦老师教学资料，已建立来源追溯索引。
-
-- **追溯方式**: 通过 `source_refs` 字段关联原始视频/文稿
-- **验证状态**: 见 frontmatter `trace_status`
-- **用途**: 仅作学习与来源追溯，不作为针灸操作指导
+- **追溯状态**: no_source_found（未在倪海厦人纪系列中检索到来源候选）
+- **来源范围**: not_in_nihaixia_source
+- **处理策略**: keep_boundary_until_traceable_source
+- **用途**: 仅作学习参考，不作为针灸操作指导
