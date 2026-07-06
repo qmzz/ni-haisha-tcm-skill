@@ -1,6 +1,45 @@
 # P8 手工来源精修状态
 
 
+## R18 p26_needs_review_segments 收尾（2026-07-07）
+
+- **分支：** `p8-manual-source-refinement`
+- **启动检查：** `git status --short --branch` 干净；`.venv/bin/python -m pytest -q` → `38 passed`
+- **本轮范围：** `data/p26_needs_review_segments.jsonl` 第 98-157 行中尚无 review note 的 50 条，从 `ejiao` 到 `puhuang`。
+- **完成状态：** p26 队列 `160/160 completed`；已全清。
+- **下一条：** p26 无下一条。
+
+### R18 完成摘要
+
+- 第一组 10 条：`ejiao`, `fangfeng`, `fuling`, `gancao`, `gansui`, `gongcao`, `gouqizi`, `gualou`, `gualue`, `guanzhong`。
+- 第二组 10 条：`guiban`, `haizaomu`, `hehuanpi`, `heshouwu`, `honghua`, `houpo`, `huaihua`, `huaijiao`, `huajiao`, `huangbai`。
+- 第三组 10 条：`huangbo`, `huangqi`, `hujiao`, `huomaren`, `hupo`, `jiegeng`, `jili`, `jineijin`, `kuandonghua`, `kunbu`。
+- 第四组 10 条：`lianqiao`, `lingxiaohua`, `lingyangjiao`, `longyanrou`, `lujiao`, `mahuang`, `mahuanggen`, `maidong`, `maiya`, `meiguihua`。
+- 第五组 10 条：`mengchong`, `moyao`, `mutong`, `muxiang`, `nanshashen`, `niuhuang`, `niuxi`, `paojiang`, `peilan`, `puhuang`。
+
+### R18 重点发现
+
+- 已有正文直接来源但 registry/verified_sources 未同步或错配：`ejiao`, `gancao`, `jiegeng`, `lingyangjiao`, `mahuang`, `moyao`, `puhuang`。
+- 直接来源成立但 quote 前后跨相邻条目：`gongcao`, `gouqizi`, `hehuanpi`, `huaihua`, `huaijiao`, `huomaren`, `jili`, `kuandonghua`, `lingxiaohua`, `longyanrou`, `niuhuang`, `niuxi` 等。
+- 旁及提及/方中组成误作 direct 的高风险条目：`gansui`, `heshouwu`, `huajiao`, `huangbai`, `huangbo`, `huangqi`, `hujiao`, `hupo`, `kunbu`, `lianqiao`, `mahuanggen`, `maidong`, `maiya`, `meiguihua`。
+- 重复/别名规范候选：`gualou`/`gualue` 同为瓜蒌；`huangbai`/`huangbo` 同为黄柏；`peilan` 来自兰草/省头草同株解释，宜按 alias/contextual 处理；`nanshashen` 来自沙参条目分型说明。
+
+### R18 测试与提交
+
+- 初始基线：`38 passed`
+- 第一组后：`38 passed`，commit `193f19a refine: manually review p26 segments ejiao-guanzhong`
+- 第二组后：`38 passed`，commit `9b918b1 refine: manually review p26 segments guiban-huangbai`
+- 第三组后：`38 passed`，commit `2c5426b refine: manually review p26 segments huangbo-kunbu`
+- 第四组后：`38 passed`，commit `0713fe5 refine: manually review p26 segments lianqiao-meiguihua`
+- 第五组与状态更新后：最终测试见本轮提交。
+
+### R18 工作边界
+
+- 本轮新增 50 条人工 review notes，未修改 knowledge 正文、index、sources 或 registry。
+- 对 p26 的 needs_review segment 以记录证据边界为主；只有明确后续修复方向，未批量改正文。
+- FTS exact MATCH 本轮多为空；主要依据 p26 行、knowledge 文件、`knowledge_completeness.jsonl`、`verified_sources.jsonl` 与 source quote 摘要判断。
+
+
 ## R17 p26_needs_review_segments 专项推进（2026-07-07）
 
 - **分支：** `p8-manual-source-refinement`
