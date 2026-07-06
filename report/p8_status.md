@@ -1,6 +1,45 @@
 # P8 手工来源精修状态
 
 
+## R17 p26_needs_review_segments 专项推进（2026-07-07）
+
+- **分支：** `p8-manual-source-refinement`
+- **启动检查：** 初始 `git status --short --branch` 干净；`.venv/bin/python -m pytest -q` → `38 passed`
+- **本轮范围：** `data/p26_needs_review_segments.jsonl` 尚无 review note 的第 1-97 行，按文件顺序从 `benshen` 到 `duzhong`，新增 38 条人工复核记录。
+- **完成状态：** p26 队列 `110/160 completed`；剩余 50 条。
+- **下一条：** 第 98 行 `ejiao`（阿胶），文件 `knowledge/herbs/ejiao.md`。
+
+### R17 完成摘要
+
+- 第一组 10 条：`benshen`, `chengguang`, `dachangshu`, `dicang`, `dingchuan`, `gaohuangshu`, `guanmen`, `jiaji`, `luoque`, `luozhen`。
+- 第二组 10 条：`qucha`, `quyuan`, `shuitu`, `tongtian`, `wuchu`, `xiabai`, `xiamen`, `xinhui`, `yishe`, `yutang`。
+- 第三组 10 条：`bohe`, `chenpi`, `chenxiang`, `cheqianzi`, `chuanxiong`, `cishi`, `congbai`, `dahuang`, `daji`, `danggui`。
+- 第四组 8 条：`dangshen`, `danshen`, `daqingye`, `dilong`, `dingxiang`, `dongkuizi`, `duhuo`, `duzhong`。
+
+### R17 重点发现
+
+- 穴位段多数为 source_ref 页码/JSON 边界污染：如 `benshen`, `tongtian`, `luozhen` 命中目录或整本 JSON 开头；`quyuan` frontmatter 仅残留版本号片段。多数正文已有针灸篇直接候选，建议后续同步 source_ref 而非改正文。
+- `qucha`, `xinhui`, `yutang` 的现有证据偏相邻定位/异文/旁及，后续应考虑降级或补查更直接来源。
+- `xiamen` 是重复/别名异常：title 为侠白且 `alias_of: xiabai`，但 index 归经为足阳明胃经；需后续单列别名和 registry 一致性修复。
+- 草药段出现多条“旁及提及误升 verified_direct”：`bohe` 只是薄荷影响舌苔观察，`chenxiang` 仅为柏子仁丸方中旁及，`cishi` 来自丹砂“畏磁石”，`congbai` 来自防风“得葱白”，`dingxiang` 来自桂枝香料旁及，`duhuo` 来自麝香开窍段旁及独活羌活。
+- 已有 P17 正文长讲解但 registry 仍 empty_quote 的条目：`chenpi`, `cheqianzi`, `chuanxiong`, `daji`, `dangshen`, `danshen`, `dilong`, `duzhong`；建议后续同步 source_refs/index/sources。
+- `dongkuizi` 另发现结构字段污染：`herb_index` 的 `properties`/`meridian` 混入 Markdown 功效/主治文本，需专项字段清理。
+
+### R17 测试与提交
+
+- 初始基线：`38 passed`
+- 第一组后：`38 passed`，commit `9759175 refine: manually review p26 segments benshen-luozhen`
+- 第二组后：`38 passed`，commit `ad29485 refine: manually review p26 segments qucha-yutang`
+- 第三组后：`38 passed`，commit `5d330dd refine: manually review p26 segments bohe-danggui`
+- 第四组后：`38 passed`，commit `4ea9142 refine: manually review p26 segments dangshen-duzhong`
+
+### R17 工作边界
+
+- 本轮仅新增人工 review notes 与状态记录；未修改知识正文、index、sources 或 registry。
+- 对明显 source boundary 错配、旁及提及、empty_quote 未同步的条目均只记录证据和后续修复建议。
+- FTS exact MATCH 对本轮条目多为空；主要依据 p26 行、knowledge 文件、index/sources/knowledge_completeness 与候选 jsonl 摘要判断。
+
+
 ## R16 p11_content_quality_queue 收尾（2026-07-07）
 
 - **分支：** `p8-manual-source-refinement`
