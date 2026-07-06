@@ -1,0 +1,581 @@
+diff --git a/data/herb_index.jsonl b/data/herb_index.jsonl
+index 16ec700..f48f011 100644
+--- a/data/herb_index.jsonl
++++ b/data/herb_index.jsonl
+@@ -402,7 +402,7 @@
+ {"herb_id": "zhumagen", "name": "苎麻根", "file": "knowledge/herbs/zhumagen.md", "source": null, "category": null, "properties": null, "meridian": null, "effects": null, "trace_status": "no_source_found", "source_refs": [], "source_quality_level": "no_source", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "external_source_policy_version": "p6d-2026-05-28", "source_scope": "nihaixia_corpus_not_found", "external_source_allowed_scopes": ["official_pharmacopoeia", "classical_tcm_text", "modern_tcm_reference", "acupoint_standard_reference"], "external_source_status": "policy_required_before_any_content_expansion"}
+ {"herb_id": "zhuru", "name": "竹茹", "file": "knowledge/herbs/zhuru.md", "source": "神农本草经", "category": null, "properties": "甘微寒", "meridian": "肺胃", "effects": "清热化痰，除烦止呕", "trace_status": "verified", "source_refs": [{"source_file": "02【视频同步文稿】人-神农本草经（可打印）.json", "page_num": 232, "quote": "， 这个津液要把它升上来，老师，葛根可以升津液，他气没有上来，水上来，气还是不够，人 精神还是不好，那用升麻，诸如此类的，处方加减就是这样出来拉。 那【唐容川】说，竹叶呢，因为叶是往四面伸开来的，它是主四散。所以它能够消散肌 肉里面的热。那竹茹呢，象人的经脉，药房拿来的时候哦，这边，等下我们找找看有没有。 它捆起来的一个圆圈圈啊，好象一个足球一样。竹茹跟我们吃的竹笋不一样哈，那不要把竹 笋拿来哦，不一样。它能够清络脉的热，很和，来和血，让血不会那么热。所以竹叶呢，治 一切的热，凡", "reviewer": "p8_herb_verified_batch", "reviewed_at": "2026-05-27"}], "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"herb_id": "zhusha", "name": "朱砂", "file": "knowledge/herbs/zhusha.md", "source": "神农本草经", "category": null, "properties": "甘微寒有毒", "meridian": "心", "effects": "清心镇惊，安神解毒", "trace_status": "verified", "source_refs": [{"source_file": "02【视频同步文稿】人-神农本草经（可打印）.json", "page_num": 37, "quote": "，有高一点的，朱砂放在下面，你如 果是平的，晒朱砂，晒完朱砂没了，为什么，风一吹就走掉啦，像沙子一样走掉，所以你要 一个平锅然后上面有高的，挡住它，它就不会给吹走，然后晒干，晒干以后朱砂非常的细， 好的朱砂拿到手上面，就是很滑，很滑的，我们朱砂常常遇到。如果这个都很涩，后面会介 绍眼科的药，我眼科药很涩，我们加点朱砂下去，然后就变得很滑，朱砂的功能很好。 朱砂颜色是红色的，正朱砂色是红色的。本经的原文，诸位看那个本草经的原文，第一 个，我们把它打在上面给大家看，它的【性味】，甘，", "reviewer": "p8_herb_verified_batch", "reviewed_at": "2026-05-27"}], "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+-{"herb_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "source": null, "category": null, "properties": null, "meridian": null, "effects": null, "trace_status": "verified", "source_refs": [{"source_file": "02【视频同步文稿】人-神农本草经（可打印）.json", "page_num": 36, "quote": "道什么叫水漂，常常说，水飞，水飞一下，中国人文人气质，我要总是表现我要读 一点书。那虽然我们药房这个徒弟出身的，没有读过什么书，但是把它名字用得漂亮好一点， 好象里面一点文人的雅，那个诗意在里面。这个水飞。 什么叫水飞，水怎么飞啊，用水飞法，很简单，你如果进口真正的原来的朱砂，拿到手 上的时候，一片一片的，象箭簇一样。你把它打碎，在打碎之前你先看上面有没有灰，先把 一些灰拿掉。打碎了以后很多的金属会出来，里面有铁在里面，过去的我们的中药房都是拿 吸铁石，打了在上面一吸，铁统统吸走了，先把金属吸走，铁吸完以后再把这个朱砂放在水 里面。 好的朱砂是沉在底下的，一放下去的时候很多灰都上来，因为你已经打碎了，所以石头 类，泥土类都会浮在水上面。这第一次，倒掉，朱砂停在下面。然后再倒第二次水，搅和一 下，然后让它朱砂沉下去，轻石类，石头类，沙石类就在上面，再丢，然后这是第二次。再 过第三次了以后，你把水慢慢倒掉，下面那是纯朱砂，沉底的，因为它沉底，所以它有毒。 记得我讲的话，沉底有毒，但是你不去煮它没有毒。这个朱砂，你不要过火，你火一烧就变 水银了，所以你不能加热的。那你把水通通滤干以后，上面都红红的，黏答答的，然后风干， 晒干。 第 3", "char_start": 1172, "char_end": 1174, "searched_keyword": "朱砂", "score": 100}], "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "p5a_review_reason": "quote_does_not_mention_item_name", "p5b_review_segment": "name_mismatch", "p5b_review_segment_reason": "quote does not contain item name", "p5b_resolution": "manual_review_required", "p5c_resolution": "raw_search_direct_hit"}
++{"herb_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "source": null, "category": null, "properties": null, "meridian": null, "effects": null, "trace_status": "no_source_found", "source_refs": [], "source_quality_level": "no_source", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "p5a_review_reason": "quote_does_not_mention_item_name", "p5b_review_segment": "name_mismatch", "p5b_review_segment_reason": "quote does not contain item name", "p5b_resolution": "manual_review_required", "p5c_resolution": "raw_search_direct_hit", "source_scope": "nihaixia_corpus_not_found", "external_reference_required": true, "p8_manual_resolution": "existing parent-name source was Zhu砂, not 朱砂根; no direct Ni corpus source found", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source for 朱砂根; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist"}
+ {"herb_id": "zhuye", "name": "淡竹叶", "file": "knowledge/herbs/zhuye.md", "source": "神农本草经", "category": null, "properties": "甘淡寒", "meridian": "心胃小肠", "effects": "清热泻火，除烦利尿", "trace_status": "verified", "source_refs": [{"source_file": "05【视频同步文稿】人-金匮要略（可打印）.json", "page_num": 152, "quote": "看哦，我们用补津液的时候，甘草大枣，当他的胃的津液没有了，胃口没有了的 时候，我们就加个人参，这是经方啊。 所以我们不会用，哦，老师，他阴虚，我们开了一大堆滋阴的药，生地啊， 这个什么菊花啊，什么，一票......够生津液的药，竹茹啊、什么淡竹叶啊，反 正一票，开进去也没有用，它功能还是没有办法回复，没有办法吸收哦。所以经 方呢是希望，阴要自回，阴要自回才行。好，你看这个处方了以后，用了茯苓桂 枝，平常如果说有动悸，有奔豚的现象哦，我给诸位一个很简单的概念：当动悸 在肚脐以下的时候", "reviewer": "p8_d_seed", "reviewed_at": "2026-05-27"}], "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"herb_id": "zicao", "name": "紫草", "file": "knowledge/herbs/zicao.md", "source": "神农本草经", "category": null, "properties": "甘咸寒", "meridian": "心肝", "effects": "清热凉血，活血解毒透疹", "trace_status": "verified", "source_refs": [{"source_file": "倪海厦人纪系列之神农本草经.json", "page_num": 87, "quote": "，补虚下气，劳气虚热，百邪鬼魅。 【大明】调中消痰，止渴润肌肤，添骨髓。 【好古】益肺气，主息贲。 【用量】普通七分至钱半。 【禁忌】肺病咳逆喘嗽，皆阴虚肺热也，忌独用多用，即用亦须与二冬百部桑皮等苦寒药参 用，方无害以其性温也。 一八○、紫草 【本经原文】味苦，寒，无毒。治心腹邪气，五疸，补中益气，利九窍，通水道。一名紫丹。 一名紫芙。 【产地】为山野自生之宿根草，园圃亦可栽种，产于寒地野生之根为良。 【性味】紫草味甘咸，性寒，无毒。 【主治】紫草为痧痘要药，功能凉血，活血，透", "reviewer": "p8_herb_verified_batch", "reviewed_at": "2026-05-27"}], "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"herb_id": "ziheche", "name": "紫河车", "file": "knowledge/herbs/ziheche.md", "source": "神农本草经", "category": null, "properties": null, "meridian": null, "effects": null, "trace_status": "verified", "source_refs": [{"source_file": "神农本草经.json", "page_num": null, "quote": "。郭璞云：今鹿豆也，叶似大豆，根黄而香，蔓延生。 蚤休味苦微寒。主惊痫，摇头弄舌，热气在腹中，瘨疾，痈创，阴蚀， 下三虫，去蛇毒。一名蚩休。生川谷。 名医曰：生山阳及冤句。 案郑樵云：蚤休，日螫休，曰重楼金绵，曰重台，曰草，甘遂，今人谓 之紫河车，服食家所用，而茎叶亦可爱，多植庭院间。 石长生味咸微寒。主寒热，恶创，火热，辟鬼气不祥（御览作辟恶气， 不祥，鬼毒）。一名丹草（御览引云：丹沙草）。生山谷。 吴普曰：石长生，神农苦，雷公辛，一经甘，生咸阳（御览）。 名医曰：生咸阳。 陆英", "reviewer": "p8_herb_verified_batch", "reviewed_at": "2026-05-27"}], "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+diff --git a/data/knowledge_completeness.jsonl b/data/knowledge_completeness.jsonl
+index 84e1a75..8084af5 100644
+--- a/data/knowledge_completeness.jsonl
++++ b/data/knowledge_completeness.jsonl
+@@ -515,7 +515,7 @@
+ {"kind": "herb", "item_id": "zhumagen", "name": "苎麻根", "file": "knowledge/herbs/zhumagen.md", "trace_status": "no_source_found", "frontmatter_trace_status": "no_source_found", "verified_in_registry": false, "review_status": "no_source_found", "quality_tier": "seed", "has_frontmatter": true, "frontmatter_complete": true, "frontmatter_missing": [], "frontmatter_warnings": [], "has_source_refs": false, "has_safety_boundary": true, "content_checks": {"properties": false, "meridian": false, "effects": true, "contraindication": true, "ni_commentary": true, "safety_boundary": true}, "missing_content_fields": ["properties", "meridian"], "source_policy": "audit_only_not_medical_validation", "source_quality_level": "no_source", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "external_source_policy_version": "p6d-2026-05-28", "source_scope": "nihaixia_corpus_not_found", "external_source_allowed_scopes": ["official_pharmacopoeia", "classical_tcm_text", "modern_tcm_reference", "acupoint_standard_reference"], "external_source_status": "policy_required_before_any_content_expansion", "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "p7b_rationale": "standard external source candidate"}
+ {"kind": "herb", "item_id": "zhuru", "name": "竹茹", "file": "knowledge/herbs/zhuru.md", "trace_status": "verified", "frontmatter_trace_status": "verified", "verified_in_registry": true, "review_status": "verified", "quality_tier": "complete", "has_frontmatter": true, "frontmatter_complete": true, "frontmatter_missing": [], "frontmatter_warnings": [], "has_source_refs": true, "has_safety_boundary": true, "content_checks": {"properties": true, "meridian": true, "effects": true, "contraindication": true, "ni_commentary": true, "safety_boundary": true}, "missing_content_fields": [], "source_policy": "audit_only_not_medical_validation", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"kind": "herb", "item_id": "zhusha", "name": "朱砂", "file": "knowledge/herbs/zhusha.md", "trace_status": "verified", "frontmatter_trace_status": "verified", "verified_in_registry": true, "review_status": "verified", "quality_tier": "complete", "has_frontmatter": true, "frontmatter_complete": true, "frontmatter_missing": [], "frontmatter_warnings": [], "has_source_refs": true, "has_safety_boundary": true, "content_checks": {"properties": true, "meridian": true, "effects": true, "contraindication": true, "ni_commentary": true, "safety_boundary": true}, "missing_content_fields": [], "source_policy": "audit_only_not_medical_validation", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+-{"kind": "herb", "item_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "trace_status": "verified", "frontmatter_trace_status": "verified", "verified_in_registry": true, "review_status": "verified", "quality_tier": "refined", "has_frontmatter": true, "frontmatter_complete": true, "frontmatter_missing": [], "frontmatter_warnings": [], "has_source_refs": true, "has_safety_boundary": true, "content_checks": {"properties": true, "meridian": false, "effects": true, "contraindication": true, "ni_commentary": true, "safety_boundary": true}, "missing_content_fields": ["meridian"], "source_policy": "audit_only_not_medical_validation", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "p5a_review_reason": "quote_does_not_mention_item_name", "p5b_resolution": "manual_review_required", "p5c_resolution": "raw_search_direct_hit"}
++{"kind": "herb", "item_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "trace_status": "no_source_found", "frontmatter_trace_status": "no_source_found", "verified_in_registry": false, "review_status": "needs_review", "quality_tier": "needs_source", "has_frontmatter": true, "frontmatter_complete": true, "frontmatter_missing": [], "frontmatter_warnings": [], "has_source_refs": false, "has_safety_boundary": true, "content_checks": {"properties": true, "meridian": false, "effects": true, "contraindication": true, "ni_commentary": true, "safety_boundary": true}, "missing_content_fields": ["meridian"], "source_policy": "p8_manual_no_source_prevails_over_parent_name_false_positive", "source_quality_level": "no_source", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "p5a_review_reason": "quote_does_not_mention_item_name", "p5b_resolution": "manual_review_required", "p5c_resolution": "raw_search_direct_hit", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source for 朱砂根; previous 朱砂 parent-name hit is not usable for this item", "next_action": "await_external_source_policy_review_and_whitelist", "source_scope": "nihaixia_corpus_not_found"}
+ {"kind": "herb", "item_id": "zhuye", "name": "淡竹叶", "file": "knowledge/herbs/zhuye.md", "trace_status": "verified", "frontmatter_trace_status": "verified", "verified_in_registry": true, "review_status": "verified", "quality_tier": "complete", "has_frontmatter": true, "frontmatter_complete": true, "frontmatter_missing": [], "frontmatter_warnings": [], "has_source_refs": true, "has_safety_boundary": true, "content_checks": {"properties": true, "meridian": true, "effects": true, "contraindication": true, "ni_commentary": true, "safety_boundary": true}, "missing_content_fields": [], "source_policy": "audit_only_not_medical_validation", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"kind": "herb", "item_id": "zicao", "name": "紫草", "file": "knowledge/herbs/zicao.md", "trace_status": "verified", "frontmatter_trace_status": "verified", "verified_in_registry": true, "review_status": "verified", "quality_tier": "complete", "has_frontmatter": true, "frontmatter_complete": true, "frontmatter_missing": [], "frontmatter_warnings": [], "has_source_refs": true, "has_safety_boundary": true, "content_checks": {"properties": true, "meridian": true, "effects": true, "contraindication": true, "ni_commentary": true, "safety_boundary": true}, "missing_content_fields": [], "source_policy": "audit_only_not_medical_validation", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"kind": "herb", "item_id": "ziheche", "name": "紫河车", "file": "knowledge/herbs/ziheche.md", "trace_status": "verified", "frontmatter_trace_status": "verified", "verified_in_registry": true, "review_status": "verified", "quality_tier": "refined", "has_frontmatter": true, "frontmatter_complete": true, "frontmatter_missing": [], "frontmatter_warnings": [], "has_source_refs": true, "has_safety_boundary": true, "content_checks": {"properties": false, "meridian": false, "effects": true, "contraindication": true, "ni_commentary": true, "safety_boundary": true}, "missing_content_fields": ["properties", "meridian"], "source_policy": "audit_only_not_medical_validation", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+diff --git a/data/p30_no_source_classification.jsonl b/data/p30_no_source_classification.jsonl
+index 23935b3..71489d9 100644
+--- a/data/p30_no_source_classification.jsonl
++++ b/data/p30_no_source_classification.jsonl
+@@ -1,3 +1,17 @@
++{"kind": "acupoint", "item_id": "ershenmen", "name": "耳神门", "file": "knowledge/acupoints/ershenmen.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "liangmen", "name": "梁门", "file": "knowledge/acupoints/liangmen.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "shiqixue", "name": "十七", "file": "knowledge/acupoints/shiqixue.md", "no_source_classification": "contextual_false_positive_demoted", "no_source_reason": "P7-A: existing quote is numeric chapter/page noise, not a traceable item source", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": "demoted_false_positive_to_no_source", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "sishencong", "name": "四神聪", "file": "knowledge/acupoints/sishencong.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "tianliao", "name": "天髎", "file": "knowledge/acupoints/tianliao.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "touqiaoyin", "name": "头窍阴", "file": "knowledge/acupoints/touqiaoyin.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "xiaji", "name": "下极俞", "file": "knowledge/acupoints/xiaji.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "xiyangguan", "name": "膝阳关", "file": "knowledge/acupoints/xiyangguan.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "yanggang", "name": "阳纲", "file": "knowledge/acupoints/yanggang.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "yangguan", "name": "腰阳关", "file": "knowledge/acupoints/yangguan.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": "yangguan", "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "yaotongdian", "name": "腰痛点", "file": "knowledge/acupoints/yaotongdian.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "yaoyangguan", "name": "腰阳关", "file": "knowledge/acupoints/yaoyangguan.md", "no_source_classification": "alias_or_duplicate_mapped", "no_source_reason": "P6-B canonical mapping recorded; canonical item still has no traceable source_refs", "next_action": "review_canonical_source_status", "canonical_item_id": "yangguan", "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "canonical_mapping_recorded_but_canonical_no_source", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "alias_first", "p7b_phase": "P7B-A", "risk_tier": "medium", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "zutonggu", "name": "足通谷", "file": "knowledge/acupoints/zutonggu.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "acupoint", "item_id": "zuwuli", "name": "足五里", "file": "knowledge/acupoints/zuwuli.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+ {"kind": "herb", "item_id": "aidicha", "name": "矮地茶", "file": "knowledge/herbs/aidicha.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_modern_or_regional", "p7b_phase": "P7B-E", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+ {"kind": "herb", "item_id": "anxixiang", "name": "安息香", "file": "knowledge/herbs/anxixiang.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+ {"kind": "herb", "item_id": "aoshu", "name": "糯稻根", "file": "knowledge/herbs/aoshu.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": "nuodaogenxu", "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "alias_first", "p7b_phase": "P7B-A", "risk_tier": "medium", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+@@ -118,20 +132,7 @@
+ {"kind": "herb", "item_id": "zhenzhumu", "name": "珍珠母", "file": "knowledge/herbs/zhenzhumu.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+ {"kind": "herb", "item_id": "zhuli", "name": "竹沥", "file": "knowledge/herbs/zhuli.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+ {"kind": "herb", "item_id": "zhumagen", "name": "苎麻根", "file": "knowledge/herbs/zhumagen.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
++{"kind": "herb", "item_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source for 朱砂根; previous 朱砂 parent-name hit is not usable for this item", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_standard", "p7b_phase": "P8-manual", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+ {"kind": "herb", "item_id": "zihuadiding", "name": "紫花地丁", "file": "knowledge/herbs/zihuadiding.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_modern_or_regional", "p7b_phase": "P7B-E", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+ {"kind": "herb", "item_id": "zonglu", "name": "棕榈", "file": "knowledge/herbs/zonglu.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+ {"kind": "herb", "item_id": "zonglutan", "name": "棕榈炭", "file": "knowledge/herbs/zonglutan.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "ershenmen", "name": "耳神门", "file": "knowledge/acupoints/ershenmen.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "liangmen", "name": "梁门", "file": "knowledge/acupoints/liangmen.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "shiqixue", "name": "十七", "file": "knowledge/acupoints/shiqixue.md", "no_source_classification": "contextual_false_positive_demoted", "no_source_reason": "P7-A: existing quote is numeric chapter/page noise, not a traceable item source", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": "demoted_false_positive_to_no_source", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "sishencong", "name": "四神聪", "file": "knowledge/acupoints/sishencong.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "tianliao", "name": "天髎", "file": "knowledge/acupoints/tianliao.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "touqiaoyin", "name": "头窍阴", "file": "knowledge/acupoints/touqiaoyin.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "xiaji", "name": "下极俞", "file": "knowledge/acupoints/xiaji.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "xiyangguan", "name": "膝阳关", "file": "knowledge/acupoints/xiyangguan.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "yanggang", "name": "阳纲", "file": "knowledge/acupoints/yanggang.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "yangguan", "name": "腰阳关", "file": "knowledge/acupoints/yangguan.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": "yangguan", "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "yaotongdian", "name": "腰痛点", "file": "knowledge/acupoints/yaotongdian.md", "no_source_classification": "external_source_required", "no_source_reason": "Current Ni corpus has no traceable source; future expansion requires whitelisted external source_refs and manual review", "next_action": "await_external_source_policy_review_and_whitelist", "canonical_item_id": null, "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "policy_required_before_any_content_expansion", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "yaoyangguan", "name": "腰阳关", "file": "knowledge/acupoints/yaoyangguan.md", "no_source_classification": "alias_or_duplicate_mapped", "no_source_reason": "P6-B canonical mapping recorded; canonical item still has no traceable source_refs", "next_action": "review_canonical_source_status", "canonical_item_id": "yangguan", "p6c_resolution": null, "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "canonical_mapping_recorded_but_canonical_no_source", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "alias_first", "p7b_phase": "P7B-A", "risk_tier": "medium", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "zutonggu", "name": "足通谷", "file": "knowledge/acupoints/zutonggu.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+-{"kind": "acupoint", "item_id": "zuwuli", "name": "足五里", "file": "knowledge/acupoints/zuwuli.md", "no_source_classification": "internal_research_exhausted", "no_source_reason": "P6-C raw Ni corpus re-search exhausted without reliable source_refs", "next_action": "manual_review_or_external_source_policy", "canonical_item_id": null, "p6c_resolution": "internal_no_hit", "external_source_policy_version": "p6d-2026-05-28", "external_source_status": "eligible_for_manual_review_or_external_source_policy", "source_scope": "nihaixia_corpus_not_found", "p7a_action": null, "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion"}
+diff --git a/data/p36_external_source_queue.jsonl b/data/p36_external_source_queue.jsonl
+index 47aacef..93725d1 100644
+--- a/data/p36_external_source_queue.jsonl
++++ b/data/p36_external_source_queue.jsonl
+@@ -1,3 +1,17 @@
++{"kind": "acupoint", "item_id": "ershenmen", "name": "耳神门", "file": "knowledge/acupoints/ershenmen.md", "current_classification": "external_source_required", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "liangmen", "name": "梁门", "file": "knowledge/acupoints/liangmen.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "shiqixue", "name": "十七", "file": "knowledge/acupoints/shiqixue.md", "current_classification": "contextual_false_positive_demoted", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "sishencong", "name": "四神聪", "file": "knowledge/acupoints/sishencong.md", "current_classification": "external_source_required", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "tianliao", "name": "天髎", "file": "knowledge/acupoints/tianliao.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "touqiaoyin", "name": "头窍阴", "file": "knowledge/acupoints/touqiaoyin.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "xiaji", "name": "下极俞", "file": "knowledge/acupoints/xiaji.md", "current_classification": "external_source_required", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "xiyangguan", "name": "膝阳关", "file": "knowledge/acupoints/xiyangguan.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "yanggang", "name": "阳纲", "file": "knowledge/acupoints/yanggang.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "yangguan", "name": "腰阳关", "file": "knowledge/acupoints/yangguan.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": "yangguan"}
++{"kind": "acupoint", "item_id": "yaotongdian", "name": "腰痛点", "file": "knowledge/acupoints/yaotongdian.md", "current_classification": "external_source_required", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "yaoyangguan", "name": "腰阳关", "file": "knowledge/acupoints/yaoyangguan.md", "current_classification": "alias_or_duplicate_mapped", "p7b_category": "alias_first", "p7b_phase": "P7B-A", "risk_tier": "medium", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "resolve canonical/alias before external sourcing", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": "yangguan"}
++{"kind": "acupoint", "item_id": "zutonggu", "name": "足通谷", "file": "knowledge/acupoints/zutonggu.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "acupoint", "item_id": "zuwuli", "name": "足五里", "file": "knowledge/acupoints/zuwuli.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+ {"kind": "herb", "item_id": "aidicha", "name": "矮地茶", "file": "knowledge/herbs/aidicha.md", "current_classification": "external_source_required", "p7b_category": "herb_modern_or_regional", "p7b_phase": "P7B-E", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "modern/regional materia medica; external source likely required", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+ {"kind": "herb", "item_id": "anxixiang", "name": "安息香", "file": "knowledge/herbs/anxixiang.md", "current_classification": "external_source_required", "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard external source candidate", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+ {"kind": "herb", "item_id": "aoshu", "name": "糯稻根", "file": "knowledge/herbs/aoshu.md", "current_classification": "external_source_required", "p7b_category": "alias_first", "p7b_phase": "P7B-A", "risk_tier": "medium", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "resolve canonical/alias before external sourcing", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": "nuodaogenxu"}
+@@ -118,20 +132,7 @@
+ {"kind": "herb", "item_id": "zhenzhumu", "name": "珍珠母", "file": "knowledge/herbs/zhenzhumu.md", "current_classification": "external_source_required", "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard external source candidate", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+ {"kind": "herb", "item_id": "zhuli", "name": "竹沥", "file": "knowledge/herbs/zhuli.md", "current_classification": "external_source_required", "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard external source candidate", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+ {"kind": "herb", "item_id": "zhumagen", "name": "苎麻根", "file": "knowledge/herbs/zhumagen.md", "current_classification": "external_source_required", "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard external source candidate", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
++{"kind": "herb", "item_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "current_classification": "external_source_required", "p7b_category": "herb_standard", "p7b_phase": "P8-manual", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "P8 manual downgrade: previous source was 朱砂, not 朱砂根; standard external source candidate", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+ {"kind": "herb", "item_id": "zihuadiding", "name": "紫花地丁", "file": "knowledge/herbs/zihuadiding.md", "current_classification": "external_source_required", "p7b_category": "herb_modern_or_regional", "p7b_phase": "P7B-E", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "modern/regional materia medica; external source likely required", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+ {"kind": "herb", "item_id": "zonglu", "name": "棕榈", "file": "knowledge/herbs/zonglu.md", "current_classification": "external_source_required", "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard external source candidate", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+ {"kind": "herb", "item_id": "zonglutan", "name": "棕榈炭", "file": "knowledge/herbs/zonglutan.md", "current_classification": "external_source_required", "p7b_category": "herb_standard", "p7b_phase": "P7B-F", "risk_tier": "low", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference", "classical_tcm_text"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard external source candidate", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "ershenmen", "name": "耳神门", "file": "knowledge/acupoints/ershenmen.md", "current_classification": "external_source_required", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "liangmen", "name": "梁门", "file": "knowledge/acupoints/liangmen.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "shiqixue", "name": "十七", "file": "knowledge/acupoints/shiqixue.md", "current_classification": "contextual_false_positive_demoted", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "sishencong", "name": "四神聪", "file": "knowledge/acupoints/sishencong.md", "current_classification": "external_source_required", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "tianliao", "name": "天髎", "file": "knowledge/acupoints/tianliao.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "touqiaoyin", "name": "头窍阴", "file": "knowledge/acupoints/touqiaoyin.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "xiaji", "name": "下极俞", "file": "knowledge/acupoints/xiaji.md", "current_classification": "external_source_required", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "xiyangguan", "name": "膝阳关", "file": "knowledge/acupoints/xiyangguan.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "yanggang", "name": "阳纲", "file": "knowledge/acupoints/yanggang.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "yangguan", "name": "腰阳关", "file": "knowledge/acupoints/yangguan.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": "yangguan"}
+-{"kind": "acupoint", "item_id": "yaotongdian", "name": "腰痛点", "file": "knowledge/acupoints/yaotongdian.md", "current_classification": "external_source_required", "p7b_category": "acupoint_extra_or_uncertain", "p7b_phase": "P7B-C", "risk_tier": "medium", "recommended_source_scopes": ["acupoint_standard_reference", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "extra/uncertain acupoint requires acupoint-standard reference and manual review", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "yaoyangguan", "name": "腰阳关", "file": "knowledge/acupoints/yaoyangguan.md", "current_classification": "alias_or_duplicate_mapped", "p7b_category": "alias_first", "p7b_phase": "P7B-A", "risk_tier": "medium", "recommended_source_scopes": ["official_pharmacopoeia", "modern_tcm_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "resolve canonical/alias before external sourcing", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": "yangguan"}
+-{"kind": "acupoint", "item_id": "zutonggu", "name": "足通谷", "file": "knowledge/acupoints/zutonggu.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+-{"kind": "acupoint", "item_id": "zuwuli", "name": "足五里", "file": "knowledge/acupoints/zuwuli.md", "current_classification": "internal_research_exhausted", "p7b_category": "acupoint_standard", "p7b_phase": "P7B-B", "risk_tier": "low", "recommended_source_scopes": ["acupoint_standard_reference"], "required_review": "manual_review_required_before_content_or_quality_promotion", "rationale": "standard acupoint candidate; use acupoint standard reference", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "external_source_policy_version": "p6d-2026-05-28", "canonical_item_id": null}
+diff --git a/data/review_decisions.jsonl b/data/review_decisions.jsonl
+index 7809e83..bd308d3 100644
+--- a/data/review_decisions.jsonl
++++ b/data/review_decisions.jsonl
+@@ -509,7 +509,7 @@
+ {"kind": "acupoint", "item_id": "zigong_ren", "name": "紫宫二", "file": "knowledge/acupoints/zigong_ren.md", "decision": "verified", "source_file": "01【视频同步文稿】人-针灸篇（可打印）.json", "page_num": 120, "quote": "开心，一开心郁气就散了。 书上指神封穴治咳逆 、乳痈 ，乳痈就是乳房硬块。神封穴再隔一个肋骨。就是灵墟。 灵墟在玉堂外开两寸。玉堂穴外开二寸就是灵墟。治症都是一样，治咳嗽、胸满。灵墟再往 上一个肋间，属于任脉外开二寸的地方，是神藏穴，神藏是紫宫外开二寸，彼此治症差不多。 俞府跟彧中，俞府是璇玑外开二寸，彧中是华盖穴外开二寸，俞府是肾经的最后一个穴 道。临床上，扎俞府跟彧中时，刺法是这样子刺。一般来说，如果说这是穴位，这是任脉， 如果是在外开二寸的地方，我们都是在一寸半的地方进针。", "reviewer": "p8_e_parent_expand", "reviewed_at": "2026-05-27", "notes": "P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=紫宫)"}
+ {"kind": "acupoint", "item_id": "zusanli_st", "name": "足三里二", "file": "knowledge/acupoints/zusanli_st.md", "decision": "verified", "source_file": "01【视频同步文稿】人-针灸篇（可打印）.json", "page_num": 70, "quote": "人纪系列针灸篇 6、三阴交穴与妇病治疗（3-3:38:47） 再来是三阴交。三阴交跟足三里是人身上的一个大穴。三阴交怎么找，我们这个脚后跟 在这边。脚后跟，内踝裸，要沿着胫骨，在踝裸上三寸的地方，骨头的后面。这图是病人的 右脚，这是三阴交。三阴交在骨头旁边，不要扎到骨膜，所以不要贴在骨头旁边下针。 为什么叫三阴交，就是三条阴经的", "reviewer": "p8_e_parent_expand", "reviewed_at": "2026-05-27", "notes": "P8-E parent name expand trace (acupoint_parent_expand, score=80, variant=足三里)"}
+ {"kind": "herb", "item_id": "chuanyubeimu", "name": "川贝母", "file": "knowledge/herbs/chuanyubeimu.md", "decision": "no_source_found", "source_file": "倪海厦人纪系列之神农本草经.json", "page_num": 84, "quote": "金，滋水而下润肾燥，治命门相火有馀。 【容川】知母叶至难死。拔之犹生，即知其得水气多，故能清气分之热。 【用量】普通钱半至三钱。 【禁忌】能滑肠，泄泻者忌，阳痿及易举易痿，脾弱饮食不化，胃虚不思食，均忌，勿犯铁 器，得黄相及酒良。 一七二、贝母 【本经原文】味辛，平，无毒。治伤寒烦热，淋沥邪气，疝瘕。喉痹，乳难，金疮，风痉。 一名空草。 【产地】产四川山西等地，为圆球形之根。色白入药，今浙江亦有之，称浙贝母，功用稍异。 【性味】味辛苦，性平无毒。 【主治】贝母为袪痰治咳要药，功能", "reviewer": "p8_e_parent_expand", "reviewed_at": "2026-05-27", "notes": "P17 content quality batch processing: no_source_found"}
+-{"kind": "herb", "item_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "decision": "verified", "source_file": "02【视频同步文稿】人-神农本草经（可打印）.json", "page_num": 37, "quote": "，有高一点的，朱砂放在下面，你如 果是平的，晒朱砂，晒完朱砂没了，为什么，风一吹就走掉啦，像沙子一样走掉，所以你要 一个平锅然后上面有高的，挡住它，它就不会给吹走，然后晒干，晒干以后朱砂非常的细， 好的朱砂拿到手上面，就是很滑，很滑的，我们朱砂常常遇到。如果这个都很涩，后面会介 绍眼科的药，我眼科药很涩，我们加点朱砂下去，然后就变得很滑，朱砂的功能很好。 朱砂颜色是红色的，正朱砂色是红色的。本经的原文，诸位看那个本草经的原文，第一 个，我们把它打在上面给大家看，它的【性味】，甘，", "reviewer": "p8_e_parent_expand", "reviewed_at": "2026-05-27", "notes": "P8-E parent name expand trace (herb_parent_expand, score=100, variant=朱砂)"}
++{"kind": "herb", "item_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "decision": "no_source_found", "source_file": null, "page_num": null, "quote": "", "reviewer": "p8_manual_source_refinement", "reviewed_at": "2026-07-06", "notes": "P8 manual review: parent-name hit was 朱砂, not 朱砂根; keep no_source boundary pending external authority."}
+ {"kind": "acupoint", "item_id": "binao", "name": "臂臑", "file": "knowledge/acupoints/binao.md", "decision": "verified", "source_file": "01【视频同步文稿】人-针灸篇（可打印）.json", "page_num": 212, "quote": "人纪系列针灸篇 再来是五里穴。肘髎穴往上三寸，就是五里穴。这个穴道呢，禁针，因为有大动脉在， 所以知道就好了，很少用。再来是臂臑，臂臑从手肘上七寸，也可从肩髃找，从肩髃最好找， 我们手臂上有个凹洞，那个凹洞就是肩髃穴。从肩髃穴下两寸，就是臂臑，在两个肌肉的中 间。一开始开宗明义讲的，穴道会在肌肉之间，才不会碰到骨头。与这个臂臑是手阳明络手 足太阳阳维之会，是几个经络", "reviewer": "p11_c_acupoint_high_confidence", "reviewed_at": "2026-05-27", "notes": "P17 no_source reprocessed: found in sources", "quality_score": 80, "match_reason": ["matched_exact_name", "primary_keyword", "preferred_source_file", "contains_tcm_context_keyword"], "risk_flags": []}
+ {"kind": "acupoint", "item_id": "changqiang", "name": "长强", "file": "knowledge/acupoints/changqiang.md", "decision": "verified", "source_file": "01【视频同步文稿】人-针灸篇（可打印）.json", "page_num": 34, "quote": "人纪系列针灸篇 督脉跟任脉一样，没有井荣俞经合。书上在讲考正穴法之前有提到，要知任督二脉之功， 先将四门关闭，耳、目、口、鼻先闭起来。 1、长强穴（主治痔疮）（2-00:54:24） 督脉第一个穴道是长强穴，是足少阴、少阳之会，这个穴是痔疮 的根本。怎么找这个 穴道呢?让病人躺在床上，在尾椎骨的下方，肛门与尾椎骨的中间。长强穴下针的时候，采 斜刺。长强穴，无谓补泻，引气到就好了，下针不用太深，一寸左右。主要是治痔疮。 医书上有很多痔，什么长", "reviewer": "p11_c_acupoint_high_confidence", "reviewed_at": "2026-05-27", "notes": "P11-C acupoint high-confidence fixed whitelist; source_ref quality_score >=80; traceability only, not medical validation.", "quality_score": 80, "match_reason": ["matched_exact_name", "primary_keyword", "preferred_source_file", "contains_tcm_context_keyword"], "risk_flags": []}
+ {"kind": "acupoint", "item_id": "chongmen", "name": "冲门", "file": "knowledge/acupoints/chongmen.md", "decision": "verified", "source_file": "01【视频同步文稿】人-针灸篇（可打印）.json", "page_num": 74, "quote": "人纪系列针灸篇 哪里，那照现在的中医去治，一个女孩子，又是修女，他们要怎么下针。当然我们可以扎脾 经的子穴或母穴，但我们用的是云门，因为是对称治疗法，我们可以采对称治疗法。 生完小孩后，小孩子生出来了，很多人胎盘下不来 ，冲门穴也是很好的穴道。故名思 义，门打开让胎盘下来。一般来说，胎盘不出来的话，病人会大量的失血，很危险。所以胎 盘要快点下来。 12、府舍穴至腹哀穴（4-00:25:16） 再从中极找府舍。从曲骨上一寸再往外开四寸，就是府舍。这些的穴道，你只要", "reviewer": "p11_c_acupoint_high_confidence", "reviewed_at": "2026-05-27", "notes": "P11-C acupoint high-confidence fixed whitelist; source_ref quality_score >=80; traceability only, not medical validation.", "quality_score": 80, "match_reason": ["matched_exact_name", "primary_keyword", "preferred_source_file", "contains_tcm_context_keyword"], "risk_flags": []}
+diff --git a/data/verified_sources.jsonl b/data/verified_sources.jsonl
+index acf3f09..997dbc3 100644
+--- a/data/verified_sources.jsonl
++++ b/data/verified_sources.jsonl
+@@ -792,7 +792,6 @@
+ {"kind": "herb", "item_id": "zhuling", "name": "猪苓", "file": "knowledge/herbs/zhuling.md", "trace_status": "verified", "source_refs": [{"source_file": "02【视频同步文稿】人-神农本草经（可打印）.json", "page_num": 241, "quote": "在膀胱的结石，肾结石的时候，我们会用一些像 猪苓 。用滑石，用溶盐，青盐呀，咸能软坚啊。用猪苓，茯苓，泽泻等，那你说老师这个 药下去以后，如果石头很大，石头旁边很利嘛，会把那个尿道割破，割破小便会带血呀，那 怎么办？加点阿胶嘛，以后我们在讲猪苓汤的方子时候你就会看懂。"}], "notes": "P8-C herb verified batch; first source_ref from herb_index; traceability only, not medical validation.", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "p43_source_ref_sync": "synced_from_clean_markdown_frontmatter"}
+ {"kind": "herb", "item_id": "zhuru", "name": "竹茹", "file": "knowledge/herbs/zhuru.md", "trace_status": "verified", "source_refs": [{"source_file": "02【视频同步文稿】人-神农本草经（可打印）.json", "page_num": 232, "quote": "， 这个津液要把它升上来，老师，葛根可以升津液，他气没有上来，水上来，气还是不够，人 精神还是不好，那用升麻，诸如此类的，处方加减就是这样出来拉。 那【唐容川】说，竹叶呢，因为叶是往四面伸开来的，它是主四散。所以它能够消散肌 肉里面的热。那竹茹呢，象人的经脉，药房拿来的时候哦，这边，等下我们找找看有没有。 它捆起来的一个圆圈圈啊，好象一个足球一样。竹茹跟我们吃的竹笋不一样哈，那不要把竹 笋拿来哦，不一样。它能够清络脉的热，很和，来和血，让血不会那么热。所以竹叶呢，治 一切的热，凡", "reviewer": "p8_herb_verified_batch", "reviewed_at": "2026-05-27"}], "notes": "P8-C herb verified batch; first source_ref from herb_index; traceability only, not medical validation.", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"kind": "herb", "item_id": "zhusha", "name": "朱砂", "file": "knowledge/herbs/zhusha.md", "trace_status": "verified", "source_refs": [{"source_file": "02【视频同步文稿】人-神农本草经（可打印）.json", "page_num": 37, "quote": "，有高一点的，朱砂放在下面，你如 果是平的，晒朱砂，晒完朱砂没了，为什么，风一吹就走掉啦，像沙子一样走掉，所以你要 一个平锅然后上面有高的，挡住它，它就不会给吹走，然后晒干，晒干以后朱砂非常的细， 好的朱砂拿到手上面，就是很滑，很滑的，我们朱砂常常遇到。如果这个都很涩，后面会介 绍眼科的药，我眼科药很涩，我们加点朱砂下去，然后就变得很滑，朱砂的功能很好。 朱砂颜色是红色的，正朱砂色是红色的。本经的原文，诸位看那个本草经的原文，第一 个，我们把它打在上面给大家看，它的【性味】，甘，", "reviewer": "p8_herb_verified_batch", "reviewed_at": "2026-05-27"}], "notes": "P8-C herb verified batch; first source_ref from herb_index; traceability only, not medical validation.", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+-{"kind": "herb", "item_id": "zhushagen", "name": "朱砂根", "file": "knowledge/herbs/zhushagen.md", "trace_status": "verified", "source_refs": [{"source_file": "02【视频同步文稿】人-神农本草经（可打印）.json", "page_num": 36, "quote": "道什么叫水漂，常常说，水飞，水飞一下，中国人文人气质，我要总是表现我要读 一点书。那虽然我们药房这个徒弟出身的，没有读过什么书，但是把它名字用得漂亮好一点， 好象里面一点文人的雅，那个诗意在里面。这个水飞。 什么叫水飞，水怎么飞啊，用水飞法，很简单，你如果进口真正的原来的朱砂，拿到手 上的时候，一片一片的，象箭簇一样。你把它打碎，在打碎之前你先看上面有没有灰，先把 一些灰拿掉。打碎了以后很多的金属会出来，里面有铁在里面，过去的我们的中药房都是拿 吸铁石，打了在上面一吸，铁统统吸走了，先把金属吸走，铁吸完以后再把这个朱砂放在水 里面。 好的朱砂是沉在底下的，一放下去的时候很多灰都上来，因为你已经打碎了，所以石头 类，泥土类都会浮在水上面。这第一次，倒掉，朱砂停在下面。然后再倒第二次水，搅和一 下，然后让它朱砂沉下去，轻石类，石头类，沙石类就在上面，再丢，然后这是第二次。再 过第三次了以后，你把水慢慢倒掉，下面那是纯朱砂，沉底的，因为它沉底，所以它有毒。 记得我讲的话，沉底有毒，但是你不去煮它没有毒。这个朱砂，你不要过火，你火一烧就变 水银了，所以你不能加热的。那你把水通通滤干以后，上面都红红的，黏答答的，然后风干， 晒干。 第 3", "char_start": 1172, "char_end": 1174, "searched_keyword": "朱砂", "score": 100}], "notes": "P8-E parent name expand trace (herb_parent_expand, score=100, variant=朱砂)", "review_status": "trace_review_passed", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation", "p5a_review_reason": "quote_does_not_mention_item_name", "p5b_review_segment": "name_mismatch", "p5b_review_segment_reason": "quote does not contain item name", "p5b_resolution": "manual_review_required", "p5c_resolution": "raw_search_direct_hit"}
+ {"kind": "herb", "item_id": "zhuye", "name": "淡竹叶", "file": "knowledge/herbs/zhuye.md", "trace_status": "verified", "source_refs": [{"source_file": "05【视频同步文稿】人-金匮要略（可打印）.json", "page_num": 152, "quote": "看哦，我们用补津液的时候，甘草大枣，当他的胃的津液没有了，胃口没有了的 时候，我们就加个人参，这是经方啊。 所以我们不会用，哦，老师，他阴虚，我们开了一大堆滋阴的药，生地啊， 这个什么菊花啊，什么，一票......够生津液的药，竹茹啊、什么淡竹叶啊，反 正一票，开进去也没有用，它功能还是没有办法回复，没有办法吸收哦。所以经 方呢是希望，阴要自回，阴要自回才行。好，你看这个处方了以后，用了茯苓桂 枝，平常如果说有动悸，有奔豚的现象哦，我给诸位一个很简单的概念：当动悸 在肚脐以下的时候", "reviewer": "p8_d_seed", "reviewed_at": "2026-05-27"}], "notes": "P8-D verified via QUALITY_OVERRIDES (score=56, threshold=50)", "review_status": "trace_review_passed", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"kind": "herb", "item_id": "zicao", "name": "紫草", "file": "knowledge/herbs/zicao.md", "trace_status": "verified", "source_refs": [{"source_file": "倪海厦人纪系列之神农本草经.json", "page_num": 87, "quote": "，补虚下气，劳气虚热，百邪鬼魅。 【大明】调中消痰，止渴润肌肤，添骨髓。 【好古】益肺气，主息贲。 【用量】普通七分至钱半。 【禁忌】肺病咳逆喘嗽，皆阴虚肺热也，忌独用多用，即用亦须与二冬百部桑皮等苦寒药参 用，方无害以其性温也。 一八○、紫草 【本经原文】味苦，寒，无毒。治心腹邪气，五疸，补中益气，利九窍，通水道。一名紫丹。 一名紫芙。 【产地】为山野自生之宿根草，园圃亦可栽种，产于寒地野生之根为良。 【性味】紫草味甘咸，性寒，无毒。 【主治】紫草为痧痘要药，功能凉血，活血，透", "reviewer": "p8_herb_verified_batch", "reviewed_at": "2026-05-27"}], "notes": "P8-C herb verified batch; first source_ref from herb_index; traceability only, not medical validation.", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+ {"kind": "herb", "item_id": "ziheche", "name": "紫河车", "file": "knowledge/herbs/ziheche.md", "trace_status": "verified", "source_refs": [{"source_file": "神农本草经.json", "page_num": null, "quote": "。郭璞云：今鹿豆也，叶似大豆，根黄而香，蔓延生。 蚤休味苦微寒。主惊痫，摇头弄舌，热气在腹中，瘨疾，痈创，阴蚀， 下三虫，去蛇毒。一名蚩休。生川谷。 名医曰：生山阳及冤句。 案郑樵云：蚤休，日螫休，曰重楼金绵，曰重台，曰草，甘遂，今人谓 之紫河车，服食家所用，而茎叶亦可爱，多植庭院间。 石长生味咸微寒。主寒热，恶创，火热，辟鬼气不祥（御览作辟恶气， 不祥，鬼毒）。一名丹草（御览引云：丹沙草）。生山谷。 吴普曰：石长生，神农苦，雷公辛，一经甘，生咸阳（御览）。 名医曰：生咸阳。 陆英", "reviewer": "p8_herb_verified_batch", "reviewed_at": "2026-05-27"}], "notes": "P8-C herb verified batch; first source_ref from herb_index; traceability only, not medical validation.", "source_quality_level": "verified_direct", "source_quality_policy": "source_quality_is_traceability_only_not_medical_validation"}
+diff --git a/knowledge/herbs/xianhecao.md b/knowledge/herbs/xianhecao.md
+index f3b8a5c..5207f5f 100644
+--- a/knowledge/herbs/xianhecao.md
++++ b/knowledge/herbs/xianhecao.md
+@@ -29,6 +29,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 116 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/xianmao.md b/knowledge/herbs/xianmao.md
+index 7277d8c..6d5cbf0 100644
+--- a/knowledge/herbs/xianmao.md
++++ b/knowledge/herbs/xianmao.md
+@@ -29,6 +29,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 117 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/xiecao.md b/knowledge/herbs/xiecao.md
+index 8cf8a07..1adce45 100644
+--- a/knowledge/herbs/xiecao.md
++++ b/knowledge/herbs/xiecao.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 118 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/xihonghua.md b/knowledge/herbs/xihonghua.md
+index 7e69a5d..0759a32 100644
+--- a/knowledge/herbs/xihonghua.md
++++ b/knowledge/herbs/xihonghua.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 119 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/xiqiancao.md b/knowledge/herbs/xiqiancao.md
+index a7fa6b8..c2816c9 100644
+--- a/knowledge/herbs/xiqiancao.md
++++ b/knowledge/herbs/xiqiancao.md
+@@ -27,6 +27,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 120 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/xuelianhua.md b/knowledge/herbs/xuelianhua.md
+index da7d5d8..9a50877 100644
+--- a/knowledge/herbs/xuelianhua.md
++++ b/knowledge/herbs/xuelianhua.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 123 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/xungufeng.md b/knowledge/herbs/xungufeng.md
+index 158b5ff..f594056 100644
+--- a/knowledge/herbs/xungufeng.md
++++ b/knowledge/herbs/xungufeng.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 125 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/yingsuqiao.md b/knowledge/herbs/yingsuqiao.md
+index f9cab1a..d97883a 100644
+--- a/knowledge/herbs/yingsuqiao.md
++++ b/knowledge/herbs/yingsuqiao.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 129 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/yubaifu.md b/knowledge/herbs/yubaifu.md
+index 974fe1b..b8a60db 100644
+--- a/knowledge/herbs/yubaifu.md
++++ b/knowledge/herbs/yubaifu.md
+@@ -20,6 +20,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 130 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/yubaizi.md b/knowledge/herbs/yubaizi.md
+index 7bb8725..97689b8 100644
+--- a/knowledge/herbs/yubaizi.md
++++ b/knowledge/herbs/yubaizi.md
+@@ -30,6 +30,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 131 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/yuejihua.md b/knowledge/herbs/yuejihua.md
+index c7e4be4..7c373db 100644
+--- a/knowledge/herbs/yuejihua.md
++++ b/knowledge/herbs/yuejihua.md
+@@ -29,6 +29,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 132 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/yuganzi.md b/knowledge/herbs/yuganzi.md
+index 7ed8caa..ef86fc4 100644
+--- a/knowledge/herbs/yuganzi.md
++++ b/knowledge/herbs/yuganzi.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 133 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/yuxingcao.md b/knowledge/herbs/yuxingcao.md
+index 2a6c900..982e122 100644
+--- a/knowledge/herbs/yuxingcao.md
++++ b/knowledge/herbs/yuxingcao.md
+@@ -29,6 +29,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 134 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/zhangnao.md b/knowledge/herbs/zhangnao.md
+index 2aff1aa..18cd973 100644
+--- a/knowledge/herbs/zhangnao.md
++++ b/knowledge/herbs/zhangnao.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 136 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/zhenzhumu.md b/knowledge/herbs/zhenzhumu.md
+index a9fec5b..1f0c718 100644
+--- a/knowledge/herbs/zhenzhumu.md
++++ b/knowledge/herbs/zhenzhumu.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 138 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/zhuli.md b/knowledge/herbs/zhuli.md
+index ce95ebd..1a2f07f 100644
+--- a/knowledge/herbs/zhuli.md
++++ b/knowledge/herbs/zhuli.md
+@@ -29,6 +29,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 139 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/zhumagen.md b/knowledge/herbs/zhumagen.md
+index 15cefc7..87c7180 100644
+--- a/knowledge/herbs/zhumagen.md
++++ b/knowledge/herbs/zhumagen.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 140 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/zhushagen.md b/knowledge/herbs/zhushagen.md
+index 0daa20d..0e7c030 100644
+--- a/knowledge/herbs/zhushagen.md
++++ b/knowledge/herbs/zhushagen.md
+@@ -3,13 +3,12 @@ title: "朱砂根"
+ content_scope: "学习参考与资料检索，不作为诊断、处方、针灸操作或治疗建议"
+ safety_disclaimer_required: true
+ reviewer: "p6_verified_standardization"
+-review_status: verified
++review_status: needs_external_source
+ kind: "herb"
+-trace_status: verified
+-source_refs:
+-  - source_file: "02【视频同步文稿】人-神农本草经（可打印）.json"
+-    page_num: 37
+-    quote: "，有高一点的，朱砂放在下面，你如 果是平的，晒朱砂，晒完朱砂没了，为什么，风一吹就走掉啦，像沙子一样走掉，所以你要 一个平锅然后上面有高的，挡住它，它就不会给吹走，然后晒干，晒干以后朱砂非常的细， 好的朱砂拿到手上面，就是很滑，很滑的，我们朱砂常常遇到。如果这个都很涩，后面会介 绍眼科的药，我眼科药很涩，我们加点朱砂下去，然后就变得很滑，朱砂的功能很好。 朱砂颜色是红色的，正朱砂色是红色的。本经的原文，诸位看那个本草经的原文，第一 个，我们把它打在上面给大家看，它的【性味】，甘，"
++trace_status: no_source_found
++source_scope: "not_in_nihaixia_source"
++external_reference_required: true
++no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ # 朱砂根
+@@ -23,9 +22,9 @@ source_refs:
+ ## 来源追溯状态
+ 
+ - 条目类型：药材
+-- 追溯状态：verified
+-- 来源引用：见本文 frontmatter 中的 `source_refs`
+-- 复核说明：P6 verified 标准化条目，优先统一治理元数据与安全边界，不自动改写正文医学内容。
++- 追溯状态：no_source_found
++- 来源引用：当前无可用 `source_refs`
++- 复核说明：P8 手工复核发现既有候选实际为“朱砂”语境，不能验证“朱砂根”。
+ 
+ <!-- P5_STANDARD_NOTICE_END -->
+ 
+@@ -39,24 +38,12 @@ source_refs:
+ 
+ ## 🌿 倪师讲解
+ 
+-> ，有高一点的，朱砂放在下面，你如 果是平的，晒朱砂，晒完朱砂没了，为什么，风一吹就走掉啦，像沙子一样走掉，所以你要 一个平锅然后上面有高的，挡住它，它就不会给吹走，然后晒干，晒干以后朱砂非常的细， 好的朱砂拿到手上面，
+-> 就是很滑，很滑的，我们朱砂常常遇到。如果这个都很涩，后面会介 绍眼科的药，我眼科药很涩，我们加点朱砂下去，然后就变得很滑，朱砂的功能很好。
+-> 朱砂颜色是红色的，正朱砂色是红色的。本经的原文，诸位看那个本草经的原文，第一 个，我们把它打在上面给大家看，它的【性味】，甘，
++当前未在已治理的倪海厦内部语料中检出“朱砂根”可追溯讲解。
+ 
+ ---
+-### 来源摘录
+ 
+-*以下为倪海厦人纪系列原始语料中关于「朱砂根」的讲解片段：*
++## 🔎 P8 手工来源复核
+ 
+-**片段 1**（02神农本草经）：
+-
+-> 。 朱砂颜色是红色的，正朱砂色是红色的。本经的原文，诸位看那个本草经的原文，第一 个，我们把它打在上面给大家看，它的【性味】，甘，微寒。当我们讲味甘这是阴，味道， 甘，微寒讲的就是阳。我们药分阴阳的时候，微寒，这是没有毒，所以一个是味，一个是气， 微寒。 主治身体五脏百病，什么病都可以治，它都可以养精神安魂魄，益气明目，杀精魅邪恶 鬼，久服通神明，不老能化为汞，那其色珍珠光色如云母，可折者良。又名朱砂。这种真的 朱砂拿起来是一片一片的，一撇，就断掉了。 为什么说可以这个杀什么精魅啊，邪恶鬼。诸位，这朱砂最主要是安神用的，当你心神 不宁的时候看到以为那边有个人在那边，看到恶鬼，你看到东西对不对，吃了朱砂看不到了， 这杀恶鬼啦，它就这样写下来。所以不是说真的杀，杀了它，而是你自己看不到了，你的幻 象看不到了。所以说我们会用到朱砂，一般来说，都是心神不宁，会受到，长期受到惧，惊 吓，这个时候我们在安眠的时候我们会放点朱砂下去。 那朱砂强到什么程度，用到什么程度我可以跟诸位讲，比如说我们这样子拿一桶药，这 里面都是做好的药丸。朱砂是生用啊，你不能做药丸的时候，烘焙的时候你把朱砂也放下去 了，你
+-
+-**片段 2**（02神农本草经）：
+-
+-> 勤求古训 博采众方 —————————————————————————————————————————————— 要有点Commonsence，你拿一个锅子，旁边有盆子，有高一点的，朱砂放在下面，你如 果是平的，晒朱砂，晒完朱砂没了，为什么，风一吹就走掉啦，像沙子一样走掉，所以你要 一个平锅然后上面有高的，挡住它，它就不会给吹走，然后晒干，晒干以后朱砂非常的细， 好的朱砂拿到手上面，就是很滑，很滑的，我们朱砂常常遇到。如果这个都很涩，后面会介 绍眼科的药，我眼科药很涩，我们加点朱砂下去，然后就变得很滑，朱砂的功能很好。 朱砂颜色是红色的，正朱砂色是红色的。本经的原文，诸位看那个本草经的原文，第一 个，我们把它打在上面给大家看，它的【性味】，甘，微寒。当我们讲味甘这是阴，味道， 甘，微寒讲的就是阳。我们药分阴阳的时候，微寒，这是没有毒，所以一个是味，一个是气， 微寒。 主治身体五脏百病，什么病都可以治，它都可以养精神安魂魄，益气明目，杀精魅邪恶 鬼，久服通神明，不老能化为汞，那其色珍珠光色如云母，可折者良。又名朱砂。这种真的 朱砂拿起来是一片一片的，一撇，就断掉了。 为什么
+-
+-**片段 3**（02神农本草经）：
+-
+-> 博采众方 —————————————————————————————————————————————— 要有点Commonsence，你拿一个锅子，旁边有盆子，有高一点的，朱砂放在下面，你如 果是平的，晒朱砂，晒完朱砂没了，为什么，风一吹就走掉啦，像沙子一样走掉，所以你要 一个平锅然后上面有高的，挡住它，它就不会给吹走，然后晒干，晒干以后朱砂非常的细， 好的朱砂拿到手上面，就是很滑，很滑的，我们朱砂常常遇到。如果这个都很涩，后面会介 绍眼科的药，我眼科药很涩，我们加点朱砂下去，然后就变得很滑，朱砂的功能很好。 朱砂颜色是红色的，正朱砂色是红色的。本经的原文，诸位看那个本草经的原文，第一 个，我们把它打在上面给大家看，它的【性味】，甘，微寒。当我们讲味甘这是阴，味道， 甘，微寒讲的就是阳。我们药分阴阳的时候，微寒，这是没有毒，所以一个是味，一个是气， 微寒。 主治身体五脏百病，什么病都可以治，它都可以养精神安魂魄，益气明目，杀精魅邪恶 鬼，久服通神明，不老能化为汞，那其色珍珠光色如云母，可折者良。又名朱砂。这种真的 朱砂拿起来是一片一片的，一撇，就断掉了。 为什么说可以这个杀什么精魅啊，
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 141 行为 `no_source_found`，source FTS/LIKE 只读检索无“朱砂根”命中。
+ 
++既有候选与摘录实际均为“朱砂”矿物药讲解，不是“朱砂根”，本轮已降级为不可用于本条目的误命中。后续补全或修订时，应先取得白名单外部权威来源，并逐条核验性味、归经、功效、主治、剂量与禁忌。
+diff --git a/knowledge/herbs/zihuadiding.md b/knowledge/herbs/zihuadiding.md
+index 907c113..5f4dc51 100644
+--- a/knowledge/herbs/zihuadiding.md
++++ b/knowledge/herbs/zihuadiding.md
+@@ -29,6 +29,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 143 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/zonglu.md b/knowledge/herbs/zonglu.md
+index c1c2986..fac084a 100644
+--- a/knowledge/herbs/zonglu.md
++++ b/knowledge/herbs/zonglu.md
+@@ -28,6 +28,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 144 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/knowledge/herbs/zonglutan.md b/knowledge/herbs/zonglutan.md
+index 91b0529..97e66f1 100644
+--- a/knowledge/herbs/zonglutan.md
++++ b/knowledge/herbs/zonglutan.md
+@@ -19,6 +19,13 @@ no_source_policy: "keep_boundary_until_traceable_source"
+ ---
+ 
+ 
++## 🔎 P8 手工来源复核
++
++本条目在当前已治理的倪海厦内部语料中未检索到可追溯来源；`review_queue` 第 145 行为 `no_source_found`，source FTS/LIKE 只读检索无命中，`p30/p36` 要求在补全或提升医学正文前先取得白名单外部权威来源。
++
++现有“来源”、性味、归经、功效、主治或讲解文字未由本轮内部语料复核证实，仅作为待核验占位保留；不得据此视为倪海厦语料验证内容。后续补全或修订时，应逐条加入明确 `source_refs`，并单独核验性味、归经、功效、主治、剂量与禁忌。
++
++
+ ## ⚠️ 禁忌与慎用（待考）
+ 
+ 本条目当前未在已治理来源中提取到明确、可追溯的禁忌或慎用原文；不得据此推定“无禁忌”。
+diff --git a/report/p21_source_quality_conflict_audit.md b/report/p21_source_quality_conflict_audit.md
+index 0ed3cb9..a479a9e 100644
+--- a/report/p21_source_quality_conflict_audit.md
++++ b/report/p21_source_quality_conflict_audit.md
+@@ -14,10 +14,10 @@ Read-only audit after P20 rollout.
+ 
+ | level | count |
+ |---|---:|
+-| `no_source` | 137 |
++| `no_source` | 138 |
+ | `verified_alias` | 51 |
+ | `verified_contextual` | 2 |
+-| `verified_direct` | 749 |
++| `verified_direct` | 748 |
+ 
+ ## Conflicts
+ 
