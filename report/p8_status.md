@@ -459,3 +459,163 @@
 ## 下一条
 
 - 下一条为 `data/review_queue.jsonl` 第 126 行；继续前需先读取该行确认条目。
+
+---
+
+# R12 更新（2026-07-07 01:01+）
+
+- **分支：** `p8-manual-source-refinement`
+- **本轮范围：** `data/review_queue.jsonl` 第 181-218 行（`ran gu` / 然谷二 到 `zuwuli` / 足五里）
+- **本轮类型：** 穴位段连续人工精修；逐条读取知识文件、review_queue、acupoint_index、knowledge_completeness，并只读检索 `source_fts.sqlite`。
+
+## R12 启动检查
+
+- 当前分支：`p8-manual-source-refinement`
+- 初始 `git status --short`：工作区干净
+- 初始基线：`.venv/bin/python -m pytest -q` → `38 passed`
+
+## R12 完成条目（review_queue 第 181-218 行）
+
+181. `ran gu` / 然谷二
+   - `no_source_found` in queue；文件/索引为 `verified_alias`；01针灸篇 p114 有然谷实质来源；只写 review note，未改正文。
+182. `shangwan_ren` / 上脘二
+   - verified alias to `shangwan`；queue 为检索假阴性；只写 review note。
+183. `shangxing_du` / 上星二
+   - verified alias to `shangxing`；queue 为检索假阴性；只写 review note。
+184. `shenmai2` / 申脉三
+   - verified alias to `shenmai`；queue 为检索假阴性；只写 review note。
+185. `shenmai_bl` / 申脉二
+   - verified alias to `shenmai`；queue 为检索假阴性；只写 review note。
+186. `shenque_ren` / 神阙二
+   - verified alias to `shenque`；queue 为检索假阴性；只写 review note。
+187. `shidou2` / 食窦二
+   - verified alias to `shidou`；queue 为检索假阴性；只写 review note。
+188. `shuifen_ren` / 水分二
+   - verified alias to `shuifen`；queue 为检索假阴性；只写 review note。
+189. `sishencong` / 四神聪
+   - `no_source_found`；FTS/LIKE 无命中；经外奇穴，需外部权威来源；只写 review note，未改正文。
+190. `taiyi2` / 太乙二
+   - verified alias to `taiyi`；queue 为检索假阴性；只写 review note。
+191. `tianfu2` / 天府二
+   - `needs_review`；黄帝内经引文明确提及“天府二穴”；保留 verified_direct，只写 review note。
+192. `tianliao` / 天髎
+   - `no_source_found`；FTS/LIKE 无命中；需外部权威来源；只写 review note。
+193. `tianxi2` / 天溪二
+   - verified alias to `tianxi`；queue 为检索假阴性；只写 review note。
+194. `touqiaoyin` / 头窍阴
+   - `no_source_found`；FTS/LIKE 无命中；需外部权威来源；只写 review note。
+195. `xiaji` / 下极俞
+   - `no_source_found`；FTS/LIKE 无命中；经外奇穴，需外部权威来源；只写 review note。
+196. `xiongxiang2` / 胸乡二
+   - verified alias to `xiongxiang`；01针灸篇 p75 有胸乡定位讲解；只写 review note。
+197. `xiyangguan` / 膝阳关
+   - `no_source_found`；FTS/LIKE 无命中；需外部权威来源；只写 review note。
+198. `xuanji_ren` / 璇玑二
+   - verified alias to `xuanji`；01针灸篇 p120 提及璇玑定位参照；只写 review note。
+199. `yanggang` / 阳纲
+   - `no_source_found`；FTS/LIKE 无命中；需外部权威来源；只写 review note。
+200. `yangguan` / 腰阳关
+   - alias to `yaoyangguan`，canonical 仍 `no_source_found`；FTS/LIKE 无命中；记录归经标注不一致风险（此文件标胆经，主条目标督脉），未改正文。
+201. `yaotongdian` / 腰痛点
+   - `no_source_found`；FTS/LIKE 无命中；经外奇穴，需外部权威来源；只写 review note。
+202. `yaoyangguan` / 腰阳关
+   - `no_source_found`；FTS/LIKE 无命中；记录与 `yangguan` 的 canonical/alias 边界；只写 review note。
+203. `yinjiao_ren` / 阴交二
+   - 文件 frontmatter 为 `no_source_found`，但 acupoint_index 误标 `verified_alias` 且错误映射到 `yinjiao`（龈交）；FTS 实际发现 01针灸篇 p29 有“阴交穴”实质讲解；只记录数据质量问题，未改正文。
+204. `yixi` / 譩譆
+   - `needs_review`；黄帝内经引文明确提及譩譆；保留 verified_direct，只写 review note。
+205. `yuanye` / 渊腋
+   - `needs_review`；黄帝内经引文提及渊腋；保留 verified_direct，只写 review note。
+206. `yunmen2` / 云门二
+   - verified alias；01针灸篇 p42 有云门实质讲解；只写 review note。
+207. `yutang_ren` / 玉堂二
+   - verified alias to `yutang`；queue 为检索假阴性；只写 review note。
+208. `zhangmen_lv` / 章门二
+   - verified alias to `zhangmen`；queue 为检索假阴性；只写 review note。
+209. `zhongdu_lv` / 中都二
+   - verified alias to `zhongdu`；01针灸篇 p148 有中都实质定位讲解；只写 review note。
+210. `zhongfeng_lv` / 中封二
+   - verified alias to `zhongfeng`；01针灸篇 p148 上下文提及中封；只写 review note。
+211. `zhongshu` / 中枢
+   - `needs_review`；当前 source_ref 指向伤寒论 p45 桂枝/麻黄汤语境，与督脉中枢穴无关；记录 false positive 和降级建议，未改正文。
+212. `zhongwan_ren` / 中脘二
+   - verified alias；01针灸篇 p30 有中脘实质讲解；只写 review note。
+213. `zhourong2` / 周荣二
+   - verified alias to `zhourong`；01针灸篇 p75 有周荣定位讲解；只写 review note。
+214. `zhubin_k` / 筑宾二
+   - verified alias to `zhubin`；01针灸篇 p117 有筑宾定位与功效讲解；只写 review note。
+215. `zigong_ren` / 紫宫二
+   - verified alias to `zigong`；01针灸篇 p120 提及紫宫定位参照；只写 review note。
+216. `zusanli_st` / 足三里二
+   - verified alias to `zusanli`；01针灸篇 p70 提及足三里为大穴；只写 review note。
+217. `zutonggu` / 足通谷
+   - `no_source_found`；FTS/LIKE 无命中；需外部权威来源；只写 review note。
+218. `zuwuli` / 足五里
+   - `no_source_found`；FTS/LIKE 无命中；需外部权威来源；只写 review note。
+
+## R12 新增 review note
+
+- `report/p8_manual_reviews/ran gu.md`
+- `report/p8_manual_reviews/shangwan_ren.md`
+- `report/p8_manual_reviews/shangxing_du.md`
+- `report/p8_manual_reviews/shenmai2.md`
+- `report/p8_manual_reviews/shenmai_bl.md`
+- `report/p8_manual_reviews/shenque_ren.md`
+- `report/p8_manual_reviews/shidou2.md`
+- `report/p8_manual_reviews/shuifen_ren.md`
+- `report/p8_manual_reviews/sishencong.md`
+- `report/p8_manual_reviews/taiyi2.md`
+- `report/p8_manual_reviews/tianfu2.md`
+- `report/p8_manual_reviews/tianliao.md`
+- `report/p8_manual_reviews/tianxi2.md`
+- `report/p8_manual_reviews/touqiaoyin.md`
+- `report/p8_manual_reviews/xiaji.md`
+- `report/p8_manual_reviews/xiongxiang2.md`
+- `report/p8_manual_reviews/xiyangguan.md`
+- `report/p8_manual_reviews/xuanji_ren.md`
+- `report/p8_manual_reviews/yanggang.md`
+- `report/p8_manual_reviews/yangguan.md`
+- `report/p8_manual_reviews/yaotongdian.md`
+- `report/p8_manual_reviews/yaoyangguan.md`
+- `report/p8_manual_reviews/yinjiao_ren.md`
+- `report/p8_manual_reviews/yixi.md`
+- `report/p8_manual_reviews/yuanye.md`
+- `report/p8_manual_reviews/yunmen2.md`
+- `report/p8_manual_reviews/yutang_ren.md`
+- `report/p8_manual_reviews/zhangmen_lv.md`
+- `report/p8_manual_reviews/zhongdu_lv.md`
+- `report/p8_manual_reviews/zhongfeng_lv.md`
+- `report/p8_manual_reviews/zhongshu.md`
+- `report/p8_manual_reviews/zhongwan_ren.md`
+- `report/p8_manual_reviews/zhourong2.md`
+- `report/p8_manual_reviews/zhubin_k.md`
+- `report/p8_manual_reviews/zigong_ren.md`
+- `report/p8_manual_reviews/zusanli_st.md`
+- `report/p8_manual_reviews/zutonggu.md`
+- `report/p8_manual_reviews/zuwuli.md`
+
+## R12 测试状态
+
+- 启动基线：`38 passed`
+- 第 181-190 行完成后：`38 passed`
+- 第 191-200 行完成后：`38 passed`
+- 第 201-208 行完成后：`38 passed`
+- 第 209-218 行完成后：`38 passed`
+
+## R12 提交
+
+- `ae8d3b5 refine: manually review acupoints ran gu, shangwan_ren, shangxing_du, shenmai2, shenmai_bl, shenque_ren, shidou2, shuifen_ren, sishencong, taiyi2`
+- `c5a8d5a refine: manually review acupoints tianfu2, tianliao, tianxi2, touqiaoyin, xiaji, xiongxiang2, xiyangguan, xuanji_ren, yanggang, yangguan`
+- `8d0656b refine: manually review acupoints yaotongdian, yaoyangguan, yinjiao_ren, yixi, yuanye, yunmen2, yutang_ren, zhangmen_lv`
+- `e284423 refine: manually review acupoints zhongdu_lv, zhongfeng_lv, zhongshu, zhongwan_ren, zhourong2, zhubin_k, zigong_ren, zusanli_st, zutonggu, zuwuli`
+- 状态文件提交：待提交
+
+## R12 follow-up
+
+- `yinjiao_ren`：index 错误映射到 `yinjiao`（龈交），应单独修正 canonical mapping；且 01针灸篇 p29 实际有阴交穴来源，可后续补 `source_refs`。
+- `zhongshu`：当前 source_ref 指向伤寒论非穴位语境，为 false positive；建议后续降级或替换来源。
+- `yangguan` / `yaoyangguan`：别名/主条目边界清楚，但 `yangguan.md` 归经标注与主条目不一致，建议后续数据质量专项修正。
+
+## 下一条
+
+- `data/review_queue.jsonl` 共 218 行；本轮已推进至末行，当前 review_queue 全部条目均已完成 review note。
