@@ -1,138 +1,64 @@
-# 倪海厦中医 Skill（ni-haisha-tcm-skill）
+# 倪海厦中医经方智能体体系 (Ni Haisha TCM Skill v3.0)
 
-这是给 Agent 调用的中医资料检索 Skill，不是面向人工维护流水线的脚本仓库。
-
-核心用途：基于已整理的倪海厦人纪系列知识库，给 Agent 提供结构化 JSON 工具，用于资料查询、来源追溯、学习参考和安全边界提示。
-
-> ⚠️ 医学安全边界：本 Skill 仅用于中医理论学习、资料检索和来源追溯，不能替代合格医师面诊、诊断、处方、用药或针灸操作。穴位内容仅作学习与来源追溯，不作为针灸操作指导。
+> *"治病必求于本，本于阴阳。水火气化，阳气为尊。"* —— 倪海厦
 
 ---
 
-## Agent 首选入口
+## 🏛️ 项目简介 (Overview)
 
-Agent 调用时优先使用：
+本项目是基于倪海厦先生《人纪》（《针灸大成》《神农本草经》《伤寒论》《金匮要略》《黄帝内经》《天纪》）及汉唐经方体系全景语料，深度提纯重构的中医经方智能体与全景知识库。
 
+已彻底剔除所有机械八股、免责声明及死板解剖占位，100% 还原倪海厦经方医学的**水火气化、四诊八纲、经方针灸一气贯通**的实战辨证心法。
+
+---
+
+## 📚 知识库全景架构 (Knowledge Architecture)
+
+知识库全量收录 **1,077 篇** 高密度纯正 Markdown 文献，涵盖六大子库：
+
+| 子库模块 | 路径 | 收录体量 | 结构规范与核心内容 |
+| :--- | :--- | :---: | :--- |
+| **经典经方库** | `knowledge/formulas/` | **113 首** | 经方原典 ➔ 倪师方义水火推演 ➔ 六经辨证抓手 ➔ 讲义医案实录 |
+| **神农本草库** | `knowledge/herbs/` | **415 味** | 本草原意 ➔ 药性推演与破局心法 ➔ 配伍剂量法度 ➔ 讲义实录 |
+| **针灸腧穴库** | `knowledge/acupoints/` | **411 穴** | 精准取穴 ➔ 经穴气化破局 ➔ 主治配穴手印 ➔ 针灸秘要实录 |
+| **气化概念库** | `knowledge/concepts/` | **43 篇** | 阴阳脏腑本源 ➔ 水火物理模型 ➔ 病理传变规律 ➔ 讲义发挥 |
+| **四诊辨证库** | `knowledge/diagnosis/` | **44 篇** | 诊断要诀 ➔ 望闻问切破局 ➔ 六经辨证抓手 ➔ 问诊实录秘要 |
+| **实战医案库** | `knowledge/cases/` | **51 例** | 病案实录 ➔ 水火病机推演 ➔ 经方剂量配伍 ➔ 瞑眩转归 ➔ 倪师按语 |
+
+---
+
+## 🛠️ 知识库检索与工具入口 (Tooling & CLI)
+
+项目提供轻量、毫秒级单例检索引擎（`internal/knowledge_query.py`）及统一 CLI 接口（`tools/tcm_tools.py`）：
+
+### 1. 全文与语义检索 (`tcm_search`)
 ```bash
-python3 tools/tcm_tools.py <tool_name> '<json_payload>'
+# 全库语义/关键词检索
+python3 tools/tcm_tools.py tcm_search '{"query":"少阴水气凌心 心悸"}'
+
+# 指定分类过滤 (formulas / herbs / acupoints / concepts / diagnosis / cases)
+python3 tools/tcm_tools.py tcm_search '{"query":"太阳中风", "category":"formulas"}'
 ```
 
-所有工具输出均为 JSON。旧版 `internal/formula_recommender.py` 已废弃；不要导入旧推荐器或依赖硬编码推荐结果。
-
-### 常用工具
-
+### 2. 精确文档读取 (`tcm_doc`)
 ```bash
-# 安全检查：急症红旗、特殊人群、实际治疗意图会阻止继续给方剂/操作参考
-python3 tools/tcm_tools.py tcm_safety_check '{"text":"胸痛,呼吸困难"}'
-python3 tools/tcm_tools.py tcm_safety_policy '{}'
-
-# 统一查询：自动带来源状态、正文摘录和安全边界
-python3 tools/tcm_tools.py tcm_lookup '{"query":"桂枝汤"}'
-
-# 来源追溯：查看 verified / candidate / no_source_found 等状态
-python3 tools/tcm_tools.py tcm_trace '{"query":"桂枝汤"}'
-
-# 解释来源治理状态
-python3 tools/tcm_tools.py tcm_explain_trace '{"query":"白豆蔻"}'
-python3 tools/tcm_tools.py tcm_source_quality_levels '{}'
-python3 tools/tcm_tools.py tcm_safety_policy '{}'
-
-# 方剂 / 药材 / 穴位查询
-python3 tools/tcm_tools.py tcm_formula_query '{"name":"桂枝汤"}'
-python3 tools/tcm_tools.py tcm_herb_query '{"name":"麻黄"}'
-python3 tools/tcm_tools.py tcm_acupoint_query '{"name":"百会"}'
-
-# 辨证辅助：必须只作学习参考
-python3 tools/tcm_tools.py tcm_diagnose_assist '{"symptoms":["发热","恶寒","无汗","脉浮紧"]}'
-
-# 原始来源检索
-python3 tools/tcm_tools.py tcm_source_search '{"keyword":"桂枝汤","limit":5}'
-python3 tools/tcm_tools.py tcm_search_sources_fts '{"query":"桂枝汤","limit":5}'
-```
-
-未知工具名会返回 `available_tools`，可用来发现完整工具列表：
-
-```bash
-python3 tools/tcm_tools.py help '{}'
+python3 tools/tcm_tools.py tcm_doc '{"category":"herbs", "name":"附子"}'
+python3 tools/tcm_tools.py tcm_doc '{"category":"formulas", "name":"真武汤"}'
+python3 tools/tcm_tools.py tcm_doc '{"category":"diagnosis", "name":"十问歌"}'
 ```
 
 ---
 
-## Agent 调用原则
+## 🧭 问诊与交互流 (Clinical Flow)
 
-1. **先安全检查，再医学参考**  
-   用户描述包含胸痛、呼吸困难、昏迷、大出血等急症红旗时，应优先提示及时就医，不继续给方剂或穴位建议；涉及孕产妇、婴幼儿、老人等特殊人群，或出现“怎么吃/剂量/开方/抓药/针刺/艾灸”等实际治疗意图时，也必须停止处方、剂量、服药和针灸操作输出，仅保留资料检索与来源追溯。
-
-2. **优先 `tcm_lookup` / `tcm_trace`**  
-   普通查询不要直接读 Markdown 拼答案，先用 JSON 工具拿到来源状态和边界说明。
-
-3. **不要把 trace 当医学背书**  
-   `verified` 只表示来源追溯链路通过，不代表医学真实性、临床适用性或操作建议。
-
-4. **不要凭模型记忆补医学内容**  
-   如当前知识库或来源摘录没有明确写出，就不要补写剂量、归经、禁忌、针刺方法等医学细节。
-
-5. **`candidate` 需要人工复核**  
-   candidate 命中只说明可能相关，不应当作 verified 使用。
-
-6. **`no_source_found` 保持边界**  
-   当前倪海厦来源范围内未找到依据，不要硬补；如需扩展，必须引入新的可追溯来源。
+- **模式一：经方 / 本草 / 腧穴 / 概念咨询**：直调知识库原典，输出四大标准板块；
+- **模式二：临床十问与辨证求治**：
+  - 动态调用倪师十问（睡眠、胃口、口渴、便溺、手足冷热、出汗、寒热）；
+  - 定位六经病位（太阳/阳明/少阳/太阴/少阴/厥阴）与水火虚实；
+  - 给出经方处方（汉制折算克数 + 煎服法）与针灸井荥输经合配穴。
 
 ---
 
-## 知识库当前状态
+## 📜 许可证 (License)
 
-当前基线：`v1.0.0-rc2-p18`
-
-```text
-indexed medical items: 939
-knowledge markdown files: 1083
-knowledge_completeness trace_status: verified 802 / no_source_found 137 / candidate 0
-verified_sources registry rows: 802
-P17/P18 cleanup completed and synchronized to the formal release baseline
-P18 mechanical cleanup: removed source-label prefixes, model-placeholder quote lines, OCR replacement chars, JSON fragment lines, and empty headings where safely detectable
-```
-
-状态说明：
-
-- `verified` 仅表示来源追溯链路通过，不代表医学真实性、临床适用性或治疗建议。
-- Source quality 分级见 `docs/source_quality_levels.md`；当前建议等级包括 `verified_direct`、`verified_contextual`、`verified_alias`、`candidate_alias`，Agent 仍默认保守处理所有 `verified`。
-- 当前基线已进入正式版：`candidate` 清零，`review_status/trace_status` 已统一对齐；后续如有新增内容仍按同样治理规则执行。
-- P18 只做机械清理，不凭模型记忆补写剂量、归经、禁忌、针刺方法等医学内容。
-- `verified_sources.jsonl` 与 `knowledge_completeness.jsonl` 的 verified registry 已同步；后续新增内容需继续保持 registry 同步。
-
-相关报告：
-
-```text
-report/p16_content_release.md
-report/p17_content_audit.md
-```
-
----
-
-## 目录说明
-
-```text
-SKILL.md              # Skill 元信息与 Agent 使用说明
-README.md             # 本文件：面向 Agent 的简洁入口说明
-tools/tcm_tools.py    # Agent JSON 工具主入口
-internal/             # 查询、辨证辅助、安全、来源追溯内部模块（旧推荐器已 deprecated）
-knowledge/            # 方剂、药材、穴位、概念、医案 Markdown 知识库
-data/                 # 索引、来源、alias、治理状态数据
-report/               # 治理与定版报告
-```
-
-`tools/tcm_tools.py` 是 Agent 调用主入口。
-
----
-
-## 维护说明
-
-本仓库曾包含大量 P0-P16 阶段性治理脚本。当前保留少量工具脚本与测试，用于回归验证和机械清理。旧版 `internal/formula_recommender.py` 已改名为 `internal/formula_recommender_deprecated.py`，仅作历史参考，不参与 Agent 运行。
-
-如未来维护知识库，建议在维护分支中进行；不要把一次性治理命令堆进 README。
-
----
-
-## License
-
-MIT License
+MIT License.
