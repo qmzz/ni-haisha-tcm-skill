@@ -25,10 +25,18 @@ class TcmToolSmokeTests(unittest.TestCase):
         titles = [r["title"] for r in data["results"]]
         self.assertIn("麻黄汤", titles)
 
-    def test_search_herb(self):
-        data = run_tool("tcm_search", {"query": "附子", "category": "herbs"})
+    def test_search_ht_formula(self):
+        data = run_tool("tcm_search", {"query": "退乳丸", "category": "ht_formulas"})
         self.assertEqual(data["status"], "success")
         self.assertGreaterEqual(data["count"], 1)
+        titles = [r["title"] for r in data["results"]]
+        self.assertTrue(any("退乳丸" in t for t in titles))
+
+    def test_get_document_ht_formula(self):
+        data = run_tool("tcm_doc", {"category": "ht_formulas", "name": "HT-2"})
+        self.assertEqual(data["status"], "success")
+        self.assertIn("退乳丸", data["title"])
+        self.assertIn("## 💊 汉唐方剂出处与原方配伍", data["content"])
 
     def test_get_document_herb(self):
         data = run_tool("tcm_doc", {"category": "herbs", "name": "附子"})

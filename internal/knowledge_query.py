@@ -6,7 +6,8 @@ ROOT = Path(__file__).resolve().parents[1]
 KNOWLEDGE_DIR = ROOT / "knowledge"
 
 CATEGORIES = {
-    "formulas": "经方",
+    "formulas": "经典经方",
+    "ht_formulas": "汉唐方剂",
     "herbs": "本草药材",
     "acupoints": "针灸穴位",
     "concepts": "核心气化概念",
@@ -16,7 +17,7 @@ CATEGORIES = {
 
 class KnowledgeIndex:
     _instance = None
-    _docs = [] # list of dict: {category, filename, title, path, content, tags}
+    _docs = [] # list of dict: {category, filename, title, path, content}
 
     @classmethod
     def get_instance(cls):
@@ -65,19 +66,16 @@ class KnowledgeIndex:
             if category and doc["category"] != category:
                 continue
             score = 0
-            # 标题完全匹配
-            if query in doc["title"] or query == doc["filename"].replace(".md", ""):
+            if query in doc["title"] or query.lower() == doc["filename"].replace(".md", "").lower():
                 score += 100
             for kw in keywords:
                 if kw in doc["title"]:
                     score += 30
-                if kw in doc["filename"]:
+                if kw.lower() in doc["filename"].lower():
                     score += 20
-                # 内容命中次数
                 c_count = doc["content"].count(kw)
                 score += min(c_count * 2, 20)
             if score > 0:
-                # 提取摘要/命中段落
                 snippet = ""
                 for kw in keywords:
                     idx = doc["content"].find(kw)
@@ -101,10 +99,32 @@ class KnowledgeIndex:
         return results[:limit]
 
     def get_document(self, category: str, name_or_file: str) -> Optional[Dict[str, Any]]:
+        name_or_file = name_or_file.strip()
+        # 1. 汉唐方剂特定匹配 (如 HT-2, ht-02, HT2)
+        m_ht = re.match(r'^[Hh][Tt][-_\s]*(\d+)$', name_or_file)
+        if m_ht:
+            target_fn = f"ht_{int(m_ht.group(1)):02d}.md"
+            for doc in self._docs:
+                if (not category or doc["category"] in ["ht_formulas", category]) and doc["filename"] == target_fn:
+                    return doc
+
+        # 2. 完全文件名匹配
         for doc in self._docs:
             if category and doc["category"] != category:
                 continue
-            if name_or_file in doc["title"] or doc["filename"] == name_or_file or doc["filename"] == f"{name_or_file}.md":
+            if doc["filename"] == name_or_file or doc["filename"] == f"{name_or_file}.md":
+                return doc
+
+        # 3. 标题完全匹配或包含
+        for doc in self._docs:
+            if category and doc["category"] != category:
+                continue
+            if name_or_file == doc["title"]:
+                return doc
+
+        for doc in self._docs:
+            if category and doc["category"] != category:
+                continue
+            if name_or_file in doc["title"]:
                 return doc
         return None
-
